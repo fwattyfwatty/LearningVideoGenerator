@@ -1,6 +1,6 @@
 # LearnVideo ビジュアルスタイルガイド（シーン実装ワーカー共通レシピ）
 
-本ガイドは、親（Antigravity / Neon）から長文のデザイン指示を書かなくても、Antigravity（Hydrogen / Argon）および Claude 等のシーン実装ワーカーが一貫して**見栄え・情報密度・視認性・動きのある視線誘導**を備えた図解シーンを制作するための標準レシピである。安全領域・Lint禁止事項は [AGENTS.md](../AGENTS.md) / [GEMINI.md](../GEMINI.md) / [CLAUDE.md](../CLAUDE.md) に従う。
+本ガイドは、親（Antigravity `Neon` または Claude Code `Opus`）から長文のデザイン指示を書かなくても、Antigravity（`Neon` / `Hydrogen`）・Claude Code（`Opus` / `Sonnet`）・Codex（`Sol` / `Terra`）等のシーン実装ワーカーが一貫して**見栄え・情報密度・視認性・動きのある視線誘導**を備えた図解シーンを制作するための標準レシピである。安全領域・Lint禁止事項は [AGENTS.md](../AGENTS.md) / [GEMINI.md](../GEMINI.md) / [CLAUDE.md](../CLAUDE.md) に従う。
 
 ---
 

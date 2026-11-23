@@ -8,24 +8,24 @@ description: >-
   multi-chapter explainer episodes under `episodes/`.
 ---
 
-# Produce Episode (Neon × Hydrogen Orchestration)
+# Produce Episode (Antigravity Orchestration)
 
-このスキルは、長尺解説動画（5〜15分・複数チャプター）を最小コンテキスト＆最小クォータ消費で制作・検証するための標準手順です。
+このスキルは、Antigravity 上で長尺解説動画（5〜15分・複数チャプター）を最小コンテキスト＆最小クォータ消費で制作・検証するための標準手順です（プロバイダ別の役割と有効設定の正本は [config/orchestration.yaml](../../../config/orchestration.yaml)、Claude Code 利用時は [CLAUDE.md](../../../CLAUDE.md) と [.claude/skills/produce-episode/SKILL.md](../../../.claude/skills/produce-episode/SKILL.md) を参照してください）。
 
 > **省クォータ運用の前提**:
 > - **新規チャット（または `/compact` 後）で着手**し、前エピソードの重い履歴を引き継がない。
-> - **並列ワーカーは担当HTML編集のみ行い、個別ビルドしない**（ワークフロー末尾で1回だけ集約ビルド）。
-> - **親の最終目視はコンタクトシート（`contact-sheet.jpg` / `--grid`）1〜2枚を優先**し、個別PNG読み込みは異常時のみに限定する。
+> - **並列ワーカーは担当HTML編集のみ行い、個別ビルドしない**（全章完了後に親が 1 回だけ集約ビルド）。
+> - **Stage 4 コンタクトシート（`contact-sheet*.jpg`）および Stage 5 `--grid` 画像は親（Neon）が直接目視確認**し、必要に応じて `run_workflow` の Python 補助スクリプトも利用できる。
 
-## 全体分担（親 = Neon / 並列ワーカー = `flash` / Hydrogen 相当）
+## 全体分担（親 = Neon / 並列ワーカー = Neon または Hydrogen、有効時は他プロバイダも可）
 
 | Stage | 担当 | 実行内容 |
 | :--- | :--- | :--- |
-| **1. 構成＆台本** | **親 (Neon)** | `outline.md` → `script.yaml` → `scene-specs.json` を作成。 |
-| **2. 音声確定** | **親** (`BypassSandbox: true`可) | `npm run episode:audio -- <ep>` で WAV・`timeline.json`・`cues` を生成。 |
-| **3. 図解並列実装** | **Workflow (`flash`)** | [scripts/author_scenes.py](./scripts/author_scenes.py) で `scenes/*.html` を並列生成し、`build` + `lint` 0/0 まで完了。 |
-| **4. 事前検証＆検品** | **親 → Workflow (`flash`) → 親** | 親が `episode:verify --stage pre` と `episode:snapshot` を実行し、チャプター単位2〜3枚のPNGを [scripts/audit_snapshots.py](./scripts/audit_snapshots.py) で並列検品・修正。親は問題残存時のみ画像を確認。 |
-| **5. 書出＆最終検証** | **親** | `npm run episode:render -- <ep>` 後、`npm run episode:verify -- <ep> --stage post` で仕様・音量・全フレーム立ち絵チラつきを検査。 |
+| **1. 構成＆台本** | **親 (Neon)** | 基準時点確認（時事回）→ `outline.md` → `script.yaml` → `scene-specs.json` → `episode:verify --stage script` で 0/0 検証。 |
+| **2. 音声確定** | **親 (Neon)** | `npm run episode:audio -- <ep>` で VOICEVOX 音声（未起動時は自動起動）・WAV・`timeline.json`・`cues` を生成。 |
+| **3. 図解並列実装** | **子 (`Neon` / `Hydrogen` 等)** | 1ワーカー = 2章の 3並列（T3 `delegate_task` / `invoke_subagent`、または [author_scenes.py](./scripts/author_scenes.py)）で `scenes/*.html` を生成。 |
+| **4. 事前検証＆検品** | **親 (Neon)** | 親が `episode:build` / `episode:lint --json` / `episode:verify --stage pre`（Chrome スモーク含む） / `episode:snapshot --auto` を実行し、`contact-sheet*.jpg` を直接目視して必要箇所のみ修正。 |
+| **5. 書出＆最終検証** | **親 (Neon)** | `npm run episode:render -- <ep>` 後、`npm run episode:verify -- <ep> --stage post --grid <jpg>` で仕様・音量・全フレーム立ち絵チラつきを検査。 |
 
 > **サンドボックス境界に関する注意**: `run_workflow` 内のエージェントはユーザー承認が必要な `BypassSandbox: true` コマンドを実行できません。そのため **VOICEVOX（`episode:audio`）および Chrome 起動（`episode:snapshot`, `episode:render`）は必ず親エージェントが直接実行** してください。
 

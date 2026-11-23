@@ -13,14 +13,14 @@ VOICEVOX の 3 キャラクター（四国めたん・ずんだもん・春日�
 
 ```text
 LearnVideo/
-├── config/                  # キャラ定義 (characters.yaml)・読み辞書・テーマ CSS (4種)
+├── config/                  # キャラ定義・辞書・テーマ CSS (4種)・エージェント役割設定 (orchestration.yaml)
 ├── templates/               # HyperFrames 共通シェル・diagram-kit.css・stage-runtime.js・dgWidgets
 ├── tools/                   # VOICEVOX 生成・HyperFrames ビルド/実行・多段階検証・立ち絵書出
 ├── docs/                    # 制作ガイド (production-guide.md)・図解スタイルガイド (visual-style-guide.md)
 ├── episodes/                # 各エピソードの outline.md / script.yaml / scene-specs.json / scenes/*.html
 ├── assets/                  # 立ち絵・BGM・SE 配置先（実素材・生成物は .gitignore で除外）
-├── GEMINI.md / AGENTS.md    # AI エージェント向け制作・運用ルール（セクション 1〜3 共通）
-└── CLAUDE.md                # Claude 系エージェント向けエントリポイント
+├── GEMINI.md / AGENTS.md    # AI エージェント向け共通制作ルール（セクション 1〜3 共通）
+└── CLAUDE.md                # Claude Code（親 Opus / 子 Opus・Sonnet）向け運用ガイド
 ```
 
 ## 必要環境
@@ -90,7 +90,9 @@ npm run episode:render -- episodes/006_asset_management --segmented
 
 - [制作ガイド](docs/production-guide.md) — キャラ役割、レイアウトモード、コマンド一覧
 - [ビジュアルスタイルガイド](docs/visual-style-guide.md) — 図解密度、`window.dgMotion`、`window.dgWidgets`、共有アイコン
-- [GEMINI.md](GEMINI.md) / [AGENTS.md](AGENTS.md) / [CLAUDE.md](CLAUDE.md) — 制作共通ルール（Section 1〜3）およびオーケストレーション規約
+- [役割設定 (config/orchestration.yaml)](config/orchestration.yaml) — Antigravity（親 Neon / 子 Neon・Hydrogen）、Claude Code（親 Opus / 子 Opus・Sonnet）、Codex（子 Sol・Terra）の有効状態・モデル割当定義
+- [GEMINI.md](GEMINI.md) / [AGENTS.md](AGENTS.md) / [CLAUDE.md](CLAUDE.md) — 共通制作ルール（Section 1〜3）およびオーケストレーター/ワーカー規約
+- スキル定義: [Antigravity 用](.agents/skills/produce-episode/SKILL.md) / [Claude Code 用](.claude/skills/produce-episode/SKILL.md)
 
 ## クレジット・外部素材について
 

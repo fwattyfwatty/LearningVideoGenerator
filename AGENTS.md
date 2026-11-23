@@ -1,6 +1,6 @@
-# LearnVideo ワーカー運用・制作ルール（共通 / Claude・Antigravity 対応）
+# LearnVideo 共通制作・ワーカー運用ルール
 
-本ワークスペースは VOICEVOX（四国めたん・ずんだもん・春日部つむぎ）と HyperFrames v0.9.71 で図解解説動画を制作する。本ファイルは T3 Code オーケストレーション（`delegate_task`）上の図解実装ワーカー（Antigravity / 将来の Claude 等）向け共通規約である（Claude 利用時は [CLAUDE.md](CLAUDE.md) も参照）。`run_workflow`・`.agents/skills/produce-episode/SKILL.md` 内の Python ワークフローは Antigravity 専用機能のため、直接のファイル編集と指定範囲の作業のみを行うこと。なお ChatGPT Plus 解約に伴い Codex は現在利用対象外とする。
+本ワークスペースは VOICEVOX（四国めたん・ずんだもん・春日部つむぎ）と HyperFrames v0.9.71 で図解解説動画を制作する。本ファイルは Antigravity・Claude Code・Codex 等の各エージェント共通の基盤規約である（プロバイダ別の親/子役割と有効設定は [config/orchestration.yaml](config/orchestration.yaml)、Claude Code 固有手順は [CLAUDE.md](CLAUDE.md) を参照）。`run_workflow`・`.agents/skills/produce-episode/scripts/` 内の Python ワークフローは Antigravity 専用機能のため、ワーカーおよび Claude Code 環境では直接のファイル編集と指定範囲の作業のみを行うこと。
 
 ## 1. キャラクター・VOICEVOXルール
 - **四国めたん（教え役・左下）**: 専門知識を分かりやすく説明するが、口調は**標準的な丁寧語（「〜です」「〜ます」「〜ですね」「〜なんです」）**に固定する。「〜ですわ」「〜ますわ」「〜のですわ」などのお嬢様口調は使わない。
@@ -45,17 +45,18 @@
   - `npm run episode:verify -- <ep> --stage post --grid <jpg>`
 - サンドボックス制限がある環境では標準実行を優先し、VOICEVOX 通信や Chrome 起動が必要なコマンドのみ承認付きで再実行する。
 
-## 4. ワーカー運用・デザイン品質＆省トークン規約
-- **司令塔配下（T3 Code `delegate_task` / `invoke_subagent`）の作業範囲**: 指定された担当ファイル（標準1〜2章分の `scenes/<chapterId>.html`）の編集、または明示依頼時の検品レポート出力のみを行う。明示的な指示がない限り、**ワーカー単体で `episode:build` / `episode:lint` / `episode:verify` / `episode:render` を個別実行しない**（司令塔が全章完了後に1回だけ集約実行する）。
+## 4. ワーカー運用・役割マトリクス ＆ 省トークン規約
+- **役割・有効状態の正本**: [config/orchestration.yaml](config/orchestration.yaml) の `enabled: true` に従う（契約外の `enabled: false` プロバイダへは委譲しない）。
+  - **Antigravity**: 親 `Neon` / 子 `Neon`（重章・再設計）または `Hydrogen`（軽章・余白修正）
+  - **Claude Code**: 親 `Opus` / 子 `Opus`（複雑設計・調査）または `Sonnet`（標準・軽章・修正）
+  - **Codex**: 子専用 `Sol`（重章・再設計）または `Terra`（軽章・余白修正）
+- **子ワーカー（`delegate_task` / `invoke_subagent` / Claude `Agent`）の作業範囲**: 指定された担当ファイル（標準1〜2章分の `scenes/<chapterId>.html`）の編集、または明示依頼時の検品レポート出力のみを行う。明示的な指示がない限り、**ワーカー単体で `episode:build` / `episode:lint` / `episode:verify` / `episode:render` を個別実行しない**（司令塔が全章完了後に1回だけ集約実行する）。
 - **デザイン基準と最小コンテキスト読込（実装・修正モード）**:
   - 読むファイルは **担当章の `scene-specs.json` エントリ、プロンプトで渡された該当章 `cues`（または該当章のみ）、[docs/visual-style-guide.md](docs/visual-style-guide.md)、[templates/diagram-kit.css](templates/diagram-kit.css)、対象テーマCSS、対象HTML、および司令塔から明示指定された場合のみスタイル手本HTML 1ファイル** に限定し、無関係な他章や過去エピソードを一括読み込みしない。
   - 2章まとめて担当する場合は、2章間でカード質感・タイポ・補助色トーンを揃える。軽量章（Ch1・Ch6 等）でもカード縦バランスが崩れないよう `.dg-card-flex` / `.dg-col` を活用し、数字表記は半角（例：`3つの軸`）に統一すること。また `window.dgMotion`（スポットライト減光 `focus`/`unfocus`、連続破線 `flowDash`、鼓動 `pulse`、数値カウント `countUp` 等）や `window.dgWidgets` を積極利用し、静的なフェードだけで終わらせないこと。
-  - **モデル / Reasoning Effort 目安**:
-    - Antigravity 運用時: 軽章・軽微な余白修正 = `gemini-4-hydrogen (medium)`、重章・設計再調整 = `gemini-4-hydrogen (high)` または `gemini-4-argon (medium)`。
-    - 将来の Claude Pro 導入時: 軽章・余白修正 = `claude-haiku-*`（または `claude-sonnet-*` low）、重章（複雑SVG・数式・つむぎ回避・Phase A→B） = `claude-sonnet-* (medium)`、原因調査・大規模再設計 = `claude-opus-*`。
 - **視覚検品モード（親から明示委譲された場合のみ / 軽量モデル）**:
-  - 原則 Stage 4 のコンタクトシート一次目視は親（Neon）が直接行う。追加で視覚検品を委譲された場合は、指定画像のみを確認し、重なり・見切れ・文字潰れ・空白区間に加え、**極端な余白過多や情報密度不足（スカスカ感）** があれば「時刻・要素・原因・修正案」で簡潔に報告する（編集指示がなければHTMLは一切変更しない）。
-- **T3 Code で複数章を直接進める場合**: 1ワーカー2章単位（6章なら3並列）で分割し、最終目視は全PNGではなく `contact-sheet*.jpg` と `--stage post --grid` の2×2画像を優先する。
+  - 原則 Stage 4 のコンタクトシート一次目視は親（Neon / Opus）が直接行う。追加で視覚検品を委譲された場合は、指定画像のみを確認し、重なり・見切れ・文字潰れ・空白区間に加え、**極端な余白過多や情報密度不足（スカスカ感）** があれば「時刻・要素・原因・修正案」で簡潔に報告する（編集指示がなければHTMLは一切変更しない）。
+- **複数章の並列管理**: 1ワーカー2章単位（6章なら3並列）で分割し、最終目視は全PNGではなく `contact-sheet*.jpg` と `--stage post --grid` の2×2画像を優先する。
 
 ## 5. ルール同期
 Section 1〜3 の共通制作ルールは [GEMINI.md](GEMINI.md) と常に同一内容を維持すること。

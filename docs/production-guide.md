@@ -175,5 +175,5 @@ npm run episode:render -- episodes/000_pilot --browser-gpu
 
 ## 8. ルール永続化とマルチエージェント オーケストレーション
 
-- 常時適用ルールはルートの [GEMINI.md](../GEMINI.md) および [AGENTS.md](../AGENTS.md)（Claude 利用時は [CLAUDE.md](../CLAUDE.md)）に定義しています。
-- 大規模エピソード制作時は T3 Code 上で設計・台本を **Gemini 4 Neon**、チャプター別 HTML の並列図解生成を **Antigravity（Hydrogen / Argon）または将来の Claude Pro（Claude Sonnet / Haiku）** へ 2章×3並列で委譲し、コンテキスト消費と制作時間を抑えます（Codex は利用停止中。[produce-episode SKILL](../.agents/skills/produce-episode/SKILL.md) も参照）。
+- 常時適用ルールはルートの [GEMINI.md](../GEMINI.md)・[AGENTS.md](../AGENTS.md)・[CLAUDE.md](../CLAUDE.md) に定義し、プロバイダ別の親/子役割と有効設定（`enabled`）は **[config/orchestration.yaml](../config/orchestration.yaml)** に一元管理しています。
+- 親（司令塔）は **Antigravity (`Neon`)** または **Claude Code (`Opus`)** のどちらでも実行でき、Stage 3 の並列図解実装（2章×3並列）には `config/orchestration.yaml` で `enabled: true` のワーカー（Antigravity `Neon`/`Hydrogen`、Claude Code `Opus`/`Sonnet`、Codex `Sol`/`Terra`）を割り当てます。詳細は [.agents/skills/produce-episode/SKILL.md](../.agents/skills/produce-episode/SKILL.md) および [.claude/skills/produce-episode/SKILL.md](../.claude/skills/produce-episode/SKILL.md) を参照してください。

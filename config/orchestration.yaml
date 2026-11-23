@@ -1,0 +1,138 @@
+# LearnVideo マルチエージェント オーケストレーション役割定義
+# 親（Antigravity Neon または Claude Code Opus）と子ワーカーの利用可否・モデル対応を一元管理します。
+# 契約状況が変わった場合は対象プロバイダの `enabled` を true/false に切り替えてください。
+
+version: 1
+
+providers:
+  antigravity:
+    enabled: true
+    display_name: "Antigravity (Gemini)"
+    can_orchestrate: true
+    can_work: true
+    t3_provider_instance_id: "antigravity"
+    roles:
+      orchestrator:
+        tier: "neon"
+        models:
+          - "gemini-pro-orchestrator-neon"
+          - "gemini-4-neon"
+        note: "構成・台本・設計仕様・音声生成・集約ビルド/検証・コンタクトシート直接目視・MP4書き出し"
+      worker_heavy:
+        tier: "neon"
+        models:
+          - "gemini-4-neon"
+          - "gemini-4-hydrogen"
+        options:
+          thought_level: "high"
+        note: "重章（複雑SVG・数式・つむぎ回避・Phase A→B）・座標/タイムライン再設計（Hydrogen時は thought_level: high）"
+      worker_light:
+        tier: "hydrogen"
+        models:
+          - "gemini-4-hydrogen"
+        options:
+          thought_level: "medium"
+        note: "軽章（Ch1/Ch6等）・余白/Lint/文言修正・明示委譲時の視覚検品"
+    dispatch:
+      same_provider: "T3 Code delegate_task または Antigravity ネイティブ invoke_subagent"
+      cross_provider: "T3 Code delegate_task"
+
+  claude:
+    enabled: false
+    note: "Claude Pro 契約後に true へ変更。Claude Code 起動時は Claude Opus が親として振る舞えます。"
+    display_name: "Claude Code / Claude Agent"
+    can_orchestrate: true
+    can_work: true
+    t3_provider_instance_id: "claudeAgent"
+    roles:
+      orchestrator:
+        tier: "opus"
+        models:
+          - "claude-opus-*"
+        note: "親オーケストレーター（構成・台本・仕様・音声・集約検証・コンタクトシート直接目視・MP4書き出し）"
+      worker_heavy:
+        tier: "opus_or_sonnet"
+        models:
+          - "claude-sonnet-*"
+          - "claude-opus-*"
+        options:
+          effort: "medium"
+        note: "重章・複雑SVG・Phase A→B は Sonnet (medium)、難解な設計・原因特定は Opus"
+      worker_light:
+        tier: "sonnet"
+        models:
+          - "claude-sonnet-*"
+        options:
+          effort: "low"
+        note: "軽章（Ch1/Ch6等）・余白/Lint修正・明示委譲時の視覚検品"
+    dispatch:
+      same_provider: "Claude Code ネイティブ Agent ツール（model: sonnet / opus）または T3 Code delegate_task"
+      cross_provider: "T3 Code delegate_task（他プロバイダのツール利用時）"
+
+  codex:
+    enabled: false
+    note: "ChatGPT Plus 解約により現在は利用停止中（再契約時に true へ変更）。"
+    display_name: "Codex (GPT)"
+    can_orchestrate: false
+    can_work: true
+    t3_provider_instance_id: "codex"
+    roles:
+      worker_heavy:
+        tier: "sol"
+        models:
+          - "gpt-6.2-sol"
+        options:
+          reasoningEffort: "medium"
+        note: "重章・複雑SVG・Phase A→B・座標再設計（軽微な修正時は low）"
+      worker_light:
+        tier: "terra"
+        models:
+          - "gpt-6.1-terra"
+        options:
+          reasoningEffort: "medium"
+        note: "軽章（Ch1/Ch6等）・余白/Lint修正"
+    dispatch:
+      cross_provider: "T3 Code delegate_task（子ワーカー専用・親オーケストレーターには使わない）"
+
+pipeline:
+  preflight_rule: >-
+    まず本ファイルの `enabled: true` かつ利用可能なプロバイダ（T3 Code では `orchestrator_capabilities` でも確認）のみを選定し、`enabled: false` のプロバイダへは委譲しない。親は実行環境の主エージェント（Antigravity なら Neon、Claude Code なら Opus）が担当する。
+  stage1_design:
+    owner: "orchestrator"
+    outputs:
+      - "outline.md"
+      - "script.yaml"
+      - "scene-specs.json"
+      - "dictionary.yaml"
+    notes:
+      - "時事性の高いトピック（金融・経済・AI等）は Stage 1 時点で基準時点と最新ニュース反映範囲をユーザーと合意してから Stage 2〜3 へ進む。"
+      - "春日部つむぎはチャプター冒頭1行目の場面転換装置にせず、議論中盤の前提を突く鋭い疑問役にする。"
+      - "完了時に `npm run episode:verify -- <ep> --stage script` で字幕幅・辞書・口調を検証。"
+  stage2_audio:
+    owner: "orchestrator"
+    command: "npm run episode:audio -- <ep>"
+    notes:
+      - "VOICEVOX Engine 未起動時はローカルエンジンを自動起動する（差分キャッシュ有効）。"
+  stage3_scenes:
+    owner: "workers"
+    batching: "標準は 1 ワーカー = 2 章の 3 並列（重章グループに worker_heavy、軽章グループに worker_light を割当）"
+    worker_constraints:
+      - "指定された `scenes/<chapterId>.html` の編集のみを行い、ワーカー単体で build/lint/verify/render を実行しない。"
+      - "読込対象は担当章 specs・cues・docs/visual-style-guide.md・templates/diagram-kit.css・対象テーマ CSS に限定する。"
+  stage4_verify_and_audit:
+    owner: "orchestrator"
+    commands:
+      - "npm run episode:build -- <ep>"
+      - "npm run episode:lint -- <ep> --json"
+      - "npm run episode:verify -- <ep> --stage pre"
+      - "npm run episode:snapshot -- <ep> --auto -o <dir> --json"
+    audit: >-
+      親（Neon または Opus）が自動生成された `contact-sheet*.jpg` を直接視覚検品し、軽微修正は親が直接編集、大規模修正のみ worker へ再委譲する。
+  stage5_render_and_post:
+    owner: "orchestrator"
+    commands:
+      - "npm run episode:render -- <ep>"
+      - "npm run episode:verify -- <ep> --stage post --grid <jpg>"
+    notes:
+      - "Windows では画面ロック対策の `--no-browser-gpu` とスリープ抑止が既定適用される。"
+      - "親が最終 2×2 確認グリッドを目視確認してからユーザーへ納品報告する。"

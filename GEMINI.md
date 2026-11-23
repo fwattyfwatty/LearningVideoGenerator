@@ -45,23 +45,28 @@
   - `npm run episode:verify -- <ep> --stage post --grid <jpg>`
 - サンドボックス制限がある環境では標準実行を優先し、VOICEVOX 通信や Chrome 起動が必要なコマンドのみ承認付きで再実行する。
 
-## 4. モデル使い分け・T3 Code オーケストレーション方針（Gemini 4 Neon × Antigravity / 将来の Claude Pro 対応）
-大規模エピソード制作時はクォータ消費・コンテキスト肥大を抑えるため、T3 Code 上の親・司令塔（Gemini 4 Neon）配下で並列図解ワーカーを使い分ける。
+## 4. モデル使い分け・マルチエージェント オーケストレーション方針
+役割・有効状態（`enabled`）の正本は **[config/orchestration.yaml](config/orchestration.yaml)** に定義している。制作開始時は `config/orchestration.yaml` で `enabled: true`（かつ T3 Code の `orchestrator_capabilities` で利用可能）なプロバイダのみを選定し、`enabled: false` のプロバイダへは委譲しないこと。
 
-- **Codex（利用停止中）**: ChatGPT Plus 解約済みのため、**現在は Codex（`codex` / `gpt-*`）を使用しない**（`orchestrator_capabilities` に残っていても選択・委譲禁止）。
-- **親・司令塔（Gemini 4 Neon）**: 構成案（`outline.md`）、掛け合い台本（`script.yaml`）、視線誘導プラン（`motion_beats`）を含む図解設計仕様（`scene-specs.json`）、辞書更新（`config/dictionary.yaml` または `episodes/<ep>/dictionary.yaml`）、音声生成・集約ビルド/検証・MP4書き出し、最終目視判定を担当。なお、金融・経済・AIなどの時事トピックでは Stage 1（`outline.md`）の時点で基準時点・最新ニュースの反映範囲を確定させてから Stage 2〜3 に進むこと。
-- **図解実装ワーカーの委譲手段（T3 Code 優先）**:
-  - **現在（Antigravity / Gemini 系）**: 軽〜標準章の並列生成は `delegate_task`（`providerInstanceId: "antigravity"`, `model: "gemini-4-hydrogen"` または `"gemini-4-argon"`）またはネイティブ `invoke_subagent`（`Model: "flash"` / `"pro"`）を使用。
-  - **将来の Claude Pro 有効化時**: `orchestrator_capabilities` で `claudeAgent` が利用可能になった場合は、`delegate_task`（`providerInstanceId: "claudeAgent"`, `driverKind: "claudeAgent"`）で `claude-sonnet-*`（標準） / `claude-haiku-*`（軽章・余白修正） / `claude-opus-*`（複雑設計・原因特定）を並列図解ワーカーとして利用できる（[CLAUDE.md](CLAUDE.md) 参照）。
+| プロバイダ | 親（オーケストレーター） | 子（図解実装・修正ワーカー） |
+| :--- | :--- | :--- |
+| **Antigravity** | **Neon** | **Neon**（重章・再設計） / **Hydrogen**（軽章・余白/Lint修正・補助検品） |
+| **Claude Code** | **Opus** | **Opus**（複雑設計・原因調査） / **Sonnet**（標準・軽章実装・修正） |
+| **Codex** | 非対応（子専用） | **Sol**（重章・再設計） / **Terra**（軽章・余白修正） |
+
+- **親・司令塔（Antigravity `Neon` または Claude Code `Opus`）**: 構成案（`outline.md`）、掛け合い台本（`script.yaml`）、視線誘導プラン（`motion_beats`）を含む図解設計仕様（`scene-specs.json`）、辞書更新（`config/dictionary.yaml` または `episodes/<ep>/dictionary.yaml`）、音声生成・集約ビルド/検証・MP4書き出し、最終目視判定を担当。なお、金融・経済・AIなどの時事トピックでは Stage 1（`outline.md`）の時点で基準時点・最新ニュースの反映範囲を確定させてから Stage 2〜3 へ進むこと。
+- **図解実装ワーカーの委譲手段**:
+  - **Antigravity が親の場合**: 同系統は `delegate_task`（`providerInstanceId: "antigravity"`）またはネイティブ `invoke_subagent`（`gemini-4-neon` / `gemini-4-hydrogen`）、他プロバイダ（Claude / Codex が `enabled: true` 時）は `delegate_task` を使用。
+  - **Claude Code が親の場合**: [CLAUDE.md](CLAUDE.md) と [.claude/skills/produce-episode/SKILL.md](.claude/skills/produce-episode/SKILL.md) に従い、ネイティブ `Agent` ツール（`opus` / `sonnet`）または `delegate_task` を使用（Antigravity 専用の `run_workflow` / `.agents/skills/produce-episode/scripts/*.py` は使用しない）。
 - **Stage 3 図解実装の並列粒度・ルーティング（親 Quota 節約＋デザイン統一）**:
   - **標準は「1ワーカー＝2章」の3並列**とする（HTML/JSの章内工程分割は禁止・個別ビルド禁止）：
-    - 例（Antigravity 現在運用）: 軽2章（Ch1＋Ch6）に `gemini-4-hydrogen`（`thought_level: "medium"`）×1、重4章（Ch2＋Ch3 / Ch4＋Ch5）に `gemini-4-hydrogen`（`thought_level: "high"`）または `gemini-4-argon`（`thought_level: "medium"`）×2。
-    - 例（将来の Claude Pro 導入時）: 軽2章に `claude-haiku-*`（または `claude-sonnet-*` low）×1、重4章に `claude-sonnet-*`（`effort: "medium"`）×2。
+    - 重4章（Ch2＋Ch3 / Ch4＋Ch5）: 有効プロバイダの `worker_heavy`（Antigravity `Neon` または `Hydrogen high` / Claude `Sonnet medium` または `Opus` / Codex `Sol medium`）。
+    - 軽2章（Ch1＋Ch6）: 有効プロバイダの `worker_light`（Antigravity `Hydrogen medium` / Claude `Sonnet low` / Codex `Terra medium`）。
   - **省プロンプトで品質・モーションを引き上げる運用**:
     - 親のプロンプトに長文のデザイン説明を毎回書かず、**「[docs/visual-style-guide.md](docs/visual-style-guide.md)、[templates/diagram-kit.css](templates/diagram-kit.css)、`window.dgMotion`、および必要に応じ `window.dgWidgets` 準拠」** を指示し、必要に応じて **スタイル手本HTML 1ファイル** を指定してトーンと密度を揃える。
 - **Stage 4 視覚検品・修正のルーティング**:
-  - **一次視覚検品（親直接目視）**: 親が `episode:verify --stage pre`（headless Chrome スモーク含む）と `episode:snapshot` を実行後、自動生成された **`contact-sheet*.jpg`（2〜3枚）は親（Gemini 4 Neon）が直接目視検品**する（委譲・起床の余分な1ターンと段階表示の誤検知を防ぎつつ、微細な文字折り返しまで正確に拾うため）。異常が疑われる章のみ個別フルHD PNG を追加確認する。
-  - **修正が必要な場合のみ委譲**: 軽微な文言・タイミング修正は親が直接編集し、余白・Lint・複数ファイル修正は `gemini-4-hydrogen`（または将来の `claude-haiku-*` / `claude-sonnet-*` low）、座標・タイムライン再設計は `gemini-4-argon`（または将来の `claude-sonnet-*` medium / `claude-opus-*`）を使用する。
+  - **一次視覚検品（親直接目視）**: 親（Neon / Opus）が `episode:verify --stage pre`（headless Chrome スモーク含む）と `episode:snapshot` を実行後、自動生成された **`contact-sheet*.jpg`（2〜3枚）を直接目視検品**する（委譲・起床の余分な1ターンと段階表示の誤検知を防ぎつつ、微細な文字折り返しまで正確に拾うため）。異常が疑われる章のみ個別フルHD PNG を追加確認する。
+  - **修正が必要な場合のみ委譲**: 軽微な文言・タイミング修正は親が直接編集し、余白・Lint・複数ファイル修正は `worker_light`（Hydrogen / Sonnet / Terra）、座標・タイムライン再設計は `worker_heavy`（Neon / Opus / Sonnet / Sol）を使用する。
 - **会話管理・検証の自動化**:
   - 新エピソードは原則新規チャット（または `/compact` 後）で開始し、並列ワーカーに個別ビルドさせず全章完了後に親が1回のみ `episode:build` / `episode:lint` / `episode:verify --stage pre` を集約実行する。
   - MP4書き出し後は `episode:verify --stage post --grid <jpg>` で仕様・音量・全フレーム立ち絵チラつき（`alphaDipFlickers == 0`）を検証し、親はコンタクトシートと最終 2×2 グリッド（1枚）を目視確認する。
