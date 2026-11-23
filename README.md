@@ -98,3 +98,8 @@ npm run episode:render -- episodes/006_asset_management --segmented
 
 - 音声合成には [VOICEVOX](https://voicevox.hiroshiba.jp/)（四国めたん・ずんだもん・春日部つむぎ）を使用しています。生成エピソードごとの利用クレジットは `episodes/<ep>/output/credits.txt` に出力されます。
 - キャラクター立ち絵・BGM・SE などの第三者素材、および生成済みの音声・動画バイナリは再配布規約や容量の観点から Git 管理に含めていません。ご自身の環境で利用規約を確認のうえ配置・生成してください。
+
+## ライセンス
+
+- 本リポジトリのソースコード・テンプレート・設定・ドキュメント・台本類は **[Apache License, Version 2.0](LICENSE)** の下で公開しています（著作権表示・第三者帰属は [NOTICE](NOTICE) を参照）。
+- `npm install` 等で取得する外部依存パッケージ（特に `gsap` に適用される GSAP Standard License）、フォント、および VOICEVOX・立ち絵・音声素材には本リポジトリのライセンスは適用されません。会社 PC での利用や業務・商用動画制作時の確認事項は **[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)** を参照してください。
