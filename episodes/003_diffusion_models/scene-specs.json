@@ -1,0 +1,68 @@
+{
+  "theme": "tech-dark",
+  "accent_color": "#14b8a6",
+  "chapters": [
+    {
+      "id": "ch01_intro",
+      "layout": "title",
+      "has_tsumugi_cutin": false,
+      "difficulty": "light",
+      "recommended_worker": "codex/gpt-6.1-terra (medium)",
+      "visual_plan": "Hero badge 'AIアーキテクチャ入門' + main heading 'Diffusion Modelの進化とこれから：ノイズから世界を描くAI'. Middle 2-column grid: Left card '生成パラダイムの比較' listing 3 rows (GAN: 学習不安定・モード崩壊の課題 / Autoregressive: 1トークンずつ直列生成 / Diffusion Model: highlighted teal #14b8a6 border, 反復ノイズ除去で高品質＆多様性を両立). Right card '逆拡散（ノイズ除去）の彫刻イメージ' with clean SVG showing 3 progressive frames connected by animated arrows: [Step T: 純粋ノイズ x_T] (scattered dots) -> [Step t: 輪郭が浮かぶ x_t] -> [Step 0: 鮮明な像 x_0] (crisp glowing teal/amber geometric landscape emblem), animating left-to-right at c1_zunda_sculpt and c1_reverse_visual. Bottom row of 3 goal pills ('① DDPM・LDM・CFGの土台', '② DiT & Flow Matching 革命', '③ 拡散LLM・世界モデルの未来') with margin: 0 212px and bottom clearance so corners never touch Metan (x:12..288, y:814..1080) or Zundamon (x:1648..1908, y:814..1080).",
+      "phase_transitions": []
+    },
+    {
+      "id": "ch02_core_evolution",
+      "layout": "default",
+      "has_tsumugi_cutin": false,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "Phase A (#c2-phase-a, c2_forward_intro..c2_zunda_yes): Title bar 'DDPMの基本原理：壊して直す確率過程' + pill 'Phase 1'. Center dual-flow SVG diagram showing 4 progressive square image frames from x_0 (clean geometric emblem) -> x_t -> x_{t+k} -> x_T (Gaussian static), with top amber arrow 'Forward（ガウスノイズ付加）' (left->right) and bottom glowing teal arrow 'Reverse（モデル ε_θ でノイズ予測＆引き算）' (right->left) plus animated glowing orb along Reverse arrow. Bottom 2 formula cards side-by-side: Left 'Forward 閉形式' with math box 'x_t = √(ᾱ_t) x_0 + √(1 - ᾱ_t) ε'; Right 'Reverse ＆ スコア直感' with 'ε_θ(x_t, t) ≈ ε' and mini SVG contour hill showing gradient arrow ∇_x log p(x) climbing from noise sea to data peak. Phase B (#c2-phase-b, starts at c2_phase2_ldm): Fade #c2-phase-a to opacity 0 and bring #c2-phase-b + Phase B header + Left LDM card in IMMEDIATELY at tP2+0.35 (ZERO blank screen gap). Two side-by-side cards: Left '① Latent Diffusion Model (LDM / 2022)' with pipeline SVG [Pixel Space 512×512×3 (重い)] -> [VAE Encoder] -> glowing teal [Latent Space z 64×64×4 + 拡散ループ] -> [VAE Decoder] -> [出力画像] + badge '計算量を劇的に削減・一般GPUで動作'; Right '② Classifier-Free Guidance (CFG)' with vector synthesis SVG showing origin -> gray vector ε_∅ (無条件) and teal vector ε_c (条件付き), extended by guidance weight w to glowing amber/teal vector 'ε̃ = ε_∅ + w(ε_c - ε_∅)', plus bottom ControlNet chip 'ControlNet 等で構図・ポーズ制御へ'. Keep bottom padding clean inside default stage.",
+      "phase_transitions": [
+        { "fade_out": "#c2-phase-a", "fade_in": "#c2-phase-b", "at_cue": "c2_phase2_ldm" }
+      ]
+    },
+    {
+      "id": "ch03_dit_flow",
+      "layout": "wide",
+      "has_tsumugi_cutin": false,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "CRITICAL WIDE SAFETY: Put padding-bottom: 48px on .c3-phase so ALL cards stay strictly above y=805 (clearing Metan/Zundamon tops at y=814). Phase A (#c3-phase-a, c3_unet_limit..c3_zunda_dit): Title bar '骨格の世代交代：U-Net から DiT / MMDiT へ' + pill 'Phase 1: Architecture'. Side-by-side 2-column grid: Left card '旧主流：U-Net（畳み込みベース）' with U-shaped downsample/bottleneck/upsample SVG blocks + skip arrows and muted amber warning tags ('大規模化でスケーリング頭打ち', '動画・テキスト統合が複雑'); Right card '新標準：DiT / MMDiT（Diffusion Transformer）' with SVG showing latent patches -> Transformer blocks + side injection arrow 'adaLN-Zero (時刻 t, 条件 c)' alongside a compact SVG scaling chart (x=計算量 Gflops, y=品質向上 climbing steeply) and bottom chips ('SD3', 'FLUX', '動画拡散モデル'). Phase B (#c3-phase-b, starts at c3_phase2_flow): Fade #c3-phase-a out and reveal #c3-phase-b + title bar + trajectory comparison card IMMEDIATELY at tP2+0.35 (ZERO blank gap). Top 2-column trajectory SVG comparison: Left '従来 DDPM（曲がる確率拡散 SDE）' showing noisy cloud x_0 -> curving zigzag dashed amber path -> data x_1 ('50〜1000 steps'); Right 'Flow Matching / Rectified Flow（直線軌道）' showing straight parallel teal vector arrows x_0 -> x_1 with formula 'x_t = (1-t)x_0 + t x_1 / v_θ ≈ x_1 - x_0' ('10〜20 steps'). Bottom card 'ステップ数の劇的圧縮（蒸留・Consistency Model）' with 4 horizontal progress bars animated via GSAP scaleX (NO CSS transform before GSAP; use transformOrigin: 'left center' in gsap.set!): DDPM 1000 steps (full width amber), DDIM 50 steps (52%), Flow Matching 20 steps (28% teal), Consistency/蒸留 1〜4 steps (10% glowing cyan/emerald badge).",
+      "phase_transitions": [
+        { "fade_out": "#c3-phase-a", "fade_in": "#c3-phase-b", "at_cue": "c3_phase2_flow" }
+      ]
+    },
+    {
+      "id": "ch04_tsumugi_walls",
+      "layout": "default",
+      "has_tsumugi_cutin": true,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "CRITICAL TSUMUGI SAFETY: Tsumugi cut-in (x:1572..1888, y:90..254) appears in BOTH Phase A (c4_tsumugi_ask) and Phase B (c4_tsumugi_safety). Add padding-right: 360px to BOTH Phase A and Phase B top title bars AND add padding-top: 86px to BOTH Phase A and Phase B content grids so top-right cards sit strictly below y=254 with zero overlap! Phase A (#c4-phase-a, c4_tsumugi_ask..c4_zunda_physics): Title bar '拡散モデルに残る3つの壁（前半）' + pill '壁①②'. Two balanced side-by-side cards: Left '壁① 推論コスト ＆ 蒸留トレードオフ' with SVG curve (x=推論ステップ数, y=品質・多様性) marking extreme low-step drop ('1〜2 step: 多様性・細部低下') vs high-step heavy compute ('長尺動画・対話で負荷大'); Right '壁② 物理法則 ＆ 長期一貫性の壁' showing 3 horizontal video-frame boxes t=1s (自然な物体) -> t=5s (微小なズレ) -> t=15s (誤差蓄積・物体消失/重力破綻!) with rising red error line SVG and callout '見た目の統計模倣 ≠ 物理因果の理解'. Phase B (#c4-phase-b, starts at c4_phase2_vae_safety): Fade #c4-phase-a out and bring #c4-phase-b + title bar + Wall 3 Card 1 in IMMEDIATELY at tP2+0.35 (ZERO blank gap). Title bar '拡散モデルに残る3つの壁（後半）：細部と社会実装' + pill '壁③'. 3 balanced cards in a row (.dg-grid-3, padding-top: 86px): Card 1 'VAE 圧縮の細部限界' (圧縮で細かい文字・指先が崩れやすい + pill '画素空間直接生成の再注目'); Card 2 '局所編集・因果制御' (一部だけ厳密に書き換える難しさ); Card 3 '安全性・著作権・来歴証明' (shield/watermark SVG + pills 'ディープフェイク対策', '電子透かし', 'C2PA 来歴証明').",
+      "phase_transitions": [
+        { "fade_out": "#c4-phase-a", "fade_in": "#c4-phase-b", "at_cue": "c4_phase2_vae_safety" }
+      ]
+    },
+    {
+      "id": "ch05_frontier_future",
+      "layout": "wide",
+      "has_tsumugi_cutin": true,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "CRITICAL WIDE + TSUMUGI SAFETY: Tsumugi cut-in (x:1572..1888, y:90..254) appears in BOTH Phase A (c5_tsumugi_text) and Phase B (c5_tsumugi_wow). Put padding-bottom: 44px on .c5-phase so bottom stays strictly above y=805 (clearing Metan/Zundamon tops at y=814). Put padding-right: 360px on Phase A title bar + padding-top: 82px on Phase A grid. Put width: 73% (left-aligned) on Phase B top banner + padding-top: 24px margin above the 3 frontier cards so cards start strictly below y=260! Phase A (#c5-phase-a, c5_tsumugi_text..c5_zunda_dlm): Title bar '未来① 離散拡散LLM：言葉も「並列ノイズ除去」で書く時代' + pill 'Discrete Diffusion'. 2-column comparison: Left card '従来の自己回帰 LLM（AR）' showing 5 token slots lighting up left-to-right sequentially ([t1]->[t2]->[t3]->[t4]->[t5]), tags 'O(N) 直列生成・待ち時間増' / '単方向（逆転の呪い）'; Right card '離散拡散 LLM（Masked Diffusion）' showing 3 stacked step rows animating in sequence: Step 0 ([MASK] x5) -> Step 1 (partial parallel unmask) -> Step 2 (full sentence restored in parallel!) with bidirectional attention SVG arcs, model badges ('LLaDA', 'Mercury', 'Gemini Diffusion'), and honest caveat pill '課題：標準KVキャッシュ非対応を研究改善中'. Phase B (#c5-phase-b, starts at c5_phase2_world): Fade #c5-phase-a out and bring #c5-phase-b + top banner (width: 73%, text 'Diffusion / Flow は言語・物理・行動を統合する次世代の共通エンジンへ') + Card 1 in IMMEDIATELY at tP2+0.35 (ZERO blank gap). 3 balanced cards in a row: Card 1 '① 拡散型ワールドモデル' (SVG: 現在映像 + Action/3D幾何 -> Diffusion -> 次フレーム物理予測; chips '自動運転', '物理シミュレータ'); Card 2 '② ロボティクス（Diffusion / Flow Policy）' (SVG: robot gripper with multi-modal smooth trajectory curves; chip '複雑な連続動作を滑らかに生成'); Card 3 '③ 統一マルチモーダル基盤（AR × Diffusion）' (dual-core SVG uniting AR [論理・計画・離散記号] + Diffusion/Flow [視覚・音声・物理・並列生成]).",
+      "phase_transitions": [
+        { "fade_out": "#c5-phase-a", "fade_in": "#c5-phase-b", "at_cue": "c5_phase2_world" }
+      ]
+    },
+    {
+      "id": "ch06_summary",
+      "layout": "default",
+      "has_tsumugi_cutin": true,
+      "difficulty": "light",
+      "recommended_worker": "codex/gpt-6.1-terra (medium)",
+      "visual_plan": "CRITICAL SAFE LAYOUT (proven Ep001/Ep002 ch06 geometry): .c6-wrap { padding-bottom: 36px; display: flex; flex-direction: column; height: 100%; }, .c6-title-bar { padding-right: 360px; }, .c6-summary-grid { padding-top: 88px; flex: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-content: center; align-items: stretch; } with 3 uniform min-height: 265px cards (all well below Tsumugi cut-in y=254 and above bottom bar). POINT 1 '土台の確立' (DDPM ノイズ予測 ε_θ・VAE潜在空間 LDM・CFG 条件誘導 & ControlNet). POINT 2 '構造と軌道の革命' (U-Net → DiT/MMDiT スケーリング・Flow Matching 直線軌道・1〜4 step 蒸留). POINT 3 '広がる未来' (推論負荷と物理の壁へ挑戦・離散拡散LLM・ワールドモデル＆AR融合). Bottom #c6-next-bar ('📚 次回テーマ候補') revealed at c6_tsumugi_next with 3 chips: '📐 Flow Matching と最適輸送', '🌍 ワールドモデルと物理AI', '⚡ 離散拡散LLMの仕組み'.",
+      "phase_transitions": []
+    }
+  ]
+}

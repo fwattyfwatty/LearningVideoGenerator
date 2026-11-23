@@ -1,0 +1,193 @@
+<style>
+.c5-scene {
+  --accent-primary: #1d4ed8;
+  position: relative;
+  height: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #0f172a;
+}
+.c5-phase { position: absolute; inset: 0; box-sizing: border-box; padding-bottom: 44px; }
+#c5-phase-b { opacity: 0; }
+.c5-title { box-sizing: border-box; min-height: 100px; padding-right: 360px; }
+.c5-grid { padding-top: 82px; }
+.c5-card { min-width: 0; }
+.c5-card .dg-card-head { margin-bottom: 14px; }
+.c5-card .dg-svg-stage { box-sizing: border-box; height: 246px; margin-bottom: 14px; }
+.c5-card svg { width: 100%; height: 100%; }
+.c5-card .dg-callout { font-size: 18px; padding: 10px 14px; }
+.c5-svg-label { fill: #0f172a; font-size: 19px; font-weight: 800; text-anchor: middle; }
+.c5-svg-note { fill: #475569; font-size: 17px; font-weight: 700; text-anchor: middle; }
+.c5-banner { width: 73%; box-sizing: border-box; min-height: 166px; padding: 28px 30px; }
+.c5-banner .dg-heading { margin-bottom: 8px; }
+.c5-banner .dg-note { margin: 0; }
+.c5-limits { padding-top: 24px; }
+.c5-limits .dg-svg-stage { height: 164px; }
+.c5-limits .dg-bar-track { margin-bottom: 12px; }
+#c5-summary { margin-top: 14px; }
+</style>
+<div class="c5-scene">
+  <div id="c5-phase-a" class="c5-phase">
+    <div class="dg-title-bar c5-title">
+      <h2 class="dg-heading">国際金融のトリレンマ｜3つのうち2つまでしか選べない</h2>
+      <span class="dg-pill-accent">構造的制約</span>
+    </div>
+    <div class="dg-grid-2 c5-grid">
+      <div id="c5-trilemma" class="dg-card dg-card-glow c5-card">
+        <div class="dg-card-head"><h3 class="dg-card-title">トリレンマの三角形</h3></div>
+        <div class="dg-svg-stage">
+          <svg viewBox="0 0 680 243" role="img" aria-label="独立した金融政策、自由な資本移動、安定した為替の三角形">
+            <defs>
+              <linearGradient id="c5-triangle-fill" x2="0" y2="1">
+                <stop stop-color="#1d4ed8" stop-opacity=".13"/>
+                <stop offset="1" stop-color="#1d4ed8" stop-opacity=".02"/>
+              </linearGradient>
+            </defs>
+            <path d="M340 29 L148 209 H532 Z" fill="url(#c5-triangle-fill)" stroke="#94a3b8" stroke-width="4" stroke-linejoin="round"/>
+            <path id="c5-float-edge" d="M340 29 L148 209" fill="none" stroke="#1d4ed8" stroke-width="7" stroke-linecap="round"/>
+            <path id="c5-control-edge" d="M340 29 L532 209" fill="none" stroke="#15803d" stroke-width="7" stroke-linecap="round"/>
+            <g id="c5-goals">
+              <rect x="220" y="4" width="240" height="49" rx="15" fill="#fff" stroke="#1d4ed8" stroke-width="2"/>
+              <rect x="24" y="186" width="248" height="49" rx="15" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+              <rect x="408" y="186" width="248" height="49" rx="15" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+              <text class="c5-svg-label" x="340" y="35">① 独立した金融政策</text>
+              <text class="c5-svg-label" x="148" y="217">② 自由な資本移動</text>
+              <text class="c5-svg-label" x="532" y="217">③ 為替相場の安定（固定）</text>
+            </g>
+            <text id="c5-two-goals" class="c5-svg-note" x="340" y="146">同時達成は2つまで</text>
+          </svg>
+        </div>
+        <div class="dg-chip-row">
+          <span id="c5-float-choice" class="dg-pill-accent">①＋② 米・日・欧｜変動相場を受容</span>
+          <span id="c5-control-choice" class="dg-pill-ok">①＋③ 中国｜資本移動を規制</span>
+        </div>
+      </div>
+      <div id="c5-spillover" class="dg-card c5-card">
+        <div class="dg-card-head"><h3 class="dg-card-title">金利差から為替・物価への波及</h3></div>
+        <div class="dg-svg-stage">
+          <svg viewBox="0 0 680 243" role="img" aria-label="金利差から輸入物価までの波及経路">
+            <rect x="26" y="6" width="302" height="44" rx="13" fill="#dbeafe" stroke="#93c5fd"/>
+            <rect x="352" y="6" width="302" height="44" rx="13" fill="#fff" stroke="#94a3b8"/>
+            <text class="c5-svg-label" x="177" y="35">高金利国（米国 3.75〜4%）</text>
+            <text class="c5-svg-label" x="503" y="35">低金利国（日本 1.25%）</text>
+            <g id="c5-capital-flow">
+              <path d="M177 53 V67 H340 M503 53 V67 H340 V87 M333 80 L340 87 L347 80" fill="none" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="130" y="93" width="420" height="48" rx="13" fill="#dbeafe" stroke="#93c5fd"/>
+              <text class="c5-svg-label" x="340" y="123">高金利通貨に資金が流入</text>
+            </g>
+            <g id="c5-import-prices">
+              <path d="M340 145 V168 M333 161 L340 168 L347 161" fill="none" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="130" y="174" width="420" height="48" rx="13" fill="#fff7ed" stroke="#fdba74"/>
+              <text class="c5-svg-label" x="340" y="204">通貨安（円安）と輸入物価の上昇</text>
+            </g>
+          </svg>
+        </div>
+        <div id="c5-pressure" class="dg-callout dg-callout-warn">他国の中央銀行にも政策見直しの圧力がかかる</div>
+      </div>
+    </div>
+  </div>
+  <div id="c5-phase-b" class="c5-phase">
+    <div class="dg-card dg-card-glow c5-banner">
+      <h2 class="dg-heading">現代の中央銀行が直面する「3つの限界」</h2>
+      <p class="dg-note">金利だけでは制御しきれない壁</p>
+    </div>
+    <div class="dg-grid-3 c5-limits">
+      <div class="dg-card dg-card-glow c5-card">
+        <div class="dg-card-head"><h3 class="dg-card-title">① 供給ショック</h3><span class="dg-pill-warn">生産コスト</span></div>
+        <div id="c5-supply">
+          <div class="dg-svg-stage">
+            <svg viewBox="0 0 370 140" role="img" aria-label="供給ショックでコストが増え、物価が上がる">
+              <rect x="5" y="3" width="90" height="44" rx="12" fill="#fff" stroke="#94a3b8"/>
+              <rect x="105" y="3" width="160" height="44" rx="12" fill="#fff" stroke="#94a3b8"/>
+              <rect x="275" y="3" width="90" height="44" rx="12" fill="#fff" stroke="#94a3b8"/>
+              <text class="c5-svg-note" x="50" y="31">紛争</text><text class="c5-svg-note" x="185" y="31">エネルギー高</text><text class="c5-svg-note" x="320" y="31">関税</text>
+              <path d="M50 51 V65 H320 V51 M185 51 V82 M178 75 L185 82 L192 75" fill="none" stroke="#9a3412" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="40" y="87" width="290" height="49" rx="13" fill="#fff7ed" stroke="#fdba74"/>
+              <text class="c5-svg-label" x="185" y="118">コスト増によるインフレ</text>
+            </svg>
+          </div>
+          <div class="dg-callout dg-callout-warn">景気悪化と物価高が並ぶスタグフレーションの恐れ</div>
+        </div>
+      </div>
+      <div id="c5-fiscal" class="dg-card c5-card">
+        <div class="dg-card-head"><h3 class="dg-card-title">② 財政ドミナンス</h3></div>
+        <div class="dg-svg-stage">
+          <svg viewBox="0 0 370 140" role="img" aria-label="政府債務が大きいと利上げで利払い費が増える">
+            <rect x="15" y="3" width="340" height="43" rx="12" fill="#fff" stroke="#94a3b8"/>
+            <text class="c5-svg-label" x="185" y="31">巨額の政府債務 × 利上げ</text>
+            <path d="M185 52 V76 M178 69 L185 76 L192 69" fill="none" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="15" y="83" width="340" height="51" rx="13" fill="#dbeafe" stroke="#93c5fd"/>
+            <use href="#dg-ico-shield" x="43" y="94" width="28" height="28" color="#1d4ed8"/>
+            <text class="c5-svg-label" x="202" y="115">国債の利払い費が急増</text>
+          </svg>
+        </div>
+        <div id="c5-independence" class="dg-callout dg-callout-warn">政策判断に政治圧力がかかり、通貨への信認も揺らぐ</div>
+      </div>
+      <div id="c5-lag" class="dg-card c5-card">
+        <div class="dg-card-head"><h3 class="dg-card-title">③ 効果のタイムラグ</h3></div>
+        <div class="dg-svg-stage">
+          <svg viewBox="0 0 370 140" role="img" aria-label="政策変更から実体経済への浸透まで6〜18か月">
+            <rect x="15" y="3" width="340" height="43" rx="12" fill="#fff" stroke="#94a3b8"/>
+            <text class="c5-svg-label" x="185" y="31">金利を変更</text>
+            <path d="M185 51 V77 M178 70 L185 77 L192 70" fill="none" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="15" y="83" width="340" height="51" rx="13" fill="#dbeafe" stroke="#93c5fd"/>
+            <text class="c5-svg-label" x="185" y="115">6〜18か月後に実体経済へ浸透</text>
+          </svg>
+        </div>
+        <div class="dg-bar-track"><div id="c5-lag-fill" class="dg-bar-fill"></div></div>
+        <div class="dg-callout">効果が出る時点の景気を予測して判断する</div>
+      </div>
+    </div>
+    <div id="c5-summary" class="dg-chip-row">
+      <span id="c5-recap" class="dg-chip dg-chip-accent">供給は増やせない・財政の影響を受ける・効果は遅れる</span>
+      <span id="c5-next" class="dg-chip">各国の政策判断を振り返る</span>
+    </div>
+  </div>
+</div>
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders['ch05_tsumugi_trilemma'] = function (tl, cues) {
+  function at(id, fallback) {
+    var cue = cues && cues[id];
+    var time = typeof cue === "number" ? cue : cue && (cue.start ?? cue.time);
+    return Number.isFinite(time) ? time : fallback;
+  }
+  function reveal(id, time) {
+    gsap.set(id, { opacity: 0, y: 10 });
+    tl.to(id, { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, time);
+  }
+  function trace(id, time) {
+    gsap.set(id, { strokeDasharray: 270, strokeDashoffset: 270 });
+    tl.to(id, { strokeDashoffset: 0, duration: 0.65, ease: "power2.out" }, time);
+  }
+
+  reveal("#c5-trilemma", at("c5_tsumugi_fx", 0.45));
+  reveal("#c5-two-goals", at("c5_trilemma_intro", 8.48));
+  reveal("#c5-goals", at("c5_three_goals", 15.514));
+  var tFloat = at("c5_developed_choice", 24.1587);
+  trace("#c5-float-edge", tFloat);
+  reveal("#c5-float-choice", tFloat);
+  var tControl = at("c5_china_choice", 32.814);
+  trace("#c5-control-edge", tControl);
+  reveal("#c5-control-choice", tControl);
+
+  var tRates = at("c5_zunda_trilemma", 41.004);
+  var tSpillover = at("c5_spillover", 49.3113);
+  reveal("#c5-spillover", tRates);
+  reveal("#c5-capital-flow", tSpillover);
+  reveal("#c5-import-prices", tSpillover + 0.7);
+  reveal("#c5-pressure", tSpillover + 1.4);
+
+  var tSwitch = at("c5_phase2_limits", 57.05) + 0.15;
+  tl.set("#c5-phase-b", { opacity: 1 }, tSwitch);
+  tl.to("#c5-phase-a", { opacity: 0, duration: 0.2 }, tSwitch);
+  reveal("#c5-supply", at("c5_limit_intro", 65.1973));
+  reveal("#c5-fiscal", at("c5_limit_fiscal", 80.4386));
+  reveal("#c5-independence", at("c5_independence", 89.4779));
+  var tLag = at("c5_limit_lag", 96.3732);
+  reveal("#c5-lag", tLag);
+  gsap.set("#c5-lag-fill", { scaleX: 0, transformOrigin: "left center" });
+  tl.to("#c5-lag-fill", { scaleX: 1, duration: 1.25, ease: "power2.out" }, tLag + 0.35);
+  reveal("#c5-recap", at("c5_zunda_limits", 105.0859));
+  reveal("#c5-next", at("c5_to_ch6", 113.2866));
+};
+</script>

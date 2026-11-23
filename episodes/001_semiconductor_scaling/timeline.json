@@ -1,0 +1,3694 @@
+{
+  "generatedAt": "2026-11-20T03:27:19.004Z",
+  "meta": {
+    "title": "半導体の微細化とは？仕組み・恩恵・限界と未来を徹底図解",
+    "series": null,
+    "episode": null,
+    "theme": "tech-dark",
+    "accent_color": "#0284c7",
+    "bgm": null,
+    "fps": 30,
+    "width": 1920,
+    "height": 1080
+  },
+  "totalDuration": 617.5805,
+  "chapters": [
+    {
+      "id": "ch01_intro",
+      "title": "1. 導入：指先のチップに数百億個",
+      "layout": "title",
+      "start": 0,
+      "end": 71.102,
+      "duration": 71.102,
+      "cues": {
+        "c1_title": 0.45,
+        "c1_phone_zoom": 8.928,
+        "c1_moore_count": 16.8407,
+        "c1_moore_step": 24.956,
+        "c1_scale_bar": 32.09,
+        "c1_scale_compare": 41.2273,
+        "c1_zunda_scale": 52.2333,
+        "c1_goal": 58.3433,
+        "c1_go": 67.1413
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch01_intro_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "今回は「半導体の微細化」と、それによって可能になった世界、そして将来の技術まで図解で解説します。",
+          "voiceText": "今回は「半導体の微細化」と、それによって可能になった世界、そして将来の技術まで図解で解説します。",
+          "audioFile": "audio/lines/ch01_intro_001.wav",
+          "hash": "87eea6f0eabfd6cb",
+          "start": 0.45,
+          "end": 8.578,
+          "globalStart": 0.45,
+          "globalEnd": 8.578,
+          "duration": 8.128,
+          "mouthSpans": [
+            {
+              "start": 0.63,
+              "end": 1.17
+            },
+            {
+              "start": 1.47,
+              "end": 2.79
+            },
+            {
+              "start": 3.15,
+              "end": 3.27
+            },
+            {
+              "start": 3.81,
+              "end": 5.43
+            },
+            {
+              "start": 5.79,
+              "end": 8.37
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_title"
+        },
+        {
+          "index": 2,
+          "id": "ch01_intro_002",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "昔のパソコンより今のスマホの方がずっと小さいのに、動画もAIもサクサク動くのはどうしてなのだ？",
+          "voiceText": "昔のパソコンより今のスマホの方がずっと小さいのに、動画もエーアイもサクサク動くのはどうしてなのだ？",
+          "audioFile": "audio/lines/ch01_intro_002.wav",
+          "hash": "1a2c0cdd6efc65f8",
+          "start": 8.928,
+          "end": 16.4907,
+          "globalStart": 8.928,
+          "globalEnd": 16.4907,
+          "duration": 7.5627,
+          "mouthSpans": [
+            {
+              "start": 9.048,
+              "end": 11.628
+            },
+            {
+              "start": 11.868,
+              "end": 11.988
+            },
+            {
+              "start": 12.288,
+              "end": 12.708
+            },
+            {
+              "start": 13.128,
+              "end": 14.268
+            },
+            {
+              "start": 14.448,
+              "end": 15.228
+            },
+            {
+              "start": 15.408,
+              "end": 16.308
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_phone_zoom"
+        },
+        {
+          "index": 3,
+          "id": "ch01_intro_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "その最大の理由が半導体の微細化です。実はスマホの頭脳には、何百億個もの電気スイッチが詰まっているんです。",
+          "voiceText": "その最大の理由が半導体の微細化です。実はスマホの頭脳には、何百億個もの電気スイッチが詰まっているんです。",
+          "audioFile": "audio/lines/ch01_intro_003.wav",
+          "hash": "90f54888a35d1dc1",
+          "start": 16.8407,
+          "end": 24.606,
+          "globalStart": 16.8407,
+          "globalEnd": 24.606,
+          "duration": 7.7653,
+          "mouthSpans": [
+            {
+              "start": 16.9607,
+              "end": 19.6007
+            },
+            {
+              "start": 20.0207,
+              "end": 21.4607
+            },
+            {
+              "start": 21.7607,
+              "end": 22.3007
+            },
+            {
+              "start": 22.4207,
+              "end": 23.2607
+            },
+            {
+              "start": 23.3807,
+              "end": 23.8007
+            },
+            {
+              "start": 23.9207,
+              "end": 24.4007
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_moore_count"
+        },
+        {
+          "index": 4,
+          "id": "ch01_intro_004",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "何百億個！？日本の人口どころか、地球全体の人口よりもずっと多いのだ！",
+          "voiceText": "何百億個！？日本の人口どころか、地球全体の人口よりもずっと多いのだ！",
+          "audioFile": "audio/lines/ch01_intro_004.wav",
+          "hash": "2f4200761b914a66",
+          "start": 24.956,
+          "end": 31.74,
+          "globalStart": 24.956,
+          "globalEnd": 31.74,
+          "duration": 6.784,
+          "mouthSpans": [
+            {
+              "start": 25.076,
+              "end": 25.736
+            },
+            {
+              "start": 25.976,
+              "end": 26.156
+            },
+            {
+              "start": 26.816,
+              "end": 27.176
+            },
+            {
+              "start": 27.296,
+              "end": 28.256
+            },
+            {
+              "start": 28.856,
+              "end": 29.876
+            },
+            {
+              "start": 29.996,
+              "end": 30.596
+            },
+            {
+              "start": 30.836,
+              "end": 31.616
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_moore_step"
+        },
+        {
+          "index": 5,
+          "id": "ch01_intro_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "1970年代の数千個から、現代では1000億個を超えるチップまで登場しました。部品を極限まで小さくした成果です。",
+          "voiceText": "1970年代の数千個から、現代では1000億個を超えるチップまで登場しました。部品をきょくげんまで小さくした成果です。",
+          "audioFile": "audio/lines/ch01_intro_005.wav",
+          "hash": "852c664d1809ee0a",
+          "start": 32.09,
+          "end": 41.0073,
+          "globalStart": 32.09,
+          "globalEnd": 41.0073,
+          "duration": 8.9173,
+          "mouthSpans": [
+            {
+              "start": 32.27,
+              "end": 34.73
+            },
+            {
+              "start": 35.03,
+              "end": 35.99
+            },
+            {
+              "start": 36.17,
+              "end": 38.15
+            },
+            {
+              "start": 38.45,
+              "end": 40.85
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c1_scale_bar"
+        },
+        {
+          "index": 6,
+          "id": "ch01_intro_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "最先端の「2nm」や「3nm」世代は、人間の髪の毛の数万分の一、ウイルスよりもさらに小さい世界なんです。",
+          "voiceText": "最先端の「2ナノメートル」や「3ナノメートル」世代は、人間の髪の毛の数万分の一、ウイルスよりもさらに小さい世界なんです。",
+          "audioFile": "audio/lines/ch01_intro_006.wav",
+          "hash": "b0fbc602bfb04830",
+          "start": 41.2273,
+          "end": 51.8833,
+          "globalStart": 41.2273,
+          "globalEnd": 51.8833,
+          "duration": 10.656,
+          "mouthSpans": [
+            {
+              "start": 41.4073,
+              "end": 42.1873
+            },
+            {
+              "start": 42.6073,
+              "end": 43.3873
+            },
+            {
+              "start": 43.9273,
+              "end": 44.1073
+            },
+            {
+              "start": 44.8273,
+              "end": 45.6673
+            },
+            {
+              "start": 46.0873,
+              "end": 46.5673
+            },
+            {
+              "start": 46.8673,
+              "end": 49.0273
+            },
+            {
+              "start": 49.5073,
+              "end": 51.7273
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_scale_compare"
+        },
+        {
+          "index": 7,
+          "id": "ch01_intro_007",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "worry",
+          "se": null,
+          "caption": "ウイルスより小さいスイッチを何百億個も並べるなんて、想像もつかないのだ…！",
+          "voiceText": "ウイルスより小さいスイッチを何百億個も並べるなんて、想像もつかないのだ…！",
+          "audioFile": "audio/lines/ch01_intro_007.wav",
+          "hash": "d7f78234d7e447f8",
+          "start": 52.2333,
+          "end": 57.9933,
+          "globalStart": 52.2333,
+          "globalEnd": 57.9933,
+          "duration": 5.76,
+          "mouthSpans": [
+            {
+              "start": 52.4133,
+              "end": 53.0133
+            },
+            {
+              "start": 53.1933,
+              "end": 53.5533
+            },
+            {
+              "start": 53.6733,
+              "end": 53.7933
+            },
+            {
+              "start": 53.9733,
+              "end": 54.5133
+            },
+            {
+              "start": 54.6333,
+              "end": 54.7533
+            },
+            {
+              "start": 54.9333,
+              "end": 55.1133
+            },
+            {
+              "start": 55.3533,
+              "end": 55.8333
+            },
+            {
+              "start": 55.9533,
+              "end": 56.0733
+            },
+            {
+              "start": 56.4933,
+              "end": 57.0333
+            },
+            {
+              "start": 57.2133,
+              "end": 57.8133
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_zunda_scale"
+        },
+        {
+          "index": 8,
+          "id": "ch01_intro_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "そこで今日は、①なぜ小さくなると強いのか、②何が可能になったのか、③限界の先の未来、の3つを見ていきましょう。",
+          "voiceText": "そこで今日は、①なぜ小さくなると強いのか、②何が可能になったのか、③限界の先の未来、の3つを見ていきましょう。",
+          "audioFile": "audio/lines/ch01_intro_008.wav",
+          "hash": "6ba6602b929bc174",
+          "start": 58.3433,
+          "end": 66.7913,
+          "globalStart": 58.3433,
+          "globalEnd": 66.7913,
+          "duration": 8.448,
+          "mouthSpans": [
+            {
+              "start": 58.4633,
+              "end": 59.2433
+            },
+            {
+              "start": 59.4833,
+              "end": 61.4033
+            },
+            {
+              "start": 61.7033,
+              "end": 63.2033
+            },
+            {
+              "start": 63.5633,
+              "end": 64.9433
+            },
+            {
+              "start": 65.3033,
+              "end": 65.5433
+            },
+            {
+              "start": 65.6633,
+              "end": 66.1433
+            },
+            {
+              "start": 66.2633,
+              "end": 66.6833
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_goal"
+        },
+        {
+          "index": 9,
+          "id": "ch01_intro_009",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "気になるのだ！さっそく教えてほしいのだ！",
+          "voiceText": "気になるのだ！さっそく教えてほしいのだ！",
+          "audioFile": "audio/lines/ch01_intro_009.wav",
+          "hash": "0ba2d3a8a013c7a2",
+          "start": 67.1413,
+          "end": 70.352,
+          "globalStart": 67.1413,
+          "globalEnd": 70.352,
+          "duration": 3.2107,
+          "mouthSpans": [
+            {
+              "start": 67.3213,
+              "end": 68.1013
+            },
+            {
+              "start": 68.7613,
+              "end": 70.2013
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c1_go"
+        }
+      ]
+    },
+    {
+      "id": "ch02_scaling_basics",
+      "title": "2. 微細化の基本と3大メリット",
+      "layout": "default",
+      "start": 71.102,
+      "end": 192.484,
+      "duration": 121.382,
+      "cues": {
+        "c2_switch_intro": 0.45,
+        "c2_parts": 8.6593,
+        "c2_gate_on": 16.3673,
+        "c2_gate_off": 23.51,
+        "c2_zunda_switch": 31.9027,
+        "c2_node_nm": 38.4287,
+        "c2_zunda_why": 45.9574,
+        "c2_phase2_shrink": 53.4114,
+        "c2_benefit_density": 60.4687,
+        "c2_zunda_density": 69.0107,
+        "c2_benefit_speed": 75.5367,
+        "c2_benefit_power": 82.9567,
+        "c2_zunda_dennard": 91.1574,
+        "c2_moore_summary": 98.4834,
+        "c2_moore_end": 106.9914,
+        "c2_bridge": 113.7947
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch02_scaling_basics_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "まず微細化される主役、トランジスタから見ていきましょう。一言でいうと、超小型の「電気のスイッチ」です。",
+          "voiceText": "まず微細化される主役、トランジスタから見ていきましょう。一言でいうと、超小型の「電気のスイッチ」です。",
+          "audioFile": "audio/lines/ch02_scaling_basics_001.wav",
+          "hash": "665d3da4761ccc74",
+          "start": 0.45,
+          "end": 8.4393,
+          "globalStart": 71.552,
+          "globalEnd": 79.5413,
+          "duration": 7.9893,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 2.01
+            },
+            {
+              "start": 2.37,
+              "end": 3.99
+            },
+            {
+              "start": 4.41,
+              "end": 5.19
+            },
+            {
+              "start": 5.61,
+              "end": 6.27
+            },
+            {
+              "start": 6.69,
+              "end": 7.35
+            },
+            {
+              "start": 7.47,
+              "end": 7.59
+            },
+            {
+              "start": 8.07,
+              "end": 8.25
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c2_switch_intro"
+        },
+        {
+          "index": 2,
+          "id": "ch02_scaling_basics_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "左が入り口のソース、右が出口のドレイン、真ん中の上で電気の流れを操るのがゲートと呼ばれる部分です。",
+          "voiceText": "左が入り口のソース、右が出口のドレイン、真ん中の上で電気の流れを操るのがゲートと呼ばれる部分です。",
+          "audioFile": "audio/lines/ch02_scaling_basics_002.wav",
+          "hash": "d6ceaa768b6389d7",
+          "start": 8.6593,
+          "end": 16.1473,
+          "globalStart": 79.7613,
+          "globalEnd": 87.2493,
+          "duration": 7.488,
+          "mouthSpans": [
+            {
+              "start": 8.7793,
+              "end": 10.1593
+            },
+            {
+              "start": 10.5193,
+              "end": 11.7793
+            },
+            {
+              "start": 12.1993,
+              "end": 15.9793
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c2_parts"
+        },
+        {
+          "index": 3,
+          "id": "ch02_scaling_basics_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "ゲートに電圧をかけると道が開いて電子が流れ、「1」の状態、つまりスイッチONになります。",
+          "voiceText": "ゲートに電圧をかけると道が開いて電子が流れ、「1」の状態、つまりスイッチONになります。",
+          "audioFile": "audio/lines/ch02_scaling_basics_003.wav",
+          "hash": "e2b26a13dfe83e7b",
+          "start": 16.3673,
+          "end": 23.29,
+          "globalStart": 87.4693,
+          "globalEnd": 94.392,
+          "duration": 6.9227,
+          "mouthSpans": [
+            {
+              "start": 16.4873,
+              "end": 19.4873
+            },
+            {
+              "start": 19.9073,
+              "end": 20.2073
+            },
+            {
+              "start": 20.6273,
+              "end": 21.2273
+            },
+            {
+              "start": 21.6473,
+              "end": 22.1873
+            },
+            {
+              "start": 22.3073,
+              "end": 23.0873
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c2_gate_on"
+        },
+        {
+          "index": 4,
+          "id": "ch02_scaling_basics_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "逆に電圧を止めると通り道が閉じて「0」、スイッチOFF。この1と0の組み合わせですべての計算をしています。",
+          "voiceText": "逆に電圧を止めると通り道が閉じて「0」、スイッチOFF。この1と0の組み合わせですべての計算をしています。",
+          "audioFile": "audio/lines/ch02_scaling_basics_004.wav",
+          "hash": "25c34ca21434a408",
+          "start": 23.51,
+          "end": 31.5527,
+          "globalStart": 94.612,
+          "globalEnd": 102.6547,
+          "duration": 8.0427,
+          "mouthSpans": [
+            {
+              "start": 23.63,
+              "end": 26.09
+            },
+            {
+              "start": 26.51,
+              "end": 26.81
+            },
+            {
+              "start": 27.29,
+              "end": 28.01
+            },
+            {
+              "start": 28.31,
+              "end": 31.37
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_gate_off"
+        },
+        {
+          "index": 5,
+          "id": "ch02_scaling_basics_005",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "なるほど！この電気スイッチをどんどん小さく作っていくのが「微細化」なのだ？",
+          "voiceText": "なるほど！この電気スイッチをどんどん小さく作っていくのが「微細化」なのだ？",
+          "audioFile": "audio/lines/ch02_scaling_basics_005.wav",
+          "hash": "77114d48db028e66",
+          "start": 31.9027,
+          "end": 38.0787,
+          "globalStart": 103.0047,
+          "globalEnd": 109.1807,
+          "duration": 6.176,
+          "mouthSpans": [
+            {
+              "start": 32.0227,
+              "end": 32.5627
+            },
+            {
+              "start": 32.9827,
+              "end": 33.3427
+            },
+            {
+              "start": 33.6427,
+              "end": 33.7627
+            },
+            {
+              "start": 33.9427,
+              "end": 34.5427
+            },
+            {
+              "start": 34.7227,
+              "end": 34.9627
+            },
+            {
+              "start": 35.4427,
+              "end": 35.6227
+            },
+            {
+              "start": 35.7427,
+              "end": 36.1027
+            },
+            {
+              "start": 36.5827,
+              "end": 36.9427
+            },
+            {
+              "start": 37.3627,
+              "end": 37.9027
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_zunda_switch"
+        },
+        {
+          "index": 6,
+          "id": "ch02_scaling_basics_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そうです。歴史的にはゲートの幅などを指標にして、μmからnmへと世代が進んできました。",
+          "voiceText": "そうです。歴史的にはゲートの幅などを指標にして、マイクロメートルからナノメートルへと世代が進んできました。",
+          "audioFile": "audio/lines/ch02_scaling_basics_006.wav",
+          "hash": "19995c3ec618b151",
+          "start": 38.4287,
+          "end": 45.6074,
+          "globalStart": 109.5307,
+          "globalEnd": 116.7094,
+          "duration": 7.1787,
+          "mouthSpans": [
+            {
+              "start": 38.5487,
+              "end": 38.9687
+            },
+            {
+              "start": 39.3887,
+              "end": 41.9087
+            },
+            {
+              "start": 42.2087,
+              "end": 45.5087
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_node_nm"
+        },
+        {
+          "index": 7,
+          "id": "ch02_scaling_basics_007",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "でもスイッチを小さくするだけなら数が増えるだけじゃないのだ？なんで速く、省エネにもなるのだ？",
+          "voiceText": "でもスイッチを小さくするだけなら数が増えるだけじゃないのだ？なんで速く、省エネにもなるのだ？",
+          "audioFile": "audio/lines/ch02_scaling_basics_007.wav",
+          "hash": "9c69e5aa2530fc5e",
+          "start": 45.9574,
+          "end": 53.0614,
+          "globalStart": 117.0594,
+          "globalEnd": 124.1634,
+          "duration": 7.104,
+          "mouthSpans": [
+            {
+              "start": 46.0774,
+              "end": 46.6174
+            },
+            {
+              "start": 46.7374,
+              "end": 46.9774
+            },
+            {
+              "start": 47.0974,
+              "end": 47.3374
+            },
+            {
+              "start": 47.5174,
+              "end": 48.1174
+            },
+            {
+              "start": 48.2374,
+              "end": 48.5974
+            },
+            {
+              "start": 48.7174,
+              "end": 49.9174
+            },
+            {
+              "start": 50.3374,
+              "end": 50.9374
+            },
+            {
+              "start": 51.5374,
+              "end": 52.9174
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_zunda_why"
+        },
+        {
+          "index": 8,
+          "id": "ch02_scaling_basics_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "とてもいい質問です！実はサイズを縦横半分にするだけで、3つのご利益が同時に手に入るんです。",
+          "voiceText": "とてもいい質問です！実はサイズを縦横半分にするだけで、3つのご利益が同時に手に入るんです。",
+          "audioFile": "audio/lines/ch02_scaling_basics_008.wav",
+          "hash": "892d1768b9f232ef",
+          "start": 53.4114,
+          "end": 60.2487,
+          "globalStart": 124.5134,
+          "globalEnd": 131.3507,
+          "duration": 6.8373,
+          "mouthSpans": [
+            {
+              "start": 53.5314,
+              "end": 54.7314
+            },
+            {
+              "start": 55.1514,
+              "end": 57.4914
+            },
+            {
+              "start": 57.8514,
+              "end": 60.0714
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c2_phase2_shrink"
+        },
+        {
+          "index": 9,
+          "id": "ch02_scaling_basics_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "1つ目は高密度化。縦と横が半分になると面積は4分の1なので、同じチップに4倍ものスイッチを詰め込めます。",
+          "voiceText": "1つ目は高密度化。縦と横が半分になると面積は4分の1なので、同じチップに4倍ものスイッチを詰め込めます。",
+          "audioFile": "audio/lines/ch02_scaling_basics_009.wav",
+          "hash": "77d35a0ae151c464",
+          "start": 60.4687,
+          "end": 68.6607,
+          "globalStart": 131.5707,
+          "globalEnd": 139.7627,
+          "duration": 8.192,
+          "mouthSpans": [
+            {
+              "start": 60.7087,
+              "end": 61.9087
+            },
+            {
+              "start": 62.2687,
+              "end": 65.5087
+            },
+            {
+              "start": 65.8087,
+              "end": 68.4487
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_benefit_density"
+        },
+        {
+          "index": 10,
+          "id": "ch02_scaling_basics_010",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "おお、チップの大きさは同じまま、一気に4倍の脳みそにパワーアップするのだ！",
+          "voiceText": "おお、チップの大きさは同じまま、一気に4倍の脳みそにパワーアップするのだ！",
+          "audioFile": "audio/lines/ch02_scaling_basics_010.wav",
+          "hash": "3b262de01f4853e5",
+          "start": 69.0107,
+          "end": 75.1867,
+          "globalStart": 140.1127,
+          "globalEnd": 146.2887,
+          "duration": 6.176,
+          "mouthSpans": [
+            {
+              "start": 69.9107,
+              "end": 70.0307
+            },
+            {
+              "start": 70.1507,
+              "end": 70.5707
+            },
+            {
+              "start": 70.7507,
+              "end": 70.9907
+            },
+            {
+              "start": 71.1107,
+              "end": 71.6507
+            },
+            {
+              "start": 72.3107,
+              "end": 73.6907
+            },
+            {
+              "start": 73.8107,
+              "end": 74.2907
+            },
+            {
+              "start": 74.4107,
+              "end": 75.0107
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_zunda_density"
+        },
+        {
+          "index": 11,
+          "id": "ch02_scaling_basics_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "2つ目は高速化。電子が移動する距離そのものが短くなるため、スイッチの切り替え速度がグッと上がります。",
+          "voiceText": "2つ目は高速化。電子が移動する距離そのものが短くなるため、スイッチの切り替え速度がグッと上がります。",
+          "audioFile": "audio/lines/ch02_scaling_basics_011.wav",
+          "hash": "f45ae328ba39d362",
+          "start": 75.5367,
+          "end": 82.7367,
+          "globalStart": 146.6387,
+          "globalEnd": 153.8387,
+          "duration": 7.2,
+          "mouthSpans": [
+            {
+              "start": 75.7167,
+              "end": 76.6167
+            },
+            {
+              "start": 76.7367,
+              "end": 76.8567
+            },
+            {
+              "start": 77.2167,
+              "end": 79.9167
+            },
+            {
+              "start": 80.3367,
+              "end": 82.5567
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c2_benefit_speed"
+        },
+        {
+          "index": 12,
+          "id": "ch02_scaling_basics_012",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "3つ目は省電力化。小さなゲートを開閉するだけなので、1回あたりに必要な電気の量も少なくて済みます。",
+          "voiceText": "3つ目は省電力化。小さなゲートを開閉するだけなので、1回あたりに必要な電気の量も少なくて済みます。",
+          "audioFile": "audio/lines/ch02_scaling_basics_012.wav",
+          "hash": "17e273d033fc947b",
+          "start": 82.9567,
+          "end": 90.8074,
+          "globalStart": 154.0587,
+          "globalEnd": 161.9094,
+          "duration": 7.8507,
+          "mouthSpans": [
+            {
+              "start": 83.0767,
+              "end": 83.1967
+            },
+            {
+              "start": 83.3167,
+              "end": 84.1567
+            },
+            {
+              "start": 84.3367,
+              "end": 84.4567
+            },
+            {
+              "start": 84.8167,
+              "end": 87.0367
+            },
+            {
+              "start": 87.4567,
+              "end": 88.2967
+            },
+            {
+              "start": 88.4767,
+              "end": 89.9767
+            },
+            {
+              "start": 90.0967,
+              "end": 90.6367
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_benefit_power"
+        },
+        {
+          "index": 13,
+          "id": "ch02_scaling_basics_013",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "たくさん積めて、速く動いて、電気も食わない！まさに一石三鳥で最強すぎるのだ！",
+          "voiceText": "たくさん積めて、速く動いて、電気も食わない！まさに一石三鳥で最強すぎるのだ！",
+          "audioFile": "audio/lines/ch02_scaling_basics_013.wav",
+          "hash": "343d4684f5b7a577",
+          "start": 91.1574,
+          "end": 98.1334,
+          "globalStart": 162.2594,
+          "globalEnd": 169.2354,
+          "duration": 6.976,
+          "mouthSpans": [
+            {
+              "start": 91.6374,
+              "end": 91.7574
+            },
+            {
+              "start": 91.8774,
+              "end": 92.2374
+            },
+            {
+              "start": 92.6574,
+              "end": 93.4974
+            },
+            {
+              "start": 93.8574,
+              "end": 94.0374
+            },
+            {
+              "start": 94.1574,
+              "end": 94.8774
+            },
+            {
+              "start": 95.2974,
+              "end": 95.7774
+            },
+            {
+              "start": 95.9574,
+              "end": 96.0774
+            },
+            {
+              "start": 96.2574,
+              "end": 97.3374
+            },
+            {
+              "start": 97.4574,
+              "end": 97.9974
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_zunda_dennard"
+        },
+        {
+          "index": 14,
+          "id": "ch02_scaling_basics_014",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "この「約2年で集積度が2倍になる」経験則がムーアの法則、省電力の法則がデナード則と呼ばれています。",
+          "voiceText": "この「約2年でしゅうせきどが2倍になる」経験則がムーアの法則、しょうでんりょくの法則がデナード則と呼ばれています。",
+          "audioFile": "audio/lines/ch02_scaling_basics_014.wav",
+          "hash": "e96629bfb5fd1009",
+          "start": 98.4834,
+          "end": 106.7714,
+          "globalStart": 169.5854,
+          "globalEnd": 177.8734,
+          "duration": 8.288,
+          "mouthSpans": [
+            {
+              "start": 98.6034,
+              "end": 98.8434
+            },
+            {
+              "start": 99.2634,
+              "end": 101.3034
+            },
+            {
+              "start": 101.7234,
+              "end": 103.4634
+            },
+            {
+              "start": 103.8234,
+              "end": 105.6234
+            },
+            {
+              "start": 105.7434,
+              "end": 106.5834
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c2_moore_summary"
+        },
+        {
+          "index": 15,
+          "id": "ch02_scaling_basics_015",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "この黄金のサイクルが半世紀以上も続いたことで、コンピュータは爆発的な進化を遂げてきました。",
+          "voiceText": "この黄金のサイクルが半世紀以上も続いたことで、コンピュータは爆発的な進化を遂げてきました。",
+          "audioFile": "audio/lines/ch02_scaling_basics_015.wav",
+          "hash": "440d01710989a467",
+          "start": 106.9914,
+          "end": 113.4447,
+          "globalStart": 178.0934,
+          "globalEnd": 184.5467,
+          "duration": 6.4533,
+          "mouthSpans": [
+            {
+              "start": 107.1714,
+              "end": 110.2314
+            },
+            {
+              "start": 110.5914,
+              "end": 111.6114
+            },
+            {
+              "start": 111.7314,
+              "end": 113.3514
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_moore_end"
+        },
+        {
+          "index": 16,
+          "id": "ch02_scaling_basics_016",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "じゃあ実際に、その一石三鳥パワーで私たちの世界にはどんなことができるようになったのだ？",
+          "voiceText": "じゃあ実際に、その一石三鳥パワーで私たちの世界にはどんなことができるようになったのだ？",
+          "audioFile": "audio/lines/ch02_scaling_basics_016.wav",
+          "hash": "6f5bc4017cb893e1",
+          "start": 113.7947,
+          "end": 120.632,
+          "globalStart": 184.8967,
+          "globalEnd": 191.734,
+          "duration": 6.8373,
+          "mouthSpans": [
+            {
+              "start": 113.9747,
+              "end": 114.2147
+            },
+            {
+              "start": 114.4547,
+              "end": 114.8147
+            },
+            {
+              "start": 115.2947,
+              "end": 115.7747
+            },
+            {
+              "start": 115.9547,
+              "end": 116.9147
+            },
+            {
+              "start": 117.0347,
+              "end": 117.3347
+            },
+            {
+              "start": 117.4547,
+              "end": 118.9547
+            },
+            {
+              "start": 119.1947,
+              "end": 120.4547
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c2_bridge"
+        }
+      ]
+    },
+    {
+      "id": "ch03_what_it_enables",
+      "title": "3. 微細化が可能にした世界",
+      "layout": "wide",
+      "start": 192.484,
+      "end": 300.7695,
+      "duration": 108.2855,
+      "cues": {
+        "c3_soc_intro": 0.45,
+        "c3_old_pc": 7.4647,
+        "c3_soc_merge": 14.106,
+        "c3_zunda_camera": 24.6427,
+        "c3_soc_benefit": 32.1394,
+        "c3_phase2_world": 39.4847,
+        "c3_zunda_ai": 47.2054,
+        "c3_ai_gpu": 54.4461,
+        "c3_ai_scale": 62.9328,
+        "c3_auto_drive": 71.0248,
+        "c3_edge_ai": 77.3248,
+        "c3_med_dc": 85.8008,
+        "c3_zunda_all": 94.3108,
+        "c3_wrap": 101.4768
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch03_what_it_enables_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "微細化によって可能になった変化は大きく3つあります。まずは「手のひらのスーパーコンピュータ」です。",
+          "voiceText": "微細化によって可能になった変化は大きく3つあります。まずは「手のひらのスーパーコンピュータ」です。",
+          "audioFile": "audio/lines/ch03_what_it_enables_001.wav",
+          "hash": "83d4950c662c7ab9",
+          "start": 0.45,
+          "end": 7.2447,
+          "globalStart": 192.934,
+          "globalEnd": 199.7287,
+          "duration": 6.7947,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 3.75
+            },
+            {
+              "start": 4.11,
+              "end": 4.53
+            },
+            {
+              "start": 4.89,
+              "end": 6.51
+            },
+            {
+              "start": 6.87,
+              "end": 7.05
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c3_soc_intro"
+        },
+        {
+          "index": 2,
+          "id": "ch03_what_it_enables_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "かつて部屋ひとつを埋め尽くしていた計算機が、微細化のおかげで指先サイズのシリコンに収まりました。",
+          "voiceText": "かつて部屋ひとつを埋め尽くしていた計算機が、微細化のおかげで指先サイズのシリコンに収まりました。",
+          "audioFile": "audio/lines/ch03_what_it_enables_002.wav",
+          "hash": "8481aa4604e0b35f",
+          "start": 7.4647,
+          "end": 13.886,
+          "globalStart": 199.9487,
+          "globalEnd": 206.37,
+          "duration": 6.4213,
+          "mouthSpans": [
+            {
+              "start": 7.5847,
+              "end": 10.2247
+            },
+            {
+              "start": 10.5247,
+              "end": 13.7647
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c3_old_pc"
+        },
+        {
+          "index": 3,
+          "id": "ch03_what_it_enables_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "現代のスマホ用SoCでは、計算するCPU、映像のGPU、AI専用のNPUまで1つのチップに統合されています。",
+          "voiceText": "現代のスマホ用エスオーシーでは、計算するシーピーユー、映像のジーピーユー、エーアイ専用のエヌピーユーまで1つのチップに統合されています。",
+          "audioFile": "audio/lines/ch03_what_it_enables_003.wav",
+          "hash": "e6b239e4e1c0a6fd",
+          "start": 14.106,
+          "end": 24.2927,
+          "globalStart": 206.59,
+          "globalEnd": 216.7767,
+          "duration": 10.1867,
+          "mouthSpans": [
+            {
+              "start": 14.226,
+              "end": 16.266
+            },
+            {
+              "start": 16.626,
+              "end": 18.006
+            },
+            {
+              "start": 18.546,
+              "end": 19.746
+            },
+            {
+              "start": 20.406,
+              "end": 22.206
+            },
+            {
+              "start": 22.326,
+              "end": 24.126
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_soc_merge"
+        },
+        {
+          "index": 4,
+          "id": "ch03_what_it_enables_004",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "写真を撮った瞬間に背景がぼけたり夜景が綺麗になったりするのも、チップが全部入りだからなのだ！",
+          "voiceText": "写真を撮った瞬間に背景がぼけたり夜景が綺麗になったりするのも、チップが全部入りだからなのだ！",
+          "audioFile": "audio/lines/ch03_what_it_enables_004.wav",
+          "hash": "fcba11696c10c015",
+          "start": 24.6427,
+          "end": 31.7894,
+          "globalStart": 217.1267,
+          "globalEnd": 224.2734,
+          "duration": 7.1467,
+          "mouthSpans": [
+            {
+              "start": 24.8827,
+              "end": 26.8627
+            },
+            {
+              "start": 27.0427,
+              "end": 27.4627
+            },
+            {
+              "start": 27.6427,
+              "end": 27.8827
+            },
+            {
+              "start": 28.0027,
+              "end": 28.4827
+            },
+            {
+              "start": 28.6627,
+              "end": 28.8427
+            },
+            {
+              "start": 28.9627,
+              "end": 29.3827
+            },
+            {
+              "start": 29.8027,
+              "end": 29.9227
+            },
+            {
+              "start": 30.0427,
+              "end": 30.2227
+            },
+            {
+              "start": 30.3427,
+              "end": 31.6627
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_zunda_camera"
+        },
+        {
+          "index": 5,
+          "id": "ch03_what_it_enables_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "はい。しかも全機能がチップ内で超接近しているため、データ移動のロスが少なくバッテリーも長持ちします。",
+          "voiceText": "はい。しかも全機能がチップ内で超接近しているため、データ移動のロスが少なくバッテリーも長持ちします。",
+          "audioFile": "audio/lines/ch03_what_it_enables_005.wav",
+          "hash": "8f86cb9b61ed0569",
+          "start": 32.1394,
+          "end": 39.2647,
+          "globalStart": 224.6234,
+          "globalEnd": 231.7487,
+          "duration": 7.1253,
+          "mouthSpans": [
+            {
+              "start": 32.2594,
+              "end": 32.4994
+            },
+            {
+              "start": 32.9794,
+              "end": 34.9594
+            },
+            {
+              "start": 35.0794,
+              "end": 35.8594
+            },
+            {
+              "start": 36.2194,
+              "end": 39.0394
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c3_soc_benefit"
+        },
+        {
+          "index": 6,
+          "id": "ch03_what_it_enables_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "次に2つ目、いま最も世界を変えているのが「生成AIやLLMの爆発的な進化」です。",
+          "voiceText": "次に2つ目、いま最も世界を変えているのが「生成エーアイやエルエルエムの爆発的な進化」です。",
+          "audioFile": "audio/lines/ch03_what_it_enables_006.wav",
+          "hash": "72213f08ac02b60e",
+          "start": 39.4847,
+          "end": 46.8554,
+          "globalStart": 231.9687,
+          "globalEnd": 239.3394,
+          "duration": 7.3707,
+          "mouthSpans": [
+            {
+              "start": 39.6047,
+              "end": 40.5047
+            },
+            {
+              "start": 40.8047,
+              "end": 42.7247
+            },
+            {
+              "start": 43.0847,
+              "end": 45.1847
+            },
+            {
+              "start": 45.3047,
+              "end": 46.0247
+            },
+            {
+              "start": 46.5047,
+              "end": 46.6847
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_phase2_world"
+        },
+        {
+          "index": 7,
+          "id": "ch03_what_it_enables_007",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "AIが急に人間みたいに話したり絵を描いたりできるようになったのも、微細化のおかげなのだ？",
+          "voiceText": "エーアイが急に人間みたいに話したり絵を描いたりできるようになったのも、微細化のおかげなのだ？",
+          "audioFile": "audio/lines/ch03_what_it_enables_007.wav",
+          "hash": "87636512560ca4d8",
+          "start": 47.2054,
+          "end": 54.0961,
+          "globalStart": 239.6894,
+          "globalEnd": 246.5801,
+          "duration": 6.8907,
+          "mouthSpans": [
+            {
+              "start": 47.3854,
+              "end": 47.9254
+            },
+            {
+              "start": 48.1054,
+              "end": 50.8054
+            },
+            {
+              "start": 50.9254,
+              "end": 51.5254
+            },
+            {
+              "start": 51.6454,
+              "end": 52.0054
+            },
+            {
+              "start": 52.5454,
+              "end": 53.9254
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_zunda_ai"
+        },
+        {
+          "index": 8,
+          "id": "ch03_what_it_enables_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "その通りです。AIの学習や推論には、何千何万もの計算コアを並列で一気に動かすGPUが欠かせません。",
+          "voiceText": "その通りです。エーアイの学習や推論には、何千何万もの計算コアを並列で一気に動かすジーピーユーが欠かせません。",
+          "audioFile": "audio/lines/ch03_what_it_enables_008.wav",
+          "hash": "2a4aeff9235a0b99",
+          "start": 54.4461,
+          "end": 62.7128,
+          "globalStart": 246.9301,
+          "globalEnd": 255.1968,
+          "duration": 8.2667,
+          "mouthSpans": [
+            {
+              "start": 54.6261,
+              "end": 55.2861
+            },
+            {
+              "start": 55.8261,
+              "end": 57.6261
+            },
+            {
+              "start": 57.9261,
+              "end": 60.3861
+            },
+            {
+              "start": 60.5061,
+              "end": 62.6061
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c3_ai_gpu"
+        },
+        {
+          "index": 9,
+          "id": "ch03_what_it_enables_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "1枚のチップに数百億〜千億個ものトランジスタを詰め込めたからこそ、巨大AIが現実の速度で動くんです。",
+          "voiceText": "1枚のチップに数百億〜千億個ものトランジスタを詰め込めたからこそ、巨大エーアイが現実の速度で動くんです。",
+          "audioFile": "audio/lines/ch03_what_it_enables_009.wav",
+          "hash": "a9f81353e115b3f8",
+          "start": 62.9328,
+          "end": 70.8048,
+          "globalStart": 255.4168,
+          "globalEnd": 263.2888,
+          "duration": 7.872,
+          "mouthSpans": [
+            {
+              "start": 63.0528,
+              "end": 64.7928
+            },
+            {
+              "start": 65.2128,
+              "end": 65.5728
+            },
+            {
+              "start": 65.6928,
+              "end": 67.8528
+            },
+            {
+              "start": 68.2128,
+              "end": 70.6128
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c3_ai_scale"
+        },
+        {
+          "index": 10,
+          "id": "ch03_what_it_enables_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "さらに3つ目は、自動運転や医療・巨大インフラといった社会全体を支える進化です。",
+          "voiceText": "さらに3つ目は、自動運転や医療・巨大インフラといった社会全体を支える進化です。",
+          "audioFile": "audio/lines/ch03_what_it_enables_010.wav",
+          "hash": "241181fb1ec8782d",
+          "start": 71.0248,
+          "end": 77.1048,
+          "globalStart": 263.5088,
+          "globalEnd": 269.5888,
+          "duration": 6.08,
+          "mouthSpans": [
+            {
+              "start": 71.1448,
+              "end": 72.1048
+            },
+            {
+              "start": 72.4048,
+              "end": 73.5448
+            },
+            {
+              "start": 73.9048,
+              "end": 76.9048
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c3_auto_drive"
+        },
+        {
+          "index": 11,
+          "id": "ch03_what_it_enables_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "自動運転車では、周囲の歩行者や信号をコンマ数秒で認識するため、車載チップの高性能化が命綱になります。",
+          "voiceText": "自動運転車では、周囲の歩行者や信号をコンマ数秒で認識するため、車載チップの高性能化が命綱になります。",
+          "audioFile": "audio/lines/ch03_what_it_enables_011.wav",
+          "hash": "d98dd868ebe3bb83",
+          "start": 77.3248,
+          "end": 85.5808,
+          "globalStart": 269.8088,
+          "globalEnd": 278.0648,
+          "duration": 8.256,
+          "mouthSpans": [
+            {
+              "start": 77.4448,
+              "end": 78.5248
+            },
+            {
+              "start": 78.8848,
+              "end": 82.3048
+            },
+            {
+              "start": 82.6048,
+              "end": 85.3648
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c3_edge_ai"
+        },
+        {
+          "index": 12,
+          "id": "ch03_what_it_enables_012",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "医療分野のゲノム解析や創薬、クラウドのデータセンターの電力削減も、微細チップの省エネ性能が支えています。",
+          "voiceText": "医療分野のゲノム解析や創薬、クラウドのデータセンターの電力削減も、微細チップの省エネ性能が支えています。",
+          "audioFile": "audio/lines/ch03_what_it_enables_012.wav",
+          "hash": "76eaeffd1904a554",
+          "start": 85.8008,
+          "end": 93.9608,
+          "globalStart": 278.2848,
+          "globalEnd": 286.4448,
+          "duration": 8.16,
+          "mouthSpans": [
+            {
+              "start": 85.9208,
+              "end": 88.1408
+            },
+            {
+              "start": 88.5008,
+              "end": 90.8408
+            },
+            {
+              "start": 91.2608,
+              "end": 93.7208
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_med_dc"
+        },
+        {
+          "index": 13,
+          "id": "ch03_what_it_enables_013",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "スマホもAIも車も医療も、全部「スイッチの微細化」が土台になっていたのだ！",
+          "voiceText": "スマホもエーアイも車も医療も、全部「スイッチの微細化」が土台になっていたのだ！",
+          "audioFile": "audio/lines/ch03_what_it_enables_013.wav",
+          "hash": "e173585a01a8eb4d",
+          "start": 94.3108,
+          "end": 101.1268,
+          "globalStart": 286.7948,
+          "globalEnd": 293.6108,
+          "duration": 6.816,
+          "mouthSpans": [
+            {
+              "start": 94.5508,
+              "end": 96.4708
+            },
+            {
+              "start": 96.9508,
+              "end": 97.3708
+            },
+            {
+              "start": 97.9108,
+              "end": 98.1508
+            },
+            {
+              "start": 98.2708,
+              "end": 98.5708
+            },
+            {
+              "start": 98.6908,
+              "end": 99.0508
+            },
+            {
+              "start": 99.4708,
+              "end": 100.2508
+            },
+            {
+              "start": 100.3708,
+              "end": 100.9708
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_zunda_all"
+        },
+        {
+          "index": 14,
+          "id": "ch03_what_it_enables_014",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "まさに現代のデジタル技術は、半導体の微細化というエンジンの上で動いていると言えますね。",
+          "voiceText": "まさに現代のデジタル技術は、半導体の微細化というエンジンの上で動いていると言えますね。",
+          "audioFile": "audio/lines/ch03_what_it_enables_014.wav",
+          "hash": "36f3a347517b730d",
+          "start": 101.4768,
+          "end": 107.5355,
+          "globalStart": 293.9608,
+          "globalEnd": 300.0195,
+          "duration": 6.0587,
+          "mouthSpans": [
+            {
+              "start": 101.5968,
+              "end": 103.4568
+            },
+            {
+              "start": 103.7568,
+              "end": 107.4168
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c3_wrap"
+        }
+      ]
+    },
+    {
+      "id": "ch04_tsumugi_limits",
+      "title": "4. つむぎの質問：微細化の限界",
+      "layout": "default",
+      "start": 300.7695,
+      "end": 418.4137,
+      "duration": 117.6442,
+      "cues": {
+        "c4_tsumugi_q": 0.45,
+        "c4_metan_praise": 7.936,
+        "c4_zunda_atom": 15.7847,
+        "c4_thin_wall": 21.0094,
+        "c4_tunneling": 30.9041,
+        "c4_quantum": 37.9401,
+        "c4_heat_leak": 46.4268,
+        "c4_zunda_ghost": 54.5741,
+        "c4_phase2_cost": 60.6521,
+        "c4_duv_euv": 68.6588,
+        "c4_euv_laser": 75.4708,
+        "c4_euv_price": 85.6215,
+        "c4_zunda_price": 94.7182,
+        "c4_fab_cost": 101.5109,
+        "c4_tsumugi_to_ch5": 110.5262
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch04_tsumugi_limits_001",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "sharp",
+          "se": null,
+          "caption": "ちょっと待って！そんなに小さくし続けたら、いつか原子のサイズにぶつからない？あと作るコストもヤバくない？",
+          "voiceText": "ちょっと待って！そんなに小さくし続けたら、いつか原子のサイズにぶつからない？あと作るコストもヤバくない？",
+          "audioFile": "audio/lines/ch04_tsumugi_limits_001.wav",
+          "hash": "0d9f0bc877cd64d7",
+          "start": 0.45,
+          "end": 7.586,
+          "globalStart": 301.2195,
+          "globalEnd": 308.3555,
+          "duration": 7.136,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 0.99
+            },
+            {
+              "start": 1.11,
+              "end": 1.23
+            },
+            {
+              "start": 1.71,
+              "end": 3.15
+            },
+            {
+              "start": 3.75,
+              "end": 4.77
+            },
+            {
+              "start": 4.95,
+              "end": 5.31
+            },
+            {
+              "start": 5.79,
+              "end": 6.03
+            },
+            {
+              "start": 6.15,
+              "end": 6.45
+            },
+            {
+              "start": 6.57,
+              "end": 7.35
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_tsumugi_q"
+        },
+        {
+          "index": 2,
+          "id": "ch04_tsumugi_limits_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "すごく鋭い指摘ですね、つむぎさん！実はまさに今、物理とコストの2つの大きな壁にぶつかっているんです。",
+          "voiceText": "すごく鋭い指摘ですね、つむぎさん！実はまさに今、物理とコストの2つの大きな壁にぶつかっているんです。",
+          "audioFile": "audio/lines/ch04_tsumugi_limits_002.wav",
+          "hash": "052fd1b5faf9312f",
+          "start": 7.936,
+          "end": 15.4347,
+          "globalStart": 308.7055,
+          "globalEnd": 316.2042,
+          "duration": 7.4987,
+          "mouthSpans": [
+            {
+              "start": 8.056,
+              "end": 9.436
+            },
+            {
+              "start": 9.856,
+              "end": 10.456
+            },
+            {
+              "start": 10.876,
+              "end": 11.896
+            },
+            {
+              "start": 12.196,
+              "end": 15.256
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_metan_praise"
+        },
+        {
+          "index": 3,
+          "id": "ch04_tsumugi_limits_003",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "worry",
+          "se": null,
+          "caption": "原子のサイズって…これ以上は物理的に削れないってことなのだ！？",
+          "voiceText": "原子のサイズって…これ以上は物理的に削れないってことなのだ！？",
+          "audioFile": "audio/lines/ch04_tsumugi_limits_003.wav",
+          "hash": "1b0f93333d1d7a08",
+          "start": 15.7847,
+          "end": 20.6594,
+          "globalStart": 316.5542,
+          "globalEnd": 321.4289,
+          "duration": 4.8747,
+          "mouthSpans": [
+            {
+              "start": 15.9647,
+              "end": 16.8047
+            },
+            {
+              "start": 16.9247,
+              "end": 17.1047
+            },
+            {
+              "start": 17.4647,
+              "end": 18.1247
+            },
+            {
+              "start": 18.3047,
+              "end": 18.8447
+            },
+            {
+              "start": 18.9647,
+              "end": 19.6847
+            },
+            {
+              "start": 19.8647,
+              "end": 20.4647
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_zunda_atom"
+        },
+        {
+          "index": 4,
+          "id": "ch04_tsumugi_limits_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "材料であるシリコンの原子1個は約0.24nm。ゲート幅が数nmになると、壁の厚さは原子十数個分しかありません。",
+          "voiceText": "材料であるシリコンの原子1個は約0.24ナノメートル。ゲート幅が数ナノメートルになると、壁の厚さは原子十数個分しかありません。",
+          "audioFile": "audio/lines/ch04_tsumugi_limits_004.wav",
+          "hash": "b59571494023aa06",
+          "start": 21.0094,
+          "end": 30.6841,
+          "globalStart": 321.7789,
+          "globalEnd": 331.4536,
+          "duration": 9.6747,
+          "mouthSpans": [
+            {
+              "start": 21.1294,
+              "end": 22.8694
+            },
+            {
+              "start": 22.9894,
+              "end": 24.9694
+            },
+            {
+              "start": 25.3294,
+              "end": 27.4294
+            },
+            {
+              "start": 27.8494,
+              "end": 30.6094
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c4_thin_wall"
+        },
+        {
+          "index": 5,
+          "id": "ch04_tsumugi_limits_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "ここまで薄くなると、スイッチをOFFにして壁を作っているはずなのに、電子が壁をすり抜けてしまうんです。",
+          "voiceText": "ここまで薄くなると、スイッチをOFFにして壁を作っているはずなのに、電子が壁をすり抜けてしまうんです。",
+          "audioFile": "audio/lines/ch04_tsumugi_limits_005.wav",
+          "hash": "62dfb9a3e22e4683",
+          "start": 30.9041,
+          "end": 37.7201,
+          "globalStart": 331.6736,
+          "globalEnd": 338.4896,
+          "duration": 6.816,
+          "mouthSpans": [
+            {
+              "start": 31.0241,
+              "end": 32.1641
+            },
+            {
+              "start": 32.6441,
+              "end": 35.2241
+            },
+            {
+              "start": 35.6441,
+              "end": 37.5641
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c4_tunneling"
+        },
+        {
+          "index": 6,
+          "id": "ch04_tsumugi_limits_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "これが「量子トンネル効果」です。極小の世界では電子が波の性質を持ち、薄い障壁を通り抜けてしまいます。",
+          "voiceText": "これが「量子トンネル効果」です。きょくしょうの世界では電子が波の性質を持ち、薄いしょうへきを通り抜けてしまいます。",
+          "audioFile": "audio/lines/ch04_tsumugi_limits_006.wav",
+          "hash": "ce7ca3f8265c5609",
+          "start": 37.9401,
+          "end": 46.2068,
+          "globalStart": 338.7096,
+          "globalEnd": 346.9763,
+          "duration": 8.2667,
+          "mouthSpans": [
+            {
+              "start": 38.0601,
+              "end": 38.4201
+            },
+            {
+              "start": 38.7201,
+              "end": 39.8601
+            },
+            {
+              "start": 40.2201,
+              "end": 40.3401
+            },
+            {
+              "start": 40.8201,
+              "end": 42.9801
+            },
+            {
+              "start": 43.1001,
+              "end": 43.5801
+            },
+            {
+              "start": 43.9401,
+              "end": 46.0401
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c4_quantum"
+        },
+        {
+          "index": 7,
+          "id": "ch04_tsumugi_limits_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "その結果、使っていないのに電気が漏れるリーク電流が増え、発熱が深刻化してデナード則も崩れてしまいました。",
+          "voiceText": "その結果、使っていないのに電気が漏れるリーク電流が増え、発熱が深刻化してデナード則も崩れてしまいました。",
+          "audioFile": "audio/lines/ch04_tsumugi_limits_007.wav",
+          "hash": "77bdea5f63347c4a",
+          "start": 46.4268,
+          "end": 54.2241,
+          "globalStart": 347.1963,
+          "globalEnd": 354.9936,
+          "duration": 7.7973,
+          "mouthSpans": [
+            {
+              "start": 46.6068,
+              "end": 47.2068
+            },
+            {
+              "start": 47.6268,
+              "end": 47.8668
+            },
+            {
+              "start": 47.9868,
+              "end": 50.1468
+            },
+            {
+              "start": 50.2668,
+              "end": 50.4468
+            },
+            {
+              "start": 50.8068,
+              "end": 51.7668
+            },
+            {
+              "start": 51.8868,
+              "end": 54.1068
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_heat_leak"
+        },
+        {
+          "index": 8,
+          "id": "ch04_tsumugi_limits_008",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "worry",
+          "se": null,
+          "caption": "壁をすり抜けるなんて幽霊みたいなのだ…！しかも熱くなるのはスマホでも困るのだ！",
+          "voiceText": "壁をすり抜けるなんて幽霊みたいなのだ…！しかも熱くなるのはスマホでも困るのだ！",
+          "audioFile": "audio/lines/ch04_tsumugi_limits_008.wav",
+          "hash": "5da7a45f00ef8056",
+          "start": 54.5741,
+          "end": 60.3021,
+          "globalStart": 355.3436,
+          "globalEnd": 361.0716,
+          "duration": 5.728,
+          "mouthSpans": [
+            {
+              "start": 54.7541,
+              "end": 57.2741
+            },
+            {
+              "start": 57.7541,
+              "end": 58.0541
+            },
+            {
+              "start": 58.2341,
+              "end": 58.7141
+            },
+            {
+              "start": 58.9541,
+              "end": 60.1541
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_zunda_ghost"
+        },
+        {
+          "index": 9,
+          "id": "ch04_tsumugi_limits_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そして2つ目が製造コストの壁です。回路を描くには、ウェハーに光を当てて焼き付ける「露光」を使います。",
+          "voiceText": "そして2つ目が製造コストの壁です。回路を描くには、ウェハーに光を当てて焼き付ける「ろこう」を使います。",
+          "audioFile": "audio/lines/ch04_tsumugi_limits_009.wav",
+          "hash": "e406b5596185fa58",
+          "start": 60.6521,
+          "end": 68.4388,
+          "globalStart": 361.4216,
+          "globalEnd": 369.2083,
+          "duration": 7.7867,
+          "mouthSpans": [
+            {
+              "start": 60.7721,
+              "end": 61.1321
+            },
+            {
+              "start": 61.2521,
+              "end": 62.9921
+            },
+            {
+              "start": 63.4721,
+              "end": 64.4321
+            },
+            {
+              "start": 64.7921,
+              "end": 65.2721
+            },
+            {
+              "start": 65.4521,
+              "end": 66.1721
+            },
+            {
+              "start": 66.2921,
+              "end": 66.5921
+            },
+            {
+              "start": 66.9521,
+              "end": 67.3121
+            },
+            {
+              "start": 67.6721,
+              "end": 68.2721
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c4_phase2_cost"
+        },
+        {
+          "index": 10,
+          "id": "ch04_tsumugi_limits_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "しかし線が細くなりすぎて、従来使われてきたDUVという光ではぼやけて描けなくなりました。",
+          "voiceText": "しかし線が細くなりすぎて、従来使われてきたディーユーブイという光ではぼやけて描けなくなりました。",
+          "audioFile": "audio/lines/ch04_tsumugi_limits_010.wav",
+          "hash": "d59a758e9443ea93",
+          "start": 68.6588,
+          "end": 75.2508,
+          "globalStart": 369.4283,
+          "globalEnd": 376.0203,
+          "duration": 6.592,
+          "mouthSpans": [
+            {
+              "start": 68.7788,
+              "end": 70.4588
+            },
+            {
+              "start": 70.8188,
+              "end": 71.7788
+            },
+            {
+              "start": 71.8988,
+              "end": 72.9788
+            },
+            {
+              "start": 73.0988,
+              "end": 75.1388
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c4_duv_euv"
+        },
+        {
+          "index": 11,
+          "id": "ch04_tsumugi_limits_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そこで登場したのが波長13.5nmの極端紫外線、EUV露光装置です。真空中で特殊な鏡を使う超精密機械です。",
+          "voiceText": "そこで登場したのが波長13.5ナノメートルのきょくたんしがいせん、イーユーブイろこう装置です。真空中で特殊な鏡を使う超精密機械です。",
+          "audioFile": "audio/lines/ch04_tsumugi_limits_011.wav",
+          "hash": "316de7076a5601e1",
+          "start": 75.4708,
+          "end": 85.4015,
+          "globalStart": 376.2403,
+          "globalEnd": 386.171,
+          "duration": 9.9307,
+          "mouthSpans": [
+            {
+              "start": 75.5908,
+              "end": 78.8908
+            },
+            {
+              "start": 79.0108,
+              "end": 79.7308
+            },
+            {
+              "start": 80.2708,
+              "end": 81.7108
+            },
+            {
+              "start": 82.0108,
+              "end": 85.2508
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c4_euv_laser"
+        },
+        {
+          "index": 12,
+          "id": "ch04_tsumugi_limits_012",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "しかもこの装置、オランダのASML社しか量産できず、1台で数百億円、最新世代は500億円を超えます。",
+          "voiceText": "しかもこの装置、オランダのエーエスエムエル社しか量産できず、1台で数百億円、最新世代は500億円を超えます。",
+          "audioFile": "audio/lines/ch04_tsumugi_limits_012.wav",
+          "hash": "b34be41c6a1c20f6",
+          "start": 85.6215,
+          "end": 94.3682,
+          "globalStart": 386.391,
+          "globalEnd": 395.1377,
+          "duration": 8.7467,
+          "mouthSpans": [
+            {
+              "start": 85.7415,
+              "end": 86.7015
+            },
+            {
+              "start": 87.0015,
+              "end": 89.5815
+            },
+            {
+              "start": 90.0015,
+              "end": 91.4415
+            },
+            {
+              "start": 91.9815,
+              "end": 93.7215
+            },
+            {
+              "start": 93.8415,
+              "end": 94.2015
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_euv_price"
+        },
+        {
+          "index": 13,
+          "id": "ch04_tsumugi_limits_013",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "装置1台だけで数百億円！？それじゃあ工場をまるごと作ったらいくらかかるのだ！？",
+          "voiceText": "装置1台だけで数百億円！？それじゃあ工場をまるごと作ったらいくらかかるのだ！？",
+          "audioFile": "audio/lines/ch04_tsumugi_limits_013.wav",
+          "hash": "5167c5306b60eb70",
+          "start": 94.7182,
+          "end": 101.1609,
+          "globalStart": 395.4877,
+          "globalEnd": 401.9304,
+          "duration": 6.4427,
+          "mouthSpans": [
+            {
+              "start": 94.8982,
+              "end": 95.0782
+            },
+            {
+              "start": 95.5582,
+              "end": 96.0382
+            },
+            {
+              "start": 96.2182,
+              "end": 96.4582
+            },
+            {
+              "start": 96.5782,
+              "end": 96.6982
+            },
+            {
+              "start": 96.8182,
+              "end": 97.1182
+            },
+            {
+              "start": 97.7182,
+              "end": 99.2782
+            },
+            {
+              "start": 99.4582,
+              "end": 100.1782
+            },
+            {
+              "start": 100.3582,
+              "end": 100.9582
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_zunda_price"
+        },
+        {
+          "index": 14,
+          "id": "ch04_tsumugi_limits_014",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "最先端工場は1つで数兆円規模。投資に耐えられる企業はTSMCやサムスン、インテルなど一握りに限られます。",
+          "voiceText": "最先端工場は1つで数兆円規模。投資に耐えられる企業はティーエスエムシーやサムスン、インテルなど一握りに限られます。",
+          "audioFile": "audio/lines/ch04_tsumugi_limits_014.wav",
+          "hash": "c829ced5a4e4f289",
+          "start": 101.5109,
+          "end": 110.0762,
+          "globalStart": 402.2804,
+          "globalEnd": 410.8457,
+          "duration": 8.5653,
+          "mouthSpans": [
+            {
+              "start": 101.6309,
+              "end": 104.2109
+            },
+            {
+              "start": 104.5109,
+              "end": 107.5109
+            },
+            {
+              "start": 108.0509,
+              "end": 109.8509
+            }
+          ],
+          "pauseAfter": 0.45,
+          "cue": "c4_fab_cost"
+        },
+        {
+          "index": 15,
+          "id": "ch04_tsumugi_limits_015",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "worry",
+          "se": null,
+          "caption": "物理でも限界ギリギリ、お金も数兆円…じゃあもう半導体の進化ってここで止まっちゃうの？",
+          "voiceText": "物理でも限界ギリギリ、お金も数兆円…じゃあもう半導体の進化ってここで止まっちゃうの？",
+          "audioFile": "audio/lines/ch04_tsumugi_limits_015.wav",
+          "hash": "d6159f9a90d1dfce",
+          "start": 110.5262,
+          "end": 116.8942,
+          "globalStart": 411.2957,
+          "globalEnd": 417.6637,
+          "duration": 6.368,
+          "mouthSpans": [
+            {
+              "start": 110.6462,
+              "end": 112.0262
+            },
+            {
+              "start": 112.4462,
+              "end": 113.0462
+            },
+            {
+              "start": 113.1662,
+              "end": 113.5262
+            },
+            {
+              "start": 114.0662,
+              "end": 115.6262
+            },
+            {
+              "start": 115.7462,
+              "end": 116.7662
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c4_tsumugi_to_ch5"
+        }
+      ]
+    },
+    {
+      "id": "ch05_future_tech",
+      "title": "5. 将来の半導体：限界を超える4技術",
+      "layout": "wide",
+      "start": 418.4137,
+      "end": 556.6057,
+      "duration": 138.192,
+      "cues": {
+        "c5_intro_4tech": 0.45,
+        "c5_3d_transistor": 8.99,
+        "c5_gaa_cfet": 18.074,
+        "c5_zunda_3d": 28.92,
+        "c5_bspdn": 35.478,
+        "c5_bspdn_move": 45.9593,
+        "c5_zunda_road": 54.6933,
+        "c5_phase2_tsumugi": 60.146,
+        "c5_nm_label": 70.8747,
+        "c5_zunda_name": 80.2594,
+        "c5_chiplet_3d": 87.2547,
+        "c5_chiplet_lego": 96.9787,
+        "c5_zunda_lego": 105.51,
+        "c5_photonics": 111.5667,
+        "c5_cpo_iown": 120.5014,
+        "c5_tsumugi_wow": 129.4207
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch05_future_tech_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "いいえ、止まりません！平面で小さくする限界を突破するため、業界は4つの新しい切り札へ進化しています。",
+          "voiceText": "いいえ、止まりません！平面で小さくする限界を突破するため、業界は4つの新しい切り札へ進化しています。",
+          "audioFile": "audio/lines/ch05_future_tech_001.wav",
+          "hash": "f783d120c21f4a75",
+          "start": 0.45,
+          "end": 8.77,
+          "globalStart": 418.8637,
+          "globalEnd": 427.1837,
+          "duration": 8.32,
+          "mouthSpans": [
+            {
+              "start": 0.69,
+              "end": 0.99
+            },
+            {
+              "start": 1.47,
+              "end": 2.13
+            },
+            {
+              "start": 2.61,
+              "end": 5.25
+            },
+            {
+              "start": 5.61,
+              "end": 8.55
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c5_intro_4tech"
+        },
+        {
+          "index": 2,
+          "id": "ch05_future_tech_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "1つ目は「トランジスタの立体化」です。平面構造が限界になり、電気の通り道を縦に立てたFinFETが生まれました。",
+          "voiceText": "1つ目は「トランジスタの立体化」です。平面構造が限界になり、電気の通り道を縦に立てたフィンフェットが生まれました。",
+          "audioFile": "audio/lines/ch05_future_tech_002.wav",
+          "hash": "9deae6ed5a164e97",
+          "start": 8.99,
+          "end": 17.854,
+          "globalStart": 427.4037,
+          "globalEnd": 436.2677,
+          "duration": 8.864,
+          "mouthSpans": [
+            {
+              "start": 9.23,
+              "end": 9.71
+            },
+            {
+              "start": 10.07,
+              "end": 10.85
+            },
+            {
+              "start": 10.97,
+              "end": 11.33
+            },
+            {
+              "start": 11.75,
+              "end": 11.87
+            },
+            {
+              "start": 12.41,
+              "end": 14.21
+            },
+            {
+              "start": 14.63,
+              "end": 17.75
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c5_3d_transistor"
+        },
+        {
+          "index": 3,
+          "id": "ch05_future_tech_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "さらに3nmや2nmでは通り道を360度囲むGAAへ進化。将来はN型とP型を上下に積むCFETも開発されています。",
+          "voiceText": "さらに3ナノメートルや2ナノメートルでは通り道を360度囲むジーエーエーへ進化。将来はN型とP型を上下に積むシーフェットも開発されています。",
+          "audioFile": "audio/lines/ch05_future_tech_003.wav",
+          "hash": "fd38b2348a0cad55",
+          "start": 18.074,
+          "end": 28.57,
+          "globalStart": 436.4877,
+          "globalEnd": 446.9837,
+          "duration": 10.496,
+          "mouthSpans": [
+            {
+              "start": 18.194,
+              "end": 22.274
+            },
+            {
+              "start": 22.394,
+              "end": 23.834
+            },
+            {
+              "start": 24.194,
+              "end": 27.014
+            },
+            {
+              "start": 27.134,
+              "end": 28.394
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_gaa_cfet"
+        },
+        {
+          "index": 4,
+          "id": "ch05_future_tech_004",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "平屋建てが狭いから、高層ビルみたいに立体にして電子の漏れをガッチリ押さえ込むのだ！",
+          "voiceText": "平屋建てが狭いから、高層ビルみたいに立体にして電子の漏れをガッチリ押さえ込むのだ！",
+          "audioFile": "audio/lines/ch05_future_tech_004.wav",
+          "hash": "26db43c16555be54",
+          "start": 28.92,
+          "end": 35.128,
+          "globalStart": 447.3337,
+          "globalEnd": 453.5417,
+          "duration": 6.208,
+          "mouthSpans": [
+            {
+              "start": 29.1,
+              "end": 30.42
+            },
+            {
+              "start": 30.78,
+              "end": 31.86
+            },
+            {
+              "start": 32.16,
+              "end": 33.66
+            },
+            {
+              "start": 33.84,
+              "end": 34.08
+            },
+            {
+              "start": 34.26,
+              "end": 34.98
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_zunda_3d"
+        },
+        {
+          "index": 5,
+          "id": "ch05_future_tech_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "2つ目は「裏面電源供給（BSPDN）」です。今までチップの表面は信号線と電源線が絡み合い、大渋滞していました。",
+          "voiceText": "2つ目は「裏面電源供給（ビーエスピーディーエヌ）」です。今までチップの表面は信号線と電源線が絡み合い、大渋滞していました。",
+          "audioFile": "audio/lines/ch05_future_tech_005.wav",
+          "hash": "8a1d90b24fca7d78",
+          "start": 35.478,
+          "end": 45.7393,
+          "globalStart": 453.8917,
+          "globalEnd": 464.153,
+          "duration": 10.2613,
+          "mouthSpans": [
+            {
+              "start": 35.658,
+              "end": 36.198
+            },
+            {
+              "start": 36.498,
+              "end": 37.758
+            },
+            {
+              "start": 38.178,
+              "end": 39.318
+            },
+            {
+              "start": 39.798,
+              "end": 39.978
+            },
+            {
+              "start": 40.458,
+              "end": 40.998
+            },
+            {
+              "start": 41.118,
+              "end": 43.938
+            },
+            {
+              "start": 44.358,
+              "end": 45.618
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c5_bspdn"
+        },
+        {
+          "index": 6,
+          "id": "ch05_future_tech_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そこで電源用の配線だけをシリコンの裏側へ引っ越しさせ、表を信号専用にして効率を高める技術が登場しています。",
+          "voiceText": "そこで電源用の配線だけをシリコンの裏側へ引っ越しさせ、表を信号専用にして効率を高める技術が登場しています。",
+          "audioFile": "audio/lines/ch05_future_tech_006.wav",
+          "hash": "4c1ca425d9554e28",
+          "start": 45.9593,
+          "end": 54.3433,
+          "globalStart": 464.373,
+          "globalEnd": 472.757,
+          "duration": 8.384,
+          "mouthSpans": [
+            {
+              "start": 46.0793,
+              "end": 49.1393
+            },
+            {
+              "start": 49.2593,
+              "end": 49.7393
+            },
+            {
+              "start": 50.2193,
+              "end": 54.1793
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_bspdn_move"
+        },
+        {
+          "index": 7,
+          "id": "ch05_future_tech_007",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "1階と地下で道路を分けて渋滞をなくすみたいな発想でカッコいいのだ！",
+          "voiceText": "1階と地下で道路を分けて渋滞をなくすみたいな発想でカッコいいのだ！",
+          "audioFile": "audio/lines/ch05_future_tech_007.wav",
+          "hash": "446ad1c97718b9e3",
+          "start": 54.6933,
+          "end": 59.696,
+          "globalStart": 473.107,
+          "globalEnd": 478.1097,
+          "duration": 5.0027,
+          "mouthSpans": [
+            {
+              "start": 55.0533,
+              "end": 55.4133
+            },
+            {
+              "start": 55.5933,
+              "end": 56.3133
+            },
+            {
+              "start": 56.4333,
+              "end": 56.6133
+            },
+            {
+              "start": 56.7333,
+              "end": 57.3333
+            },
+            {
+              "start": 57.5133,
+              "end": 58.1733
+            },
+            {
+              "start": 58.3533,
+              "end": 58.5933
+            },
+            {
+              "start": 58.8933,
+              "end": 59.5533
+            }
+          ],
+          "pauseAfter": 0.45,
+          "cue": "c5_zunda_road"
+        },
+        {
+          "index": 8,
+          "id": "ch05_future_tech_008",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "sharp",
+          "se": null,
+          "caption": "ねえ、そういえば最近よく聞く「3nm」や「2nm」って、もう実際に2nmの幅があるわけじゃないんでしょ？",
+          "voiceText": "ねえ、そういえば最近よく聞く「3ナノメートル」や「2ナノメートル」って、もう実際に2ナノメートルの幅があるわけじゃないんでしょ？",
+          "audioFile": "audio/lines/ch05_future_tech_008.wav",
+          "hash": "ab5151fc85700bae",
+          "start": 60.146,
+          "end": 70.5247,
+          "globalStart": 478.5597,
+          "globalEnd": 488.9384,
+          "duration": 10.3787,
+          "mouthSpans": [
+            {
+              "start": 60.266,
+              "end": 60.446
+            },
+            {
+              "start": 61.286,
+              "end": 62.426
+            },
+            {
+              "start": 62.546,
+              "end": 62.846
+            },
+            {
+              "start": 63.266,
+              "end": 64.046
+            },
+            {
+              "start": 64.586,
+              "end": 64.826
+            },
+            {
+              "start": 65.366,
+              "end": 66.086
+            },
+            {
+              "start": 66.686,
+              "end": 66.866
+            },
+            {
+              "start": 67.286,
+              "end": 70.346
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_phase2_tsumugi"
+        },
+        {
+          "index": 9,
+          "id": "ch05_future_tech_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "おっしゃる通りです！今の「2nm」などは実寸ではなく、前世代より高性能になったことを示す世代名になっています。",
+          "voiceText": "おっしゃる通りです！今の「2ナノメートル」などは実寸ではなく、前世代より高性能になったことを示す世代名になっています。",
+          "audioFile": "audio/lines/ch05_future_tech_009.wav",
+          "hash": "58c3baa5ec0cc39f",
+          "start": 70.8747,
+          "end": 79.9094,
+          "globalStart": 489.2884,
+          "globalEnd": 498.3231,
+          "duration": 9.0347,
+          "mouthSpans": [
+            {
+              "start": 70.9947,
+              "end": 71.8947
+            },
+            {
+              "start": 72.3147,
+              "end": 72.6747
+            },
+            {
+              "start": 73.0347,
+              "end": 73.8747
+            },
+            {
+              "start": 74.2347,
+              "end": 75.4947
+            },
+            {
+              "start": 75.9747,
+              "end": 79.6947
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_nm_label"
+        },
+        {
+          "index": 10,
+          "id": "ch05_future_tech_010",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "名前はナノのままだけど、中身は立体化や裏配線でどんどん別次元へ進化しているのだ！",
+          "voiceText": "名前はナノのままだけど、中身は立体化や裏配線でどんどん別次元へ進化しているのだ！",
+          "audioFile": "audio/lines/ch05_future_tech_010.wav",
+          "hash": "8e86812de6c8fc0e",
+          "start": 80.2594,
+          "end": 86.9047,
+          "globalStart": 498.6731,
+          "globalEnd": 505.3184,
+          "duration": 6.6453,
+          "mouthSpans": [
+            {
+              "start": 80.4394,
+              "end": 81.9394
+            },
+            {
+              "start": 82.4794,
+              "end": 82.8994
+            },
+            {
+              "start": 83.1394,
+              "end": 84.9394
+            },
+            {
+              "start": 85.1794,
+              "end": 85.7794
+            },
+            {
+              "start": 85.8994,
+              "end": 86.7394
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_zunda_name"
+        },
+        {
+          "index": 11,
+          "id": "ch05_future_tech_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "3つ目は「チップレットと3D積層」です。巨大な1枚のチップを作ると、小さなゴミ1つで不良品になりコストが激増します。",
+          "voiceText": "3つ目は「チップレットと3ディー積層」です。巨大な1枚のチップを作ると、小さなゴミ1つで不良品になりコストが激増します。",
+          "audioFile": "audio/lines/ch05_future_tech_011.wav",
+          "hash": "e214e6e51859ac22",
+          "start": 87.2547,
+          "end": 96.7587,
+          "globalStart": 505.6684,
+          "globalEnd": 515.1724,
+          "duration": 9.504,
+          "mouthSpans": [
+            {
+              "start": 87.3747,
+              "end": 87.4947
+            },
+            {
+              "start": 87.6147,
+              "end": 88.0347
+            },
+            {
+              "start": 88.3347,
+              "end": 88.4547
+            },
+            {
+              "start": 88.5747,
+              "end": 90.0147
+            },
+            {
+              "start": 90.3747,
+              "end": 90.4947
+            },
+            {
+              "start": 90.9747,
+              "end": 92.8947
+            },
+            {
+              "start": 93.3747,
+              "end": 94.0347
+            },
+            {
+              "start": 94.1547,
+              "end": 95.8947
+            },
+            {
+              "start": 96.0147,
+              "end": 96.5547
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c5_chiplet_3d"
+        },
+        {
+          "index": 12,
+          "id": "ch05_future_tech_012",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そこで機能ごとに小チップへ分けて作り、レゴのように高密度につないだり、メモリHBMと一緒に縦へ積み上げます。",
+          "voiceText": "そこで機能ごとに小チップへ分けて作り、レゴのように高密度につないだり、メモリエイチビーエムと一緒に縦へ積み上げます。",
+          "audioFile": "audio/lines/ch05_future_tech_012.wav",
+          "hash": "28c15cb994f819d2",
+          "start": 96.9787,
+          "end": 105.16,
+          "globalStart": 515.3924,
+          "globalEnd": 523.5737,
+          "duration": 8.1813,
+          "mouthSpans": [
+            {
+              "start": 97.0987,
+              "end": 98.4787
+            },
+            {
+              "start": 98.5987,
+              "end": 99.4987
+            },
+            {
+              "start": 99.9787,
+              "end": 101.8987
+            },
+            {
+              "start": 102.3187,
+              "end": 104.9587
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_chiplet_lego"
+        },
+        {
+          "index": 13,
+          "id": "ch05_future_tech_013",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "部品ごとに作って後で合体させれば、いいとこ取りができてムダも減らせるのだ！",
+          "voiceText": "部品ごとに作って後で合体させれば、いいとこ取りができてムダも減らせるのだ！",
+          "audioFile": "audio/lines/ch05_future_tech_013.wav",
+          "hash": "815c6b21e54fe584",
+          "start": 105.51,
+          "end": 111.2167,
+          "globalStart": 523.9237,
+          "globalEnd": 529.6304,
+          "duration": 5.7067,
+          "mouthSpans": [
+            {
+              "start": 105.69,
+              "end": 106.41
+            },
+            {
+              "start": 106.59,
+              "end": 106.71
+            },
+            {
+              "start": 106.83,
+              "end": 107.25
+            },
+            {
+              "start": 107.55,
+              "end": 108.27
+            },
+            {
+              "start": 108.75,
+              "end": 109.05
+            },
+            {
+              "start": 109.17,
+              "end": 109.65
+            },
+            {
+              "start": 109.77,
+              "end": 111.03
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_zunda_lego"
+        },
+        {
+          "index": 14,
+          "id": "ch05_future_tech_014",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そして4つ目が「光電融合」です。チップ間やチップ内の通信が電気のままだと、抵抗と発熱が限界を迎えます。",
+          "voiceText": "そして4つ目が「こうでんゆうごう」です。チップ間やチップ内の通信が電気のままだと、ていこうと発熱が限界を迎えます。",
+          "audioFile": "audio/lines/ch05_future_tech_014.wav",
+          "hash": "601331dfc0a84a4a",
+          "start": 111.5667,
+          "end": 120.2814,
+          "globalStart": 529.9804,
+          "globalEnd": 538.6951,
+          "duration": 8.7147,
+          "mouthSpans": [
+            {
+              "start": 111.6867,
+              "end": 112.6467
+            },
+            {
+              "start": 112.8867,
+              "end": 113.7267
+            },
+            {
+              "start": 114.1467,
+              "end": 114.2667
+            },
+            {
+              "start": 114.7467,
+              "end": 117.5667
+            },
+            {
+              "start": 117.9267,
+              "end": 120.0867
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c5_photonics"
+        },
+        {
+          "index": 15,
+          "id": "ch05_future_tech_015",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そこで配線を電気から光へ置き換えるシリコンフォトニクス、CPOやIOWNなどの技術で超高速・省エネを目指しています。",
+          "voiceText": "そこで配線を電気から光へ置き換えるシリコンフォトニクス、シーピーオーやアイオンなどの技術で超高速・省エネを目指しています。",
+          "audioFile": "audio/lines/ch05_future_tech_015.wav",
+          "hash": "119cd4bcb1b032b0",
+          "start": 120.5014,
+          "end": 128.9707,
+          "globalStart": 538.9151,
+          "globalEnd": 547.3844,
+          "duration": 8.4693,
+          "mouthSpans": [
+            {
+              "start": 120.6214,
+              "end": 121.7014
+            },
+            {
+              "start": 121.8214,
+              "end": 122.0614
+            },
+            {
+              "start": 122.1814,
+              "end": 122.6014
+            },
+            {
+              "start": 122.7214,
+              "end": 123.8014
+            },
+            {
+              "start": 123.9214,
+              "end": 124.1014
+            },
+            {
+              "start": 124.4614,
+              "end": 127.1614
+            },
+            {
+              "start": 127.5214,
+              "end": 128.7814
+            }
+          ],
+          "pauseAfter": 0.45,
+          "cue": "c5_cpo_iown"
+        },
+        {
+          "index": 16,
+          "id": "ch05_future_tech_016",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "smile",
+          "se": null,
+          "caption": "2次元の縮小から、3次元の立体化・合体・さらには光へって、進化の次元そのものが変わってるんだね！",
+          "voiceText": "2次元の縮小から、3次元の立体化・合体・さらには光へって、進化の次元そのものが変わってるんだね！",
+          "audioFile": "audio/lines/ch05_future_tech_016.wav",
+          "hash": "a12dd9c6b695e4d4",
+          "start": 129.4207,
+          "end": 137.442,
+          "globalStart": 547.8344,
+          "globalEnd": 555.8557,
+          "duration": 8.0213,
+          "mouthSpans": [
+            {
+              "start": 129.4807,
+              "end": 130.0207
+            },
+            {
+              "start": 130.1407,
+              "end": 130.7407
+            },
+            {
+              "start": 131.1607,
+              "end": 131.8207
+            },
+            {
+              "start": 131.9407,
+              "end": 132.3007
+            },
+            {
+              "start": 133.0207,
+              "end": 133.2007
+            },
+            {
+              "start": 133.6807,
+              "end": 134.0407
+            },
+            {
+              "start": 134.2207,
+              "end": 134.5207
+            },
+            {
+              "start": 134.6407,
+              "end": 134.8207
+            },
+            {
+              "start": 135.1807,
+              "end": 136.6807
+            },
+            {
+              "start": 136.8007,
+              "end": 137.2807
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c5_tsumugi_wow"
+        }
+      ]
+    },
+    {
+      "id": "ch06_summary",
+      "title": "6. まとめ：進化のこれから",
+      "layout": "default",
+      "start": 556.6057,
+      "end": 617.5805,
+      "duration": 60.9748,
+      "cues": {
+        "c6_map_1": 0.45,
+        "c6_map_2": 9.9927,
+        "c6_map_3": 18.2447,
+        "c6_zunda_sum": 27.5654,
+        "c6_tsumugi_next": 35.4501,
+        "c6_series": 44.8774,
+        "c6_outro": 52.5021
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch06_summary_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "では今日のまとめです。①微細化は「高密度・高速・省エネ」を同時に叶え、スマホや生成AIを支えてきました。",
+          "voiceText": "では今日のまとめです。①微細化は「高密度・高速・省エネ」を同時に叶え、スマホや生成エーアイを支えてきました。",
+          "audioFile": "audio/lines/ch06_summary_001.wav",
+          "hash": "c5e4b08d8da329f0",
+          "start": 0.45,
+          "end": 9.7727,
+          "globalStart": 557.0557,
+          "globalEnd": 566.3784,
+          "duration": 9.3227,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 1.71
+            },
+            {
+              "start": 2.13,
+              "end": 2.97
+            },
+            {
+              "start": 3.27,
+              "end": 3.81
+            },
+            {
+              "start": 4.17,
+              "end": 4.65
+            },
+            {
+              "start": 4.95,
+              "end": 5.49
+            },
+            {
+              "start": 5.79,
+              "end": 6.69
+            },
+            {
+              "start": 7.23,
+              "end": 9.69
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c6_map_1"
+        },
+        {
+          "index": 2,
+          "id": "ch06_summary_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "②しかし原子レベルの量子トンネル効果や、EUV露光装置に象徴される数兆円規模のコストの壁に直面しています。",
+          "voiceText": "②しかし原子レベルの量子トンネル効果や、イーユーブイろこう装置に象徴される数兆円規模のコストの壁に直面しています。",
+          "audioFile": "audio/lines/ch06_summary_002.wav",
+          "hash": "91115dac4f227de3",
+          "start": 9.9927,
+          "end": 18.0247,
+          "globalStart": 566.5984,
+          "globalEnd": 574.6304,
+          "duration": 8.032,
+          "mouthSpans": [
+            {
+              "start": 10.1127,
+              "end": 12.5127
+            },
+            {
+              "start": 12.9927,
+              "end": 17.8527
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c6_map_2"
+        },
+        {
+          "index": 3,
+          "id": "ch06_summary_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "③そのため将来は、立体トランジスタや裏面電源、チップレット3D積層、光電融合へと進化の主軸を移していきます。",
+          "voiceText": "③そのため将来は、立体トランジスタや裏面電源、チップレット3ディーせきそう、こうでんゆうごうへと進化の主軸を移していきます。",
+          "audioFile": "audio/lines/ch06_summary_003.wav",
+          "hash": "bcc5b8bc9a1d0447",
+          "start": 18.2447,
+          "end": 27.2154,
+          "globalStart": 574.8504,
+          "globalEnd": 583.8211,
+          "duration": 8.9707,
+          "mouthSpans": [
+            {
+              "start": 18.4247,
+              "end": 19.6847
+            },
+            {
+              "start": 19.9847,
+              "end": 20.1047
+            },
+            {
+              "start": 20.2247,
+              "end": 21.8447
+            },
+            {
+              "start": 22.3247,
+              "end": 22.4447
+            },
+            {
+              "start": 22.5647,
+              "end": 23.8247
+            },
+            {
+              "start": 24.1847,
+              "end": 27.0047
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_map_3"
+        },
+        {
+          "index": 4,
+          "id": "ch06_summary_004",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "微細化が終わるんじゃなくて、「平面から立体・システム全体」の進化にパワーアップしていくのだ！",
+          "voiceText": "微細化が終わるんじゃなくて、「平面から立体・システム全体」の進化にパワーアップしていくのだ！",
+          "audioFile": "audio/lines/ch06_summary_004.wav",
+          "hash": "a0777a1cd7d8d117",
+          "start": 27.5654,
+          "end": 35.0001,
+          "globalStart": 584.1711,
+          "globalEnd": 591.6058,
+          "duration": 7.4347,
+          "mouthSpans": [
+            {
+              "start": 27.8654,
+              "end": 29.0654
+            },
+            {
+              "start": 29.7854,
+              "end": 30.5654
+            },
+            {
+              "start": 30.7454,
+              "end": 30.9254
+            },
+            {
+              "start": 31.3454,
+              "end": 31.4654
+            },
+            {
+              "start": 31.5854,
+              "end": 31.8254
+            },
+            {
+              "start": 31.9454,
+              "end": 32.3054
+            },
+            {
+              "start": 32.7254,
+              "end": 33.3254
+            },
+            {
+              "start": 33.5054,
+              "end": 33.8654
+            },
+            {
+              "start": 33.9854,
+              "end": 34.3454
+            },
+            {
+              "start": 34.4654,
+              "end": 34.8254
+            }
+          ],
+          "pauseAfter": 0.45,
+          "cue": "c6_zunda_sum"
+        },
+        {
+          "index": 5,
+          "id": "ch06_summary_005",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "smile",
+          "se": null,
+          "caption": "すごくスッキリした！こうなると次は「EUV露光の仕組み」とか「AI半導体GPUの中身」も知りたくなるね！",
+          "voiceText": "すごくスッキリした！こうなると次は「イーユーブイろこうの仕組み」とか「エーアイ半導体ジーピーユーの中身」も知りたくなるね！",
+          "audioFile": "audio/lines/ch06_summary_005.wav",
+          "hash": "0a1ab5a977f2247c",
+          "start": 35.4501,
+          "end": 44.5274,
+          "globalStart": 592.0558,
+          "globalEnd": 601.1331,
+          "duration": 9.0773,
+          "mouthSpans": [
+            {
+              "start": 35.6301,
+              "end": 35.8101
+            },
+            {
+              "start": 36.1701,
+              "end": 36.5901
+            },
+            {
+              "start": 37.0101,
+              "end": 37.9101
+            },
+            {
+              "start": 38.3301,
+              "end": 39.2901
+            },
+            {
+              "start": 39.4101,
+              "end": 39.6501
+            },
+            {
+              "start": 40.1901,
+              "end": 40.4901
+            },
+            {
+              "start": 41.0301,
+              "end": 43.0701
+            },
+            {
+              "start": 43.4901,
+              "end": 44.3901
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_tsumugi_next"
+        },
+        {
+          "index": 6,
+          "id": "ch06_summary_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "いいですね！この流れで次回以降、露光装置やAI半導体についてもシリーズとして深掘りしていきましょう。",
+          "voiceText": "いいですね！この流れで次回以降、ろこう装置やエーアイ半導体についてもシリーズとして深掘りしていきましょう。",
+          "audioFile": "audio/lines/ch06_summary_006.wav",
+          "hash": "0b6cf526716cfcee",
+          "start": 44.8774,
+          "end": 52.1521,
+          "globalStart": 601.4831,
+          "globalEnd": 608.7578,
+          "duration": 7.2747,
+          "mouthSpans": [
+            {
+              "start": 44.9974,
+              "end": 45.5374
+            },
+            {
+              "start": 45.8974,
+              "end": 47.2174
+            },
+            {
+              "start": 47.5774,
+              "end": 50.8174
+            },
+            {
+              "start": 50.9374,
+              "end": 51.4774
+            },
+            {
+              "start": 51.5974,
+              "end": 52.0174
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_series"
+        },
+        {
+          "index": 7,
+          "id": "ch06_summary_007",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "これから先、パソコンやAIがどこまで進化するかますます楽しみなのだ！また一緒に勉強しようのだ！",
+          "voiceText": "これから先、パソコンやエーアイがどこまで進化するかますます楽しみなのだ！また一緒に勉強しようのだ！",
+          "audioFile": "audio/lines/ch06_summary_007.wav",
+          "hash": "38aed548e6548dc8",
+          "start": 52.5021,
+          "end": 60.2248,
+          "globalStart": 609.1078,
+          "globalEnd": 616.8305,
+          "duration": 7.7227,
+          "mouthSpans": [
+            {
+              "start": 52.6821,
+              "end": 53.2821
+            },
+            {
+              "start": 54.1221,
+              "end": 55.8621
+            },
+            {
+              "start": 55.9821,
+              "end": 56.5221
+            },
+            {
+              "start": 56.6421,
+              "end": 56.8221
+            },
+            {
+              "start": 57.0021,
+              "end": 57.8421
+            },
+            {
+              "start": 58.3221,
+              "end": 59.1021
+            },
+            {
+              "start": 59.2221,
+              "end": 60.0621
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c6_outro"
+        }
+      ]
+    }
+  ]
+}

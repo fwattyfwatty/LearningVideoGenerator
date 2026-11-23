@@ -1,0 +1,123 @@
+{
+  "theme": "editorial-warm",
+  "theme_palette_note": "editorial-warm (生成り×テラコッタ×深ティール): 背景 #faf7f2、カード #fffdf9、サブ背景 #f5efe6、本文濃色 #1c1917、補足 #57534e、主役テラコッタ #b45309、補助ティール #0f766e、成功 #15803d、警告 #d97706、危険 #b91c1c。明るい生成り背景なので淡い文字を使わず高コントラストを保つこと。ピルなし見出しは .dg-card-title-group / .dg-card-head-left を必ず使うこと。各章開始1〜2秒以内に主要枠／初期カードを表示し冒頭空白を作らないこと。",
+  "chapters": [
+    {
+      "id": "ch01_intro",
+      "layout": "title",
+      "has_tsumugi_cutin": false,
+      "difficulty": "light",
+      "recommended_worker": "codex/gpt-6.1-terra (medium)",
+      "visual_plan": "Theme editorial-warm (#b45309 primary, #0f766e secondary, #15803d ok, #b91c1c danger). Top hero badge (.dg-hero-badge + .dg-hero-dot) '会社員のマネー教養入門' + .dg-hero-title '会社員のための資産運用入門：新NISAと「暴落」を乗り越える知恵' (highlight '資産運用入門' and '暴落' with .dg-text-accent). Middle 2-column grid (.dg-grid-2, flex:1, min-height:0): Left card (.dg-card-glow, #c1-card-nisa) with .dg-card-title-group (#dg-ico-trending-up + '広がる新NISA（金融庁データ）') rendering dgWidgets.barChart('#c1-bar-box', tl, { max: 3500, unit: '万口座', countUp: true, at: cues.c1_nisa_boom + 0.15, items: [{label:'2024年末', value:2559, tone:'secondary'}, {label:'2025年末', value:2826, tone:'ok'}, {label:'2026年6月末', value:3048, tone:'primary'}] }) PLUS bottom highlight callout (#c1-85t-callout, revealed at c1_nisa_numbers) '累計買付額 約85兆円（2026年6月末・旧NISA含む）'. Right card (.dg-card, #c1-card-stance) with .dg-card-title-group (#dg-ico-scale + '会社員のお金の置き場所') rendering dgWidgets.gauge('#c1-gauge-box', tl, { zones: [{label:'預金のみ', sub:'物価で目減り', color:'var(--accent-warn)'}, {label:'長期積立', sub:'防衛資金＋分散', color:'var(--accent-ok)'}, {label:'短期売買', sub:'本業圧迫・高リスク', color:'var(--accent-danger)'}], initialAngle: -52, moves: [{angle: 0, at: cues.c1_volatility_empathy + 0.2, duration: 1.1}], centerLabel: '生活防衛資金 × 長期分散' }) plus bottom callout 'インフレに備えつつ、仕事に集中できるバランスが鍵'. Bottom 3 goal chips (.dg-title-bottom-safe, strictly above y=805): '① 新NISAとインデックスの仕組み' (#dg-ico-landmark), '② 最近の乱高下と暴落の歴史' (#dg-ico-clock), '③ 会社員が負けにくい設計ルール' (#dg-ico-shield).",
+      "motion_beats": [
+        "c1_title: Hero badge, title, and both middle card frames reveal cleanly within 1.5s",
+        "c1_inflation: dgMotion.focus on #c1-card-stance (showing gauge needle at -52deg '預金のみ')",
+        "c1_nisa_boom / c1_nisa_numbers: dgMotion.focus on #c1-card-nisa while barChart grows with countUp to 3048万口座 + reveal & pulse #c1-85t-callout",
+        "c1_volatility_empathy: dgMotion.focus on #c1-card-stance while gauge needle sweeps from -52deg to 0deg ('長期積立')",
+        "c1_goals_1 / c1_goals_2: dgMotion.unfocus both cards + staggered reveal of 3 bottom goal chips"
+      ],
+      "phase_transitions": []
+    },
+    {
+      "id": "ch02_nisa_and_index",
+      "layout": "default",
+      "has_tsumugi_cutin": false,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "Theme editorial-warm. Always use .dg-card-title-group inside .dg-card-head and reveal initial cards within 1.2s. Phase A (#c2-phase-a, c2_nisa_intro..c2_zunda_box): Title bar (.dg-title-bar) '新NISAは「約20.315%非課税の器」：生涯1,800万円をマイペースに' + .dg-pill-accent 'Phase 1　新NISAの仕組み'. 2-column grid (.dg-grid-2, flex:1, min-height:0): Left card (.dg-card-glow, #c2-card-tax) with .dg-card-title-group (#dg-ico-coins + '利益100万円が出たときの税金差') showing crisp visual comparison bars (.dg-bar-track / .dg-bar-fill animated with dgMotion.barGrow): '通常の課税口座：税金 約20.3万円 → 手取り約79.7万円' vs '新NISA口座：税金 0円 → 手取り100万円まるごと' + callout '非課税保有期間は無期限・売却枠は簿価で再利用可能'. Right card (.dg-card, #c2-card-box) with .dg-card-title-group (#dg-ico-layers + '年間枠と生涯1,800万円の構造') showing clean stacked diagram SVG (.dg-svg-stage, viewBox='0 0 560 230'): Top tier 'つみたて投資枠：年120万円（長期・積立向け投信）' (#0f766e) + Second tier '成長投資枠：年240万円（生涯1,200万円まで）' (#b45309) = Total bracket '生涯非課税枠 1,800万円（年最大360万円）', plus bottom green callout '月1〜3万円など家計の無理ないペースでOK' at c2_pace_note. Phase B (#c2-phase-b, starts at c2_phase2_index): Use dgMotion.switchPhase(tl, '#c2-phase-a', '#c2-phase-b', cues.c2_phase2_index) and reveal Phase B title + Left card immediately at tP2+0.1 (ZERO blank gap). Title bar 'なぜオルカン・S&P500か？プロの勝率と「コストの複利差」' + .dg-pill-ok 'Phase 2　インデックスの合理性'. 2-column grid (.dg-grid-2, flex:1, min-height:0): Left card (.dg-card, #c2-card-spiva) with .dg-card-title-group (#dg-ico-target + 'SPIVA長期調査：市場平均に勝てないプロ') rendering dgWidgets.barChart('#c2-spiva-box', tl, { max: 100, unit: '%', countUp: true, at: cues.c2_spiva_fact + 0.15, items: [{label:'市場平均に敗北(10〜15年)', value:88, tone:'danger'}, {label:'市場平均に勝利', value:12, tone:'ok'}] }) + callout '市場平均を丸ごと買う方が高確率で上位に入れる'. Right card (.dg-card-glow, #c2-card-fee) with .dg-card-title-group (#dg-ico-sliders + '信託報酬の差が20年後に効く') showing side-by-side KPI comparison: 'オルカン等の最安水準：年 0.05775%前後' (ok/accent highlight) vs '一般的なアクティブ投信：年 1.0〜2.0%台' (warn/danger), plus compact 2-bar visual showing 20-year compound cost drag ('年1.5%の差は長期で数百万円規模の差に') revealed at c2_orukan_fee / c2_compound_gap.",
+      "motion_beats": [
+        "c2_nisa_intro: Reveal Phase A title and both cards immediately",
+        "c2_tax_zero: dgMotion.focus on #c2-card-tax + dgMotion.barGrow on 79.7% vs 100% net-take bars + pulse on '税金0円' badge",
+        "c2_nisa_limits / c2_nisa_reuse: dgMotion.focus on #c2-card-box + reveal stacked 1,800万円 bracket",
+        "c2_pace_note / c2_zunda_box: Reveal '月1〜3万円ペース' callout + dgMotion.unfocus Phase A cards",
+        "c2_phase2_index: dgMotion.switchPhase (zero blank gap) reveals Phase B header and both cards immediately",
+        "c2_spiva_fact / c2_cost_reason: dgMotion.focus on #c2-card-spiva while barChart animates 88% vs 12%",
+        "c2_orukan_fee / c2_compound_gap: dgMotion.focus on #c2-card-fee + reveal 0.05775% vs 1.5% gap & pulse",
+        "c2_zunda_index: dgMotion.unfocus Phase B cards"
+      ],
+      "phase_transitions": [
+        { "fade_out": "#c2-phase-a", "fade_in": "#c2-phase-b", "at_cue": "c2_phase2_index" }
+      ]
+    },
+    {
+      "id": "ch03_recent_volatility",
+      "layout": "wide",
+      "has_tsumugi_cutin": false,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "CRITICAL WIDE SAFETY: Apply .dg-wide-safe (padding-bottom: 48px) on BOTH #c3-phase-a and #c3-phase-b so ALL cards stay strictly above y=805! Always use .dg-card-title-group inside .dg-card-head. Theme editorial-warm. Phase A (#c3-phase-a, c3_recent_open..c3_short_term_norm): Title bar (.dg-title-bar) '直近3年の荒波：2024年〜2026年11月の乱高下と急落' + .dg-pill-warn 'Phase 1　最近の急落と2026年11月現在'. Top wide timeline card (.dg-card-glow, #c3-tl-card) rendering dgWidgets.timeline('#c3-tl-box', tl, { width: 1060, height: 225, at: cues.c3_aug2024, focusEach: true, unfocusAt: cues.c3_zunda_roller, items: [{tag:'2024年8月', title:'令和のブラックマンデー', desc:'日銀利上げ・急円高で4,451円安→急反発', tone:'warn', at: cues.c3_aug2024}, {tag:'2025年4月', title:'トランプ関税ショック', desc:'相互関税発表で急落→延期観測でV字回復', tone:'warn', at: cues.c3_apr2025}, {tag:'2026年前半〜秋', title:'AI・金利の往復相場', desc:'米金利・中東・AI過熱懸念で乱高下', tone:'primary', at: cues.c3_2026_swings}, {tag:'2026年11月現在', title:'AI規制・金利で急落', desc:'S&P10%調整・VIX28台・日経3,007円安', tone:'danger', at: cues.c3_nov2026_trigger}] }). Bottom card (.dg-card, #c3-wave-card, revealed cleanly at c3_recent_open + 0.5) inside .dg-wide-safe (y<805): includes crisp November 2026 Live Focus KPI strip (#c3-nov-alert, revealed at cues.c3_nov2026_us, pulsed at cues.c3_nov2026_vix) showing '2026年11月現在：S&P500 -10%調整 ／ VIX 28台 ／ 日経 5万6千円台（11/20 -3,007円）', paired with crisp SVG volatility-vs-trend illustration (.dg-svg-stage, viewBox='0 0 1060 110'): jagged short-term zigzag path (drawn with dgMotion.drawPath) oscillating around a gentle upward dashed trend line, plus callout '年1〜2回の10%前後の調整は株式市場の日常'. Phase B (#c3-phase-b, starts at c3_phase2_why): Use dgMotion.switchPhase(tl, '#c3-phase-a', '#c3-phase-b', cues.c3_phase2_why) and reveal Phase B title + Left card immediately at tP2+0.1 (ZERO blank gap). Title bar 'なぜ会社員は乱高下で「狼狽売り」しやすいのか？' + .dg-pill-danger 'Phase 2　2つの心理と構造'. Top wide 2-column grid (.dg-grid-2, flex:1, min-height:0): Left card (.dg-card, #c3-card-fx) with .dg-card-title-group (#dg-ico-arrow-lr + '① 株価 × 為替のダブル変動') showing crisp formula visual [海外株価 下落] × [急激な円高] => [円建て評価額が想定以上に急減] with danger accent chip; Right card (.dg-card-glow, #c3-card-bias) with .dg-card-title-group (#dg-ico-alert + '② 損失回避バイアス（プロスペクト理論）') showing crisp 2-bar emotional intensity visual ('＋10万円の喜び：1.0倍' in ok green vs '−10万円の痛み：約2.0倍！' in danger crimson animated with dgMotion.barGrow + pulse). Bottom compact flow strip (.dg-svg-stage, #c3-trap-flow, height ~140px) rendering dgWidgets.flowNodes('#c3-trap-flow', tl, { width: 1100, height: 145, boxHeight: 112, flowStart: cues.c3_panic_sell_trap, flowEnd: cues.c3_to_ch4 + 2, nodes: [{title:'急落ニュース', sub:'SNSで悲観拡散', icon:'dg-ico-alert', tone:'warn', at: cues.c3_panic_sell_trap}, {title:'2倍の痛み', sub:'恐怖で耐えられない', icon:'dg-ico-trending-down', tone:'danger', at: cues.c3_panic_sell_trap + 1.2}, {title:'底値で狼狽売り', sub:'回復の波を逃す', icon:'dg-ico-zap', tone:'primary', at: cues.c3_panic_sell_trap + 2.4}] }).",
+      "motion_beats": [
+        "c3_recent_open: Reveal Phase A title, timeline card frame, and bottom volatility card immediately",
+        "c3_aug2024 / c3_apr2025 / c3_2026_swings / c3_nov2026_trigger: timeline highlights each of the 4 shock phases sequentially + drawPath draws zigzag volatility wave",
+        "c3_nov2026_us / c3_nov2026_vix / c3_nov2026_jp: Reveal #c3-nov-alert KPI strip and pulse VIX 28台 & 日経-3,007円 focus",
+        "c3_zunda_roller / c3_short_term_norm: Unfocus timeline + pulse '年1〜2回の調整は日常' callout",
+        "c3_phase2_why: dgMotion.switchPhase (zero blank gap) reveals Phase B header and both cards immediately",
+        "c3_fx_double: dgMotion.focus on #c3-card-fx",
+        "c3_prospect_theory / c3_loss_pain: dgMotion.focus on #c3-card-bias + barGrow 1x vs 2x pain + pulse",
+        "c3_panic_sell_trap: Reveal bottom flowNodes trap sequence with continuous flowDash arrows",
+        "c3_zunda_mind: dgMotion.unfocus Phase B cards"
+      ],
+      "phase_transitions": [
+        { "fade_out": "#c3-phase-a", "fade_in": "#c3-phase-b", "at_cue": "c3_phase2_why" }
+      ]
+    },
+    {
+      "id": "ch04_crash_history",
+      "layout": "default",
+      "has_tsumugi_cutin": true,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "CRITICAL TSUMUGI SAFETY + NO BLANK START: Tsumugi cut-in (x:1572..1888, y:90..254) appears in BOTH Phase A (c4_tsumugi_ask) and Phase B (c4_tsumugi_insight). Apply .dg-cutin-head on BOTH Phase A & Phase B title bars AND .dg-cutin-body (padding-top: 108px) on BOTH body grids. REVEAL Phase A main cards early at c4_tsumugi_ask + 0.8 so lower stage is NEVER empty during Tsumugi's opening question! Always use .dg-card-title-group inside .dg-card-head. Theme editorial-warm. Phase A (#c4-phase-a, c4_tsumugi_ask..c4_zunda_half): Title bar (.dg-title-bar .dg-cutin-head) '過去3大暴落の深さと回復年数（米国 S&P500）' + .dg-pill-danger 'Phase 1　歴史の現実'. 2-column grid (.dg-grid-2 .dg-cutin-body, flex:1, min-height:0): Left card (.dg-card-glow, #c4-card-depth) with .dg-card-title-group (#dg-ico-trending-down + '最大下落率の比較') rendering dgWidgets.barChart('#c4-depth-box', tl, { max: 65, unit: '%下落', countUp: true, at: cues.c4_it_bubble, items: [{label:'ITバブル崩壊 (2000)', value:50, tone:'warn', at: cues.c4_it_bubble}, {label:'リーマンショック (2008)', value:55, tone:'danger', at: cues.c4_lehman}, {label:'コロナショック (2020)', value:34, tone:'secondary', at: cues.c4_covid}] }); Right card (.dg-card, #c4-card-rec) with .dg-card-title-group (#dg-ico-clock + '元の水準に戻るまでの期間') showing 3 crisp milestone rows (#c4-rec-it: 'ITバブル崩壊 → 約5〜7年（失われた10年）', #c4-rec-lehman: 'リーマンショック → 約5年半', #c4-rec-covid: 'コロナショック → 約5カ月（大規模対策）') + bottom danger callout (#c4-hard-note, revealed at c4_hard_truth) '株式100%は「一時半減・5年超の停滞」も想定内にする'. Phase B (#c4-phase-b, starts at c4_phase2_longterm): Use dgMotion.switchPhase(tl, '#c4-phase-a', '#c4-phase-b', cues.c4_phase2_longterm) and reveal Phase B title + Left chart immediately at tP2+0.1 (ZERO blank gap). Title bar (.dg-title-bar .dg-cutin-head) '時間を味方にする「15年の法則」とドルコスト平均法' + .dg-pill-ok 'Phase 2　長期データの知恵'. 2-column grid (.dg-grid-2 .dg-cutin-body, flex:1, min-height:0): Left card (.dg-card-glow, #c4-card-15yr) with .dg-card-title-group (#dg-ico-trending-up + '保有期間と元本割れリスクの低下イメージ') rendering dgWidgets.lineChart('#c4-line-box', tl, { width: 620, height: 245, mode: 'line', yMin: 0, yMax: 40, yTicks: [0, 15, 30, 40], yUnit: '%', at: cues.c4_short_vs_long, duration: 1.4, highlightAt: cues.c4_15yr_rule, pulseEnd: cues.c4_dca_power, points: [{label:'1年', value:27, badge:'高リスク'}, {label:'5年', value:14}, {label:'10年', value:6}, {label:'15年', value:1, badge:'ほぼ0%圏', highlight:true}, {label:'20年', value:0}] }) + subnote '※過去データ傾向であり将来成果を保証するものではない'. Right card (.dg-card, #c4-card-dca) with .dg-card-title-group (#dg-ico-loop + 'ドルコスト平均法の仕組み') showing 2 compact stacked blocks: (1) '毎月定額で自動購入' — '高いとき：少なく買う ／ 暴落時：安く多くの口数を買う！' (ok highlight) and (2) '本質は「5年戻らなくても生活できる家計」' revealed/pulsed at c4_tsumugi_insight.",
+      "motion_beats": [
+        "c4_tsumugi_ask + 0.8: Reveal Phase A title and both cards immediately so stage is full during Tsumugi's question",
+        "c4_it_bubble / c4_lehman / c4_covid: barChart animates 50% / 55% / 34% in sync with #c4-rec-* recovery rows",
+        "c4_hard_truth: Reveal & pulse #c4-hard-note callout",
+        "c4_phase2_longterm: dgMotion.switchPhase (zero blank gap) reveals Phase B title & both cards immediately",
+        "c4_short_vs_long / c4_15yr_rule: dgMotion.focus on #c4-card-15yr while lineChart draws risk dropping toward 0% at 15–20 years + pulse",
+        "c4_dca_power: dgMotion.focus on #c4-card-dca + reveal DCA cheap-buying advantage",
+        "c4_tsumugi_insight / c4_zunda_calm: dgMotion.unfocus Phase B cards + pulse insight callout"
+      ],
+      "phase_transitions": [
+        { "fade_out": "#c4-phase-a", "fade_in": "#c4-phase-b", "at_cue": "c4_phase2_longterm" }
+      ]
+    },
+    {
+      "id": "ch05_salaryman_strategy",
+      "layout": "wide",
+      "has_tsumugi_cutin": true,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "CRITICAL WIDE + TSUMUGI SAFETY + NO BLANK START: Apply .dg-wide-safe (padding-bottom: 48px) on BOTH #c5-phase-a and #c5-phase-b so ALL cards stay strictly above y=805! Apply .dg-cutin-head on Phase A title bar + .dg-cutin-body (padding-top: 108px) on Phase A body. On Phase B, use left-aligned .dg-cutin-banner (width: 73%) with margin-bottom: 18px. Reveal Phase A flow frame early at c5_tsumugi_how + 0.8 so lower stage is NEVER empty during Tsumugi's question! Always use .dg-card-title-group inside .dg-card-head. Theme editorial-warm. Phase A (#c5-phase-a, c5_tsumugi_how..c5_zunda_steps): Title bar (.dg-title-bar .dg-cutin-head) '忙しい会社員が続けるための「3ステップ設計」' + .dg-pill-ok 'Phase 1　実践ステップ'. Inside .dg-cutin-body: Top wide flow stage (.dg-svg-stage, #c5-flow-box) rendering dgWidgets.flowNodes('#c5-flow-box', tl, { width: 1120, height: 175, flowStart: cues.c5_step1_cash + 0.4, flowEnd: cues.c5_zunda_steps + 2, focusEach: true, unfocusAt: cues.c5_zunda_steps, nodes: [{title:'① 生活防衛資金', sub:'生活費6〜12カ月を現金確保', icon:'dg-ico-shield', tone:'ok', at: cues.c5_step1_cash}, {title:'② 積立の自動化', sub:'給料日直後に感情レス設定', icon:'dg-ico-sliders', tone:'secondary', at: cues.c5_step2_auto}, {title:'③ 眠れる配分', sub:'半減しても耐えられる額', icon:'dg-ico-scale', tone:'primary', at: cues.c5_step3_risk}, {title:'④ 長期ほったらかし', sub:'本業と暮らしに集中', icon:'dg-ico-clock', tone:'warn', at: cues.c5_zunda_steps - 1.5}] }). Bottom 2-column card strip (.dg-grid-2, revealed at c5_ideco_pair): Left card (.dg-card-glow, #c5-nisa-use) '新NISA：いつでも引き出せる万能枠（住宅・教育・老後すべて対応）' vs Right card (.dg-card, #c5-ideco-use) 'iDeCo：掛金全額所得控除で強い節税（原則60歳まで引き出し不可）'. Phase B (#c5-phase-b, starts at c5_phase2_pitfalls): Use dgMotion.switchPhase(tl, '#c5-phase-a', '#c5-phase-b', cues.c5_phase2_pitfalls) and reveal Phase B banner + all 3 pitfall cards immediately at tP2+0.1 (ZERO blank gap). Top banner (.dg-card-glow .dg-cutin-banner) '会社員がつまずきやすい「3つの落とし穴」を避ける'. Below (.dg-grid-3, flex:1, min-height:0): Card 1 (#c5-pit-1, .dg-card, #dg-ico-alert) '落とし穴① 狼狽売り・積立停止' — '暴落直後の大きな反発日を数日逃すだけで長期リターンが大きく毀損'; Card 2 (#c5-pit-2, .dg-card, #dg-ico-coins) '落とし穴② 高コスト・流行り飛びつき' — '手数料1.5〜2%のテーマ型や過度なレバレッジ商品は長期ほど不利'; Card 3 (#c5-pit-3, .dg-card, #dg-ico-clock) '落とし穴③ 近々使うお金を投資' — '数年後の教育費・住宅頭金に暴落が重なる出口リスク（現金で守る）'.",
+      "motion_beats": [
+        "c5_tsumugi_how + 0.8: Reveal Phase A title, flow container, and preview frame early",
+        "c5_step1_cash / c5_step2_auto / c5_step3_risk: flowNodes reveals & focuses each step with continuous flowDash arrows",
+        "c5_ideco_pair / c5_ideco_tradeoff: Reveal NISA vs iDeCo comparison strip + focus #c5-ideco-use then unfocus at c5_zunda_steps",
+        "c5_phase2_pitfalls: dgMotion.switchPhase (zero blank gap) reveals Phase B banner + 3 pitfall cards immediately",
+        "c5_pitfall1_sell / c5_pitfall1_bestdays: dgMotion.focus on #c5-pit-1 + pulse",
+        "c5_pitfall2_cost: dgMotion.focus on #c5-pit-2",
+        "c5_pitfall3_deadline: dgMotion.focus on #c5-pit-3",
+        "c5_zunda_avoid / c5_wrap: dgMotion.unfocus all 3 pitfall cards"
+      ],
+      "phase_transitions": [
+        { "fade_out": "#c5-phase-a", "fade_in": "#c5-phase-b", "at_cue": "c5_phase2_pitfalls" }
+      ]
+    },
+    {
+      "id": "ch06_summary",
+      "layout": "default",
+      "has_tsumugi_cutin": true,
+      "difficulty": "light",
+      "recommended_worker": "codex/gpt-6.1-terra (medium)",
+      "visual_plan": "CRITICAL SAFE LAYOUT: .c6-wrap { position: relative; height: 100%; padding-bottom: 32px; box-sizing: border-box; display: flex; flex-direction: column; }, title bar uses .dg-cutin-head (padding-right: 360px) with left-aligned subtitle below (width: 70%), 3-card summary grid uses .dg-cutin-body (padding-top: 108px; flex: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-content: center; align-items: stretch;) strictly below y=254 and above bottom next-bar & disclaimer (all strictly above y=805). Theme editorial-warm (#b45309 primary, #0f766e secondary, #15803d ok). Reveal title, subtitle, and 3 cards early at c6_intro + 0.6 so stage is never empty! POINT 1 (#c6-p1, .dg-card, #dg-ico-coins): '非課税 × 低コスト分散' ('新NISA（約20.315%非課税）の器で、オルカンやS&P500等を低コスト積立。'). POINT 2 (#c6-p2, .dg-card-glow, #dg-ico-clock): '暴落は想定内のイベント' ('乱高下も過去50%下落も歴史の常。15年以上の長期目線で持ち続ける。'). POINT 3 (#c6-p3, .dg-card, #dg-ico-shield): '退場しない家計設計' ('生活防衛資金を確保し、眠れる額で自動化。仕事と暮らしに集中する。'). Compact disclaimer line ('※本動画は制度と歴史データの解説であり、特定商品の勧誘や将来成果の保証ではありません。') + Bottom #c6-next-bar ('次回テーマ候補', revealed at c6_tsumugi_next) with 3 crisp chips: 'iDeCoと年末調整・節税の仕組み', '現金・債券・金の資産配分', '持ち家 vs 賃貸のリアル試算'. Keep card text concise so ZERO 1-character orphan wraps occur.",
+      "motion_beats": [
+        "c6_intro: Reveal title, subtitle, and all 3 summary cards cleanly within 1.2s",
+        "c6_point1: dgMotion.focus on #c6-p1",
+        "c6_point2: dgMotion.focus on #c6-p2",
+        "c6_point3: dgMotion.focus on #c6-p3",
+        "c6_disclaimer: dgMotion.unfocus all 3 cards + reveal compact disclaimer line",
+        "c6_tsumugi_next: Reveal #c6-next-bar + staggered chips + subtle pulse"
+      ],
+      "phase_transitions": []
+    }
+  ]
+}

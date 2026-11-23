@@ -1,0 +1,539 @@
+meta:
+  title: "会社員のための資産運用入門：新NISA・インデックス投資と「暴落・乱高下」を乗り越える歴史の知恵"
+  series: "会社員のマネー教養入門"
+  episode: "解説動画"
+  badge: "会社員のマネー教養入門"
+  theme: "editorial-warm"
+  fps: 30
+  width: 1920
+  height: 1080
+
+chapters:
+  - id: "ch01_intro"
+    title: "1. 導入：なぜ今、普通の会社員も「資産運用」なのか？"
+    layout: "title"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "こんにちは、四国めたんです。今日は『会社員のための資産運用入門』を解説します。"
+        cue: "c1_title"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "ずんだもんなのだ！職場でみんな新NISAをやってるけど、貯金だけじゃダメなのだ？"
+        cue: "c1_zunda_ask"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "銀行預金は元本が減らない安心感がある一方、物価が上がるとお金の実質価値は目減りします。"
+        cue: "c1_inflation"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そんな背景もあり、2024年の新NISA開始以降、日本でも個人の資産運用が一気に広がりました。"
+        cue: "c1_nisa_boom"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "金融庁の統計では、2026年6月末時点でNISA口座数は約3,048万口座、累計買付額は約85兆円です。"
+        voice_text: "金融庁の統計では、2026年6月末時点でニーサ口座数は約3048万口座、累計買付額は約85兆円です。"
+        cue: "c1_nisa_numbers"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: worry
+        caption: "すごい広がりなのだ！でも最近のニュースだと株価が乱高下していて、損しそうで怖いのだ。"
+        cue: "c1_zunda_scared"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "その感覚はとても自然です。普通の会社員は仕事が忙しく、毎日チャートを見ていられませんよね。"
+        cue: "c1_volatility_empathy"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そこで今日は①新NISAとインデックス投資の仕組み、②最近の乱高下と歴史的な暴落の正体、"
+        cue: "c1_goals_1"
+        pause_after: 0.2
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "そして③忙しい会社員が負けにくい設計ルール、この3本柱で分かりやすく整理します。"
+        cue: "c1_goals_2"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "これなら投資初心者でも安心して学べそうなのだ！さっそく見ていくのだ！"
+        cue: "c1_go"
+        pause_after: 0.5
+
+  - id: "ch02_nisa_and_index"
+    title: "2. 新NISAとインデックス投資：なぜ「オルカン・S&P500」なのか？"
+    layout: "default"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "まず押さえたいのは、新NISAは金融商品ではなく『税金がかからない器』だということです。"
+        cue: "c2_nisa_intro"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "通常の課税口座では売却益や配当に約20.315%の税金がかかりますが、NISAなら0円になります。"
+        voice_text: "通常の課税口座では売却益や配当におよそ20.3パーセントの税金がかかりますが、ニーサなら0円になります。"
+        cue: "c2_tax_zero"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "年間枠はつみたて投資枠120万円と成長投資枠240万円の計360万円、生涯の限度額は1,800万円です。"
+        voice_text: "年間枠はつみたて投資枠120万円と成長投資枠240万円の計360万円、生涯の限度額は1800万円です。"
+        cue: "c2_nisa_limits"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "成長投資枠はそのうち1,200万円までで、売却すれば購入した簿価分の枠が翌年以降に復活します。"
+        voice_text: "成長投資枠はそのうち1200万円までで、売却すれば購入した簿価分の枠が翌年以降に復活します。"
+        cue: "c2_nisa_reuse"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "もちろん年360万円を埋める必要はありません。月1万円や3万円など家計のペースで無期限に使えます。"
+        cue: "c2_pace_note"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "なるほど、お得な非課税ボックスなのだ！じゃあ中には何を入れる人が多いのだ？"
+        cue: "c2_zunda_box"
+        pause_after: 0.45
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "会社員に最も支持されているのが、オルカンやS&P500などの低コストなインデックス投資信託です。"
+        cue: "c2_phase2_index"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "インデックス投資とは、個別株を当てに行くのではなく、世界や米国など市場全体に丸ごと分散投資する手法です。"
+        cue: "c2_index_meaning"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "実は国際調査SPIVAの10〜15年データでは、プロが銘柄を選ぶアクティブファンドの約8〜9割超が市場平均に負けています。"
+        voice_text: "実は国際調査スピバの10年から15年のデータでは、プロが銘柄を選ぶアクティブファンドの約8割から9割超が市場平均に負けています。"
+        cue: "c2_spiva_fact"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "プロ同士が競う市場で勝ち続けるのは難しく、さらに高い運用コストが毎年リターンを削ってしまうからです。"
+        cue: "c2_cost_reason"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "アクティブファンドの信託報酬は年1〜2%台が多い一方、オルカンなど最安水準は年率0.05775%前後です。"
+        voice_text: "アクティブファンドの信託報酬は年1から2パーセント台が多い一方、オルカンなど最安水準は年率およそ0.06パーセント未満です。"
+        cue: "c2_orukan_fee"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "この年1%以上のコスト差は、20年・30年と複利で運用するほど数百万円単位の大きな差になって現れます。"
+        cue: "c2_compound_gap"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "プロに高い手数料を払うより、安いコストで市場の平均点を丸ごと買う方が合理的だったのだ！"
+        cue: "c2_zunda_index"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "はい。ただ合理的なインデックス投資でも、短期的には激しい乱高下が起きます。最近の相場を見てみましょう。"
+        cue: "c2_bridge"
+        pause_after: 0.5
+
+  - id: "ch03_recent_volatility"
+    title: "3. 最近の乱高下と急落：2024年〜2026年11月の荒波の正体"
+    layout: "wide"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "新NISAが始まった2024年から2026年にかけて、株式市場は何度も急落と反発を繰り返しました。"
+        cue: "c3_recent_open"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "記憶に新しいのが2024年8月の急落です。日銀の追加利上げと米雇用統計の悪化、急激な円高が重なりました。"
+        cue: "c3_aug2024"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "日経平均は1日で4,451円安と史上最大の下げ幅を記録しましたが、その後は過度な悲観が和らぎ急反発しました。"
+        voice_text: "日経平均は1日で4451円安と史上最大の下げ幅を記録しましたが、その後は過度な悲観が和らぎ急反発しました。"
+        cue: "c3_aug2024_rec"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "続く2025年4月には米国の相互関税発表で日米株が急落しましたが、延期や緩和観測を受けてV字回復しています。"
+        voice_text: "続く2025年4月には米国の相互関税発表で日米株が急落しましたが、延期や緩和観測を受けてブイ字回復しています。"
+        cue: "c3_apr2025"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "さらに2026年も、米国の金利動向や中東情勢、AI投資の過熱懸念が出るたびに一進一退の乱高下が続いています。"
+        cue: "c3_2026_swings"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "特に2026年11月は、米中間選挙後のAI・データセンター規制懸念や過剰投資への警戒が重なりました。"
+        cue: "c3_nov2026_trigger"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "さらにFRBの金利高止まり懸念でAI半導体株が売られ、S&P500は高値から10%安の調整局面へ入りました。"
+        cue: "c3_nov2026_us"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "市場の不安を示す恐怖指数VIXも28台へ急上昇し、日本でも11月20日に日経平均が1日で3,007円安となりました。"
+        voice_text: "市場の不安を示す恐怖指数ビックスも28台へ急上昇し、日本でも11月20日に日経平均が1日で3007円安となりました。"
+        cue: "c3_nov2026_vix"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "終値は5万6千円台と約7カ月ぶりの安値まで下落し、まさに今この瞬間も相場の荒波を体感している人は多いはずです。"
+        cue: "c3_nov2026_jp"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: worry
+        caption: "たった3年で何回もジェットコースターみたいに揺れてるのだ！心臓に悪いのだよ。"
+        cue: "c3_zunda_roller"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "実は年に1〜2回の10%前後の調整は、株式市場では珍しいことではありません。"
+        cue: "c3_short_term_norm"
+        pause_after: 0.45
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "ただ、日本の会社員が乱高下で特に不安になりやすいのには、2つの明確な理由があります。"
+        cue: "c3_phase2_why"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1つ目は『株価×為替』のダブル変動です。米国株や全世界株は、株安と同時に円高が進むと円建て評価額がより大きく下がります。"
+        cue: "c3_fx_double"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "2つ目は人間の心理です。行動経済学のプロスペクト理論では『損失回避バイアス』が知られています。"
+        cue: "c3_prospect_theory"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "人は10万円得した喜びより、10万円損した痛みを約2倍強く感じるとされているんです。"
+        cue: "c3_loss_pain"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: worry
+        caption: "そのためSNSの悲観ニュースを見ると耐えられなくなり、一番安い底値で売ってしまう『狼狽売り』が起きやすいのです。"
+        cue: "c3_panic_sell_trap"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "株と円高のダブルパンチに、人間の本能が重なってパニック売りしちゃうのだね！"
+        cue: "c3_zunda_mind"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "その通りです。では、過去にもっと深刻な大暴落が起きたときはどうだったのか、歴史を見ていきましょう。"
+        cue: "c3_to_ch4"
+        pause_after: 0.5
+
+  - id: "ch04_crash_history"
+    title: "4. 暴落の歴史に学ぶ：ITバブル・リーマン・コロナと「15年の法則」"
+    layout: "default"
+    lines:
+      - speaker: tsumugi
+        style: normal
+        emotion: sharp
+        mode: cutin
+        caption: "2024年や2025年はわりと早く戻ったけど、歴史には何年も戻らない大暴落もあったよね？"
+        cue: "c4_tsumugi_ask"
+        pause_after: 0.4
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "とても重要な視点です。米国S&P500の歴史を振り返ると、深刻な3つの大暴落が教訓になります。"
+        cue: "c4_history_intro"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1つ目は2000年のITバブル崩壊。最大約50%下落し、元の水準に戻るまで約5〜7年かかりました。"
+        cue: "c4_it_bubble"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "2つ目は2008年のリーマンショック。最大約55%も下落し、回復まで約5年半を要しています。"
+        cue: "c4_lehman"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "3つ目は2020年のコロナショック。最大約34%急落しましたが、各国の大規模対策もあり約5カ月で回復しました。"
+        cue: "c4_covid"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "つまり株式100%で運用する以上、『資産が一時的に半分になり、5年以上戻らない時期』も想定が必要です。"
+        cue: "c4_hard_truth"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "半分になって5年も戻らないことがあるのだ！？それでも長期投資が勧められるのはなぜなのだ？"
+        cue: "c4_zunda_half"
+        pause_after: 0.45
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "答えは『保有期間を長く取るほど、リターンのブレがプラス圏へ収束してきた歴史』にあります。"
+        cue: "c4_phase2_longterm"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "S&P500などの過去データでは、1〜5年の短期保有は運の要素が大きく、元本割れの確率も高めです。"
+        cue: "c4_short_vs_long"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "一方、15〜20年以上持ち続けた場合、最悪の暴落直前に始めても元本割れを回避できたデータが残っています。"
+        cue: "c4_15yr_rule"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "さらに毎月定額で買う『ドルコスト平均法』なら、暴落時は安く多くの口数を買えるため、回復時の伸びが大きくなります。"
+        cue: "c4_dca_power"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "もちろん過去データが将来を100%保証するわけではありませんが、時間を味方にするのが王道です。"
+        cue: "c4_caveat"
+        pause_after: 0.35
+      - speaker: tsumugi
+        style: normal
+        emotion: normal
+        mode: cutin
+        caption: "なるほど。『すぐ戻る』と楽観するんじゃなく、『5年戻らなくても生活できる設計』が本質なんだね。"
+        cue: "c4_tsumugi_insight"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "暴落を当てるんじゃなくて、暴落が来ても持ち続けられる準備をしておくのだね！"
+        cue: "c4_zunda_calm"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "その通りです。では具体的に、忙しい会社員はどう家計と運用を設計すればよいか見ていきましょう。"
+        cue: "c4_to_ch5"
+        pause_after: 0.5
+
+  - id: "ch05_salaryman_strategy"
+    title: "5. つむぎの疑問：忙しい会社員はどう設計すれば失敗しない？"
+    layout: "wide"
+    lines:
+      - speaker: tsumugi
+        style: normal
+        emotion: sharp
+        mode: cutin
+        caption: "理屈は分かったけど、会社員は実際いくら投資に回せばいいの？やりがちな失敗も知りたいな。"
+        cue: "c5_tsumugi_how"
+        pause_after: 0.4
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "会社員が相場に振り回されず続けるための設計は、3つのステップで考えるのが確実です。"
+        cue: "c5_step_intro"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "ステップ1は『生活防衛資金』の確保。まず生活費の6〜12カ月分は、絶対に投資せず現金で別管理します。"
+        cue: "c5_step1_cash"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "ステップ2は『積立の自動化』。給料日直後に自動で引き落とす設定にして、感情で売買しない仕組みにします。"
+        cue: "c5_step2_auto"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "ステップ3は『眠れるリスク配分』。株が半分になっても仕事に支障が出ない金額に収め、不安なら現金や債券を増やします。"
+        cue: "c5_step3_risk"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "なお老後資金が目的なら、掛金が全額所得控除になって節税効果が高いiDeCoの併用も有力な選択肢です。"
+        cue: "c5_ideco_pair"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "ただiDeCoは原則60歳まで引き出せないため、いつでも使える新NISAと目的で使い分けるのがコツです。"
+        cue: "c5_ideco_tradeoff"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "まずは現金の防波堤を作ってから、余剰資金で自動積立！これなら本業に集中できるのだ！"
+        cue: "c5_zunda_steps"
+        pause_after: 0.45
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "最後に、会社員がせっかくの資産形成でつまずきやすい『3つの落とし穴』も押さえておきましょう。"
+        cue: "c5_phase2_pitfalls"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: worry
+        caption: "1つ目は『暴落時の狼狽売りと積立停止』です。恐怖で市場から退場してしまうのが最大の敗因になります。"
+        cue: "c5_pitfall1_sell"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "株式の大きな上昇日は暴落直後に集中しやすく、その数日を逃すだけで長期リターンは大きく落ちます。"
+        cue: "c5_pitfall1_bestdays"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: worry
+        caption: "2つ目は『高コスト商品や流行りへの飛びつき』。手数料の高いテーマ型や過度なレバレッジは長期ほど不利です。"
+        cue: "c5_pitfall2_cost"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: worry
+        caption: "3つ目は『近々使うお金を株に入れること』。数年後の教育費や住宅頭金は、使う年に暴落が重なるリスクがあります。"
+        cue: "c5_pitfall3_deadline"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: serious
+        caption: "使う時期が決まってるお金は現金で守って、長いお金だけ低コストで続けるのが鉄則なのだね！"
+        cue: "c5_zunda_avoid"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "はい。資産運用は本業の収入と生活を守る土台があってこそ、じっくり力を発揮します。"
+        cue: "c5_wrap"
+        pause_after: 0.5
+
+  - id: "ch06_summary"
+    title: "6. まとめ：相場に振り回されない会社員の「3つの原則」"
+    layout: "default"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "それでは最後に、会社員が相場に振り回されないための『3つの原則』をおさらいしましょう。"
+        cue: "c6_intro"
+        pause_after: 0.3
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "仕組みと歴史を知ったら、日々の株価ニュースに一喜一憂しなくて済みそうなのだ！"
+        cue: "c6_zunda_recap"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1つ目は『非課税×低コスト分散』。新NISAの器でオルカンやS&P500など低コスト指数を淡々と積み立てます。"
+        cue: "c6_point1"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "2つ目は『暴落は想定内』。2024〜26年の乱高下も過去の50%下落も歴史の常として、15年以上の長期で構えます。"
+        cue: "c6_point2"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "3つ目は『退場しない家計設計』。生活防衛資金を確保し、眠れる金額で自動化して本業と暮らしに集中します。"
+        cue: "c6_point3"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "なお、本動画は制度や歴史データの解説であり、特定の商品の勧誘や将来成果の保証ではありません。"
+        cue: "c6_disclaimer"
+        pause_after: 0.35
+      - speaker: tsumugi
+        style: normal
+        emotion: smile
+        mode: cutin
+        caption: "次は『iDeCoと節税の仕組み』や『現金・債券・金の資産配分』、『持ち家と賃貸の比較』も気になるね！"
+        cue: "c6_tsumugi_next"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "どれも会社員の毎日に直結するテーマなのだ！また一緒に勉強するのだ！"
+        cue: "c6_zunda_end"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "ご視聴ありがとうございました。次回の解説動画もお楽しみに！"
+        cue: "c6_outro"
+        pause_after: 0.8

@@ -1,0 +1,487 @@
+{
+  "generatedAt": "2026-11-20T03:07:57.662Z",
+  "meta": {
+    "title": "HTTPとHTTPSの違いを1分で図解",
+    "series": null,
+    "episode": null,
+    "theme": "clean-light",
+    "accent_color": null,
+    "bgm": null,
+    "fps": 30,
+    "width": 1920,
+    "height": 1080
+  },
+  "totalDuration": 73.2407,
+  "chapters": [
+    {
+      "id": "ch01_encryption",
+      "title": "1. 通信の暗号化",
+      "layout": "default",
+      "start": 0,
+      "end": 35.2294,
+      "duration": 35.2294,
+      "cues": {
+        "intro_nodes": 0.45,
+        "show_http_packet": 9.0667,
+        "show_eavesdrop": 14.2167,
+        "show_https_lock": 22.6734,
+        "show_encrypted_flow": 27.0127
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch01_encryption_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "今日はWebサイトの「HTTP」と「HTTPS」の違いを、図解でサクッと解説します。",
+          "voiceText": "今日はWebサイトの「エイチティーティーピー」と「エイチティーティーピーエス」の違いを、図解でサクッと解説します。",
+          "audioFile": "audio/lines/ch01_encryption_001.wav",
+          "hash": "9d68c0e659dda971",
+          "start": 0.45,
+          "end": 8.7167,
+          "globalStart": 0.45,
+          "globalEnd": 8.7167,
+          "duration": 8.2667,
+          "mouthSpans": [
+            {
+              "start": 0.63,
+              "end": 1.71
+            },
+            {
+              "start": 2.07,
+              "end": 2.79
+            },
+            {
+              "start": 2.91,
+              "end": 3.09
+            },
+            {
+              "start": 3.57,
+              "end": 3.75
+            },
+            {
+              "start": 4.29,
+              "end": 5.55
+            },
+            {
+              "start": 5.91,
+              "end": 6.57
+            },
+            {
+              "start": 6.93,
+              "end": 8.55
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "intro_nodes"
+        },
+        {
+          "index": 2,
+          "id": "ch01_encryption_002",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "URLの最初にSがつくだけなのだ？そんなに違うのだ？",
+          "voiceText": "ユーアールエルの最初にエスがつくだけなのだ？そんなに違うのだ？",
+          "audioFile": "audio/lines/ch01_encryption_002.wav",
+          "hash": "c0a6638000a1ca1c",
+          "start": 9.0667,
+          "end": 13.8667,
+          "globalStart": 9.0667,
+          "globalEnd": 13.8667,
+          "duration": 4.8,
+          "mouthSpans": [
+            {
+              "start": 9.1867,
+              "end": 10.1467
+            },
+            {
+              "start": 10.2667,
+              "end": 10.8067
+            },
+            {
+              "start": 11.2267,
+              "end": 12.0667
+            },
+            {
+              "start": 12.4867,
+              "end": 12.9067
+            },
+            {
+              "start": 13.0867,
+              "end": 13.6867
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "show_http_packet"
+        },
+        {
+          "index": 3,
+          "id": "ch01_encryption_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "従来のHTTPは手紙をそのまま送るようなもの。途中で盗み見られると、パスワードまで丸見えになってしまいます。",
+          "voiceText": "従来のエイチティーティーピーは手紙をそのまま送るようなもの。途中で盗み見られると、パスワードまで丸見えになってしまいます。",
+          "audioFile": "audio/lines/ch01_encryption_003.wav",
+          "hash": "11ab6a1c40753efa",
+          "start": 14.2167,
+          "end": 22.3234,
+          "globalStart": 14.2167,
+          "globalEnd": 22.3234,
+          "duration": 8.1067,
+          "mouthSpans": [
+            {
+              "start": 14.3367,
+              "end": 17.8767
+            },
+            {
+              "start": 18.2367,
+              "end": 19.5567
+            },
+            {
+              "start": 20.0367,
+              "end": 22.1367
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "show_eavesdrop"
+        },
+        {
+          "index": 4,
+          "id": "ch01_encryption_004",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "worry",
+          "se": null,
+          "caption": "それは怖すぎるのだ！そこでSがつくとどうなるのだ？",
+          "voiceText": "それは怖すぎるのだ！そこでエスがつくとどうなるのだ？",
+          "audioFile": "audio/lines/ch01_encryption_004.wav",
+          "hash": "15862342faf1b106",
+          "start": 22.6734,
+          "end": 26.6627,
+          "globalStart": 22.6734,
+          "globalEnd": 26.6627,
+          "duration": 3.9893,
+          "mouthSpans": [
+            {
+              "start": 22.8534,
+              "end": 24.1734
+            },
+            {
+              "start": 24.6534,
+              "end": 25.0134
+            },
+            {
+              "start": 25.1334,
+              "end": 25.2534
+            },
+            {
+              "start": 25.4934,
+              "end": 26.5134
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "show_https_lock"
+        },
+        {
+          "index": 5,
+          "id": "ch01_encryption_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "HTTPSでは通信に鍵をかけて暗号化します。途中で覗かれても、ただの暗号文にしか見えません。",
+          "voiceText": "エイチティーティーピーエスでは通信に鍵をかけて暗号化します。途中で覗かれても、ただの暗号文にしか見えません。",
+          "audioFile": "audio/lines/ch01_encryption_005.wav",
+          "hash": "1403c37dbac58b4f",
+          "start": 27.0127,
+          "end": 34.4794,
+          "globalStart": 27.0127,
+          "globalEnd": 34.4794,
+          "duration": 7.4667,
+          "mouthSpans": [
+            {
+              "start": 27.1327,
+              "end": 30.6727
+            },
+            {
+              "start": 31.0927,
+              "end": 32.2327
+            },
+            {
+              "start": 32.5327,
+              "end": 34.3927
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "show_encrypted_flow"
+        }
+      ]
+    },
+    {
+      "id": "ch02_tsumugi_cert",
+      "title": "2. つむぎの鋭い質問：偽サイト対策",
+      "layout": "default",
+      "start": 35.2294,
+      "end": 73.2407,
+      "duration": 38.0113,
+      "cues": {
+        "tsumugi_question": 0.45,
+        "show_fake_server": 7.1253,
+        "show_ca_cert": 13.7666,
+        "show_summary_cards": 23.3753,
+        "show_outro": 32.0773
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch02_tsumugi_cert_001",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "sharp",
+          "se": null,
+          "caption": "ちょっと待って！暗号化してるだけなら、最初から偽のサーバーと暗号通信しちゃったら意味なくない？",
+          "voiceText": "ちょっと待って！暗号化してるだけなら、最初から偽のサーバーと暗号通信しちゃったら意味なくない？",
+          "audioFile": "audio/lines/ch02_tsumugi_cert_001.wav",
+          "hash": "65123bfc5da9e592",
+          "start": 0.45,
+          "end": 6.7753,
+          "globalStart": 35.6794,
+          "globalEnd": 42.0047,
+          "duration": 6.3253,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 0.99
+            },
+            {
+              "start": 1.11,
+              "end": 1.23
+            },
+            {
+              "start": 1.59,
+              "end": 2.85
+            },
+            {
+              "start": 3.33,
+              "end": 4.95
+            },
+            {
+              "start": 5.07,
+              "end": 5.37
+            },
+            {
+              "start": 5.49,
+              "end": 5.61
+            },
+            {
+              "start": 5.73,
+              "end": 6.51
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "tsumugi_question"
+        },
+        {
+          "index": 2,
+          "id": "ch02_tsumugi_cert_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "鋭い質問ですね、つむぎさん！実は暗号化だけでは「なりすまし」は防げません。",
+          "voiceText": "鋭い質問ですね、つむぎさん！実は暗号化だけでは「なりすまし」は防げません。",
+          "audioFile": "audio/lines/ch02_tsumugi_cert_002.wav",
+          "hash": "8a1a0449e28420c7",
+          "start": 7.1253,
+          "end": 13.5466,
+          "globalStart": 42.3547,
+          "globalEnd": 48.776,
+          "duration": 6.4213,
+          "mouthSpans": [
+            {
+              "start": 7.2453,
+              "end": 8.4453
+            },
+            {
+              "start": 8.8653,
+              "end": 9.4053
+            },
+            {
+              "start": 9.8853,
+              "end": 11.2653
+            },
+            {
+              "start": 11.6253,
+              "end": 12.2253
+            },
+            {
+              "start": 12.6453,
+              "end": 13.4253
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "show_fake_server"
+        },
+        {
+          "index": 3,
+          "id": "ch02_tsumugi_cert_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そこで登場するのが「サーバー証明書」です。信頼できる第三者機関である認証局が、本物のサイトだとお墨付きを与えます。",
+          "voiceText": "そこで登場するのが「サーバー証明書」です。信頼できる第三者機関である認証局が、本物のサイトだとお墨付きを与えます。",
+          "audioFile": "audio/lines/ch02_tsumugi_cert_003.wav",
+          "hash": "d9892c97c8bde706",
+          "start": 13.7666,
+          "end": 23.0253,
+          "globalStart": 48.996,
+          "globalEnd": 58.2547,
+          "duration": 9.2587,
+          "mouthSpans": [
+            {
+              "start": 13.8866,
+              "end": 15.2066
+            },
+            {
+              "start": 15.5066,
+              "end": 16.5866
+            },
+            {
+              "start": 16.9466,
+              "end": 17.1866
+            },
+            {
+              "start": 17.5466,
+              "end": 20.3066
+            },
+            {
+              "start": 20.6066,
+              "end": 22.8266
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "show_ca_cert"
+        },
+        {
+          "index": 4,
+          "id": "ch02_tsumugi_cert_004",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "なるほど！HTTPSは「通信の暗号化」と「サイトの本人確認」の2本立てなのだ！",
+          "voiceText": "なるほど！エイチティーティーピーエスは「通信の暗号化」と「サイトの本人確認」の2本立てなのだ！",
+          "audioFile": "audio/lines/ch02_tsumugi_cert_004.wav",
+          "hash": "53679c4df662840b",
+          "start": 23.3753,
+          "end": 31.7273,
+          "globalStart": 58.6047,
+          "globalEnd": 66.9567,
+          "duration": 8.352,
+          "mouthSpans": [
+            {
+              "start": 23.5553,
+              "end": 24.0353
+            },
+            {
+              "start": 24.5153,
+              "end": 24.6353
+            },
+            {
+              "start": 25.1153,
+              "end": 25.6553
+            },
+            {
+              "start": 25.7753,
+              "end": 25.9553
+            },
+            {
+              "start": 26.4353,
+              "end": 27.6353
+            },
+            {
+              "start": 28.6553,
+              "end": 30.0353
+            },
+            {
+              "start": 30.5153,
+              "end": 31.5953
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "show_summary_cards"
+        },
+        {
+          "index": 5,
+          "id": "ch02_tsumugi_cert_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "その通りです。鍵マークの裏側には、この2つの仕組みが動いているんです。",
+          "voiceText": "その通りです。鍵マークの裏側には、この2つの仕組みが動いているんです。",
+          "audioFile": "audio/lines/ch02_tsumugi_cert_005.wav",
+          "hash": "93dae0e883eae7e9",
+          "start": 32.0773,
+          "end": 37.2613,
+          "globalStart": 67.3067,
+          "globalEnd": 72.4907,
+          "duration": 5.184,
+          "mouthSpans": [
+            {
+              "start": 32.2573,
+              "end": 32.9173
+            },
+            {
+              "start": 33.3973,
+              "end": 34.7773
+            },
+            {
+              "start": 35.0773,
+              "end": 37.1173
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "show_outro"
+        }
+      ]
+    }
+  ]
+}

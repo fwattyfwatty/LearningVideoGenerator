@@ -1,0 +1,205 @@
+<style>
+.c4-scene {
+  position: relative;
+  height: 650px;
+  max-height: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+  color: var(--text-primary);
+}
+.c4-phase { position: absolute; inset: 0; gap: 0; }
+#c4-phase-b { opacity: 0; }
+.c4-title { min-height: 72px; }
+.c4-title .dg-heading { font-weight: 800; }
+.c4-phase-tag { color: var(--accent-secondary); }
+.c4-guide {
+  position: absolute;
+  top: 102px;
+  left: 0;
+  width: 70%;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 21px;
+  font-weight: 700;
+}
+.c4-grid { flex: 1; min-height: 0; }
+.c4-card {
+  padding: 16px 18px;
+  min-width: 0;
+  min-height: 0;
+  gap: 12px;
+  box-sizing: border-box;
+}
+.c4-wall { border-top: 3px solid var(--accent-secondary); gap: 16px; }
+#c4-card-eur { border-top-color: var(--accent-primary); }
+#c4-card-rmb { border-top-color: var(--accent-danger); }
+.c4-label { gap: 10px; }
+.c4-icon { width: 28px; height: 28px; flex: 0 0 28px; color: var(--accent-primary); }
+.c4-metrics { margin: 0; flex: 1; padding: 14px 12px; }
+.c4-metric { flex: 1; text-align: center; }
+.c4-metric + .c4-metric { border-left: 1px solid var(--border-strong); }
+.c4-metric dt { color: var(--text-secondary); font-size: 16px; font-weight: 800; }
+.c4-metric dd { margin: 4px 0 0; font-size: 30px; }
+.c4-takeaway { margin: 0; padding: 11px 15px; font-size: 19px; line-height: 1.45; }
+.c4-wall .c4-takeaway { min-height: 58px; }
+.c4-widget { min-height: 180px; }
+.c4-widget > svg { width: 100%; height: 100%; }
+.c4-block { border-radius: 14px; padding: 12px 15px; gap: 8px; height: auto; }
+.c4-block h4 { margin: 0; font-size: 22px; font-weight: 800; }
+.c4-detail { margin: 0; color: var(--text-secondary); font-size: 17px; font-weight: 700; }
+#c4-dest-div { border: 1px solid var(--border-strong); background: var(--bg-card-muted); }
+#c4-dest-gold { background: color-mix(in srgb, var(--accent-primary) 10%, var(--bg-card-muted)); }
+.c4-gold-stat { gap: 12px; align-items: baseline; }
+.c4-gold-stat .dg-kpi { font-size: 38px; }
+#c4-gold-rank { align-self: flex-start; white-space: normal; }
+</style>
+<div class="c4-scene">
+  <div id="c4-phase-a" class="c4-phase dg-col">
+    <header class="c4-title dg-title-bar dg-cutin-head">
+      <h2 class="dg-heading">3つの挑戦者が越えられない「構造の壁」</h2>
+      <span class="c4-phase-tag dg-pill-muted dg-pill-secondary">Phase 1　挑戦者の限界</span>
+    </header>
+    <p class="c4-guide">日本円・ユーロ・人民元は、どの壁にぶつかるのか？</p>
+    <div class="c4-grid dg-grid-3 dg-cutin-body">
+      <section id="c4-card-yen" class="c4-card c4-wall dg-card dg-col">
+        <header class="dg-card-head">
+          <div class="c4-label dg-row">
+            <svg class="c4-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-coins"/></svg>
+            <h3 class="dg-card-title">日本円（JPY）</h3>
+          </div>
+        </header>
+        <dl class="c4-metrics dg-svg-stage">
+          <div class="c4-metric"><dt>外貨準備</dt><dd class="dg-kpi">5.0%</dd></div>
+          <div class="c4-metric"><dt>FX取引</dt><dd class="dg-kpi">16.8%</dd></div>
+        </dl>
+        <div class="dg-chip-row"><span class="dg-chip">1985年プラザ合意後に存在感拡大</span></div>
+        <p class="c4-takeaway dg-callout dg-callout-warn">壁　バブル崩壊・長期停滞と<br>金融市場開放の遅れ</p>
+      </section>
+      <section id="c4-card-eur" class="c4-card c4-wall dg-card-glow dg-col">
+        <header class="dg-card-head">
+          <div class="c4-label dg-row">
+            <svg class="c4-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-landmark"/></svg>
+            <h3 class="dg-card-title">ユーロ（EUR）</h3>
+          </div>
+        </header>
+        <dl class="c4-metrics dg-svg-stage">
+          <div class="c4-metric"><dt>外貨準備</dt><dd class="dg-kpi">20.6%</dd></div>
+          <div class="c4-metric"><dt>SWIFT決済</dt><dd class="dg-kpi">21.9%</dd></div>
+        </dl>
+        <div class="dg-chip-row"><span class="dg-chip dg-chip-accent">最大の対抗馬・欧州の巨大経済圏</span></div>
+        <p class="c4-takeaway dg-callout dg-callout-warn">壁　20カ国の財政・国債が分かれ、<br>米国債に匹敵する単一の安全資産がない</p>
+      </section>
+      <section id="c4-card-rmb" class="c4-card c4-wall dg-card dg-col">
+        <header class="dg-card-head">
+          <div class="c4-label dg-row">
+            <svg class="c4-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-shield"/></svg>
+            <h3 class="dg-card-title">人民元（CNY）</h3>
+          </div>
+        </header>
+        <dl class="c4-metrics dg-svg-stage">
+          <div class="c4-metric"><dt>外貨準備</dt><dd class="dg-kpi">2.1%</dd></div>
+          <div class="c4-metric"><dt>SWIFT決済</dt><dd class="dg-kpi">3.1%</dd></div>
+          <div class="c4-metric"><dt>FX取引</dt><dd class="dg-kpi">8.5%</dd></div>
+        </dl>
+        <div class="dg-chip-row"><span class="dg-chip">貿易大国・二国間決済は拡大</span></div>
+        <p class="c4-takeaway dg-callout dg-callout-danger">壁　資本移動規制による換金の制約と<br>制度の透明性</p>
+      </section>
+    </div>
+  </div>
+
+  <div id="c4-phase-b" class="c4-phase dg-col">
+    <header class="c4-title dg-title-bar dg-cutin-head">
+      <h2 class="dg-heading">静かな地殻変動　ドル比率の緩やかな低下と「金」の復権</h2>
+      <span class="dg-pill-accent">Phase 2　2026年データ</span>
+    </header>
+    <p class="c4-guide">外貨準備の通貨構成と、中央銀行の金保有を見ていく</p>
+    <div class="c4-grid dg-grid-2 dg-cutin-body">
+      <section id="c4-card-curve" class="c4-card c4-result dg-card-glow dg-col">
+        <header class="dg-card-head">
+          <div class="c4-label dg-row">
+            <svg class="c4-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-trending-down"/></svg>
+            <h3 class="dg-card-title">外貨準備における米ドル比率の推移</h3>
+          </div>
+          <span class="dg-pill-muted">IMF COFER</span>
+        </header>
+        <div id="c4-line-box" class="c4-widget dg-svg-stage" role="img"
+          aria-label="世界の外貨準備に占めるドル比率は2000年の約71パーセントから2026年第2四半期の56.7パーセントへ低下"></div>
+        <p class="c4-takeaway dg-callout">26年間で約14ポイント低下し、なお過半数を維持</p>
+      </section>
+      <section id="c4-card-dest" class="c4-card c4-result dg-card dg-col">
+        <header class="dg-card-head">
+          <div class="c4-label dg-row">
+            <svg class="c4-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-trending-up"/></svg>
+            <h3 class="dg-card-title">ドル比率が下がる一方、通貨は分散し金は増加</h3>
+          </div>
+        </header>
+        <div id="c4-dest-div" class="c4-block dg-col">
+          <h4>① 非伝統的通貨への分散</h4>
+          <div class="dg-chip-row">
+            <span class="dg-chip">豪ドル</span>
+            <span class="dg-chip">カナダドル</span>
+            <span class="dg-chip">スイスフラン</span>
+            <span class="dg-chip">韓国ウォン</span>
+          </div>
+          <p class="c4-detail">人民元を含む複数の通貨に分散</p>
+        </div>
+        <div id="c4-dest-gold" class="c4-block dg-col dg-callout dg-callout-ok">
+          <h4>② 金（ゴールド）の復権</h4>
+          <div class="c4-gold-stat dg-row">
+            <strong class="dg-kpi">年約 <span id="c4-gold-count">1,000</span> トン</strong>
+            <p class="c4-detail">2022年以降の中央銀行購入</p>
+          </div>
+          <p class="c4-detail">金は外貨準備統計（COFER）の集計対象外</p>
+          <span id="c4-gold-rank" class="dg-pill-accent">公的準備資産全体でユーロを抜き世界2位へ（WGC）</span>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders['ch04_challengers_reality'] = function (tl, cues) {
+  const motion = window.dgMotion;
+  const tSwitch = cues.c4_phase2_shift;
+  const walls = '.c4-wall';
+  const results = '.c4-result';
+
+  motion.reveal(tl, walls, cues.c4_tsumugi_ask + 0.8, { y: 10, stagger: 0.15 });
+  motion.focus(tl, '#c4-card-yen', walls, cues.c4_yen_wall);
+  motion.focus(tl, '#c4-card-eur', walls, cues.c4_euro_wall);
+  motion.focus(tl, '#c4-card-rmb', walls, cues.c4_rmb_wall);
+  motion.unfocus(tl, walls, cues.c4_zunda_walls);
+
+  motion.switchPhase(tl, '#c4-phase-a', '#c4-phase-b', tSwitch, { duration: 0.1 });
+  tl.set('#c4-phase-a', { opacity: 0 }, tSwitch + 0.1);
+  tl.set('#c4-phase-b', { opacity: 1 }, tSwitch + 0.1);
+  window.dgWidgets.lineChart('#c4-line-box', tl, {
+    width: 640,
+    height: 270,
+    mode: 'line',
+    yMin: 40,
+    yMax: 80,
+    yTicks: [40, 55, 70, 80],
+    yUnit: '%',
+    at: tSwitch + 0.2,
+    duration: 1.4,
+    highlightAt: tSwitch + 1.4,
+    pulseEnd: cues.c4_nontrad_div + 1.5,
+    points: [
+      { label: '2000', value: 71.0, badge: '約71%' },
+      { label: '2008', value: 64.0 },
+      { label: '2015', value: 65.5 },
+      { label: '2022', value: 58.5 },
+      { label: '2026Q2', value: 56.7, badge: '56.7%', highlight: true }
+    ]
+  });
+  motion.focus(tl, '#c4-card-curve', results, tSwitch + 0.1);
+  motion.focus(tl, '#c4-card-dest', results, cues.c4_nontrad_div);
+  motion.reveal(tl, '#c4-dest-div', cues.c4_nontrad_div, { y: 8 });
+  motion.reveal(tl, '#c4-dest-gold', cues.c4_gold_surge, { y: 8 });
+  motion.countUp(tl, '#c4-gold-count', 0, 1000, cues.c4_gold_surge, { duration: 1.3 });
+  tl.set('#c4-gold-count', { textContent: '1,000' }, cues.c4_gold_surge + 1.31);
+  motion.reveal(tl, '#c4-gold-rank', cues.c4_gold_no2, { y: 4 });
+  motion.pulse(tl, '#c4-gold-rank', cues.c4_gold_no2 + 0.45, cues.c4_tsumugi_gold + 2);
+  motion.unfocus(tl, results, cues.c4_zunda_gold);
+};
+</script>

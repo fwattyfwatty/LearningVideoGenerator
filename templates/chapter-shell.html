@@ -1,0 +1,365 @@
+<template id="template-{{COMPOSITION_ID}}">
+  <style>
+{{THEME_CSS}}
+{{ACCENT_OVERRIDE_CSS}}
+{{DIAGRAM_KIT_CSS}}
+    [data-composition-id="{{COMPOSITION_ID}}"] * {
+      box-sizing: border-box;
+    }
+
+    #root {
+      position: absolute;
+      inset: 0;
+      background: var(--bg-canvas);
+      background-image: var(--bg-canvas-accent);
+      color: var(--text-primary);
+      font-family: "Noto Sans JP", sans-serif;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .bg-grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Top Header */
+    [data-composition-id="{{COMPOSITION_ID}}"] .top-header {
+      position: relative;
+      z-index: 10;
+      height: 72px;
+      padding: 0 36px;
+      background: var(--header-bg);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-shrink: 0;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .episode-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: var(--accent-primary);
+      color: var(--on-accent, #ffffff);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .episode-title {
+      font-size: 23px;
+      font-weight: 700;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .header-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-shrink: 0;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .chapter-badge {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      padding: 7px 16px;
+      border-radius: 12px;
+      background: var(--bg-card-muted);
+      border: 1px solid var(--border-subtle);
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .progress-track {
+      width: 220px;
+      height: 12px;
+      border-radius: 999px;
+      background: var(--bg-card-muted);
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .chapter-progress-fill {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+      transform-origin: left center;
+    }
+
+    /* Main Diagram Stage (Default / Wide / Title modes) */
+    [data-composition-id="{{COMPOSITION_ID}}"] .diagram-stage {
+      position: relative;
+      z-index: 5;
+      flex: 1;
+      margin: 12px 36px 206px;
+      border-radius: 24px;
+      background: var(--bg-stage);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      padding: 20px 34px 52px;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .diagram-stage.layout-wide {
+      margin: 8px 24px 198px;
+      border-radius: 16px;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 10px 24px 36px;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .diagram-stage.layout-title {
+      margin: 16px 64px 200px;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 20px 32px 36px;
+    }
+
+    /* Standing Character Portraits (Bottom-Left & Bottom-Right, borderless transparent PNGs) */
+    [data-composition-id="{{COMPOSITION_ID}}"] .char-actor {
+      position: absolute;
+      bottom: 0;
+      z-index: 22;
+      pointer-events: none;
+      transform-origin: center bottom;
+      filter: drop-shadow(0 10px 22px rgba(15, 23, 42, 0.22));
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .char-metan {
+      left: 12px;
+      width: 276px;
+      height: 266px;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .char-zundamon {
+      right: 12px;
+      width: 260px;
+      height: 266px;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .portrait-crop {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .portrait-img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: auto;
+      height: 314px;
+      margin-left: -138px;
+      opacity: 0;
+      object-fit: contain;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .char-zundamon .portrait-img {
+      margin-left: -116px;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .portrait-img.is-initial {
+      opacity: 1;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .char-name-badge {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      width: 164px;
+      margin-left: -82px;
+      text-align: center;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--char-badge-bg, var(--accent-primary));
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.25);
+      border: 2px solid #ffffff;
+      z-index: 25;
+    }
+
+    /* Caption Stack (Bottom Center between Metan and Zundamon) */
+    [data-composition-id="{{COMPOSITION_ID}}"] .caption-dock {
+      position: absolute;
+      left: 298px;
+      right: 298px;
+      bottom: 16px;
+      height: 174px;
+      z-index: 20;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .caption-item {
+      position: absolute;
+      inset: 0;
+      border-radius: 22px;
+      background: var(--caption-bg);
+      border: 3px solid var(--speaker-color, var(--accent-primary));
+      box-shadow: var(--shadow-card);
+      padding: 16px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+      opacity: 0;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .caption-speaker-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .caption-speaker-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 14px;
+      border-radius: 8px;
+      background: var(--speaker-color, var(--accent-primary));
+      color: #ffffff;
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .caption-text {
+      margin: 0;
+      font-size: 33px;
+      line-height: 1.4;
+      font-weight: 700;
+      color: var(--text-primary);
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .caption-text.is-long {
+      font-size: 29px;
+      line-height: 1.34;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .caption-text.is-xlong {
+      font-size: 25px;
+      line-height: 1.3;
+    }
+
+    /* Tsumugi Cut-in Floating Panel (top-right under header) */
+    [data-composition-id="{{COMPOSITION_ID}}"] .tsumugi-cutin {
+      position: absolute;
+      top: 90px;
+      right: 32px;
+      z-index: 30;
+      width: 316px;
+      height: 164px;
+      padding: 12px 14px 12px 12px;
+      border-radius: 22px;
+      background: var(--bg-card);
+      border: 4px solid #d97706;
+      box-shadow: 0 20px 44px rgba(217, 119, 6, 0.28);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .tsumugi-portrait-box {
+      position: relative;
+      width: 136px;
+      height: 138px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border-radius: 14px;
+      background: #fffbeb;
+      border: 2px solid #fde68a;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .tsumugi-portrait-box .portrait-img {
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      width: auto;
+      height: 214px;
+      margin-left: -74px;
+      opacity: 0;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .tsumugi-portrait-box .portrait-img.is-initial {
+      opacity: 1;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .cutin-meta {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 6px;
+    }
+
+    [data-composition-id="{{COMPOSITION_ID}}"] .cutin-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+
+{{DIAGRAM_STYLE}}
+  </style>
+  <div id="root" data-composition-id="{{COMPOSITION_ID}}" data-duration="{{CHAPTER_DURATION}}" data-width="{{WIDTH}}" data-height="{{HEIGHT}}">
+    <div class="bg-grid-overlay" data-layout-ignore="true"></div>
+{{AUDIO_TRACKS}}
+    <header class="top-header">
+      <div class="header-left"><span class="episode-pill">{{EPISODE_BADGE}}</span><span class="episode-title">{{EPISODE_TITLE}}</span></div>
+      <div class="header-right"><span class="chapter-badge">{{CHAPTER_TITLE}}</span><div class="progress-track"><div class="chapter-progress-fill"></div></div></div>
+    </header>
+    <main class="diagram-stage layout-{{CHAPTER_LAYOUT}}">
+{{DIAGRAM_HTML}}
+    </main>
+    <aside class="tsumugi-cutin" data-layout-allow-overlap="true">
+      <div class="tsumugi-portrait-box" data-layout-ignore="true">{{TSUMUGI_PORTRAITS}}</div>
+      <div class="cutin-meta"><span class="cutin-name">春日部つむぎ</span></div>
+    </aside>
+    <div class="char-actor char-metan" data-layout-ignore="true" style="--char-badge-bg: #be185d;"><div class="portrait-crop">{{METAN_PORTRAITS}}</div><div class="char-name-badge">四国めたん</div></div>
+    <div class="caption-dock">{{CAPTION_ITEMS}}</div>
+    <div class="char-actor char-zundamon" data-layout-ignore="true" style="--char-badge-bg: #15803d;"><div class="portrait-crop">{{ZUNDAMON_PORTRAITS}}</div><div class="char-name-badge">ずんだもん</div></div>
+  </div>
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/stage-runtime.js"></script>
+  <script src="vendor/diagram-widgets.js"></script>
+{{DIAGRAM_SCRIPT_TAG}}
+  <script>
+    (function () {
+      const compId = {{COMPOSITION_ID_JSON}};
+      const chapterData = {{CHAPTER_DATA_JSON}};
+      const rootEl = document.querySelector('[data-composition-id="' + compId + '"]');
+      const tl = gsap.timeline({ paused: true });
+      if (typeof window.populateLearnVideoChapter === 'function') window.populateLearnVideoChapter(tl, rootEl, compId, chapterData);
+      window.__timelines = window.__timelines || {};
+      window.__timelines[compId] = tl;
+    })();
+  </script>
+</template>

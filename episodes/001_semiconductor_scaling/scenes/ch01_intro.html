@@ -1,0 +1,396 @@
+<style>
+  .c1-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .c1-hero {
+    text-align: center;
+    padding: 8px 24px;
+  }
+
+  .c1-hero-badge {
+    display: inline-block;
+    padding: 5px 18px;
+    border-radius: 999px;
+    background: #0369a1;
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .c1-hero-title {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 900;
+    color: #f8fafc;
+    letter-spacing: 0.01em;
+  }
+
+  .c1-main-grid {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 24px;
+  }
+
+  .c1-panel {
+    border-radius: 22px;
+    background: rgba(30, 41, 59, 0.92);
+    border: 2px solid #334155;
+    padding: 22px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+  }
+
+  .c1-panel-title {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 700;
+    color: #38bdf8;
+  }
+
+  .c1-zoom-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 10px 0;
+  }
+
+  .c1-phone-box {
+    width: 130px;
+    height: 190px;
+    border-radius: 22px;
+    background: #0f172a;
+    border: 4px solid #64748b;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .c1-phone-screen {
+    width: 100%;
+    flex: 1;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+    display: grid;
+    place-items: center;
+    font-size: 38px;
+  }
+
+  .c1-chip-box {
+    width: 246px;
+    height: 190px;
+    border-radius: 20px;
+    background: #0f172a;
+    border: 3px solid #38bdf8;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 0 28px rgba(56, 189, 248, 0.25);
+  }
+
+  .c1-chip-grid {
+    width: 112px;
+    height: 112px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #1e293b 0%, #0284c7 100%);
+    border: 2px solid #7dd3fc;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    padding: 8px;
+  }
+
+  .c1-chip-cell {
+    border-radius: 3px;
+    background: rgba(224, 242, 254, 0.85);
+  }
+
+  .c1-chip-label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f8fafc;
+    white-space: nowrap;
+  }
+
+  .c1-history-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: auto;
+  }
+
+  .c1-era-card {
+    border-radius: 14px;
+    background: #0f172a;
+    border: 2px solid #334155;
+    padding: 10px 8px;
+    text-align: center;
+  }
+
+  .c1-era-card-hot {
+    border-color: #38bdf8;
+    background: #082f49;
+  }
+
+  .c1-era-year {
+    font-size: 16px;
+    font-weight: 700;
+    color: #94a3b8;
+  }
+
+  .c1-era-val {
+    font-size: 21px;
+    font-weight: 900;
+    color: #f8fafc;
+    margin-top: 4px;
+  }
+
+  .c1-era-card-hot .c1-era-year { color: #7dd3fc; }
+  .c1-era-card-hot .c1-era-val { color: #38bdf8; }
+
+  .c1-scale-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 12px;
+  }
+
+  .c1-scale-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .c1-scale-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #e2e8f0;
+  }
+
+  .c1-bar-track {
+    height: 44px;
+    border-radius: 12px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .c1-bar-fill {
+    height: 100%;
+    border-radius: 8px;
+    transform-origin: left center;
+  }
+
+  .c1-bar-text {
+    font-size: 19px;
+    font-weight: 700;
+    color: #f8fafc;
+    white-space: nowrap;
+  }
+
+  .c1-goal-row {
+    margin: 0 212px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .c1-goal-pill {
+    border-radius: 16px;
+    background: #1e293b;
+    border: 2px solid #0284c7;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 19px;
+    font-weight: 700;
+    color: #f8fafc;
+    white-space: nowrap;
+  }
+
+  .c1-goal-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #0284c7;
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    font-weight: 900;
+  }
+</style>
+
+<div class="c1-wrap">
+  <div id="c1-hero" class="c1-hero">
+    <span class="c1-hero-badge">テーマ解説</span>
+    <h1 class="c1-hero-title">半導体の「微細化」が世界を変えた理由と未来</h1>
+  </div>
+
+  <div class="c1-main-grid">
+    <!-- Left: Phone -> Chip Zoom & Transistor Count -->
+    <section id="c1-left-panel" class="c1-panel">
+      <h2 class="c1-panel-title">指先サイズのチップに何百億個のスイッチ</h2>
+
+      <div class="c1-zoom-row">
+        <div id="c1-phone" class="c1-phone-box">
+          <div class="c1-phone-screen">📱</div>
+          <span style="font-size: 16px; font-weight: 700; color: #cbd5e1; margin-top: 6px;">スマホ</span>
+        </div>
+
+        <svg id="c1-zoom-arrow" width="84" height="44" viewBox="0 0 84 44">
+          <line x1="6" y1="22" x2="68" y2="22" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" />
+          <polyline points="56,10 72,22 56,34" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+        <div id="c1-chip" class="c1-chip-box">
+          <div class="c1-chip-grid">
+            <div class="c1-chip-cell"></div><div class="c1-chip-cell"></div><div class="c1-chip-cell"></div><div class="c1-chip-cell"></div>
+            <div class="c1-chip-cell"></div><div class="c1-chip-cell"></div><div class="c1-chip-cell"></div><div class="c1-chip-cell"></div>
+            <div class="c1-chip-cell"></div><div class="c1-chip-cell"></div><div class="c1-chip-cell"></div><div class="c1-chip-cell"></div>
+            <div class="c1-chip-cell"></div><div class="c1-chip-cell"></div><div class="c1-chip-cell"></div><div class="c1-chip-cell"></div>
+          </div>
+          <span class="c1-chip-label">SoC チップ（数mm角）</span>
+        </div>
+      </div>
+
+      <div class="c1-history-row">
+        <div id="c1-era-1" class="c1-era-card">
+          <div class="c1-era-year">1971年</div>
+          <div class="c1-era-val">約2,300個</div>
+        </div>
+        <div id="c1-era-2" class="c1-era-card">
+          <div class="c1-era-year">1990年代</div>
+          <div class="c1-era-val">100万個超</div>
+        </div>
+        <div id="c1-era-3" class="c1-era-card">
+          <div class="c1-era-year">2010年代</div>
+          <div class="c1-era-val">10億個超</div>
+        </div>
+        <div id="c1-era-4" class="c1-era-card c1-era-card-hot">
+          <div class="c1-era-year">現代の先端</div>
+          <div class="c1-era-val">1,000億個超</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right: Nanoscale Comparison -->
+    <section id="c1-right-panel" class="c1-panel">
+      <h2 class="c1-panel-title">どれくらい小さい？（サイズ比較）</h2>
+
+      <div class="c1-scale-list">
+        <div id="c1-sc-1" class="c1-scale-row">
+          <div class="c1-scale-name">💇 髪の毛の太さ</div>
+          <div class="c1-bar-track">
+            <div id="c1-bar-1" class="c1-bar-fill" style="width: 72%; background: #64748b;"></div>
+            <span class="c1-bar-text">約 80,000 nm</span>
+          </div>
+        </div>
+
+        <div id="c1-sc-2" class="c1-scale-row">
+          <div class="c1-scale-name">🩸 赤血球</div>
+          <div class="c1-bar-track">
+            <div id="c1-bar-2" class="c1-bar-fill" style="width: 54%; background: #e11d48;"></div>
+            <span class="c1-bar-text">約 7,000 nm</span>
+          </div>
+        </div>
+
+        <div id="c1-sc-3" class="c1-scale-row">
+          <div class="c1-scale-name">🦠 ウイルス</div>
+          <div class="c1-bar-track">
+            <div id="c1-bar-3" class="c1-bar-fill" style="width: 34%; background: #d97706;"></div>
+            <span class="c1-bar-text">約 100 nm</span>
+          </div>
+        </div>
+
+        <div id="c1-sc-4" class="c1-scale-row">
+          <div class="c1-scale-name" style="color: #38bdf8;">⚡ 先端半導体</div>
+          <div class="c1-bar-track" style="border-color: #38bdf8;">
+            <div id="c1-bar-4" class="c1-bar-fill" style="width: 14%; background: #0ea5e9;"></div>
+            <span class="c1-bar-text" style="color: #38bdf8;">2〜3 nm 世代！</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="c1-goal-row">
+    <div id="c1-g1" class="c1-goal-pill"><span class="c1-goal-num">1</span>なぜ小さくなると強い？</div>
+    <div id="c1-g2" class="c1-goal-pill"><span class="c1-goal-num">2</span>何が可能になった？</div>
+    <div id="c1-g3" class="c1-goal-pill"><span class="c1-goal-num">3</span>限界の先の未来技術</div>
+  </div>
+</div>
+
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders["ch01_intro"] = function (tl, cues) {
+  gsap.set('#c1-hero', { opacity: 0, y: -16 });
+  gsap.set('#c1-left-panel', { opacity: 0, y: 20 });
+  gsap.set('#c1-phone', { opacity: 0, scale: 0.9 });
+  gsap.set('#c1-zoom-arrow', { opacity: 0, x: -12 });
+  gsap.set('#c1-chip', { opacity: 0, scale: 0.85 });
+  gsap.set(['#c1-era-1', '#c1-era-2', '#c1-era-3', '#c1-era-4'], { opacity: 0, y: 14 });
+  gsap.set('#c1-right-panel', { opacity: 0, y: 20 });
+  gsap.set(['#c1-sc-1', '#c1-sc-2', '#c1-sc-3', '#c1-sc-4'], { opacity: 0, x: 18 });
+  gsap.set(['#c1-bar-1', '#c1-bar-2', '#c1-bar-3', '#c1-bar-4'], { scaleX: 0 });
+  gsap.set(['#c1-g1', '#c1-g2', '#c1-g3'], { opacity: 0, y: 18 });
+
+  const t1 = cues.c1_title ?? 0.45;
+  tl.to('#c1-hero', { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, t1);
+
+  const t2 = cues.c1_phone_zoom ?? 6.5;
+  tl.to('#c1-left-panel', { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, t2);
+  tl.to('#c1-phone', { opacity: 1, scale: 1, duration: 0.4, ease: 'back.out(1.4)' }, t2 + 0.15);
+
+  const t3 = cues.c1_moore_count ?? 14.0;
+  tl.to('#c1-zoom-arrow', { opacity: 1, x: 0, duration: 0.35, ease: 'power2.out' }, t3);
+  tl.to('#c1-chip', { opacity: 1, scale: 1, duration: 0.45, ease: 'back.out(1.5)' }, t3 + 0.2);
+
+  const t4 = cues.c1_moore_step ?? 21.0;
+  tl.to('#c1-era-1', { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }, t4);
+  tl.to('#c1-era-2', { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }, t4 + 0.3);
+  tl.to('#c1-era-3', { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }, t4 + 0.6);
+
+  const t5 = cues.c1_scale_bar ?? 26.0;
+  tl.to('#c1-era-4', { opacity: 1, y: 0, duration: 0.4, ease: 'back.out(1.6)' }, t5);
+
+  const t6 = cues.c1_scale_compare ?? 34.0;
+  tl.to('#c1-right-panel', { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, t6);
+  tl.to('#c1-sc-1', { opacity: 1, x: 0, duration: 0.3, ease: 'power2.out' }, t6 + 0.2);
+  tl.to('#c1-bar-1', { scaleX: 1, duration: 0.5, ease: 'power2.out' }, t6 + 0.3);
+  tl.to('#c1-sc-2', { opacity: 1, x: 0, duration: 0.3, ease: 'power2.out' }, t6 + 0.7);
+  tl.to('#c1-bar-2', { scaleX: 1, duration: 0.5, ease: 'power2.out' }, t6 + 0.8);
+  tl.to('#c1-sc-3', { opacity: 1, x: 0, duration: 0.3, ease: 'power2.out' }, t6 + 1.2);
+  tl.to('#c1-bar-3', { scaleX: 1, duration: 0.5, ease: 'power2.out' }, t6 + 1.3);
+  tl.to('#c1-sc-4', { opacity: 1, x: 0, duration: 0.35, ease: 'power2.out' }, t6 + 1.8);
+  tl.to('#c1-bar-4', { scaleX: 1, duration: 0.5, ease: 'back.out(1.5)' }, t6 + 1.9);
+
+  const tGoal = cues.c1_goal ?? 46.0;
+  tl.to('#c1-g1', { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }, tGoal + 0.5);
+  tl.to('#c1-g2', { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }, tGoal + 1.4);
+  tl.to('#c1-g3', { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }, tGoal + 2.3);
+};
+</script>

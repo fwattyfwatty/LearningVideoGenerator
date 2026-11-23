@@ -1,0 +1,25 @@
+/* クリーン・ライトテーマ（オールジャンル標準） */
+:root {
+  --bg-canvas: #f8fafc;
+  --bg-canvas-accent: radial-gradient(circle at 18% 15%, #e0f2fe 0%, transparent 45%),
+                      radial-gradient(circle at 85% 20%, #fef3c7 0%, transparent 40%),
+                      linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  --bg-card: #ffffff;
+  --bg-card-muted: #f1f5f9;
+  --bg-stage: rgba(255, 255, 255, 0.88);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --accent-primary: #2563eb;
+  --accent-secondary: #0ea5e9;
+  --accent-ok: #16a34a;
+  --accent-warn: #d97706;
+  --accent-danger: #dc2626;
+  --border-subtle: #cbd5e1;
+  --border-strong: #94a3b8;
+  --header-bg: rgba(255, 255, 255, 0.94);
+  --caption-bg: rgba(255, 255, 255, 0.97);
+  --shadow-card: 0 12px 32px rgba(15, 23, 42, 0.08);
+  --shadow-focus: 0 0 0 4px rgba(37, 99, 235, 0.2);
+  --grid-line: rgba(148, 163, 184, 0.14);
+}

@@ -1,0 +1,354 @@
+<style>
+  .c2-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .c2-stage-body {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .c2-phase {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .c2-switch-card {
+    flex: 1;
+    border-radius: 20px;
+    background: #0f172a;
+    border: 2px solid #334155;
+    padding: 18px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .c2-state-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .c2-state-pill {
+    padding: 10px 24px;
+    border-radius: 14px;
+    font-size: 23px;
+    font-weight: 700;
+    border: 2px solid #334155;
+    background: #1e293b;
+    color: #f8fafc;
+  }
+
+  .c2-state-on {
+    border-color: #22c55e;
+    background: #14532d;
+    color: #bbf7d0;
+  }
+
+  .c2-state-off {
+    border-color: #ef4444;
+    background: #7f1d1d;
+    color: #fecaca;
+  }
+
+  .c2-shrink-compare {
+    display: grid;
+    grid-template-columns: 1fr 90px 1fr;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .c2-box-panel {
+    border-radius: 18px;
+    background: #0f172a;
+    border: 2px solid #334155;
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .c2-box-panel-after {
+    border-color: #38bdf8;
+    background: #082f49;
+  }
+
+  .c2-die-square {
+    width: 140px;
+    height: 140px;
+    border-radius: 14px;
+    background: #1e293b;
+    border: 2px solid #64748b;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+
+  .c2-die-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    border-color: #38bdf8;
+  }
+
+  .c2-tr-block {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: #334155;
+    border: 2px solid #94a3b8;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f8fafc;
+  }
+
+  .c2-tr-block-small {
+    background: #0284c7;
+    border-color: #7dd3fc;
+    font-size: 16px;
+  }
+
+  .c2-merits-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .c2-merit-card {
+    border-radius: 18px;
+    background: #1e293b;
+    border: 2px solid #38bdf8;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .c2-merit-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #38bdf8;
+  }
+
+  .c2-merit-desc {
+    font-size: 19px;
+    font-weight: 700;
+    color: #e2e8f0;
+    line-height: 1.4;
+  }
+
+  .c2-laws-bar {
+    border-radius: 16px;
+    background: #0f172a;
+    border: 2px solid #0284c7;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .c2-law-item {
+    font-size: 21px;
+    font-weight: 700;
+    color: #f8fafc;
+  }
+
+  .c2-law-tag {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 8px;
+    background: #0284c7;
+    color: #ffffff;
+    margin-right: 10px;
+  }
+</style>
+
+<div class="c2-wrap">
+  <div class="dg-title-bar">
+    <h1 id="c2-heading" class="dg-heading">微細化の基本：トランジスタの仕組みと3大メリット</h1>
+    <span id="c2-sub-badge" class="dg-sub">電気のスイッチを小さくすると？</span>
+  </div>
+
+  <div class="c2-stage-body">
+    <!-- Phase A: Transistor Switch SVG -->
+    <div id="c2-phase-a" class="c2-phase">
+      <div class="c2-switch-card">
+        <div class="c2-state-row">
+          <div style="font-size: 22px; font-weight: 700; color: #cbd5e1;">
+            トランジスタの構造（電気を通す・止める超小型スイッチ）
+          </div>
+          <div style="display: flex; gap: 14px;">
+            <div id="c2-pill-on" class="c2-state-pill c2-state-on">⚡ ON（状態「1」）</div>
+            <div id="c2-pill-off" class="c2-state-pill c2-state-off">🛑 OFF（状態「0」）</div>
+          </div>
+        </div>
+
+        <svg viewBox="0 0 1100 360" style="width: 100%; height: 350px; overflow: visible;">
+          <!-- Substrate -->
+          <rect x="60" y="185" width="980" height="125" rx="18" fill="#1e293b" stroke="#475569" stroke-width="3" />
+          <text x="550" y="285" text-anchor="middle" fill="#94a3b8" font-size="22" font-weight="700">シリコン基板</text>
+
+          <!-- Channel path -->
+          <rect id="c2-channel" x="325" y="176" width="450" height="58" rx="10" fill="#0f172a" stroke="#334155" stroke-width="2" />
+          <rect id="c2-channel-glow" x="325" y="176" width="450" height="58" rx="10" fill="#0284c7" opacity="0" />
+
+          <!-- Moving electrons (drawn behind source/drain caps) -->
+          <g id="c2-electrons">
+            <circle cx="290" cy="205" r="14" fill="#fde047" stroke="#ffffff" stroke-width="2" />
+            <circle cx="370" cy="205" r="14" fill="#fde047" stroke="#ffffff" stroke-width="2" />
+            <circle cx="450" cy="205" r="14" fill="#fde047" stroke="#ffffff" stroke-width="2" />
+            <circle cx="530" cy="205" r="14" fill="#fde047" stroke="#ffffff" stroke-width="2" />
+          </g>
+
+          <!-- Source & Drain -->
+          <rect id="c2-source" x="90" y="160" width="230" height="90" rx="14" fill="#0369a1" stroke="#38bdf8" stroke-width="3" />
+          <text x="205" y="212" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">ソース（入口）</text>
+
+          <rect id="c2-drain" x="780" y="160" width="230" height="90" rx="14" fill="#0369a1" stroke="#38bdf8" stroke-width="3" />
+          <text x="895" y="212" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">ドレイン（出口）</text>
+
+          <!-- Gate insulator & electrode -->
+          <rect x="370" y="128" width="360" height="32" rx="6" fill="#475569" />
+          <rect id="c2-gate" x="390" y="54" width="320" height="72" rx="14" fill="#b45309" stroke="#fbbf24" stroke-width="3" />
+          <text x="550" y="98" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">ゲート（制御スイッチ）</text>
+
+          <!-- Gate width callout -->
+          <g id="c2-width-callout">
+            <line x1="390" y1="24" x2="710" y2="24" stroke="#38bdf8" stroke-width="4" />
+            <line x1="390" y1="12" x2="390" y2="36" stroke="#38bdf8" stroke-width="4" />
+            <line x1="710" y1="12" x2="710" y2="36" stroke="#38bdf8" stroke-width="4" />
+            <text x="550" y="18" text-anchor="middle" fill="#38bdf8" font-size="22" font-weight="700">ゲート幅を μm → nm へ微細化！</text>
+          </g>
+
+          <!-- Gate barrier (shown on OFF) -->
+          <rect id="c2-barrier" x="526" y="166" width="48" height="78" rx="8" fill="#dc2626" stroke="#fca5a5" stroke-width="3" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Phase B: Half-size shrink -> 3 big merits -->
+    <div id="c2-phase-b" class="c2-phase">
+      <div class="c2-shrink-compare">
+        <div id="c2-before-box" class="c2-box-panel">
+          <div class="c2-die-square">
+            <div class="c2-tr-block">旧スイッチ<br>× 1個</div>
+          </div>
+          <div>
+            <div style="font-size: 22px; font-weight: 700; color: #cbd5e1;">微細化前</div>
+            <div style="font-size: 18px; color: #94a3b8; font-weight: 700; margin-top: 6px;">距離が長い・面積を食う</div>
+          </div>
+        </div>
+
+        <div style="text-align: center; font-size: 24px; font-weight: 900; color: #38bdf8;">
+          縦横 1/2 に<br>縮小 ➔
+        </div>
+
+        <div id="c2-after-box" class="c2-box-panel c2-box-panel-after">
+          <div class="c2-die-square c2-die-grid-4">
+            <div class="c2-tr-block c2-tr-block-small">1</div>
+            <div class="c2-tr-block c2-tr-block-small">2</div>
+            <div class="c2-tr-block c2-tr-block-small">3</div>
+            <div class="c2-tr-block c2-tr-block-small">4</div>
+          </div>
+          <div>
+            <div style="font-size: 22px; font-weight: 700; color: #38bdf8;">微細化後（同面積に4倍！）</div>
+            <div style="font-size: 18px; color: #e2e8f0; font-weight: 700; margin-top: 6px;">距離も半分・省エネで動く</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c2-merits-row">
+        <div id="c2-merit-1" class="c2-merit-card">
+          <div class="c2-merit-title">① 高密度化（4倍積める）</div>
+          <div class="c2-merit-desc">縦横が半分になると面積は1/4。同じチップに4倍の機能を搭載！</div>
+        </div>
+        <div id="c2-merit-2" class="c2-merit-card">
+          <div class="c2-merit-title">② 高速化（移動が短い）</div>
+          <div class="c2-merit-desc">電子が走る距離が短くなり、スイッチの切り替えが一気に高速化！</div>
+        </div>
+        <div id="c2-merit-3" class="c2-merit-card">
+          <div class="c2-merit-title">③ 省電力化（小電力で動く）</div>
+          <div class="c2-merit-desc">小さいゲートを動かすだけなので、1回あたりの消費電力が大幅減！</div>
+        </div>
+      </div>
+
+      <div id="c2-laws-bar" class="c2-laws-bar">
+        <div class="c2-law-item"><span class="c2-law-tag">ムーアの法則</span>約2年で集積度が2倍</div>
+        <div class="c2-law-item"><span class="c2-law-tag">デナード則</span>小さくなっても消費電力密度は一定</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders["ch02_scaling_basics"] = function (tl, cues) {
+  gsap.set('#c2-phase-a', { opacity: 1 });
+  gsap.set('#c2-phase-b', { opacity: 0 });
+  gsap.set(['#c2-source', '#c2-drain', '#c2-gate'], { opacity: 0 });
+  gsap.set(['#c2-pill-on', '#c2-pill-off', '#c2-width-callout', '#c2-barrier'], { opacity: 0 });
+  gsap.set('#c2-electrons', { opacity: 0, x: 0 });
+  gsap.set(['#c2-before-box', '#c2-after-box'], { opacity: 0, y: 16 });
+  gsap.set(['#c2-merit-1', '#c2-merit-2', '#c2-merit-3', '#c2-laws-bar'], { opacity: 0, y: 20 });
+
+  // Phase A: Transistor Switch
+  const tIntro = cues.c2_switch_intro ?? 0.45;
+  tl.to('#c2-phase-a', { opacity: 1, duration: 0.3 }, tIntro);
+
+  const tParts = cues.c2_parts ?? 7.5;
+  tl.to('#c2-source', { opacity: 1, duration: 0.35 }, tParts);
+  tl.to('#c2-drain', { opacity: 1, duration: 0.35 }, tParts + 0.6);
+  tl.to('#c2-gate', { opacity: 1, duration: 0.35 }, tParts + 1.4);
+
+  const tOn = cues.c2_gate_on ?? 15.0;
+  tl.to('#c2-pill-on', { opacity: 1, scale: 1.04, duration: 0.3 }, tOn);
+  tl.to('#c2-channel-glow', { opacity: 0.45, duration: 0.35 }, tOn);
+  tl.to('#c2-electrons', { opacity: 1, duration: 0.25 }, tOn + 0.2);
+  tl.to('#c2-electrons', { x: 235, duration: 2.8, ease: 'none' }, tOn + 0.3);
+
+  const tOff = cues.c2_gate_off ?? 22.0;
+  tl.to('#c2-pill-on', { opacity: 0.4, scale: 1, duration: 0.25 }, tOff);
+  tl.to('#c2-pill-off', { opacity: 1, scale: 1.04, duration: 0.3 }, tOff);
+  tl.to('#c2-channel-glow', { opacity: 0, duration: 0.3 }, tOff);
+  tl.to('#c2-barrier', { opacity: 1, duration: 0.3, ease: 'back.out(1.6)' }, tOff + 0.2);
+  tl.to('#c2-electrons', { opacity: 0.25, duration: 0.3 }, tOff + 0.2);
+
+  const tNode = cues.c2_node_nm ?? 36.0;
+  tl.to('#c2-width-callout', { opacity: 1, duration: 0.45 }, tNode);
+
+  // Phase B: Shrink & 3 Big Merits
+  const tP2 = cues.c2_phase2_shrink ?? 52.0;
+  tl.to('#c2-phase-a', { opacity: 0, duration: 0.35 }, tP2);
+  tl.to('#c2-phase-b', { opacity: 1, duration: 0.35 }, tP2 + 0.25);
+  tl.to('#c2-before-box', { opacity: 1, y: 0, duration: 0.4 }, tP2 + 0.35);
+  tl.to('#c2-after-box', { opacity: 1, y: 0, duration: 0.45, ease: 'back.out(1.4)' }, tP2 + 0.7);
+
+  const tM1 = cues.c2_benefit_density ?? 60.0;
+  tl.to('#c2-merit-1', { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, tM1);
+
+  const tM2 = cues.c2_benefit_speed ?? 75.0;
+  tl.to('#c2-merit-2', { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, tM2);
+
+  const tM3 = cues.c2_benefit_power ?? 83.0;
+  tl.to('#c2-merit-3', { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, tM3);
+
+  const tLaw = cues.c2_moore_summary ?? 97.0;
+  tl.to('#c2-laws-bar', { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, tLaw);
+};
+</script>

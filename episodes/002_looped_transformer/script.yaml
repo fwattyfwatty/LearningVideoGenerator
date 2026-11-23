@@ -1,0 +1,494 @@
+meta:
+  title: "Looped Transformerとは？数式と図解でわかる『頭の中で何度も考える』AI"
+  series: "AIアーキテクチャ入門"
+  episode: "解説動画"
+  theme: "tech-dark"
+  accent_color: "#8b5cf6"
+  fps: 30
+  width: 1920
+  height: 1080
+
+chapters:
+  - id: "ch01_intro"
+    title: "1. 導入：『同じ層を回す』第3の進化"
+    layout: "title"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "こんにちは、四国めたんです。今日はAI研究で注目の『Looped Transformer』を数式と図解で解説します。"
+        cue: "c1_title"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "ずんだもんなのだ！AIを賢くするには、結局パラメータを増やして巨大化するしかないんじゃないのだ？"
+        cue: "c1_giant_llm"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "これまでの主流は確かに、層を何十段も積む『モデル巨大化』と、思考を長文で書き出す『CoT』の2つでした。"
+        cue: "c1_two_pillars"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "ところが今、モデルを大きくせずに『同じ層を頭の中で何周も回す』という第3の軸、Recurrent Depthが急浮上しています。"
+        cue: "c1_loop_concept"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "同じ層をぐるぐる回すだけで賢くなるのだ！？それなら小さい脳みそでも深い計算ができそうなのだ！"
+        cue: "c1_zunda_wow"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "まさにその通りです。パラメータ数を抑えたまま、推論時の計算量、いわゆるTest-Time Computeを自在に伸ばせます。"
+        cue: "c1_ttc_pill"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "今回は①漸化式と計算機としての理論、②CoTと潜在推論の違い、③力学系としての限界と最新LLM、の3本立てで見ていきます。"
+        cue: "c1_goals"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "数式も図解でやさしく噛み砕いてほしいのだ！さっそくスタートなのだ！"
+        cue: "c1_go"
+        pause_after: 0.5
+
+  - id: "ch02_math_architecture"
+    title: "2. 数式と構造：重み共有と計算機理論"
+    layout: "default"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "まずは通常のTransformerとLooped Transformerの違いを、数式と構造で比べてみましょう。"
+        cue: "c2_compare_intro"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "通常のTransformerは、1層目からN層目まで毎回ちがう重みを使い、1回通り抜けたら答えを出します。"
+        voice_text: "通常のTransformerは、1そうめからエヌそうめまで毎回ちがう重みを使い、1回通り抜けたら答えを出します。"
+        cue: "c2_std_eq"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "一方、Looped Transformerは、入口のPrelude、同じ重みθをR回まわすRecurrent Core、出口のCodaで構成されます。"
+        voice_text: "一方、Looped Transformerは、入口のPrelude、同じ重みシータをアール回まわすRecurrent Core、出口のCodaで構成されます。"
+        cue: "c2_loop_arch"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "ちょっと待つのだ！同じ層を何回も通したら、毎回まったく同じ結果になって意味がないんじゃないのだ？"
+        cue: "c2_zunda_same"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "良い疑問です。1周目で更新された隠れ状態h(r)を次の入力に戻すため、周回ごとに思考の途中経過が洗練されていきます。"
+        voice_text: "良い疑問です。1周目で更新された隠れ状態エイチアールを次の入力に戻すため、周回ごとに思考の途中経過が洗練されていきます。"
+        cue: "c2_recurrence_eq"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "さらに重要なのがInput Injectionです。毎周、元の入力表現eを足し込むことで、何周しても問題文を見失わずに済みます。"
+        voice_text: "さらに重要なのがInput Injectionです。毎周、元の入力表現イーを足し込むことで、何周しても問題文を見失わずに済みます。"
+        cue: "c2_input_inj"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "なるほど！計算用紙を書き換えながら、毎回ちゃんと問題文も見直してるイメージなのだ！"
+        cue: "c2_zunda_memo"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "この構造の実効深さは、入口＋ループ回数R×コア層数＋出口で表されます。物理的に軽いまま、見かけの深さを何倍にもできるんです。"
+        voice_text: "この構造の実効深さは、入口たす、ループ回数アールかけるコア層数たす出口、で表されます。物理的に軽いまま、見かけの深さを何倍にもできるんです。"
+        cue: "c2_eff_depth"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "ここからは理論面の魅力です。なぜ『重み共有ループ』が単なる省メモリ以上の意味を持つのでしょうか。"
+        cue: "c2_phase2_theory"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "実は同じ回路を繰り返す構造は、CPUが『命令を読む→実行する』サイクルを回す仕組みと数学的によく似ています。"
+        cue: "c2_cpu_cycle"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "2023年の研究では、浅い固定重みのLooped Transformerが1命令コンピュータSUBLEQを再現し、汎用計算できると証明されました。"
+        cue: "c2_subleq"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "Transformerそのものがプログラムを動かす小さなCPUになっちゃうのだ！？すごすぎるのだ！"
+        cue: "c2_zunda_cpu"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "もう一つの理論的強みがLength Generalization、長さ汎化です。通常の多層モデルは固定段数で答えを暗記しがちです。"
+        cue: "c2_length_gen"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "でもLoopedは『1ステップ分の更新規則fθ』を学ぶため、学習時より長い多桁計算や多段推論も、ループ数Rを増やして対応しやすいんです。"
+        voice_text: "でもループドは、1ステップ分の更新規則エフシータを学ぶため、学習時より長い多桁計算や多段推論も、ループ数アールを増やして対応しやすいんです。"
+        cue: "c2_step_rule"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "解き方の手順そのものを覚えるから、問題が長くなってもループを増やせば解けるわけなのだ！"
+        cue: "c2_bridge"
+        pause_after: 0.5
+
+  - id: "ch03_latent_reasoning"
+    title: "3. 潜在推論：CoTとの違いと動的深さ"
+    layout: "wide"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "次は、最近の推論AIの主役であるCoT、Chain-of-ThoughtとLooped Transformerの違いを見ていきましょう。"
+        cue: "c3_cot_intro"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "CoTは『まずこれを計算して…』と文章を何百トークンも出力して考えます。1ステップごとに単語IDへ圧縮して吐き出す仕組みです。"
+        cue: "c3_cot_bottleneck"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "声に出してブツブツ考えている感じなのだ！でも文章が長くなると待ち時間もメモリも大変そうなのだ。"
+        cue: "c3_zunda_cot"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "その通りです。CoTは生成トークン数に比例して遅延とKVキャッシュが増えますし、言葉という狭いボトルネックを通す制約もあります。"
+        cue: "c3_kv_cost"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "一方、Looped TransformerのLatent Reasoning、潜在推論は、数千次元の連続ベクトルh(r)のまま次のループへ渡します。"
+        voice_text: "一方、Looped TransformerのLatent Reasoning、潜在推論は、数千次元の連続ベクトルエイチアールのまま次のループへ渡します。"
+        cue: "c3_latent_vec"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "つまり文字に落とさず、高次元空間で複数の仮説を並列に練り上げられるため、少ない出力トークンで深い推論が可能になります。"
+        cue: "c3_bandwidth"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "CoTが『ノートに書き出す思考』なら、Loopedは『頭の中の超高速な暗算』なのだ！"
+        cue: "c3_zunda_mental"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "さらに実用面で重要なのが、Adaptive Depth、適応的な深さ制御です。"
+        cue: "c3_phase2_adaptive"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "文章には『です』『の』のような簡単な単語もあれば、数式の結論のような超難関トークンも混ざっていますよね。"
+        cue: "c3_token_diff"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "そこで各ループで停止確率p(r)を予測し、累積確率がしきい値1-εを超えたトークンから早期脱出する仕組みが使われます。"
+        voice_text: "そこで各ループで停止確率ピーアールを予測し、累積確率がしきい値1ひくイプシロンを超えたトークンから早期脱出する仕組みが使われます。"
+        cue: "c3_halting_eq"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "簡単な単語は2周でサッと出して、難しい所だけ16周じっくり考えるのだ！すごく賢い省エネなのだ！"
+        cue: "c3_zunda_mor"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "最新ではMixture-of-Recursionsのように、トークンごとにルーターでループ回数を動的配分し、計算量と精度を両立する研究が進んでいます。"
+        cue: "c3_mor_summary"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "ここまで聞くと夢のようですが、実は数学的にも工学的にも手強い壁があるんです。"
+        cue: "c3_wrap"
+        pause_after: 0.5
+
+  - id: "ch04_tsumugi_dynamics"
+    title: "4. つむぎの質問：RNNとの違いと3つの壁"
+    layout: "default"
+    lines:
+      - speaker: tsumugi
+        style: normal
+        emotion: sharp
+        mode: cutin
+        caption: "ちょっと待って！同じ重みθで状態を更新し続けるって、Transformerより前のRNNと数式がそっくりじゃない？"
+        voice_text: "ちょっと待って！同じ重みシータで状態を更新し続けるって、Transformerより前のRNNと数式がそっくりじゃない？"
+        cue: "c4_tsumugi_rnn"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "とても本質的な質問ですね！式だけ見ると似ていますが、決定的な違いは『どの軸に沿ってループするか』なんです。"
+        cue: "c4_axis_diff"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "RNNは『時間軸』、つまり1文字目から2文字目へと横方向に直列ループするため、並列学習しにくく昔の情報が薄れやすい弱点がありました。"
+        cue: "c4_rnn_time"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "一方Looped Transformerは『深さ軸』のループです。全トークンを並列に持ちつつ、毎ループのSelf-Attentionで全文を直接見渡せます。"
+        cue: "c4_loop_depth"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "なるほど！横に1文字ずつ進むのがRNNで、文章全体を見渡したまま縦に思考を深めるのがLoopedなのだ！"
+        cue: "c4_zunda_axis"
+        pause_after: 0.35
+      - speaker: tsumugi
+        style: normal
+        emotion: sharp
+        mode: cutin
+        caption: "仕組みの違いはわかったよ。じゃあ推論のとき、ループを100周とか無限に増やせばどんどん賢くなるの？"
+        cue: "c4_tsumugi_limit"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "実はそう単純ではありません。ここからが力学系として見たときの『3つの壁』です。"
+        cue: "c4_phase2_walls"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "1つ目はOverthinkingと収束の壁です。ループは漸化式の力学系なので、ヤコビアンJのスペクトル半径が収束性を決めます。"
+        voice_text: "1つ目はOverthinkingと収束の壁です。ループはぜんかしきの力学系なので、ヤコビアンジェイのスペクトル半径が収束性を決めます。"
+        cue: "c4_jacobian"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "値が1未満なら安定な固定点h*へ収束しますが、1を超えると数値が発散したり表現が崩れたりして、回しすぎると逆に精度が落ちます。"
+        voice_text: "値が1未満なら安定な固定点エイチスターへ収束しますが、1を超えると数値が発散したり表現が崩れたりして、回しすぎると逆に精度が落ちます。"
+        cue: "c4_overthinking"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: worry
+        caption: "人間もテストで考えすぎると逆に間違えちゃうのだ…数学的にも『考えすぎ』が起きるのだね！"
+        cue: "c4_zunda_over"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "2つ目は学習コストの壁です。R周すべてに誤差逆伝播を流すFull BPTTは、メモリ消費がループ数Rに比例して爆発します。"
+        voice_text: "2つ目は学習コストの壁です。アール周すべてに誤差逆伝播を流すフルBPTTは、メモリ消費がループ数アールに比例して爆発します。"
+        cue: "c4_tbptt"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そのため実用研究では、ループ回数をランダムに変えつつ最後の数周だけ勾配を流すTruncated BPTTでメモリを一定に抑えます。"
+        cue: "c4_tbptt_fix"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "そして3つ目がMonitorability、監視可能性の壁です。CoTは途中の思考が言葉で見えますが、潜在ループは中身が直接読めません。"
+        cue: "c4_monitor"
+        pause_after: 0.35
+      - speaker: tsumugi
+        style: normal
+        emotion: worry
+        mode: cutin
+        caption: "たしかに、頭の中で何周も考えた結果だけポンと出されると、途中で変な推論をしていないかチェックしにくいね…"
+        cue: "c4_tsumugi_safety"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "その課題を乗り越えつつ実用LLMへ挑む最新動向を、次の章で見ていきましょう。"
+        cue: "c4_to_ch5"
+        pause_after: 0.5
+
+  - id: "ch05_frontier_future"
+    title: "5. 最前線と未来：実規模LLMと3軸スケーリング"
+    layout: "wide"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "Looped Transformerは、ここ数年で理論実験から『実規模の言語モデル』へと一気に進化しています。"
+        cue: "c5_timeline_intro"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "原点は2018年のUniversal Transformerです。重み共有と適応計算時間ACTという基本アイデアがここで示されました。"
+        cue: "c5_ut_2018"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "続いて2023〜2024年に、汎用計算機SUBLEQの証明や長さ汎化の理論が固まり、2025年以降に実用LLMが登場しました。"
+        cue: "c5_theory_2024"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "代表例がHuginnです。Prelude・4層コア・CodaにInput Injectionを組み合わせ、推論時のループ回数を自在に伸縮できます。"
+        cue: "c5_huginn"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "またOuroのようにスタック全体をループして自律的に深さを学ぶ設計や、トークン別ルーティングのMoRも注目されています。"
+        cue: "c5_ouro_mor"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "論文の理論だけじゃなくて、本当に動く大きな言語モデルにまで広がっているのだ！"
+        cue: "c5_zunda_real"
+        pause_after: 0.35
+      - speaker: tsumugi
+        style: normal
+        emotion: normal
+        mode: cutin
+        caption: "でもさ、結局これからのAIはCoTをやめて全部Loopedに置き換わっていくの？"
+        cue: "c5_phase2_tsumugi"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "いいえ、置き換わるのではなく『ハイブリッド化』が進むと見られています。ここで『3軸スケーリング』という見方が便利です。"
+        cue: "c5_3axis_intro"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "第1の軸はパラメータ規模Nによる『知識の広さ』。第2の軸はCoTトークン長による『言語での明示的整理・検算』です。"
+        voice_text: "第1の軸はパラメータ規模エヌによる、知識の広さ。第2の軸はCoTトークン長による、言語での明示的整理と検算です。"
+        cue: "c5_axis_12"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そこに第3の軸として、ループ深さRによる『潜在空間での高帯域な直感と反復推論』が加わります。"
+        voice_text: "そこに第3の軸として、ループ深さアールによる、潜在空間での高帯域な直感と反復推論が加わります。"
+        cue: "c5_axis_3"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "知識の広さ×ノートに書く思考×頭の中の暗算、3つを組み合わせれば最強なのだ！"
+        cue: "c5_zunda_3axis"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "しかも重みサイズが小さく済むため、VRAMの限られたスマホやローカルPC上で深く推論できるエッジAIへの波及も期待されています。"
+        cue: "c5_edge_ai"
+        pause_after: 0.35
+      - speaker: tsumugi
+        style: normal
+        emotion: smile
+        mode: cutin
+        caption: "クラウドの超巨大モデルだけじゃなく、手元の端末でもじっくり考えられるAIが現実味を帯びてくるんだね！"
+        cue: "c5_tsumugi_wow"
+        pause_after: 0.5
+
+  - id: "ch06_summary"
+    title: "6. まとめ：思考を『深さ』でスケールする時代"
+    layout: "default"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "それでは今日のポイントを3つに整理して振り返りましょう。"
+        cue: "c6_intro"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1つ目。Looped Transformerは漸化式h(r+1)=fθ(h(r),e)で重みを共有し、少ないパラメータで実効深さと計算機能力を引き出します。"
+        voice_text: "1つ目。Looped Transformerはぜんかしきで重みを共有し、少ないパラメータで実効深さと計算機能力を引き出します。"
+        cue: "c6_point_1"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "2つ目。高次元ベクトルでの潜在推論と、停止確率p(r)による動的計算で、CoTのトークン長ボトルネックを補完します。"
+        voice_text: "2つ目。高次元ベクトルでの潜在推論と、停止確率ピーアールによる動的計算で、CoTのトークン長ボトルネックを補完します。"
+        cue: "c6_point_2"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "3つ目。RNNとはループ軸が異なり、ヤコビアン安定性やTBPTT、監視可能性の課題を越えて3軸スケーリングへ進んでいます。"
+        cue: "c6_point_3"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "数式も図解とセットだとスッキリ理解できたのだ！同じ層を回すだけで世界が広がるのが面白いのだ！"
+        cue: "c6_zunda_sum"
+        pause_after: 0.35
+      - speaker: tsumugi
+        style: normal
+        emotion: smile
+        mode: cutin
+        caption: "この流れだと、次は『DEQ（深層平衡モデル）』とか『MoEとの違い』も深掘りしてみたくなるね！"
+        cue: "c6_tsumugi_next"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "いいですね。また次回も数式と図解でわかりやすく紐解いていきましょう。ご視聴ありがとうございました！"
+        cue: "c6_outro"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "また次の動画で会うのだー！バイバイなのだ！"
+        cue: "c6_bye"
+        pause_after: 0.6

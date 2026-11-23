@@ -1,0 +1,78 @@
+meta:
+  title: "HTTPとHTTPSの違いを1分で図解"
+  theme: "clean-light"
+  fps: 30
+  width: 1920
+  height: 1080
+
+chapters:
+  - id: "ch01_encryption"
+    title: "1. 通信の暗号化"
+    layout: "default"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "今日はWebサイトの「HTTP」と「HTTPS」の違いを、図解でサクッと解説します。"
+        cue: "intro_nodes"
+
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "URLの最初にSがつくだけなのだ？そんなに違うのだ？"
+        voice_text: "ユーアールエルの最初にエスがつくだけなのだ？そんなに違うのだ？"
+        cue: "show_http_packet"
+
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "従来のHTTPは手紙をそのまま送るようなもの。途中で盗み見られると、パスワードまで丸見えになってしまいます。"
+        cue: "show_eavesdrop"
+
+      - speaker: zundamon
+        style: normal
+        emotion: worry
+        caption: "それは怖すぎるのだ！そこでSがつくとどうなるのだ？"
+        voice_text: "それは怖すぎるのだ！そこでエスがつくとどうなるのだ？"
+        cue: "show_https_lock"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "HTTPSでは通信に鍵をかけて暗号化します。途中で覗かれても、ただの暗号文にしか見えません。"
+        cue: "show_encrypted_flow"
+
+  - id: "ch02_tsumugi_cert"
+    title: "2. つむぎの鋭い質問：偽サイト対策"
+    layout: "default"
+    lines:
+      - speaker: tsumugi
+        style: normal
+        emotion: sharp
+        mode: cutin
+        caption: "ちょっと待って！暗号化してるだけなら、最初から偽のサーバーと暗号通信しちゃったら意味なくない？"
+        cue: "tsumugi_question"
+
+      - speaker: metan
+        style: normal
+        emotion: surprise
+        caption: "鋭い質問ですね、つむぎさん！実は暗号化だけでは「なりすまし」は防げません。"
+        cue: "show_fake_server"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そこで登場するのが「サーバー証明書」です。信頼できる第三者機関である認証局が、本物のサイトだとお墨付きを与えます。"
+        cue: "show_ca_cert"
+
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "なるほど！HTTPSは「通信の暗号化」と「サイトの本人確認」の2本立てなのだ！"
+        cue: "show_summary_cards"
+
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "その通りです。鍵マークの裏側には、この2つの仕組みが動いているんです。"
+        cue: "show_outro"

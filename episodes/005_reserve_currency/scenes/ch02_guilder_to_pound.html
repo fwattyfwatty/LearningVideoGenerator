@@ -1,0 +1,177 @@
+<style>
+.c2-scene {
+  position: relative;
+  height: 694px;
+  max-height: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+  color: var(--text-primary);
+}
+.c2-scene .c2-phase { position: absolute; inset: 0; gap: 18px; }
+#c2-phase-b, #c2-lag-card, #c2-lag-reason, #c2-bridge { opacity: 0; }
+.c2-title { min-height: 58px; flex-shrink: 0; }
+.c2-title .dg-heading { font-weight: 800; }
+.c2-scene .c2-card { box-sizing: border-box; height: auto; min-height: 0; gap: 12px; }
+#c2-tl-card { flex: 1.15; }
+#c2-lag-card { flex: 1; }
+.c2-label { gap: 10px; }
+.c2-label.dg-card-head { justify-content: flex-start; }
+.c2-icon { width: 28px; height: 28px; flex: 0 0 28px; color: var(--accent-primary); }
+.c2-sky { color: var(--accent-secondary); }
+.c2-green { color: var(--accent-ok); }
+.c2-widget > svg, .c2-inertia > svg { width: 100%; height: 100%; }
+.c2-inertia text { font-weight: 800; text-anchor: middle; }
+.c2-scene .c2-callout { margin: 0; padding: 10px 16px; font-size: 19px; }
+.c2-scene .c2-conditions { flex: 1; min-height: 0; grid-template-columns: 1fr .94fr 1fr; }
+.c2-scene .c2-pair { min-width: 0; min-height: 0; gap: 16px; }
+.c2-pair .c2-card { flex: 1; border-top: 3px solid var(--accent-secondary); }
+.c2-pair-right .c2-card { border-top-color: var(--accent-ok); }
+.c2-detail { margin: 0; color: var(--text-secondary); font-size: 19px; font-weight: 700; line-height: 1.5; }
+.c2-hub-visual { align-self: stretch; }
+.c2-hub-visual svg { width: 100%; height: 100%; }
+#c2-net-hub { text-align: center; }
+#c2-net-hub .dg-card-head { justify-content: center; }
+#c2-net-hub .dg-callout { border-left: 0; }
+</style>
+<div class="c2-scene">
+  <div id="c2-phase-a" class="c2-phase dg-col">
+    <header class="c2-title dg-title-bar">
+      <h2 class="dg-heading">400年の通貨覇権リレーと「交代タイムラグ」の法則</h2>
+      <span class="dg-pill-accent">Phase 1　歴史の法則</span>
+    </header>
+    <section id="c2-tl-card" class="c2-card dg-card-glow dg-col">
+      <header class="dg-card-head">
+        <div class="c2-label dg-row">
+          <svg class="c2-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-globe"/></svg>
+          <h3 class="dg-card-title">国際通貨の中心地の変遷</h3>
+        </div>
+      </header>
+      <div id="c2-tl-box" class="c2-widget dg-svg-stage" role="img" aria-label="オランダ・ギルダー、英ポンド、米ドル、多極化の胎動の年表"></div>
+    </section>
+    <section id="c2-lag-card" class="c2-card dg-card dg-col">
+      <header class="dg-card-head">
+        <div class="c2-label dg-row">
+          <svg class="c2-icon c2-sky" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-clock"/></svg>
+          <h3 class="dg-card-title">経済力首位から基軸通貨の交代まで</h3>
+        </div>
+        <span id="c2-lag-badge" class="dg-pill-accent">約70年</span>
+      </header>
+      <div class="c2-inertia dg-svg-stage">
+        <svg viewBox="0 0 920 110" role="img" aria-label="1870年代に米国のGDPが英国を抜き、約70年後の1944年に米ドルが中心となった">
+          <defs>
+            <marker id="c2-span-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+              <path d="M2 2.5 L10 6 L2 9.5" fill="none" stroke="var(--accent-primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </marker>
+          </defs>
+          <rect x="7" y="8" width="258" height="94" rx="15" fill="var(--bg-card)" stroke="var(--accent-secondary)"/>
+          <rect x="655" y="8" width="258" height="94" rx="15" fill="var(--bg-card)" stroke="var(--accent-primary)"/>
+          <text x="136" y="40" font-size="25" fill="var(--accent-secondary)">1870年代</text>
+          <text x="136" y="74" font-size="19" fill="var(--text-primary)">米国GDPが英国を逆転</text>
+          <text x="784" y="40" font-size="25" fill="var(--accent-primary)">1944年</text>
+          <text x="784" y="74" font-size="19" fill="var(--text-primary)">ポンドからドルへ交代</text>
+          <text x="460" y="45" font-size="23" fill="var(--text-primary)">約70年のタイムラグ</text>
+          <path id="c2-span-draw" d="M280 67 H636" fill="none" stroke="var(--accent-primary)" stroke-width="3"/>
+          <path id="c2-span-flow" d="M280 67 H636" fill="none" stroke="var(--accent-primary)" stroke-width="3" stroke-dasharray="10 8" marker-end="url(#c2-span-arrow)"/>
+        </svg>
+      </div>
+      <p id="c2-lag-reason" class="c2-callout dg-callout">決済と金融の既存網がポンドを支えた。2度の世界大戦が交代の引き金になった。</p>
+    </section>
+  </div>
+
+  <div id="c2-phase-b" class="c2-phase dg-col">
+    <header class="c2-title dg-title-bar">
+      <h2 class="dg-heading">基軸通貨の交代を遅らせる4つの条件とネットワーク効果</h2>
+      <span class="dg-pill-ok">Phase 2　構造</span>
+    </header>
+    <div class="c2-conditions dg-grid-3">
+      <div id="c2-economy" class="c2-focus c2-pair dg-col">
+        <section id="c2-cond-1" class="c2-card dg-card dg-col">
+          <header class="c2-label dg-card-head dg-row">
+            <svg class="c2-icon c2-sky" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-globe"/></svg>
+            <h3 class="dg-card-title">① 経済規模と貿易網</h3>
+          </header>
+          <p class="c2-detail">世界の取引相手がその通貨で代金を受け取り、次の支払いにも使える。</p>
+          <div class="dg-chip-row"><span class="dg-chip">貿易決済</span><span class="dg-chip">取引相手</span></div>
+        </section>
+        <section id="c2-cond-2" class="c2-card dg-card dg-col">
+          <header class="c2-label dg-card-head dg-row">
+            <svg class="c2-icon c2-sky" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-landmark"/></svg>
+            <h3 class="dg-card-title">② 深く開かれた金融・国債市場</h3>
+          </header>
+          <p class="c2-detail">海外の投資家も参加でき、大口資金をすぐ運用・換金できる。</p>
+          <div class="dg-chip-row"><span class="dg-chip">市場の厚み</span><span class="dg-chip">流動性</span></div>
+        </section>
+      </div>
+      <section id="c2-net-hub" class="c2-focus c2-card dg-card-glow dg-col">
+        <header class="dg-card-head"><h3 class="dg-card-title">ネットワーク効果</h3></header>
+        <div class="c2-hub-visual dg-svg-stage">
+          <svg viewBox="0 0 340 246" role="img" aria-label="利用者が増えるほど取引が便利になり、さらに利用者が増える">
+            <circle cx="170" cy="123" r="91" fill="none" stroke="var(--border-strong)" stroke-dasharray="4 7"/>
+            <circle cx="170" cy="123" r="64" fill="var(--bg-card)" stroke="var(--accent-primary)" stroke-opacity=".45"/>
+            <g id="c2-loop-spin"><use href="#dg-ico-loop" x="122" y="75" width="96" height="96" color="var(--accent-primary)"/></g>
+            <text x="170" y="20" text-anchor="middle" font-size="19" font-weight="800" fill="var(--text-primary)">利用者が増える</text>
+            <text x="170" y="240" text-anchor="middle" font-size="19" font-weight="800" fill="var(--text-primary)">取引相手が見つかりやすい</text>
+          </svg>
+        </div>
+        <p id="c2-loop-note" class="c2-callout dg-callout">使うほど便利になる自己強化ループ</p>
+      </section>
+      <div id="c2-institutions" class="c2-focus c2-pair c2-pair-right dg-col">
+        <section id="c2-cond-3" class="c2-card dg-card dg-col">
+          <header class="c2-label dg-card-head dg-row">
+            <svg class="c2-icon c2-green" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-scale"/></svg>
+            <h3 class="dg-card-title">③ 法の支配と制度的信頼</h3>
+          </header>
+          <p class="c2-detail">契約が履行され、資産の権利が安定したルールで守られる。</p>
+          <div class="dg-chip-row"><span class="dg-chip">契約の履行</span><span class="dg-chip">財産権</span></div>
+        </section>
+        <section id="c2-cond-4" class="c2-card dg-card dg-col">
+          <header class="c2-label dg-card-head dg-row">
+            <svg class="c2-icon c2-green" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-shield"/></svg>
+            <h3 class="dg-card-title">④ 安全保障と同盟網</h3>
+          </header>
+          <p class="c2-detail">同盟網と安全保障の協力が、長期的な通貨の信頼も支える。</p>
+          <div class="dg-chip-row"><span class="dg-chip">同盟国</span><span class="dg-chip">金融協力</span></div>
+        </section>
+      </div>
+    </div>
+    <p id="c2-bridge" class="c2-callout dg-callout">ドルは金との交換が止まった後、何に支えられたのか？</p>
+  </div>
+</div>
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders['ch02_guilder_to_pound'] = function (tl, cues) {
+  const motion = window.dgMotion;
+  const tSwitch = cues.c2_phase2_cond;
+  window.dgWidgets.timeline('#c2-tl-box', tl, {
+    width: 960,
+    height: 225,
+    at: cues.c2_dutch,
+    focusEach: true,
+    unfocusAt: cues.c2_lag_fact,
+    items: [
+      { tag: '17世紀', title: 'オランダ・ギルダー', desc: '東インド会社・銀行', tone: 'secondary', at: cues.c2_dutch },
+      { tag: '19世紀', title: '英ポンド', desc: '産業革命・国際金本位制', tone: 'warn', at: cues.c2_pound },
+      { tag: '1944年〜', title: '米ドル', desc: '大戦・ブレトンウッズ', tone: 'primary', at: cues.c2_dollar_rise },
+      { tag: '2020年代〜', title: '多極化の胎動', desc: '分散・金復権・複線化', tone: 'ok', at: cues.c2_dollar_rise + 3 }
+    ]
+  });
+  motion.reveal(tl, '#c2-phase-a .c2-title, #c2-tl-card', cues.c2_history_open, { y: 8, stagger: 0.12 });
+  motion.reveal(tl, '#c2-lag-card', cues.c2_lag_fact, { y: 10 });
+  gsap.set('#c2-span-flow', { opacity: 0 });
+  motion.drawPath(tl, '#c2-span-draw', cues.c2_lag_fact + 0.3, { duration: 1.1 });
+  motion.pulse(tl, '#c2-lag-badge', cues.c2_lag_fact + 0.8, cues.c2_zunda_lag);
+  tl.to('#c2-span-draw', { opacity: 0, duration: 0.25 }, cues.c2_zunda_lag);
+  tl.to('#c2-span-flow', { opacity: 1, duration: 0.25 }, cues.c2_zunda_lag);
+  motion.flowDash(tl, '#c2-span-flow', cues.c2_zunda_lag, tSwitch);
+  motion.reveal(tl, '#c2-lag-reason', cues.c2_lag_reason, { y: 6 });
+
+  motion.switchPhase(tl, '#c2-phase-a', '#c2-phase-b', tSwitch, { duration: 0.1 });
+  motion.focus(tl, '#c2-economy', '.c2-focus', cues.c2_cond_econ_mkt, { dimOpacity: 0.48 });
+  motion.focus(tl, '#c2-institutions', '.c2-focus', cues.c2_cond_law_sec, { dimOpacity: 0.48 });
+  motion.focus(tl, '#c2-net-hub', '.c2-focus', cues.c2_network_loop, { dimOpacity: 0.48 });
+  gsap.set('#c2-loop-spin', { svgOrigin: '170 123', rotation: 0 });
+  tl.to('#c2-loop-spin', { rotation: 360, duration: 5.6, ease: 'sine.inOut' }, cues.c2_network_loop + 0.25);
+  motion.pulse(tl, '#c2-loop-note', cues.c2_network_loop + 0.25, cues.c2_zunda_cond);
+  motion.unfocus(tl, '.c2-focus', cues.c2_zunda_cond);
+  motion.reveal(tl, '#c2-bridge', cues.c2_bridge, { y: 6 });
+};
+</script>

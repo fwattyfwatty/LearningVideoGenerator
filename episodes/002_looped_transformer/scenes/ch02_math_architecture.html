@@ -1,0 +1,619 @@
+<style>
+  .c2-root {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .c2-phase {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-bottom: 18px;
+  }
+
+  .c2-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-subtle);
+    flex-shrink: 0;
+  }
+
+  .c2-title {
+    margin: 0;
+    font-size: 31px;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.25;
+  }
+
+  .c2-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--accent-primary);
+    background: var(--bg-card-muted);
+    border: 2px solid var(--accent-primary);
+    white-space: nowrap;
+  }
+
+  .c2-grid-pa {
+    display: grid;
+    grid-template-columns: 0.86fr 1.24fr;
+    gap: 20px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .c2-grid-pb {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .c2-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 20px;
+    background: var(--bg-card);
+    border: 2px solid var(--border-subtle);
+    padding: 18px 22px;
+    box-shadow: var(--shadow-card);
+    min-height: 0;
+  }
+
+  .c2-card-accent {
+    border-color: var(--accent-primary);
+    border-width: 3px;
+  }
+
+  .c2-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .c2-card-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text-primary);
+  }
+
+  .c2-tag {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    background: var(--bg-card-muted);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-subtle);
+    white-space: nowrap;
+  }
+
+  .c2-tag-accent {
+    background: rgba(139, 92, 246, 0.2);
+    color: #ddd6fe;
+    border-color: var(--accent-primary);
+  }
+
+  .c2-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .c2-io-node {
+    padding: 5px 20px;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background: var(--bg-card-muted);
+    border: 1px solid var(--border-subtle);
+  }
+
+  .c2-layer-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 18px;
+    border-radius: 12px;
+    background: var(--bg-card-muted);
+    border: 2px solid var(--border-subtle);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .c2-weight-chip {
+    padding: 3px 12px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fca5a5;
+    background: rgba(239, 68, 68, 0.14);
+    border: 1px solid rgba(248, 113, 113, 0.45);
+  }
+
+  .c2-dots {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-secondary);
+    line-height: 1;
+  }
+
+  .c2-arrow-down {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-secondary);
+    line-height: 0.9;
+  }
+
+  .c2-math-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 18px;
+    border-radius: 14px;
+    background: var(--bg-card-muted);
+    border: 2px solid var(--border-subtle);
+    flex-shrink: 0;
+  }
+
+  .c2-math-box-accent {
+    border-color: var(--accent-primary);
+    background: rgba(139, 92, 246, 0.14);
+  }
+
+  .c2-eq {
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 23px;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: 0.01em;
+  }
+
+  .c2-eq-note {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-secondary);
+  }
+
+  .c2-svg-wrap {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .c2-svg {
+    width: 100%;
+    height: 100%;
+    max-height: 335px;
+    overflow: visible;
+  }
+
+  .c2-loop-bottom-row {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .c2-memo-chip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 14px;
+    border-radius: 14px;
+    background: rgba(34, 211, 238, 0.12);
+    border: 2px solid #22d3ee;
+    font-size: 18px;
+    font-weight: 700;
+    color: #cffafe;
+  }
+
+  .c2-bottom-bar {
+    margin: 0 212px;
+    padding: 11px 24px;
+    border-radius: 16px;
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.24), rgba(34, 211, 238, 0.16));
+    border: 2px solid var(--accent-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    flex-shrink: 0;
+  }
+
+  .c2-bottom-eq {
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 24px;
+    font-weight: 800;
+    color: #f8fafc;
+  }
+
+  .c2-bottom-note {
+    font-size: 19px;
+    font-weight: 700;
+    color: #e2e8f0;
+  }
+
+  .c2-callout {
+    padding: 14px 18px;
+    border-radius: 14px;
+    background: var(--bg-card-muted);
+    border-left: 6px solid var(--accent-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-shrink: 0;
+  }
+
+  .c2-callout-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.45;
+  }
+
+  .c2-cpu-badge {
+    padding: 8px 16px;
+    border-radius: 12px;
+    background: var(--accent-primary);
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 800;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .c2-lg-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .c2-lg-item {
+    padding: 16px 20px;
+    border-radius: 16px;
+    background: var(--bg-card-muted);
+    border: 2px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .c2-lg-item-loop {
+    border-color: #22d3ee;
+    background: rgba(34, 211, 238, 0.1);
+  }
+
+  .c2-lg-label {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-primary);
+  }
+
+  .c2-lg-desc {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+
+  .c2-scale-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 14px 20px;
+    border-radius: 16px;
+    background: rgba(139, 92, 246, 0.16);
+    border: 2px solid var(--accent-primary);
+    flex-shrink: 0;
+  }
+
+  .c2-scale-chip {
+    padding: 8px 16px;
+    border-radius: 12px;
+    background: var(--bg-card);
+    border: 2px solid var(--border-subtle);
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-align: center;
+  }
+
+  .c2-scale-chip-big {
+    border-color: #22d3ee;
+    color: #67e8f9;
+  }
+
+  .c2-scale-arrow {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--accent-primary);
+  }
+</style>
+
+<div class="c2-root">
+  <div id="c2-phase-a" class="c2-phase">
+    <div id="c2-pa-header" class="c2-header">
+      <h2 class="c2-title">数式と構造で比較：通常モデル vs Looped Transformer</h2>
+      <span class="c2-pill">Phase 1 / 構造と数式</span>
+    </div>
+
+    <div class="c2-grid-pa">
+      <div id="c2-std-card" class="c2-card">
+        <div class="c2-card-head">
+          <h3 class="c2-card-title">通常 Transformer</h3>
+          <span class="c2-tag">非共有・1回通り抜け</span>
+        </div>
+        <div id="c2-std-stack" class="c2-stack">
+          <div class="c2-io-node">入力表現 x</div>
+          <div class="c2-arrow-down">↓</div>
+          <div class="c2-layer-row"><span>Layer 1</span><span class="c2-weight-chip">重み θ₁</span></div>
+          <div class="c2-arrow-down">↓</div>
+          <div class="c2-layer-row"><span>Layer 2</span><span class="c2-weight-chip">重み θ₂ (≠ θ₁)</span></div>
+          <div class="c2-dots">⋮</div>
+          <div class="c2-layer-row"><span>Layer N</span><span class="c2-weight-chip">重み θₙ (毎回別)</span></div>
+          <div class="c2-arrow-down">↓</div>
+          <div class="c2-io-node">出力（1パスで終了）</div>
+        </div>
+        <div id="c2-std-eq" class="c2-math-box">
+          <span class="c2-eq">h^(l+1) = f_{θ_l}(h^(l))</span>
+          <span class="c2-eq-note">θ₁ ≠ θ₂ ≠ … ≠ θₙ</span>
+        </div>
+      </div>
+
+      <div id="c2-loop-card" class="c2-card c2-card-accent">
+        <div class="c2-card-head">
+          <h3 class="c2-card-title">Looped Transformer</h3>
+          <span class="c2-tag c2-tag-accent">重み共有・R回反復</span>
+        </div>
+        <div class="c2-svg-wrap">
+          <svg id="c2-loop-svg" class="c2-svg" viewBox="0 0 840 315" aria-label="Looped Transformer architecture">
+            <defs>
+              <marker id="c2-arr-v" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 1 L 10 5 L 0 9 z" fill="#a78bfa" />
+              </marker>
+              <marker id="c2-arr-c" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 1 L 10 5 L 0 9 z" fill="#22d3ee" />
+              </marker>
+            </defs>
+            <g id="c2-node-prelude">
+              <rect x="16" y="102" width="188" height="92" rx="14" fill="#1e293b" stroke="#64748b" stroke-width="2.5" />
+              <text x="110" y="138" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="800">Prelude P(x)</text>
+              <text x="110" y="170" text-anchor="middle" fill="#cbd5e1" font-size="18" font-weight="700">入口処理 → 表現 e</text>
+              <line x1="204" y1="148" x2="292" y2="148" stroke="#a78bfa" stroke-width="3.5" marker-end="url(#c2-arr-v)" />
+              <text x="248" y="135" text-anchor="middle" fill="#e2e8f0" font-size="19" font-weight="800">e</text>
+            </g>
+            <g id="c2-node-core">
+              <rect x="300" y="92" width="236" height="112" rx="16" fill="rgba(139,92,246,0.22)" stroke="#8b5cf6" stroke-width="3.5" />
+              <text x="418" y="131" text-anchor="middle" fill="#f8fafc" font-size="23" font-weight="800">Recurrent Core</text>
+              <text x="418" y="162" text-anchor="middle" fill="#ddd6fe" font-size="21" font-weight="800">f_θ（同じ重み θ）</text>
+              <text x="418" y="189" text-anchor="middle" fill="#c4b5fd" font-size="17" font-weight="700">R 回くり返し適用</text>
+            </g>
+            <g id="c2-node-coda">
+              <line x1="536" y1="148" x2="624" y2="148" stroke="#a78bfa" stroke-width="3.5" marker-end="url(#c2-arr-v)" />
+              <text x="580" y="135" text-anchor="middle" fill="#e2e8f0" font-size="19" font-weight="800">h^(R)</text>
+              <rect x="632" y="102" width="192" height="92" rx="14" fill="#1e293b" stroke="#64748b" stroke-width="2.5" />
+              <text x="728" y="138" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="800">Coda C(h^(R))</text>
+              <text x="728" y="170" text-anchor="middle" fill="#cbd5e1" font-size="18" font-weight="700">出口処理 → 最終出力</text>
+            </g>
+            <g id="c2-loop-arc">
+              <path d="M 492 92 C 492 34, 344 34, 344 92" fill="none" stroke="#a78bfa" stroke-width="4" marker-end="url(#c2-arr-v)" />
+              <text x="418" y="23" text-anchor="middle" fill="#ddd6fe" font-size="19" font-weight="800">隠れ状態 h^(r) をフィードバック（r = 1..R）</text>
+            </g>
+            <circle id="c2-loop-orb" cx="492" cy="92" r="8" fill="#22d3ee" stroke="#f8fafc" stroke-width="2.5" />
+            <g id="c2-inj-arrow">
+              <path d="M 180 194 Q 180 262 280 262 L 380 262 Q 418 262 418 208" fill="none" stroke="#22d3ee" stroke-width="3.5" stroke-dasharray="8 6" marker-end="url(#c2-arr-c)" />
+            </g>
+            <g id="c2-inj-label">
+              <rect x="142" y="272" width="380" height="34" rx="10" fill="rgba(34,211,238,0.16)" stroke="#22d3ee" stroke-width="2" />
+              <text x="332" y="295" text-anchor="middle" fill="#67e8f9" font-size="17" font-weight="800">+ e  Input Injection（毎周 e を足し込む）</text>
+            </g>
+          </svg>
+        </div>
+        <div class="c2-loop-bottom-row">
+          <div id="c2-loop-eq" class="c2-math-box c2-math-box-accent">
+            <span class="c2-eq">h^(r+1) = f_θ(h^(r), e)</span>
+          </div>
+          <div id="c2-memo-chip" class="c2-memo-chip">
+            計算用紙 h^(r) を更新しつつ<br>問題文 e を毎周参照
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="c2-eff-bar" class="c2-bottom-bar">
+      <span class="c2-bottom-eq">実効深さ L_eff = L_pre + R · L_core + L_coda</span>
+      <span class="c2-bottom-note">軽量なパラメータ数のまま見かけの深さを R 倍に拡張</span>
+    </div>
+  </div>
+
+  <div id="c2-phase-b" class="c2-phase">
+    <div id="c2-pb-header" class="c2-header">
+      <h2 class="c2-title">なぜ重み共有ループが効くのか：2つの理論的根拠</h2>
+      <span class="c2-pill">Phase 2 / 計算機理論と長さ汎化</span>
+    </div>
+
+    <div class="c2-grid-pb">
+      <div id="c2-theory-1" class="c2-card c2-card-accent">
+        <div class="c2-card-head">
+          <h3 class="c2-card-title">理論① プログラム可能なコンピュータ</h3>
+          <span class="c2-tag c2-tag-accent">ICML 2023</span>
+        </div>
+        <div class="c2-svg-wrap">
+          <svg id="c2-cpu-svg" class="c2-svg" viewBox="0 0 740 235" aria-label="CPU execution cycle">
+            <defs>
+              <marker id="c2-arr-cpu" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M 0 1 L 10 5 L 0 9 z" fill="#a78bfa" />
+              </marker>
+            </defs>
+            <rect x="245" y="14" width="250" height="58" rx="12" fill="#1e293b" stroke="#8b5cf6" stroke-width="2.5" />
+            <text x="370" y="39" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="800">1. Fetch（命令読込）</text>
+            <text x="370" y="61" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">次の命令・位置を参照</text>
+            <rect x="468" y="150" width="248" height="62" rx="12" fill="#1e293b" stroke="#8b5cf6" stroke-width="2.5" />
+            <text x="592" y="177" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="800">2. Execute（演算実行）</text>
+            <text x="592" y="200" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">Attention ＋ MLP で計算</text>
+            <rect x="24" y="150" width="248" height="62" rx="12" fill="#1e293b" stroke="#22d3ee" stroke-width="2.5" />
+            <text x="148" y="177" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="800">3. Memory（状態書換）</text>
+            <text x="148" y="200" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">隠れ状態 h^(r) を更新</text>
+            <path d="M 495 45 Q 592 65 592 146" fill="none" stroke="#a78bfa" stroke-width="3.5" marker-end="url(#c2-arr-cpu)" />
+            <line x1="468" y1="181" x2="276" y2="181" stroke="#a78bfa" stroke-width="3.5" marker-end="url(#c2-arr-cpu)" />
+            <path d="M 148 150 Q 148 65 241 45" fill="none" stroke="#a78bfa" stroke-width="3.5" marker-end="url(#c2-arr-cpu)" />
+            <rect x="282" y="90" width="176" height="54" rx="12" fill="rgba(139,92,246,0.22)" stroke="#a78bfa" stroke-width="2" />
+            <text x="370" y="114" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="800">f_θ × R ループ</text>
+            <text x="370" y="136" text-anchor="middle" fill="#ddd6fe" font-size="16" font-weight="700">1周 ＝ 1クロック</text>
+          </svg>
+        </div>
+        <div id="c2-subleq-box" class="c2-callout">
+          <div class="c2-callout-text">
+            1命令コンピュータ <strong>SUBLEQ</strong> を浅い固定重みで再現<br>→ 汎用計算（プログラム実行）が可能と証明
+          </div>
+          <span id="c2-cpu-badge" class="c2-cpu-badge">小さなCPUとして動作</span>
+        </div>
+      </div>
+
+      <div id="c2-theory-2" class="c2-card">
+        <div class="c2-card-head">
+          <h3 class="c2-card-title">理論② 長さ汎化（Length Generalization）</h3>
+          <span class="c2-tag">推論時スケーリング</span>
+        </div>
+        <div id="c2-lg-compare" class="c2-lg-list">
+          <div class="c2-lg-item">
+            <span class="c2-lg-label">通常モデル（固定 N 層）</span>
+            <span class="c2-lg-desc">固定段数に合わせたパターンを暗記しがち → 学習時より桁数・手数が増えると破綻しやすい</span>
+          </div>
+          <div id="c2-lg-loop" class="c2-lg-item c2-lg-item-loop">
+            <span class="c2-lg-label">Looped Transformer（1ステップ規則 f_θ）</span>
+            <span class="c2-lg-desc">「1手進める更新規則 f_θ」を学習 → 問題が長くなってもループ回数 R を増やして対応</span>
+          </div>
+        </div>
+        <div id="c2-lg-scale" class="c2-scale-box">
+          <div class="c2-scale-chip">学習時<br>R = 4 周</div>
+          <span class="c2-scale-arrow">━━▶</span>
+          <div class="c2-scale-chip c2-scale-chip-big">推論時（長文・多桁）<br>R = 12 周に拡張！</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="c2-bridge-bar" class="c2-bottom-bar">
+      <span class="c2-bottom-note">解き方の手順そのものを学ぶため、難しい問題ほどループを増やして解ける</span>
+    </div>
+  </div>
+</div>
+
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders["ch02_math_architecture"] = function (tl, cues) {
+  const tIntro = cues.c2_compare_intro ?? 0.45;
+  const tStd = cues.c2_std_eq ?? 6.96;
+  const tLoop = cues.c2_loop_arch ?? 14.81;
+  const tZundaSame = cues.c2_zunda_same ?? 24.32;
+  const tRec = cues.c2_recurrence_eq ?? 32.16;
+  const tInj = cues.c2_input_inj ?? 41.76;
+  const tMemo = cues.c2_zunda_memo ?? 51.51;
+  const tEff = cues.c2_eff_depth ?? 58.63;
+  const tP2 = cues.c2_phase2_theory ?? 70.34;
+  const tCpu = cues.c2_cpu_cycle ?? 77.91;
+  const tSubleq = cues.c2_subleq ?? 87.26;
+  const tZundaCpu = cues.c2_zunda_cpu ?? 97.64;
+  const tLenGen = cues.c2_length_gen ?? 104.66;
+  const tStep = cues.c2_step_rule ?? 113.36;
+  const tBridge = cues.c2_bridge ?? 124.28;
+
+  gsap.set("#c2-phase-a", { opacity: 1 });
+  gsap.set("#c2-phase-b", { opacity: 0 });
+  gsap.set(["#c2-pa-header", "#c2-std-card", "#c2-loop-card"], { opacity: 0, y: 16 });
+  gsap.set(["#c2-std-stack", "#c2-std-eq"], { opacity: 0, y: 12 });
+  gsap.set(["#c2-node-prelude", "#c2-node-core", "#c2-node-coda"], { opacity: 0, scale: 0.96, transformOrigin: "50% 50%" });
+  gsap.set(["#c2-loop-arc", "#c2-loop-orb", "#c2-loop-eq", "#c2-inj-arrow", "#c2-inj-label", "#c2-memo-chip", "#c2-eff-bar"], { opacity: 0 });
+  gsap.set(["#c2-loop-eq", "#c2-memo-chip", "#c2-eff-bar"], { y: 12 });
+  gsap.set(["#c2-theory-1", "#c2-theory-2"], { opacity: 0, y: 18 });
+  gsap.set(["#c2-cpu-svg", "#c2-subleq-box", "#c2-cpu-badge", "#c2-lg-compare", "#c2-lg-scale", "#c2-bridge-bar"], { opacity: 0, y: 12 });
+
+  tl.to("#c2-pa-header", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tIntro);
+  tl.to(["#c2-std-card", "#c2-loop-card"], { opacity: 1, y: 0, duration: 0.5, stagger: 0.15, ease: "power2.out" }, tIntro + 0.15);
+
+  tl.to("#c2-std-stack", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, tStd);
+  tl.to("#c2-std-eq", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tStd + 0.35);
+
+  tl.to("#c2-node-prelude", { opacity: 1, scale: 1, duration: 0.4, ease: "power2.out" }, tLoop);
+  tl.to("#c2-node-core", { opacity: 1, scale: 1, duration: 0.45, ease: "power2.out" }, tLoop + 0.25);
+  tl.to("#c2-node-coda", { opacity: 1, scale: 1, duration: 0.4, ease: "power2.out" }, tLoop + 0.5);
+
+  tl.to("#c2-node-core", { scale: 1.06, duration: 0.3, ease: "power2.out" }, tZundaSame);
+  tl.to("#c2-node-core", { scale: 1, duration: 0.35, ease: "power2.inOut" }, tZundaSame + 0.35);
+
+  tl.to(["#c2-loop-arc", "#c2-loop-orb"], { opacity: 1, duration: 0.45, ease: "power2.out" }, tRec);
+  tl.to("#c2-loop-eq", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tRec + 0.25);
+
+  const orbPasses = 6;
+  const orbSpan = Math.max(6, tP2 - tRec - 0.8);
+  const segDur = orbSpan / (orbPasses * 8);
+  const orbTl = gsap.timeline({ repeat: orbPasses - 1 });
+  orbTl
+    .to("#c2-loop-orb", { attr: { cx: 469, cy: 59 }, duration: segDur, ease: "none" })
+    .to("#c2-loop-orb", { attr: { cx: 418, cy: 49 }, duration: segDur, ease: "none" })
+    .to("#c2-loop-orb", { attr: { cx: 367, cy: 59 }, duration: segDur, ease: "none" })
+    .to("#c2-loop-orb", { attr: { cx: 344, cy: 92 }, duration: segDur, ease: "none" })
+    .to("#c2-loop-orb", { attr: { cx: 344, cy: 101 }, duration: segDur, ease: "none" })
+    .to("#c2-loop-orb", { attr: { cx: 418, cy: 101 }, duration: segDur, ease: "none" })
+    .to("#c2-loop-orb", { attr: { cx: 492, cy: 101 }, duration: segDur, ease: "none" })
+    .to("#c2-loop-orb", { attr: { cx: 492, cy: 92 }, duration: segDur, ease: "none" });
+  tl.add(orbTl, tRec + 0.1);
+
+  tl.to("#c2-inj-arrow", { opacity: 1, duration: 0.45, ease: "power2.out" }, tInj);
+  tl.to("#c2-inj-label", { opacity: 1, duration: 0.45, ease: "power2.out" }, tInj + 0.2);
+
+  tl.to("#c2-memo-chip", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tMemo);
+  tl.to("#c2-eff-bar", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, tEff);
+
+  tl.to("#c2-phase-a", { opacity: 0, duration: 0.35, ease: "power2.inOut" }, tP2);
+  tl.to("#c2-phase-b", { opacity: 1, duration: 0.35, ease: "power2.inOut" }, tP2);
+  tl.to("#c2-theory-1", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tP2 + 0.35);
+
+  tl.to("#c2-cpu-svg", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, tCpu);
+  tl.to("#c2-subleq-box", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tSubleq);
+  tl.to("#c2-cpu-badge", { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, tZundaCpu);
+  tl.to("#c2-cpu-badge", { scale: 1.07, duration: 0.25, ease: "power2.out" }, tZundaCpu + 0.42);
+  tl.to("#c2-cpu-badge", { scale: 1, duration: 0.25, ease: "power2.inOut" }, tZundaCpu + 0.7);
+
+  tl.to("#c2-theory-2", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tLenGen);
+  tl.to("#c2-lg-compare", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tLenGen + 0.25);
+
+  tl.to("#c2-lg-loop", { borderColor: "#67e8f9", duration: 0.35 }, tStep);
+  tl.to("#c2-lg-scale", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, tStep + 0.2);
+
+  tl.to("#c2-bridge-bar", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tBridge);
+};
+</script>

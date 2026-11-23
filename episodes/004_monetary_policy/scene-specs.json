@@ -1,0 +1,69 @@
+{
+  "theme": "clean-light",
+  "accent_color": "#1d4ed8",
+  "theme_palette_note": "clean-light (白基調・新聞/経済誌インフォグラフィック調): カード背景 #ffffff、サブ背景 #f1f5f9、本文濃色 #0f172a、補足 #475569、主役アクセント #1d4ed8（ロイヤルブルー）、引き締め/インフレ警戒 #dc2626・#d97706、緩和/成長下支え #16a34a・#0ea5e9。白背景上で淡い文字を使わないこと。",
+  "chapters": [
+    {
+      "id": "ch01_intro",
+      "layout": "title",
+      "has_tsumugi_cutin": false,
+      "difficulty": "light",
+      "recommended_worker": "codex/gpt-6.1-terra (medium)",
+      "visual_plan": "Theme clean-light (#1d4ed8 royal blue accent). Top hero badge (.dg-hero-badge + .dg-hero-dot) '世界経済・マクロ金融入門' + .dg-hero-title '主要国家の金融政策とその意図：なぜ世界の金利はバラバラなのか？'. Middle 2-column grid (.dg-grid-2, flex:1): Left card (.dg-card) '主要4極の政策スタンス（2026年11月時点）' with 4 crisp horizontal rows revealing at c1_four_poles and c1_jp_cn_split: (1) 米国 FRB: 3.75〜4.00% + .dg-pill-danger '引き締め寄り・慎重', (2) 欧州 ECB: 預金金利 2.50% + .dg-pill-warn '物価警戒・様子見', (3) 日本 日銀(BOJ): 1.25%前後 + .dg-pill-accent '段階利上げ・正常化', (4) 中国 人民銀行(PBOC): 1年LPR 3.00% / 翌日物 1.25% + .dg-pill-ok '適度に緩和的'. Right card (.dg-card-glow) '経済のアクセル ⇄ ブレーキ構図' with .dg-svg-stage showing an editorial semicircular speedometer/dial gauge SVG: left arc green/sky ('金融緩和 / 利下げ：景気刺激・デフレ回避'), center neutral zone royal blue ('正常化 / 中立金利'), right arc amber/red ('金融引き締め / 利上げ：インフレ抑制・過熱防止'), with animated dial needle (GSAP rotation via svgOrigin, NO CSS transform) swinging cleanly between easing and tightening at c1_zunda_why and settling at c1_thesis, plus bottom equation chip '政策 ＝ 中央銀行の使命 × 国内の悩み'. Bottom row of 3 goal chips ('① 金融政策の仕組みと武器', '② 米・欧・日・中 4大国の意図', '③ 為替の制約と中央銀行の限界') revealed at c1_goals with margin: 0 212px and bottom clearance strictly above y=805 (clearing Metan x:12..288 y:814..1080 and Zundamon x:1648..1908 y:814..1080).",
+      "phase_transitions": []
+    },
+    {
+      "id": "ch02_central_bank_tools",
+      "layout": "default",
+      "has_tsumugi_cutin": false,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "Theme clean-light (#1d4ed8). Phase A (#c2-phase-a, c2_policy_rate..c2_zunda_taylor): Title bar '伝統的金融政策：政策金利の波及ルートと羅針盤' + .dg-pill-accent 'Phase 1'. Center .dg-svg-stage transmission pipeline SVG (left to right with solid stroke arrows + markerUnits='userSpaceOnUse' open-chevron markers): [中央銀行：政策金利（翌日物など）] splits into 3 clean channel boxes ([住宅ローン・企業借入コスト], [為替相場（通貨高/通貨安）], [株価・資産価格]) -> converges to right outcome card [景気（消費・投資）＆ 物価（インフレ率）], plus glowing orb pulse animating along channels at c2_hike_channel / c2_fx_inflation and subtle easing/tightening toggle badges at c2_cut_channel. Bottom row (.dg-math-box) revealed at c2_taylor_rule: 'テイラー・ルール（適正金利の目安）' with clean HTML formula 'i = r* + π + 0.5(π - π*) + 0.5 y' (NO Unicode combining marks) and 2 clear color chips ('インフレギャップ (π - π*)' in crimson/warn, '需給ギャップ y（景気の過熱度）' in royal blue). Phase B (#c2-phase-b, starts at c2_phase2_zero_bound): Fade #c2-phase-a to opacity 0 and reveal #c2-phase-b + title bar + Left card IMMEDIATELY at tP2+0.15 (ZERO blank screen gap). Title bar 'ゼロ金利の壁を超える非伝統的金融政策' + .dg-pill-warn 'Phase 2'. 2-column grid: Left card (.dg-card) '伝統的領域とゼロ金利の壁' showing compact SVG thermometer/rate bar hitting floor '0% ゼロ金利下限（これ以上下げにくい）'; Right card (.dg-card-glow) '非伝統的手段の2大エンジン' with (1) 'QE（量的緩和）⇄ QT（量的引き締め）' showing two GSAP scaleX balance-sheet bars (NO CSS transform; transformOrigin:'left center' in gsap.set) for 国債買入・資金供給 vs 保有資産圧縮 at c2_qe_qt / c2_qt_shrink, and (2) 'フォワードガイダンス（期待への働きかけ）' mini flow [将来方針の予告] -> [市場予想の変化] -> [長期金利を誘導] with shared icon #dg-ico-sliders at c2_forward_guidance.",
+      "phase_transitions": [
+        { "fade_out": "#c2-phase-a", "fade_in": "#c2-phase-b", "at_cue": "c2_phase2_zero_bound" }
+      ]
+    },
+    {
+      "id": "ch03_us_eu_mandates",
+      "layout": "wide",
+      "has_tsumugi_cutin": false,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "CRITICAL WIDE SAFETY: Put padding-bottom: 48px on .c3-phase so ALL cards stay strictly above y=805 (clearing Metan/Zundamon tops at y=814). Theme clean-light (#1d4ed8). Phase A (#c3-phase-a, c3_frb_intro..c3_zunda_frb): Title bar '米国 FRB：デュアル・マンデートと基軸通貨ドルの綱渡り' + .dg-pill-danger '3.75〜4.00%（2026年秋）'. 2-column grid: Left card (.dg-card-glow) '法的使命：デュアル・マンデート' with crisp SVG balance scale (fulcrum + tilting beam animated gently via GSAP svgOrigin, NO CSS transform) balancing Left pan '物価の安定（インフレ目標 2%）' (#dc2626) vs Right pan '雇用の最大化（景気・失業率）' (#1d4ed8), plus bottom callout 'ハードランディング回避 × インフレ火消し'. Right card (.dg-card) '米国FF金利の推移と世界への波及' with clean SVG line chart (2022–2023 steep hike -> 2024–2025 rate cuts -> 2026 autumn uptick/hold at 3.75–4.00% highlighted dot) and bottom chip row ('FOMC 決定', '基軸通貨ドル', '世界の金利・資金フローを左右') revealed at c3_zunda_dollar. Phase B (#c3-phase-b, starts at c3_phase2_ecb): Fade #c3-phase-a out and reveal #c3-phase-b + title bar + Left card IMMEDIATELY at tP2+0.15 (ZERO blank gap). Title bar '欧州 ECB：物価最優先と「1つの金利・20カ国」のジレンマ' + .dg-pill-warn '預金金利 2.50%（2026年秋）'. 2-column grid: Left card (.dg-card) 'シングル・マンデート（物価安定最優先）' showing priority hierarchy diagram (Top pillar: '中期物価 2% 厳守' with historical hyperinflation lesson badge, plus mini trajectory badge '2024〜25利下げ(2%前後) → 2026エネルギー高で2.50%へ再利上げ'); Right card (.dg-card-glow) '単一通貨ユーロの構造的ジレンマ' with SVG showing 1 top hub [ECB 単一政策金利 2.50%] branching via solid stroke arrows to contrasting member blocks: [財政余力・強経済国（低利回り）] vs [債務負担・高スプレッド懸念国（国債利回り急騰リスク＝分断）], plus bottom emerald safety-net bar using shared icon #dg-ico-shield '安全網 TPI（伝達保護措置）でユーロの結束を防御' revealed at c3_ecb_tpi.",
+      "phase_transitions": [
+        { "fade_out": "#c3-phase-a", "fade_in": "#c3-phase-b", "at_cue": "c3_phase2_ecb" }
+      ]
+    },
+    {
+      "id": "ch04_jp_cn_divergence",
+      "layout": "default",
+      "has_tsumugi_cutin": true,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "CRITICAL TSUMUGI SAFETY: Tsumugi cut-in (x:1572..1888, y:90..254) appears in BOTH Phase A (c4_tsumugi_ask) and Phase B (c4_tsumugi_yuan). Add padding-right: 360px to BOTH Phase A and Phase B top title bars AND add padding-top: 86px to BOTH Phase A and Phase B content grids so top-right cards sit strictly below y=254 with zero overlap! Theme clean-light (#1d4ed8). Phase A (#c4-phase-a, c4_tsumugi_ask..c4_boj_qt): Title bar '日本・日銀（BOJ）：異次元緩和から「金利ある世界」へ' + .dg-pill-accent '1.25%前後（約30年ぶり）'. 2-column grid (padding-top: 86px): Left card (.dg-card-glow) '正常化の階段（2024 → 2026年秋）' with crisp ascending step-stair SVG: [〜2024前: マイナス金利・YCC] -> [2024: マイナス金利解除] -> [2025: 0.5〜0.75%] -> [2026年秋: 1.0% → 1.25%前後] (highlighted royal blue node + moving dot along path) + bottom chip '国債買入も段階減額（市場機能回復）' at c4_boj_qt. Right card (.dg-card) '日銀の2つの意図と好循環' with SVG virtuous loop box featuring shared icon <use href='#dg-ico-loop'/> rotated gently via GSAP svgOrigin (NO CSS transform) between [賃上げ定着] and [2%超の安定物価], plus 2 callouts below: '① デフレ逆戻りを防ぐ慎重な歩み' (.dg-callout-ok) and '② 過度な円安・輸入インフレの牽制' (.dg-callout-warn). Phase B (#c4-phase-b, starts at c4_phase2_pboc): Fade #c4-phase-a out and reveal #c4-phase-b + title bar + Left card IMMEDIATELY at tP2+0.15 (ZERO blank gap). Title bar '中国・人民銀行（PBOC）：デフレ回避の緩和と精密な二面作戦' + .dg-pill-ok '適度に緩和的'. 2-column grid (padding-top: 86px): Left card (.dg-card-glow) '景気下支え ⇄ 元防衛の二面作戦' with crisp 2-side SVG tension diagram: Left green block [緩和・下支え: 1年LPR 3.00% / 5年超LPR 3.50% / RRR調整・重点分野再貸出] opposing Right red/amber guard wall using #dg-ico-shield [制約: 不動産バブル再燃防止 / 急激な人民元安・資本流出の抑止] revealed at c4_tsumugi_yuan / c4_pboc_balance. Right card (.dg-card) '金利枠組みの近代化（2026年11月）' showing transition card [旧主軸: 7日物リバースレポ] -> solid arrow -> highlighted [新主軸: 翌日物リバースレポ 1.25%] with note '短期市場金利への波及とシグナル透明性を強化' revealed at c4_pboc_reform.",
+      "phase_transitions": [
+        { "fade_out": "#c4-phase-a", "fade_in": "#c4-phase-b", "at_cue": "c4_phase2_pboc" }
+      ]
+    },
+    {
+      "id": "ch05_tsumugi_trilemma",
+      "layout": "wide",
+      "has_tsumugi_cutin": true,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "CRITICAL WIDE + TSUMUGI SAFETY: Tsumugi cut-in (x:1572..1888, y:90..254) appears in BOTH Phase A (c5_tsumugi_fx) and Phase B (c5_phase2_limits). Put padding-bottom: 44px on .c5-phase so ALL cards stay strictly above y=805 (clearing Metan/Zundamon tops at y=814). Put padding-right: 360px on Phase A title bar + padding-top: 82px on Phase A grid. Put width: 73% (left-aligned) on Phase B top banner + padding-top: 24px margin above the 3 limit cards so cards start strictly below y=260! Theme clean-light (#1d4ed8). Phase A (#c5-phase-a, c5_tsumugi_fx..c5_spillover): Title bar '国際金融のトリレンマ：3つのうち2つまでしか選べない' + .dg-pill-accent '構造的制約'. 2-column grid (padding-top: 82px): Left card (.dg-card-glow) 'トリレンマ三角形（同時達成は2頂点まで）' with large clear SVG triangle: Top vertex [① 独立した金融政策], Bottom-Left vertex [② 自由な資本移動], Bottom-Right vertex [③ 為替相場の安定（固定）]. Highlight Left edge (①+②) in royal blue with badge '米・日・欧（変動相場を受容）' at c5_developed_choice, and Right edge (①+③) in emerald/amber with badge '中国（資本移動規制を維持）' at c5_china_choice. Right card (.dg-card) '金利差から為替・物価への波及連鎖' with vertical/stepped SVG flow [高金利国（例：米国 3.75〜4%）] vs [低金利国（例：日本 1.25%）] -> [資本移動（高金利通貨へ資金流入）] -> [通貨安（円安）＆ 輸入物価上昇] -> [他国の中央銀行にも政策圧力] revealed at c5_zunda_trilemma / c5_spillover. Phase B (#c5-phase-b, starts at c5_phase2_limits): Fade #c5-phase-a out and reveal #c5-phase-b + left-aligned top banner (width: 73%, text '現代の中央銀行が直面する「3つの限界」：金利だけでは制御しきれない壁') + Card 1 outline IMMEDIATELY at tP2+0.15 (ZERO blank gap). 3 balanced cards in a row (.dg-grid-3): Card 1 '限界① 供給ショック' (SVG icons/tags: 紛争・エネルギー高・関税 -> コスト増インフレ; callout '利上げで景気悪化＋物価高＝スタグフレーションの恐れ') at c5_limit_supply; Card 2 '限界② 財政ドミナンス' (SVG balance/shield #dg-ico-shield: 巨額の政府債務 × 利上げ -> 国債利払い費急増 -> 政治圧力と通貨信認リスク) at c5_limit_fiscal / c5_independence; Card 3 '限界③ 効果のタイムラグ' (SVG timeline gauge bar animated via GSAP scaleX: 金利変更 -> 6〜18ヶ月後に実体経済へ浸透; callout '常に不確実な未来を読む先読み運転') at c5_limit_lag.",
+      "phase_transitions": [
+        { "fade_out": "#c5-phase-a", "fade_in": "#c5-phase-b", "at_cue": "c5_phase2_limits" }
+      ]
+    },
+    {
+      "id": "ch06_summary",
+      "layout": "default",
+      "has_tsumugi_cutin": true,
+      "difficulty": "light",
+      "recommended_worker": "codex/gpt-6.1-terra (medium)",
+      "visual_plan": "CRITICAL SAFE LAYOUT (proven ch06 geometry): .c6-wrap { padding-bottom: 36px; display: flex; flex-direction: column; height: 100%; }, .c6-title-bar { padding-right: 360px; }, .c6-summary-grid { padding-top: 88px; flex: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-content: center; align-items: stretch; } with 3 uniform min-height: 265px cards (all well below Tsumugi cut-in y=254 and above bottom bar). Theme clean-light (#1d4ed8). POINT 1 (.dg-card, c6_point1): '仕組みと武器' (政策金利の波及ルート / テイラー・ルール / QE・QT・フォワードガイダンス) with #dg-ico-sliders accent header icon. POINT 2 (.dg-card-glow, c6_point2): '主要4大国の意図' (FRB＝物価と雇用の二兎 / ECB＝物価最優先と20カ国結束 / 日銀＝正常化と賃金好循環 / PBOC＝緩和と人民元防衛). POINT 3 (.dg-card, c6_point3): '構造的な制約と限界' (国際金融のトリレンマ / 供給ショック / 財政ドミナンス・タイムラグ) with #dg-ico-shield accent header icon. Bottom #c6-next-bar ('📚 次回テーマ候補') revealed at c6_tsumugi_next with 3 chips: '💱 為替相場と為替介入の仕組み', '📊 国債・イールドカーブと財政政策', '🪙 中央銀行デジタル通貨（CBDC）'.",
+      "phase_transitions": []
+    }
+  ]
+}

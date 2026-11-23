@@ -1,0 +1,34 @@
+<style>
+.c1-wrap{height:100%;display:flex;flex-direction:column;font-family:"Noto Sans JP",sans-serif;gap:12px;padding-bottom:30px;box-sizing:border-box}.c1-hero{text-align:center}.c1-hero h1{font-size:38px;line-height:1.25;margin:8px 0;color:#f8fafc}.c1-roles{display:flex;justify-content:center;gap:14px}.c1-pill,.c1-goal{border:1px solid #52718a;background:#132b43;border-radius:12px;padding:8px 22px;color:#dceaf5;font-size:20px;font-weight:700}.c1-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1;min-height:0}.c1-card{padding:16px 22px;min-height:0}.c1-card h2{font-size:23px;margin:0 0 8px;color:#f5f8fc}.c1-icon{width:30px;height:30px;vertical-align:middle;color:#eab308;margin-right:8px}.c1-chart{height:235px}.c1-callout{background:#19354d;border:1px solid #53758b;border-radius:10px;padding:10px 14px;font-size:19px;font-weight:700;color:#dceaf5}.c1-gold{color:#facc15}.c1-bottom{display:flex;justify-content:center;gap:12px}.c1-goal{font-size:17px;white-space:nowrap;padding:9px 12px}
+</style>
+<div class="c1-wrap">
+  <div class="c1-hero" id="c1-hero">
+    <div class="dg-hero-badge"><span class="dg-hero-dot"></span>国際金融・地政学入門</div>
+    <h1><span class="dg-text-accent">基軸通貨</span>の変遷：ポンドからドル、そして<span class="dg-text-accent">多極化時代</span>へ</h1>
+  </div>
+  <div class="c1-roles"><span class="c1-pill">国際決済</span><span class="c1-pill">価格の基準</span><span class="c1-pill">外貨準備</span></div>
+  <div class="c1-grid">
+    <div class="dg-card-glow c1-card" id="c1-card-shares">
+      <h2><svg class="c1-icon"><use href="#dg-ico-coins"></use></svg>世界の外貨準備シェア</h2>
+      <div>IMF COFER 2026年Q2</div><div class="c1-chart" id="c1-bar-box"></div>
+      <div class="c1-callout" id="c1-fx-callout">BIS 2025年FX取引シェア：米ドル <span class="c1-gold" id="c1-fx">88.4%</span>（両建て200%基準）</div>
+    </div>
+    <div class="dg-card c1-card" id="c1-card-stance">
+      <h2><svg class="c1-icon"><use href="#dg-ico-globe"></use></svg>国際通貨体制の現在地</h2>
+      <div class="c1-chart" id="c1-gauge-box"></div>
+      <div class="c1-callout">強いネットワーク効果と地政学リスクのせめぎ合い</div>
+    </div>
+  </div>
+  <div class="c1-bottom dg-title-bottom-safe"><span class="c1-goal">① 400年の覇権交代法則</span><span class="c1-goal">② ドルの特権とジレンマ</span><span class="c1-goal">③ 脱ドルとデジタル時代の行方</span></div>
+</div>
+<script>
+window.__diagramBuilders['ch01_intro'] = function(tl,cues){
+  const m=window.dgMotion, w=window.dgWidgets;
+  gsap.set(['#c1-hero','.c1-pill','#c1-fx-callout','.c1-goal'],{opacity:0});
+  m.reveal(tl,'#c1-hero',cues.c1_title); m.reveal(tl,'.c1-pill',cues.c1_roles,{stagger:0.15});
+  w.barChart('#c1-bar-box',tl,{max:70,unit:'%',countUp:true,decimals:1,at:cues.c1_shares+0.15,items:[{label:'米ドル (USD)',value:56.7,tone:'primary'},{label:'ユーロ (EUR)',value:20.6,tone:'secondary'},{label:'日本円 (JPY)',value:5.0,tone:'ok'},{label:'人民元 (CNY)',value:2.1,tone:'warn'}]});
+  w.gauge('#c1-gauge-box',tl,{zones:[{label:'一極支配',sub:'ドル圧倒',color:'var(--accent-primary)'},{label:'緩やかな分散',sub:'2026現在地',color:'var(--accent-secondary)'},{label:'完全多極化',sub:'決済分断',color:'var(--accent-warn)'}],initialAngle:-52,moves:[{angle:-12,at:cues.c1_stance+0.1,duration:1.2}],centerLabel:'ドル中核 × 緩やかな多極化'});
+  m.focus(tl,'#c1-card-shares','.c1-card',cues.c1_shares); m.reveal(tl,'#c1-fx-callout',cues.c1_fx_scale); m.pulse(tl,'#c1-fx',cues.c1_fx_scale,cues.c1_zunda_wow+2);
+  m.focus(tl,'#c1-card-stance','.c1-card',cues.c1_stance); m.unfocus(tl,'.c1-card',cues.c1_stance+1.4); m.reveal(tl,'.c1-goal',cues.c1_go,{stagger:0.16});
+};
+</script>

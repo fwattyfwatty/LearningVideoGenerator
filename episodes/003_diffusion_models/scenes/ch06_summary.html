@@ -1,0 +1,38 @@
+﻿<style>
+.c6-wrap { padding-bottom: 36px; display: flex; flex-direction: column; height: 100%; box-sizing: border-box; font-family: "Noto Sans JP", sans-serif; color: #e8faf7; }
+.c6-title-bar { padding-right: 360px; }
+.c6-kicker { color: #5eead4; font-size: 20px; font-weight: 700; letter-spacing: .16em; }
+.c6-title { margin: 8px 0 0; font-size: 42px; }
+.c6-summary-grid { padding-top: 88px; flex: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-content: center; align-items: stretch; }
+.c6-card { box-sizing: border-box; min-height: 265px; padding: 28px; border: 1px solid #377c79; border-radius: 20px; background: linear-gradient(145deg, #12333d, #10232f); }
+.c6-number { color: #5eead4; font-size: 19px; font-weight: 800; }
+.c6-card h3 { margin: 12px 0 20px; font-size: 29px; color: white; }
+.c6-card p { margin: 9px 0; color: #c3dedb; font-size: 21px; line-height: 1.5; }
+.c6-card strong { color: #7de9d9; }
+.c6-next-bar { margin: 20px 220px 0; padding: 17px 22px; border: 1px solid #377c79; border-radius: 16px; background: #12343c; text-align: center; }
+.c6-next-label { color: #5eead4; font-size: 20px; font-weight: 800; }
+.c6-chips { display: flex; justify-content: center; gap: 12px; margin-top: 10px; }
+.c6-chip { padding: 7px 12px; border-radius: 9px; background: #1d4a51; font-size: 17px; white-space: nowrap; }
+</style>
+<div class="c6-wrap">
+  <div class="c6-title-bar"><div class="c6-kicker">SUMMARY</div><h2 class="c6-title">拡散モデルの進化を振り返る</h2></div>
+  <div class="c6-summary-grid">
+    <div class="c6-card" id="c6-card1"><div class="c6-number">POINT 01</div><h3>土台の確立</h3><p><strong>DDPM</strong>：ノイズ予測 ε<sub>θ</sub></p><p><strong>LDM</strong>：VAEの潜在空間で生成</p><p><strong>CFG・ControlNet</strong>：条件で誘導</p></div>
+    <div class="c6-card" id="c6-card2"><div class="c6-number">POINT 02</div><h3>構造と軌道の革命</h3><p><strong>U-Net → DiT / MMDiT</strong></p><p><strong>Flow Matching</strong>：直線的な軌道</p><p><strong>蒸留</strong>：1〜4ステップへ</p></div>
+    <div class="c6-card" id="c6-card3"><div class="c6-number">POINT 03</div><h3>広がる未来</h3><p>推論負荷と物理の壁へ挑戦</p><p><strong>離散拡散LLM</strong>への展開</p><p><strong>ワールドモデル</strong>とARの融合</p></div>
+  </div>
+  <div class="c6-next-bar" id="c6-next-bar"><div class="c6-next-label">📚 次回テーマ候補</div><div class="c6-chips"><span class="c6-chip">📐 Flow Matching と最適輸送</span><span class="c6-chip">🌍 ワールドモデルと物理AI</span><span class="c6-chip">⚡ 離散拡散LLMの仕組み</span></div></div>
+</div>
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders['ch06_summary'] = function (tl, cues) {
+  gsap.set('.c6-title-bar', { opacity: 0, y: 12 });
+  gsap.set('.c6-card', { opacity: 0, y: 18 });
+  gsap.set('#c6-next-bar', { opacity: 0, y: 10 });
+  tl.to('.c6-title-bar', { opacity: 1, y: 0, duration: 0.5 }, cues.c6_intro);
+  tl.to('#c6-card1', { opacity: 1, y: 0, duration: 0.55 }, cues.c6_p1);
+  tl.to('#c6-card2', { opacity: 1, y: 0, duration: 0.55 }, cues.c6_p2);
+  tl.to('#c6-card3', { opacity: 1, y: 0, duration: 0.55 }, cues.c6_p3);
+  tl.to('#c6-next-bar', { opacity: 1, y: 0, duration: 0.5 }, cues.c6_tsumugi_next);
+};
+</script>

@@ -1,0 +1,28 @@
+﻿<style>
+.c1-wrap{position:relative;width:100%;height:100%;font-family:"Noto Sans JP",sans-serif;color:#e7f8f5}.c1-hero{position:absolute;top:10px;left:0;right:0;text-align:center}.c1-badge{font-size:20px;color:#5eead4;letter-spacing:.15em}.c1-title{font-size:46px;font-weight:800;margin:8px}.c1-sub{font-size:25px;color:#a9c9c8}.c1-card{position:absolute;top:170px;width:46%;height:360px;box-sizing:border-box;padding:24px;border:1px solid #365b5b;border-radius:22px;background:#102830}.c1-left{left:3%}.c1-right{right:3%}.c1-card h2{font-size:25px;margin:0 0 18px}.c1-row{font-size:20px;padding:13px;margin:8px 0;border:1px solid #41605f;border-radius:12px}.c1-row strong{font-size:23px;margin-right:12px}.c1-highlight{border-color:#14b8a6;background:#12423f}.c1-frames{position:relative;height:230px}.c1-frame{position:absolute;top:12px;width:27%;text-align:center;font-size:16px}.c1-f1{left:0}.c1-f2{left:36.5%}.c1-f3{right:0}.c1-frame svg{width:100%;height:150px;background:#091b23;border:1px solid #416363;border-radius:14px}.c1-arrow{position:absolute;top:65px;font-size:34px;color:#5eead4}.c1-a1{left:29%}.c1-a2{left:65%}.c1-goals{position:absolute;top:565px;left:12%;right:12%;text-align:center;white-space:nowrap}.c1-pill{font-size:19px;padding:12px 17px;margin:0 5px;border:1px solid #327d75;border-radius:30px;background:#123d3b}
+</style>
+<div class="c1-wrap">
+  <div class="c1-hero"><div class="c1-badge">AIアーキテクチャ入門</div><div class="c1-title">Diffusion Modelの進化とこれから</div><div class="c1-sub">ノイズから世界を描くAI</div></div>
+  <div class="c1-card c1-left"><h2>生成パラダイムの比較</h2><div class="c1-row c1-gan"><strong>GAN</strong>学習不安定・モード崩壊</div><div class="c1-row c1-ar"><strong>Autoregressive</strong>1トークンずつ直列生成</div><div class="c1-row c1-highlight"><strong>Diffusion Model</strong>反復ノイズ除去で高品質・多様性</div></div>
+  <div class="c1-card c1-right"><h2>逆拡散：ノイズ除去の彫刻イメージ</h2><div class="c1-frames">
+    <div class="c1-frame c1-f1"><svg viewBox="0 0 160 140"><g fill="#91b4b2"><circle cx="18" cy="20" r="3"/><circle cx="51" cy="15" r="4"/><circle cx="100" cy="22" r="3"/><circle cx="139" cy="17" r="4"/><circle cx="30" cy="53" r="4"/><circle cx="76" cy="48" r="3"/><circle cx="121" cy="54" r="5"/><circle cx="16" cy="99" r="4"/><circle cx="55" cy="113" r="3"/><circle cx="91" cy="90" r="4"/><circle cx="142" cy="118" r="3"/></g></svg><div>Step T：純粋なノイズ x_T</div></div>
+    <div class="c1-frame c1-f2"><svg viewBox="0 0 160 140"><circle cx="105" cy="40" r="17" fill="#b69f67" opacity=".55"/><path d="M12 118 L57 63 L82 92 L105 72 L149 118Z" fill="#2b7772"/><g fill="#a0c7c3"><circle cx="22" cy="25" r="3"/><circle cx="69" cy="28" r="3"/><circle cx="136" cy="70" r="4"/><circle cx="35" cy="90" r="3"/></g></svg><div>Step t：輪郭が浮かぶ x_t</div></div>
+    <div class="c1-frame c1-f3"><svg viewBox="0 0 160 140"><circle cx="105" cy="38" r="19" fill="#fbbf70"/><path d="M10 119 L57 58 L82 89 L105 67 L150 119Z" fill="#14b8a6"/><path d="M57 58 L82 89 L70 80 L57 84 L46 74Z" fill="#bffbf0"/></svg><div>Step 0：鮮明な像 x_0</div></div>
+    <div class="c1-arrow c1-a1">→</div><div class="c1-arrow c1-a2">→</div>
+  </div></div>
+  <div class="c1-goals"><span class="c1-pill">① DDPM・LDM・CFGの土台</span><span class="c1-pill">② DiT &amp; Flow Matching 革命</span><span class="c1-pill">③ 拡散LLM・世界モデルの未来</span></div>
+</div>
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders['ch01_intro'] = function (tl, cues) {
+  var at = function (key, fallback) { return typeof cues[key] === 'number' ? cues[key] : fallback; };
+  gsap.set('.c1-hero, .c1-left, .c1-right, .c1-row, .c1-frame, .c1-arrow, .c1-pill', {opacity:0});
+  tl.to('.c1-hero', {opacity:1, duration:.6}, at('c1_title', .45));
+  tl.to('.c1-left', {opacity:1, duration:.45}, at('c1_paradigms', 15.0807));
+  tl.to('.c1-gan, .c1-ar', {opacity:1, duration:.45, stagger:.2}, at('c1_paradigms', 15.0807));
+  tl.to('.c1-highlight', {opacity:1, duration:.45}, at('c1_diffusion_idea', 22.138));
+  tl.to('.c1-right, .c1-f1', {opacity:1, duration:.45}, at('c1_zunda_sculpt', 28.664));
+  tl.to('.c1-a1, .c1-f2, .c1-a2, .c1-f3', {opacity:1, duration:.45, stagger:.45}, at('c1_reverse_visual', 34.678));
+  tl.to('.c1-pill', {opacity:1, duration:.4, stagger:.25}, at('c1_goals', 42.48));
+};
+</script>

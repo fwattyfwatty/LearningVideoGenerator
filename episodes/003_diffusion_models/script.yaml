@@ -1,0 +1,450 @@
+meta:
+  title: "Diffusion Modelの進化とこれから：ノイズから世界を描くAIの軌跡と未来"
+  series: "AIアーキテクチャ入門"
+  episode: "解説動画"
+  theme: "tech-dark"
+  accent_color: "#14b8a6"
+  fps: 30
+  width: 1920
+  height: 1080
+
+chapters:
+  - id: "ch01_intro"
+    title: "1. 導入：ノイズを消すだけで創れる理由"
+    layout: "title"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "こんにちは、四国めたんです。今日は『Diffusion Modelの進化とこれから』を解説しましょう。"
+        cue: "c1_title"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "ずんだもんなのだ！最近の画像や動画AI、写真そっくりだけど1ピクセルずつ描いているのだ？"
+        cue: "c1_zunda_ask"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "いいえ。以前の主流だったGANは学習が不安定で、似た絵ばかり出るモード崩壊が課題でした。"
+        cue: "c1_paradigms"
+        pause_after: 0.22
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そこで主役になったのがDiffusion Model。ノイズの砂嵐から少しずつ絵を削り出す発想です。"
+        cue: "c1_diffusion_idea"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "わざとノイズで壊した工程を、逆再生して彫刻みたいに掘り出すのだ！？"
+        cue: "c1_zunda_sculpt"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "その通りです。小さく段階的にノイズを取り除くため、学習が安定し高品質と多様性を両立できます。"
+        cue: "c1_reverse_visual"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "今回は①DDPMと潜在空間の土台、②DiTとFlow Matching革命、③拡散LLMと世界モデルの未来を辿ります。"
+        cue: "c1_goals"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "画像だけじゃなくて言葉や世界まで！？進化のストーリーをさっそく見ていくのだ！"
+        cue: "c1_go"
+        pause_after: 0.5
+
+  - id: "ch02_core_evolution"
+    title: "2. 土台と第1次進化：DDPM → LDM ＆ CFG"
+    layout: "default"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "まずは土台となった2020年のDDPMから見ましょう。仕組みは『拡散』と『逆拡散』の2段階です。"
+        cue: "c2_forward_intro"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "まずForward過程では、元画像x0にガウスノイズを少しずつ混ぜて完全な砂嵐xTにします。"
+        voice_text: "まずフォワード過程では、元画像エックスゼロにガウスノイズを少しずつ混ぜて完全な砂嵐エックスティーにします。"
+        cue: "c2_forward_eq"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "次にReverse過程で、モデルεθが『今どれだけノイズが乗っているか』を予測して引き算します。"
+        voice_text: "次にリバース過程で、モデルイプシロンシータが『今どれだけノイズが乗っているか』を予測して引き算します。"
+        cue: "c2_reverse_eq"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "直感的には、ノイズの海から『もっとも自然なデータが集まる山』へ勾配を登る動きに相当します。"
+        cue: "c2_score_intuition"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "絵そのものを一発で描くより、『邪魔なノイズだけ見つけて引く』ほうがずっと簡単なのだ！"
+        cue: "c2_zunda_sub"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "まさに核心です。ただ初期のDDPMは画素そのままを扱うため、計算が重すぎる弱点がありました。"
+        cue: "c2_zunda_yes"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そこで2022年に普及を爆発させたのが、Latent Diffusion Model、略してLDMです。"
+        cue: "c2_phase2_ldm"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "Stable Diffusionでも採用され、VAEで小さく圧縮した潜在空間zの中で拡散を行います。"
+        voice_text: "ステーブルディフュージョンでも採用され、ブイエーイーで小さく圧縮した潜在空間ゼットの中で拡散を行います。"
+        cue: "c2_vae_pipe"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "画像をギュッと圧縮してからノイズ除去して、最後に復元するから普通のGPUでも動いたのだ！"
+        cue: "c2_zunda_ldm"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "さらにプロンプト通りに描く鍵となったのが、Classifier-Free Guidance、通称CFGです。"
+        cue: "c2_cfg_intro"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "無条件予測ε∅と条件付き予測εcの差を強度wで増幅し、言葉に忠実な方向へ強く誘導します。"
+        voice_text: "無条件予測と条件付き予測の差を強さダブリューで増幅し、言葉に忠実な方向へ強く誘導します。"
+        cue: "c2_cfg_eq"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "さらにControlNetなども登場し、文字だけでなく構図やポーズまで自在に制御できるようになりました。"
+        cue: "c2_controlnet"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "圧縮して軽くして、言葉で狙い通り引っ張れるようになって、一気に実用化したのだ！"
+        cue: "c2_bridge"
+        pause_after: 0.5
+
+  - id: "ch03_dit_flow"
+    title: "3. 第2次進化：U-Net → DiT ＆ Flow Matching"
+    layout: "wide"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "ここから第2次進化です。初期の拡散モデルの中身は、畳み込みベースのU-Netが主役でした。"
+        cue: "c3_unet_limit"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "しかしU-Netは大規模化すると性能が伸び悩み、動画やテキストとの統合も複雑になりがちでした。"
+        cue: "c3_dit_birth"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そこで2023年に登場したのがDiT。潜在表現をパッチ列に分け、標準のTransformerで処理します。"
+        voice_text: "そこで2023年に登場したのがディーアイティー。潜在表現をパッチ列に分け、標準のトランスフォーマーで処理します。"
+        cue: "c3_dit_arch"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "adaLN-Zeroで条件を注入でき、計算量を増やすほど素直に性能が伸びるスケーリング則を獲得しました。"
+        cue: "c3_dit_scale"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "さらに文字と画像を同時処理するMMDiTへ発展し、SD3やFLUX、動画生成モデルの標準骨格となりました。"
+        cue: "c3_mmdit"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "画像も動画も全部同じTransformerの部品で作れるから、一気に巨大化できるようになったのだ！"
+        cue: "c3_zunda_dit"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "骨格と同時に起きたもう一つの大転換が、確率拡散からFlow Matchingへの軌道革命です。"
+        cue: "c3_phase2_flow"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "従来のDDPMはノイズから画像への経路が曲がりくねり、50から1000ステップも刻む必要がありました。"
+        cue: "c3_curved_path"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "一方Flow MatchingやRectified Flowは、ノイズx0とデータx1を直線で結びます。"
+        voice_text: "一方、フローマッチングやレクティファイドフローは、ノイズのエックスゼロとデータのエックスワンを直線で結びます。"
+        cue: "c3_flow_eq"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "各時刻でゴールへ向かう一定の速度場vθを学ぶため、遠回りせず少ないステップで一気に到達できます。"
+        voice_text: "各時刻でゴールへ向かう一定の速度場ブイシータを学ぶため、遠回りせず少ないステップで一気に到達できます。"
+        cue: "c3_velocity_field"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "くねくね道じゃなくて高速道路みたいに真っ直ぐ走るから、生成がめちゃくちゃ速くなるのだ！"
+        cue: "c3_zunda_straight"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "さらにConsistency Modelなどの蒸留技術を重ねると、わずか1から4ステップの超高速生成も可能です。"
+        cue: "c3_distill"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "骨格はDiT、走り方は直線フロー、仕上げに蒸留。現代の爆速生成の秘密が全部つながったのだ！"
+        cue: "c3_wrap"
+        pause_after: 0.5
+
+  - id: "ch04_tsumugi_walls"
+    title: "4. つむぎの質問：拡散モデルに残る3つの壁"
+    layout: "default"
+    lines:
+      - speaker: tsumugi
+        style: normal
+        emotion: sharp
+        mode: cutin
+        caption: "すごく進化してるのは分かったけど、動画が途中で崩れたり電気代がヤバい話も聞くよね？何が壁なの？"
+        cue: "c4_tsumugi_ask"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "核心を突いた疑問ですね、つむぎさん。現在の拡散モデルには大きく3つの構造的な壁が残っています。"
+        cue: "c4_three_walls"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1つ目は推論コストの壁です。何ステップも重いDiTを回すため、長尺動画や対話用途では計算負荷が膨大です。"
+        cue: "c4_wall1_cost"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "蒸留でステップ数を極端に減らすと速くなりますが、今度は細部の描写や出力の多様性が落ちやすいジレンマがあります。"
+        cue: "c4_wall1_tradeoff"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "2つ目は物理法則と長期一貫性の壁です。数秒は完璧でも、時間が伸びると誤差が蓄積して物体が消えたりします。"
+        cue: "c4_wall2_physics"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: worry
+        caption: "見た目は本物そっくりなのに、重力や物体の連続性まで本当に理解してるわけじゃないのだ…！"
+        cue: "c4_zunda_physics"
+        pause_after: 0.4
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "3つ目は表現の細部と社会実装の壁です。まずVAEで圧縮する過程で、細かい文字や指先が潰れやすい弱点があります。"
+        cue: "c4_phase2_vae_safety"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "このため最近は、あえてVAEを通さず画素空間で直接生成するアプローチも改めて研究されています。"
+        cue: "c4_pixel_return"
+        pause_after: 0.35
+      - speaker: tsumugi
+        style: normal
+        emotion: worry
+        mode: cutin
+        caption: "あと、狙った部分だけ正確に直す難しさや、ディープフェイク・著作権・電子透かしの問題も避けられないよね。"
+        cue: "c4_tsumugi_safety"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "その通りです。局所編集の因果制御に加え、電子透かしや来歴証明C2PAなど信頼性の仕組み作りが不可欠です。"
+        cue: "c4_safety_c2pa"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: normal
+        caption: "きれいなだけじゃゴールじゃなくて、物理の理解や安全性の壁を越える勝負に入っているのだね。"
+        cue: "c4_to_ch5"
+        pause_after: 0.5
+
+  - id: "ch05_frontier_future"
+    title: "5. これから：拡散LLM・世界モデル・AR融合"
+    layout: "wide"
+    lines:
+      - speaker: tsumugi
+        style: normal
+        emotion: sharp
+        mode: cutin
+        caption: "画像や動画は連続した数値だから拡散できるんだよね？言葉みたいな離散トークンにもDiffusionって使えるの？"
+        cue: "c5_tsumugi_text"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "まさに今もっとも熱い新領域が、テキストを拡散で生成する『離散拡散LLM』です。"
+        cue: "c5_dlm_intro"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "通常の自己回帰LLMは左から1語ずつ直列に書くため、長文になるほど待ち時間が増える制約があります。"
+        voice_text: "通常の自己回帰エルエルエムは左から1語ずつ直列に書くため、長文になるほど待ち時間が増える制約があります。"
+        cue: "c5_ar_vs_dlm"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "離散拡散LLMはノイズの代わりに[MASK]で隠し、双方向アテンションで複数箇所を並列に復元します。"
+        voice_text: "離散拡散エルエルエムはノイズの代わりにマスクで隠し、双方向アテンションで複数箇所を並列に復元します。"
+        cue: "c5_mask_denoise"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "LLaDA・Mercury・Gemini Diffusionが登場し、並列生成の速さや逆転の呪いへの強さで注目されています。"
+        cue: "c5_dlm_models"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "一方で従来のKVキャッシュをそのまま使いにくい課題もあり、高速化と推論品質の両立が活発に研究中です。"
+        cue: "c5_dlm_kv"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "文章までノイズ除去で一気に書き上げちゃうのだ！？しかも全体を見ながら直せるのが強そうなのだ！"
+        cue: "c5_zunda_dlm"
+        pause_after: 0.4
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "さらにDiffusionとFlowは、画像や文章を超えた3つの未来領域へ広がっています。"
+        cue: "c5_phase2_world"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1つ目は拡散型ワールドモデルです。動画生成に行動や3D幾何を条件付け、AIの物理シミュレータとして動かします。"
+        cue: "c5_world_model"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "2つ目はロボティクスです。Diffusion PolicyやFlow Policyが複雑な動作軌道を滑らかに生成します。"
+        cue: "c5_robotics"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "3つ目が統一マルチモーダル基盤です。論理や計画は自己回帰AR、視覚・物理・並列生成はDiffusionが担います。"
+        cue: "c5_unified_ar"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "どっちか一方が勝つんじゃなくて、得意な役割を1つのAIの中で合体させる時代になるのだ！"
+        cue: "c5_zunda_hybrid"
+        pause_after: 0.35
+      - speaker: tsumugi
+        style: normal
+        emotion: smile
+        mode: cutin
+        caption: "もう『お絵描きAIの技術』じゃなくて、言語も物理世界も扱う次世代の共通エンジンになってるんだね。"
+        cue: "c5_tsumugi_wow"
+        pause_after: 0.5
+
+  - id: "ch06_summary"
+    title: "6. まとめ：生成AIの「共通エンジン」へ"
+    layout: "default"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "では最後に、Diffusion Modelの進化とこれからを3つのポイントで振り返りましょう。"
+        cue: "c6_intro"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1つ目。DDPMのノイズ予測を土台に、VAE潜在空間のLDMとCFGが実用化を決定づけました。"
+        cue: "c6_p1"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "2つ目。U-NetからDiTへ骨格が変わり、Flow Matchingの直線軌道と蒸留で劇的に高速化しました。"
+        cue: "c6_p2"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "3つ目。推論負荷や物理の壁に挑みつつ、離散拡散LLM・世界モデル・AR融合へと領域が広がっています。"
+        cue: "c6_p3"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "ノイズを引くアイデアが、直線で速くなって、言葉やロボットの世界まで広がっているのがよく分かったのだ！"
+        cue: "c6_zunda_recap"
+        pause_after: 0.35
+      - speaker: tsumugi
+        style: normal
+        emotion: smile
+        mode: cutin
+        caption: "次はFlow Matchingと最適輸送の数式や、ワールドモデルの仕組みを深掘りする回も面白そうだね！"
+        cue: "c6_tsumugi_next"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "ぜひ次回もお楽しみに。ここまでご視聴ありがとうございました！"
+        cue: "c6_outro"
+        pause_after: 0.25
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "また次の動画で会うのだ！ばいばいなのだ！"
+        cue: "c6_bye"
+        pause_after: 0.6

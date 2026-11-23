@@ -1,0 +1,3654 @@
+{
+  "generatedAt": "2026-11-21T00:19:13.282Z",
+  "meta": {
+    "title": "会社員のための資産運用入門：新NISA・インデックス投資と「暴落・乱高下」を乗り越える歴史の知恵",
+    "series": "会社員のマネー教養入門",
+    "episode": "解説動画",
+    "theme": "editorial-warm",
+    "accent_color": null,
+    "bgm": null,
+    "fps": 30,
+    "width": 1920,
+    "height": 1080
+  },
+  "totalDuration": 657.6363,
+  "chapters": [
+    {
+      "id": "ch01_intro",
+      "title": "1. 導入：なぜ今、普通の会社員も「資産運用」なのか？",
+      "layout": "title",
+      "start": 0,
+      "end": 73.152,
+      "duration": 73.152,
+      "cues": {
+        "c1_title": 0.45,
+        "c1_zunda_ask": 7.3387,
+        "c1_inflation": 13.6407,
+        "c1_nisa_boom": 20.778,
+        "c1_nisa_numbers": 28.74,
+        "c1_zunda_scared": 39.5113,
+        "c1_volatility_empathy": 46.656,
+        "c1_goals_1": 53.8787,
+        "c1_goals_2": 60.596,
+        "c1_go": 67.1433
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch01_intro_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "こんにちは、四国めたんです。今日は『会社員のための資産運用入門』を解説します。",
+          "voiceText": "こんにちは、四国めたんです。今日は『会社員のためのしさんうんよう入門』を解説します。",
+          "audioFile": "audio/lines/ch01_intro_001.wav",
+          "hash": "7227e048c141dd21",
+          "start": 0.45,
+          "end": 6.9887,
+          "globalStart": 0.45,
+          "globalEnd": 6.9887,
+          "duration": 6.5387,
+          "mouthSpans": [
+            {
+              "start": 0.63,
+              "end": 1.23
+            },
+            {
+              "start": 1.53,
+              "end": 2.37
+            },
+            {
+              "start": 2.79,
+              "end": 3.15
+            },
+            {
+              "start": 3.45,
+              "end": 5.61
+            },
+            {
+              "start": 5.97,
+              "end": 6.81
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_title"
+        },
+        {
+          "index": 2,
+          "id": "ch01_intro_002",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "ずんだもんなのだ！職場でみんな新NISAをやってるけど、貯金だけじゃダメなのだ？",
+          "voiceText": "ずんだもんなのだ！職場でみんなしんニーサをやってるけど、貯金だけじゃダメなのだ？",
+          "audioFile": "audio/lines/ch01_intro_002.wav",
+          "hash": "db8b26073ab8e4a0",
+          "start": 7.3387,
+          "end": 13.2907,
+          "globalStart": 7.3387,
+          "globalEnd": 13.2907,
+          "duration": 5.952,
+          "mouthSpans": [
+            {
+              "start": 7.5187,
+              "end": 8.4787
+            },
+            {
+              "start": 9.0187,
+              "end": 9.8587
+            },
+            {
+              "start": 9.9787,
+              "end": 10.5787
+            },
+            {
+              "start": 10.6987,
+              "end": 11.1787
+            },
+            {
+              "start": 11.7787,
+              "end": 13.0987
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_zunda_ask"
+        },
+        {
+          "index": 3,
+          "id": "ch01_intro_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "銀行預金は元本が減らない安心感がある一方、物価が上がるとお金の実質価値は目減りします。",
+          "voiceText": "銀行預金は元本が減らない安心感がある一方、物価が上がるとお金のじっしつかちはめべりします。",
+          "audioFile": "audio/lines/ch01_intro_003.wav",
+          "hash": "5483f97d9c2ef15f",
+          "start": 13.6407,
+          "end": 20.478,
+          "globalStart": 13.6407,
+          "globalEnd": 20.478,
+          "duration": 6.8373,
+          "mouthSpans": [
+            {
+              "start": 13.7607,
+              "end": 16.7607
+            },
+            {
+              "start": 16.8807,
+              "end": 17.1207
+            },
+            {
+              "start": 17.6007,
+              "end": 20.3007
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c1_inflation"
+        },
+        {
+          "index": 4,
+          "id": "ch01_intro_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そんな背景もあり、2024年の新NISA開始以降、日本でも個人の資産運用が一気に広がりました。",
+          "voiceText": "そんな背景もあり、2024年のしんニーサ開始以降、日本でも個人のしさんうんようが一気に広がりました。",
+          "audioFile": "audio/lines/ch01_intro_004.wav",
+          "hash": "7be7d0573368df33",
+          "start": 20.778,
+          "end": 28.49,
+          "globalStart": 20.778,
+          "globalEnd": 28.49,
+          "duration": 7.712,
+          "mouthSpans": [
+            {
+              "start": 20.898,
+              "end": 22.038
+            },
+            {
+              "start": 22.458,
+              "end": 24.858
+            },
+            {
+              "start": 25.278,
+              "end": 28.398
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c1_nisa_boom"
+        },
+        {
+          "index": 5,
+          "id": "ch01_intro_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "金融庁の統計では、2026年6月末時点でNISA口座数は約3,048万口座、累計買付額は約85兆円です。",
+          "voiceText": "金融庁の統計では、2026年6月末時点でニーサ口座数は約3048万口座、累計買付額は約85兆円です。",
+          "audioFile": "audio/lines/ch01_intro_005.wav",
+          "hash": "c53caced1f9c0f5d",
+          "start": 28.74,
+          "end": 39.1613,
+          "globalStart": 28.74,
+          "globalEnd": 39.1613,
+          "duration": 10.4213,
+          "mouthSpans": [
+            {
+              "start": 28.92,
+              "end": 30.36
+            },
+            {
+              "start": 30.66,
+              "end": 35.82
+            },
+            {
+              "start": 36.3,
+              "end": 37.62
+            },
+            {
+              "start": 37.74,
+              "end": 39
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_nisa_numbers"
+        },
+        {
+          "index": 6,
+          "id": "ch01_intro_006",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "worry",
+          "se": null,
+          "caption": "すごい広がりなのだ！でも最近のニュースだと株価が乱高下していて、損しそうで怖いのだ。",
+          "voiceText": "すごい広がりなのだ！でも最近のニュースだと株価がらんこうげしていて、損しそうで怖いのだ。",
+          "audioFile": "audio/lines/ch01_intro_006.wav",
+          "hash": "2dc9fdea41238337",
+          "start": 39.5113,
+          "end": 46.306,
+          "globalStart": 39.5113,
+          "globalEnd": 46.306,
+          "duration": 6.7947,
+          "mouthSpans": [
+            {
+              "start": 39.8113,
+              "end": 40.9513
+            },
+            {
+              "start": 41.3113,
+              "end": 41.7913
+            },
+            {
+              "start": 41.9113,
+              "end": 42.4513
+            },
+            {
+              "start": 42.5713,
+              "end": 44.1913
+            },
+            {
+              "start": 44.3113,
+              "end": 44.4313
+            },
+            {
+              "start": 44.7913,
+              "end": 45.4513
+            },
+            {
+              "start": 45.6313,
+              "end": 46.1713
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_zunda_scared"
+        },
+        {
+          "index": 7,
+          "id": "ch01_intro_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "その感覚はとても自然です。普通の会社員は仕事が忙しく、毎日チャートを見ていられませんよね。",
+          "voiceText": "その感覚はとても自然です。普通の会社員は仕事が忙しく、毎日チャートを見ていられませんよね。",
+          "audioFile": "audio/lines/ch01_intro_007.wav",
+          "hash": "c105028873f9cb07",
+          "start": 46.656,
+          "end": 53.5787,
+          "globalStart": 46.656,
+          "globalEnd": 53.5787,
+          "duration": 6.9227,
+          "mouthSpans": [
+            {
+              "start": 46.776,
+              "end": 48.456
+            },
+            {
+              "start": 48.996,
+              "end": 51.036
+            },
+            {
+              "start": 51.396,
+              "end": 53.436
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c1_volatility_empathy"
+        },
+        {
+          "index": 8,
+          "id": "ch01_intro_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そこで今日は①新NISAとインデックス投資の仕組み、②最近の乱高下と歴史的な暴落の正体、",
+          "voiceText": "そこで今日は①しんニーサとインデックス投資の仕組み、②最近のらんこうげと歴史的なぼうらくの正体、",
+          "audioFile": "audio/lines/ch01_intro_008.wav",
+          "hash": "3d2021f0b62eb3e9",
+          "start": 53.8787,
+          "end": 60.396,
+          "globalStart": 53.8787,
+          "globalEnd": 60.396,
+          "duration": 6.5173,
+          "mouthSpans": [
+            {
+              "start": 53.9987,
+              "end": 55.9187
+            },
+            {
+              "start": 56.0387,
+              "end": 56.9987
+            },
+            {
+              "start": 57.3587,
+              "end": 60.2987
+            }
+          ],
+          "pauseAfter": 0.2,
+          "cue": "c1_goals_1"
+        },
+        {
+          "index": 9,
+          "id": "ch01_intro_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "そして③忙しい会社員が負けにくい設計ルール、この3本柱で分かりやすく整理します。",
+          "voiceText": "そして③忙しい会社員が負けにくい設計ルール、この3本柱で分かりやすく整理します。",
+          "audioFile": "audio/lines/ch01_intro_009.wav",
+          "hash": "35d669d3fa812a56",
+          "start": 60.596,
+          "end": 66.7933,
+          "globalStart": 60.596,
+          "globalEnd": 66.7933,
+          "duration": 6.1973,
+          "mouthSpans": [
+            {
+              "start": 60.716,
+              "end": 63.236
+            },
+            {
+              "start": 63.356,
+              "end": 63.836
+            },
+            {
+              "start": 64.256,
+              "end": 66.596
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_goals_2"
+        },
+        {
+          "index": 10,
+          "id": "ch01_intro_010",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "これなら投資初心者でも安心して学べそうなのだ！さっそく見ていくのだ！",
+          "voiceText": "これなら投資初心者でも安心して学べそうなのだ！さっそく見ていくのだ！",
+          "audioFile": "audio/lines/ch01_intro_010.wav",
+          "hash": "d1471dc6046b7e2b",
+          "start": 67.1433,
+          "end": 72.402,
+          "globalStart": 67.1433,
+          "globalEnd": 72.402,
+          "duration": 5.2587,
+          "mouthSpans": [
+            {
+              "start": 67.3233,
+              "end": 67.7433
+            },
+            {
+              "start": 67.8633,
+              "end": 70.5633
+            },
+            {
+              "start": 71.2233,
+              "end": 71.7633
+            },
+            {
+              "start": 71.8833,
+              "end": 72.2433
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c1_go"
+        }
+      ]
+    },
+    {
+      "id": "ch02_nisa_and_index",
+      "title": "2. 新NISAとインデックス投資：なぜ「オルカン・S&P500」なのか？",
+      "layout": "default",
+      "start": 73.152,
+      "end": 190.5414,
+      "duration": 117.3894,
+      "cues": {
+        "c2_nisa_intro": 0.45,
+        "c2_tax_zero": 7.6193,
+        "c2_nisa_limits": 15.8766,
+        "c2_nisa_reuse": 26.3206,
+        "c2_pace_note": 34.3433,
+        "c2_zunda_box": 42.8853,
+        "c2_phase2_index": 49.3193,
+        "c2_index_meaning": 56.51,
+        "c2_spiva_fact": 64.6927,
+        "c2_cost_reason": 74.5394,
+        "c2_orukan_fee": 82.1461,
+        "c2_compound_gap": 91.8648,
+        "c2_zunda_index": 101.1001,
+        "c2_bridge": 108.8421
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch02_nisa_and_index_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "まず押さえたいのは、新NISAは金融商品ではなく『税金がかからない器』だということです。",
+          "voiceText": "まず押さえたいのは、しんニーサは金融商品ではなく『税金がかからない器』だということです。",
+          "audioFile": "audio/lines/ch02_nisa_and_index_001.wav",
+          "hash": "e83f600a497fe55b",
+          "start": 0.45,
+          "end": 7.3193,
+          "globalStart": 73.602,
+          "globalEnd": 80.4713,
+          "duration": 6.8693,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 1.65
+            },
+            {
+              "start": 1.95,
+              "end": 4.05
+            },
+            {
+              "start": 4.47,
+              "end": 4.71
+            },
+            {
+              "start": 4.83,
+              "end": 6.03
+            },
+            {
+              "start": 6.33,
+              "end": 7.17
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_nisa_intro"
+        },
+        {
+          "index": 2,
+          "id": "ch02_nisa_and_index_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "通常の課税口座では売却益や配当に約20.315%の税金がかかりますが、NISAなら0円になります。",
+          "voiceText": "通常の課税口座では売却益や配当におよそ20.3パーセントの税金がかかりますが、ニーサなら0円になります。",
+          "audioFile": "audio/lines/ch02_nisa_and_index_002.wav",
+          "hash": "7adc038c6c420021",
+          "start": 7.6193,
+          "end": 15.5766,
+          "globalStart": 80.7713,
+          "globalEnd": 88.7286,
+          "duration": 7.9573,
+          "mouthSpans": [
+            {
+              "start": 7.7393,
+              "end": 13.6193
+            },
+            {
+              "start": 13.9193,
+              "end": 15.3593
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_tax_zero"
+        },
+        {
+          "index": 3,
+          "id": "ch02_nisa_and_index_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "年間枠はつみたて投資枠120万円と成長投資枠240万円の計360万円、生涯の限度額は1,800万円です。",
+          "voiceText": "年間枠はつみたて投資枠120万円と成長投資枠240万円の計360万円、生涯の限度額は1800万円です。",
+          "audioFile": "audio/lines/ch02_nisa_and_index_003.wav",
+          "hash": "dfee6d24b555d609",
+          "start": 15.8766,
+          "end": 26.0206,
+          "globalStart": 89.0286,
+          "globalEnd": 99.1726,
+          "duration": 10.144,
+          "mouthSpans": [
+            {
+              "start": 15.9966,
+              "end": 17.7366
+            },
+            {
+              "start": 17.8566,
+              "end": 22.8966
+            },
+            {
+              "start": 23.3166,
+              "end": 25.8366
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_nisa_limits"
+        },
+        {
+          "index": 4,
+          "id": "ch02_nisa_and_index_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "成長投資枠はそのうち1,200万円までで、売却すれば購入した簿価分の枠が翌年以降に復活します。",
+          "voiceText": "成長投資枠はそのうち1200万円までで、売却すれば購入した簿価分の枠が翌年以降に復活します。",
+          "audioFile": "audio/lines/ch02_nisa_and_index_004.wav",
+          "hash": "2c741c77ace3d740",
+          "start": 26.3206,
+          "end": 34.0433,
+          "globalStart": 99.4726,
+          "globalEnd": 107.1953,
+          "duration": 7.7227,
+          "mouthSpans": [
+            {
+              "start": 26.5006,
+              "end": 29.5006
+            },
+            {
+              "start": 29.9206,
+              "end": 33.8806
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_nisa_reuse"
+        },
+        {
+          "index": 5,
+          "id": "ch02_nisa_and_index_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "もちろん年360万円を埋める必要はありません。月1万円や3万円など家計のペースで無期限に使えます。",
+          "voiceText": "もちろん年360万円を埋める必要はありません。月1万円や3万円など家計のペースで無期限に使えます。",
+          "audioFile": "audio/lines/ch02_nisa_and_index_005.wav",
+          "hash": "41dea193becbd0e6",
+          "start": 34.3433,
+          "end": 42.5353,
+          "globalStart": 107.4953,
+          "globalEnd": 115.6873,
+          "duration": 8.192,
+          "mouthSpans": [
+            {
+              "start": 34.4633,
+              "end": 36.8633
+            },
+            {
+              "start": 36.9833,
+              "end": 38.0033
+            },
+            {
+              "start": 38.6633,
+              "end": 42.3233
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_pace_note"
+        },
+        {
+          "index": 6,
+          "id": "ch02_nisa_and_index_006",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "なるほど、お得な非課税ボックスなのだ！じゃあ中には何を入れる人が多いのだ？",
+          "voiceText": "なるほど、お得なひかぜいボックスなのだ！じゃあ中には何を入れる人が多いのだ？",
+          "audioFile": "audio/lines/ch02_nisa_and_index_006.wav",
+          "hash": "6bb5c313c31c67ad",
+          "start": 42.8853,
+          "end": 48.8693,
+          "globalStart": 116.0373,
+          "globalEnd": 122.0213,
+          "duration": 5.984,
+          "mouthSpans": [
+            {
+              "start": 43.0653,
+              "end": 43.5453
+            },
+            {
+              "start": 43.9053,
+              "end": 44.3853
+            },
+            {
+              "start": 44.5653,
+              "end": 45.0453
+            },
+            {
+              "start": 45.3453,
+              "end": 45.7653
+            },
+            {
+              "start": 46.1253,
+              "end": 46.7253
+            },
+            {
+              "start": 46.9653,
+              "end": 47.5653
+            },
+            {
+              "start": 47.7453,
+              "end": 48.7053
+            }
+          ],
+          "pauseAfter": 0.45,
+          "cue": "c2_zunda_box"
+        },
+        {
+          "index": 7,
+          "id": "ch02_nisa_and_index_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "会社員に最も支持されているのが、オルカンやS&P500などの低コストなインデックス投資信託です。",
+          "voiceText": "会社員に最も支持されているのが、オルカンやエスアンドピーごひゃくなどの低コストなインデックスとうししんたくです。",
+          "audioFile": "audio/lines/ch02_nisa_and_index_007.wav",
+          "hash": "837ff47c6665e6ad",
+          "start": 49.3193,
+          "end": 56.21,
+          "globalStart": 122.4713,
+          "globalEnd": 129.362,
+          "duration": 6.8907,
+          "mouthSpans": [
+            {
+              "start": 49.4393,
+              "end": 51.5993
+            },
+            {
+              "start": 51.8393,
+              "end": 54.7793
+            },
+            {
+              "start": 54.8993,
+              "end": 56.0393
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_phase2_index"
+        },
+        {
+          "index": 8,
+          "id": "ch02_nisa_and_index_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "インデックス投資とは、個別株を当てに行くのではなく、世界や米国など市場全体に丸ごと分散投資する手法です。",
+          "voiceText": "インデックス投資とは、個別株を当てに行くのではなく、世界や米国など市場全体に丸ごとぶんさんとうしする手法です。",
+          "audioFile": "audio/lines/ch02_nisa_and_index_008.wav",
+          "hash": "9c38b17b1d85cce4",
+          "start": 56.51,
+          "end": 64.3927,
+          "globalStart": 129.662,
+          "globalEnd": 137.5447,
+          "duration": 7.8827,
+          "mouthSpans": [
+            {
+              "start": 56.63,
+              "end": 57.83
+            },
+            {
+              "start": 58.13,
+              "end": 59.93
+            },
+            {
+              "start": 60.29,
+              "end": 64.25
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_index_meaning"
+        },
+        {
+          "index": 9,
+          "id": "ch02_nisa_and_index_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "実は国際調査SPIVAの10〜15年データでは、プロが銘柄を選ぶアクティブファンドの約8〜9割超が市場平均に負けています。",
+          "voiceText": "実は国際調査スピバの10年から15年のデータでは、プロが銘柄を選ぶアクティブファンドの約8割から9割超が市場平均に負けています。",
+          "audioFile": "audio/lines/ch02_nisa_and_index_009.wav",
+          "hash": "b8cc33f50a057d4c",
+          "start": 64.6927,
+          "end": 74.2394,
+          "globalStart": 137.8447,
+          "globalEnd": 147.3914,
+          "duration": 9.5467,
+          "mouthSpans": [
+            {
+              "start": 64.8127,
+              "end": 68.2927
+            },
+            {
+              "start": 68.7127,
+              "end": 69.9727
+            },
+            {
+              "start": 70.0927,
+              "end": 70.8727
+            },
+            {
+              "start": 70.9927,
+              "end": 74.0527
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_spiva_fact"
+        },
+        {
+          "index": 10,
+          "id": "ch02_nisa_and_index_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "プロ同士が競う市場で勝ち続けるのは難しく、さらに高い運用コストが毎年リターンを削ってしまうからです。",
+          "voiceText": "プロ同士が競う市場で勝ち続けるのは難しく、さらに高い運用コストが毎年リターンを削ってしまうからです。",
+          "audioFile": "audio/lines/ch02_nisa_and_index_010.wav",
+          "hash": "128eb89b34dbcbc2",
+          "start": 74.5394,
+          "end": 81.8461,
+          "globalStart": 147.6914,
+          "globalEnd": 154.9981,
+          "duration": 7.3067,
+          "mouthSpans": [
+            {
+              "start": 74.7194,
+              "end": 76.2194
+            },
+            {
+              "start": 76.3394,
+              "end": 77.6594
+            },
+            {
+              "start": 78.0794,
+              "end": 79.2794
+            },
+            {
+              "start": 79.3994,
+              "end": 81.6794
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_cost_reason"
+        },
+        {
+          "index": 11,
+          "id": "ch02_nisa_and_index_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "アクティブファンドの信託報酬は年1〜2%台が多い一方、オルカンなど最安水準は年率0.05775%前後です。",
+          "voiceText": "アクティブファンドの信託報酬は年1から2パーセント台が多い一方、オルカンなど最安水準は年率およそ0.06パーセント未満です。",
+          "audioFile": "audio/lines/ch02_nisa_and_index_011.wav",
+          "hash": "3babedc0023d6cc8",
+          "start": 82.1461,
+          "end": 91.5648,
+          "globalStart": 155.2981,
+          "globalEnd": 164.7168,
+          "duration": 9.4187,
+          "mouthSpans": [
+            {
+              "start": 82.5061,
+              "end": 83.5261
+            },
+            {
+              "start": 83.6461,
+              "end": 86.2861
+            },
+            {
+              "start": 86.4661,
+              "end": 86.6461
+            },
+            {
+              "start": 87.0061,
+              "end": 90.1861
+            },
+            {
+              "start": 90.3661,
+              "end": 91.3861
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_orukan_fee"
+        },
+        {
+          "index": 12,
+          "id": "ch02_nisa_and_index_012",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "この年1%以上のコスト差は、20年・30年と複利で運用するほど数百万円単位の大きな差になって現れます。",
+          "voiceText": "この年1パーセント以上のコスト差は、20年・30年とふくりで運用するほど数百万円単位の大きな差になって現れます。",
+          "audioFile": "audio/lines/ch02_nisa_and_index_012.wav",
+          "hash": "01c9c86de953b5f1",
+          "start": 91.8648,
+          "end": 100.7501,
+          "globalStart": 165.0168,
+          "globalEnd": 173.9021,
+          "duration": 8.8853,
+          "mouthSpans": [
+            {
+              "start": 91.9848,
+              "end": 94.2648
+            },
+            {
+              "start": 94.5648,
+              "end": 95.1048
+            },
+            {
+              "start": 95.6448,
+              "end": 96.4248
+            },
+            {
+              "start": 96.5448,
+              "end": 99.7848
+            },
+            {
+              "start": 99.9048,
+              "end": 100.5648
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_compound_gap"
+        },
+        {
+          "index": 13,
+          "id": "ch02_nisa_and_index_013",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "プロに高い手数料を払うより、安いコストで市場の平均点を丸ごと買う方が合理的だったのだ！",
+          "voiceText": "プロに高い手数料を払うより、安いコストで市場の平均点を丸ごと買う方が合理的だったのだ！",
+          "audioFile": "audio/lines/ch02_nisa_and_index_013.wav",
+          "hash": "3c40d5b55b6ea37e",
+          "start": 101.1001,
+          "end": 108.4921,
+          "globalStart": 174.2521,
+          "globalEnd": 181.6441,
+          "duration": 7.392,
+          "mouthSpans": [
+            {
+              "start": 101.2801,
+              "end": 101.5801
+            },
+            {
+              "start": 101.7601,
+              "end": 102.0601
+            },
+            {
+              "start": 102.2401,
+              "end": 103.2601
+            },
+            {
+              "start": 103.8001,
+              "end": 104.3401
+            },
+            {
+              "start": 104.4601,
+              "end": 105.1801
+            },
+            {
+              "start": 105.3001,
+              "end": 107.1001
+            },
+            {
+              "start": 107.2201,
+              "end": 107.8201
+            },
+            {
+              "start": 107.9401,
+              "end": 108.3601
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_zunda_index"
+        },
+        {
+          "index": 14,
+          "id": "ch02_nisa_and_index_014",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "はい。ただ合理的なインデックス投資でも、短期的には激しい乱高下が起きます。最近の相場を見てみましょう。",
+          "voiceText": "はい。ただ合理的なインデックス投資でも、短期的には激しいらんこうげが起きます。最近の相場を見てみましょう。",
+          "audioFile": "audio/lines/ch02_nisa_and_index_014.wav",
+          "hash": "90e3536186d06f1a",
+          "start": 108.8421,
+          "end": 116.6394,
+          "globalStart": 181.9941,
+          "globalEnd": 189.7914,
+          "duration": 7.7973,
+          "mouthSpans": [
+            {
+              "start": 108.9621,
+              "end": 109.2621
+            },
+            {
+              "start": 109.8021,
+              "end": 111.7821
+            },
+            {
+              "start": 112.1421,
+              "end": 112.3221
+            },
+            {
+              "start": 112.4421,
+              "end": 114.4221
+            },
+            {
+              "start": 114.8421,
+              "end": 116.5221
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c2_bridge"
+        }
+      ]
+    },
+    {
+      "id": "ch03_recent_volatility",
+      "title": "3. 最近の乱高下と急落：2024年〜2026年11月の荒波の正体",
+      "layout": "wide",
+      "start": 190.5414,
+      "end": 344.4909,
+      "duration": 153.9495,
+      "cues": {
+        "c3_recent_open": 0.45,
+        "c3_aug2024": 8.7607,
+        "c3_aug2024_rec": 18.3867,
+        "c3_apr2025": 28.0627,
+        "c3_2026_swings": 37.5254,
+        "c3_nov2026_trigger": 47.5181,
+        "c3_nov2026_us": 56.7141,
+        "c3_nov2026_vix": 66.5608,
+        "c3_nov2026_jp": 76.7808,
+        "c3_zunda_roller": 86.0161,
+        "c3_short_term_norm": 92.2008,
+        "c3_phase2_why": 99.1361,
+        "c3_fx_double": 106.1028,
+        "c3_prospect_theory": 116.9095,
+        "c3_loss_pain": 124.5408,
+        "c3_panic_sell_trap": 131.3795,
+        "c3_zunda_mind": 139.9215,
+        "c3_to_ch4": 146.1168
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch03_recent_volatility_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "新NISAが始まった2024年から2026年にかけて、株式市場は何度も急落と反発を繰り返しました。",
+          "voiceText": "しんニーサが始まった2024年から2026年にかけて、株式市場は何度もきゅうらくと反発を繰り返しました。",
+          "audioFile": "audio/lines/ch03_recent_volatility_001.wav",
+          "hash": "b3ffaadaa764003d",
+          "start": 0.45,
+          "end": 8.4607,
+          "globalStart": 190.9914,
+          "globalEnd": 199.0021,
+          "duration": 8.0107,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 4.59
+            },
+            {
+              "start": 4.95,
+              "end": 6.27
+            },
+            {
+              "start": 6.39,
+              "end": 6.63
+            },
+            {
+              "start": 6.75,
+              "end": 8.37
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_recent_open"
+        },
+        {
+          "index": 2,
+          "id": "ch03_recent_volatility_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "記憶に新しいのが2024年8月の急落です。日銀の追加利上げと米雇用統計の悪化、急激な円高が重なりました。",
+          "voiceText": "記憶に新しいのが2024年8月のきゅうらくです。日銀の追加利上げと米雇用統計の悪化、急激なえんだかが重なりました。",
+          "audioFile": "audio/lines/ch03_recent_volatility_002.wav",
+          "hash": "a193995033f475a9",
+          "start": 8.7607,
+          "end": 18.1367,
+          "globalStart": 199.3021,
+          "globalEnd": 208.6781,
+          "duration": 9.376,
+          "mouthSpans": [
+            {
+              "start": 8.9407,
+              "end": 12.4207
+            },
+            {
+              "start": 12.8407,
+              "end": 15.4207
+            },
+            {
+              "start": 15.5407,
+              "end": 15.6607
+            },
+            {
+              "start": 16.2007,
+              "end": 17.2207
+            },
+            {
+              "start": 17.3407,
+              "end": 18.0007
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_aug2024"
+        },
+        {
+          "index": 3,
+          "id": "ch03_recent_volatility_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "日経平均は1日で4,451円安と史上最大の下げ幅を記録しましたが、その後は過度な悲観が和らぎ急反発しました。",
+          "voiceText": "日経平均は1日で4451円安と史上最大の下げ幅を記録しましたが、その後は過度な悲観が和らぎ急反発しました。",
+          "audioFile": "audio/lines/ch03_recent_volatility_003.wav",
+          "hash": "586089cc8f96ec79",
+          "start": 18.3867,
+          "end": 27.7627,
+          "globalStart": 208.9281,
+          "globalEnd": 218.3041,
+          "duration": 9.376,
+          "mouthSpans": [
+            {
+              "start": 18.5067,
+              "end": 18.6267
+            },
+            {
+              "start": 18.7467,
+              "end": 24.5067
+            },
+            {
+              "start": 24.7467,
+              "end": 25.5867
+            },
+            {
+              "start": 25.7067,
+              "end": 26.4867
+            },
+            {
+              "start": 26.6067,
+              "end": 27.6867
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_aug2024_rec"
+        },
+        {
+          "index": 4,
+          "id": "ch03_recent_volatility_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "続く2025年4月には米国の相互関税発表で日米株が急落しましたが、延期や緩和観測を受けてV字回復しています。",
+          "voiceText": "続く2025年4月には米国の相互関税発表で日米株が急落しましたが、延期や緩和観測を受けてブイ字回復しています。",
+          "audioFile": "audio/lines/ch03_recent_volatility_004.wav",
+          "hash": "1cff2b814d673dae",
+          "start": 28.0627,
+          "end": 37.2254,
+          "globalStart": 218.6041,
+          "globalEnd": 227.7668,
+          "duration": 9.1627,
+          "mouthSpans": [
+            {
+              "start": 28.1827,
+              "end": 31.6027
+            },
+            {
+              "start": 31.7227,
+              "end": 33.8827
+            },
+            {
+              "start": 34.1827,
+              "end": 36.3427
+            },
+            {
+              "start": 36.4627,
+              "end": 37.0027
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_apr2025"
+        },
+        {
+          "index": 5,
+          "id": "ch03_recent_volatility_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "さらに2026年も、米国の金利動向や中東情勢、AI投資の過熱懸念が出るたびに一進一退の乱高下が続いています。",
+          "voiceText": "さらに2026年も、米国の金利動向や中東情勢、エーアイ投資の過熱懸念が出るたびに一進一退のらんこうげが続いています。",
+          "audioFile": "audio/lines/ch03_recent_volatility_005.wav",
+          "hash": "0f6301e5f25b903d",
+          "start": 37.5254,
+          "end": 47.1681,
+          "globalStart": 228.0668,
+          "globalEnd": 237.7095,
+          "duration": 9.6427,
+          "mouthSpans": [
+            {
+              "start": 37.6454,
+              "end": 39.2654
+            },
+            {
+              "start": 39.6254,
+              "end": 42.0254
+            },
+            {
+              "start": 42.5654,
+              "end": 45.2054
+            },
+            {
+              "start": 45.3254,
+              "end": 46.9454
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_2026_swings"
+        },
+        {
+          "index": 6,
+          "id": "ch03_recent_volatility_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "特に2026年11月は、米中間選挙後のAI・データセンター規制懸念や過剰投資への警戒が重なりました。",
+          "voiceText": "特に2026年11月は、米ちゅうかんせんきょ後のエーアイ・データセンターきせいけねんやかじょうとうしへの警戒が重なりました。",
+          "audioFile": "audio/lines/ch03_recent_volatility_006.wav",
+          "hash": "e52e8c667c85419f",
+          "start": 47.5181,
+          "end": 56.4141,
+          "globalStart": 238.0595,
+          "globalEnd": 246.9555,
+          "duration": 8.896,
+          "mouthSpans": [
+            {
+              "start": 47.6381,
+              "end": 49.9181
+            },
+            {
+              "start": 50.2781,
+              "end": 52.0181
+            },
+            {
+              "start": 52.4981,
+              "end": 56.3381
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_nov2026_trigger"
+        },
+        {
+          "index": 7,
+          "id": "ch03_recent_volatility_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "さらにFRBの金利高止まり懸念でAI半導体株が売られ、S&P500は高値から10%安の調整局面へ入りました。",
+          "voiceText": "さらにエフアールビーの金利たかどまり懸念でエーアイはんどうたいかぶが売られ、エスアンドピーごひゃくはたかねから10パーセント安のちょうせいきょくめんへ入りました。",
+          "audioFile": "audio/lines/ch03_recent_volatility_007.wav",
+          "hash": "a50e7f92ed989f81",
+          "start": 56.7141,
+          "end": 66.2608,
+          "globalStart": 247.2555,
+          "globalEnd": 256.8022,
+          "duration": 9.5467,
+          "mouthSpans": [
+            {
+              "start": 56.8341,
+              "end": 61.0941
+            },
+            {
+              "start": 61.5141,
+              "end": 62.0541
+            },
+            {
+              "start": 62.1741,
+              "end": 63.4341
+            },
+            {
+              "start": 63.5541,
+              "end": 66.1341
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_nov2026_us"
+        },
+        {
+          "index": 8,
+          "id": "ch03_recent_volatility_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "市場の不安を示す恐怖指数VIXも28台へ急上昇し、日本でも11月20日に日経平均が1日で3,007円安となりました。",
+          "voiceText": "市場の不安を示す恐怖指数ビックスも28台へ急上昇し、日本でも11月20日に日経平均が1日で3007円安となりました。",
+          "audioFile": "audio/lines/ch03_recent_volatility_008.wav",
+          "hash": "0f15c97ecf669937",
+          "start": 66.5608,
+          "end": 76.4808,
+          "globalStart": 257.1022,
+          "globalEnd": 267.0222,
+          "duration": 9.92,
+          "mouthSpans": [
+            {
+              "start": 66.6808,
+              "end": 70.8808
+            },
+            {
+              "start": 71.3008,
+              "end": 73.1608
+            },
+            {
+              "start": 73.2808,
+              "end": 76.4008
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_nov2026_vix"
+        },
+        {
+          "index": 9,
+          "id": "ch03_recent_volatility_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "終値は5万6千円台と約7カ月ぶりの安値まで下落し、まさに今この瞬間も相場の荒波を体感している人は多いはずです。",
+          "voiceText": "おわりねは5万6千円台と約7カ月ぶりのやすねまで下落し、まさに今この瞬間も相場のあらなみを体感している人は多いはずです。",
+          "audioFile": "audio/lines/ch03_recent_volatility_009.wav",
+          "hash": "0d166dd8198a2e93",
+          "start": 76.7808,
+          "end": 85.6661,
+          "globalStart": 267.3222,
+          "globalEnd": 276.2075,
+          "duration": 8.8853,
+          "mouthSpans": [
+            {
+              "start": 76.9008,
+              "end": 80.9208
+            },
+            {
+              "start": 81.2208,
+              "end": 84.4008
+            },
+            {
+              "start": 84.5208,
+              "end": 85.4808
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_nov2026_jp"
+        },
+        {
+          "index": 10,
+          "id": "ch03_recent_volatility_010",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "worry",
+          "se": null,
+          "caption": "たった3年で何回もジェットコースターみたいに揺れてるのだ！心臓に悪いのだよ。",
+          "voiceText": "たった3年で何回もジェットコースターみたいに揺れてるのだ！心臓に悪いのだよ。",
+          "audioFile": "audio/lines/ch03_recent_volatility_010.wav",
+          "hash": "87281ea4e5b2df74",
+          "start": 86.0161,
+          "end": 91.8508,
+          "globalStart": 276.5575,
+          "globalEnd": 282.3922,
+          "duration": 5.8347,
+          "mouthSpans": [
+            {
+              "start": 86.4361,
+              "end": 87.8761
+            },
+            {
+              "start": 87.9961,
+              "end": 88.3561
+            },
+            {
+              "start": 88.4761,
+              "end": 89.9161
+            },
+            {
+              "start": 90.3361,
+              "end": 91.7161
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_zunda_roller"
+        },
+        {
+          "index": 11,
+          "id": "ch03_recent_volatility_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "実は年に1〜2回の10%前後の調整は、株式市場では珍しいことではありません。",
+          "voiceText": "実は年に1から2回の10パーセント前後の調整は、株式市場では珍しいことではありません。",
+          "audioFile": "audio/lines/ch03_recent_volatility_011.wav",
+          "hash": "bc52e09a7a261d8d",
+          "start": 92.2008,
+          "end": 98.6861,
+          "globalStart": 282.7422,
+          "globalEnd": 289.2275,
+          "duration": 6.4853,
+          "mouthSpans": [
+            {
+              "start": 92.3208,
+              "end": 95.7408
+            },
+            {
+              "start": 96.0408,
+              "end": 98.6208
+            }
+          ],
+          "pauseAfter": 0.45,
+          "cue": "c3_short_term_norm"
+        },
+        {
+          "index": 12,
+          "id": "ch03_recent_volatility_012",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "ただ、日本の会社員が乱高下で特に不安になりやすいのには、2つの明確な理由があります。",
+          "voiceText": "ただ、日本の会社員がらんこうげで特に不安になりやすいのには、2つの明確な理由があります。",
+          "audioFile": "audio/lines/ch03_recent_volatility_012.wav",
+          "hash": "1d9a7cc3ea5109e5",
+          "start": 99.1361,
+          "end": 105.8028,
+          "globalStart": 289.6775,
+          "globalEnd": 296.3442,
+          "duration": 6.6667,
+          "mouthSpans": [
+            {
+              "start": 99.2561,
+              "end": 99.5561
+            },
+            {
+              "start": 99.9161,
+              "end": 100.0361
+            },
+            {
+              "start": 100.1561,
+              "end": 103.4561
+            },
+            {
+              "start": 103.8761,
+              "end": 105.6161
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_phase2_why"
+        },
+        {
+          "index": 13,
+          "id": "ch03_recent_volatility_013",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "1つ目は『株価×為替』のダブル変動です。米国株や全世界株は、株安と同時に円高が進むと円建て評価額がより大きく下がります。",
+          "voiceText": "1つ目は『株価×かわせ』のダブル変動です。米国株や全世界株は、株安と同時にえんだかが進むとえんだてひょうかがくがより大きく下がります。",
+          "audioFile": "audio/lines/ch03_recent_volatility_013.wav",
+          "hash": "4a46efd33001af1d",
+          "start": 106.1028,
+          "end": 116.6095,
+          "globalStart": 296.6442,
+          "globalEnd": 307.1509,
+          "duration": 10.5067,
+          "mouthSpans": [
+            {
+              "start": 106.3428,
+              "end": 106.8228
+            },
+            {
+              "start": 107.1828,
+              "end": 108.2028
+            },
+            {
+              "start": 108.5628,
+              "end": 109.6428
+            },
+            {
+              "start": 110.0628,
+              "end": 110.4228
+            },
+            {
+              "start": 110.5428,
+              "end": 111.8028
+            },
+            {
+              "start": 112.1628,
+              "end": 112.5228
+            },
+            {
+              "start": 112.6428,
+              "end": 115.7028
+            },
+            {
+              "start": 115.8228,
+              "end": 116.4228
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_fx_double"
+        },
+        {
+          "index": 14,
+          "id": "ch03_recent_volatility_014",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "2つ目は人間の心理です。行動経済学のプロスペクト理論では『損失回避バイアス』が知られています。",
+          "voiceText": "2つ目は人間の心理です。行動経済学のプロスペクト理論では『そんしつかいひばいあす』が知られています。",
+          "audioFile": "audio/lines/ch03_recent_volatility_014.wav",
+          "hash": "547f374cef4e2f2d",
+          "start": 116.9095,
+          "end": 124.2908,
+          "globalStart": 307.4509,
+          "globalEnd": 314.8322,
+          "duration": 7.3813,
+          "mouthSpans": [
+            {
+              "start": 117.0895,
+              "end": 118.6495
+            },
+            {
+              "start": 119.0695,
+              "end": 120.4495
+            },
+            {
+              "start": 120.7495,
+              "end": 121.4095
+            },
+            {
+              "start": 121.7695,
+              "end": 122.9095
+            },
+            {
+              "start": 123.2695,
+              "end": 124.1095
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_prospect_theory"
+        },
+        {
+          "index": 15,
+          "id": "ch03_recent_volatility_015",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "人は10万円得した喜びより、10万円損した痛みを約2倍強く感じるとされているんです。",
+          "voiceText": "人は10万円得した喜びより、10万円損した痛みを約2倍強く感じるとされているんです。",
+          "audioFile": "audio/lines/ch03_recent_volatility_015.wav",
+          "hash": "b881ad58744275cf",
+          "start": 124.5408,
+          "end": 131.0795,
+          "globalStart": 315.0822,
+          "globalEnd": 321.6209,
+          "duration": 6.5387,
+          "mouthSpans": [
+            {
+              "start": 124.7808,
+              "end": 126.7008
+            },
+            {
+              "start": 127.1808,
+              "end": 129.4608
+            },
+            {
+              "start": 129.5808,
+              "end": 130.9008
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_loss_pain"
+        },
+        {
+          "index": 16,
+          "id": "ch03_recent_volatility_016",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "worry",
+          "se": null,
+          "caption": "そのためSNSの悲観ニュースを見ると耐えられなくなり、一番安い底値で売ってしまう『狼狽売り』が起きやすいのです。",
+          "voiceText": "そのためエスエヌエスの悲観ニュースを見ると耐えられなくなり、一番安いそこねで売ってしまう『ろうばいうり』が起きやすいのです。",
+          "audioFile": "audio/lines/ch03_recent_volatility_016.wav",
+          "hash": "f75c7b3e7ea5e88e",
+          "start": 131.3795,
+          "end": 139.5715,
+          "globalStart": 321.9209,
+          "globalEnd": 330.1129,
+          "duration": 8.192,
+          "mouthSpans": [
+            {
+              "start": 131.5595,
+              "end": 132.8195
+            },
+            {
+              "start": 132.9395,
+              "end": 134.7995
+            },
+            {
+              "start": 135.2195,
+              "end": 137.0795
+            },
+            {
+              "start": 137.3795,
+              "end": 137.9795
+            },
+            {
+              "start": 138.3995,
+              "end": 139.4195
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_panic_sell_trap"
+        },
+        {
+          "index": 17,
+          "id": "ch03_recent_volatility_017",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "株と円高のダブルパンチに、人間の本能が重なってパニック売りしちゃうのだね！",
+          "voiceText": "株とえんだかのダブルパンチに、人間の本能が重なってパニック売りしちゃうのだね！",
+          "audioFile": "audio/lines/ch03_recent_volatility_017.wav",
+          "hash": "f32585d418d85c02",
+          "start": 139.9215,
+          "end": 145.7668,
+          "globalStart": 330.4629,
+          "globalEnd": 336.3082,
+          "duration": 5.8453,
+          "mouthSpans": [
+            {
+              "start": 140.1015,
+              "end": 141.0615
+            },
+            {
+              "start": 141.2415,
+              "end": 141.9015
+            },
+            {
+              "start": 142.3815,
+              "end": 143.4615
+            },
+            {
+              "start": 143.7015,
+              "end": 144.3615
+            },
+            {
+              "start": 144.5415,
+              "end": 145.6215
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_zunda_mind"
+        },
+        {
+          "index": 18,
+          "id": "ch03_recent_volatility_018",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "その通りです。では、過去にもっと深刻な大暴落が起きたときはどうだったのか、歴史を見ていきましょう。",
+          "voiceText": "その通りです。では、過去にもっと深刻な大ぼうらくが起きたときはどうだったのか、歴史を見ていきましょう。",
+          "audioFile": "audio/lines/ch03_recent_volatility_018.wav",
+          "hash": "95a5167a38a25d0b",
+          "start": 146.1168,
+          "end": 153.1995,
+          "globalStart": 336.6582,
+          "globalEnd": 343.7409,
+          "duration": 7.0827,
+          "mouthSpans": [
+            {
+              "start": 146.2968,
+              "end": 147.0168
+            },
+            {
+              "start": 147.4368,
+              "end": 147.7368
+            },
+            {
+              "start": 148.0368,
+              "end": 150.0768
+            },
+            {
+              "start": 150.1968,
+              "end": 151.4568
+            },
+            {
+              "start": 151.8168,
+              "end": 153.0768
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c3_to_ch4"
+        }
+      ]
+    },
+    {
+      "id": "ch04_crash_history",
+      "title": "4. 暴落の歴史に学ぶ：ITバブル・リーマン・コロナと「15年の法則」",
+      "layout": "default",
+      "start": 344.4909,
+      "end": 466.3943,
+      "duration": 121.9034,
+      "cues": {
+        "c4_tsumugi_ask": 0.45,
+        "c4_history_intro": 7.8793,
+        "c4_it_bubble": 16.3713,
+        "c4_lehman": 25.162,
+        "c4_covid": 33.462,
+        "c4_hard_truth": 43.2873,
+        "c4_zunda_half": 52.288,
+        "c4_phase2_longterm": 59.5967,
+        "c4_short_vs_long": 66.574,
+        "c4_15yr_rule": 74.8633,
+        "c4_dca_power": 84.006,
+        "c4_caveat": 93.394,
+        "c4_tsumugi_insight": 100.432,
+        "c4_zunda_calm": 108.1207,
+        "c4_to_ch5": 114.0067
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch04_crash_history_001",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "sharp",
+          "se": null,
+          "caption": "2024年や2025年はわりと早く戻ったけど、歴史には何年も戻らない大暴落もあったよね？",
+          "voiceText": "2024年や2025年はわりと早く戻ったけど、歴史には何年も戻らない大ぼうらくもあったよね？",
+          "audioFile": "audio/lines/ch04_crash_history_001.wav",
+          "hash": "33b48f8e2ea3a37e",
+          "start": 0.45,
+          "end": 7.4793,
+          "globalStart": 344.9409,
+          "globalEnd": 351.9702,
+          "duration": 7.0293,
+          "mouthSpans": [
+            {
+              "start": 0.51,
+              "end": 1.65
+            },
+            {
+              "start": 1.77,
+              "end": 3.99
+            },
+            {
+              "start": 4.77,
+              "end": 7.23
+            }
+          ],
+          "pauseAfter": 0.4,
+          "cue": "c4_tsumugi_ask"
+        },
+        {
+          "index": 2,
+          "id": "ch04_crash_history_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "とても重要な視点です。米国S&P500の歴史を振り返ると、深刻な3つの大暴落が教訓になります。",
+          "voiceText": "とても重要な視点です。米国エスアンドピーごひゃくの歴史を振り返ると、深刻な3つの大ぼうらくが教訓になります。",
+          "audioFile": "audio/lines/ch04_crash_history_002.wav",
+          "hash": "9a3b08e99cacbe37",
+          "start": 7.8793,
+          "end": 16.0713,
+          "globalStart": 352.3702,
+          "globalEnd": 360.5622,
+          "duration": 8.192,
+          "mouthSpans": [
+            {
+              "start": 7.9993,
+              "end": 9.3793
+            },
+            {
+              "start": 9.8593,
+              "end": 10.8793
+            },
+            {
+              "start": 10.9993,
+              "end": 12.7993
+            },
+            {
+              "start": 13.2193,
+              "end": 15.8593
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c4_history_intro"
+        },
+        {
+          "index": 3,
+          "id": "ch04_crash_history_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "1つ目は2000年のITバブル崩壊。最大約50%下落し、元の水準に戻るまで約5〜7年かかりました。",
+          "voiceText": "1つ目は2000年のアイティーバブル崩壊。最大約50パーセント下落し、元の水準に戻るまで約5から7年かかりました。",
+          "audioFile": "audio/lines/ch04_crash_history_003.wav",
+          "hash": "8ac73d640bd17b90",
+          "start": 16.3713,
+          "end": 24.862,
+          "globalStart": 360.8622,
+          "globalEnd": 369.3529,
+          "duration": 8.4907,
+          "mouthSpans": [
+            {
+              "start": 16.6113,
+              "end": 18.8913
+            },
+            {
+              "start": 19.3113,
+              "end": 21.3513
+            },
+            {
+              "start": 21.6513,
+              "end": 24.7713
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c4_it_bubble"
+        },
+        {
+          "index": 4,
+          "id": "ch04_crash_history_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "2つ目は2008年のリーマンショック。最大約55%も下落し、回復まで約5年半を要しています。",
+          "voiceText": "2つ目は2008年のリーマンショック。最大約55パーセントも下落し、回復まで約5年半を要しています。",
+          "audioFile": "audio/lines/ch04_crash_history_004.wav",
+          "hash": "e00ab42117731fc5",
+          "start": 25.162,
+          "end": 33.162,
+          "globalStart": 369.6529,
+          "globalEnd": 377.6529,
+          "duration": 8,
+          "mouthSpans": [
+            {
+              "start": 25.342,
+              "end": 27.322
+            },
+            {
+              "start": 27.442,
+              "end": 27.562
+            },
+            {
+              "start": 28.042,
+              "end": 30.322
+            },
+            {
+              "start": 30.742,
+              "end": 30.922
+            },
+            {
+              "start": 31.042,
+              "end": 32.902
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c4_lehman"
+        },
+        {
+          "index": 5,
+          "id": "ch04_crash_history_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "3つ目は2020年のコロナショック。最大約34%急落しましたが、各国の大規模対策もあり約5カ月で回復しました。",
+          "voiceText": "3つ目は2020年のコロナショック。最大約34パーセントきゅうらくしましたが、各国の大規模対策もあり約5カ月で回復しました。",
+          "audioFile": "audio/lines/ch04_crash_history_005.wav",
+          "hash": "ee1a0ccf2baf46e9",
+          "start": 33.462,
+          "end": 42.9873,
+          "globalStart": 377.9529,
+          "globalEnd": 387.4782,
+          "duration": 9.5253,
+          "mouthSpans": [
+            {
+              "start": 33.582,
+              "end": 33.702
+            },
+            {
+              "start": 33.822,
+              "end": 35.622
+            },
+            {
+              "start": 36.282,
+              "end": 39.162
+            },
+            {
+              "start": 39.462,
+              "end": 42.222
+            },
+            {
+              "start": 42.342,
+              "end": 42.882
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c4_covid"
+        },
+        {
+          "index": 6,
+          "id": "ch04_crash_history_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "つまり株式100%で運用する以上、『資産が一時的に半分になり、5年以上戻らない時期』も想定が必要です。",
+          "voiceText": "つまり株式100パーセントで運用する以上、『資産が一時的に半分になり、5年以上戻らない時期』も想定が必要です。",
+          "audioFile": "audio/lines/ch04_crash_history_006.wav",
+          "hash": "3ff427b8c4d5154e",
+          "start": 43.2873,
+          "end": 51.938,
+          "globalStart": 387.7782,
+          "globalEnd": 396.4289,
+          "duration": 8.6507,
+          "mouthSpans": [
+            {
+              "start": 43.4073,
+              "end": 44.3073
+            },
+            {
+              "start": 44.4873,
+              "end": 46.0473
+            },
+            {
+              "start": 46.4673,
+              "end": 48.2673
+            },
+            {
+              "start": 48.6273,
+              "end": 50.1273
+            },
+            {
+              "start": 50.4873,
+              "end": 51.2073
+            },
+            {
+              "start": 51.3273,
+              "end": 51.7473
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_hard_truth"
+        },
+        {
+          "index": 7,
+          "id": "ch04_crash_history_007",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "半分になって5年も戻らないことがあるのだ！？それでも長期投資が勧められるのはなぜなのだ？",
+          "voiceText": "半分になって5年も戻らないことがあるのだ！？それでも長期投資が勧められるのはなぜなのだ？",
+          "audioFile": "audio/lines/ch04_crash_history_007.wav",
+          "hash": "c04ca409d60ea7d3",
+          "start": 52.288,
+          "end": 59.1467,
+          "globalStart": 396.7789,
+          "globalEnd": 403.6376,
+          "duration": 6.8587,
+          "mouthSpans": [
+            {
+              "start": 52.468,
+              "end": 53.128
+            },
+            {
+              "start": 53.248,
+              "end": 53.788
+            },
+            {
+              "start": 54.028,
+              "end": 55.408
+            },
+            {
+              "start": 55.828,
+              "end": 56.548
+            },
+            {
+              "start": 56.728,
+              "end": 57.208
+            },
+            {
+              "start": 57.388,
+              "end": 58.108
+            },
+            {
+              "start": 58.228,
+              "end": 58.948
+            }
+          ],
+          "pauseAfter": 0.45,
+          "cue": "c4_zunda_half"
+        },
+        {
+          "index": 8,
+          "id": "ch04_crash_history_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "答えは『保有期間を長く取るほど、リターンのブレがプラス圏へ収束してきた歴史』にあります。",
+          "voiceText": "答えは『保有期間を長く取るほど、リターンのブレがプラス圏へ収束してきた歴史』にあります。",
+          "audioFile": "audio/lines/ch04_crash_history_008.wav",
+          "hash": "a624d090828a1294",
+          "start": 59.5967,
+          "end": 66.274,
+          "globalStart": 404.0876,
+          "globalEnd": 410.7649,
+          "duration": 6.6773,
+          "mouthSpans": [
+            {
+              "start": 59.7167,
+              "end": 60.1967
+            },
+            {
+              "start": 60.5567,
+              "end": 60.9167
+            },
+            {
+              "start": 61.0367,
+              "end": 61.5167
+            },
+            {
+              "start": 61.6367,
+              "end": 62.1167
+            },
+            {
+              "start": 62.4767,
+              "end": 64.6367
+            },
+            {
+              "start": 64.7567,
+              "end": 65.2367
+            },
+            {
+              "start": 65.5967,
+              "end": 66.0767
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c4_phase2_longterm"
+        },
+        {
+          "index": 9,
+          "id": "ch04_crash_history_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "S&P500などの過去データでは、1〜5年の短期保有は運の要素が大きく、元本割れの確率も高めです。",
+          "voiceText": "エスアンドピーごひゃくなどの過去データでは、1から5年の短期保有は運の要素が大きく、がんぽんわれの確率も高めです。",
+          "audioFile": "audio/lines/ch04_crash_history_009.wav",
+          "hash": "fdca880ce2e2a075",
+          "start": 66.574,
+          "end": 74.5633,
+          "globalStart": 411.0649,
+          "globalEnd": 419.0542,
+          "duration": 7.9893,
+          "mouthSpans": [
+            {
+              "start": 66.694,
+              "end": 67.234
+            },
+            {
+              "start": 67.354,
+              "end": 68.974
+            },
+            {
+              "start": 69.274,
+              "end": 71.914
+            },
+            {
+              "start": 72.094,
+              "end": 72.214
+            },
+            {
+              "start": 72.574,
+              "end": 74.374
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c4_short_vs_long"
+        },
+        {
+          "index": 10,
+          "id": "ch04_crash_history_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "一方、15〜20年以上持ち続けた場合、最悪の暴落直前に始めても元本割れを回避できたデータが残っています。",
+          "voiceText": "一方、15から20年以上持ち続けた場合、最悪のぼうらく直前に始めてもがんぽんわれを回避できたデータが残っています。",
+          "audioFile": "audio/lines/ch04_crash_history_010.wav",
+          "hash": "b5ed5e2f55276f2c",
+          "start": 74.8633,
+          "end": 83.706,
+          "globalStart": 419.3542,
+          "globalEnd": 428.1969,
+          "duration": 8.8427,
+          "mouthSpans": [
+            {
+              "start": 75.2833,
+              "end": 75.5233
+            },
+            {
+              "start": 76.0033,
+              "end": 78.4033
+            },
+            {
+              "start": 78.8233,
+              "end": 79.6633
+            },
+            {
+              "start": 79.8433,
+              "end": 82.1833
+            },
+            {
+              "start": 82.3033,
+              "end": 83.4433
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c4_15yr_rule"
+        },
+        {
+          "index": 11,
+          "id": "ch04_crash_history_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "さらに毎月定額で買う『ドルコスト平均法』なら、暴落時は安く多くの口数を買えるため、回復時の伸びが大きくなります。",
+          "voiceText": "さらに毎月定額で買う『どるこすとへいきんほう』なら、ぼうらく時は安く多くのくちすうを買えるため、回復時の伸びが大きくなります。",
+          "audioFile": "audio/lines/ch04_crash_history_011.wav",
+          "hash": "c8f7baaa9780e1d2",
+          "start": 84.006,
+          "end": 93.094,
+          "globalStart": 428.4969,
+          "globalEnd": 437.5849,
+          "duration": 9.088,
+          "mouthSpans": [
+            {
+              "start": 84.126,
+              "end": 84.786
+            },
+            {
+              "start": 84.906,
+              "end": 85.686
+            },
+            {
+              "start": 85.986,
+              "end": 87.246
+            },
+            {
+              "start": 87.606,
+              "end": 87.846
+            },
+            {
+              "start": 88.146,
+              "end": 89.586
+            },
+            {
+              "start": 89.706,
+              "end": 90.786
+            },
+            {
+              "start": 91.146,
+              "end": 91.326
+            },
+            {
+              "start": 91.446,
+              "end": 92.286
+            },
+            {
+              "start": 92.466,
+              "end": 92.886
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c4_dca_power"
+        },
+        {
+          "index": 12,
+          "id": "ch04_crash_history_012",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "もちろん過去データが将来を100%保証するわけではありませんが、時間を味方にするのが王道です。",
+          "voiceText": "もちろん過去データが将来を100パーセント保証するわけではありませんが、時間を味方にするのが王道です。",
+          "audioFile": "audio/lines/ch04_crash_history_012.wav",
+          "hash": "eacd5214e2579bce",
+          "start": 93.394,
+          "end": 100.082,
+          "globalStart": 437.8849,
+          "globalEnd": 444.5729,
+          "duration": 6.688,
+          "mouthSpans": [
+            {
+              "start": 93.514,
+              "end": 95.254
+            },
+            {
+              "start": 95.434,
+              "end": 97.714
+            },
+            {
+              "start": 98.014,
+              "end": 99.934
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_caveat"
+        },
+        {
+          "index": 13,
+          "id": "ch04_crash_history_013",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "normal",
+          "se": null,
+          "caption": "なるほど。『すぐ戻る』と楽観するんじゃなく、『5年戻らなくても生活できる設計』が本質なんだね。",
+          "voiceText": "なるほど。『すぐ戻る』と楽観するんじゃなく、『5年戻らなくても生活できる設計』が本質なんだね。",
+          "audioFile": "audio/lines/ch04_crash_history_013.wav",
+          "hash": "e39089196b26a771",
+          "start": 100.432,
+          "end": 107.7707,
+          "globalStart": 444.9229,
+          "globalEnd": 452.2616,
+          "duration": 7.3387,
+          "mouthSpans": [
+            {
+              "start": 100.552,
+              "end": 101.032
+            },
+            {
+              "start": 101.452,
+              "end": 101.992
+            },
+            {
+              "start": 102.412,
+              "end": 103.612
+            },
+            {
+              "start": 103.972,
+              "end": 105.832
+            },
+            {
+              "start": 105.952,
+              "end": 106.132
+            },
+            {
+              "start": 106.672,
+              "end": 107.032
+            },
+            {
+              "start": 107.152,
+              "end": 107.632
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_tsumugi_insight"
+        },
+        {
+          "index": 14,
+          "id": "ch04_crash_history_014",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "暴落を当てるんじゃなくて、暴落が来ても持ち続けられる準備をしておくのだね！",
+          "voiceText": "ぼうらくを当てるんじゃなくて、ぼうらくが来ても持ち続けられる準備をしておくのだね！",
+          "audioFile": "audio/lines/ch04_crash_history_014.wav",
+          "hash": "ab09e83bfdb5043f",
+          "start": 108.1207,
+          "end": 113.6567,
+          "globalStart": 452.6116,
+          "globalEnd": 458.1476,
+          "duration": 5.536,
+          "mouthSpans": [
+            {
+              "start": 108.3007,
+              "end": 109.5007
+            },
+            {
+              "start": 109.6807,
+              "end": 109.8007
+            },
+            {
+              "start": 110.1607,
+              "end": 110.7007
+            },
+            {
+              "start": 110.8807,
+              "end": 111.1807
+            },
+            {
+              "start": 111.4207,
+              "end": 112.6207
+            },
+            {
+              "start": 112.7407,
+              "end": 113.5207
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_zunda_calm"
+        },
+        {
+          "index": 15,
+          "id": "ch04_crash_history_015",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "その通りです。では具体的に、忙しい会社員はどう家計と運用を設計すればよいか見ていきましょう。",
+          "voiceText": "その通りです。では具体的に、忙しい会社員はどう家計と運用を設計すればよいか見ていきましょう。",
+          "audioFile": "audio/lines/ch04_crash_history_015.wav",
+          "hash": "f065c83093201901",
+          "start": 114.0067,
+          "end": 121.1534,
+          "globalStart": 458.4976,
+          "globalEnd": 465.6443,
+          "duration": 7.1467,
+          "mouthSpans": [
+            {
+              "start": 114.1267,
+              "end": 114.9067
+            },
+            {
+              "start": 115.3267,
+              "end": 116.2867
+            },
+            {
+              "start": 116.6467,
+              "end": 119.2267
+            },
+            {
+              "start": 119.3467,
+              "end": 120.4867
+            },
+            {
+              "start": 120.6067,
+              "end": 121.0267
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c4_to_ch5"
+        }
+      ]
+    },
+    {
+      "id": "ch05_salaryman_strategy",
+      "title": "5. つむぎの疑問：忙しい会社員はどう設計すれば失敗しない？",
+      "layout": "wide",
+      "start": 466.3943,
+      "end": 586.6011,
+      "duration": 120.2068,
+      "cues": {
+        "c5_tsumugi_how": 0.45,
+        "c5_step_intro": 7.4847,
+        "c5_step1_cash": 14.11,
+        "c5_step2_auto": 23.5407,
+        "c5_step3_risk": 31.7447,
+        "c5_ideco_pair": 41.2927,
+        "c5_ideco_tradeoff": 49.4574,
+        "c5_zunda_steps": 56.6767,
+        "c5_phase2_pitfalls": 64.5827,
+        "c5_pitfall1_sell": 71.8374,
+        "c5_pitfall1_bestdays": 80.2154,
+        "c5_pitfall2_cost": 87.8647,
+        "c5_pitfall3_deadline": 95.5994,
+        "c5_zunda_avoid": 105.1014,
+        "c5_wrap": 112.6301
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch05_salaryman_strategy_001",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "sharp",
+          "se": null,
+          "caption": "理屈は分かったけど、会社員は実際いくら投資に回せばいいの？やりがちな失敗も知りたいな。",
+          "voiceText": "理屈は分かったけど、会社員は実際いくら投資に回せばいいの？やりがちな失敗も知りたいな。",
+          "audioFile": "audio/lines/ch05_salaryman_strategy_001.wav",
+          "hash": "f2210f8e4279bffc",
+          "start": 0.45,
+          "end": 7.0847,
+          "globalStart": 466.8443,
+          "globalEnd": 473.479,
+          "duration": 6.6347,
+          "mouthSpans": [
+            {
+              "start": 0.81,
+              "end": 1.71
+            },
+            {
+              "start": 2.13,
+              "end": 3.21
+            },
+            {
+              "start": 3.33,
+              "end": 4.83
+            },
+            {
+              "start": 5.31,
+              "end": 5.97
+            },
+            {
+              "start": 6.09,
+              "end": 6.99
+            }
+          ],
+          "pauseAfter": 0.4,
+          "cue": "c5_tsumugi_how"
+        },
+        {
+          "index": 2,
+          "id": "ch05_salaryman_strategy_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "会社員が相場に振り回されず続けるための設計は、3つのステップで考えるのが確実です。",
+          "voiceText": "会社員が相場に振り回されず続けるための設計は、3つのステップで考えるのが確実です。",
+          "audioFile": "audio/lines/ch05_salaryman_strategy_002.wav",
+          "hash": "e6f34f469b3df32d",
+          "start": 7.4847,
+          "end": 13.81,
+          "globalStart": 473.879,
+          "globalEnd": 480.2043,
+          "duration": 6.3253,
+          "mouthSpans": [
+            {
+              "start": 7.6047,
+              "end": 10.4847
+            },
+            {
+              "start": 10.6047,
+              "end": 10.9647
+            },
+            {
+              "start": 11.2647,
+              "end": 11.3847
+            },
+            {
+              "start": 11.5047,
+              "end": 11.9247
+            },
+            {
+              "start": 12.0447,
+              "end": 13.6047
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_step_intro"
+        },
+        {
+          "index": 3,
+          "id": "ch05_salaryman_strategy_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "ステップ1は『生活防衛資金』の確保。まず生活費の6〜12カ月分は、絶対に投資せず現金で別管理します。",
+          "voiceText": "ステップ1は『せいかつぼうえいしきん』の確保。まず生活費の6から12カ月分は、絶対に投資せず現金で別管理します。",
+          "audioFile": "audio/lines/ch05_salaryman_strategy_003.wav",
+          "hash": "1431a5a43ef233fd",
+          "start": 14.11,
+          "end": 23.2407,
+          "globalStart": 480.5043,
+          "globalEnd": 489.635,
+          "duration": 9.1307,
+          "mouthSpans": [
+            {
+              "start": 14.35,
+              "end": 14.47
+            },
+            {
+              "start": 14.59,
+              "end": 15.01
+            },
+            {
+              "start": 15.37,
+              "end": 16.33
+            },
+            {
+              "start": 16.45,
+              "end": 16.57
+            },
+            {
+              "start": 16.93,
+              "end": 17.47
+            },
+            {
+              "start": 17.77,
+              "end": 18.79
+            },
+            {
+              "start": 18.91,
+              "end": 20.17
+            },
+            {
+              "start": 20.53,
+              "end": 23.05
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_step1_cash"
+        },
+        {
+          "index": 4,
+          "id": "ch05_salaryman_strategy_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "ステップ2は『積立の自動化』。給料日直後に自動で引き落とす設定にして、感情で売買しない仕組みにします。",
+          "voiceText": "ステップ2は『つみたての自動化』。給料日直後に自動で引き落とす設定にして、感情で売買しない仕組みにします。",
+          "audioFile": "audio/lines/ch05_salaryman_strategy_004.wav",
+          "hash": "c3c378f1450fbff6",
+          "start": 23.5407,
+          "end": 31.4447,
+          "globalStart": 489.935,
+          "globalEnd": 497.839,
+          "duration": 7.904,
+          "mouthSpans": [
+            {
+              "start": 23.7807,
+              "end": 24.3207
+            },
+            {
+              "start": 24.6807,
+              "end": 25.7607
+            },
+            {
+              "start": 26.1807,
+              "end": 27.5607
+            },
+            {
+              "start": 27.7407,
+              "end": 28.9407
+            },
+            {
+              "start": 29.3007,
+              "end": 31.2807
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_step2_auto"
+        },
+        {
+          "index": 5,
+          "id": "ch05_salaryman_strategy_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "ステップ3は『眠れるリスク配分』。株が半分になっても仕事に支障が出ない金額に収め、不安なら現金や債券を増やします。",
+          "voiceText": "ステップ3は『眠れるリスク配分』。株が半分になっても仕事に支障が出ない金額に収め、不安なら現金やさいけんを増やします。",
+          "audioFile": "audio/lines/ch05_salaryman_strategy_005.wav",
+          "hash": "c400c419d400dbe7",
+          "start": 31.7447,
+          "end": 40.9927,
+          "globalStart": 498.139,
+          "globalEnd": 507.387,
+          "duration": 9.248,
+          "mouthSpans": [
+            {
+              "start": 31.9847,
+              "end": 32.6447
+            },
+            {
+              "start": 33.0047,
+              "end": 34.1447
+            },
+            {
+              "start": 34.6847,
+              "end": 38.1647
+            },
+            {
+              "start": 38.6447,
+              "end": 40.8047
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_step3_risk"
+        },
+        {
+          "index": 6,
+          "id": "ch05_salaryman_strategy_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "なお老後資金が目的なら、掛金が全額所得控除になって節税効果が高いiDeCoの併用も有力な選択肢です。",
+          "voiceText": "なお老後資金が目的なら、掛金が全額しょとくこうじょになって節税効果が高いイデコの併用も有力な選択肢です。",
+          "audioFile": "audio/lines/ch05_salaryman_strategy_006.wav",
+          "hash": "aceb29e7e9f689e4",
+          "start": 41.2927,
+          "end": 49.2074,
+          "globalStart": 507.687,
+          "globalEnd": 515.6017,
+          "duration": 7.9147,
+          "mouthSpans": [
+            {
+              "start": 41.4127,
+              "end": 42.5527
+            },
+            {
+              "start": 42.6727,
+              "end": 43.0927
+            },
+            {
+              "start": 43.3927,
+              "end": 44.6527
+            },
+            {
+              "start": 44.7727,
+              "end": 49.0327
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_ideco_pair"
+        },
+        {
+          "index": 7,
+          "id": "ch05_salaryman_strategy_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "ただiDeCoは原則60歳まで引き出せないため、いつでも使える新NISAと目的で使い分けるのがコツです。",
+          "voiceText": "ただイデコは原則60歳まで引き出せないため、いつでも使えるしんニーサと目的で使い分けるのがコツです。",
+          "audioFile": "audio/lines/ch05_salaryman_strategy_007.wav",
+          "hash": "293371545724b626",
+          "start": 49.4574,
+          "end": 56.3267,
+          "globalStart": 515.8517,
+          "globalEnd": 522.721,
+          "duration": 6.8693,
+          "mouthSpans": [
+            {
+              "start": 49.5774,
+              "end": 51.5574
+            },
+            {
+              "start": 51.6774,
+              "end": 52.4574
+            },
+            {
+              "start": 52.7574,
+              "end": 54.4374
+            },
+            {
+              "start": 54.5574,
+              "end": 56.1174
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_ideco_tradeoff"
+        },
+        {
+          "index": 8,
+          "id": "ch05_salaryman_strategy_008",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "まずは現金の防波堤を作ってから、余剰資金で自動積立！これなら本業に集中できるのだ！",
+          "voiceText": "まずは現金の防波堤を作ってから、よじょうしきんで自動つみたて！これなら本業に集中できるのだ！",
+          "audioFile": "audio/lines/ch05_salaryman_strategy_008.wav",
+          "hash": "f4e907e477d66948",
+          "start": 56.6767,
+          "end": 64.1327,
+          "globalStart": 523.071,
+          "globalEnd": 530.527,
+          "duration": 7.456,
+          "mouthSpans": [
+            {
+              "start": 56.7967,
+              "end": 57.4567
+            },
+            {
+              "start": 57.5767,
+              "end": 58.5367
+            },
+            {
+              "start": 58.7767,
+              "end": 59.3167
+            },
+            {
+              "start": 59.7967,
+              "end": 60.0967
+            },
+            {
+              "start": 60.2167,
+              "end": 60.5167
+            },
+            {
+              "start": 60.6967,
+              "end": 60.8767
+            },
+            {
+              "start": 60.9967,
+              "end": 61.4767
+            },
+            {
+              "start": 61.7767,
+              "end": 62.1967
+            },
+            {
+              "start": 62.3167,
+              "end": 63.0367
+            },
+            {
+              "start": 63.1567,
+              "end": 63.9967
+            }
+          ],
+          "pauseAfter": 0.45,
+          "cue": "c5_zunda_steps"
+        },
+        {
+          "index": 9,
+          "id": "ch05_salaryman_strategy_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "最後に、会社員がせっかくの資産形成でつまずきやすい『3つの落とし穴』も押さえておきましょう。",
+          "voiceText": "最後に、会社員がせっかくの資産形成でつまずきやすい『3つの落とし穴』も押さえておきましょう。",
+          "audioFile": "audio/lines/ch05_salaryman_strategy_009.wav",
+          "hash": "1f6ab6a249abdfe8",
+          "start": 64.5827,
+          "end": 71.5374,
+          "globalStart": 530.977,
+          "globalEnd": 537.9317,
+          "duration": 6.9547,
+          "mouthSpans": [
+            {
+              "start": 64.7627,
+              "end": 65.1827
+            },
+            {
+              "start": 65.6027,
+              "end": 68.5427
+            },
+            {
+              "start": 68.9627,
+              "end": 69.0827
+            },
+            {
+              "start": 69.2027,
+              "end": 69.9827
+            },
+            {
+              "start": 70.2827,
+              "end": 70.8827
+            },
+            {
+              "start": 71.0027,
+              "end": 71.4227
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_phase2_pitfalls"
+        },
+        {
+          "index": 10,
+          "id": "ch05_salaryman_strategy_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "worry",
+          "se": null,
+          "caption": "1つ目は『暴落時の狼狽売りと積立停止』です。恐怖で市場から退場してしまうのが最大の敗因になります。",
+          "voiceText": "1つ目は『ぼうらく時のろうばいうりとつみたて停止』です。恐怖で市場から退場してしまうのが最大の敗因になります。",
+          "audioFile": "audio/lines/ch05_salaryman_strategy_010.wav",
+          "hash": "6470a4a13ce54fe6",
+          "start": 71.8374,
+          "end": 79.9654,
+          "globalStart": 538.2317,
+          "globalEnd": 546.3597,
+          "duration": 8.128,
+          "mouthSpans": [
+            {
+              "start": 72.0774,
+              "end": 72.5574
+            },
+            {
+              "start": 72.8574,
+              "end": 75.0774
+            },
+            {
+              "start": 75.4974,
+              "end": 75.6174
+            },
+            {
+              "start": 76.0974,
+              "end": 79.7574
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_pitfall1_sell"
+        },
+        {
+          "index": 11,
+          "id": "ch05_salaryman_strategy_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "株式の大きな上昇日は暴落直後に集中しやすく、その数日を逃すだけで長期リターンは大きく落ちます。",
+          "voiceText": "株式の大きな上昇日はぼうらく直後に集中しやすく、その数日を逃すだけで長期リターンは大きく落ちます。",
+          "audioFile": "audio/lines/ch05_salaryman_strategy_011.wav",
+          "hash": "8fc40bc416959ef1",
+          "start": 80.2154,
+          "end": 87.5647,
+          "globalStart": 546.6097,
+          "globalEnd": 553.959,
+          "duration": 7.3493,
+          "mouthSpans": [
+            {
+              "start": 80.3354,
+              "end": 82.3754
+            },
+            {
+              "start": 82.4954,
+              "end": 83.8754
+            },
+            {
+              "start": 84.1754,
+              "end": 86.7554
+            },
+            {
+              "start": 86.8754,
+              "end": 87.4154
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_pitfall1_bestdays"
+        },
+        {
+          "index": 12,
+          "id": "ch05_salaryman_strategy_012",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "worry",
+          "se": null,
+          "caption": "2つ目は『高コスト商品や流行りへの飛びつき』。手数料の高いテーマ型や過度なレバレッジは長期ほど不利です。",
+          "voiceText": "2つ目は『高コスト商品や流行りへの飛びつき』。手数料の高いテーマ型や過度なレバレッジは長期ほど不利です。",
+          "audioFile": "audio/lines/ch05_salaryman_strategy_012.wav",
+          "hash": "713a9d7c5c9c069b",
+          "start": 87.8647,
+          "end": 95.2994,
+          "globalStart": 554.259,
+          "globalEnd": 561.6937,
+          "duration": 7.4347,
+          "mouthSpans": [
+            {
+              "start": 88.0447,
+              "end": 88.5847
+            },
+            {
+              "start": 88.8847,
+              "end": 90.9247
+            },
+            {
+              "start": 91.0447,
+              "end": 91.1647
+            },
+            {
+              "start": 91.5247,
+              "end": 94.4047
+            },
+            {
+              "start": 94.5247,
+              "end": 95.1247
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_pitfall2_cost"
+        },
+        {
+          "index": 13,
+          "id": "ch05_salaryman_strategy_013",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "worry",
+          "se": null,
+          "caption": "3つ目は『近々使うお金を株に入れること』。数年後の教育費や住宅頭金は、使う年に暴落が重なるリスクがあります。",
+          "voiceText": "3つ目は『近々使うお金を株に入れること』。数年後の教育費や住宅頭金は、使う年にぼうらくが重なるリスクがあります。",
+          "audioFile": "audio/lines/ch05_salaryman_strategy_013.wav",
+          "hash": "dd001a5feb8eb515",
+          "start": 95.5994,
+          "end": 104.7514,
+          "globalStart": 561.9937,
+          "globalEnd": 571.1457,
+          "duration": 9.152,
+          "mouthSpans": [
+            {
+              "start": 95.7194,
+              "end": 95.8394
+            },
+            {
+              "start": 95.9594,
+              "end": 96.3794
+            },
+            {
+              "start": 96.6794,
+              "end": 98.8994
+            },
+            {
+              "start": 99.2594,
+              "end": 101.8394
+            },
+            {
+              "start": 102.1994,
+              "end": 104.5394
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_pitfall3_deadline"
+        },
+        {
+          "index": 14,
+          "id": "ch05_salaryman_strategy_014",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "使う時期が決まってるお金は現金で守って、長いお金だけ低コストで続けるのが鉄則なのだね！",
+          "voiceText": "使う時期が決まってるお金は現金で守って、長いお金だけ低コストで続けるのが鉄則なのだね！",
+          "audioFile": "audio/lines/ch05_salaryman_strategy_014.wav",
+          "hash": "f2ceb9b4c111f855",
+          "start": 105.1014,
+          "end": 112.2801,
+          "globalStart": 571.4957,
+          "globalEnd": 578.6744,
+          "duration": 7.1787,
+          "mouthSpans": [
+            {
+              "start": 105.4014,
+              "end": 107.3214
+            },
+            {
+              "start": 107.4414,
+              "end": 107.9814
+            },
+            {
+              "start": 108.1014,
+              "end": 108.2214
+            },
+            {
+              "start": 108.6414,
+              "end": 109.5414
+            },
+            {
+              "start": 109.6614,
+              "end": 109.9614
+            },
+            {
+              "start": 110.0814,
+              "end": 110.3214
+            },
+            {
+              "start": 110.6214,
+              "end": 111.0414
+            },
+            {
+              "start": 111.3414,
+              "end": 112.1214
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_zunda_avoid"
+        },
+        {
+          "index": 15,
+          "id": "ch05_salaryman_strategy_015",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "はい。資産運用は本業の収入と生活を守る土台があってこそ、じっくり力を発揮します。",
+          "voiceText": "はい。しさんうんようは本業の収入と生活を守る土台があってこそ、じっくり力を発揮します。",
+          "audioFile": "audio/lines/ch05_salaryman_strategy_015.wav",
+          "hash": "15cfb1fba17487cb",
+          "start": 112.6301,
+          "end": 119.4568,
+          "globalStart": 579.0244,
+          "globalEnd": 585.8511,
+          "duration": 6.8267,
+          "mouthSpans": [
+            {
+              "start": 112.7501,
+              "end": 112.9901
+            },
+            {
+              "start": 113.5301,
+              "end": 117.4301
+            },
+            {
+              "start": 117.8501,
+              "end": 117.9701
+            },
+            {
+              "start": 118.0901,
+              "end": 118.8101
+            },
+            {
+              "start": 118.9301,
+              "end": 119.2901
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c5_wrap"
+        }
+      ]
+    },
+    {
+      "id": "ch06_summary",
+      "title": "6. まとめ：相場に振り回されない会社員の「3つの原則」",
+      "layout": "default",
+      "start": 586.6011,
+      "end": 657.6363,
+      "duration": 71.0352,
+      "cues": {
+        "c6_intro": 0.45,
+        "c6_zunda_recap": 7.2353,
+        "c6_point1": 13.228,
+        "c6_point2": 21.976,
+        "c6_point3": 33.1133,
+        "c6_disclaimer": 42.2346,
+        "c6_tsumugi_next": 50.1366,
+        "c6_zunda_end": 60.0759,
+        "c6_outro": 65.9972
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch06_summary_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "それでは最後に、会社員が相場に振り回されないための『3つの原則』をおさらいしましょう。",
+          "voiceText": "それでは最後に、会社員が相場に振り回されないための『3つの原則』をおさらいしましょう。",
+          "audioFile": "audio/lines/ch06_summary_001.wav",
+          "hash": "aac56a5c731bb655",
+          "start": 0.45,
+          "end": 6.9353,
+          "globalStart": 587.0511,
+          "globalEnd": 593.5364,
+          "duration": 6.4853,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 1.53
+            },
+            {
+              "start": 1.95,
+              "end": 4.29
+            },
+            {
+              "start": 4.65,
+              "end": 5.61
+            },
+            {
+              "start": 5.85,
+              "end": 6.81
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c6_intro"
+        },
+        {
+          "index": 2,
+          "id": "ch06_summary_002",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "仕組みと歴史を知ったら、日々の株価ニュースに一喜一憂しなくて済みそうなのだ！",
+          "voiceText": "仕組みと歴史を知ったら、日々の株価ニュースに一喜一憂しなくて済みそうなのだ！",
+          "audioFile": "audio/lines/ch06_summary_002.wav",
+          "hash": "b555fce30e7e0306",
+          "start": 7.2353,
+          "end": 12.878,
+          "globalStart": 593.8364,
+          "globalEnd": 599.4791,
+          "duration": 5.6427,
+          "mouthSpans": [
+            {
+              "start": 7.5353,
+              "end": 7.9553
+            },
+            {
+              "start": 8.0753,
+              "end": 8.4353
+            },
+            {
+              "start": 8.6153,
+              "end": 8.8553
+            },
+            {
+              "start": 9.2153,
+              "end": 10.5953
+            },
+            {
+              "start": 10.7753,
+              "end": 10.8953
+            },
+            {
+              "start": 11.0753,
+              "end": 11.5553
+            },
+            {
+              "start": 11.9153,
+              "end": 12.0353
+            },
+            {
+              "start": 12.1553,
+              "end": 12.6953
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_zunda_recap"
+        },
+        {
+          "index": 3,
+          "id": "ch06_summary_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "1つ目は『非課税×低コスト分散』。新NISAの器でオルカンやS&P500など低コスト指数を淡々と積み立てます。",
+          "voiceText": "1つ目は『ひかぜい×低コスト分散』。しんニーサの器でオルカンやエスアンドピーごひゃくなど低コスト指数を淡々と積み立てます。",
+          "audioFile": "audio/lines/ch06_summary_003.wav",
+          "hash": "5b30cd012fccf3e7",
+          "start": 13.228,
+          "end": 21.676,
+          "globalStart": 599.8291,
+          "globalEnd": 608.2771,
+          "duration": 8.448,
+          "mouthSpans": [
+            {
+              "start": 13.468,
+              "end": 13.948
+            },
+            {
+              "start": 14.368,
+              "end": 15.928
+            },
+            {
+              "start": 16.348,
+              "end": 21.508
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c6_point1"
+        },
+        {
+          "index": 4,
+          "id": "ch06_summary_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "2つ目は『暴落は想定内』。2024〜26年の乱高下も過去の50%下落も歴史の常として、15年以上の長期で構えます。",
+          "voiceText": "2つ目は『ぼうらくは想定内』。2024年から2026年のらんこうげも過去の50パーセント下落も歴史の常として、15年以上の長期で構えます。",
+          "audioFile": "audio/lines/ch06_summary_004.wav",
+          "hash": "0531b17315a0ba23",
+          "start": 21.976,
+          "end": 32.8133,
+          "globalStart": 608.5771,
+          "globalEnd": 619.4144,
+          "duration": 10.8373,
+          "mouthSpans": [
+            {
+              "start": 22.156,
+              "end": 22.696
+            },
+            {
+              "start": 22.996,
+              "end": 24.196
+            },
+            {
+              "start": 24.556,
+              "end": 30.316
+            },
+            {
+              "start": 30.736,
+              "end": 32.596
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c6_point2"
+        },
+        {
+          "index": 5,
+          "id": "ch06_summary_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "3つ目は『退場しない家計設計』。生活防衛資金を確保し、眠れる金額で自動化して本業と暮らしに集中します。",
+          "voiceText": "3つ目は『退場しない家計設計』。せいかつぼうえいしきんを確保し、眠れる金額で自動化して本業と暮らしに集中します。",
+          "audioFile": "audio/lines/ch06_summary_005.wav",
+          "hash": "8207efe3de56af31",
+          "start": 33.1133,
+          "end": 41.9346,
+          "globalStart": 619.7144,
+          "globalEnd": 628.5357,
+          "duration": 8.8213,
+          "mouthSpans": [
+            {
+              "start": 33.2333,
+              "end": 33.3533
+            },
+            {
+              "start": 33.4733,
+              "end": 33.8333
+            },
+            {
+              "start": 34.1933,
+              "end": 35.3933
+            },
+            {
+              "start": 35.5133,
+              "end": 35.6933
+            },
+            {
+              "start": 36.1733,
+              "end": 37.6133
+            },
+            {
+              "start": 37.7333,
+              "end": 38.0333
+            },
+            {
+              "start": 38.3933,
+              "end": 41.7533
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c6_point3"
+        },
+        {
+          "index": 6,
+          "id": "ch06_summary_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "なお、本動画は制度や歴史データの解説であり、特定の商品の勧誘や将来成果の保証ではありません。",
+          "voiceText": "なお、本動画は制度や歴史データの解説であり、特定の商品の勧誘や将来成果の保証ではありません。",
+          "audioFile": "audio/lines/ch06_summary_006.wav",
+          "hash": "1a783dfb4e3d3d80",
+          "start": 42.2346,
+          "end": 49.7866,
+          "globalStart": 628.8357,
+          "globalEnd": 636.3877,
+          "duration": 7.552,
+          "mouthSpans": [
+            {
+              "start": 42.3546,
+              "end": 42.5946
+            },
+            {
+              "start": 43.0146,
+              "end": 45.6546
+            },
+            {
+              "start": 46.0146,
+              "end": 46.1346
+            },
+            {
+              "start": 46.2546,
+              "end": 49.6746
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_disclaimer"
+        },
+        {
+          "index": 7,
+          "id": "ch06_summary_007",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "smile",
+          "se": null,
+          "caption": "次は『iDeCoと節税の仕組み』や『現金・債券・金の資産配分』、『持ち家と賃貸の比較』も気になるね！",
+          "voiceText": "次は『イデコと節税の仕組み』や『現金・さいけん・金の資産配分』、『持ち家と賃貸の比較』も気になるね！",
+          "audioFile": "audio/lines/ch06_summary_007.wav",
+          "hash": "0c32ce34d862e617",
+          "start": 50.1366,
+          "end": 59.7259,
+          "globalStart": 636.7377,
+          "globalEnd": 646.327,
+          "duration": 9.5893,
+          "mouthSpans": [
+            {
+              "start": 50.2566,
+              "end": 50.6766
+            },
+            {
+              "start": 51.0366,
+              "end": 52.3566
+            },
+            {
+              "start": 52.9566,
+              "end": 53.1366
+            },
+            {
+              "start": 53.7366,
+              "end": 54.1566
+            },
+            {
+              "start": 54.6966,
+              "end": 55.1166
+            },
+            {
+              "start": 55.5966,
+              "end": 56.6166
+            },
+            {
+              "start": 57.0966,
+              "end": 58.1766
+            },
+            {
+              "start": 58.2966,
+              "end": 58.5366
+            },
+            {
+              "start": 58.8966,
+              "end": 59.5566
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_tsumugi_next"
+        },
+        {
+          "index": 8,
+          "id": "ch06_summary_008",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "どれも会社員の毎日に直結するテーマなのだ！また一緒に勉強するのだ！",
+          "voiceText": "どれも会社員の毎日に直結するテーマなのだ！また一緒に勉強するのだ！",
+          "audioFile": "audio/lines/ch06_summary_008.wav",
+          "hash": "0ca5677002db16be",
+          "start": 60.0759,
+          "end": 65.6972,
+          "globalStart": 646.677,
+          "globalEnd": 652.2983,
+          "duration": 5.6213,
+          "mouthSpans": [
+            {
+              "start": 60.1959,
+              "end": 60.5559
+            },
+            {
+              "start": 60.6759,
+              "end": 61.6359
+            },
+            {
+              "start": 61.7559,
+              "end": 61.9359
+            },
+            {
+              "start": 62.1759,
+              "end": 62.2959
+            },
+            {
+              "start": 62.4759,
+              "end": 63.4359
+            },
+            {
+              "start": 63.7959,
+              "end": 64.6959
+            },
+            {
+              "start": 64.8159,
+              "end": 65.5359
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c6_zunda_end"
+        },
+        {
+          "index": 9,
+          "id": "ch06_summary_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "ご視聴ありがとうございました。次回の解説動画もお楽しみに！",
+          "voiceText": "ご視聴ありがとうございました。次回の解説動画もお楽しみに！",
+          "audioFile": "audio/lines/ch06_summary_009.wav",
+          "hash": "120dcd3f1bafc25a",
+          "start": 65.9972,
+          "end": 70.2852,
+          "globalStart": 652.5983,
+          "globalEnd": 656.8863,
+          "duration": 4.288,
+          "mouthSpans": [
+            {
+              "start": 66.1172,
+              "end": 67.8572
+            },
+            {
+              "start": 68.1572,
+              "end": 70.1972
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c6_outro"
+        }
+      ]
+    }
+  ]
+}

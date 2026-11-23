@@ -1,0 +1,56 @@
+{
+  "theme": "tech-dark",
+  "accent_color": "#8b5cf6",
+  "chapters": [
+    {
+      "id": "ch01_intro",
+      "layout": "title",
+      "has_tsumugi_cutin": false,
+      "visual_plan": "Hero badge 'AIアーキテクチャ解説' + heading 'Looped Transformer：『同じ層を回す』第3の進化'. Middle 2-column grid: Left card '従来の2大アプローチ' (①巨大化: パラメータ N 増大, ②CoT: 出力トークン長 T_CoT 増大). Right card '第3の軸：Recurrent Depth (R)' with animated SVG core loop ring (Loop 1 -> 2 -> ... -> R, shared weights θ, Test-Time Compute pill). Bottom row of 3 goal pills ('1 漸化式と計算機理論', '2 CoT vs 潜在推論・動的深さ', '3 力学系の壁と最新LLM') with margin: 0 212px so corners never touch Metan or Zundamon.",
+      "phase_transitions": []
+    },
+    {
+      "id": "ch02_math_architecture",
+      "layout": "default",
+      "has_tsumugi_cutin": false,
+      "visual_plan": "Phase A (c2_compare_intro..c2_eff_depth): Side-by-side comparison. Left card: Standard Transformer vertical layer stack (L1 -> L2 -> ... -> LN, unique weights θ_1 != θ_2 != ..., formula h^(l+1) = f_{θ_l}(h^(l))). Right card: Looped Transformer SVG diagram showing Prelude P(x)->e -> shared Recurrent Core f_θ with looping feedback arc + animated glowing orb moving around the loop + dashed Input Injection (+e) arrow -> Coda C(h^(R)), math box 'h^(r+1) = f_θ(h^(r), e)', and bottom formula bar '実効深さ L_eff = L_pre + R · L_core + L_coda' (keep padding-bottom clear). Phase B (c2_phase2_theory..c2_bridge): At c2_phase2_theory fade Phase A out (opacity 0), bring Phase B in (opacity 1) AND show left card immediately at tP2+0.35 (no blank gap). Two side-by-side theory cards: Left '理論① プログラム可能なコンピュータ（ICML 2023）' with CPU fetch/execute/memory cycle SVG mapped to f_θ x R loops + SUBLEQ callout; Right '理論② 長さ汎化（Length Generalization）' comparing fixed-depth memorization vs learning 1-step update rule f_θ and scaling R=4->12 at inference.",
+      "phase_transitions": [
+        { "fade_out": "#c2-phase-a", "fade_in": "#c2-phase-b", "at_cue": "c2_phase2_theory" }
+      ]
+    },
+    {
+      "id": "ch03_latent_reasoning",
+      "layout": "wide",
+      "has_tsumugi_cutin": false,
+      "visual_plan": "CRITICAL: Add padding-bottom: 48px on .c3-phase so wide-layout cards strictly stay above y=805 (clearing Metan/Zundamon tops at y=814). Phase A (c3_cot_intro..c3_zunda_mental): Left card 'Chain-of-Thought（言葉の思考）' with chain of discrete token bubbles ([まず] -> [x=3] -> [次に] -> ... -> [答え]) and red bottleneck callout (離散トークン圧縮 / 遅延・KVキャッシュ増大). Right card 'Latent Reasoning（潜在空間ループ）' with violet/cyan SVG showing continuous vector h^(r) ∈ R^d orbiting inside latent space across loops with multi-hypothesis parallel trajectories converging to [答え], highlight pill '数千次元ベクトルで並列思考・省トークン'. Phase B (c3_phase2_adaptive..c3_wrap): At c3_phase2_adaptive fade Phase A out, bring Phase B in, and show top formula bar + token bars immediately at tP2+0.35. Top bar formula: '停止確率（Halting）：各周で p_r ∈ (0,1) を予測 → 累積 Σ p_r >= 1 - ε で早期脱出（ACT / MoR）'. Center animated vertical bar chart across 6 sentence tokens ('次の': 2周, '方程式': 6周, 'x^2-5x+6=0': 16周!, 'の': 1周, '解は': 4周, 'x=2,3': 12周) animated with scaleY from bottom origin (no CSS transform before GSAP!). Bottom callout 'Mixture-of-Recursions (MoR)：ルーターがトークンごとにループ回数を動的配分' with margin: 0 240px.",
+      "phase_transitions": [
+        { "fade_out": "#c3-phase-a", "fade_in": "#c3-phase-b", "at_cue": "c3_phase2_adaptive" }
+      ]
+    },
+    {
+      "id": "ch04_tsumugi_dynamics",
+      "layout": "default",
+      "has_tsumugi_cutin": true,
+      "visual_plan": "CRITICAL: Tsumugi appears in BOTH Phase A (c4_tsumugi_rnn, c4_tsumugi_limit) and Phase B (c4_tsumugi_safety). Add padding-right: 340px to title bar AND padding-top: 76px on both Phase A and Phase B content grids so top-right cards sit cleanly below Tsumugi cut-in bottom (y=254px). Phase A: Two side-by-side axis comparison cards. Left 'RNN：時間軸の直列ループ' with horizontal token chain x_1 -> h_1 -> h_2 -> h_3 -> h_4, formula h_t = g_θ(h_{t-1}, x_t), tags '直列で並列化困難 / 長距離で記憶減衰'. Right 'Looped Transformer：深さ軸の思考ループ' showing all tokens x_1..x_T in parallel with vertical loops r=1 -> 2 -> ... -> R and cyan all-to-all Self-Attention arcs at every loop, formula h^(r+1) = f_θ(h^(r), e). Phase B (c4_phase2_walls..c4_to_ch5): Immediately bring Phase B and Wall 1 card in at tP2+0.35. Three balanced vertical/horizontal cards for the 3 walls: ① '力学系の収束と Overthinking' with SVG accuracy curve (x=ループ数R, y=精度 climbing then dropping at high R marked 'Overthinking!') + formulas J = ∂f_θ/∂h, ρ(J)<1 -> h*収束, ρ(J)>1 -> 発散・崩壊; ② '学習メモリと TBPTT' with Full BPTT O(R) vs Truncated BPTT O(k) comparison bars; ③ 'Monitorability（監視可能性）' comparing visible CoT vs opaque latent vectors.",
+      "phase_transitions": [
+        { "fade_out": "#c4-phase-a", "fade_in": "#c4-phase-b", "at_cue": "c4_phase2_walls" }
+      ]
+    },
+    {
+      "id": "ch05_frontier_future",
+      "layout": "wide",
+      "has_tsumugi_cutin": true,
+      "visual_plan": "CRITICAL: Add padding-bottom: 36px on .c5-phase, padding-right: 340px on top title bar, and keep Phase B top banner width: 73% so Tsumugi's top-right cut-in has zero overlap. Phase A (c5_timeline_intro..c5_zunda_real): Top section 4-step horizontal timeline (2018 Universal Transformer -> 2023 SUBLEQ 計算機証明 -> 2024 Length Generalization -> 2025〜 実規模 Looped LLM). Bottom section 3 architecture cards (Huginn: Prelude + 4層Core + Coda + Input Injection; Ouro: 全層ループ + 自律的深さ配分; MoR: トークン別動的ルーティング). Phase B (c5_phase2_tsumugi..c5_tsumugi_wow): At c5_phase2_tsumugi fade Phase A out, bring Phase B + top banner (width: 73%, text '結論：CoTの代替ではなく「3軸スケーリング」のハイブリッド時代へ！') in IMMEDIATELY at tP2+0.35 (zero blank gap while Tsumugi speaks!). Bottom 2-column grid: Left 'これからの3軸スケーリング' showing 3 orthogonal cards/axes (軸① パラメータ規模 N：知識の広さ, 軸② CoT長 T_CoT：明示的な言語整理・検算, 軸③ ループ深さ R：潜在空間の高帯域推論); Right 'エッジAI・省メモリ端末への波及' SVG diagram (小VRAM物理重み x R周回 -> スマホ・ローカルPCで高度推論).",
+      "phase_transitions": [
+        { "fade_out": "#c5-phase-a", "fade_in": "#c5-phase-b", "at_cue": "c5_phase2_tsumugi" }
+      ]
+    },
+    {
+      "id": "ch06_summary",
+      "layout": "default",
+      "has_tsumugi_cutin": true,
+      "visual_plan": "CRITICAL: Match safe layout proven in Ep001 ch06: .c6-wrap { padding-bottom: 36px; }, .c6-title-bar { padding-right: 340px; }, .c6-summary-grid { padding-top: 88px; align-content: center; align-items: stretch; } with 3 uniform min-height: 270px cards. POINT 1: 漸化式と計算機性 (h^(r+1)=f_θ(h^(r),e), Input Injection, SUBLEQ & 長さ汎化). POINT 2: 潜在推論と動的停止 (連続空間 h^(r)∈R^d, 停止確率 p_r, MoR 動的ループ配分). POINT 3: 力学系の壁と3軸スケーリング (RNNとのループ軸差, ヤコビアン ρ(J) & TBPTT, N × T_CoT × R). Bottom #c6-next-bar '📚 シリーズ次回テーマ候補' with 3 chips: '📐 DEQ（深層平衡モデル）', '🔀 MoE（混合エキスパート）', '⚡ KVキャッシュ最適化'.",
+      "phase_transitions": []
+    }
+  ]
+}

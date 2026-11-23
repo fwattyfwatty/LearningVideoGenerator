@@ -1,0 +1,602 @@
+<style>
+  .c4-scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #f8fafc;
+  }
+
+  .c4-phase {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 48px;
+    box-sizing: border-box;
+  }
+
+  .c4-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 73%;
+    min-height: 68px;
+    padding: 12px 22px;
+    box-sizing: border-box;
+    background: #0f172a;
+    border: 2px solid #334155;
+    border-radius: 16px;
+    flex-shrink: 0;
+  }
+
+  .c4-header-title {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 800;
+    color: #f8fafc;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  .c4-header-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ddd6fe;
+    background: rgba(139, 92, 246, 0.22);
+    border: 2px solid #8b5cf6;
+    white-space: nowrap;
+  }
+
+  /* Phase A: 2-Column Axis Comparison */
+  .c4-a-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    padding-top: 92px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .c4-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    background: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 20px;
+    padding: 14px 20px;
+    box-sizing: border-box;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .c4-card-rnn {
+    border-color: rgba(244, 63, 94, 0.55);
+    background: linear-gradient(180deg, #1e293b 0%, #171d2e 100%);
+  }
+
+  .c4-card-loop {
+    border-color: rgba(139, 92, 246, 0.72);
+    background: linear-gradient(180deg, #1e293b 0%, #161b33 100%);
+    box-shadow: 0 0 26px rgba(139, 92, 246, 0.16);
+  }
+
+  .c4-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+    flex-shrink: 0;
+  }
+
+  .c4-card-title {
+    margin: 0;
+    font-size: 23px;
+    font-weight: 800;
+    color: #f8fafc;
+  }
+
+  .c4-tag-rose {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fecdd3;
+    background: rgba(244, 63, 94, 0.22);
+    border: 1.5px solid #f43f5e;
+    white-space: nowrap;
+  }
+
+  .c4-tag-cyan {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #a5f3fc;
+    background: rgba(34, 211, 238, 0.18);
+    border: 1.5px solid #22d3ee;
+    white-space: nowrap;
+  }
+
+  .c4-svg-box {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0f172a;
+    border: 1.5px solid #334155;
+    border-radius: 14px;
+    padding: 8px;
+    overflow: hidden;
+  }
+
+  .c4-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .c4-formula-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background: #0f172a;
+    border: 1.5px solid #475569;
+    font-size: 19px;
+    font-weight: 800;
+    color: #e2e8f0;
+    flex-shrink: 0;
+  }
+
+  .c4-formula-code {
+    font-family: "Consolas", "Noto Sans JP", monospace;
+    font-size: 20px;
+    color: #f8fafc;
+  }
+
+  .c4-tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .c4-pill-warn {
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fecdd3;
+    background: rgba(244, 63, 94, 0.18);
+    border: 1.5px solid rgba(244, 63, 94, 0.55);
+  }
+
+  .c4-pill-ok {
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #a5f3fc;
+    background: rgba(34, 211, 238, 0.16);
+    border: 1.5px solid rgba(34, 211, 238, 0.55);
+  }
+
+  .c4-pill-limit {
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    color: #fde68a;
+    background: rgba(245, 158, 11, 0.2);
+    border: 1.5px solid #f59e0b;
+  }
+
+  /* Phase B: 3 Walls Grid */
+  .c4-b-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    padding-top: 92px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .c4-wall-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    background: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 18px;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .c4-wall-title {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 800;
+    color: #f8fafc;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+    flex-shrink: 0;
+  }
+
+  .c4-wall-1 { border-color: rgba(245, 158, 11, 0.65); }
+  .c4-wall-2 { border-color: rgba(56, 189, 248, 0.65); }
+  .c4-wall-3 { border-color: rgba(139, 92, 246, 0.72); }
+
+  .c4-jacobian-box {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: #0f172a;
+    border: 1.5px solid #475569;
+    font-size: 15px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .c4-j-eq { color: #fde68a; font-family: "Consolas", "Noto Sans JP", monospace; font-size: 17px; }
+  .c4-j-good { color: #6ee7b7; }
+  .c4-j-bad { color: #fda4af; }
+
+  .c4-bars-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .c4-bar-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #0f172a;
+    border: 1.5px solid #334155;
+  }
+
+  .c4-bar-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .c4-bar-track {
+    width: 100%;
+    height: 26px;
+    border-radius: 8px;
+    background: #1e293b;
+    overflow: hidden;
+    border: 1px solid #475569;
+  }
+
+  .c4-bar-full {
+    width: 96%;
+    height: 100%;
+    border-radius: 7px;
+    background: linear-gradient(90deg, #f59e0b 0%, #f43f5e 100%);
+  }
+
+  .c4-bar-trunc {
+    width: 28%;
+    height: 100%;
+    border-radius: 7px;
+    background: linear-gradient(90deg, #10b981 0%, #22d3ee 100%);
+  }
+
+  .c4-bar-desc {
+    font-size: 14px;
+    font-weight: 700;
+    color: #cbd5e1;
+  }
+
+  .c4-mon-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .c4-mon-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #0f172a;
+    border: 1.5px solid #334155;
+  }
+
+  .c4-mon-row-warn {
+    border-color: rgba(244, 63, 94, 0.65);
+    background: rgba(15, 23, 42, 0.96);
+  }
+
+  .c4-mon-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .c4-token-strip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #cbd5e1;
+  }
+
+  .c4-chip {
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: #1e293b;
+    border: 1px solid #475569;
+    color: #e2e8f0;
+  }
+
+  .c4-vec-chip {
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: rgba(139, 92, 246, 0.2);
+    border: 1px solid #8b5cf6;
+    color: #ddd6fe;
+    font-family: "Consolas", monospace;
+    font-size: 14px;
+  }
+
+  .c4-next-pill {
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.25), rgba(34, 211, 238, 0.2));
+    border: 1.5px solid #a78bfa;
+    color: #f8fafc;
+    font-size: 15px;
+    font-weight: 800;
+    text-align: center;
+    flex-shrink: 0;
+  }
+</style>
+
+<div class="c4-scene">
+  <div id="c4-phase-a" class="c4-phase">
+    <div id="c4-a-header" class="c4-header">
+      <h2 class="c4-header-title">RNN vs Looped Transformer：どの軸に沿ってループするか？</h2>
+      <span id="c4-a-badge" class="c4-header-badge">時間軸（直列）vs 深さ軸（並列）</span>
+    </div>
+    <div class="c4-a-grid">
+      <div id="c4-rnn-card" class="c4-card c4-card-rnn">
+        <div class="c4-card-head"><h3 class="c4-card-title">RNN：時間軸の直列ループ</h3><span class="c4-tag-rose">横方向（直列）</span></div>
+        <div class="c4-svg-box">
+          <svg class="c4-svg" viewBox="0 0 760 220" preserveAspectRatio="xMidYMid meet">
+            <g id="c4-rnn-chain">
+              <rect x="30" y="148" width="84" height="44" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="2" /><text x="72" y="176" text-anchor="middle" fill="#e2e8f0" font-size="18" font-weight="800">x_1</text>
+              <rect x="210" y="148" width="84" height="44" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="2" /><text x="252" y="176" text-anchor="middle" fill="#e2e8f0" font-size="18" font-weight="800">x_2</text>
+              <rect x="390" y="148" width="84" height="44" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="2" /><text x="432" y="176" text-anchor="middle" fill="#e2e8f0" font-size="18" font-weight="800">x_3</text>
+              <rect x="570" y="148" width="84" height="44" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="2" /><text x="612" y="176" text-anchor="middle" fill="#e2e8f0" font-size="18" font-weight="800">x_4</text>
+              <line x1="72" y1="148" x2="72" y2="96" stroke="#94a3b8" stroke-width="2.5" /><line x1="252" y1="148" x2="252" y2="96" stroke="#94a3b8" stroke-width="2.5" />
+              <line x1="432" y1="148" x2="432" y2="96" stroke="#94a3b8" stroke-width="2.5" /><line x1="612" y1="148" x2="612" y2="96" stroke="#94a3b8" stroke-width="2.5" />
+              <rect x="30" y="40" width="84" height="52" rx="12" fill="#311728" stroke="#f43f5e" stroke-width="2" opacity="0.45" /><text x="72" y="72" text-anchor="middle" fill="#fecdd3" font-size="19" font-weight="800" opacity="0.55">h_1</text>
+              <rect x="210" y="40" width="84" height="52" rx="12" fill="#3b182e" stroke="#f43f5e" stroke-width="2" opacity="0.65" /><text x="252" y="72" text-anchor="middle" fill="#fecdd3" font-size="19" font-weight="800" opacity="0.75">h_2</text>
+              <rect x="390" y="40" width="84" height="52" rx="12" fill="#471835" stroke="#f43f5e" stroke-width="2.5" opacity="0.85" /><text x="432" y="72" text-anchor="middle" fill="#fecdd3" font-size="19" font-weight="800" opacity="0.9">h_3</text>
+              <rect x="570" y="40" width="84" height="52" rx="12" fill="#4c1d3d" stroke="#fb7185" stroke-width="3" /><text x="612" y="72" text-anchor="middle" fill="#ffffff" font-size="19" font-weight="800">h_4</text>
+              <path d="M 118 66 L 204 66" stroke="#fb7185" stroke-width="3.5" fill="none" /><polygon points="200,59 210,66 200,73" fill="#fb7185" /><text x="161" y="54" text-anchor="middle" fill="#fda4af" font-size="15" font-weight="800">θ</text>
+              <path d="M 298 66 L 384 66" stroke="#fb7185" stroke-width="3.5" fill="none" /><polygon points="380,59 390,66 380,73" fill="#fb7185" /><text x="341" y="54" text-anchor="middle" fill="#fda4af" font-size="15" font-weight="800">θ</text>
+              <path d="M 478 66 L 564 66" stroke="#fb7185" stroke-width="3.5" fill="none" /><polygon points="560,59 570,66 560,73" fill="#fb7185" /><text x="521" y="54" text-anchor="middle" fill="#fda4af" font-size="15" font-weight="800">θ</text>
+              <text x="342" y="20" text-anchor="middle" fill="#fda4af" font-size="15" font-weight="800">1トークンずつ直列更新 → 昔の記憶が減衰</text>
+            </g>
+          </svg>
+        </div>
+        <div id="c4-rnn-formula" class="c4-formula-box"><span>更新式</span><span class="c4-formula-code">h_t = g_θ(h_{t-1}, x_t)</span></div>
+        <div id="c4-rnn-tags" class="c4-tags-row"><span class="c4-pill-warn">直列で並列化困難</span><span class="c4-pill-warn">長距離で記憶減衰</span></div>
+      </div>
+
+      <div id="c4-loop-card" class="c4-card c4-card-loop">
+        <div class="c4-card-head"><h3 class="c4-card-title">Looped Transformer：深さ軸の思考ループ</h3><span class="c4-tag-cyan">縦方向（並列×反復）</span></div>
+        <div class="c4-svg-box">
+          <svg class="c4-svg" viewBox="0 0 760 220" preserveAspectRatio="xMidYMid meet">
+            <g id="c4-loop-stack">
+              <rect x="55" y="166" width="84" height="36" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="2" /><text x="97" y="190" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="800">x_1</text>
+              <rect x="185" y="166" width="84" height="36" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="2" /><text x="227" y="190" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="800">x_2</text>
+              <rect x="315" y="166" width="84" height="36" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="2" /><text x="357" y="190" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="800">x_3</text>
+              <rect x="445" y="166" width="84" height="36" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="2" /><text x="487" y="190" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="800">x_T</text>
+              <rect x="45" y="112" width="494" height="38" rx="10" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="2" /><text x="292" y="139" text-anchor="middle" fill="#c4b5fd" font-size="14" font-weight="800">Self-Attention + FFN (f_θ)：文脈を並列統合</text><text x="582" y="137" text-anchor="middle" fill="#c4b5fd" font-size="16" font-weight="800">r = 1</text>
+              <rect x="45" y="64" width="494" height="38" rx="10" fill="#251d5a" stroke="#a78bfa" stroke-width="2" /><text x="292" y="91" text-anchor="middle" fill="#ddd6fe" font-size="14" font-weight="800">Self-Attention + FFN (f_θ)：中間仮説を反復更新</text><text x="582" y="89" text-anchor="middle" fill="#ddd6fe" font-size="16" font-weight="800">r = 2</text>
+              <rect x="45" y="16" width="494" height="38" rx="10" fill="#2e1065" stroke="#22d3ee" stroke-width="2.5" /><text x="292" y="43" text-anchor="middle" fill="#a5f3fc" font-size="14" font-weight="800">All-to-All Self-Attention（全トークン並列参照）</text><text x="582" y="41" text-anchor="middle" fill="#a5f3fc" font-size="16" font-weight="800">r = R</text>
+              <path d="M 632 132 C 668 112, 668 56, 632 36" stroke="#a78bfa" stroke-width="3" fill="none" /><polygon points="635,30 625,36 635,42" fill="#a78bfa" />
+              <text x="678" y="89" text-anchor="start" fill="#ddd6fe" font-size="16" font-weight="800">θ共有</text>
+            </g>
+            <g id="c4-attn-arcs">
+              <path pathLength="100" d="M 97 122 Q 227 113 357 122" stroke="#22d3ee" stroke-width="2.2" fill="none" stroke-dasharray="100" />
+              <path pathLength="100" d="M 97 122 Q 292 111 487 122" stroke="#22d3ee" stroke-width="2.2" fill="none" stroke-dasharray="100" />
+              <path pathLength="100" d="M 227 74 Q 357 65 487 74" stroke="#22d3ee" stroke-width="2.2" fill="none" stroke-dasharray="100" />
+              <path pathLength="100" d="M 97 26 Q 292 16 487 26" stroke="#38bdf8" stroke-width="2.5" fill="none" stroke-dasharray="100" />
+            </g>
+          </svg>
+        </div>
+        <div id="c4-loop-formula" class="c4-formula-box"><span>深さ更新式</span><span class="c4-formula-code">h^(r+1) = f_θ(h^(r), e)</span></div>
+        <div id="c4-loop-tags" class="c4-tags-row">
+          <span class="c4-pill-ok">全トークン並列保持</span><span class="c4-pill-ok">毎ループ全文 Self-Attention</span><span id="c4-limit-badge" class="c4-pill-limit">R = 100周なら無限に賢くなる？</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="c4-phase-b" class="c4-phase">
+    <div id="c4-b-header" class="c4-header">
+      <h2 class="c4-header-title">力学系として見た「3つの壁」</h2>
+      <span id="c4-b-badge" class="c4-header-badge">ループを増やす限界と課題</span>
+    </div>
+    <div class="c4-b-grid">
+      <div id="c4-wall-1" class="c4-wall-card c4-wall-1">
+        <h3 class="c4-wall-title">① 力学系の収束と Overthinking</h3>
+        <div class="c4-svg-box">
+          <svg class="c4-svg" viewBox="0 0 480 205" preserveAspectRatio="xMidYMid meet">
+            <line x1="54" y1="172" x2="452" y2="172" stroke="#64748b" stroke-width="2" /><line x1="54" y1="172" x2="54" y2="20" stroke="#64748b" stroke-width="2" />
+            <text x="435" y="194" text-anchor="end" fill="#cbd5e1" font-size="14" font-weight="700">ループ数 R</text>
+            <text x="48" y="32" text-anchor="end" fill="#cbd5e1" font-size="14" font-weight="700">精度</text>
+            <path id="c4-acc-curve" pathLength="100" d="M 64 156 C 145 148, 200 38, 268 42 C 335 46, 390 112, 442 146" fill="none" stroke="#f59e0b" stroke-width="4.5" stroke-dasharray="100" />
+            <g id="c4-overthink-mark">
+              <circle cx="268" cy="42" r="7" fill="#10b981" stroke="#f8fafc" stroke-width="2" /><text x="268" y="25" text-anchor="middle" fill="#6ee7b7" font-size="14" font-weight="800">最適点</text>
+              <circle cx="408" cy="124" r="7" fill="#f43f5e" stroke="#f8fafc" stroke-width="2" />
+              <rect x="296" y="76" width="144" height="32" rx="8" fill="#4c1d3d" stroke="#f43f5e" stroke-width="2" />
+              <text x="368" y="97" text-anchor="middle" fill="#fecdd3" font-size="15" font-weight="800">Overthinking!</text>
+            </g>
+          </svg>
+        </div>
+        <div id="c4-jacobian-box" class="c4-jacobian-box">
+          <div class="c4-j-eq">ヤコビアン：J = ∂f_θ / ∂h</div>
+          <div class="c4-j-good">ρ(J) &lt; 1 → 安定な固定点 h* へ収束</div>
+          <div class="c4-j-bad">ρ(J) &gt; 1 → 発散・表現崩壊（回しすぎで劣化）</div>
+        </div>
+      </div>
+
+      <div id="c4-wall-2" class="c4-wall-card c4-wall-2">
+        <h3 class="c4-wall-title">② 学習メモリと TBPTT</h3>
+        <div class="c4-bars-wrap">
+          <div id="c4-bptt-full" class="c4-bar-group">
+            <div class="c4-bar-label-row"><span style="color:#fda4af">Full BPTT（全周逆伝播）</span><span style="color:#fecdd3">メモリ O(R)</span></div>
+            <div class="c4-bar-track"><div id="c4-bar-full" class="c4-bar-full"></div></div>
+            <div class="c4-bar-desc">R周ぶん全中間状態を保持 → R増でメモリ爆発</div>
+          </div>
+          <div id="c4-bptt-trunc" class="c4-bar-group">
+            <div class="c4-bar-label-row"><span style="color:#6ee7b7">Truncated BPTT</span><span style="color:#a5f3fc">メモリ O(k)</span></div>
+            <div class="c4-bar-track"><div id="c4-bar-trunc" class="c4-bar-trunc"></div></div>
+            <div class="c4-bar-desc">ループ回数Rをランダム化し最後のk周のみ勾配計算</div>
+          </div>
+        </div>
+        <div id="c4-tbptt-note" class="c4-pill-ok">メモリ消費を一定 O(k) に抑えて大規模学習を実現</div>
+      </div>
+
+      <div id="c4-wall-3" class="c4-wall-card c4-wall-3">
+        <h3 class="c4-wall-title">③ Monitorability（監視可能性）</h3>
+        <div class="c4-mon-stack">
+          <div id="c4-mon-cot" class="c4-mon-row">
+            <div class="c4-mon-head"><span style="color:#6ee7b7">Visible CoT（言語思考）</span><span class="c4-pill-ok">途中監視 OK</span></div>
+            <div class="c4-token-strip"><span class="c4-chip">まず…</span><span>→</span><span class="c4-chip">次に…</span><span>→</span><span class="c4-chip">答え</span></div>
+          </div>
+          <div id="c4-mon-latent" class="c4-mon-row c4-mon-row-warn">
+            <div class="c4-mon-head"><span style="color:#fda4af">Opaque Latent（潜在ループ）</span><span class="c4-pill-warn">中身が読めない</span></div>
+            <div class="c4-token-strip"><span class="c4-vec-chip">[0.41, -0.87, …] × R周</span><span style="color:#fecdd3">異常推論を検知困難</span></div>
+          </div>
+        </div>
+        <div id="c4-next-pill" class="c4-next-pill">→ 第5章：最新LLMによる克服と実用化へ</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders["ch04_tsumugi_dynamics"] = function (tl, cues) {
+  gsap.set("#c4-phase-a", { opacity: 1 });
+  gsap.set(["#c4-a-header", "#c4-rnn-card", "#c4-loop-card"], { opacity: 0, y: 14 });
+  gsap.set(["#c4-rnn-chain", "#c4-rnn-formula", "#c4-rnn-tags"], { opacity: 0, y: 10 });
+  gsap.set(["#c4-loop-stack", "#c4-loop-formula", "#c4-loop-tags"], { opacity: 0, y: 10 });
+  gsap.set("#c4-attn-arcs", { opacity: 0 });
+  gsap.set("#c4-attn-arcs path", { strokeDashoffset: 100 });
+  gsap.set("#c4-limit-badge", { opacity: 0, scale: 0.92 });
+
+  gsap.set("#c4-phase-b", { opacity: 0 });
+  gsap.set(["#c4-wall-1", "#c4-wall-2", "#c4-wall-3"], { opacity: 0, y: 16 });
+  gsap.set("#c4-jacobian-box", { opacity: 0, y: 10 });
+  gsap.set("#c4-acc-curve", { opacity: 0, strokeDashoffset: 100 });
+  gsap.set("#c4-overthink-mark", { opacity: 0 });
+  gsap.set(["#c4-bar-full", "#c4-bar-trunc"], { scaleX: 0, transformOrigin: "left center" });
+  gsap.set("#c4-tbptt-note", { opacity: 0, y: 8 });
+  gsap.set(["#c4-mon-cot", "#c4-mon-latent", "#c4-next-pill"], { opacity: 0, y: 10 });
+
+  const tRnn = cues.c4_tsumugi_rnn ?? 0.45;
+  tl.to("#c4-a-header", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tRnn);
+  tl.to(["#c4-rnn-card", "#c4-loop-card"], { opacity: 1, y: 0, duration: 0.45, stagger: 0.12, ease: "power2.out" }, tRnn + 0.12);
+  tl.to(["#c4-rnn-chain", "#c4-rnn-formula", "#c4-loop-stack", "#c4-loop-formula"], { opacity: 1, y: 0, duration: 0.45, stagger: 0.08, ease: "power2.out" }, tRnn + 0.25);
+
+  const tAxis = cues.c4_axis_diff ?? 8.8;
+  tl.to("#c4-a-badge", { borderColor: "#22d3ee", color: "#a5f3fc", duration: 0.45 }, tAxis);
+  tl.to("#c4-rnn-card", { borderColor: "#fb7185", duration: 0.4, yoyo: true, repeat: 1 }, tAxis + 0.3);
+
+  const tRnnTime = cues.c4_rnn_time ?? 17.25;
+  tl.to("#c4-rnn-tags", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tRnnTime);
+  tl.to("#c4-rnn-formula", { borderColor: "#fb7185", duration: 0.4, yoyo: true, repeat: 1 }, tRnnTime + 0.15);
+
+  const tLoopDepth = cues.c4_loop_depth ?? 28.41;
+  tl.to("#c4-attn-arcs", { opacity: 1, duration: 0.15 }, tLoopDepth);
+  tl.to("#c4-attn-arcs path", { strokeDashoffset: 0, duration: 0.45, stagger: 0.06, ease: "power2.out" }, tLoopDepth);
+  tl.to("#c4-loop-tags", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tLoopDepth + 0.45);
+
+  const tZundaAxis = cues.c4_zunda_axis ?? 38.65;
+  tl.to("#c4-rnn-card", { borderColor: "#f43f5e", duration: 0.4, yoyo: true, repeat: 1 }, tZundaAxis);
+  tl.to("#c4-loop-card", { borderColor: "#22d3ee", duration: 0.45, yoyo: true, repeat: 1 }, tZundaAxis + 1.4);
+
+  const tLimit = cues.c4_tsumugi_limit ?? 47.85;
+  tl.to("#c4-limit-badge", { opacity: 1, scale: 1, duration: 0.45, ease: "power2.out" }, tLimit);
+  tl.to("#c4-limit-badge", { scale: 1.06, duration: 0.35, yoyo: true, repeat: 1 }, tLimit + 0.6);
+
+  const tP2 = cues.c4_phase2_walls ?? 55.07;
+  tl.to("#c4-phase-a", { opacity: 0, duration: 0.35, ease: "power2.inOut" }, tP2);
+  tl.to("#c4-phase-b", { opacity: 1, duration: 0.35, ease: "power2.out" }, tP2);
+  tl.to("#c4-wall-1", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tP2 + 0.35);
+
+  const tJacobian = cues.c4_jacobian ?? 61.37;
+  tl.to("#c4-jacobian-box", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, tJacobian);
+
+  const tOver = cues.c4_overthinking ?? 70.89;
+  tl.to("#c4-acc-curve", { opacity: 1, strokeDashoffset: 0, duration: 1.1, ease: "power2.out" }, tOver);
+  tl.to("#c4-overthink-mark", { opacity: 1, duration: 0.45, ease: "power2.out" }, tOver + 0.8);
+
+  const tZundaOver = cues.c4_zunda_over ?? 81.17;
+  tl.to("#c4-wall-1", { borderColor: "#fb7185", duration: 0.4, yoyo: true, repeat: 1 }, tZundaOver);
+  tl.to("#c4-overthink-mark", { scale: 1.05, transformOrigin: "center center", duration: 0.35, yoyo: true, repeat: 1 }, tZundaOver + 0.3);
+
+  const tTbptt = cues.c4_tbptt ?? 89.28;
+  tl.to("#c4-wall-2", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tTbptt);
+  tl.to("#c4-bar-full", { scaleX: 1, duration: 0.75, ease: "power2.out" }, tTbptt + 0.3);
+
+  const tTbpttFix = cues.c4_tbptt_fix ?? 98.92;
+  tl.to("#c4-bar-trunc", { scaleX: 1, duration: 0.65, ease: "power2.out" }, tTbpttFix);
+  tl.to("#c4-tbptt-note", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tTbpttFix + 0.45);
+
+  const tMonitor = cues.c4_monitor ?? 109.33;
+  tl.to("#c4-wall-3", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tMonitor);
+  tl.to("#c4-mon-cot", { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, tMonitor + 0.25);
+  tl.to("#c4-mon-latent", { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, tMonitor + 0.55);
+
+  const tSafety = cues.c4_tsumugi_safety ?? 119.19;
+  tl.to("#c4-mon-latent", { borderColor: "#fb7185", duration: 0.45, yoyo: true, repeat: 1 }, tSafety);
+  tl.to("#c4-wall-3", { borderColor: "#f43f5e", duration: 0.45, yoyo: true, repeat: 1 }, tSafety + 0.2);
+
+  const tToCh5 = cues.c4_to_ch5 ?? 126.9;
+  tl.to("#c4-next-pill", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, tToCh5);
+  tl.to("#c4-b-badge", { borderColor: "#22d3ee", color: "#a5f3fc", duration: 0.45 }, tToCh5 + 0.3);
+};
+</script>

@@ -1,0 +1,614 @@
+<style>
+  .c1-scene {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 0;
+    color: #f8fafc;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+
+  /* Hero section */
+  .c1-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .c1-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 20px;
+    border-radius: 999px;
+    background: rgba(139, 92, 246, 0.18);
+    border: 2px solid #8b5cf6;
+    color: #ddd6fe;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+
+  .c1-hero-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    background: #a78bfa;
+  }
+
+  .c1-hero-title {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.24;
+    letter-spacing: -0.01em;
+    color: #f8fafc;
+  }
+
+  .c1-hero-accent {
+    color: #c4b5fd;
+  }
+
+  /* Middle 2-column grid */
+  .c1-grid {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr 1.12fr;
+    gap: 24px;
+  }
+
+  .c1-card {
+    border-radius: 22px;
+    background: #0f172a;
+    border: 2px solid #334155;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .c1-card-loop {
+    background: radial-gradient(circle at 70% 35%, rgba(139, 92, 246, 0.18), rgba(15, 23, 42, 0.98) 70%);
+    border: 2px solid #4c1d95;
+  }
+
+  .c1-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+    flex-shrink: 0;
+  }
+
+  .c1-card-title {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 800;
+    color: #f8fafc;
+  }
+
+  .c1-tag-muted {
+    padding: 4px 14px;
+    border-radius: 999px;
+    background: #1e293b;
+    border: 1px solid #475569;
+    color: #cbd5e1;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .c1-tag-accent {
+    padding: 4px 14px;
+    border-radius: 999px;
+    background: rgba(139, 92, 246, 0.25);
+    border: 1px solid #8b5cf6;
+    color: #ede9fe;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  /* Left card items */
+  .c1-legacy-list {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  .c1-legacy-item {
+    border-radius: 16px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    padding: 15px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .c1-legacy-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .c1-legacy-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #f8fafc;
+  }
+
+  .c1-num-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: #334155;
+    color: #f8fafc;
+    font-size: 18px;
+    font-weight: 800;
+    display: inline-grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+
+  .c1-param-badge {
+    padding: 4px 12px;
+    border-radius: 10px;
+    background: rgba(56, 189, 248, 0.14);
+    border: 1px solid rgba(56, 189, 248, 0.45);
+    color: #7dd3fc;
+    font-size: 17px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .c1-param-badge-amber {
+    background: rgba(251, 191, 36, 0.14);
+    border-color: rgba(251, 191, 36, 0.45);
+    color: #fde68a;
+  }
+
+  .c1-legacy-desc {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #cbd5e1;
+    line-height: 1.4;
+  }
+
+  /* Visual mini strips inside legacy items */
+  .c1-stack-strip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .c1-layer-block {
+    flex: 1;
+    height: 30px;
+    border-radius: 8px;
+    background: rgba(56, 189, 248, 0.16);
+    border: 1px solid rgba(56, 189, 248, 0.45);
+    color: #bae6fd;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .c1-token-strip {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .c1-token-box {
+    padding: 5px 11px;
+    border-radius: 8px;
+    background: rgba(251, 191, 36, 0.15);
+    border: 1px solid rgba(251, 191, 36, 0.45);
+    color: #fef3c7;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .c1-token-arrow {
+    color: #94a3b8;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .c1-legacy-note {
+    border-radius: 12px;
+    background: rgba(30, 41, 59, 0.72);
+    border-left: 4px solid #64748b;
+    padding: 10px 14px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #cbd5e1;
+    flex-shrink: 0;
+  }
+
+  /* Right card: Loop SVG & pills */
+  .c1-loop-stage {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .c1-loop-svg {
+    width: 100%;
+    max-width: 580px;
+    height: 245px;
+    display: block;
+    overflow: visible;
+  }
+
+  .c1-loop-steps {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 18px;
+    border-radius: 999px;
+    background: rgba(139, 92, 246, 0.16);
+    border: 1px solid rgba(167, 139, 250, 0.55);
+    color: #ede9fe;
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .c1-loop-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .c1-shared-badge {
+    border-radius: 14px;
+    background: #1e293b;
+    border: 2px solid #6d28d9;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+  }
+
+  .c1-shared-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #c4b5fd;
+  }
+
+  .c1-shared-value {
+    font-size: 19px;
+    font-weight: 800;
+    color: #f8fafc;
+  }
+
+  .c1-ttc-pill {
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.34), rgba(56, 189, 248, 0.24));
+    border: 2px solid #8b5cf6;
+    padding: 10px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+  }
+
+  .c1-ttc-label {
+    font-size: 14px;
+    font-weight: 800;
+    color: #a5f3fc;
+    letter-spacing: 0.03em;
+  }
+
+  .c1-ttc-value {
+    font-size: 19px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+
+  /* Bottom 3 goal pills with safe horizontal margins */
+  .c1-goals-row {
+    margin: 0 212px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    flex-shrink: 0;
+  }
+
+  .c1-goal-pill {
+    border-radius: 16px;
+    background: #1e293b;
+    border: 2px solid #475569;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .c1-goal-num {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: #8b5cf6;
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 900;
+    display: inline-grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+
+  .c1-goal-text {
+    font-size: 19px;
+    font-weight: 800;
+    color: #f8fafc;
+    line-height: 1.25;
+  }
+</style>
+
+<div class="c1-scene">
+  <div class="c1-hero">
+    <div id="c1-hero-badge" class="c1-hero-badge">
+      <span class="c1-hero-dot"></span>
+      <span>AIアーキテクチャ解説</span>
+    </div>
+    <h1 id="c1-hero-title" class="c1-hero-title">
+      Looped Transformer：<span class="c1-hero-accent">『同じ層を回す』</span>第3の進化
+    </h1>
+  </div>
+
+  <div class="c1-grid">
+    <!-- Left Card: Traditional 2 Pillars -->
+    <section id="c1-card-legacy" class="c1-card">
+      <div class="c1-card-head">
+        <h2 class="c1-card-title">従来の2大アプローチ</h2>
+        <span class="c1-tag-muted">これまでの主流</span>
+      </div>
+
+      <div class="c1-legacy-list">
+        <div id="c1-legacy-1" class="c1-legacy-item">
+          <div class="c1-legacy-top">
+            <div class="c1-legacy-name">
+              <span class="c1-num-circle">1</span>
+              <span>巨大化（Scaling）</span>
+            </div>
+            <span class="c1-param-badge">パラメータ N 増大</span>
+          </div>
+          <p class="c1-legacy-desc">異なる重みを持つ層を何十〜何百段も縦に積み上げる</p>
+          <div class="c1-stack-strip">
+            <div class="c1-layer-block">Layer 1</div>
+            <div class="c1-layer-block">Layer 2</div>
+            <div class="c1-layer-block">Layer 3</div>
+            <div class="c1-layer-block">...</div>
+            <div class="c1-layer-block">Layer L</div>
+          </div>
+        </div>
+
+        <div id="c1-legacy-2" class="c1-legacy-item">
+          <div class="c1-legacy-top">
+            <div class="c1-legacy-name">
+              <span class="c1-num-circle">2</span>
+              <span>CoT（思考の連鎖）</span>
+            </div>
+            <span class="c1-param-badge c1-param-badge-amber">出力トークン長 T_CoT 増大</span>
+          </div>
+          <p class="c1-legacy-desc">中間思考を自然言語トークンとして1語ずつ外に書き出す</p>
+          <div class="c1-token-strip">
+            <span class="c1-token-box">t₁</span>
+            <span class="c1-token-arrow">→</span>
+            <span class="c1-token-box">t₂</span>
+            <span class="c1-token-arrow">→</span>
+            <span class="c1-token-box">t₃</span>
+            <span class="c1-token-arrow">→</span>
+            <span class="c1-token-box">...</span>
+            <span class="c1-token-arrow">→</span>
+            <span class="c1-token-box">t_T</span>
+          </div>
+        </div>
+
+        <div id="c1-legacy-note" class="c1-legacy-note">
+          計算深度を増やすには「モデル巨大化 N」か「出力長 T_CoT」の拡大が必要
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Card: 3rd Axis Recurrent Depth -->
+    <section id="c1-card-loop" class="c1-card c1-card-loop">
+      <div class="c1-card-head">
+        <h2 class="c1-card-title">第3の軸：Recurrent Depth (R)</h2>
+        <span class="c1-tag-accent">潜在空間で反復</span>
+      </div>
+
+      <div class="c1-loop-stage">
+        <svg id="c1-loop-svg" class="c1-loop-svg" viewBox="0 0 560 250" aria-label="Looped Transformer Recurrent Depth">
+          <defs>
+            <linearGradient id="c1-ring-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#c4b5fd" />
+              <stop offset="50%" stop-color="#8b5cf6" />
+              <stop offset="100%" stop-color="#38bdf8" />
+            </linearGradient>
+          </defs>
+
+          <!-- Input arrow h^(0) -->
+          <line x1="26" y1="125" x2="150" y2="125" stroke="#64748b" stroke-width="3" stroke-linecap="round" />
+          <polygon points="150,118 164,125 150,132" fill="#94a3b8" />
+          <rect x="20" y="88" width="92" height="28" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5" />
+          <text x="66" y="107" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="700">入力 h^(0)</text>
+
+          <!-- Output arrow h^(R) -->
+          <line x1="396" y1="125" x2="518" y2="125" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+          <polygon points="518,118 532,125 518,132" fill="#38bdf8" />
+          <rect x="442" y="88" width="96" height="28" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="490" y="107" text-anchor="middle" fill="#bae6fd" font-size="16" font-weight="700">出力 h^(R)</text>
+
+          <!-- Outer base ring -->
+          <circle cx="280" cy="125" r="96" fill="none" stroke="#312e81" stroke-width="10" />
+          <!-- Animated dashed loop ring -->
+          <circle id="c1-ring-flow" cx="280" cy="125" r="96" fill="none" stroke="url(#c1-ring-grad)" stroke-width="6" stroke-dasharray="36 18" stroke-linecap="round" />
+
+          <!-- Rotating tracer orbital group -->
+          <g id="c1-ring-rotator">
+            <circle cx="280" cy="29" r="9" fill="#c4b5fd" stroke="#ffffff" stroke-width="2.5" />
+            <circle cx="280" cy="221" r="7" fill="#38bdf8" />
+          </g>
+
+          <!-- Central Transformer Block f_theta -->
+          <rect x="202" y="80" width="156" height="90" rx="18" fill="#1e1b4b" stroke="#a78bfa" stroke-width="3" />
+          <text x="280" y="117" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="900">Transformer層</text>
+          <text x="280" y="143" text-anchor="middle" fill="#c4b5fd" font-size="17" font-weight="800">f_θ(h^(t))</text>
+
+          <!-- Top & Bottom recurrence labels -->
+          <rect x="206" y="6" width="148" height="26" rx="13" fill="#0f172a" stroke="#8b5cf6" stroke-width="1.5" />
+          <text x="280" y="24" text-anchor="middle" fill="#ddd6fe" font-size="14" font-weight="700">h^(t+1) ← h^(t)</text>
+
+          <rect x="210" y="218" width="140" height="26" rx="13" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="280" y="236" text-anchor="middle" fill="#bae6fd" font-size="14" font-weight="700">深さ R 回反復</text>
+        </svg>
+
+        <div id="c1-loop-steps" class="c1-loop-steps">
+          <span>Loop 1</span>
+          <span>→</span>
+          <span>Loop 2</span>
+          <span>→</span>
+          <span>...</span>
+          <span>→</span>
+          <span>Loop R</span>
+        </div>
+      </div>
+
+      <div class="c1-loop-bottom">
+        <div id="c1-shared-badge" class="c1-shared-badge">
+          <span class="c1-shared-label">パラメータ数そのまま</span>
+          <span class="c1-shared-value">共有重み θ (Shared Weights)</span>
+        </div>
+        <div id="c1-ttc-pill" class="c1-ttc-pill">
+          <span class="c1-ttc-label">TEST-TIME COMPUTE</span>
+          <span class="c1-ttc-value">推論時計算量を自在に拡張</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Bottom 3 goal pills with 212px horizontal margin to clear Metan & Zundamon -->
+  <div id="c1-goals-row" class="c1-goals-row">
+    <div id="c1-goal-1" class="c1-goal-pill">
+      <span class="c1-goal-num">1</span>
+      <span class="c1-goal-text">漸化式と計算機理論</span>
+    </div>
+    <div id="c1-goal-2" class="c1-goal-pill">
+      <span class="c1-goal-num">2</span>
+      <span class="c1-goal-text">CoT vs 潜在推論・動的深さ</span>
+    </div>
+    <div id="c1-goal-3" class="c1-goal-pill">
+      <span class="c1-goal-num">3</span>
+      <span class="c1-goal-text">力学系の壁と最新LLM</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.__diagramBuilders = window.__diagramBuilders || {};
+  window.__diagramBuilders["ch01_intro"] = function (tl, cues) {
+    var tTitle = cues && cues.c1_title !== undefined ? cues.c1_title : 0.45;
+    var tGiant = cues && cues.c1_giant_llm !== undefined ? cues.c1_giant_llm : 9.09;
+    var tTwo = cues && cues.c1_two_pillars !== undefined ? cues.c1_two_pillars : 17.11;
+    var tLoop = cues && cues.c1_loop_concept !== undefined ? cues.c1_loop_concept : 26.5;
+    var tWow = cues && cues.c1_zunda_wow !== undefined ? cues.c1_zunda_wow : 36.0;
+    var tTtc = cues && cues.c1_ttc_pill !== undefined ? cues.c1_ttc_pill : 43.66;
+    var tGoals = cues && cues.c1_goals !== undefined ? cues.c1_goals : 52.08;
+    var tGo = cues && cues.c1_go !== undefined ? cues.c1_go : 63.34;
+
+    gsap.set("#c1-hero-badge", { opacity: 0, y: 14 });
+    gsap.set("#c1-hero-title", { opacity: 0, y: 18 });
+    gsap.set("#c1-card-legacy", { opacity: 0, y: 16 });
+    gsap.set("#c1-card-loop", { opacity: 0, y: 16, borderColor: "#4c1d95" });
+
+    gsap.set("#c1-legacy-1", { opacity: 0, y: 14 });
+    gsap.set("#c1-legacy-2", { opacity: 0, y: 14 });
+    gsap.set("#c1-legacy-note", { opacity: 0, y: 10 });
+
+    gsap.set("#c1-loop-svg", { opacity: 0.28, scale: 0.96, transformOrigin: "50% 50%" });
+    gsap.set("#c1-ring-rotator", { rotation: 0, svgOrigin: "280 125" });
+    gsap.set("#c1-ring-flow", { strokeDashoffset: 0 });
+    gsap.set("#c1-loop-steps", { opacity: 0, y: 10 });
+    gsap.set("#c1-shared-badge", { opacity: 0, y: 12 });
+    gsap.set("#c1-ttc-pill", { opacity: 0, y: 12, scale: 0.95, transformOrigin: "50% 50%" });
+
+    gsap.set("#c1-goal-1", { opacity: 0, y: 16 });
+    gsap.set("#c1-goal-2", { opacity: 0, y: 16 });
+    gsap.set("#c1-goal-3", { opacity: 0, y: 16 });
+
+    /* Cue 1: c1_title */
+    tl.to("#c1-hero-badge", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tTitle);
+    tl.to("#c1-hero-title", { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, tTitle + 0.15);
+    tl.to("#c1-card-legacy", { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, tTitle + 0.4);
+    tl.to("#c1-card-loop", { opacity: 0.85, y: 0, duration: 0.55, ease: "power2.out" }, tTitle + 0.55);
+
+    /* Cue 2: c1_giant_llm */
+    tl.to("#c1-legacy-1", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, tGiant);
+    tl.to("#c1-legacy-1", { borderColor: "#38bdf8", duration: 0.35 }, tGiant + 0.3);
+
+    /* Cue 3: c1_two_pillars */
+    tl.to("#c1-legacy-1", { borderColor: "#334155", duration: 0.35 }, tTwo);
+    tl.to("#c1-legacy-2", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, tTwo + 0.1);
+    tl.to("#c1-legacy-2", { borderColor: "#fbbf24", duration: 0.35 }, tTwo + 0.35);
+    tl.to("#c1-legacy-note", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tTwo + 1.4);
+
+    /* Cue 4: c1_loop_concept */
+    tl.to("#c1-legacy-2", { borderColor: "#334155", duration: 0.35 }, tLoop);
+    tl.to("#c1-card-loop", { opacity: 1, borderColor: "#8b5cf6", duration: 0.5, ease: "power2.out" }, tLoop);
+    tl.to("#c1-loop-svg", { opacity: 1, scale: 1, duration: 0.6, ease: "power2.out" }, tLoop + 0.1);
+    tl.to("#c1-loop-steps", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tLoop + 0.5);
+    tl.to("#c1-ring-rotator", { rotation: 1440, duration: 40, ease: "none" }, tLoop + 0.2);
+    tl.to("#c1-ring-flow", { strokeDashoffset: -1106, duration: 40, ease: "none" }, tLoop + 0.2);
+
+    /* Cue 5: c1_zunda_wow */
+    tl.to("#c1-shared-badge", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, tWow);
+    tl.to("#c1-shared-badge", { borderColor: "#a78bfa", duration: 0.35 }, tWow + 0.2);
+    tl.to("#c1-loop-steps", { borderColor: "#c4b5fd", duration: 0.35 }, tWow + 0.3);
+
+    /* Cue 6: c1_ttc_pill */
+    tl.to("#c1-ttc-pill", { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "back.out(1.4)" }, tTtc);
+    tl.to("#c1-ttc-pill", { borderColor: "#38bdf8", duration: 0.4 }, tTtc + 0.4);
+
+    /* Cue 7: c1_goals */
+    tl.to("#c1-goal-1", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tGoals);
+    tl.to("#c1-goal-1", { borderColor: "#8b5cf6", duration: 0.3 }, tGoals + 0.2);
+    tl.to("#c1-goal-2", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tGoals + 3.4);
+    tl.to("#c1-goal-2", { borderColor: "#8b5cf6", duration: 0.3 }, tGoals + 3.6);
+    tl.to("#c1-goal-3", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tGoals + 6.8);
+    tl.to("#c1-goal-3", { borderColor: "#8b5cf6", duration: 0.3 }, tGoals + 7.0);
+
+    /* Cue 8: c1_go */
+    tl.to("#c1-goal-1", { borderColor: "#a78bfa", duration: 0.35 }, tGo);
+    tl.to("#c1-goal-2", { borderColor: "#a78bfa", duration: 0.35 }, tGo + 0.15);
+    tl.to("#c1-goal-3", { borderColor: "#a78bfa", duration: 0.35 }, tGo + 0.3);
+    tl.to("#c1-card-loop", { borderColor: "#a78bfa", duration: 0.4 }, tGo + 0.2);
+  };
+</script>

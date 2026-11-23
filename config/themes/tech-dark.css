@@ -1,0 +1,25 @@
+/* テック・ダークテーマ（IT・プログラミング・数理向け） */
+:root {
+  --bg-canvas: #0b1120;
+  --bg-canvas-accent: radial-gradient(circle at 18% 15%, rgba(56, 189, 248, 0.16) 0%, transparent 45%),
+                      radial-gradient(circle at 85% 20%, rgba(168, 85, 247, 0.14) 0%, transparent 42%),
+                      linear-gradient(180deg, #0b1120 0%, #0f172a 100%);
+  --bg-card: #1e293b;
+  --bg-card-muted: #0f172a;
+  --bg-stage: rgba(15, 23, 42, 0.85);
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --accent-primary: #38bdf8;
+  --accent-secondary: #818cf8;
+  --accent-ok: #4ade80;
+  --accent-warn: #fbbf24;
+  --accent-danger: #f87171;
+  --border-subtle: #334155;
+  --border-strong: #475569;
+  --header-bg: rgba(15, 23, 42, 0.94);
+  --caption-bg: rgba(15, 23, 42, 0.96);
+  --shadow-card: 0 16px 36px rgba(0, 0, 0, 0.45);
+  --shadow-focus: 0 0 0 4px rgba(56, 189, 248, 0.25);
+  --grid-line: rgba(148, 163, 184, 0.08);
+}

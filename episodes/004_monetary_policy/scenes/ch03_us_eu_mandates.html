@@ -1,0 +1,232 @@
+<style>
+  .c3-scene { --accent-primary: #1d4ed8; position: relative; width: 100%; height: 684px; color: #0f172a; font-family: "Noto Sans JP", sans-serif; }
+  .c3-phase { position: absolute; inset: 0; box-sizing: border-box; padding-bottom: 48px; gap: 16px; }
+  #c3-phase-b { opacity: 0; }
+  .c3-phase .dg-heading { font-weight: 800; font-size: 31px; }
+  .c3-phase .dg-card, .c3-phase .dg-card-glow { height: 100%; min-height: 0; box-sizing: border-box; }
+  .c3-phase .dg-col { gap: 14px; }
+  .c3-phase .dg-svg-stage > svg { width: 100%; height: 100%; }
+  .c3-phase .dg-callout { padding: 12px 18px; font-size: 20px; }
+  .c3-main { flex: 1; min-height: 0; }
+  .c3-policy { gap: 10px; }
+  .c3-policy strong { font-size: 22px; }
+  .c3-icon { width: 29px; height: 29px; color: #166534; flex: none; }
+  .c3-summary { min-height: 29px; }
+  .c3-chart-grid { stroke: #cbd5e1; stroke-dasharray: 5 6; }
+  .c3-branch { fill: none; stroke: #1d4ed8; stroke-width: 3; marker-end: url(#c3-chevron); }
+</style>
+<div class="c3-scene">
+  <div class="c3-phase dg-col" id="c3-phase-a">
+    <div class="dg-title-bar">
+      <h2 class="dg-heading">米国 FRB：デュアル・マンデートと基軸通貨ドルの綱渡り</h2>
+      <span class="dg-pill-danger" id="c3-fed-rate">3.75〜4.00%（2026年秋）</span>
+    </div>
+    <div class="dg-grid-2 c3-main">
+      <div class="dg-card-glow dg-col">
+        <div class="dg-card-head">
+          <h3 class="dg-card-title">法的使命：デュアル・マンデート</h3>
+          <span class="dg-pill-accent">FRB</span>
+        </div>
+        <div class="dg-svg-stage">
+          <svg viewBox="0 0 650 325" role="img" aria-label="FRBが物価の安定と雇用の最大化を同時に追うことを示す天秤">
+            <defs>
+              <linearGradient id="c3-price-wash" x2="0%" y2="100%"><stop stop-color="#fee2e2"/><stop offset="100%" stop-color="#fff"/></linearGradient>
+              <linearGradient id="c3-jobs-wash" x2="0%" y2="100%"><stop stop-color="#dbeafe"/><stop offset="100%" stop-color="#fff"/></linearGradient>
+            </defs>
+            <g id="c3-scale">
+              <circle cx="325" cy="142" r="98" fill="#dbeafe" opacity=".46"/>
+              <path d="M325 118 L294 264 H356 Z" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M263 267 H387" stroke="#1e3a8a" stroke-width="7" stroke-linecap="round"/>
+              <g id="c3-beam">
+                <path d="M161 112 H489" stroke="#1e3a8a" stroke-width="7" stroke-linecap="round"/>
+                <path d="M161 112 L73 192 H249 Z" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M489 112 L401 192 H577 Z" fill="none" stroke="#1d4ed8" stroke-width="2.5" stroke-linejoin="round"/>
+                <rect x="47" y="190" width="228" height="67" rx="14" fill="url(#c3-price-wash)" stroke="#dc2626" stroke-width="2"/>
+                <rect x="375" y="190" width="228" height="67" rx="14" fill="url(#c3-jobs-wash)" stroke="#1d4ed8" stroke-width="2"/>
+                <g text-anchor="middle" font-size="24" font-weight="800">
+                  <text x="161" y="218" fill="#991b1b">物価の安定</text>
+                  <text x="489" y="218" fill="#1e3a8a">雇用の最大化</text>
+                </g>
+                <g text-anchor="middle" font-size="17" font-weight="700" fill="#475569">
+                  <text x="161" y="242">インフレ目標 2%</text><text x="489" y="242">景気・失業率</text>
+                </g>
+              </g>
+              <circle cx="325" cy="112" r="11" fill="#fff" stroke="#1e3a8a" stroke-width="4"/>
+              <text x="325" y="302" fill="#475569" font-size="18" font-weight="700" text-anchor="middle">両方の目標を見ながら金利を決める</text>
+            </g>
+          </svg>
+        </div>
+        <div class="dg-callout dg-callout-warn" id="c3-fed-intent">インフレを抑えながら、景気の急失速を避ける</div>
+      </div>
+      <div class="dg-card dg-col" id="c3-fed-path">
+        <div class="dg-card-head">
+          <h3 class="dg-card-title">米国FF金利の推移と世界への波及</h3>
+          <span class="dg-pill-muted">推移の概略</span>
+        </div>
+        <div class="dg-svg-stage">
+          <svg viewBox="0 0 650 325" role="img" aria-label="2022年から2023年の利上げと2024年から2025年の利下げ、2026年秋の水準を示す概略">
+            <defs>
+              <linearGradient id="c3-chart-wash" x2="0%" y2="100%">
+                <stop stop-color="#93c5fd" stop-opacity=".62"/><stop offset="100%" stop-color="#dbeafe" stop-opacity=".13"/>
+              </linearGradient>
+            </defs>
+            <path d="M70 58 H599 M70 116 H599 M70 174 H599" class="c3-chart-grid"/>
+            <path d="M70 48 V232 H600" fill="none" stroke="#94a3b8" stroke-width="2"/>
+            <text x="70" y="37" font-size="17" font-weight="800" fill="#475569">政策金利</text>
+            <path id="c3-area" d="M79 218 H111 V195 H150 V163 H183 V115 H217 V70 H312 V87 H365 V111 H408 V139 H460 V151 H507 V140 H571 V232 H79 Z" fill="url(#c3-chart-wash)"/>
+            <path id="c3-trace" d="M79 218 H111 V195 H150 V163 H183 V115 H217 V70 H312 V87 H365 V111 H408 V139 H460 V151 H507 V140 H571" fill="none" stroke="#1d4ed8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <g id="c3-fed-end">
+              <path d="M571 140 V232" stroke="#1d4ed8" stroke-width="2" stroke-dasharray="5 6"/>
+              <circle cx="571" cy="140" r="14" fill="#bfdbfe"/>
+              <circle cx="571" cy="140" r="7" fill="#1d4ed8" stroke="#fff" stroke-width="2"/>
+              <rect x="438" y="82" width="154" height="37" rx="10" fill="#fff" stroke="#93b4f4"/>
+              <text x="515" y="107" text-anchor="middle" font-size="20" font-weight="800" fill="#1e3a8a">3.75〜4.00%</text>
+            </g>
+            <g text-anchor="middle" font-size="17" font-weight="800" fill="#0f172a">
+              <text x="170" y="258">2022〜23年</text><text x="374" y="258">2024〜25年</text><text x="550" y="258">2026年秋</text>
+              <text x="170" y="283" fill="#475569">急速な利上げ</text><text x="374" y="283" fill="#475569">利下げへ転換</text>
+            </g>
+          </svg>
+        </div>
+        <div class="dg-chip-row" id="c3-dollar">
+          <span class="dg-chip">FOMCが決定</span><span class="dg-chip dg-chip-accent">基軸通貨ドル</span>
+          <span class="dg-chip">世界の金利・資金フローに波及</span>
+        </div>
+      </div>
+    </div>
+    <div class="dg-callout c3-summary" id="c3-fed-summary">米国の金利は、国内の物価・雇用だけでなく、ドルを通じて世界の資金の流れにも影響する。</div>
+  </div>
+  <div class="c3-phase dg-col" id="c3-phase-b">
+    <div class="dg-title-bar">
+      <h2 class="dg-heading">欧州 ECB：物価最優先と「1つの金利・20カ国」のジレンマ</h2>
+      <span class="dg-pill-warn" id="c3-ecb-rate">預金金利 2.50%（2026年秋）</span>
+    </div>
+    <div class="dg-grid-2 c3-main">
+      <div class="dg-card dg-col">
+        <div class="dg-card-head"><h3 class="dg-card-title">シングル・マンデート（物価安定最優先）</h3></div>
+        <div class="dg-svg-stage">
+          <svg viewBox="0 0 650 308" role="img" aria-label="ECBは中期の物価上昇率2%を最優先し、その範囲でEUの経済政策を支える">
+            <defs>
+              <linearGradient id="c3-target-wash" x2="0%" y2="100%"><stop stop-color="#dbeafe"/><stop offset="100%" stop-color="#fff"/></linearGradient>
+            </defs>
+            <rect x="84" y="19" width="482" height="152" rx="20" fill="url(#c3-target-wash)" stroke="#1d4ed8" stroke-width="2"/>
+            <g text-anchor="middle" font-weight="800">
+              <text x="325" y="57" fill="#0f172a" font-size="25">最優先は物価の安定</text>
+              <g id="c3-target">
+                <text x="325" y="118" fill="#1d4ed8" font-size="58">2%</text>
+                <text x="325" y="149" fill="#475569" font-size="19">中期のインフレ目標</text>
+              </g>
+            </g>
+            <g id="c3-priority">
+              <path d="M325 171 V209 M318 202 L325 209 L332 202" stroke="#1d4ed8" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <rect x="143" y="210" width="364" height="75" rx="14" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+              <text x="325" y="242" fill="#0f172a" text-anchor="middle" font-size="22" font-weight="800">EUの経済政策を支える</text>
+              <text x="325" y="269" fill="#475569" text-anchor="middle" font-size="17" font-weight="700">物価安定の目標を損なわない範囲で</text>
+            </g>
+          </svg>
+        </div>
+        <div class="dg-math-box c3-policy" id="c3-ecb-path">
+          <div class="dg-chip-row"><span class="dg-pill-warn">歴史的な高インフレの教訓</span></div>
+          <strong>2024〜25年　2%前後へ利下げ</strong>
+          <span class="dg-math-note">2026年　エネルギー高を受け、2.50%へ再利上げ</span>
+        </div>
+      </div>
+      <div class="dg-card-glow dg-col" id="c3-dilemma">
+        <div class="dg-card-head"><h3 class="dg-card-title">単一通貨ユーロの構造的ジレンマ</h3></div>
+        <div class="dg-svg-stage">
+          <svg viewBox="0 0 650 308" role="img" aria-label="単一の政策金利でも国ごとに国債利回りが異なり、金融政策の伝わり方に差が出る">
+            <defs>
+              <linearGradient id="c3-ecb-wash" x2="0%" y2="100%"><stop stop-color="#dbeafe"/><stop offset="100%" stop-color="#fff"/></linearGradient>
+              <marker id="c3-chevron" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+                <path d="M2 2.5 L10 6 L2 9.5" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </marker>
+            </defs>
+            <rect x="184" y="22" width="282" height="70" rx="15" fill="url(#c3-ecb-wash)" stroke="#1d4ed8" stroke-width="2"/>
+            <text x="325" y="52" text-anchor="middle" font-size="24" font-weight="800" fill="#0f172a">ECBの単一政策金利</text>
+            <text x="325" y="77" text-anchor="middle" font-size="18" font-weight="800" fill="#1e3a8a">預金金利 2.50%</text>
+            <path class="c3-branch" d="M325 92 V111 H163 V140"/><path class="c3-branch" d="M325 111 H487 V140"/>
+            <rect x="22" y="142" width="282" height="93" rx="15" fill="#fff" stroke="#93b4f4" stroke-width="2"/>
+            <rect x="346" y="142" width="282" height="93" rx="15" fill="#fff7ed" stroke="#d97706" stroke-width="2"/>
+            <g text-anchor="middle" font-weight="800">
+              <text x="163" y="179" font-size="23" fill="#0f172a">財政余力がある国</text>
+              <text x="487" y="179" font-size="23" fill="#0f172a">債務負担が大きい国</text>
+              <text x="163" y="210" font-size="18" fill="#1e3a8a">国債利回りは比較的低い</text>
+              <text x="487" y="210" font-size="18" fill="#92400e">国債利回りが急騰するリスク</text>
+            </g>
+            <g id="c3-spread">
+              <path d="M163 247 V260 H487 V247" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round"/>
+              <rect x="152" y="267" width="346" height="33" rx="10" fill="#ffedd5"/>
+              <text x="325" y="290" text-anchor="middle" fill="#92400e" font-size="18" font-weight="800">利回り格差（スプレッド）が広がる</text>
+            </g>
+          </svg>
+        </div>
+        <div class="dg-callout dg-callout-ok dg-row" id="c3-tpi">
+          <svg viewBox="0 0 24 24" class="c3-icon" aria-hidden="true"><use href="#dg-ico-shield"/></svg>
+          <span>安全網 TPI（伝達保護措置）で、金融政策が各国に届くようにする。</span>
+        </div>
+      </div>
+    </div>
+    <div class="dg-callout c3-summary" id="c3-ecb-summary">
+      <span id="c3-ecb-recap">同じ金利でも、国ごとの資金調達コストに差が出る。</span>
+      <span id="c3-next">次章　日本の金融政策とその意図</span>
+    </div>
+  </div>
+</div>
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders['ch03_us_eu_mandates'] = function (tl, cues) {
+  const byId = function (id) { return document.getElementById("c3-" + id); };
+  const at = function (id, fallback) {
+    const value = cues && cues["c3_" + id];
+    return typeof value === "number" ? value : fallback;
+  };
+  const reveal = function (id, time) {
+    const element = byId(id);
+    gsap.set(element, { opacity: 0, y: 10 });
+    tl.to(element, { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, time);
+  };
+
+  const dual = at("dual_mandate", 8.4013);
+  const fedPath = at("frb_path", 15.6166);
+  const fed2026 = at("frb_2026", 25.1573);
+  const intent = at("frb_intent", 34.058);
+  const phase2 = at("phase2_ecb", 58.0167);
+  const single = at("single_mandate", 66.96);
+  const ecb2026 = at("ecb_2026", 74.4953);
+
+  reveal("scale", at("frb_intro", 0.45));
+  gsap.set(byId("beam"), { svgOrigin: "325 112", rotation: -5 });
+  tl.to(byId("beam"), { rotation: 4, duration: 0.75, ease: "power2.inOut" }, dual);
+  tl.to(byId("beam"), { rotation: -2, duration: 0.6, ease: "power2.inOut" }, dual + 0.75);
+  tl.to(byId("beam"), { rotation: 0, duration: 0.55, ease: "power2.out" }, dual + 1.35);
+
+  reveal("fed-path", fedPath);
+  reveal("area", fedPath + 0.65);
+  const trace = byId("trace");
+  const traceLength = trace.getTotalLength();
+  gsap.set(trace, { strokeDasharray: traceLength, strokeDashoffset: traceLength });
+  tl.to(trace, { strokeDashoffset: 0, duration: 1.25, ease: "power2.inOut" }, fedPath + 0.25);
+  reveal("fed-rate", fed2026);
+  reveal("fed-end", fed2026);
+  reveal("fed-intent", intent);
+  reveal("dollar", at("zunda_dollar", 41.672));
+  reveal("fed-summary", at("zunda_frb", 50.0967));
+
+  gsap.set(byId("phase-a"), { opacity: 1 });
+  gsap.set(byId("phase-b"), { opacity: 0 });
+  tl.to(byId("phase-b"), { opacity: 1, duration: 0.15, ease: "none" }, phase2);
+  tl.to(byId("phase-a"), { opacity: 0, duration: 0.15, ease: "none" }, phase2);
+  reveal("target", single);
+  reveal("priority", single + 0.6);
+  reveal("ecb-rate", ecb2026);
+  reveal("ecb-path", ecb2026);
+  reveal("dilemma", at("ecb_dilemma", 85.2946));
+  reveal("spread", at("ecb_spread", 93.6299));
+  reveal("tpi", at("ecb_tpi", 101.8799));
+  reveal("ecb-summary", at("zunda_ecb", 111.1046));
+  gsap.set(byId("next"), { opacity: 0, position: "absolute" });
+  const next = at("to_ch4", 120.4573);
+  tl.set(byId("ecb-recap"), { opacity: 0, position: "absolute" }, next);
+  tl.set(byId("next"), { position: "static", opacity: 1 }, next);
+};
+</script>

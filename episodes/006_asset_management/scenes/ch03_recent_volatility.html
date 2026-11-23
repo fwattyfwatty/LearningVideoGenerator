@@ -1,0 +1,199 @@
+<style>
+  .c3-scene { position: relative; height: 100%; max-height: 680px; font-family: "Noto Sans JP", sans-serif; }
+  .c3-phase { position: absolute; inset: 0; gap: 14px; }
+  .c3-card { gap: 12px; box-sizing: border-box; min-width: 0; min-height: 0; padding: 16px 24px; }
+  .c3-title-icon { width: 30px; height: 30px; color: var(--accent-primary); flex-shrink: 0; }
+  .c3-timeline { flex: 1.04; }
+  .c3-wave { flex: 1.02; gap: 8px; }
+  .c3-nov-alert { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 7px 14px; border-radius: 12px; background: #fcebe8; border: 2px solid var(--accent-danger); font-size: 17px; font-weight: 800; color: var(--text-primary); }
+  .c3-nov-tag { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 999px; background: var(--accent-danger); color: #fffdf9; font-size: 15px; font-weight: 800; white-space: nowrap; flex-shrink: 0; }
+  .c3-nov-metrics { display: flex; align-items: center; gap: 12px; flex-wrap: nowrap; white-space: nowrap; font-size: 17px; font-weight: 800; }
+  .c3-nov-metrics strong { color: var(--accent-danger); }
+  .c3-wave .c3-nov-svg-lbl { font-size: 16px; font-weight: 900; fill: var(--accent-danger); }
+  .c3-timeline .dg-svg-stage { padding: 0 12px; }
+  .c3-timeline .dg-svg-stage svg, .c3-flow svg { width: 100%; height: 100%; }
+  .c3-wave .dg-svg-stage { padding: 2px 16px; }
+  .c3-wave .dg-svg-stage svg { width: 100%; height: 100%; }
+  .c3-wave text { font-size: 22px; font-weight: 800; fill: var(--text-secondary); }
+  .c3-wave .c3-trend-label { fill: var(--accent-secondary); }
+  .c3-wave .c3-short-label { fill: var(--accent-danger); }
+  .c3-cards { flex: 1; min-height: 0; }
+  .c3-formula { height: auto; flex: 1; min-height: 0; justify-content: center; text-align: center; }
+  .c3-factors { justify-content: center; gap: 14px; }
+  .c3-factors .dg-node { padding: 12px 20px; }
+  .c3-factors strong { color: var(--accent-danger); }
+  .c3-operator { font-size: 28px; font-weight: 900; color: var(--accent-primary); }
+  .c3-bars { justify-content: center; flex: 1; min-height: 0; }
+  .c3-bar-label { justify-content: space-between; margin-bottom: 7px; font-size: 21px; font-weight: 800; }
+  .c3-pain { color: var(--accent-danger); }
+  .c3-card .dg-note { margin: 0; font-size: 16px; }
+  .c3-callout { padding: 8px 16px; font-size: 18px; }
+  .c3-flow { flex: 0 0 150px; box-sizing: border-box; padding: 0 14px; }
+  .c3-outro-slot { position: relative; flex: 0 0 48px; }
+  .c3-outro-slot .dg-callout { position: absolute; inset: 0; text-align: center; }
+  #c3-phase-b, #c3-outro { opacity: 0; }
+</style>
+<div class="c3-scene">
+  <div id="c3-phase-a" class="c3-phase dg-col dg-wide-safe">
+    <div class="dg-title-bar">
+      <h2 class="dg-heading">直近3年の荒波：2024年〜2026年11月の乱高下と急落</h2>
+      <span class="dg-pill-warn">最近の急落と2026年11月現在</span>
+    </div>
+    <article id="c3-tl-card" class="c3-card c3-timeline dg-col dg-card-glow">
+      <div class="dg-card-head">
+        <div class="dg-card-title-group">
+          <svg class="c3-title-icon" aria-hidden="true"><use href="#dg-ico-clock" width="30" height="30"/></svg>
+          <h3 class="dg-card-title">日米株が大きく揺れた4つの局面</h3>
+        </div>
+        <span id="c3-rebound" class="dg-pill-ok">2024年8月の急落後、翌営業日に急反発</span>
+      </div>
+      <div id="c3-tl-box" class="dg-svg-stage"></div>
+    </article>
+    <article id="c3-wave-card" class="c3-card c3-wave dg-col dg-card">
+      <div class="dg-card-head">
+        <div class="dg-card-title-group">
+          <svg class="c3-title-icon" aria-hidden="true"><use href="#dg-ico-trending-up" width="30" height="30"/></svg>
+          <h3 class="dg-card-title">長期で上向く局面でも、短期の値動きは大きい</h3>
+        </div>
+        <span class="dg-pill-muted">値動きの模式図</span>
+      </div>
+      <div id="c3-nov-alert" class="c3-nov-alert">
+        <span class="c3-nov-tag">2026年11月現在</span>
+        <div class="c3-nov-metrics">
+          <span>S&amp;P500 <strong>高値比-10%調整</strong></span>
+          <span>｜</span>
+          <span>恐怖指数VIX <strong>28台</strong></span>
+          <span>｜</span>
+          <span>日経平均 <strong>5万6千円台（11/20 -3,007円）</strong></span>
+        </div>
+      </div>
+      <div class="dg-svg-stage">
+        <svg viewBox="0 0 1060 104" role="img" aria-label="長期の傾向を挟み、株価が短期的に上下する模式図">
+          <path d="M32 90H835 M32 55H835 M32 20H835" fill="none" stroke="#d7cbb9" stroke-width="1"/>
+          <path d="M32 76L835 28" fill="none" stroke="#0f766e" stroke-width="3" stroke-dasharray="10 7"/>
+          <g fill="none" stroke="#b91c1c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <path id="c3-wave-start" d="M32 75L76 62L108 72L146 48L176 54"/>
+            <path id="c3-wave-2024" d="M176 54L202 42L242 91L277 66L318 49L350 58"/>
+            <path id="c3-wave-2025" d="M350 58L394 34L436 82L480 48L513 28L546 40"/>
+            <path id="c3-wave-2026" d="M546 40L583 24L621 56L660 33L698 58L733 25L767 38"/>
+            <path id="c3-wave-nov2026" d="M767 38L792 22L814 48L832 76"/>
+          </g>
+          <g id="c3-nov-dot">
+            <circle cx="832" cy="76" r="6" fill="#b91c1c" stroke="#fffdf9" stroke-width="2"/>
+            <text x="794" y="96" class="c3-nov-svg-lbl">11月急落</text>
+          </g>
+          <path d="M864 33h33" stroke="#b91c1c" stroke-width="4" stroke-linecap="round"/>
+          <text x="911" y="40" class="c3-short-label">短期の変動</text>
+          <path d="M864 72h33" stroke="#0f766e" stroke-width="3" stroke-dasharray="9 6"/>
+          <text x="911" y="79" class="c3-trend-label">長期の傾向</text>
+        </svg>
+      </div>
+      <div id="c3-normal" class="c3-callout dg-callout dg-callout-ok">株式市場では、10%前後の調整が年に1〜2回起こることもあります。</div>
+    </article>
+  </div>
+
+  <div id="c3-phase-b" class="c3-phase dg-col dg-wide-safe">
+    <div class="dg-title-bar">
+      <h2 class="dg-heading">なぜ会社員は乱高下で「狼狽売り」しやすいのか？</h2>
+      <span class="dg-pill-danger">為替と損失回避</span>
+    </div>
+    <div class="c3-cards dg-grid-2">
+      <article id="c3-card-fx" class="c3-card dg-col dg-card">
+        <div class="dg-card-head">
+          <div class="dg-card-title-group">
+            <svg class="c3-title-icon" aria-hidden="true"><use href="#dg-ico-arrow-lr" width="30" height="30"/></svg>
+            <h3 class="dg-card-title">株価と為替のダブル変動</h3>
+          </div>
+        </div>
+        <div class="c3-formula dg-math-box">
+          <div class="c3-factors dg-row">
+            <div class="dg-node">海外株価 <strong>下落</strong></div>
+            <span class="c3-operator">×</span>
+            <div class="dg-node">急激な <strong>円高</strong></div>
+          </div>
+          <span class="c3-operator" aria-hidden="true">↓</span>
+          <div id="c3-fx-result" class="dg-pill-danger">円建ての評価額がいっそう下落</div>
+        </div>
+        <p class="dg-note">為替ヘッジなしの場合。円高になると、同じ外貨でも円に換算した金額が減ります。</p>
+      </article>
+      <article id="c3-card-bias" class="c3-card dg-col dg-card-glow">
+        <div class="dg-card-head">
+          <div class="dg-card-title-group">
+            <svg class="c3-title-icon" aria-hidden="true"><use href="#dg-ico-alert" width="30" height="30"/></svg>
+            <h3 class="dg-card-title">損失回避バイアス（プロスペクト理論）</h3>
+          </div>
+        </div>
+        <div class="c3-bars dg-col">
+          <div id="c3-gain">
+            <div class="c3-bar-label dg-row"><span>＋10万円の喜び</span><span class="dg-pill-ok">1.0倍</span></div>
+            <div class="dg-bar-track"><div class="dg-bar-fill dg-bar-fill-ok" style="width:50%"></div></div>
+          </div>
+          <div id="c3-loss">
+            <div class="c3-bar-label dg-row"><span>−10万円の痛み</span><span id="c3-loss-value" class="dg-pill-danger c3-pain">約2.0倍</span></div>
+            <div class="dg-bar-track"><div class="dg-bar-fill dg-bar-fill-warn"></div></div>
+          </div>
+        </div>
+        <p class="dg-note">同じ金額でも、利益の喜びより損失の痛みを強く感じる傾向があります。</p>
+      </article>
+    </div>
+    <div id="c3-trap-flow" class="c3-flow dg-svg-stage"></div>
+    <div class="c3-outro-slot">
+      <div id="c3-outro" class="c3-callout dg-callout">相場が荒れたとき、売るかどうかを何で判断する？</div>
+    </div>
+  </div>
+</div>
+<script>
+  window.__diagramBuilders['ch03_recent_volatility'] = function (tl, cues) {
+    const motion = window.dgMotion;
+    const cards = '#c3-phase-b .c3-card';
+    const details = '#c3-rebound, #c3-nov-alert, #c3-nov-dot, #c3-normal, #c3-trap-flow, #c3-gain, #c3-loss, #c3-outro';
+    gsap.set(details, { opacity: 0 });
+    gsap.set('#c3-card-bias .dg-bar-fill', { scaleX: 0, transformOrigin: 'left center' });
+
+    window.dgWidgets.timeline('#c3-tl-box', tl, {
+      width: 1060, height: 225, at: cues.c3_aug2024, focusEach: true, unfocusAt: cues.c3_zunda_roller,
+      items: [
+        { tag: '2024年8月', title: '令和のブラックマンデー', desc: '日銀利上げ・急円高で4,451円安 → 急反発', tone: 'warn', at: cues.c3_aug2024 },
+        { tag: '2025年4月', title: 'トランプ関税ショック', desc: '相互関税発表で急落 → 延期観測でV字回復', tone: 'warn', at: cues.c3_apr2025 },
+        { tag: '2026年前半〜秋', title: 'AI・金利の往復相場', desc: '米金利・中東・AI過熱懸念で乱高下', tone: 'primary', at: cues.c3_2026_swings },
+        { tag: '2026年11月現在', title: 'AI規制・金利で急落', desc: 'S&P10%調整・VIX28台・日経3,007円安', tone: 'danger', at: cues.c3_nov2026_trigger }
+      ]
+    });
+    motion.reveal(tl, '#c3-phase-a .dg-title-bar, #c3-tl-card', cues.c3_recent_open, { duration: 0.34, stagger: 0.08 });
+    motion.reveal(tl, '#c3-wave-card', cues.c3_recent_open + 0.45);
+    motion.drawPath(tl, '#c3-wave-start', cues.c3_recent_open + 0.66);
+    motion.drawPath(tl, '#c3-wave-2024', cues.c3_aug2024 + 0.18, { duration: 1.2 });
+    motion.reveal(tl, '#c3-rebound', cues.c3_aug2024_rec);
+    motion.drawPath(tl, '#c3-wave-2025', cues.c3_apr2025 + 0.18, { duration: 1.2 });
+    motion.drawPath(tl, '#c3-wave-2026', cues.c3_2026_swings + 0.18, { duration: 1.35 });
+    motion.drawPath(tl, '#c3-wave-nov2026', cues.c3_nov2026_trigger + 0.18, { duration: 1.1 });
+    motion.reveal(tl, '#c3-nov-dot', cues.c3_nov2026_trigger + 0.9, { y: 0 });
+    motion.reveal(tl, '#c3-nov-alert', cues.c3_nov2026_us, { y: 8 });
+    motion.pulse(tl, '#c3-nov-alert', cues.c3_nov2026_vix, cues.c3_zunda_roller - 0.3, { scale: 1.012 });
+    motion.reveal(tl, '#c3-normal', cues.c3_short_term_norm);
+    motion.pulse(tl, '#c3-normal', cues.c3_short_term_norm + 0.5, cues.c3_phase2_why - 0.3, { scale: 1.012 });
+
+    motion.switchPhase(tl, '#c3-phase-a', '#c3-phase-b', cues.c3_phase2_why, { duration: 0.09 });
+    motion.focus(tl, '#c3-card-fx', cards, cues.c3_fx_double);
+    motion.pulse(tl, '#c3-fx-result', cues.c3_fx_double + 0.6, cues.c3_prospect_theory - 0.3);
+    motion.focus(tl, '#c3-card-bias', cards, cues.c3_prospect_theory);
+    motion.reveal(tl, '#c3-gain', cues.c3_prospect_theory + 0.15);
+    motion.barGrow(tl, '#c3-gain .dg-bar-fill', cues.c3_prospect_theory + 0.3);
+    motion.reveal(tl, '#c3-loss', cues.c3_loss_pain);
+    motion.barGrow(tl, '#c3-loss .dg-bar-fill', cues.c3_loss_pain + 0.18);
+    motion.pulse(tl, '#c3-loss-value', cues.c3_loss_pain + 0.55, cues.c3_panic_sell_trap - 0.25);
+
+    window.dgWidgets.flowNodes('#c3-trap-flow', tl, {
+      width: 1100, height: 145, boxHeight: 112,
+      flowStart: cues.c3_panic_sell_trap, flowEnd: cues.c3_to_ch4 + 2,
+      nodes: [
+        { title: '急落ニュース', sub: 'SNSで悲観が広がる', icon: 'dg-ico-alert', tone: 'warn', at: cues.c3_panic_sell_trap },
+        { title: '約2倍の痛み', sub: '恐怖で耐えられない', icon: 'dg-ico-trending-down', tone: 'danger', at: cues.c3_panic_sell_trap + 1.2 },
+        { title: '底値で狼狽売り', sub: '回復の波を逃す', icon: 'dg-ico-zap', tone: 'primary', at: cues.c3_panic_sell_trap + 2.4 }
+      ]
+    });
+    motion.reveal(tl, '#c3-trap-flow', cues.c3_panic_sell_trap, { y: 0 });
+    motion.unfocus(tl, cards, cues.c3_zunda_mind);
+    motion.reveal(tl, '#c3-outro', cues.c3_to_ch4, { y: 0 });
+  };
+</script>

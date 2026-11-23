@@ -1,0 +1,264 @@
+<style>
+.c5-scene {
+  position: fixed;
+  top: 96px;
+  left: 64px;
+  width: 1792px;
+  height: 708px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #edf9f8;
+  --c5-teal: #14b8a6;
+  --c5-mint: #94f4e6;
+  --c5-blue: #a9c8fb;
+  --c5-muted: #b5cbd4;
+}
+.c5-scene * { box-sizing: border-box; }
+.c5-phase { position: absolute; inset: 0; padding-bottom: 44px; }
+.c5-title, .c5-banner {
+  position: relative;
+  margin: 0;
+  border: 1px solid #2a5964;
+  border-left: 5px solid var(--c5-teal);
+  border-radius: 16px;
+  background: #102a36;
+}
+.c5-title {
+  width: 83%;
+  height: 106px;
+  padding: 12px 360px 12px 25px;
+}
+.c5-title h2 { margin: 0; font-size: 34px; line-height: 1.25; }
+.c5-category { color: var(--c5-mint); font-size: 19px; font-weight: 800; letter-spacing: .09em; }
+.c5-grid-a { position: relative; padding-top: 82px; }
+.c5-card {
+  position: absolute;
+  top: 82px;
+  height: 476px;
+  padding: 22px 25px;
+  border: 1px solid #2e4b61;
+  border-radius: 20px;
+  background: #102031;
+}
+.c5-ar-card { left: 0; width: 700px; }
+.c5-dlm-card { right: 0; width: 1070px; border-color: #287a79; }
+.c5-card h3, .c5-frontier h3 { margin: 0; font-size: 30px; line-height: 1.25; }
+.c5-card p { margin: 8px 0 0; color: var(--c5-muted); font-size: 23px; }
+.c5-card .c5-category { margin-right: 9px; }
+.c5-ar-tokens { margin-top: 83px; font-size: 0; white-space: nowrap; }
+.c5-token {
+  width: 93px;
+  height: 50px;
+  padding: 0 4px;
+  border: 1px solid #33516e;
+  border-radius: 9px;
+  background: #172c43;
+  color: var(--c5-blue);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 48px;
+}
+.c5-ar-token { float: left; }
+.c5-arrow { float: left; width: 37px; color: var(--c5-blue); text-align: center; font-size: 24px; line-height: 50px; }
+.c5-ar-tags { clear: both; padding-top: 46px; }
+.c5-pill {
+  padding: 5px 13px;
+  margin-right: 6px;
+  border: 1px solid #39566a;
+  border-radius: 999px;
+  background: #172c40;
+  color: #d5e6f8;
+  font-size: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.c5-mask { background: #192a3b; color: #a6bfd1; font-size: 17px; }
+.c5-known { border-color: #298379; background: #123d3c; color: var(--c5-mint); }
+.c5-steps { margin-top: 34px; }
+.c5-step { height: 58px; line-height: 50px; }
+.c5-step > span { float: left; margin-right: 8px; }
+.c5-step-label { width: 88px; color: var(--c5-muted); font-size: 20px; font-weight: 800; }
+.c5-step-note { margin-left: 12px; color: var(--c5-mint); font-size: 21px; font-weight: 700; }
+.c5-attention { position: absolute; top: 302px; left: 118px; width: 499px; height: 47px; }
+.c5-models { margin: 49px 0 15px 96px; }
+.c5-kv { margin-left: 96px; border-color: #947247; background: #352b28; color: #ffe0a7; }
+.c5-banner { width: 73%; height: 150px; padding: 18px 25px; }
+.c5-banner h2 { margin: 3px 0 0; font-size: 38px; line-height: 1.22; }
+.c5-grid-b { position: relative; margin-top: 24px; }
+.c5-frontier {
+  position: absolute;
+  top: 0;
+  width: 582px;
+  height: 490px;
+  padding: 21px 23px;
+  border: 1px solid #2d5867;
+  border-radius: 20px;
+  background: #102031;
+}
+.c5-world { left: 0; }
+.c5-robot { left: 605px; }
+.c5-hybrid { left: 1210px; }
+.c5-frontier h3 { height: 78px; }
+.c5-frontier h3 small { color: var(--c5-mint); font-size: 22px; }
+.c5-frontier svg { width: 100%; height: 258px; }
+.c5-frontier p { margin: 17px 0 0; color: var(--c5-muted); font-size: 23px; line-height: 1.4; }
+.c5-svg-text { fill: #edf9f8; font-size: 22px; font-weight: 750; }
+.c5-svg-note { fill: #bfdbdf; font-size: 18px; font-weight: 650; }
+</style>
+<div class="c5-scene">
+  <div class="c5-phase" id="c5-phase-a">
+    <header class="c5-title">
+      <span class="c5-category">Discrete Diffusion</span>
+      <h2>未来① 離散拡散LLM：言葉も「並列ノイズ除去」で書く時代</h2>
+    </header>
+    <div class="c5-grid-a">
+      <section class="c5-card c5-ar-card">
+        <h3>従来の自己回帰 LLM（AR）</h3>
+        <p id="c5-ar-intro">左から順に、次のトークンを予測</p>
+        <div class="c5-ar-tokens" id="c5-ar-tokens" aria-label="左から順に、明日は晴れるといいね">
+          <span class="c5-token c5-ar-token">明日</span><span class="c5-arrow">→</span>
+          <span class="c5-token c5-ar-token">は</span><span class="c5-arrow">→</span>
+          <span class="c5-token c5-ar-token">晴れる</span><span class="c5-arrow">→</span>
+          <span class="c5-token c5-ar-token">と</span><span class="c5-arrow">→</span>
+          <span class="c5-token c5-ar-token">いいね</span>
+        </div>
+        <div class="c5-ar-tags" id="c5-ar-tags">
+          <span class="c5-pill">O(N) 直列生成・待ち時間増</span>
+          <span class="c5-pill">単方向（逆転の呪い）</span>
+        </div>
+      </section>
+      <section class="c5-card c5-dlm-card">
+        <h3>離散拡散 LLM（Masked Diffusion）</h3>
+        <p id="c5-dlm-intro">左右の文脈を使い、複数の空欄を同じステップで埋める</p>
+        <div class="c5-steps">
+          <div class="c5-step" id="c5-mask-start">
+            <span class="c5-step-label">Step 0</span>
+            <span class="c5-token c5-mask">[MASK]</span><span class="c5-token c5-mask">[MASK]</span><span class="c5-token c5-mask">[MASK]</span><span class="c5-token c5-mask">[MASK]</span><span class="c5-token c5-mask">[MASK]</span>
+            <span class="c5-step-note">すべて空欄</span>
+          </div>
+          <div class="c5-step" id="c5-mask-mid">
+            <span class="c5-step-label">Step 1</span>
+            <span class="c5-token c5-known">明日</span><span class="c5-token c5-mask">[MASK]</span><span class="c5-token c5-mask">[MASK]</span><span class="c5-token c5-mask">[MASK]</span><span class="c5-token c5-known">いいね</span>
+            <span class="c5-step-note">離れた位置を同時に更新</span>
+          </div>
+          <div class="c5-step" id="c5-mask-end">
+            <span class="c5-step-label">Step 2</span>
+            <span class="c5-token c5-known">明日</span><span class="c5-token c5-known">は</span><span class="c5-token c5-known">晴れる</span><span class="c5-token c5-known">と</span><span class="c5-token c5-known">いいね</span>
+            <span class="c5-step-note">残りも並列に復元</span>
+          </div>
+        </div>
+        <svg class="c5-attention" id="c5-attention" viewBox="0 0 499 47" role="img" aria-label="双方向の文脈参照">
+          <path d="M54 17 Q151 51 239 17 M231 19l8-2-3 8 M446 17 Q347 51 260 17 M268 19l-8-2 3 8" fill="none" stroke="#69e5d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="c5-models" id="c5-models">
+          <span class="c5-pill">LLaDA</span><span class="c5-pill">Mercury</span><span class="c5-pill">Gemini Diffusion</span>
+        </div>
+        <span class="c5-pill c5-kv" id="c5-kv">課題：標準KVキャッシュ非対応を研究改善中</span>
+      </section>
+    </div>
+  </div>
+  <div class="c5-phase" id="c5-phase-b">
+    <header class="c5-banner">
+      <span class="c5-category">未来② 言語から物理世界へ</span>
+      <h2>Diffusion / Flow は言語・物理・行動を統合する<br>次世代の共通エンジンへ</h2>
+    </header>
+    <div class="c5-grid-b">
+      <section class="c5-frontier c5-world" id="c5-world">
+        <h3>① 拡散型ワールドモデル</h3>
+        <svg viewBox="0 0 532 258" role="img" aria-label="現在映像と行動・3D幾何を拡散モデルに入力し、次のフレームを予測">
+          <g fill="#172e40" stroke="#48758b" stroke-width="2">
+            <rect x="3" y="31" width="136" height="99" rx="12"/><rect x="3" y="148" width="136" height="59" rx="12"/>
+            <rect x="393" y="31" width="136" height="176" rx="12"/>
+          </g>
+          <rect x="186" y="89" width="160" height="66" rx="11" fill="#133f40" stroke="#54d1c2" stroke-width="2"/>
+          <path d="M139 81h18v41h29m-47 53h18v-53m189 0h47m-215-6 8 6-8 6m207-12 8 6-8 6" fill="none" stroke="#74e6d7" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M23 97h94M52 118l19-26 19 26m-48-7h17m24 0h17m310-5h101m-86 42l36-53 37 53m-62-14h15m24 0h14" fill="none" stroke="#a9c8fb" stroke-width="2.5"/>
+          <g class="c5-svg-text" text-anchor="middle">
+            <text x="71" y="68">現在映像</text><text x="71" y="184" font-size="17">行動 / 3D幾何</text>
+            <text x="266" y="130">Diffusion</text><text x="461" y="178" font-size="19">次フレーム</text>
+          </g>
+          <text x="266" y="236" class="c5-svg-note" text-anchor="middle">条件つきで、次に起こる物理変化を予測</text>
+        </svg>
+        <p><span class="c5-pill">自動運転</span><span class="c5-pill">物理シミュレータ</span></p>
+      </section>
+      <section class="c5-frontier c5-robot" id="c5-robot">
+        <h3>② ロボティクス<br><small>Diffusion / Flow Policy</small></h3>
+        <svg viewBox="0 0 532 258" role="img" aria-label="ロボットのグリッパーから同じ目標に至る複数の滑らかな軌道">
+          <rect x="38" y="43" width="69" height="31" rx="8" fill="#29485c" stroke="#a9c8fb" stroke-width="3"/>
+          <path d="M72 43V21H33 M50 74v32l15 12 M96 74v32l-15 12" fill="none" stroke="#a9c8fb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M80 135 C190 16 390 20 454 144" fill="none" stroke="#83bbfd" stroke-width="4"/>
+          <path d="M80 135 C220 165 304 61 454 144" fill="none" stroke="#64e4cf" stroke-width="5"/>
+          <path d="M80 135 C193 230 369 222 454 144" fill="none" stroke="#b7a1ff" stroke-width="4"/>
+          <circle cx="80" cy="135" r="6" fill="#ecfafa"/><circle cx="454" cy="144" r="10" fill="#102031" stroke="#94f4e6" stroke-width="4"/>
+          <text x="454" y="178" class="c5-svg-note" text-anchor="middle">目標</text>
+          <text x="266" y="236" class="c5-svg-note" text-anchor="middle">同じ目標に向かう複数の軌道を生成</text>
+        </svg>
+        <p><span class="c5-pill">複雑な連続動作を滑らかに生成</span></p>
+      </section>
+      <section class="c5-frontier c5-hybrid" id="c5-hybrid">
+        <h3>③ 統一マルチモーダル基盤<br><small>AR × Diffusion</small></h3>
+        <svg viewBox="0 0 532 258" role="img" aria-label="自己回帰と拡散・フローを共通基盤で組み合わせる">
+          <rect x="6" y="33" width="247" height="102" rx="14" fill="#182f49" stroke="#84b2f6" stroke-width="2"/>
+          <rect x="279" y="33" width="247" height="102" rx="14" fill="#143b3d" stroke="#65d9cd" stroke-width="2"/>
+          <path d="M129 135v38h274v-38m-137 38v18m-7-9 7 9 7-9" fill="none" stroke="#94dcd9" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="121" y="191" width="290" height="52" rx="11" fill="#203647" stroke="#65919d" stroke-width="2"/>
+          <g text-anchor="middle">
+            <text x="129" y="75" class="c5-svg-text">自己回帰（AR）</text>
+            <text x="129" y="109" class="c5-svg-note">論理・計画・離散記号</text>
+            <text x="403" y="75" class="c5-svg-text">Diffusion / Flow</text>
+            <text x="403" y="109" class="c5-svg-note">視覚・音声・物理・並列生成</text>
+            <text x="266" y="225" class="c5-svg-text">ひとつのモデル基盤</text>
+          </g>
+        </svg>
+        <p>言語で計画し、視覚や動作を生成</p>
+      </section>
+    </div>
+  </div>
+</div>
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders['ch05_frontier_future'] = function (tl, cues) {
+  const scene = document.querySelector('.c5-scene');
+  const part = (name) => scene.querySelector('#c5-' + name);
+  const arTokens = scene.querySelectorAll('.c5-ar-tokens span');
+  const banner = scene.querySelector('.c5-banner');
+  const phaseB = part('phase-b');
+  const phaseA = part('phase-a');
+
+  gsap.set(phaseA, { opacity: 1 });
+  gsap.set([
+    phaseB, part('ar-intro'), part('dlm-intro'), part('ar-tokens'), part('ar-tags'),
+    part('mask-start'), part('mask-mid'), part('mask-end'), part('attention'),
+    part('models'), part('kv'), part('robot'), part('hybrid')
+  ], { opacity: 0 });
+  gsap.set(arTokens, { opacity: 0.23 });
+
+  const reveal = (target, time) => tl.to(target, { opacity: 1, duration: 0.34 }, time);
+  const emphasize = (target, strength, time) =>
+    tl.to(target, { borderColor: strength, duration: 0.45 }, time);
+
+  emphasize(scene.querySelector('.c5-title'), '#5eead4', cues.c5_tsumugi_text);
+  reveal(part('dlm-intro'), cues.c5_dlm_intro);
+  reveal(part('mask-start'), cues.c5_dlm_intro + 0.4);
+  reveal(part('ar-intro'), cues.c5_ar_vs_dlm);
+  reveal(part('ar-tokens'), cues.c5_ar_vs_dlm);
+  tl.to(arTokens, { opacity: 1, duration: 0.27, stagger: 0.31 }, cues.c5_ar_vs_dlm + 0.35);
+  reveal(part('ar-tags'), cues.c5_ar_vs_dlm + 3.25);
+  reveal(part('mask-mid'), cues.c5_mask_denoise);
+  reveal(part('mask-end'), cues.c5_mask_denoise + 2.6);
+  reveal(part('attention'), cues.c5_mask_denoise + 2.75);
+  reveal(part('models'), cues.c5_dlm_models);
+  reveal(part('kv'), cues.c5_dlm_kv);
+  emphasize(scene.querySelector('.c5-dlm-card'), '#5eead4', cues.c5_zunda_dlm);
+
+  const tP2 = cues.c5_phase2_world;
+  tl.to(phaseB, { opacity: 1, duration: 0.35, ease: 'none' }, tP2);
+  tl.to(phaseA, { opacity: 0, duration: 0.35, ease: 'none' }, tP2);
+  emphasize(part('world'), '#5eead4', cues.c5_world_model);
+  reveal(part('robot'), cues.c5_robotics);
+  emphasize(part('robot'), '#5eead4', cues.c5_robotics + 0.4);
+  reveal(part('hybrid'), cues.c5_unified_ar);
+  emphasize(part('hybrid'), '#5eead4', cues.c5_zunda_hybrid);
+  emphasize(banner, '#5eead4', cues.c5_tsumugi_wow);
+};
+</script>

@@ -1,0 +1,26 @@
+/* ファイナンス・ネイビーテーマ（金融・地政学・国際政治・経営戦略向け） */
+:root {
+  --bg-canvas: #0a1428;
+  --bg-canvas-accent: radial-gradient(circle at 18% 16%, rgba(56, 189, 248, 0.14) 0%, transparent 46%),
+                      radial-gradient(circle at 84% 20%, rgba(234, 179, 8, 0.12) 0%, transparent 42%),
+                      linear-gradient(180deg, #0a1428 0%, #101e38 100%);
+  --bg-card: #162542;
+  --bg-card-muted: #0e1a30;
+  --bg-stage: rgba(14, 26, 48, 0.88);
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --accent-primary: #eab308;
+  --on-accent: #0a1428;
+  --accent-secondary: #38bdf8;
+  --accent-ok: #4ade80;
+  --accent-warn: #f59e0b;
+  --accent-danger: #f87171;
+  --border-subtle: #283c63;
+  --border-strong: #415b8c;
+  --header-bg: rgba(10, 20, 40, 0.95);
+  --caption-bg: rgba(14, 26, 48, 0.97);
+  --shadow-card: 0 16px 36px rgba(0, 0, 0, 0.45);
+  --shadow-focus: 0 0 0 4px rgba(234, 179, 8, 0.28);
+  --grid-line: rgba(148, 163, 184, 0.08);
+}

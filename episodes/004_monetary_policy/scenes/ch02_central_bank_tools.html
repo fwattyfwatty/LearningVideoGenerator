@@ -1,0 +1,238 @@
+<style>
+  .c2-scene { --accent-primary: #1d4ed8; position: relative; width: 100%; height: 680px; color: #0f172a; font-family: "Noto Sans JP", sans-serif; }
+  .c2-phase { position: absolute; inset: 0; gap: 16px; }
+  #c2-phase-b { opacity: 0; }
+  .c2-phase .dg-heading { font-weight: 800; }
+  .c2-phase .dg-card, .c2-phase .dg-card-glow { height: 100%; min-height: 0; box-sizing: border-box; }
+  .c2-phase .dg-col { gap: 14px; }
+  .c2-phase .dg-svg-stage > svg { width: 100%; height: 100%; }
+  .c2-phase .dg-math-formula { font-family: inherit; font-size: 28px; }
+  .c2-phase .dg-callout { padding: 12px 18px; font-size: 20px; }
+  .c2-main { flex: 1; min-height: 0; }
+  .c2-pair { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); }
+  .c2-formula { justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; }
+  .c2-warn { color: #991b1b; border-color: #fca5a5; background: #fef2f2; }
+  .c2-engine { padding: 13px 16px; gap: 8px; }
+  .c2-engine h4 { margin: 0; font-size: 21px; }
+  .c2-engine-label { margin: 4px 0 6px; font-size: 17px; font-weight: 700; color: #475569; }
+  .c2-guide { justify-content: space-between; gap: 8px; }
+  .c2-guide .dg-node { flex: 1 1 0; font-size: 17px; padding: 8px 6px; }
+  .c2-icon { width: 26px; height: 26px; color: #1d4ed8; flex: none; }
+  .c2-route > path { fill: none; stroke: #1d4ed8; stroke-width: 3; marker-end: url(#c2-arrow); }
+  .c2-route rect { fill: #fff; stroke: #93b4f4; stroke-width: 2; }
+  .c2-orbs { filter: drop-shadow(0 0 6px #60a5fa); }
+</style>
+<div class="c2-scene">
+  <div class="c2-phase dg-col" id="c2-phase-a">
+    <div class="dg-title-bar">
+      <h2 class="dg-heading">伝統的金融政策：政策金利の波及ルートと羅針盤</h2>
+      <span class="dg-pill-accent">Phase 1</span>
+    </div>
+    <div class="dg-card-glow dg-col c2-main">
+      <div class="dg-card-head">
+        <h3 class="dg-card-title">政策金利が景気と物価に届くまで</h3>
+        <div class="dg-chip-row">
+          <span class="dg-pill-warn" id="c2-tight">利上げ・引き締め</span>
+          <span class="dg-pill-ok" id="c2-ease">利下げ・緩和</span>
+        </div>
+      </div>
+      <div class="dg-svg-stage">
+        <svg viewBox="0 0 1170 342" role="img" aria-label="政策金利から借入、為替、資産価格を経由して景気と物価への波及">
+          <defs>
+            <linearGradient id="c2-node-wash" x2="0%" y2="100%">
+              <stop stop-color="#dbeafe"/><stop offset="100%" stop-color="#f8fafc"/>
+            </linearGradient>
+            <marker id="c2-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+              <path d="M2 2.5 L10 6 L2 9.5" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </marker>
+          </defs>
+          <g text-anchor="middle" font-size="16" font-weight="700" fill="#475569">
+            <text x="142" y="29">中央銀行の操作</text>
+            <text x="585" y="29">金融市場・家計・企業への波及</text>
+            <text x="1029" y="29">最終的な影響</text>
+          </g>
+          <path d="M22 42 H1148 M22 329 H1148" stroke="#cbd5e1" stroke-dasharray="4 8"/>
+          <g id="c2-policy" text-anchor="middle" font-weight="800" fill="#0f172a">
+            <rect x="24" y="122" width="236" height="116" rx="18" fill="url(#c2-node-wash)" stroke="#1d4ed8" stroke-width="2"/>
+            <use href="#dg-ico-sliders" x="126" y="135" width="32" height="32" color="#1d4ed8"/>
+            <text x="142" y="193" font-size="25">政策金利</text>
+            <text x="142" y="220" font-size="18" fill="#475569">翌日物金利など</text>
+          </g>
+          <g class="c2-route" id="c2-borrow" text-anchor="middle" font-weight="800">
+            <path d="M260 158 H305 Q326 158 326 137 V108 Q326 87 347 87 H411"/><path d="M759 87 H823 Q844 87 844 108 V137 Q844 158 865 158 H910"/>
+            <rect x="411" y="52" width="348" height="70" rx="14"/>
+            <text x="585" y="81" fill="#0f172a" font-size="21">住宅ローン・企業借入コスト</text>
+            <text x="585" y="106" fill="#475569" font-size="17">消費や企業の投資が変わる</text>
+          </g>
+          <g class="c2-route" id="c2-fx" text-anchor="middle" font-weight="800">
+            <path d="M260 180 H411"/><path d="M759 180 H910"/>
+            <rect x="411" y="145" width="348" height="70" rx="14"/>
+            <text x="585" y="174" fill="#0f172a" font-size="21">為替相場</text>
+            <text x="585" y="199" fill="#475569" font-size="17">通貨高・通貨安で輸入物価が変わる</text>
+          </g>
+          <g class="c2-route" id="c2-assets" text-anchor="middle" font-weight="800">
+            <path d="M260 202 H305 Q326 202 326 223 V252 Q326 273 347 273 H411"/><path d="M759 273 H823 Q844 273 844 252 V223 Q844 202 865 202 H910"/>
+            <rect x="411" y="238" width="348" height="70" rx="14"/>
+            <text x="585" y="267" fill="#0f172a" font-size="21">株価・資産価格</text>
+            <text x="585" y="292" fill="#475569" font-size="17">資産価値や資金調達環境が変わる</text>
+          </g>
+          <g id="c2-outcome" text-anchor="middle" font-size="23" font-weight="800" fill="#0f172a">
+            <rect x="910" y="122" width="236" height="116" rx="18" fill="url(#c2-node-wash)" stroke="#1d4ed8" stroke-width="2"/>
+            <text x="1028" y="173">景気（消費・投資）</text><text x="1028" y="204">物価（インフレ率）</text>
+          </g>
+          <g class="c2-orbs" fill="#1d4ed8" stroke="#fff" stroke-width="3">
+            <circle id="c2-hike-dot" cx="268" cy="158" r="9"/>
+            <circle id="c2-fx-dot" cx="268" cy="180" r="9"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="dg-math-box" id="c2-taylor">
+      <h3 class="dg-card-title" id="c2-question">政策金利の水準は何を目安に決める？</h3>
+      <div id="c2-formula">
+        <h3 class="dg-card-title">テイラー・ルール（適正金利の目安）</h3>
+        <div class="dg-row c2-formula">
+          <span class="dg-math-formula">i = r* + π + 0.5(π − π*) + 0.5y</span>
+          <div class="dg-chip-row">
+            <span class="dg-chip c2-warn">インフレギャップ（π − π*）</span>
+            <span class="dg-chip dg-chip-accent">需給ギャップ y（景気の過熱度）</span>
+          </div>
+        </div>
+        <div id="c2-taylor-note" class="dg-math-note">r* は中立実質金利。物価や景気が基準を上回ると、式が示す金利は高くなる。</div>
+      </div>
+    </div>
+  </div>
+  <div class="c2-phase dg-col" id="c2-phase-b">
+    <div class="dg-title-bar">
+      <h2 class="dg-heading">ゼロ金利の壁を超える非伝統的金融政策</h2>
+      <span class="dg-pill-warn">Phase 2</span>
+    </div>
+    <div class="dg-grid-2 c2-pair c2-main">
+      <div class="dg-card dg-col">
+        <div class="dg-card-head"><h3 class="dg-card-title">伝統的領域とゼロ金利の壁</h3></div>
+        <div class="dg-svg-stage">
+          <svg viewBox="0 0 450 340" role="img" aria-label="政策金利をゼロ近辺まで下げると追加の利下げ余地が小さくなる">
+            <defs>
+              <linearGradient id="c2-rate-fill" x2="0%" y2="100%"><stop stop-color="#93c5fd"/><stop offset="100%" stop-color="#1d4ed8"/></linearGradient>
+              <marker id="c2-floor-arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="13" markerHeight="13" markerUnits="userSpaceOnUse" orient="auto">
+                <path d="M2 2 L10 6 L2 10" fill="none" stroke="#fff" stroke-width="2"/>
+              </marker>
+            </defs>
+            <rect x="54" y="56" width="62" height="208" rx="31" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+            <rect x="71" y="77" width="28" height="166" rx="14" fill="url(#c2-rate-fill)"/>
+            <path d="M126 86 H153 M126 140 H153 M126 194 H153" stroke="#94a3b8" stroke-width="2"/>
+            <path d="M85 88 V216" stroke="#fff" stroke-width="3" marker-end="url(#c2-floor-arrow)"/>
+            <circle id="c2-floor-dot" cx="85" cy="93" r="10" fill="#172554" stroke="#fff" stroke-width="3"/>
+            <text x="176" y="114" fill="#0f172a" font-size="24" font-weight="800">政策金利を下げる</text>
+            <text x="176" y="144" fill="#475569" font-size="18" font-weight="700">借入コスト低下を通じて緩和</text>
+            <rect x="32" y="249" width="386" height="61" rx="12" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+            <text x="225" y="276" text-anchor="middle" fill="#92400e" font-size="23" font-weight="800">0%付近　ゼロ金利下限</text>
+            <text x="225" y="298" text-anchor="middle" fill="#475569" font-size="16" font-weight="700">追加の利下げ余地が小さくなる</text>
+          </svg>
+        </div>
+        <div class="dg-callout dg-callout-warn">短期金利を下げにくいとき、長期金利や市場の期待に働きかける。</div>
+      </div>
+      <div class="dg-card-glow dg-col" id="c2-engines">
+        <div class="dg-card-head"><h3 class="dg-card-title">非伝統的手段の2大エンジン</h3></div>
+        <div class="dg-math-box c2-engine">
+          <h4>中央銀行の資産規模を変える</h4>
+          <div>
+            <div class="c2-engine-label"><span class="dg-pill-accent">QE・量的緩和</span> 国債買入・資金供給</div>
+            <div class="dg-bar-track"><div class="dg-bar-fill" id="c2-qe-fill"></div></div>
+          </div>
+          <div id="c2-qt">
+            <div class="c2-engine-label"><span class="dg-pill-warn">QT・量的引き締め</span> 保有資産を圧縮</div>
+            <div class="dg-bar-track"><div class="dg-bar-fill dg-bar-fill-warn" id="c2-qt-fill"></div></div>
+          </div>
+        </div>
+        <div class="dg-math-box c2-engine" id="c2-guidance">
+          <div class="dg-row">
+            <svg viewBox="0 0 24 24" class="c2-icon" aria-hidden="true"><use href="#dg-ico-sliders"/></svg>
+            <h4>フォワードガイダンス（期待への働きかけ）</h4>
+          </div>
+          <div class="dg-row c2-guide">
+            <span class="dg-node">将来方針の予告</span><span aria-hidden="true">→</span>
+            <span class="dg-node">市場予想の変化</span><span aria-hidden="true">→</span>
+            <span class="dg-node dg-node-accent">長期金利を誘導</span>
+          </div>
+        </div>
+        <div class="dg-callout dg-callout-ok" id="c2-summary">
+          <span id="c2-note">資産規模と市場の期待。政策金利とは異なる経路で波及する。</span>
+          <span id="c2-next">次章　米国と欧州では、中央銀行は何を優先する？</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders['ch02_central_bank_tools'] = function (tl, cues) {
+  const byId = function (id) { return document.getElementById("c2-" + id); };
+  const at = function (id, fallback) {
+    const value = cues && cues["c2_" + id];
+    return typeof value === "number" ? value : fallback;
+  };
+  const reveal = function (id, time) {
+    const element = byId(id);
+    gsap.set(element, { opacity: 0, y: 10 });
+    tl.to(element, { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, time);
+  };
+
+  const phase2 = at("phase2_zero_bound", 52.392);
+  const hike = at("hike_channel", 9.4893);
+  const fx = at("fx_inflation", 16.63);
+  const cut = at("cut_channel", 23.3867);
+  const taylor = at("taylor_rule", 36.9827);
+  const qe = at("qe_qt", 61.5487);
+  const qt = at("qt_shrink", 70.9187);
+
+  reveal("policy", at("policy_rate", 0.45));
+  reveal("borrow", hike);
+  reveal("outcome", hike + 0.45);
+  reveal("fx", fx);
+  reveal("assets", cut);
+  reveal("tight", hike);
+  reveal("ease", cut);
+  tl.to(byId("tight"), { opacity: 0.55, duration: 0.25 }, cut);
+
+  const hikeDot = byId("hike-dot");
+  const fxDot = byId("fx-dot");
+  gsap.set([hikeDot, fxDot], { opacity: 0 });
+  tl.set(hikeDot, { opacity: 1 }, hike + 0.38);
+  tl.to(hikeDot, { attr: { cx: 305 }, duration: 0.23, ease: "none" }, hike + 0.38);
+  tl.to(hikeDot, { attr: { cx: 326, cy: 137 }, duration: 0.18, ease: "none" }, hike + 0.61);
+  tl.to(hikeDot, { attr: { cy: 108 }, duration: 0.18, ease: "none" }, hike + 0.79);
+  tl.to(hikeDot, { attr: { cx: 347, cy: 87 }, duration: 0.18, ease: "none" }, hike + 0.97);
+  tl.to(hikeDot, { attr: { cx: 405 }, duration: 0.36, ease: "none" }, hike + 1.15);
+  tl.to(hikeDot, { opacity: 0, duration: 0.25 }, hike + 1.51);
+  tl.set(fxDot, { opacity: 1 }, fx + 0.38);
+  tl.to(fxDot, { attr: { cx: 405 }, duration: 0.8, ease: "none" }, fx + 0.38);
+  tl.to(fxDot, { opacity: 0, duration: 0.25 }, fx + 1.18);
+
+  reveal("taylor", at("zunda_how_decide", 29.9554));
+  reveal("formula", taylor);
+  reveal("taylor-note", at("zunda_taylor", 44.9947));
+  gsap.set(byId("formula"), { height: 0, overflow: "hidden" });
+  tl.set(byId("question"), { position: "absolute", opacity: 0 }, taylor);
+  tl.set(byId("formula"), { height: "auto" }, taylor);
+
+  gsap.set(byId("phase-a"), { opacity: 1 });
+  gsap.set(byId("phase-b"), { opacity: 0 });
+  tl.to(byId("phase-b"), { opacity: 1, duration: 0.15, ease: "none" }, phase2);
+  tl.to(byId("phase-a"), { opacity: 0, duration: 0.15, ease: "none" }, phase2);
+  tl.to(byId("floor-dot"), { attr: { cy: 230 }, duration: 0.9, ease: "power2.out" }, phase2 + 0.2);
+
+  reveal("engines", qe);
+  reveal("qt", qt);
+  gsap.set(byId("qe-fill"), { scaleX: 0, transformOrigin: "left center" });
+  gsap.set(byId("qt-fill"), { scaleX: 0.85, transformOrigin: "left center" });
+  tl.to(byId("qe-fill"), { scaleX: 0.85, duration: 0.75, ease: "power2.out" }, qe + 0.25);
+  tl.to(byId("qt-fill"), { scaleX: 0.38, duration: 0.8, ease: "power2.inOut" }, qt + 0.3);
+  reveal("guidance", at("forward_guidance", 78.4754));
+  reveal("summary", at("zunda_unconv", 86.5587));
+  gsap.set(byId("next"), { opacity: 0, position: "absolute" });
+  const next = at("to_ch3", 94.0447);
+  tl.set(byId("note"), { opacity: 0, position: "absolute" }, next);
+  tl.set(byId("next"), { position: "static", opacity: 1 }, next);
+};
+</script>

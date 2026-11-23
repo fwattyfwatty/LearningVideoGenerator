@@ -1,0 +1,196 @@
+<style>
+  .c2-scene { position: relative; height: 100%; font-family: "Noto Sans JP", sans-serif; }
+  .c2-phase { position: absolute; inset: 0; }
+  .c2-grid { flex: 1; min-height: 0; }
+  .c2-card { gap: 18px; box-sizing: border-box; min-width: 0; min-height: 0; }
+  .c2-card-title-icon { width: 30px; height: 30px; color: var(--accent-primary); flex-shrink: 0; }
+  .c2-content { flex: 1; min-height: 0; justify-content: center; }
+  .c2-row { justify-content: space-between; gap: 10px; font-weight: 800; font-size: 21px; }
+  .c2-comparison { height: auto; gap: 10px; }
+  .c2-comparison + .c2-comparison { margin-top: 14px; }
+  .c2-comparison .dg-bar-track { height: 22px; }
+  .c2-net { color: var(--accent-secondary); }
+  .c2-stack svg { width: 100%; height: 100%; max-height: 300px; }
+  .c2-stack text { font-weight: 800; fill: var(--text-primary); }
+  .c2-stack .c2-svg-note { fill: var(--text-secondary); font-size: 17px; font-weight: 700; }
+  .c2-card .dg-callout { font-size: 19px; }
+  .c2-card .dg-note { margin: 0; font-size: 16px; }
+  .c2-fee-options { gap: 12px; }
+  .c2-fee-option { padding: 14px 10px; }
+  .c2-fee-option strong { font-size: 29px; line-height: 1.55; white-space: nowrap; }
+  .c2-fee-option small { font-size: 16px; color: var(--text-secondary); }
+  .c2-fee-high { color: var(--accent-danger); }
+  .c2-result { margin-top: 4px; }
+  .c2-result .c2-row { font-size: 18px; }
+  .c2-result .dg-bar-track { height: 14px; }
+  .c2-footer { text-align: center; padding: 12px 18px; font-size: 20px; }
+  #c2-phase-b, #c2-index-outro { opacity: 0; }
+</style>
+<div class="c2-scene">
+  <div id="c2-phase-a" class="c2-phase dg-col">
+    <div class="dg-title-bar">
+      <h2 class="dg-heading">新NISAなら、運用益にかかる約20.315%の税金がゼロに</h2>
+      <span class="dg-pill-accent">新NISAの仕組み</span>
+    </div>
+    <div class="c2-grid dg-grid-2">
+      <article id="c2-card-tax" class="c2-card dg-card-glow dg-col">
+        <div class="dg-card-head">
+          <div class="dg-card-title-group">
+            <svg class="c2-card-title-icon" aria-hidden="true"><use href="#dg-ico-coins" width="30" height="30"/></svg>
+            <h3 class="dg-card-title">利益100万円が出たときの税金差</h3>
+          </div>
+        </div>
+        <div class="dg-col c2-content">
+          <div class="c2-comparison dg-col">
+            <div class="c2-row dg-row">
+              <span>通常の課税口座</span><span class="dg-pill-warn">税金 約20.3万円</span>
+            </div>
+            <div class="dg-bar-track"><div class="dg-bar-fill dg-bar-fill-warn" style="width:79.7%"></div></div>
+            <div class="dg-note">税引き後の利益 約79.7万円</div>
+          </div>
+          <div class="c2-comparison dg-col">
+            <div class="c2-row dg-row">
+              <span>新NISA口座</span><span id="c2-zero-tax" class="dg-pill-ok">税金 0円</span>
+            </div>
+            <div class="dg-bar-track"><div class="dg-bar-fill dg-bar-fill-secondary"></div></div>
+            <div class="dg-note c2-net">利益100万円がまるごと手元に</div>
+          </div>
+        </div>
+        <div id="c2-reuse" class="dg-callout">非課税は無期限。売却した生涯枠は取得額（簿価）で翌年以降に再利用できます。</div>
+      </article>
+      <article id="c2-card-box" class="c2-card dg-card dg-col">
+        <div class="dg-card-head">
+          <div class="dg-card-title-group">
+            <svg class="c2-card-title-icon" aria-hidden="true"><use href="#dg-ico-layers" width="30" height="30"/></svg>
+            <h3 class="dg-card-title">年間枠と生涯1,800万円の構造</h3>
+          </div>
+        </div>
+        <div class="c2-stack dg-svg-stage">
+          <svg viewBox="0 0 560 230" role="img" aria-label="つみたて投資枠と成長投資枠">
+            <g id="c2-annual">
+              <rect x="22" y="8" width="516" height="56" rx="12" fill="#e5f1ec" stroke="#0f766e"/>
+              <rect x="22" y="8" width="7" height="56" rx="3" fill="#0f766e"/>
+              <text x="46" y="33" font-size="23">つみたて投資枠</text>
+              <text x="46" y="53" class="c2-svg-note">長期・積立向けの投資信託</text>
+              <text x="512" y="45" text-anchor="end" font-size="27">年120万円</text>
+              <rect x="22" y="72" width="516" height="56" rx="12" fill="#f7e9d8" stroke="#b45309"/>
+              <rect x="22" y="72" width="7" height="56" rx="3" fill="#b45309"/>
+              <text x="46" y="97" font-size="23">成長投資枠</text>
+              <text x="46" y="117" class="c2-svg-note">生涯枠のうち1,200万円まで</text>
+              <text x="512" y="109" text-anchor="end" font-size="27">年240万円</text>
+            </g>
+            <g id="c2-lifetime">
+              <path id="c2-bracket" d="M23 138v9h247l10 9 10-9h247v-9" fill="none" stroke="#b45309" stroke-width="2.5"/>
+              <rect x="22" y="165" width="516" height="56" rx="12" fill="#fffdf9" stroke="#b45309" stroke-width="2"/>
+              <text x="44" y="200" font-size="24">生涯非課税枠 1,800万円</text>
+              <text x="516" y="199" class="c2-svg-note" text-anchor="end">年間合計 最大360万円</text>
+            </g>
+          </svg>
+        </div>
+        <div id="c2-pace" class="dg-callout dg-callout-ok">月1〜3万円など、家計に合う無理のないペースで</div>
+      </article>
+    </div>
+  </div>
+
+  <div id="c2-phase-b" class="c2-phase dg-col">
+    <div class="dg-title-bar">
+      <h2 class="dg-heading">なぜオルカン・S&amp;P500か？ プロの勝率とコストの差</h2>
+      <span class="dg-pill-ok">インデックスの合理性</span>
+    </div>
+    <div class="c2-grid dg-grid-2">
+      <article id="c2-card-spiva" class="c2-card dg-card dg-col">
+        <div class="dg-card-head">
+          <div class="dg-card-title-group">
+            <svg class="c2-card-title-icon" aria-hidden="true"><use href="#dg-ico-target" width="30" height="30"/></svg>
+            <h3 class="dg-card-title">SPIVA長期調査：市場平均に勝てないプロ</h3>
+          </div>
+        </div>
+        <div id="c2-index-definition" class="dg-math-box">
+          <div class="dg-math-formula">インデックス ＝ 市場の動きを表す指数</div>
+          <div class="dg-math-note">指数に連動する投信で、対象市場にまとめて投資できる</div>
+        </div>
+        <div id="c2-spiva-box" class="dg-svg-stage"></div>
+        <p id="c2-spiva-note" class="dg-note">長期比較の一例。割合は市場・対象ファンド・調査期間により異なります。</p>
+        <div id="c2-index-takeaway" class="dg-callout dg-callout-ok">市場平均への連動を目指すことで、市場平均を下回る投信を選ぶリスクを抑える</div>
+      </article>
+      <article id="c2-card-fee" class="c2-card dg-card-glow dg-col">
+        <div class="dg-card-head">
+          <div class="dg-card-title-group">
+            <svg class="c2-card-title-icon" aria-hidden="true"><use href="#dg-ico-sliders" width="30" height="30"/></svg>
+            <h3 class="dg-card-title">信託報酬の差が20年後に効く</h3>
+          </div>
+        </div>
+        <p class="dg-note">信託報酬は、投資信託を保有している間にかかる運用コストです。</p>
+        <div class="c2-content dg-col">
+          <div id="c2-fee-options" class="c2-fee-options dg-grid-2">
+            <div class="c2-fee-option dg-node dg-node-accent">
+              <div>低コストのオルカンの例</div>
+              <strong class="c2-net">年0.05775%</strong><br><small>前後</small>
+            </div>
+            <div class="c2-fee-option dg-node">
+              <div>アクティブ投信の例</div>
+              <strong class="c2-fee-high">年1.0〜2.0%台</strong><br><small>商品によって異なる</small>
+            </div>
+          </div>
+          <div id="c2-compound" class="dg-math-box">
+            <div class="dg-math-note">元本300万円を20年運用した場合の試算</div>
+            <div class="c2-result">
+              <div class="c2-row dg-row"><span>年5.0%</span><span>約796万円</span></div>
+              <div class="dg-bar-track"><div class="dg-bar-fill dg-bar-fill-secondary"></div></div>
+            </div>
+            <div class="c2-result">
+              <div class="c2-row dg-row"><span>年3.5%</span><span>約597万円</span></div>
+              <div class="dg-bar-track"><div class="dg-bar-fill dg-bar-fill-warn" style="width:75%"></div></div>
+            </div>
+            <div class="dg-math-note">コスト差を年1.5ポイントと仮定。税金・追加投資なし</div>
+          </div>
+        </div>
+        <div id="c2-compound-gap" class="dg-callout">年1.5ポイント差でも、20年後の差は約200万円</div>
+      </article>
+    </div>
+    <div id="c2-index-outro" class="c2-footer dg-callout">低コストで市場に分散しても、短期の値動きはどうなる？</div>
+  </div>
+</div>
+<script>
+  window.__diagramBuilders['ch02_nisa_and_index'] = function (tl, cues) {
+    const motion = window.dgMotion;
+    const phaseACards = '#c2-phase-a .c2-card';
+    const phaseBCards = '#c2-phase-b .c2-card';
+    const details = '#c2-reuse, #c2-lifetime, #c2-pace, #c2-spiva-note, #c2-index-takeaway, ' +
+      '#c2-fee-options, #c2-compound, #c2-compound-gap, #c2-index-outro';
+    gsap.set(details, { opacity: 0 });
+    gsap.set('#c2-card-tax .dg-bar-fill, #c2-compound .dg-bar-fill', { scaleX: 0, transformOrigin: 'left center' });
+    motion.reveal(tl, '#c2-phase-a .dg-title-bar, ' + phaseACards, cues.c2_nisa_intro, { duration: 0.36, stagger: 0.09 });
+    motion.focus(tl, '#c2-card-tax', phaseACards, cues.c2_tax_zero);
+    motion.barGrow(tl, '#c2-card-tax .dg-bar-fill', cues.c2_tax_zero + 0.12, { stagger: 0.22 });
+    motion.pulse(tl, '#c2-zero-tax', cues.c2_tax_zero + 0.35, cues.c2_nisa_limits - 0.3);
+    motion.focus(tl, '#c2-card-box', phaseACards, cues.c2_nisa_limits);
+    motion.reveal(tl, '#c2-lifetime', cues.c2_nisa_limits + 0.24, { y: 0 });
+    motion.drawPath(tl, '#c2-bracket', cues.c2_nisa_limits + 0.24);
+    motion.focus(tl, '#c2-card-tax', phaseACards, cues.c2_nisa_reuse);
+    motion.reveal(tl, '#c2-reuse', cues.c2_nisa_reuse + 0.15);
+    motion.focus(tl, '#c2-card-box', phaseACards, cues.c2_pace_note);
+    motion.reveal(tl, '#c2-pace', cues.c2_pace_note + 0.12);
+    motion.unfocus(tl, phaseACards, cues.c2_zunda_box);
+
+    window.dgWidgets.barChart('#c2-spiva-box', tl, {
+      max: 100, unit: '%', countUp: true, at: cues.c2_spiva_fact + 0.15,
+      items: [
+        { label: '市場平均に敗北（10〜15年）', value: 88, tone: 'danger' },
+        { label: '市場平均に勝利', value: 12, tone: 'ok' }
+      ]
+    });
+    motion.switchPhase(tl, '#c2-phase-a', '#c2-phase-b', cues.c2_phase2_index, { duration: 0.09 });
+    motion.pulse(tl, '#c2-index-definition', cues.c2_index_meaning, cues.c2_spiva_fact - 0.3, { scale: 1.015 });
+    motion.focus(tl, '#c2-card-spiva', phaseBCards, cues.c2_spiva_fact);
+    motion.reveal(tl, '#c2-spiva-note', cues.c2_spiva_fact + 0.25);
+    motion.reveal(tl, '#c2-index-takeaway', cues.c2_cost_reason);
+    motion.focus(tl, '#c2-card-fee', phaseBCards, cues.c2_orukan_fee);
+    motion.reveal(tl, '#c2-fee-options', cues.c2_orukan_fee + 0.12);
+    motion.reveal(tl, '#c2-compound, #c2-compound-gap', cues.c2_compound_gap, { stagger: 0.32 });
+    motion.barGrow(tl, '#c2-compound .dg-bar-fill', cues.c2_compound_gap + 0.3, { stagger: 0.18 });
+    motion.pulse(tl, '#c2-compound-gap', cues.c2_compound_gap + 0.7, cues.c2_zunda_index - 0.3);
+    motion.unfocus(tl, phaseBCards, cues.c2_zunda_index);
+    motion.reveal(tl, '#c2-index-outro', cues.c2_bridge);
+  };
+</script>

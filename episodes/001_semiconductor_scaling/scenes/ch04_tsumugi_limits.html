@@ -1,0 +1,254 @@
+<style>
+  .c4-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* Leave top-right open for Tsumugi cut-in */
+  .c4-title-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-right: 360px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-subtle);
+  }
+
+  .c4-q-pill {
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: #b45309;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .c4-stage-body {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .c4-phase {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .c4-tunnel-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 20px;
+    padding-top: 24px;
+  }
+
+  .c4-svg-card {
+    border-radius: 20px;
+    background: #0f172a;
+    border: 2px solid #334155;
+    padding: 18px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .c4-warn-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 14px;
+  }
+
+  .c4-warn-card {
+    border-radius: 18px;
+    background: #1e293b;
+    border: 2px solid #ef4444;
+    padding: 16px 20px;
+  }
+
+  .c4-warn-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fca5a5;
+    margin-bottom: 6px;
+  }
+
+  .c4-warn-desc {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f1f5f9;
+    line-height: 1.45;
+  }
+
+  .c4-wave-card {
+    width: 73%;
+    border-radius: 20px;
+    background: #0f172a;
+    border: 2px solid #334155;
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .c4-cost-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .c4-cost-card {
+    border-radius: 20px;
+    background: #1e293b;
+    border: 2px solid #f59e0b;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .c4-cost-num {
+    font-size: 42px;
+    font-weight: 900;
+    color: #fbbf24;
+  }
+</style>
+
+<div class="c4-wrap">
+  <div class="c4-title-bar">
+    <span class="c4-q-pill">つむぎの疑問</span>
+    <h1 class="dg-heading">小さくし続けると何が起きる？物理とコストの壁</h1>
+  </div>
+
+  <div class="c4-stage-body">
+    <!-- Phase A: Physical Limit (Quantum Tunneling) -->
+    <div id="c4-phase-a" class="c4-phase">
+      <div class="c4-tunnel-grid">
+        <div id="c4-tunnel-box" class="c4-svg-card">
+          <div style="font-size: 23px; font-weight: 700; color: #38bdf8;">
+            壁① 物理限界：原子サイズと「量子トンネル効果」
+          </div>
+
+          <svg viewBox="0 0 680 320" style="width: 100%; height: 290px; overflow: visible;">
+            <!-- Left source / Right drain -->
+            <rect x="20" y="95" width="160" height="150" rx="14" fill="#0369a1" stroke="#38bdf8" stroke-width="2" />
+            <text x="100" y="178" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700">電子たち</text>
+
+            <rect x="500" y="95" width="160" height="150" rx="14" fill="#1e293b" stroke="#64748b" stroke-width="2" />
+            <text x="580" y="178" text-anchor="middle" fill="#cbd5e1" font-size="22" font-weight="700">漏れた先</text>
+
+            <!-- Thin barrier wall -->
+            <rect id="c4-wall" x="315" y="65" width="44" height="210" rx="8" fill="#dc2626" stroke="#fca5a5" stroke-width="3" />
+            <text x="337" y="45" text-anchor="middle" fill="#fca5a5" font-size="20" font-weight="700">原子十数個分の壁！</text>
+
+            <!-- Atom scale note -->
+            <text x="337" y="305" text-anchor="middle" fill="#fbbf24" font-size="19" font-weight="700">シリコン原子1個 ≒ 0.24 nm</text>
+
+            <!-- Tunneling electron wave path -->
+            <path id="c4-wave-path" d="M 185 170 Q 220 120 255 170 T 325 170 T 395 170 T 465 170 L 495 170"
+                  fill="none" stroke="#fde047" stroke-width="6" stroke-linecap="round"
+                  stroke-dasharray="420" stroke-dashoffset="420" />
+            <circle id="c4-leak-dot" cx="200" cy="170" r="14" fill="#fde047" stroke="#ffffff" stroke-width="2" />
+          </svg>
+        </div>
+
+        <div class="c4-warn-stack">
+          <div id="c4-warn-1" class="c4-warn-card">
+            <div class="c4-warn-title">👻 OFF の壁を電子がすり抜ける</div>
+            <div class="c4-warn-desc">ゲートが原子十数個分の薄さになると、電子が波のように壁を通り抜けてしまう。</div>
+          </div>
+
+          <div id="c4-warn-2" class="c4-warn-card">
+            <div class="c4-warn-title">🔥 リーク電流の増加と発熱</div>
+            <div class="c4-warn-desc">使っていないのに電気が漏れ続け、発熱が深刻化 → デナード則が崩壊！</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase B: Cost Wall (EUV & Trillion-yen Fab) -->
+    <div id="c4-phase-b" class="c4-phase">
+      <div id="c4-wave-card" class="c4-wave-card" style="margin-top: 24px;">
+        <div style="font-size: 22px; font-weight: 700; color: #38bdf8;">
+          壁② 露光（回路の焼き付け）の壁：DUV から EUV へ
+        </div>
+        <svg viewBox="0 0 1100 150" style="width: 100%; height: 135px;">
+          <text x="20" y="42" fill="#cbd5e1" font-size="20" font-weight="700">従来の DUV (波長 193 nm)</text>
+          <path d="M 300 35 Q 350 -10 400 35 T 500 35 T 600 35 T 700 35 T 800 35 T 900 35 T 1000 35"
+                fill="none" stroke="#94a3b8" stroke-width="5" />
+          <text x="1025" y="42" fill="#fca5a5" font-size="19" font-weight="700">太くてぼやける</text>
+
+          <text x="20" y="114" fill="#38bdf8" font-size="20" font-weight="700">最新の EUV (波長 13.5 nm)</text>
+          <path id="c4-euv-wave" d="M 300 108 Q 312 85 324 108 T 348 108 T 372 108 T 396 108 T 420 108 T 444 108 T 468 108 T 492 108 T 516 108 T 540 108 T 564 108 T 588 108 T 612 108 T 636 108 T 660 108 T 684 108 T 708 108 T 732 108 T 756 108 T 780 108 T 804 108 T 828 108 T 852 108 T 876 108 T 900 108 T 924 108 T 948 108 T 972 108 T 996 108"
+                fill="none" stroke="#38bdf8" stroke-width="4" stroke-dasharray="1200" stroke-dashoffset="1200" />
+          <text x="1025" y="114" fill="#4ade80" font-size="19" font-weight="700">極細を描ける！</text>
+        </svg>
+      </div>
+
+      <div class="c4-cost-grid">
+        <div id="c4-cost-1" class="c4-cost-card">
+          <div style="font-size: 22px; font-weight: 700; color: #f8fafc;">🔬 EUV 露光装置の価格（ASML独占）</div>
+          <div class="c4-cost-num">1台 数百億〜500億円超</div>
+          <div style="font-size: 18px; color: #cbd5e1; font-weight: 700;">真空中で特殊な鏡を使う超精密装置</div>
+        </div>
+
+        <div id="c4-cost-2" class="c4-cost-card" style="border-color: #ef4444;">
+          <div style="font-size: 22px; font-weight: 700; color: #f8fafc;">🏭 最先端工場（メガファブ）投資額</div>
+          <div class="c4-cost-num" style="color: #f87171;">1拠点 数兆円規模</div>
+          <div style="font-size: 18px; color: #cbd5e1; font-weight: 700;">TSMC・Samsung・Intel 等ごく一握りのみ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders["ch04_tsumugi_limits"] = function (tl, cues) {
+  gsap.set('#c4-phase-a', { opacity: 1 });
+  gsap.set('#c4-phase-b', { opacity: 0 });
+  gsap.set(['#c4-tunnel-box', '#c4-warn-1', '#c4-warn-2'], { opacity: 0, y: 18 });
+  gsap.set('#c4-leak-dot', { opacity: 0, x: 0 });
+  gsap.set(['#c4-wave-card', '#c4-cost-1', '#c4-cost-2'], { opacity: 0, y: 18 });
+
+  const tQ = cues.c4_tsumugi_q ?? 0.45;
+  tl.to('#c4-tunnel-box', { opacity: 1, y: 0, duration: 0.45 }, tQ + 0.5);
+
+  const tWall = cues.c4_thin_wall ?? 18.0;
+  tl.to('#c4-wall', { scaleX: 0.55, transformOrigin: 'center center', duration: 0.6 }, tWall);
+
+  const tTun = cues.c4_tunneling ?? 26.0;
+  tl.to('#c4-wave-path', { strokeDashoffset: 0, duration: 1.2, ease: 'power1.inOut' }, tTun);
+  tl.to('#c4-leak-dot', { opacity: 1, duration: 0.2 }, tTun);
+  tl.to('#c4-leak-dot', { x: 280, duration: 2.2, ease: 'power1.inOut' }, tTun + 0.1);
+  tl.to('#c4-warn-1', { opacity: 1, y: 0, duration: 0.4 }, tTun + 0.8);
+
+  const tHeat = cues.c4_heat_leak ?? 42.0;
+  tl.to('#c4-warn-2', { opacity: 1, y: 0, duration: 0.45, ease: 'back.out(1.4)' }, tHeat);
+
+  // Phase B
+  const tP2 = cues.c4_phase2_cost ?? 58.0;
+  tl.to('#c4-phase-a', { opacity: 0, duration: 0.35 }, tP2);
+  tl.to('#c4-phase-b', { opacity: 1, duration: 0.35 }, tP2 + 0.25);
+  tl.to('#c4-wave-card', { opacity: 1, y: 0, duration: 0.4 }, tP2 + 0.35);
+
+  const tEuv = cues.c4_euv_laser ?? 74.0;
+  tl.to('#c4-euv-wave', { strokeDashoffset: 0, duration: 1.1, ease: 'power2.out' }, tEuv);
+
+  const tPrice = cues.c4_euv_price ?? 82.0;
+  tl.to('#c4-cost-1', { opacity: 1, y: 0, duration: 0.45, ease: 'back.out(1.4)' }, tPrice);
+
+  const tFab = cues.c4_fab_cost ?? 96.0;
+  tl.to('#c4-cost-2', { opacity: 1, y: 0, duration: 0.45, ease: 'back.out(1.4)' }, tFab);
+};
+</script>

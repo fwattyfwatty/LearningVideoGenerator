@@ -1,0 +1,492 @@
+meta:
+  title: "基軸通貨の変遷：ポンドからドル、そして「多極化時代」は本当に来るのか？"
+  series: "国際金融・地政学入門"
+  episode: "解説動画"
+  badge: "国際金融・地政学入門"
+  theme: "finance-navy"
+  accent_color: "#eab308"
+  fps: 30
+  width: 1920
+  height: 1080
+
+chapters:
+  - id: "ch01_intro"
+    title: "1. 導入：なぜ世界は「ドル」で動いているのか？"
+    layout: "title"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "こんにちは、四国めたんです。今日は『基軸通貨の変遷』と多極化の行方を解説します。"
+        cue: "c1_title"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "ずんだもんなのだ！世界には180以上の通貨があるのに、なんで貿易も貯金もドルばかりなのだ？"
+        cue: "c1_zunda_ask"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "それが基軸通貨の力です。国際決済・価格の基準・外貨準備の3役を1つに集約すると取引コストが激減します。"
+        cue: "c1_roles"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "2026年時点のIMF統計では、世界の外貨準備の56.7%が米ドルで首位、ユーロが20.6%、円5.0%、元2.1%です。"
+        cue: "c1_shares"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "さらにBIS調査では、世界の外国為替取引の実に88.4%（両建て200%基準）に米ドルが絡んでいます。"
+        voice_text: "さらにビーアイエス調査では、世界の外国為替取引の実に88.4パーセント、両建て200パーセント基準で米ドルが絡んでいます。"
+        cue: "c1_fx_scale"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "9割近い為替取引にドルが関わっているなんて、まさに世界経済の血液なのだ！"
+        cue: "c1_zunda_wow"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "ただ歴史を見ると基軸通貨は永遠ではありません。①歴史の法則、②ドルの特権とジレンマ、③脱ドルとデジタル時代の3本柱で整理します。"
+        cue: "c1_stance"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "歴史とお金の仕組みがつながって面白そうなのだ！さっそく見ていくのだ！"
+        cue: "c1_go"
+        pause_after: 0.5
+
+  - id: "ch02_guilder_to_pound"
+    title: "2. 歴史の法則：ギルダーからポンド、そしてドルへの交代"
+    layout: "default"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "まず400年の歴史を俯瞰しましょう。世界の基軸通貨は、およそ100年周期で主役が交代してきました。"
+        cue: "c2_history_open"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "17世紀はオランダ・ギルダーです。東インド会社とアムステルダム銀行が世界の海運貿易と国際金融を握りました。"
+        cue: "c2_dutch"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "19世紀になると、産業革命と海軍力で大英帝国が台頭し、国際金本位制のもと英ポンドが王座につきます。"
+        cue: "c2_pound"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そして20世紀、2度の世界大戦で欧州が疲弊する中、1944年のブレトンウッズ協定で米ドルが正式に主役を引き継ぎました。"
+        cue: "c2_dollar_rise"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "ここで重要な法則があります。実は米国のGDPは1870年代に英国を抜いていたのに、通貨の完全交代は1944年と約70年も遅れたんです。"
+        cue: "c2_lag_fact"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "経済力が世界一になっても、すぐには通貨の王座が入れ替わらないのだ！？70年もズレるのだね！"
+        cue: "c2_zunda_lag"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そうなんです。通貨には強烈な慣性が働き、大きな戦争や財政危機が引き金になってようやく交代してきました。"
+        cue: "c2_lag_reason"
+        pause_after: 0.45
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "では、なぜそれほど交代しにくいのでしょうか。基軸通貨を支える4つの条件とネットワーク効果で整理します。"
+        cue: "c2_phase2_cond"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1つ目は巨大な経済規模と貿易網、2つ目は巨額の資金をいつでも出し入れできる深く開かれた金融・国債市場です。"
+        cue: "c2_cond_econ_mkt"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "3つ目は資産を勝手に没収されにくい法の支配と制度的信頼、4つ目は同盟網や軍事力を含む安全保障の裏付けです。"
+        cue: "c2_cond_law_sec"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "さらに「相手も使うから自分も使う」というネットワーク効果が働き、利用者が多いほど便利になる自己強化ループが回ります。"
+        cue: "c2_network_loop"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "経済力だけじゃなくて、市場の深さ・信頼・安全保障・みんなの習慣が合わさって鉄壁の土台を作っているのだ！"
+        cue: "c2_zunda_cond"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "ただ、その米ドル体制も戦後に大きな危機を経験しました。次は1971年の大転換を見ていきましょう。"
+        cue: "c2_bridge"
+        pause_after: 0.5
+
+  - id: "ch03_bretton_to_fiat"
+    title: "3. 金本位制の崩壊と「ドルの特権＆ジレンマ」"
+    layout: "wide"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1944年のブレトンウッズ体制では、1オンス35ドルでドルと金を固定交換し、各国通貨をドルに連動させました。"
+        cue: "c3_bw_system"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "しかし1960年、経済学者ロバート・トリフィンが致命的な矛盾を予言します。有名な『トリフィンのジレンマ』です。"
+        cue: "c3_triffin_intro"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "世界経済の成長に合わせてドルを供給し続けるには、米国が国際収支赤字を出して外へドルを流し続ける必要があります。"
+        cue: "c3_triffin_mech"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: worry
+        caption: "すると海外のドル残高が米国の金保有量を上回り、『本当に金と交換できるのか』という信認が崩れてしまうんです。"
+        cue: "c3_triffin_break"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "ベトナム戦争の戦費拡大や欧州からの金交換要求も重なり、1971年にニクソン大統領が金兌換の停止を宣言しました。"
+        cue: "c3_nixon_shock"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "このニクソン・ショックを境に、世界は金の裏付けがない信用貨幣と変動相場制の時代へ突入したのです。"
+        cue: "c3_fiat_era"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "金と交換できなくなったらドルの信用がガタ落ちしそうなのに、なんでそのまま基軸通貨でいられたのだ！？"
+        cue: "c3_zunda_survive"
+        pause_after: 0.45
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "答えは『金の代わりになる巨大な受け皿』が機能したからです。カギはペトロダラーと米国債の還流ループです。"
+        cue: "c3_phase2_recycle"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1970年代以降、原油などの資源決済がドル建てで定着し、産油国や日本・欧州・中国などの貿易黒字国に巨額のドルが貯まりました。"
+        cue: "c3_petrodollar"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "その稼いだドルが世界最大・最高流動性の米国債や米金融市場へ還流する循環ができ、金の代わりになったんです。"
+        cue: "c3_treasury_loop"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "この結果、米国は自国通貨で海外から安く資金を借り続けられる『法外な特権』を手にしました。"
+        cue: "c3_privilege"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: worry
+        caption: "一方で裏側の代償もあります。強いドル需要で貿易赤字が膨らみやすく、製造業の空洞化や双子の赤字が蓄積するんです。"
+        cue: "c3_cost_side"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: serious
+        caption: "安くお金を借りられる特権と、赤字や産業空洞化の悩みが表裏一体になっているのだ！"
+        cue: "c3_zunda_balance"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "まさに光と影ですね。ではその間に、他の大国の通貨はドルを抜けなかったのでしょうか？"
+        cue: "c3_to_ch4"
+        pause_after: 0.5
+
+  - id: "ch04_challengers_reality"
+    title: "4. 挑戦者たちの現在地：ユーロ・円・人民元と「金」の復権"
+    layout: "default"
+    lines:
+      - speaker: tsumugi
+        style: normal
+        emotion: sharp
+        mode: cutin
+        caption: "ちょっと待って。歴史だと100年くらいで交代してるんだよね？なら日本円やユーロ、中国の人民元は、どうしてドルを抜けなかったの？"
+        cue: "c4_tsumugi_ask"
+        pause_after: 0.4
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "まさにそこが核心です。3つの挑戦者はそれぞれ、第2章で見た『基軸通貨の4条件』のどこかで壁にぶつかりました。"
+        cue: "c4_challengers_intro"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "まず日本円は1985年のプラザ合意後に存在感を高めましたが、バブル崩壊と長期停滞で伸び悩み、現在は外貨準備5.0%です。"
+        cue: "c4_yen_wall"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1999年誕生のユーロは外貨準備20.6%、SWIFT決済21.9%ですが、20カ国で財政が分かれ単一安全資産を欠きます。"
+        cue: "c4_euro_wall"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "人民元はFX取引8.5%まで伸びましたが、資本移動規制の壁が大きく、外貨準備は2.1%、SWIFT決済は3.1%です。"
+        cue: "c4_rmb_wall"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "経済が大きいだけじゃダメで、ユーロは財政の分断、人民元は資本規制っていう構造的な弱点があるのだ！"
+        cue: "c4_zunda_walls"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "その通りです。ただ『次の単一の王者』が不在でも、データを見ると静かな地殻変動は確実に進んでいます。"
+        cue: "c4_walls_wrap"
+        pause_after: 0.45
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "IMFのCOFER統計では、外貨準備のドル比率は2000年頃の約71%から、2026年には56.7%まで約14ポイント低下しました。"
+        cue: "c4_phase2_shift"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "注目すべきは、減ったドルが人民元へ集中したのではなく、豪ドル・カナダドル・スイスフラン等の非伝統的通貨へ分散した点です。"
+        cue: "c4_nontrad_div"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "そしてもう一つの主役が『金（ゴールド）』です。2022年以降、各国中央銀行が年約1,000トン規模で金を買い増しています。"
+        cue: "c4_gold_surge"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "金価格の高騰も重なり、WGC等の集計では世界の公的準備資産全体で金がユーロを抜き、ドルに次ぐ第2位に浮上しました。"
+        cue: "c4_gold_no2"
+        pause_after: 0.35
+      - speaker: tsumugi
+        style: normal
+        emotion: surprise
+        mode: cutin
+        caption: "1971年に金本位制が終わったはずなのに、半世紀たって中央銀行がまた金を買い集めているってすごく象徴的だね。"
+        cue: "c4_tsumugi_gold"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "ドルの代わりを1つの通貨に絞れないから、幅広い分散とゴールドへの避難が進んでいるのだ！"
+        cue: "c4_zunda_gold"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "その背景にある地政学と国際決済インフラの変化を、次の章でさらに掘り下げましょう。"
+        cue: "c4_to_ch5"
+        pause_after: 0.5
+
+  - id: "ch05_tsumugi_multipolar"
+    title: "5. つむぎの疑問：「脱ドル」とデジタル決済網は覇権を覆すか？"
+    layout: "wide"
+    lines:
+      - speaker: tsumugi
+        style: normal
+        emotion: sharp
+        mode: cutin
+        caption: "ロシアへのSWIFT排除や外貨準備凍結で、新興国はドル依存を警戒してるよね。CIPSやmBridgeで覇権は崩れないの？"
+        cue: "c5_tsumugi_sanction"
+        pause_after: 0.4
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "そこが最大の焦点です。SWIFTと米国CHIPSの決済網は、危機時の金融制裁にも使われ得ることが可視化されました。"
+        cue: "c5_weaponize"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "この警戒感から、従来のSWIFT一極に対し、国際決済網を複線化する3つの代替ルートが急拡大しています。"
+        cue: "c5_rails_open"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1つ目は中国の人民元国際決済システムCIPS。資源国やアジアとの二国間決済で取扱高を着実に伸ばしています。"
+        cue: "c5_cips"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "2つ目は多国間CBDC基盤のmBridge。コルレス銀行不要の直接決済を実証し、西側もプロジェクト・アゴラで対抗中です。"
+        cue: "c5_mbridge"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "3つ目はBRICS Pay。単一通貨は非現実的ですが、インドUPIやブラジルPixなど各国の即時決済網をつなぐ路線です。"
+        cue: "c5_brics_pay"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "1つの巨大な対抗通貨を作るんじゃなくて、いろんな国が別ルートの送金パイプをどんどん増やしているのだね！"
+        cue: "c5_zunda_rails"
+        pause_after: 0.35
+      - speaker: tsumugi
+        style: normal
+        emotion: worry
+        mode: cutin
+        caption: "決済の抜け道が広がっても代わりの主役はいないのか。でもデジタル通貨の時代になれば、勢力図が変わる可能性はないの？"
+        cue: "c5_tsumugi_digital"
+        pause_after: 0.45
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "実はここが一番面白い逆転現象なんです。まず現実として、世界FX取引の88.4%、貿易金融の約8割はなおドル建てという厚い防壁があります。"
+        cue: "c5_phase2_moat"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "二国間の貿易は現地通貨にできても、複数の国をまたぐ金融取引では、媒介通貨としてのドルが一番安くて速いんです。"
+        cue: "c5_vehicle_inertia"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "さらにデジタル時代、中国や欧州が公的CBDCを進める一方、米国は民間の『ドル連動ステーブルコイン』で逆襲に出ています。"
+        cue: "c5_stablecoin_twist"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "米国は2025年のGENIUS法で、約3,000億ドル規模のUSDT・USDC発行体に米国短期国債の100%裏付けを義務付けました。"
+        voice_text: "米国は2025年のジーニアス法で、約3000億ドル規模のユーエスディーティーやユーエスディーシー発行体に、米国短期国債の100パーセント裏付けを義務付けました。"
+        cue: "c5_genius_act"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "つまり新興国でデジタル・ドルが使われるほど、裏側で米国債への構造的な需要が自動で生まれる新しい還流ループが作られつつあるんです。"
+        cue: "c5_treasury_newloop"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "結論として、ドルが急に崩壊するのではなく、ドルを中核にしつつ地域決済網・金・デジタル資産が並走する『多極併存』の時代へ進んでいます。"
+        cue: "c5_conclusion"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "脱ドルのパイプが増える一方で、デジタルの世界では逆にステーブルコイン経由のドル化まで起きているのだ！"
+        cue: "c5_zunda_twist"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "白か黒かではなく、一極の慣性と多極化の圧力がせめぎ合う新しい均衡点へ向かっているんですね。"
+        cue: "c5_wrap"
+        pause_after: 0.5
+
+  - id: "ch06_summary"
+    title: "6. まとめ：通貨の勢力図から世界経済の未来を読む"
+    layout: "default"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "それでは最後に、今日の『基軸通貨の変遷』を3つの視点で総括しましょう。"
+        cue: "c6_intro"
+        pause_after: 0.3
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "歴史と仕組みと最新データを並べたら、『ドルは明日終わる！』みたいな極端なニュースに振り回されずに済むのだ！"
+        cue: "c6_zunda_recap"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1つ目は『歴史の法則と慣性』。ギルダーからポンド、ドルへの交代は4つの条件が揃い数十年かけて進みました。"
+        cue: "c6_point1"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "2つ目は『ドルの特権とジレンマ』。トリフィンのジレンマとニクソン・ショック後も、米国債市場とネットワーク効果が土台を維持しています。"
+        cue: "c6_point2"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "3つ目は『多極併存の現在地』。ドル比率56.7%への分散、金の復権、決済網複線化とデジタル・ドルの逆襲が同時進行中です。"
+        cue: "c6_point3"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "為替や金価格、米国債利回りのニュースを見るとき、この3つの軸を思い出すと世界経済の構図がぐっと立体的に見えてきます。"
+        cue: "c6_news_lens"
+        pause_after: 0.35
+      - speaker: tsumugi
+        style: normal
+        emotion: smile
+        mode: cutin
+        caption: "次は『米国債と世界の金利』や『金が買われ続ける理由』、それに『CBDCとステーブルコインの覇権争い』も掘り下げたいね！"
+        cue: "c6_tsumugi_next"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "どれも今のニュースに直結していて面白そうなのだ！また一緒に勉強するのだ！"
+        cue: "c6_zunda_end"
+        pause_after: 0.3
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "ご視聴ありがとうございました。次回の解説動画もお楽しみに！"
+        cue: "c6_outro"
+        pause_after: 0.8

@@ -1,0 +1,300 @@
+<style>
+  .c6-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .c6-title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-right: 340px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-subtle);
+  }
+
+  .c6-title-pills {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .c6-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ddd6fe;
+    background: rgba(139, 92, 246, 0.16);
+    border: 2px solid #8b5cf6;
+    white-space: nowrap;
+  }
+
+  .c6-pill-thanks {
+    color: #bbf7d0;
+    background: rgba(34, 197, 94, 0.16);
+    border-color: #22c55e;
+  }
+
+  /* Leave upper-right free for Tsumugi cut-in */
+  .c6-summary-grid {
+    flex: 1;
+    padding-top: 88px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-content: center;
+    align-items: stretch;
+  }
+
+  .c6-card {
+    min-height: 270px;
+    border-radius: 20px;
+    background: #1e293b;
+    border: 2px solid #8b5cf6;
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  }
+
+  .c6-card-2 {
+    border-color: #38bdf8;
+  }
+
+  .c6-card-3 {
+    border-color: #22c55e;
+  }
+
+  .c6-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .c6-card-num {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 999px;
+    background: #6d28d9;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .c6-card-2 .c6-card-num {
+    background: #0284c7;
+  }
+
+  .c6-card-3 .c6-card-num {
+    background: #15803d;
+  }
+
+  .c6-card-tag {
+    font-size: 16px;
+    font-weight: 700;
+    color: #c4b5fd;
+  }
+
+  .c6-card-2 .c6-card-tag {
+    color: #7dd3fc;
+  }
+
+  .c6-card-3 .c6-card-tag {
+    color: #86efac;
+  }
+
+  .c6-card-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #f8fafc;
+    line-height: 1.3;
+  }
+
+  .c6-formula-box {
+    padding: 8px 14px;
+    border-radius: 12px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    font-family: "Consolas", "Noto Sans JP", monospace;
+    font-size: 19px;
+    font-weight: 700;
+    color: #e9d5ff;
+    text-align: center;
+  }
+
+  .c6-card-2 .c6-formula-box {
+    color: #bae6fd;
+  }
+
+  .c6-card-3 .c6-formula-box {
+    color: #bbf7d0;
+  }
+
+  .c6-card-desc {
+    font-size: 19px;
+    font-weight: 700;
+    color: #cbd5e1;
+    line-height: 1.5;
+  }
+
+  .c6-next-bar {
+    border-radius: 18px;
+    background: #0f172a;
+    border: 2px solid #475569;
+    padding: 15px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+
+  .c6-next-label {
+    font-size: 21px;
+    font-weight: 700;
+    color: #f8fafc;
+    white-space: nowrap;
+  }
+
+  .c6-next-chips {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .c6-chip {
+    padding: 8px 18px;
+    border-radius: 12px;
+    background: #1e293b;
+    border: 2px solid #8b5cf6;
+    color: #ddd6fe;
+    font-size: 19px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+</style>
+
+<div class="c6-wrap">
+  <div class="c6-title-bar">
+    <h1 class="dg-heading">6. まとめ：思考を『深さ』でスケールする時代</h1>
+    <div class="c6-title-pills">
+      <span id="c6-intro-pill" class="c6-pill">3つの要点整理</span>
+      <span id="c6-thanks-pill" class="c6-pill c6-pill-thanks">ご視聴ありがとうございました！</span>
+    </div>
+  </div>
+
+  <div class="c6-summary-grid">
+    <div id="c6-card-1" class="c6-card">
+      <div class="c6-card-head">
+        <span class="c6-card-num">POINT 1</span>
+        <span class="c6-card-tag">重み共有 × 計算能力</span>
+      </div>
+      <div class="c6-card-title">漸化式と計算機性</div>
+      <div class="c6-formula-box">h<sup>(r+1)</sup> = f<sub>θ</sub>(h<sup>(r)</sup>, e)</div>
+      <div class="c6-card-desc">
+        Input Injection で初期文脈を保持しつつ、SUBLEQ 相当の計算機性と長さ汎化で少ない重みから実効深さを引き出す。
+      </div>
+    </div>
+
+    <div id="c6-card-2" class="c6-card c6-card-2">
+      <div class="c6-card-head">
+        <span class="c6-card-num">POINT 2</span>
+        <span class="c6-card-tag">連続思考 × 動的配分</span>
+      </div>
+      <div class="c6-card-title">潜在推論と動的停止</div>
+      <div class="c6-formula-box">h<sup>(r)</sup> ∈ ℝ<sup>d</sup> ／ 停止確率 p<sub>r</sub></div>
+      <div class="c6-card-desc">
+        高次元ベクトルでの潜在推論と、p<sub>r</sub>・MoR による動的ループ配分で、CoT のトークン長ボトルネックを補完。
+      </div>
+    </div>
+
+    <div id="c6-card-3" class="c6-card c6-card-3">
+      <div class="c6-card-head">
+        <span class="c6-card-num">POINT 3</span>
+        <span class="c6-card-tag">安定性 × 3軸スケーリング</span>
+      </div>
+      <div class="c6-card-title">力学系の壁と3軸スケーリング</div>
+      <div class="c6-formula-box">ρ(J) &amp; TBPTT → N × T<sub>CoT</sub> × R</div>
+      <div class="c6-card-desc">
+        RNN とのループ軸の差を踏まえ、ヤコビアン安定性や監視可能性の壁を越えて 3軸スケーリングへ進む。
+      </div>
+    </div>
+  </div>
+
+  <div id="c6-next-bar" class="c6-next-bar">
+    <div class="c6-next-label">📚 シリーズ次回テーマ候補</div>
+    <div class="c6-next-chips">
+      <span id="c6-chip-1" class="c6-chip">📐 DEQ（深層平衡モデル）</span>
+      <span id="c6-chip-2" class="c6-chip">🔀 MoE（混合エキスパート）</span>
+      <span id="c6-chip-3" class="c6-chip">⚡ KVキャッシュ最適化</span>
+    </div>
+  </div>
+</div>
+
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders["ch06_summary"] = function (tl, cues) {
+  gsap.set(["#c6-intro-pill", "#c6-thanks-pill"], { opacity: 0, y: 10 });
+  gsap.set(["#c6-card-1", "#c6-card-2", "#c6-card-3"], { opacity: 0, y: 20 });
+  gsap.set("#c6-next-bar", { opacity: 0, y: 18 });
+  gsap.set(["#c6-chip-1", "#c6-chip-2", "#c6-chip-3"], { opacity: 0, y: 10 });
+
+  const tIntro = cues.c6_intro ?? 0.45;
+  tl.to("#c6-intro-pill", { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, tIntro);
+
+  const t1 = cues.c6_point_1 ?? 4.16;
+  tl.to("#c6-card-1", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, t1);
+
+  const t2 = cues.c6_point_2 ?? 12.79;
+  tl.to("#c6-card-2", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, t2);
+
+  const t3 = cues.c6_point_3 ?? 22.18;
+  tl.to("#c6-card-3", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, t3);
+
+  const tZunda = cues.c6_zunda_sum ?? 32.95;
+  tl.to(["#c6-card-1", "#c6-card-2", "#c6-card-3"], {
+    scale: 1.02,
+    duration: 0.25,
+    stagger: 0.12,
+    yoyo: true,
+    repeat: 1,
+    ease: "sine.inOut"
+  }, tZunda);
+
+  const tNext = cues.c6_tsumugi_next ?? 40.79;
+  tl.to("#c6-next-bar", { opacity: 1, y: 0, duration: 0.45, ease: "back.out(1.4)" }, tNext);
+  tl.to(["#c6-chip-1", "#c6-chip-2", "#c6-chip-3"], {
+    opacity: 1,
+    y: 0,
+    duration: 0.35,
+    stagger: 0.18,
+    ease: "power2.out"
+  }, tNext + 0.18);
+
+  const tOutro = cues.c6_outro ?? 49.77;
+  tl.to("#c6-thanks-pill", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tOutro);
+
+  const tBye = cues.c6_bye ?? 56.73;
+  tl.to(["#c6-thanks-pill", "#c6-next-bar"], {
+    scale: 1.02,
+    duration: 0.28,
+    yoyo: true,
+    repeat: 1,
+    ease: "sine.inOut"
+  }, tBye);
+};
+</script>

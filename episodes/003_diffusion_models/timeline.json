@@ -1,0 +1,3039 @@
+{
+  "generatedAt": "2026-11-20T10:39:52.105Z",
+  "meta": {
+    "title": "Diffusion Modelの進化とこれから：ノイズから世界を描くAIの軌跡と未来",
+    "series": "AIアーキテクチャ入門",
+    "episode": "解説動画",
+    "theme": "tech-dark",
+    "accent_color": "#14b8a6",
+    "bgm": null,
+    "fps": 30,
+    "width": 1920,
+    "height": 1080
+  },
+  "totalDuration": 504.3894,
+  "chapters": [
+    {
+      "id": "ch01_intro",
+      "title": "1. 導入：ノイズを消すだけで創れる理由",
+      "layout": "title",
+      "start": 0,
+      "end": 58.5667,
+      "duration": 58.5667,
+      "cues": {
+        "c1_title": 0.45,
+        "c1_zunda_ask": 7.2107,
+        "c1_paradigms": 15.0807,
+        "c1_diffusion_idea": 22.138,
+        "c1_zunda_sculpt": 28.664,
+        "c1_reverse_visual": 34.678,
+        "c1_goals": 42.48,
+        "c1_go": 52.1847
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch01_intro_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "こんにちは、四国めたんです。今日は『Diffusion Modelの進化とこれから』を解説しましょう。",
+          "voiceText": "こんにちは、四国めたんです。今日は『ディフュージョンモデルの進化とこれから』を解説しましょう。",
+          "audioFile": "audio/lines/ch01_intro_001.wav",
+          "hash": "994c75b74fe2696c",
+          "start": 0.45,
+          "end": 6.8607,
+          "globalStart": 0.45,
+          "globalEnd": 6.8607,
+          "duration": 6.4107,
+          "mouthSpans": [
+            {
+              "start": 0.63,
+              "end": 1.23
+            },
+            {
+              "start": 1.53,
+              "end": 2.37
+            },
+            {
+              "start": 2.79,
+              "end": 3.15
+            },
+            {
+              "start": 3.45,
+              "end": 5.43
+            },
+            {
+              "start": 5.73,
+              "end": 6.75
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_title"
+        },
+        {
+          "index": 2,
+          "id": "ch01_intro_002",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "ずんだもんなのだ！最近の画像や動画AI、写真そっくりだけど1ピクセルずつ描いているのだ？",
+          "voiceText": "ずんだもんなのだ！最近の画像や動画エーアイ、写真そっくりだけど1ピクセルずつ描いているのだ？",
+          "audioFile": "audio/lines/ch01_intro_002.wav",
+          "hash": "b284f569704a1d8d",
+          "start": 7.2107,
+          "end": 14.7307,
+          "globalStart": 7.2107,
+          "globalEnd": 14.7307,
+          "duration": 7.52,
+          "mouthSpans": [
+            {
+              "start": 7.3907,
+              "end": 8.3507
+            },
+            {
+              "start": 8.7707,
+              "end": 10.6907
+            },
+            {
+              "start": 11.2907,
+              "end": 11.7707
+            },
+            {
+              "start": 11.8907,
+              "end": 12.4907
+            },
+            {
+              "start": 12.9707,
+              "end": 13.3307
+            },
+            {
+              "start": 13.4507,
+              "end": 14.5307
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_zunda_ask"
+        },
+        {
+          "index": 3,
+          "id": "ch01_intro_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "いいえ。以前の主流だったGANは学習が不安定で、似た絵ばかり出るモード崩壊が課題でした。",
+          "voiceText": "いいえ。以前の主流だったガンは学習が不安定で、似た絵ばかり出るモード崩壊が課題でした。",
+          "audioFile": "audio/lines/ch01_intro_003.wav",
+          "hash": "b2feb258953e99d4",
+          "start": 15.0807,
+          "end": 21.918,
+          "globalStart": 15.0807,
+          "globalEnd": 21.918,
+          "duration": 6.8373,
+          "mouthSpans": [
+            {
+              "start": 15.3807,
+              "end": 15.6207
+            },
+            {
+              "start": 16.2807,
+              "end": 18.9807
+            },
+            {
+              "start": 19.4007,
+              "end": 21.8007
+            }
+          ],
+          "pauseAfter": 0.22,
+          "cue": "c1_paradigms"
+        },
+        {
+          "index": 4,
+          "id": "ch01_intro_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そこで主役になったのがDiffusion Model。ノイズの砂嵐から少しずつ絵を削り出す発想です。",
+          "voiceText": "そこで主役になったのがディフュージョンモデル。ノイズの砂嵐から少しずつ絵を削り出す発想です。",
+          "audioFile": "audio/lines/ch01_intro_004.wav",
+          "hash": "17afed192cbf7697",
+          "start": 22.138,
+          "end": 28.314,
+          "globalStart": 22.138,
+          "globalEnd": 28.314,
+          "duration": 6.176,
+          "mouthSpans": [
+            {
+              "start": 22.258,
+              "end": 23.698
+            },
+            {
+              "start": 23.818,
+              "end": 24.598
+            },
+            {
+              "start": 25.018,
+              "end": 28.138
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_diffusion_idea"
+        },
+        {
+          "index": 5,
+          "id": "ch01_intro_005",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "わざとノイズで壊した工程を、逆再生して彫刻みたいに掘り出すのだ！？",
+          "voiceText": "わざとノイズで壊した工程を、逆再生して彫刻みたいに掘り出すのだ！？",
+          "audioFile": "audio/lines/ch01_intro_005.wav",
+          "hash": "10ea753232b07e9b",
+          "start": 28.664,
+          "end": 34.328,
+          "globalStart": 28.664,
+          "globalEnd": 34.328,
+          "duration": 5.664,
+          "mouthSpans": [
+            {
+              "start": 28.784,
+              "end": 29.684
+            },
+            {
+              "start": 29.804,
+              "end": 30.164
+            },
+            {
+              "start": 30.284,
+              "end": 30.824
+            },
+            {
+              "start": 31.604,
+              "end": 33.224
+            },
+            {
+              "start": 33.344,
+              "end": 33.644
+            },
+            {
+              "start": 33.764,
+              "end": 34.124
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_zunda_sculpt"
+        },
+        {
+          "index": 6,
+          "id": "ch01_intro_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "その通りです。小さく段階的にノイズを取り除くため、学習が安定し高品質と多様性を両立できます。",
+          "voiceText": "その通りです。小さく段階的にノイズを取り除くため、学習が安定し高品質と多様性を両立できます。",
+          "audioFile": "audio/lines/ch01_intro_006.wav",
+          "hash": "8bcbd314b8db6e37",
+          "start": 34.678,
+          "end": 42.23,
+          "globalStart": 34.678,
+          "globalEnd": 42.23,
+          "duration": 7.552,
+          "mouthSpans": [
+            {
+              "start": 34.858,
+              "end": 35.518
+            },
+            {
+              "start": 35.938,
+              "end": 37.978
+            },
+            {
+              "start": 38.098,
+              "end": 38.398
+            },
+            {
+              "start": 38.638,
+              "end": 40.318
+            },
+            {
+              "start": 40.438,
+              "end": 42.058
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c1_reverse_visual"
+        },
+        {
+          "index": 7,
+          "id": "ch01_intro_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "今回は①DDPMと潜在空間の土台、②DiTとFlow Matching革命、③拡散LLMと世界モデルの未来を辿ります。",
+          "voiceText": "今回は①ディーディーピーエムと潜在空間の土台、②ディーアイティーとフローマッチング革命、③拡散エルエルエムと世界モデルの未来を辿ります。",
+          "audioFile": "audio/lines/ch01_intro_007.wav",
+          "hash": "2435be84e6bab623",
+          "start": 42.48,
+          "end": 51.8347,
+          "globalStart": 42.48,
+          "globalEnd": 51.8347,
+          "duration": 9.3547,
+          "mouthSpans": [
+            {
+              "start": 42.66,
+              "end": 45.66
+            },
+            {
+              "start": 46.02,
+              "end": 48.18
+            },
+            {
+              "start": 48.6,
+              "end": 51.66
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_goals"
+        },
+        {
+          "index": 8,
+          "id": "ch01_intro_008",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "画像だけじゃなくて言葉や世界まで！？進化のストーリーをさっそく見ていくのだ！",
+          "voiceText": "画像だけじゃなくて言葉や世界まで！？進化のストーリーをさっそく見ていくのだ！",
+          "audioFile": "audio/lines/ch01_intro_008.wav",
+          "hash": "4e925925b9ae2347",
+          "start": 52.1847,
+          "end": 57.8167,
+          "globalStart": 52.1847,
+          "globalEnd": 57.8167,
+          "duration": 5.632,
+          "mouthSpans": [
+            {
+              "start": 52.3047,
+              "end": 53.2047
+            },
+            {
+              "start": 53.3247,
+              "end": 54.7647
+            },
+            {
+              "start": 55.1847,
+              "end": 55.3047
+            },
+            {
+              "start": 55.4247,
+              "end": 55.6647
+            },
+            {
+              "start": 55.8447,
+              "end": 56.3247
+            },
+            {
+              "start": 56.6247,
+              "end": 57.6447
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c1_go"
+        }
+      ]
+    },
+    {
+      "id": "ch02_core_evolution",
+      "title": "2. 土台と第1次進化：DDPM → LDM ＆ CFG",
+      "layout": "default",
+      "start": 58.5667,
+      "end": 154.94,
+      "duration": 96.3733,
+      "cues": {
+        "c2_forward_intro": 0.45,
+        "c2_forward_eq": 9.0627,
+        "c2_reverse_eq": 16.374,
+        "c2_score_intuition": 23.568,
+        "c2_zunda_sub": 31.0433,
+        "c2_zunda_yes": 37.7613,
+        "c2_phase2_ldm": 45.5033,
+        "c2_vae_pipe": 52.6226,
+        "c2_zunda_ldm": 60.3966,
+        "c2_cfg_intro": 67.8079,
+        "c2_cfg_eq": 74.6179,
+        "c2_controlnet": 82.1106,
+        "c2_bridge": 89.0953
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch02_core_evolution_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "まずは土台となった2020年のDDPMから見ましょう。仕組みは『拡散』と『逆拡散』の2段階です。",
+          "voiceText": "まずは土台となった2020年のディーディーピーエムから見ましょう。仕組みは『拡散』と『逆拡散』の2段階です。",
+          "audioFile": "audio/lines/ch02_core_evolution_001.wav",
+          "hash": "65f330fedb77cbf9",
+          "start": 0.45,
+          "end": 8.8127,
+          "globalStart": 59.0167,
+          "globalEnd": 67.3794,
+          "duration": 8.3627,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 4.17
+            },
+            {
+              "start": 4.53,
+              "end": 5.01
+            },
+            {
+              "start": 5.31,
+              "end": 5.73
+            },
+            {
+              "start": 6.09,
+              "end": 6.27
+            },
+            {
+              "start": 6.87,
+              "end": 6.99
+            },
+            {
+              "start": 7.11,
+              "end": 7.47
+            },
+            {
+              "start": 7.83,
+              "end": 8.67
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c2_forward_intro"
+        },
+        {
+          "index": 2,
+          "id": "ch02_core_evolution_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "まずForward過程では、元画像x0にガウスノイズを少しずつ混ぜて完全な砂嵐xTにします。",
+          "voiceText": "まずフォワード過程では、元画像エックスゼロにガウスノイズを少しずつ混ぜて完全な砂嵐エックスティーにします。",
+          "audioFile": "audio/lines/ch02_core_evolution_002.wav",
+          "hash": "556610890dcaff24",
+          "start": 9.0627,
+          "end": 16.124,
+          "globalStart": 67.6294,
+          "globalEnd": 74.6907,
+          "duration": 7.0613,
+          "mouthSpans": [
+            {
+              "start": 9.1827,
+              "end": 10.5027
+            },
+            {
+              "start": 10.8027,
+              "end": 15.9027
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c2_forward_eq"
+        },
+        {
+          "index": 3,
+          "id": "ch02_core_evolution_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "次にReverse過程で、モデルεθが『今どれだけノイズが乗っているか』を予測して引き算します。",
+          "voiceText": "次にリバース過程で、モデルイプシロンシータが『今どれだけノイズが乗っているか』を予測して引き算します。",
+          "audioFile": "audio/lines/ch02_core_evolution_003.wav",
+          "hash": "cec5fb6675fec11b",
+          "start": 16.374,
+          "end": 23.318,
+          "globalStart": 74.9407,
+          "globalEnd": 81.8847,
+          "duration": 6.944,
+          "mouthSpans": [
+            {
+              "start": 16.494,
+              "end": 17.754
+            },
+            {
+              "start": 18.114,
+              "end": 19.434
+            },
+            {
+              "start": 19.674,
+              "end": 21.414
+            },
+            {
+              "start": 21.774,
+              "end": 22.434
+            },
+            {
+              "start": 22.554,
+              "end": 23.154
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c2_reverse_eq"
+        },
+        {
+          "index": 4,
+          "id": "ch02_core_evolution_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "直感的には、ノイズの海から『もっとも自然なデータが集まる山』へ勾配を登る動きに相当します。",
+          "voiceText": "直感的には、ノイズの海から『もっとも自然なデータが集まる山』へ勾配を登る動きに相当します。",
+          "audioFile": "audio/lines/ch02_core_evolution_004.wav",
+          "hash": "57b1c4b14e3402e5",
+          "start": 23.568,
+          "end": 30.6933,
+          "globalStart": 82.1347,
+          "globalEnd": 89.26,
+          "duration": 7.1253,
+          "mouthSpans": [
+            {
+              "start": 23.688,
+              "end": 23.808
+            },
+            {
+              "start": 23.928,
+              "end": 24.648
+            },
+            {
+              "start": 24.888,
+              "end": 25.788
+            },
+            {
+              "start": 26.088,
+              "end": 26.208
+            },
+            {
+              "start": 26.328,
+              "end": 28.128
+            },
+            {
+              "start": 28.368,
+              "end": 30.528
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_score_intuition"
+        },
+        {
+          "index": 5,
+          "id": "ch02_core_evolution_005",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "絵そのものを一発で描くより、『邪魔なノイズだけ見つけて引く』ほうがずっと簡単なのだ！",
+          "voiceText": "絵そのものを一発で描くより、『邪魔なノイズだけ見つけて引く』ほうがずっと簡単なのだ！",
+          "audioFile": "audio/lines/ch02_core_evolution_005.wav",
+          "hash": "c70ef1b8cb2a5619",
+          "start": 31.0433,
+          "end": 37.4113,
+          "globalStart": 89.61,
+          "globalEnd": 95.978,
+          "duration": 6.368,
+          "mouthSpans": [
+            {
+              "start": 31.3433,
+              "end": 31.9433
+            },
+            {
+              "start": 32.1233,
+              "end": 32.2433
+            },
+            {
+              "start": 32.3633,
+              "end": 33.0833
+            },
+            {
+              "start": 33.6233,
+              "end": 34.6433
+            },
+            {
+              "start": 34.8233,
+              "end": 35.0633
+            },
+            {
+              "start": 35.1833,
+              "end": 35.3033
+            },
+            {
+              "start": 35.6633,
+              "end": 36.0233
+            },
+            {
+              "start": 36.2633,
+              "end": 37.2833
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_zunda_sub"
+        },
+        {
+          "index": 6,
+          "id": "ch02_core_evolution_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "まさに核心です。ただ初期のDDPMは画素そのままを扱うため、計算が重すぎる弱点がありました。",
+          "voiceText": "まさに核心です。ただ初期のディーディーピーエムは画素そのままを扱うため、計算が重すぎる弱点がありました。",
+          "audioFile": "audio/lines/ch02_core_evolution_006.wav",
+          "hash": "c3cc13e940947ace",
+          "start": 37.7613,
+          "end": 45.1533,
+          "globalStart": 96.328,
+          "globalEnd": 103.72,
+          "duration": 7.392,
+          "mouthSpans": [
+            {
+              "start": 37.8813,
+              "end": 38.9013
+            },
+            {
+              "start": 39.3213,
+              "end": 42.4413
+            },
+            {
+              "start": 42.8013,
+              "end": 44.0613
+            },
+            {
+              "start": 44.1813,
+              "end": 45.0213
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_zunda_yes"
+        },
+        {
+          "index": 7,
+          "id": "ch02_core_evolution_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そこで2022年に普及を爆発させたのが、Latent Diffusion Model、略してLDMです。",
+          "voiceText": "そこで2022年に普及を爆発させたのが、レイテントディフュージョンモデル、略してエルディーエムです。",
+          "audioFile": "audio/lines/ch02_core_evolution_007.wav",
+          "hash": "2bac03eaf0461f26",
+          "start": 45.5033,
+          "end": 52.3726,
+          "globalStart": 104.07,
+          "globalEnd": 110.9393,
+          "duration": 6.8693,
+          "mouthSpans": [
+            {
+              "start": 45.6233,
+              "end": 47.0633
+            },
+            {
+              "start": 47.3033,
+              "end": 48.6833
+            },
+            {
+              "start": 48.9233,
+              "end": 50.4833
+            },
+            {
+              "start": 50.9033,
+              "end": 52.2233
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c2_phase2_ldm"
+        },
+        {
+          "index": 8,
+          "id": "ch02_core_evolution_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "Stable Diffusionでも採用され、VAEで小さく圧縮した潜在空間zの中で拡散を行います。",
+          "voiceText": "ステーブルディフュージョンでも採用され、ブイエーイーで小さく圧縮した潜在空間ゼットの中で拡散を行います。",
+          "audioFile": "audio/lines/ch02_core_evolution_008.wav",
+          "hash": "685d808ce1eae056",
+          "start": 52.6226,
+          "end": 60.0466,
+          "globalStart": 111.1893,
+          "globalEnd": 118.6133,
+          "duration": 7.424,
+          "mouthSpans": [
+            {
+              "start": 52.8626,
+              "end": 54.9026
+            },
+            {
+              "start": 55.3826,
+              "end": 59.8826
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_vae_pipe"
+        },
+        {
+          "index": 9,
+          "id": "ch02_core_evolution_009",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "画像をギュッと圧縮してからノイズ除去して、最後に復元するから普通のGPUでも動いたのだ！",
+          "voiceText": "画像をギュッと圧縮してからノイズ除去して、最後に復元するから普通のジーピーユーでも動いたのだ！",
+          "audioFile": "audio/lines/ch02_core_evolution_009.wav",
+          "hash": "63ebefca1153af27",
+          "start": 60.3966,
+          "end": 67.4579,
+          "globalStart": 118.9633,
+          "globalEnd": 126.0246,
+          "duration": 7.0613,
+          "mouthSpans": [
+            {
+              "start": 60.5766,
+              "end": 61.1766
+            },
+            {
+              "start": 61.2966,
+              "end": 61.5966
+            },
+            {
+              "start": 61.7766,
+              "end": 63.1566
+            },
+            {
+              "start": 63.6366,
+              "end": 64.0566
+            },
+            {
+              "start": 64.3566,
+              "end": 65.0166
+            },
+            {
+              "start": 65.3166,
+              "end": 65.7966
+            },
+            {
+              "start": 65.9166,
+              "end": 66.4566
+            },
+            {
+              "start": 66.6966,
+              "end": 67.2966
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_zunda_ldm"
+        },
+        {
+          "index": 10,
+          "id": "ch02_core_evolution_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "さらにプロンプト通りに描く鍵となったのが、Classifier-Free Guidance、通称CFGです。",
+          "voiceText": "さらにプロンプト通りに描く鍵となったのが、クラシファイアーフリーガイダンス、通称シーエフジーです。",
+          "audioFile": "audio/lines/ch02_core_evolution_010.wav",
+          "hash": "9f51ff7520495c7b",
+          "start": 67.8079,
+          "end": 74.3679,
+          "globalStart": 126.3746,
+          "globalEnd": 132.9346,
+          "duration": 6.56,
+          "mouthSpans": [
+            {
+              "start": 67.9279,
+              "end": 69.4279
+            },
+            {
+              "start": 69.5479,
+              "end": 70.4479
+            },
+            {
+              "start": 70.7479,
+              "end": 72.3679
+            },
+            {
+              "start": 72.8479,
+              "end": 74.1679
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c2_cfg_intro"
+        },
+        {
+          "index": 11,
+          "id": "ch02_core_evolution_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "無条件予測ε∅と条件付き予測εcの差を強度wで増幅し、言葉に忠実な方向へ強く誘導します。",
+          "voiceText": "無条件予測と条件付き予測の差を強さダブリューで増幅し、言葉に忠実な方向へ強く誘導します。",
+          "audioFile": "audio/lines/ch02_core_evolution_011.wav",
+          "hash": "6df25c73d1831ee5",
+          "start": 74.6179,
+          "end": 81.8606,
+          "globalStart": 133.1846,
+          "globalEnd": 140.4273,
+          "duration": 7.2427,
+          "mouthSpans": [
+            {
+              "start": 74.7379,
+              "end": 75.5179
+            },
+            {
+              "start": 75.6379,
+              "end": 78.2779
+            },
+            {
+              "start": 78.4579,
+              "end": 78.6979
+            },
+            {
+              "start": 79.0579,
+              "end": 81.6979
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c2_cfg_eq"
+        },
+        {
+          "index": 12,
+          "id": "ch02_core_evolution_012",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "さらにControlNetなども登場し、文字だけでなく構図やポーズまで自在に制御できるようになりました。",
+          "voiceText": "さらにコントロールネットなども登場し、文字だけでなく構図やポーズまで自在に制御できるようになりました。",
+          "audioFile": "audio/lines/ch02_core_evolution_012.wav",
+          "hash": "6716402fb152536d",
+          "start": 82.1106,
+          "end": 88.7453,
+          "globalStart": 140.6773,
+          "globalEnd": 147.312,
+          "duration": 6.6347,
+          "mouthSpans": [
+            {
+              "start": 82.2306,
+              "end": 84.4506
+            },
+            {
+              "start": 84.7506,
+              "end": 85.4106
+            },
+            {
+              "start": 85.5906,
+              "end": 88.6506
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_controlnet"
+        },
+        {
+          "index": 13,
+          "id": "ch02_core_evolution_013",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "圧縮して軽くして、言葉で狙い通り引っ張れるようになって、一気に実用化したのだ！",
+          "voiceText": "圧縮して軽くして、言葉で狙い通り引っ張れるようになって、一気に実用化したのだ！",
+          "audioFile": "audio/lines/ch02_core_evolution_013.wav",
+          "hash": "f32bde251e30e30e",
+          "start": 89.0953,
+          "end": 95.6233,
+          "globalStart": 147.662,
+          "globalEnd": 154.19,
+          "duration": 6.528,
+          "mouthSpans": [
+            {
+              "start": 89.2153,
+              "end": 89.3353
+            },
+            {
+              "start": 89.6353,
+              "end": 90.5353
+            },
+            {
+              "start": 91.0153,
+              "end": 92.0353
+            },
+            {
+              "start": 92.2753,
+              "end": 93.1153
+            },
+            {
+              "start": 93.2353,
+              "end": 93.3553
+            },
+            {
+              "start": 93.8353,
+              "end": 93.9553
+            },
+            {
+              "start": 94.0753,
+              "end": 94.3153
+            },
+            {
+              "start": 94.5553,
+              "end": 95.4553
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c2_bridge"
+        }
+      ]
+    },
+    {
+      "id": "ch03_dit_flow",
+      "title": "3. 第2次進化：U-Net → DiT ＆ Flow Matching",
+      "layout": "wide",
+      "start": 154.94,
+      "end": 255.3094,
+      "duration": 100.3694,
+      "cues": {
+        "c3_unet_limit": 0.45,
+        "c3_dit_birth": 7.1427,
+        "c3_dit_arch": 13.974,
+        "c3_dit_scale": 22.4267,
+        "c3_mmdit": 30.1967,
+        "c3_zunda_dit": 39.4427,
+        "c3_phase2_flow": 46.8434,
+        "c3_curved_path": 53.4934,
+        "c3_flow_eq": 60.9221,
+        "c3_velocity_field": 68.2548,
+        "c3_zunda_straight": 75.8368,
+        "c3_distill": 82.7148,
+        "c3_wrap": 90.4461
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch03_dit_flow_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "ここから第2次進化です。初期の拡散モデルの中身は、畳み込みベースのU-Netが主役でした。",
+          "voiceText": "ここから第2次進化です。初期の拡散モデルの中身は、畳み込みベースのユーネットが主役でした。",
+          "audioFile": "audio/lines/ch03_dit_flow_001.wav",
+          "hash": "2fb5e433c1fe10f3",
+          "start": 0.45,
+          "end": 6.8927,
+          "globalStart": 155.39,
+          "globalEnd": 161.8327,
+          "duration": 6.4427,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 2.01
+            },
+            {
+              "start": 2.37,
+              "end": 4.11
+            },
+            {
+              "start": 4.41,
+              "end": 6.81
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_unet_limit"
+        },
+        {
+          "index": 2,
+          "id": "ch03_dit_flow_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "しかしU-Netは大規模化すると性能が伸び悩み、動画やテキストとの統合も複雑になりがちでした。",
+          "voiceText": "しかしユーネットは大規模化すると性能が伸び悩み、動画やテキストとの統合も複雑になりがちでした。",
+          "audioFile": "audio/lines/ch03_dit_flow_002.wav",
+          "hash": "b2d721bca10cfbf6",
+          "start": 7.1427,
+          "end": 13.724,
+          "globalStart": 162.0827,
+          "globalEnd": 168.664,
+          "duration": 6.5813,
+          "mouthSpans": [
+            {
+              "start": 7.2627,
+              "end": 10.3227
+            },
+            {
+              "start": 10.6227,
+              "end": 12.2427
+            },
+            {
+              "start": 12.3627,
+              "end": 13.6227
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_dit_birth"
+        },
+        {
+          "index": 3,
+          "id": "ch03_dit_flow_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そこで2023年に登場したのがDiT。潜在表現をパッチ列に分け、標準のTransformerで処理します。",
+          "voiceText": "そこで2023年に登場したのがディーアイティー。潜在表現をパッチ列に分け、標準のトランスフォーマーで処理します。",
+          "audioFile": "audio/lines/ch03_dit_flow_003.wav",
+          "hash": "3bf1ed40934512ac",
+          "start": 13.974,
+          "end": 22.1767,
+          "globalStart": 168.914,
+          "globalEnd": 177.1167,
+          "duration": 8.2027,
+          "mouthSpans": [
+            {
+              "start": 14.094,
+              "end": 17.154
+            },
+            {
+              "start": 17.694,
+              "end": 19.614
+            },
+            {
+              "start": 20.034,
+              "end": 20.814
+            },
+            {
+              "start": 20.934,
+              "end": 21.954
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_dit_arch"
+        },
+        {
+          "index": 4,
+          "id": "ch03_dit_flow_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "adaLN-Zeroで条件を注入でき、計算量を増やすほど素直に性能が伸びるスケーリング則を獲得しました。",
+          "voiceText": "アダエルエヌゼロで条件を注入でき、計算量を増やすほど素直に性能が伸びるスケーリング則を獲得しました。",
+          "audioFile": "audio/lines/ch03_dit_flow_004.wav",
+          "hash": "6bd79961f9d682cd",
+          "start": 22.4267,
+          "end": 29.9467,
+          "globalStart": 177.3667,
+          "globalEnd": 184.8867,
+          "duration": 7.52,
+          "mouthSpans": [
+            {
+              "start": 22.5467,
+              "end": 24.8267
+            },
+            {
+              "start": 25.3067,
+              "end": 26.3267
+            },
+            {
+              "start": 26.4467,
+              "end": 29.0867
+            },
+            {
+              "start": 29.2067,
+              "end": 29.8667
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_dit_scale"
+        },
+        {
+          "index": 5,
+          "id": "ch03_dit_flow_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "さらに文字と画像を同時処理するMMDiTへ発展し、SD3やFLUX、動画生成モデルの標準骨格となりました。",
+          "voiceText": "さらに文字と画像を同時処理するエムエムディーアイティーへ発展し、エスディースリーやフラックス、動画生成モデルの標準骨格となりました。",
+          "audioFile": "audio/lines/ch03_dit_flow_005.wav",
+          "hash": "4c04d52ed7a1534a",
+          "start": 30.1967,
+          "end": 39.0927,
+          "globalStart": 185.1367,
+          "globalEnd": 194.0327,
+          "duration": 8.896,
+          "mouthSpans": [
+            {
+              "start": 30.3167,
+              "end": 34.0367
+            },
+            {
+              "start": 34.4567,
+              "end": 35.8967
+            },
+            {
+              "start": 36.2567,
+              "end": 38.2367
+            },
+            {
+              "start": 38.3567,
+              "end": 39.0167
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_mmdit"
+        },
+        {
+          "index": 6,
+          "id": "ch03_dit_flow_006",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "画像も動画も全部同じTransformerの部品で作れるから、一気に巨大化できるようになったのだ！",
+          "voiceText": "画像も動画も全部同じトランスフォーマーの部品で作れるから、一気に巨大化できるようになったのだ！",
+          "audioFile": "audio/lines/ch03_dit_flow_006.wav",
+          "hash": "bf401487db28b85d",
+          "start": 39.4427,
+          "end": 46.4934,
+          "globalStart": 194.3827,
+          "globalEnd": 201.4334,
+          "duration": 7.0507,
+          "mouthSpans": [
+            {
+              "start": 39.6227,
+              "end": 41.2427
+            },
+            {
+              "start": 41.3627,
+              "end": 41.7227
+            },
+            {
+              "start": 41.9027,
+              "end": 42.4427
+            },
+            {
+              "start": 42.6227,
+              "end": 42.9227
+            },
+            {
+              "start": 43.1027,
+              "end": 43.6427
+            },
+            {
+              "start": 44.3027,
+              "end": 44.4827
+            },
+            {
+              "start": 44.6627,
+              "end": 45.8027
+            },
+            {
+              "start": 45.9227,
+              "end": 46.3427
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_zunda_dit"
+        },
+        {
+          "index": 7,
+          "id": "ch03_dit_flow_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "骨格と同時に起きたもう一つの大転換が、確率拡散からFlow Matchingへの軌道革命です。",
+          "voiceText": "骨格と同時に起きたもう一つの大転換が、確率拡散からフローマッチングへの軌道革命です。",
+          "audioFile": "audio/lines/ch03_dit_flow_007.wav",
+          "hash": "ddf481145a2c6c7f",
+          "start": 46.8434,
+          "end": 53.2434,
+          "globalStart": 201.7834,
+          "globalEnd": 208.1834,
+          "duration": 6.4,
+          "mouthSpans": [
+            {
+              "start": 47.0234,
+              "end": 47.3234
+            },
+            {
+              "start": 47.4434,
+              "end": 49.7234
+            },
+            {
+              "start": 50.0234,
+              "end": 53.0834
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_phase2_flow"
+        },
+        {
+          "index": 8,
+          "id": "ch03_dit_flow_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "従来のDDPMはノイズから画像への経路が曲がりくねり、50から1000ステップも刻む必要がありました。",
+          "voiceText": "従来のディーディーピーエムはノイズから画像への経路が曲がりくねり、50から1000ステップも刻む必要がありました。",
+          "audioFile": "audio/lines/ch03_dit_flow_008.wav",
+          "hash": "ac7f7b44816ef59c",
+          "start": 53.4934,
+          "end": 60.6721,
+          "globalStart": 208.4334,
+          "globalEnd": 215.6121,
+          "duration": 7.1787,
+          "mouthSpans": [
+            {
+              "start": 53.6134,
+              "end": 57.3934
+            },
+            {
+              "start": 57.7534,
+              "end": 58.7734
+            },
+            {
+              "start": 58.8934,
+              "end": 59.0734
+            },
+            {
+              "start": 59.1934,
+              "end": 60.5734
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_curved_path"
+        },
+        {
+          "index": 9,
+          "id": "ch03_dit_flow_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "一方Flow MatchingやRectified Flowは、ノイズx0とデータx1を直線で結びます。",
+          "voiceText": "一方、フローマッチングやレクティファイドフローは、ノイズのエックスゼロとデータのエックスワンを直線で結びます。",
+          "audioFile": "audio/lines/ch03_dit_flow_009.wav",
+          "hash": "da07599294a4fb63",
+          "start": 60.9221,
+          "end": 68.0048,
+          "globalStart": 215.8621,
+          "globalEnd": 222.9448,
+          "duration": 7.0827,
+          "mouthSpans": [
+            {
+              "start": 61.1021,
+              "end": 61.2221
+            },
+            {
+              "start": 61.3421,
+              "end": 61.5821
+            },
+            {
+              "start": 62.0621,
+              "end": 63.0821
+            },
+            {
+              "start": 63.2621,
+              "end": 64.1021
+            },
+            {
+              "start": 64.4021,
+              "end": 64.9421
+            },
+            {
+              "start": 65.0621,
+              "end": 67.8221
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_flow_eq"
+        },
+        {
+          "index": 10,
+          "id": "ch03_dit_flow_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "各時刻でゴールへ向かう一定の速度場vθを学ぶため、遠回りせず少ないステップで一気に到達できます。",
+          "voiceText": "各時刻でゴールへ向かう一定の速度場ブイシータを学ぶため、遠回りせず少ないステップで一気に到達できます。",
+          "audioFile": "audio/lines/ch03_dit_flow_010.wav",
+          "hash": "b5cc5dc46e045c80",
+          "start": 68.2548,
+          "end": 75.4868,
+          "globalStart": 223.1948,
+          "globalEnd": 230.4268,
+          "duration": 7.232,
+          "mouthSpans": [
+            {
+              "start": 68.3748,
+              "end": 72.1548
+            },
+            {
+              "start": 72.4548,
+              "end": 73.8348
+            },
+            {
+              "start": 73.9548,
+              "end": 74.1948
+            },
+            {
+              "start": 74.3148,
+              "end": 75.2748
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_velocity_field"
+        },
+        {
+          "index": 11,
+          "id": "ch03_dit_flow_011",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "くねくね道じゃなくて高速道路みたいに真っ直ぐ走るから、生成がめちゃくちゃ速くなるのだ！",
+          "voiceText": "くねくね道じゃなくて高速道路みたいに真っ直ぐ走るから、生成がめちゃくちゃ速くなるのだ！",
+          "audioFile": "audio/lines/ch03_dit_flow_011.wav",
+          "hash": "3bc2c07c28bd47cf",
+          "start": 75.8368,
+          "end": 82.3648,
+          "globalStart": 230.7768,
+          "globalEnd": 237.3048,
+          "duration": 6.528,
+          "mouthSpans": [
+            {
+              "start": 76.0168,
+              "end": 76.5568
+            },
+            {
+              "start": 76.7968,
+              "end": 77.0368
+            },
+            {
+              "start": 77.1568,
+              "end": 78.7168
+            },
+            {
+              "start": 78.8968,
+              "end": 79.6768
+            },
+            {
+              "start": 80.1568,
+              "end": 80.9968
+            },
+            {
+              "start": 81.1768,
+              "end": 82.1968
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_zunda_straight"
+        },
+        {
+          "index": 12,
+          "id": "ch03_dit_flow_012",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "さらにConsistency Modelなどの蒸留技術を重ねると、わずか1から4ステップの超高速生成も可能です。",
+          "voiceText": "さらにコンシステンシーモデルなどの蒸留技術を重ねると、わずか1から4ステップの超高速生成も可能です。",
+          "audioFile": "audio/lines/ch03_dit_flow_012.wav",
+          "hash": "9063d114f06e0664",
+          "start": 82.7148,
+          "end": 90.0961,
+          "globalStart": 237.6548,
+          "globalEnd": 245.0361,
+          "duration": 7.3813,
+          "mouthSpans": [
+            {
+              "start": 82.8348,
+              "end": 86.2548
+            },
+            {
+              "start": 86.6148,
+              "end": 87.8748
+            },
+            {
+              "start": 87.9948,
+              "end": 89.9148
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_distill"
+        },
+        {
+          "index": 13,
+          "id": "ch03_dit_flow_013",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "骨格はDiT、走り方は直線フロー、仕上げに蒸留。現代の爆速生成の秘密が全部つながったのだ！",
+          "voiceText": "骨格はディーアイティー、走り方は直線フロー、仕上げに蒸留。現代の爆速生成の秘密が全部つながったのだ！",
+          "audioFile": "audio/lines/ch03_dit_flow_013.wav",
+          "hash": "2d07cee1bf998aa3",
+          "start": 90.4461,
+          "end": 99.6194,
+          "globalStart": 245.3861,
+          "globalEnd": 254.5594,
+          "duration": 9.1733,
+          "mouthSpans": [
+            {
+              "start": 91.0461,
+              "end": 91.8861
+            },
+            {
+              "start": 92.4261,
+              "end": 93.1461
+            },
+            {
+              "start": 93.5061,
+              "end": 94.0461
+            },
+            {
+              "start": 94.5261,
+              "end": 95.4261
+            },
+            {
+              "start": 95.9061,
+              "end": 96.6261
+            },
+            {
+              "start": 96.8061,
+              "end": 96.9261
+            },
+            {
+              "start": 97.1061,
+              "end": 97.6461
+            },
+            {
+              "start": 97.7661,
+              "end": 97.8861
+            },
+            {
+              "start": 98.0061,
+              "end": 98.5461
+            },
+            {
+              "start": 98.6661,
+              "end": 99.4461
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c3_wrap"
+        }
+      ]
+    },
+    {
+      "id": "ch04_tsumugi_walls",
+      "title": "4. つむぎの質問：拡散モデルに残る3つの壁",
+      "layout": "default",
+      "start": 255.3094,
+      "end": 347.0875,
+      "duration": 91.7781,
+      "cues": {
+        "c4_tsumugi_ask": 0.45,
+        "c4_three_walls": 8.0747,
+        "c4_wall1_cost": 15.8234,
+        "c4_wall1_tradeoff": 24.5107,
+        "c4_wall2_physics": 32.8074,
+        "c4_zunda_physics": 41.6801,
+        "c4_phase2_vae_safety": 49.1628,
+        "c4_pixel_return": 58.4581,
+        "c4_tsumugi_safety": 66.3601,
+        "c4_safety_c2pa": 75.0621,
+        "c4_to_ch5": 84.4148
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch04_tsumugi_walls_001",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "sharp",
+          "se": null,
+          "caption": "すごく進化してるのは分かったけど、動画が途中で崩れたり電気代がヤバい話も聞くよね？何が壁なの？",
+          "voiceText": "すごく進化してるのは分かったけど、動画が途中で崩れたり電気代がヤバい話も聞くよね？何が壁なの？",
+          "audioFile": "audio/lines/ch04_tsumugi_walls_001.wav",
+          "hash": "338152c9f0b655ef",
+          "start": 0.45,
+          "end": 7.7247,
+          "globalStart": 255.7594,
+          "globalEnd": 263.0341,
+          "duration": 7.2747,
+          "mouthSpans": [
+            {
+              "start": 0.63,
+              "end": 0.81
+            },
+            {
+              "start": 0.99,
+              "end": 2.43
+            },
+            {
+              "start": 2.91,
+              "end": 3.39
+            },
+            {
+              "start": 3.51,
+              "end": 5.55
+            },
+            {
+              "start": 5.67,
+              "end": 6.09
+            },
+            {
+              "start": 6.63,
+              "end": 7.53
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_tsumugi_ask"
+        },
+        {
+          "index": 2,
+          "id": "ch04_tsumugi_walls_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "核心を突いた疑問ですね、つむぎさん。現在の拡散モデルには大きく3つの構造的な壁が残っています。",
+          "voiceText": "核心を突いた疑問ですね、つむぎさん。現在の拡散モデルには大きく3つの構造的な壁が残っています。",
+          "audioFile": "audio/lines/ch04_tsumugi_walls_002.wav",
+          "hash": "97c82e53447ade27",
+          "start": 8.0747,
+          "end": 15.5734,
+          "globalStart": 263.3841,
+          "globalEnd": 270.8828,
+          "duration": 7.4987,
+          "mouthSpans": [
+            {
+              "start": 8.1947,
+              "end": 9.7547
+            },
+            {
+              "start": 10.1747,
+              "end": 10.7147
+            },
+            {
+              "start": 11.1947,
+              "end": 14.9147
+            },
+            {
+              "start": 15.0347,
+              "end": 15.3347
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c4_three_walls"
+        },
+        {
+          "index": 3,
+          "id": "ch04_tsumugi_walls_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "1つ目は推論コストの壁です。何ステップも重いDiTを回すため、長尺動画や対話用途では計算負荷が膨大です。",
+          "voiceText": "1つ目は推論コストの壁です。何ステップも重いディーアイティーを回すため、長尺動画や対話用途では計算負荷が膨大です。",
+          "audioFile": "audio/lines/ch04_tsumugi_walls_003.wav",
+          "hash": "9b4ba3514236d304",
+          "start": 15.8234,
+          "end": 24.2607,
+          "globalStart": 271.1328,
+          "globalEnd": 279.5701,
+          "duration": 8.4373,
+          "mouthSpans": [
+            {
+              "start": 16.0634,
+              "end": 17.8034
+            },
+            {
+              "start": 18.2234,
+              "end": 20.6234
+            },
+            {
+              "start": 20.9234,
+              "end": 23.2034
+            },
+            {
+              "start": 23.3234,
+              "end": 24.1034
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c4_wall1_cost"
+        },
+        {
+          "index": 4,
+          "id": "ch04_tsumugi_walls_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "蒸留でステップ数を極端に減らすと速くなりますが、今度は細部の描写や出力の多様性が落ちやすいジレンマがあります。",
+          "voiceText": "蒸留でステップ数を極端に減らすと速くなりますが、今度は細部の描写や出力の多様性が落ちやすいジレンマがあります。",
+          "audioFile": "audio/lines/ch04_tsumugi_walls_004.wav",
+          "hash": "6c57b03d03ee32d1",
+          "start": 24.5107,
+          "end": 32.4574,
+          "globalStart": 279.8201,
+          "globalEnd": 287.7668,
+          "duration": 7.9467,
+          "mouthSpans": [
+            {
+              "start": 24.6307,
+              "end": 26.0107
+            },
+            {
+              "start": 26.1307,
+              "end": 27.8707
+            },
+            {
+              "start": 28.1707,
+              "end": 29.5507
+            },
+            {
+              "start": 29.6707,
+              "end": 32.2507
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_wall1_tradeoff"
+        },
+        {
+          "index": 5,
+          "id": "ch04_tsumugi_walls_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "2つ目は物理法則と長期一貫性の壁です。数秒は完璧でも、時間が伸びると誤差が蓄積して物体が消えたりします。",
+          "voiceText": "2つ目は物理法則と長期一貫性の壁です。数秒は完璧でも、時間が伸びると誤差が蓄積して物体が消えたりします。",
+          "audioFile": "audio/lines/ch04_tsumugi_walls_005.wav",
+          "hash": "a9972b75225b809a",
+          "start": 32.8074,
+          "end": 41.3301,
+          "globalStart": 288.1168,
+          "globalEnd": 296.6395,
+          "duration": 8.5227,
+          "mouthSpans": [
+            {
+              "start": 32.9874,
+              "end": 34.1874
+            },
+            {
+              "start": 34.3074,
+              "end": 34.8474
+            },
+            {
+              "start": 34.9674,
+              "end": 35.9274
+            },
+            {
+              "start": 36.3474,
+              "end": 37.6674
+            },
+            {
+              "start": 37.9674,
+              "end": 40.0074
+            },
+            {
+              "start": 40.1274,
+              "end": 41.1474
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_wall2_physics"
+        },
+        {
+          "index": 6,
+          "id": "ch04_tsumugi_walls_006",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "worry",
+          "se": null,
+          "caption": "見た目は本物そっくりなのに、重力や物体の連続性まで本当に理解してるわけじゃないのだ…！",
+          "voiceText": "見た目は本物そっくりなのに、重力や物体の連続性まで本当に理解してるわけじゃないのだ…！",
+          "audioFile": "audio/lines/ch04_tsumugi_walls_006.wav",
+          "hash": "233a17379806f49b",
+          "start": 41.6801,
+          "end": 48.7628,
+          "globalStart": 296.9895,
+          "globalEnd": 304.0722,
+          "duration": 7.0827,
+          "mouthSpans": [
+            {
+              "start": 41.9201,
+              "end": 43.0001
+            },
+            {
+              "start": 43.1201,
+              "end": 43.7201
+            },
+            {
+              "start": 44.1401,
+              "end": 44.7401
+            },
+            {
+              "start": 45.0401,
+              "end": 45.7001
+            },
+            {
+              "start": 45.8801,
+              "end": 47.0201
+            },
+            {
+              "start": 47.1401,
+              "end": 47.7401
+            },
+            {
+              "start": 47.8601,
+              "end": 48.6401
+            }
+          ],
+          "pauseAfter": 0.4,
+          "cue": "c4_zunda_physics"
+        },
+        {
+          "index": 7,
+          "id": "ch04_tsumugi_walls_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "3つ目は表現の細部と社会実装の壁です。まずVAEで圧縮する過程で、細かい文字や指先が潰れやすい弱点があります。",
+          "voiceText": "3つ目は表現の細部と社会実装の壁です。まずブイエーイーで圧縮する過程で、細かい文字や指先が潰れやすい弱点があります。",
+          "audioFile": "audio/lines/ch04_tsumugi_walls_007.wav",
+          "hash": "3609de0489e416b6",
+          "start": 49.1628,
+          "end": 58.2081,
+          "globalStart": 304.4722,
+          "globalEnd": 313.5175,
+          "duration": 9.0453,
+          "mouthSpans": [
+            {
+              "start": 49.2828,
+              "end": 49.4028
+            },
+            {
+              "start": 49.5228,
+              "end": 52.1628
+            },
+            {
+              "start": 52.5228,
+              "end": 54.6228
+            },
+            {
+              "start": 54.9828,
+              "end": 57.2028
+            },
+            {
+              "start": 57.3228,
+              "end": 57.9828
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c4_phase2_vae_safety"
+        },
+        {
+          "index": 8,
+          "id": "ch04_tsumugi_walls_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "このため最近は、あえてVAEを通さず画素空間で直接生成するアプローチも改めて研究されています。",
+          "voiceText": "このため最近は、あえてブイエーイーを通さず画素空間で直接生成するアプローチも改めて研究されています。",
+          "audioFile": "audio/lines/ch04_tsumugi_walls_008.wav",
+          "hash": "44367dcb4535e5ad",
+          "start": 58.4581,
+          "end": 66.0101,
+          "globalStart": 313.7675,
+          "globalEnd": 321.3195,
+          "duration": 7.552,
+          "mouthSpans": [
+            {
+              "start": 58.5781,
+              "end": 59.6581
+            },
+            {
+              "start": 60.0181,
+              "end": 62.4181
+            },
+            {
+              "start": 62.5981,
+              "end": 65.8381
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_pixel_return"
+        },
+        {
+          "index": 9,
+          "id": "ch04_tsumugi_walls_009",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "worry",
+          "se": null,
+          "caption": "あと、狙った部分だけ正確に直す難しさや、ディープフェイク・著作権・電子透かしの問題も避けられないよね。",
+          "voiceText": "あと、狙った部分だけ正確に直す難しさや、ディープフェイク・著作権・電子透かしの問題も避けられないよね。",
+          "audioFile": "audio/lines/ch04_tsumugi_walls_009.wav",
+          "hash": "6ba82e125ceea4d0",
+          "start": 66.3601,
+          "end": 74.7121,
+          "globalStart": 321.6695,
+          "globalEnd": 330.0215,
+          "duration": 8.352,
+          "mouthSpans": [
+            {
+              "start": 66.4201,
+              "end": 66.7801
+            },
+            {
+              "start": 67.3801,
+              "end": 69.8401
+            },
+            {
+              "start": 70.4401,
+              "end": 70.6201
+            },
+            {
+              "start": 70.8001,
+              "end": 71.1601
+            },
+            {
+              "start": 71.5201,
+              "end": 71.7601
+            },
+            {
+              "start": 71.8801,
+              "end": 72.0601
+            },
+            {
+              "start": 72.5401,
+              "end": 72.7801
+            },
+            {
+              "start": 72.9001,
+              "end": 74.5801
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_tsumugi_safety"
+        },
+        {
+          "index": 10,
+          "id": "ch04_tsumugi_walls_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "その通りです。局所編集の因果制御に加え、電子透かしや来歴証明C2PAなど信頼性の仕組み作りが不可欠です。",
+          "voiceText": "その通りです。局所編集の因果制御に加え、電子透かしや来歴証明シーツーピーエーなど信頼性の仕組み作りが不可欠です。",
+          "audioFile": "audio/lines/ch04_tsumugi_walls_010.wav",
+          "hash": "1a2a93742ebf045e",
+          "start": 75.0621,
+          "end": 84.0648,
+          "globalStart": 330.3715,
+          "globalEnd": 339.3742,
+          "duration": 9.0027,
+          "mouthSpans": [
+            {
+              "start": 75.1821,
+              "end": 75.9021
+            },
+            {
+              "start": 76.3221,
+              "end": 78.4221
+            },
+            {
+              "start": 78.9021,
+              "end": 83.2821
+            },
+            {
+              "start": 83.4021,
+              "end": 83.8821
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_safety_c2pa"
+        },
+        {
+          "index": 11,
+          "id": "ch04_tsumugi_walls_011",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "きれいなだけじゃゴールじゃなくて、物理の理解や安全性の壁を越える勝負に入っているのだね。",
+          "voiceText": "きれいなだけじゃゴールじゃなくて、物理の理解や安全性の壁を越える勝負に入っているのだね。",
+          "audioFile": "audio/lines/ch04_tsumugi_walls_011.wav",
+          "hash": "86a1036cc4f4148d",
+          "start": 84.4148,
+          "end": 91.0281,
+          "globalStart": 339.7242,
+          "globalEnd": 346.3375,
+          "duration": 6.6133,
+          "mouthSpans": [
+            {
+              "start": 84.5948,
+              "end": 85.0748
+            },
+            {
+              "start": 85.1948,
+              "end": 85.9748
+            },
+            {
+              "start": 86.1548,
+              "end": 86.2748
+            },
+            {
+              "start": 86.8748,
+              "end": 87.2348
+            },
+            {
+              "start": 87.3548,
+              "end": 87.7148
+            },
+            {
+              "start": 87.8348,
+              "end": 89.9948
+            },
+            {
+              "start": 90.1148,
+              "end": 90.8348
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c4_to_ch5"
+        }
+      ]
+    },
+    {
+      "id": "ch05_frontier_future",
+      "title": "5. これから：拡散LLM・世界モデル・AR融合",
+      "layout": "wide",
+      "start": 347.0875,
+      "end": 448.36,
+      "duration": 101.2725,
+      "cues": {
+        "c5_tsumugi_text": 0.45,
+        "c5_dlm_intro": 7.9893,
+        "c5_ar_vs_dlm": 15.1406,
+        "c5_mask_denoise": 23.0493,
+        "c5_dlm_models": 30.4993,
+        "c5_dlm_kv": 38.5573,
+        "c5_zunda_dlm": 46.9286,
+        "c5_phase2_world": 54.2406,
+        "c5_world_model": 60.1759,
+        "c5_robotics": 69.0872,
+        "c5_unified_ar": 76.1425,
+        "c5_zunda_hybrid": 85.9432,
+        "c5_tsumugi_wow": 93.2265
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch05_frontier_future_001",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "sharp",
+          "se": null,
+          "caption": "画像や動画は連続した数値だから拡散できるんだよね？言葉みたいな離散トークンにもDiffusionって使えるの？",
+          "voiceText": "画像や動画は連続した数値だから拡散できるんだよね？言葉みたいな離散トークンにもディフュージョンって使えるの？",
+          "audioFile": "audio/lines/ch05_frontier_future_001.wav",
+          "hash": "c9b49c4f3addd024",
+          "start": 0.45,
+          "end": 7.6393,
+          "globalStart": 347.5375,
+          "globalEnd": 354.7268,
+          "duration": 7.1893,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 2.55
+            },
+            {
+              "start": 2.85,
+              "end": 3.81
+            },
+            {
+              "start": 4.35,
+              "end": 6.63
+            },
+            {
+              "start": 6.99,
+              "end": 7.47
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_tsumugi_text"
+        },
+        {
+          "index": 2,
+          "id": "ch05_frontier_future_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "まさに今もっとも熱い新領域が、テキストを拡散で生成する『離散拡散LLM』です。",
+          "voiceText": "まさに今もっとも熱い新領域が、テキストを拡散で生成する『離散拡散エルエルエム』です。",
+          "audioFile": "audio/lines/ch05_frontier_future_002.wav",
+          "hash": "fc38efff1ac65743",
+          "start": 7.9893,
+          "end": 14.8906,
+          "globalStart": 355.0768,
+          "globalEnd": 361.9781,
+          "duration": 6.9013,
+          "mouthSpans": [
+            {
+              "start": 8.1093,
+              "end": 10.2093
+            },
+            {
+              "start": 10.5093,
+              "end": 12.2493
+            },
+            {
+              "start": 12.7293,
+              "end": 14.1093
+            },
+            {
+              "start": 14.5293,
+              "end": 14.7093
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_dlm_intro"
+        },
+        {
+          "index": 3,
+          "id": "ch05_frontier_future_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "通常の自己回帰LLMは左から1語ずつ直列に書くため、長文になるほど待ち時間が増える制約があります。",
+          "voiceText": "通常の自己回帰エルエルエムは左から1語ずつ直列に書くため、長文になるほど待ち時間が増える制約があります。",
+          "audioFile": "audio/lines/ch05_frontier_future_003.wav",
+          "hash": "d4ed8fef4e1dd8e2",
+          "start": 15.1406,
+          "end": 22.7993,
+          "globalStart": 362.2281,
+          "globalEnd": 369.8868,
+          "duration": 7.6587,
+          "mouthSpans": [
+            {
+              "start": 15.2606,
+              "end": 18.9806
+            },
+            {
+              "start": 19.1006,
+              "end": 19.3406
+            },
+            {
+              "start": 19.6406,
+              "end": 22.5806
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_ar_vs_dlm"
+        },
+        {
+          "index": 4,
+          "id": "ch05_frontier_future_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "離散拡散LLMはノイズの代わりに[MASK]で隠し、双方向アテンションで複数箇所を並列に復元します。",
+          "voiceText": "離散拡散エルエルエムはノイズの代わりにマスクで隠し、双方向アテンションで複数箇所を並列に復元します。",
+          "audioFile": "audio/lines/ch05_frontier_future_004.wav",
+          "hash": "b21a5b52ea55496e",
+          "start": 23.0493,
+          "end": 30.2493,
+          "globalStart": 370.1368,
+          "globalEnd": 377.3368,
+          "duration": 7.2,
+          "mouthSpans": [
+            {
+              "start": 23.1693,
+              "end": 26.3493
+            },
+            {
+              "start": 26.7093,
+              "end": 27.9693
+            },
+            {
+              "start": 28.0893,
+              "end": 29.3493
+            },
+            {
+              "start": 29.4693,
+              "end": 30.0693
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_mask_denoise"
+        },
+        {
+          "index": 5,
+          "id": "ch05_frontier_future_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "LLaDA・Mercury・Gemini Diffusionが登場し、並列生成の速さや逆転の呪いへの強さで注目されています。",
+          "voiceText": "ラダ・マーキュリー・ジェミニディフュージョンが登場し、並列生成の速さや逆転の呪いへの強さで注目されています。",
+          "audioFile": "audio/lines/ch05_frontier_future_005.wav",
+          "hash": "4834efca371643df",
+          "start": 30.4993,
+          "end": 38.3073,
+          "globalStart": 377.5868,
+          "globalEnd": 385.3948,
+          "duration": 7.808,
+          "mouthSpans": [
+            {
+              "start": 30.6193,
+              "end": 30.8593
+            },
+            {
+              "start": 31.2193,
+              "end": 33.4993
+            },
+            {
+              "start": 33.9193,
+              "end": 35.5993
+            },
+            {
+              "start": 35.7193,
+              "end": 38.1193
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_dlm_models"
+        },
+        {
+          "index": 6,
+          "id": "ch05_frontier_future_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "一方で従来のKVキャッシュをそのまま使いにくい課題もあり、高速化と推論品質の両立が活発に研究中です。",
+          "voiceText": "一方で従来のケーブイキャッシュをそのまま使いにくい課題もあり、高速化と推論品質の両立が活発に研究中です。",
+          "audioFile": "audio/lines/ch05_frontier_future_006.wav",
+          "hash": "8dc665aef016cb47",
+          "start": 38.5573,
+          "end": 46.5786,
+          "globalStart": 385.6448,
+          "globalEnd": 393.6661,
+          "duration": 8.0213,
+          "mouthSpans": [
+            {
+              "start": 38.6773,
+              "end": 38.7973
+            },
+            {
+              "start": 38.9173,
+              "end": 42.5173
+            },
+            {
+              "start": 42.8773,
+              "end": 43.1773
+            },
+            {
+              "start": 43.2973,
+              "end": 46.4173
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_dlm_kv"
+        },
+        {
+          "index": 7,
+          "id": "ch05_frontier_future_007",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "文章までノイズ除去で一気に書き上げちゃうのだ！？しかも全体を見ながら直せるのが強そうなのだ！",
+          "voiceText": "文章までノイズ除去で一気に書き上げちゃうのだ！？しかも全体を見ながら直せるのが強そうなのだ！",
+          "audioFile": "audio/lines/ch05_frontier_future_007.wav",
+          "hash": "293e3e3ed2f4c6ed",
+          "start": 46.9286,
+          "end": 53.8406,
+          "globalStart": 394.0161,
+          "globalEnd": 400.9281,
+          "duration": 6.912,
+          "mouthSpans": [
+            {
+              "start": 47.1086,
+              "end": 47.7686
+            },
+            {
+              "start": 47.8886,
+              "end": 48.6086
+            },
+            {
+              "start": 48.7886,
+              "end": 48.9686
+            },
+            {
+              "start": 49.2086,
+              "end": 50.1686
+            },
+            {
+              "start": 50.5886,
+              "end": 52.6886
+            },
+            {
+              "start": 52.9286,
+              "end": 53.7086
+            }
+          ],
+          "pauseAfter": 0.4,
+          "cue": "c5_zunda_dlm"
+        },
+        {
+          "index": 8,
+          "id": "ch05_frontier_future_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "さらにDiffusionとFlowは、画像や文章を超えた3つの未来領域へ広がっています。",
+          "voiceText": "さらにディフュージョンとフローは、画像や文章を超えた3つの未来領域へ広がっています。",
+          "audioFile": "audio/lines/ch05_frontier_future_008.wav",
+          "hash": "c3775c1ef1ce2e88",
+          "start": 54.2406,
+          "end": 59.9259,
+          "globalStart": 401.3281,
+          "globalEnd": 407.0134,
+          "duration": 5.6853,
+          "mouthSpans": [
+            {
+              "start": 54.3606,
+              "end": 55.9806
+            },
+            {
+              "start": 56.2806,
+              "end": 59.2806
+            },
+            {
+              "start": 59.4006,
+              "end": 59.7606
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_phase2_world"
+        },
+        {
+          "index": 9,
+          "id": "ch05_frontier_future_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "1つ目は拡散型ワールドモデルです。動画生成に行動や3D幾何を条件付け、AIの物理シミュレータとして動かします。",
+          "voiceText": "1つ目は拡散型ワールドモデルです。動画生成に行動や3ディー幾何を条件付け、エーアイの物理シミュレータとして動かします。",
+          "audioFile": "audio/lines/ch05_frontier_future_009.wav",
+          "hash": "dc38ab9379d619d7",
+          "start": 60.1759,
+          "end": 68.8372,
+          "globalStart": 407.2634,
+          "globalEnd": 415.9247,
+          "duration": 8.6613,
+          "mouthSpans": [
+            {
+              "start": 60.4159,
+              "end": 62.5159
+            },
+            {
+              "start": 62.8759,
+              "end": 64.7359
+            },
+            {
+              "start": 64.9159,
+              "end": 65.5759
+            },
+            {
+              "start": 65.6959,
+              "end": 65.8159
+            },
+            {
+              "start": 66.3559,
+              "end": 68.6359
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_world_model"
+        },
+        {
+          "index": 10,
+          "id": "ch05_frontier_future_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "2つ目はロボティクスです。Diffusion PolicyやFlow Policyが複雑な動作軌道を滑らかに生成します。",
+          "voiceText": "2つ目はロボティクスです。ディフュージョンポリシーやフローポリシーが複雑な動作軌道を滑らかに生成します。",
+          "audioFile": "audio/lines/ch05_frontier_future_010.wav",
+          "hash": "db8d4ca5b35e0219",
+          "start": 69.0872,
+          "end": 75.8925,
+          "globalStart": 416.1747,
+          "globalEnd": 422.98,
+          "duration": 6.8053,
+          "mouthSpans": [
+            {
+              "start": 69.2672,
+              "end": 70.4672
+            },
+            {
+              "start": 70.9472,
+              "end": 73.1072
+            },
+            {
+              "start": 73.2272,
+              "end": 75.6872
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_robotics"
+        },
+        {
+          "index": 11,
+          "id": "ch05_frontier_future_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "3つ目が統一マルチモーダル基盤です。論理や計画は自己回帰AR、視覚・物理・並列生成はDiffusionが担います。",
+          "voiceText": "3つ目が統一マルチモーダル基盤です。論理や計画は自己回帰エーアール、視覚・物理・並列生成はディフュージョンが担います。",
+          "audioFile": "audio/lines/ch05_frontier_future_011.wav",
+          "hash": "6274694ace9d787e",
+          "start": 76.1425,
+          "end": 85.5932,
+          "globalStart": 423.23,
+          "globalEnd": 432.6807,
+          "duration": 9.4507,
+          "mouthSpans": [
+            {
+              "start": 76.2625,
+              "end": 76.3825
+            },
+            {
+              "start": 76.5025,
+              "end": 78.5425
+            },
+            {
+              "start": 79.0225,
+              "end": 81.1225
+            },
+            {
+              "start": 81.5425,
+              "end": 81.9025
+            },
+            {
+              "start": 82.2625,
+              "end": 82.6225
+            },
+            {
+              "start": 83.1025,
+              "end": 85.3825
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_unified_ar"
+        },
+        {
+          "index": 12,
+          "id": "ch05_frontier_future_012",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "どっちか一方が勝つんじゃなくて、得意な役割を1つのAIの中で合体させる時代になるのだ！",
+          "voiceText": "どっちか一方が勝つんじゃなくて、得意な役割を1つのエーアイの中で合体させる時代になるのだ！",
+          "audioFile": "audio/lines/ch05_frontier_future_012.wav",
+          "hash": "a60afb25603c41be",
+          "start": 85.9432,
+          "end": 92.8765,
+          "globalStart": 433.0307,
+          "globalEnd": 439.964,
+          "duration": 6.9333,
+          "mouthSpans": [
+            {
+              "start": 86.1232,
+              "end": 86.2432
+            },
+            {
+              "start": 86.4832,
+              "end": 86.6032
+            },
+            {
+              "start": 86.7832,
+              "end": 87.6832
+            },
+            {
+              "start": 87.8632,
+              "end": 87.9832
+            },
+            {
+              "start": 88.5232,
+              "end": 88.9432
+            },
+            {
+              "start": 89.0632,
+              "end": 89.4832
+            },
+            {
+              "start": 89.6032,
+              "end": 89.7232
+            },
+            {
+              "start": 89.8432,
+              "end": 90.6232
+            },
+            {
+              "start": 90.7432,
+              "end": 90.8632
+            },
+            {
+              "start": 91.1632,
+              "end": 91.7032
+            },
+            {
+              "start": 91.8832,
+              "end": 92.7232
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_zunda_hybrid"
+        },
+        {
+          "index": 13,
+          "id": "ch05_frontier_future_013",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "smile",
+          "se": null,
+          "caption": "もう『お絵描きAIの技術』じゃなくて、言語も物理世界も扱う次世代の共通エンジンになってるんだね。",
+          "voiceText": "もう『お絵描きエーアイの技術』じゃなくて、言語も物理世界も扱う次世代の共通エンジンになってるんだね。",
+          "audioFile": "audio/lines/ch05_frontier_future_013.wav",
+          "hash": "b85782f781686e24",
+          "start": 93.2265,
+          "end": 100.5225,
+          "globalStart": 440.314,
+          "globalEnd": 447.61,
+          "duration": 7.296,
+          "mouthSpans": [
+            {
+              "start": 93.3465,
+              "end": 93.5265
+            },
+            {
+              "start": 94.0665,
+              "end": 94.3665
+            },
+            {
+              "start": 94.4865,
+              "end": 95.3865
+            },
+            {
+              "start": 95.8065,
+              "end": 96.2865
+            },
+            {
+              "start": 96.7665,
+              "end": 97.9665
+            },
+            {
+              "start": 98.1465,
+              "end": 99.7665
+            },
+            {
+              "start": 99.8865,
+              "end": 100.3665
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c5_tsumugi_wow"
+        }
+      ]
+    },
+    {
+      "id": "ch06_summary",
+      "title": "6. まとめ：生成AIの「共通エンジン」へ",
+      "layout": "default",
+      "start": 448.36,
+      "end": 504.3894,
+      "duration": 56.0294,
+      "cues": {
+        "c6_intro": 0.45,
+        "c6_p1": 6.1047,
+        "c6_p2": 15.2367,
+        "c6_p3": 23.4407,
+        "c6_zunda_recap": 32.9854,
+        "c6_tsumugi_next": 40.8981,
+        "c6_outro": 47.7548,
+        "c6_bye": 52.0901
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch06_summary_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "では最後に、Diffusion Modelの進化とこれからを3つのポイントで振り返りましょう。",
+          "voiceText": "では最後に、ディフュージョンモデルの進化とこれからを3つのポイントで振り返りましょう。",
+          "audioFile": "audio/lines/ch06_summary_001.wav",
+          "hash": "54efbc8b2cdb7f79",
+          "start": 0.45,
+          "end": 5.8047,
+          "globalStart": 448.81,
+          "globalEnd": 454.1647,
+          "duration": 5.3547,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 1.35
+            },
+            {
+              "start": 1.71,
+              "end": 5.67
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c6_intro"
+        },
+        {
+          "index": 2,
+          "id": "ch06_summary_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "1つ目。DDPMのノイズ予測を土台に、VAE潜在空間のLDMとCFGが実用化を決定づけました。",
+          "voiceText": "1つ目。ディーディーピーエムのノイズ予測を土台に、ブイエーイー潜在空間のエルディーエムとシーエフジーが実用化を決定づけました。",
+          "audioFile": "audio/lines/ch06_summary_002.wav",
+          "hash": "4d623ecba90cfe62",
+          "start": 6.1047,
+          "end": 14.9367,
+          "globalStart": 454.4647,
+          "globalEnd": 463.2967,
+          "duration": 8.832,
+          "mouthSpans": [
+            {
+              "start": 6.3447,
+              "end": 6.7047
+            },
+            {
+              "start": 7.0647,
+              "end": 9.3447
+            },
+            {
+              "start": 9.8847,
+              "end": 13.9647
+            },
+            {
+              "start": 14.0847,
+              "end": 14.8047
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c6_p1"
+        },
+        {
+          "index": 3,
+          "id": "ch06_summary_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "2つ目。U-NetからDiTへ骨格が変わり、Flow Matchingの直線軌道と蒸留で劇的に高速化しました。",
+          "voiceText": "2つ目。ユーネットからディーアイティーへ骨格が変わり、フローマッチングの直線軌道と蒸留で劇的に高速化しました。",
+          "audioFile": "audio/lines/ch06_summary_003.wav",
+          "hash": "c3dc70a3e809b783",
+          "start": 15.2367,
+          "end": 23.1407,
+          "globalStart": 463.5967,
+          "globalEnd": 471.5007,
+          "duration": 7.904,
+          "mouthSpans": [
+            {
+              "start": 15.4167,
+              "end": 15.8367
+            },
+            {
+              "start": 16.2567,
+              "end": 18.6567
+            },
+            {
+              "start": 19.1367,
+              "end": 20.1567
+            },
+            {
+              "start": 20.2767,
+              "end": 21.5967
+            },
+            {
+              "start": 21.7167,
+              "end": 22.3767
+            },
+            {
+              "start": 22.4967,
+              "end": 23.0367
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c6_p2"
+        },
+        {
+          "index": 4,
+          "id": "ch06_summary_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "3つ目。推論負荷や物理の壁に挑みつつ、離散拡散LLM・世界モデル・AR融合へと領域が広がっています。",
+          "voiceText": "3つ目。推論負荷や物理の壁に挑みつつ、離散拡散エルエルエム・世界モデル・エーアール融合へと領域が広がっています。",
+          "audioFile": "audio/lines/ch06_summary_004.wav",
+          "hash": "71dc2031528f5732",
+          "start": 23.4407,
+          "end": 32.6354,
+          "globalStart": 471.8007,
+          "globalEnd": 480.9954,
+          "duration": 9.1947,
+          "mouthSpans": [
+            {
+              "start": 23.5607,
+              "end": 23.6807
+            },
+            {
+              "start": 23.8007,
+              "end": 24.0407
+            },
+            {
+              "start": 24.4607,
+              "end": 24.8207
+            },
+            {
+              "start": 24.9407,
+              "end": 26.5607
+            },
+            {
+              "start": 26.9207,
+              "end": 28.3007
+            },
+            {
+              "start": 28.7207,
+              "end": 29.3807
+            },
+            {
+              "start": 29.9207,
+              "end": 32.4407
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_p3"
+        },
+        {
+          "index": 5,
+          "id": "ch06_summary_005",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "ノイズを引くアイデアが、直線で速くなって、言葉やロボットの世界まで広がっているのがよく分かったのだ！",
+          "voiceText": "ノイズを引くアイデアが、直線で速くなって、言葉やロボットの世界まで広がっているのがよく分かったのだ！",
+          "audioFile": "audio/lines/ch06_summary_005.wav",
+          "hash": "569efa4ff0eb3899",
+          "start": 32.9854,
+          "end": 40.5481,
+          "globalStart": 481.3454,
+          "globalEnd": 488.9081,
+          "duration": 7.5627,
+          "mouthSpans": [
+            {
+              "start": 33.1054,
+              "end": 33.5854
+            },
+            {
+              "start": 33.7654,
+              "end": 34.4254
+            },
+            {
+              "start": 35.0854,
+              "end": 35.9254
+            },
+            {
+              "start": 36.0454,
+              "end": 36.1654
+            },
+            {
+              "start": 36.6454,
+              "end": 37.3054
+            },
+            {
+              "start": 37.4254,
+              "end": 38.1454
+            },
+            {
+              "start": 38.3854,
+              "end": 38.6854
+            },
+            {
+              "start": 38.8054,
+              "end": 39.6454
+            },
+            {
+              "start": 39.7654,
+              "end": 39.8854
+            },
+            {
+              "start": 40.0054,
+              "end": 40.3654
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_zunda_recap"
+        },
+        {
+          "index": 6,
+          "id": "ch06_summary_006",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "smile",
+          "se": null,
+          "caption": "次はFlow Matchingと最適輸送の数式や、ワールドモデルの仕組みを深掘りする回も面白そうだね！",
+          "voiceText": "次はフローマッチングと最適輸送の数式や、ワールドモデルの仕組みを深掘りする回も面白そうだね！",
+          "audioFile": "audio/lines/ch06_summary_006.wav",
+          "hash": "a41d4a68b8658893",
+          "start": 40.8981,
+          "end": 47.4048,
+          "globalStart": 489.2581,
+          "globalEnd": 495.7648,
+          "duration": 6.5067,
+          "mouthSpans": [
+            {
+              "start": 41.0181,
+              "end": 41.7981
+            },
+            {
+              "start": 41.9181,
+              "end": 43.2981
+            },
+            {
+              "start": 43.4181,
+              "end": 43.7181
+            },
+            {
+              "start": 44.2581,
+              "end": 45.0381
+            },
+            {
+              "start": 45.1581,
+              "end": 45.4581
+            },
+            {
+              "start": 45.5781,
+              "end": 47.2581
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_tsumugi_next"
+        },
+        {
+          "index": 7,
+          "id": "ch06_summary_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "ぜひ次回もお楽しみに。ここまでご視聴ありがとうございました！",
+          "voiceText": "ぜひ次回もお楽しみに。ここまでご視聴ありがとうございました！",
+          "audioFile": "audio/lines/ch06_summary_007.wav",
+          "hash": "ba4bcb438fddb2ac",
+          "start": 47.7548,
+          "end": 51.8401,
+          "globalStart": 496.1148,
+          "globalEnd": 500.2001,
+          "duration": 4.0853,
+          "mouthSpans": [
+            {
+              "start": 47.8748,
+              "end": 49.2548
+            },
+            {
+              "start": 49.6148,
+              "end": 51.7148
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c6_outro"
+        },
+        {
+          "index": 8,
+          "id": "ch06_summary_008",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "また次の動画で会うのだ！ばいばいなのだ！",
+          "voiceText": "また次の動画で会うのだ！ばいばいなのだ！",
+          "audioFile": "audio/lines/ch06_summary_008.wav",
+          "hash": "3a8a19ac18217735",
+          "start": 52.0901,
+          "end": 55.2794,
+          "globalStart": 500.4501,
+          "globalEnd": 503.6394,
+          "duration": 3.1893,
+          "mouthSpans": [
+            {
+              "start": 52.2101,
+              "end": 53.8901
+            },
+            {
+              "start": 54.2501,
+              "end": 55.1501
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c6_bye"
+        }
+      ]
+    }
+  ]
+}

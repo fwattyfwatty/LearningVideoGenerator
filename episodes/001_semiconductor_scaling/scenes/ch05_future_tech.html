@@ -1,0 +1,327 @@
+<style>
+  .c5-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .c5-title-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-right: 360px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-subtle);
+  }
+
+  .c5-stage-body {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .c5-phase {
+    position: absolute;
+    inset: 0;
+    padding-bottom: 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .c5-section-card {
+    border-radius: 20px;
+    background: rgba(30, 41, 59, 0.94);
+    border: 2px solid #334155;
+    padding: 16px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .c5-sec-title {
+    font-size: 23px;
+    font-weight: 700;
+    color: #38bdf8;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .c5-num-tag {
+    padding: 2px 12px;
+    border-radius: 999px;
+    background: #0284c7;
+    color: #ffffff;
+    font-size: 18px;
+  }
+
+  .c5-4col {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  .c5-tr-step {
+    border-radius: 16px;
+    background: #0f172a;
+    border: 2px solid #475569;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .c5-tr-step-hot {
+    border-color: #38bdf8;
+    background: #082f49;
+  }
+
+  .c5-tr-name {
+    font-size: 21px;
+    font-weight: 700;
+    color: #f8fafc;
+  }
+
+  .c5-tr-sub {
+    font-size: 16px;
+    font-weight: 700;
+    color: #cbd5e1;
+  }
+
+  .c5-bspdn-row {
+    display: grid;
+    grid-template-columns: 1fr 70px 1fr;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .c5-bspdn-box {
+    border-radius: 14px;
+    background: #0f172a;
+    border: 2px solid #475569;
+    padding: 14px 18px;
+  }
+
+  .c5-nm-banner {
+    width: 74%;
+    border-radius: 18px;
+    background: #082f49;
+    border: 2px solid #fbbf24;
+    padding: 14px 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .c5-phase2-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .c5-p2-card {
+    border-radius: 20px;
+    background: rgba(30, 41, 59, 0.94);
+    border: 2px solid #0284c7;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+  }
+</style>
+
+<div class="c5-wrap">
+  <div class="c5-title-bar">
+    <h1 class="dg-heading">限界のその先へ：ポスト微細化時代の4つの切り札</h1>
+  </div>
+
+  <div class="c5-stage-body">
+    <!-- Phase A: 1. 3D Transistor + 2. BSPDN -->
+    <div id="c5-phase-a" class="c5-phase">
+      <div id="c5-sec-1" class="c5-section-card">
+        <div class="c5-sec-title"><span class="c5-num-tag">技術 1</span>トランジスタの立体化（平面から3Dへ）</div>
+        <div class="c5-4col">
+          <div id="c5-tr-1" class="c5-tr-step">
+            <svg width="160" height="90" viewBox="0 0 160 90">
+              <rect x="20" y="55" width="120" height="24" rx="4" fill="#334155" />
+              <rect x="45" y="42" width="70" height="14" rx="3" fill="#64748b" />
+              <rect x="60" y="24" width="40" height="18" rx="4" fill="#fbbf24" />
+            </svg>
+            <div class="c5-tr-name">Planar（平面）</div>
+            <div class="c5-tr-sub">上から1面だけ押さえる</div>
+          </div>
+
+          <div id="c5-tr-2" class="c5-tr-step">
+            <svg width="160" height="90" viewBox="0 0 160 90">
+              <rect x="20" y="60" width="120" height="20" rx="4" fill="#334155" />
+              <rect x="68" y="28" width="24" height="36" rx="4" fill="#38bdf8" />
+              <path d="M52 60 L52 18 L108 18 L108 60" fill="none" stroke="#fbbf24" stroke-width="8" stroke-linejoin="round" />
+            </svg>
+            <div class="c5-tr-name">FinFET（ヒレ型）</div>
+            <div class="c5-tr-sub">3面をゲートで制御</div>
+          </div>
+
+          <div id="c5-tr-3" class="c5-tr-step c5-tr-step-hot">
+            <svg width="160" height="90" viewBox="0 0 160 90">
+              <rect x="45" y="14" width="70" height="62" rx="10" fill="#b45309" stroke="#fbbf24" stroke-width="3" />
+              <rect x="26" y="24" width="108" height="11" rx="4" fill="#38bdf8" />
+              <rect x="26" y="40" width="108" height="11" rx="4" fill="#38bdf8" />
+              <rect x="26" y="56" width="108" height="11" rx="4" fill="#38bdf8" />
+            </svg>
+            <div class="c5-tr-name" style="color: #38bdf8;">GAA（ナノシート）</div>
+            <div class="c5-tr-sub">4面360度囲んで漏れ遮断</div>
+          </div>
+
+          <div id="c5-tr-4" class="c5-tr-step c5-tr-step-hot">
+            <svg width="160" height="90" viewBox="0 0 160 90">
+              <rect x="42" y="10" width="76" height="30" rx="8" fill="#0369a1" stroke="#7dd3fc" stroke-width="2" />
+              <text x="80" y="30" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">P型</text>
+              <rect x="42" y="48" width="76" height="30" rx="8" fill="#0f766e" stroke="#5eead4" stroke-width="2" />
+              <text x="80" y="68" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">N型</text>
+            </svg>
+            <div class="c5-tr-name" style="color: #38bdf8;">CFET（次世代）</div>
+            <div class="c5-tr-sub">N型とP型を上下に積層！</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="c5-sec-2" class="c5-section-card" style="flex: 1; justify-content: center;">
+        <div class="c5-sec-title"><span class="c5-num-tag">技術 2</span>裏面電源供給（BSPDN）：配線の交通渋滞を解消</div>
+        <div class="c5-bspdn-row">
+          <div id="c5-bspdn-old" class="c5-bspdn-box">
+            <div style="font-size: 20px; font-weight: 700; color: #fca5a5; margin-bottom: 8px;">従来：表側に全部集中（大渋滞）</div>
+            <div style="padding: 10px 14px; border-radius: 10px; background: #7f1d1d; color: #fecaca; font-size: 18px; font-weight: 700;">
+              🚦 信号線 ＋ ⚡ 電源線 が表で混雑
+            </div>
+            <div style="margin-top: 8px; padding: 8px 14px; border-radius: 10px; background: #1e293b; color: #94a3b8; font-size: 17px; font-weight: 700;">
+              裏面：使われていないシリコン基板
+            </div>
+          </div>
+
+          <div style="text-align: center; font-size: 32px; font-weight: 900; color: #38bdf8;">➔</div>
+
+          <div id="c5-bspdn-new" class="c5-bspdn-box" style="border-color: #22c55e;">
+            <div style="font-size: 20px; font-weight: 700; color: #4ade80; margin-bottom: 8px;">BSPDN：表は信号、裏は電源に分担！</div>
+            <div style="padding: 10px 14px; border-radius: 10px; background: #0c4a6e; color: #bae6fd; font-size: 18px; font-weight: 700;">
+              📡 表面：データ信号専用でスッキリ高速
+            </div>
+            <div style="margin-top: 8px; padding: 8px 14px; border-radius: 10px; background: #14532d; color: #bbf7d0; font-size: 18px; font-weight: 700;">
+              ⚡ 裏面：太い電源線を直接供給（ロス減！）
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phase B: nm label + 3. Chiplet/3D + 4. Photonics -->
+    <div id="c5-phase-b" class="c5-phase">
+      <div id="c5-nm-banner" class="c5-nm-banner">
+        <span style="padding: 5px 14px; border-radius: 999px; background: #b45309; color: #ffffff; font-size: 18px; font-weight: 700; white-space: nowrap;">実態豆知識</span>
+        <div style="font-size: 21px; font-weight: 700; color: #f8fafc;">
+          今の「2nm / 3nm」は実寸ではなく、性能進化を表す<span style="color: #fbbf24;">世代名（ブランド）</span>！
+        </div>
+      </div>
+
+      <div class="c5-phase2-grid">
+        <div id="c5-p2-chiplet" class="c5-p2-card">
+          <div class="c5-sec-title"><span class="c5-num-tag">技術 3</span>チップレット &amp; 3D積層</div>
+          <svg viewBox="0 0 500 220" style="width: 100%; height: 205px;">
+            <!-- Monolithic -->
+            <rect x="12" y="65" width="144" height="90" rx="12" fill="#475569" stroke="#94a3b8" stroke-width="2" />
+            <text x="84" y="106" text-anchor="middle" fill="#f8fafc" font-size="17" font-weight="700">巨大1枚チップ</text>
+            <text x="84" y="132" text-anchor="middle" fill="#fca5a5" font-size="15" font-weight="700">ゴミ1つで全滅</text>
+
+            <text x="184" y="118" text-anchor="middle" fill="#38bdf8" font-size="28" font-weight="900">➔</text>
+
+            <!-- Chiplets + 3D HBM -->
+            <rect x="212" y="160" width="276" height="36" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+            <text x="350" y="183" text-anchor="middle" fill="#7dd3fc" font-size="14" font-weight="700">高速接続基板（インターポーザ）</text>
+
+            <rect x="220" y="104" width="124" height="48" rx="8" fill="#0369a1" stroke="#38bdf8" stroke-width="2" />
+            <text x="282" y="133" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">計算コア</text>
+
+            <rect x="356" y="104" width="124" height="48" rx="8" fill="#0369a1" stroke="#38bdf8" stroke-width="2" />
+            <text x="418" y="133" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">I/O チップ</text>
+
+            <rect x="220" y="54" width="124" height="42" rx="8" fill="#7e22ce" stroke="#d8b4fe" stroke-width="2" />
+            <text x="282" y="80" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">3Dメモリ HBM</text>
+
+            <rect x="356" y="54" width="124" height="42" rx="8" fill="#7e22ce" stroke="#d8b4fe" stroke-width="2" />
+            <text x="418" y="80" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">3D積層チップ</text>
+          </svg>
+          <div style="font-size: 19px; font-weight: 700; color: #e2e8f0; line-height: 1.45;">
+            機能ごとに小チップ化して合体＆縦積み。歩留まり改善と超大容量化を両立！
+          </div>
+        </div>
+
+        <div id="c5-p2-photonics" class="c5-p2-card" style="border-color: #a855f7;">
+          <div class="c5-sec-title" style="color: #d8b4fe;"><span class="c5-num-tag" style="background: #7e22ce;">技術 4</span>光電融合（電気から光へ）</div>
+          <svg viewBox="0 0 500 220" style="width: 100%; height: 210px;">
+            <rect x="20" y="25" width="460" height="72" rx="14" fill="#0f172a" stroke="#64748b" stroke-width="2" />
+            <text x="40" y="55" fill="#fca5a5" font-size="18" font-weight="700">⚡ 電気配線：抵抗・発熱が大きく距離に限界</text>
+            <line x1="40" y1="76" x2="450" y2="76" stroke="#ef4444" stroke-width="5" stroke-dasharray="10 8" />
+
+            <rect x="20" y="120" width="460" height="82" rx="14" fill="#0f172a" stroke="#c084fc" stroke-width="3" />
+            <text x="40" y="152" fill="#e9d5ff" font-size="19" font-weight="700">🌈 光信号（シリコンフォトニクス / CPO / IOWN）</text>
+            <line x1="40" y1="178" x2="450" y2="178" stroke="#a855f7" stroke-width="6" stroke-linecap="round" />
+            <circle id="c5-light-pulse" cx="55" cy="178" r="11" fill="#fde047" stroke="#ffffff" stroke-width="2" />
+          </svg>
+          <div style="font-size: 19px; font-weight: 700; color: #e2e8f0; line-height: 1.45;">
+            チップ間・チップ内通信を「光」で直結し、爆速・低遅延・超省エネを実現！
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders["ch05_future_tech"] = function (tl, cues) {
+  gsap.set('#c5-phase-a', { opacity: 1 });
+  gsap.set('#c5-phase-b', { opacity: 0 });
+  gsap.set(['#c5-tr-1', '#c5-tr-2', '#c5-tr-3', '#c5-tr-4'], { opacity: 0, y: 16 });
+  gsap.set(['#c5-sec-2', '#c5-bspdn-old', '#c5-bspdn-new'], { opacity: 0, y: 16 });
+  gsap.set(['#c5-nm-banner', '#c5-p2-chiplet', '#c5-p2-photonics'], { opacity: 0, y: 18 });
+  gsap.set('#c5-light-pulse', { x: 0 });
+
+  const t1 = cues.c5_3d_transistor ?? 7.5;
+  tl.to('#c5-tr-1', { opacity: 1, y: 0, duration: 0.35 }, t1);
+  tl.to('#c5-tr-2', { opacity: 1, y: 0, duration: 0.4, ease: 'back.out(1.4)' }, t1 + 1.2);
+
+  const tGaa = cues.c5_gaa_cfet ?? 15.0;
+  tl.to('#c5-tr-3', { opacity: 1, y: 0, duration: 0.4, ease: 'back.out(1.4)' }, tGaa);
+  tl.to('#c5-tr-4', { opacity: 1, y: 0, duration: 0.4, ease: 'back.out(1.4)' }, tGaa + 2.0);
+
+  const tBsp = cues.c5_bspdn ?? 31.0;
+  tl.to('#c5-sec-2', { opacity: 1, y: 0, duration: 0.4 }, tBsp);
+  tl.to('#c5-bspdn-old', { opacity: 1, y: 0, duration: 0.4 }, tBsp + 0.4);
+
+  const tBspM = cues.c5_bspdn_move ?? 39.0;
+  tl.to('#c5-bspdn-new', { opacity: 1, y: 0, duration: 0.45, ease: 'back.out(1.4)' }, tBspM);
+
+  // Phase B (Tsumugi cut-in + label + chiplet + photonics)
+  const tP2 = cues.c5_phase2_tsumugi ?? 54.0;
+  tl.to('#c5-phase-a', { opacity: 0, duration: 0.35 }, tP2);
+  tl.to('#c5-phase-b', { opacity: 1, duration: 0.35 }, tP2 + 0.25);
+  tl.to('#c5-nm-banner', { opacity: 1, y: 0, duration: 0.45, ease: 'back.out(1.4)' }, tP2 + 0.35);
+
+  const tNm = cues.c5_nm_label ?? 62.0;
+  tl.to('#c5-nm-banner', { boxShadow: '0 0 28px rgba(245, 158, 11, 0.45)', duration: 0.35 }, tNm);
+
+  const tChip = cues.c5_chiplet_3d ?? 76.0;
+  tl.to('#c5-p2-chiplet', { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, tChip);
+
+  const tPho = cues.c5_photonics ?? 96.0;
+  tl.to('#c5-p2-photonics', { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, tPho);
+  tl.to('#c5-light-pulse', { x: 380, duration: 1.5, ease: 'power1.inOut' }, tPho + 0.6);
+};
+</script>

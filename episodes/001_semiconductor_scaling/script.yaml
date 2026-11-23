@@ -1,0 +1,527 @@
+meta:
+  title: "半導体の微細化とは？仕組み・恩恵・限界と未来を徹底図解"
+  theme: "tech-dark"
+  accent_color: "#0284c7"
+  fps: 30
+  width: 1920
+  height: 1080
+
+chapters:
+  # =========================================================================
+  # Chapter 1: 導入（約1分）
+  # =========================================================================
+  - id: "ch01_intro"
+    title: "1. 導入：指先のチップに数百億個"
+    layout: "title"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "今回は「半導体の微細化」と、それによって可能になった世界、そして将来の技術まで図解で解説します。"
+        cue: "c1_title"
+
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "昔のパソコンより今のスマホの方がずっと小さいのに、動画もAIもサクサク動くのはどうしてなのだ？"
+        cue: "c1_phone_zoom"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "その最大の理由が半導体の微細化です。実はスマホの頭脳には、何百億個もの電気スイッチが詰まっているんです。"
+        cue: "c1_moore_count"
+
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "何百億個！？日本の人口どころか、地球全体の人口よりもずっと多いのだ！"
+        cue: "c1_moore_step"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1970年代の数千個から、現代では1000億個を超えるチップまで登場しました。部品を極限まで小さくした成果です。"
+        voice_text: "1970年代の数千個から、現代では1000億個を超えるチップまで登場しました。部品をきょくげんまで小さくした成果です。"
+        cue: "c1_scale_bar"
+
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "最先端の「2nm」や「3nm」世代は、人間の髪の毛の数万分の一、ウイルスよりもさらに小さい世界なんです。"
+        cue: "c1_scale_compare"
+
+      - speaker: zundamon
+        style: normal
+        emotion: worry
+        caption: "ウイルスより小さいスイッチを何百億個も並べるなんて、想像もつかないのだ…！"
+        cue: "c1_zunda_scale"
+
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "そこで今日は、①なぜ小さくなると強いのか、②何が可能になったのか、③限界の先の未来、の3つを見ていきましょう。"
+        cue: "c1_goal"
+
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "気になるのだ！さっそく教えてほしいのだ！"
+        cue: "c1_go"
+
+  # =========================================================================
+  # Chapter 2: 微細化の基本（約2分）
+  # =========================================================================
+  - id: "ch02_scaling_basics"
+    title: "2. 微細化の基本と3大メリット"
+    layout: "default"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "まず微細化される主役、トランジスタから見ていきましょう。一言でいうと、超小型の「電気のスイッチ」です。"
+        cue: "c2_switch_intro"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "左が入り口のソース、右が出口のドレイン、真ん中の上で電気の流れを操るのがゲートと呼ばれる部分です。"
+        cue: "c2_parts"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "ゲートに電圧をかけると道が開いて電子が流れ、「1」の状態、つまりスイッチONになります。"
+        cue: "c2_gate_on"
+
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "逆に電圧を止めると通り道が閉じて「0」、スイッチOFF。この1と0の組み合わせですべての計算をしています。"
+        cue: "c2_gate_off"
+
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "なるほど！この電気スイッチをどんどん小さく作っていくのが「微細化」なのだ？"
+        cue: "c2_zunda_switch"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そうです。歴史的にはゲートの幅などを指標にして、μmからnmへと世代が進んできました。"
+        cue: "c2_node_nm"
+
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "でもスイッチを小さくするだけなら数が増えるだけじゃないのだ？なんで速く、省エネにもなるのだ？"
+        cue: "c2_zunda_why"
+
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "とてもいい質問です！実はサイズを縦横半分にするだけで、3つのご利益が同時に手に入るんです。"
+        cue: "c2_phase2_shrink"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1つ目は高密度化。縦と横が半分になると面積は4分の1なので、同じチップに4倍ものスイッチを詰め込めます。"
+        cue: "c2_benefit_density"
+
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "おお、チップの大きさは同じまま、一気に4倍の脳みそにパワーアップするのだ！"
+        cue: "c2_zunda_density"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "2つ目は高速化。電子が移動する距離そのものが短くなるため、スイッチの切り替え速度がグッと上がります。"
+        cue: "c2_benefit_speed"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "3つ目は省電力化。小さなゲートを開閉するだけなので、1回あたりに必要な電気の量も少なくて済みます。"
+        cue: "c2_benefit_power"
+
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "たくさん積めて、速く動いて、電気も食わない！まさに一石三鳥で最強すぎるのだ！"
+        cue: "c2_zunda_dennard"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "この「約2年で集積度が2倍になる」経験則がムーアの法則、省電力の法則がデナード則と呼ばれています。"
+        voice_text: "この「約2年でしゅうせきどが2倍になる」経験則がムーアの法則、しょうでんりょくの法則がデナード則と呼ばれています。"
+        cue: "c2_moore_summary"
+
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "この黄金のサイクルが半世紀以上も続いたことで、コンピュータは爆発的な進化を遂げてきました。"
+        cue: "c2_moore_end"
+
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "じゃあ実際に、その一石三鳥パワーで私たちの世界にはどんなことができるようになったのだ？"
+        cue: "c2_bridge"
+
+  # =========================================================================
+  # Chapter 3: 微細化によって可能になったこと（約2分）
+  # =========================================================================
+  - id: "ch03_what_it_enables"
+    title: "3. 微細化が可能にした世界"
+    layout: "wide"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "微細化によって可能になった変化は大きく3つあります。まずは「手のひらのスーパーコンピュータ」です。"
+        cue: "c3_soc_intro"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "かつて部屋ひとつを埋め尽くしていた計算機が、微細化のおかげで指先サイズのシリコンに収まりました。"
+        cue: "c3_old_pc"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "現代のスマホ用SoCでは、計算するCPU、映像のGPU、AI専用のNPUまで1つのチップに統合されています。"
+        cue: "c3_soc_merge"
+
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "写真を撮った瞬間に背景がぼけたり夜景が綺麗になったりするのも、チップが全部入りだからなのだ！"
+        cue: "c3_zunda_camera"
+
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "はい。しかも全機能がチップ内で超接近しているため、データ移動のロスが少なくバッテリーも長持ちします。"
+        cue: "c3_soc_benefit"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "次に2つ目、いま最も世界を変えているのが「生成AIやLLMの爆発的な進化」です。"
+        cue: "c3_phase2_world"
+
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "AIが急に人間みたいに話したり絵を描いたりできるようになったのも、微細化のおかげなのだ？"
+        cue: "c3_zunda_ai"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "その通りです。AIの学習や推論には、何千何万もの計算コアを並列で一気に動かすGPUが欠かせません。"
+        cue: "c3_ai_gpu"
+
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "1枚のチップに数百億〜千億個ものトランジスタを詰め込めたからこそ、巨大AIが現実の速度で動くんです。"
+        cue: "c3_ai_scale"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "さらに3つ目は、自動運転や医療・巨大インフラといった社会全体を支える進化です。"
+        cue: "c3_auto_drive"
+
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "自動運転車では、周囲の歩行者や信号をコンマ数秒で認識するため、車載チップの高性能化が命綱になります。"
+        cue: "c3_edge_ai"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "医療分野のゲノム解析や創薬、クラウドのデータセンターの電力削減も、微細チップの省エネ性能が支えています。"
+        cue: "c3_med_dc"
+
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "スマホもAIも車も医療も、全部「スイッチの微細化」が土台になっていたのだ！"
+        cue: "c3_zunda_all"
+
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "まさに現代のデジタル技術は、半導体の微細化というエンジンの上で動いていると言えますね。"
+        cue: "c3_wrap"
+
+  # =========================================================================
+  # Chapter 4: つむぎの質問：物理限界とコストの壁（約1.8分）
+  # =========================================================================
+  - id: "ch04_tsumugi_limits"
+    title: "4. つむぎの質問：微細化の限界"
+    layout: "default"
+    lines:
+      - speaker: tsumugi
+        style: normal
+        emotion: sharp
+        mode: cutin
+        caption: "ちょっと待って！そんなに小さくし続けたら、いつか原子のサイズにぶつからない？あと作るコストもヤバくない？"
+        cue: "c4_tsumugi_q"
+
+      - speaker: metan
+        style: normal
+        emotion: surprise
+        caption: "すごく鋭い指摘ですね、つむぎさん！実はまさに今、物理とコストの2つの大きな壁にぶつかっているんです。"
+        cue: "c4_metan_praise"
+
+      - speaker: zundamon
+        style: normal
+        emotion: worry
+        caption: "原子のサイズって…これ以上は物理的に削れないってことなのだ！？"
+        cue: "c4_zunda_atom"
+
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "材料であるシリコンの原子1個は約0.24nm。ゲート幅が数nmになると、壁の厚さは原子十数個分しかありません。"
+        cue: "c4_thin_wall"
+
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "ここまで薄くなると、スイッチをOFFにして壁を作っているはずなのに、電子が壁をすり抜けてしまうんです。"
+        cue: "c4_tunneling"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "これが「量子トンネル効果」です。極小の世界では電子が波の性質を持ち、薄い障壁を通り抜けてしまいます。"
+        voice_text: "これが「量子トンネル効果」です。きょくしょうの世界では電子が波の性質を持ち、薄いしょうへきを通り抜けてしまいます。"
+        cue: "c4_quantum"
+
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "その結果、使っていないのに電気が漏れるリーク電流が増え、発熱が深刻化してデナード則も崩れてしまいました。"
+        cue: "c4_heat_leak"
+
+      - speaker: zundamon
+        style: normal
+        emotion: worry
+        caption: "壁をすり抜けるなんて幽霊みたいなのだ…！しかも熱くなるのはスマホでも困るのだ！"
+        cue: "c4_zunda_ghost"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そして2つ目が製造コストの壁です。回路を描くには、ウェハーに光を当てて焼き付ける「露光」を使います。"
+        voice_text: "そして2つ目が製造コストの壁です。回路を描くには、ウェハーに光を当てて焼き付ける「ろこう」を使います。"
+        cue: "c4_phase2_cost"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "しかし線が細くなりすぎて、従来使われてきたDUVという光ではぼやけて描けなくなりました。"
+        cue: "c4_duv_euv"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そこで登場したのが波長13.5nmの極端紫外線、EUV露光装置です。真空中で特殊な鏡を使う超精密機械です。"
+        voice_text: "そこで登場したのが波長13.5ナノメートルのきょくたんしがいせん、イーユーブイろこう装置です。真空中で特殊な鏡を使う超精密機械です。"
+        cue: "c4_euv_laser"
+
+      - speaker: metan
+        style: normal
+        emotion: surprise
+        caption: "しかもこの装置、オランダのASML社しか量産できず、1台で数百億円、最新世代は500億円を超えます。"
+        cue: "c4_euv_price"
+
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "装置1台だけで数百億円！？それじゃあ工場をまるごと作ったらいくらかかるのだ！？"
+        cue: "c4_zunda_price"
+
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "最先端工場は1つで数兆円規模。投資に耐えられる企業はTSMCやサムスン、インテルなど一握りに限られます。"
+        cue: "c4_fab_cost"
+
+      - speaker: tsumugi
+        style: normal
+        emotion: worry
+        mode: cutin
+        caption: "物理でも限界ギリギリ、お金も数兆円…じゃあもう半導体の進化ってここで止まっちゃうの？"
+        cue: "c4_tsumugi_to_ch5"
+
+  # =========================================================================
+  # Chapter 5: 将来どうなるか：ポスト微細化の4技術（約2.2分）
+  # =========================================================================
+  - id: "ch05_future_tech"
+    title: "5. 将来の半導体：限界を超える4技術"
+    layout: "wide"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "いいえ、止まりません！平面で小さくする限界を突破するため、業界は4つの新しい切り札へ進化しています。"
+        cue: "c5_intro_4tech"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "1つ目は「トランジスタの立体化」です。平面構造が限界になり、電気の通り道を縦に立てたFinFETが生まれました。"
+        cue: "c5_3d_transistor"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "さらに3nmや2nmでは通り道を360度囲むGAAへ進化。将来はN型とP型を上下に積むCFETも開発されています。"
+        cue: "c5_gaa_cfet"
+
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "平屋建てが狭いから、高層ビルみたいに立体にして電子の漏れをガッチリ押さえ込むのだ！"
+        cue: "c5_zunda_3d"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "2つ目は「裏面電源供給（BSPDN）」です。今までチップの表面は信号線と電源線が絡み合い、大渋滞していました。"
+        cue: "c5_bspdn"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そこで電源用の配線だけをシリコンの裏側へ引っ越しさせ、表を信号専用にして効率を高める技術が登場しています。"
+        cue: "c5_bspdn_move"
+
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "1階と地下で道路を分けて渋滞をなくすみたいな発想でカッコいいのだ！"
+        cue: "c5_zunda_road"
+
+      - speaker: tsumugi
+        style: normal
+        emotion: sharp
+        mode: cutin
+        caption: "ねえ、そういえば最近よく聞く「3nm」や「2nm」って、もう実際に2nmの幅があるわけじゃないんでしょ？"
+        cue: "c5_phase2_tsumugi"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "おっしゃる通りです！今の「2nm」などは実寸ではなく、前世代より高性能になったことを示す世代名になっています。"
+        cue: "c5_nm_label"
+
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "名前はナノのままだけど、中身は立体化や裏配線でどんどん別次元へ進化しているのだ！"
+        cue: "c5_zunda_name"
+
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "3つ目は「チップレットと3D積層」です。巨大な1枚のチップを作ると、小さなゴミ1つで不良品になりコストが激増します。"
+        cue: "c5_chiplet_3d"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そこで機能ごとに小チップへ分けて作り、レゴのように高密度につないだり、メモリHBMと一緒に縦へ積み上げます。"
+        cue: "c5_chiplet_lego"
+
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "部品ごとに作って後で合体させれば、いいとこ取りができてムダも減らせるのだ！"
+        cue: "c5_zunda_lego"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そして4つ目が「光電融合」です。チップ間やチップ内の通信が電気のままだと、抵抗と発熱が限界を迎えます。"
+        voice_text: "そして4つ目が「こうでんゆうごう」です。チップ間やチップ内の通信が電気のままだと、ていこうと発熱が限界を迎えます。"
+        cue: "c5_photonics"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そこで配線を電気から光へ置き換えるシリコンフォトニクス、CPOやIOWNなどの技術で超高速・省エネを目指しています。"
+        cue: "c5_cpo_iown"
+
+      - speaker: tsumugi
+        style: normal
+        emotion: smile
+        mode: cutin
+        caption: "2次元の縮小から、3次元の立体化・合体・さらには光へって、進化の次元そのものが変わってるんだね！"
+        cue: "c5_tsumugi_wow"
+
+  # =========================================================================
+  # Chapter 6: まとめ＆シリーズ予告（約1分）
+  # =========================================================================
+  - id: "ch06_summary"
+    title: "6. まとめ：進化のこれから"
+    layout: "default"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "では今日のまとめです。①微細化は「高密度・高速・省エネ」を同時に叶え、スマホや生成AIを支えてきました。"
+        cue: "c6_map_1"
+
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "②しかし原子レベルの量子トンネル効果や、EUV露光装置に象徴される数兆円規模のコストの壁に直面しています。"
+        voice_text: "②しかし原子レベルの量子トンネル効果や、イーユーブイろこう装置に象徴される数兆円規模のコストの壁に直面しています。"
+        cue: "c6_map_2"
+
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "③そのため将来は、立体トランジスタや裏面電源、チップレット3D積層、光電融合へと進化の主軸を移していきます。"
+        voice_text: "③そのため将来は、立体トランジスタや裏面電源、チップレット3ディーせきそう、こうでんゆうごうへと進化の主軸を移していきます。"
+        cue: "c6_map_3"
+
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "微細化が終わるんじゃなくて、「平面から立体・システム全体」の進化にパワーアップしていくのだ！"
+        cue: "c6_zunda_sum"
+
+      - speaker: tsumugi
+        style: normal
+        emotion: smile
+        mode: cutin
+        caption: "すごくスッキリした！こうなると次は「EUV露光の仕組み」とか「AI半導体GPUの中身」も知りたくなるね！"
+        voice_text: "すごくスッキリした！こうなると次は「イーユーブイろこうの仕組み」とか「エーアイ半導体ジーピーユーの中身」も知りたくなるね！"
+        cue: "c6_tsumugi_next"
+
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "いいですね！この流れで次回以降、露光装置やAI半導体についてもシリーズとして深掘りしていきましょう。"
+        voice_text: "いいですね！この流れで次回以降、ろこう装置やエーアイ半導体についてもシリーズとして深掘りしていきましょう。"
+        cue: "c6_series"
+
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "これから先、パソコンやAIがどこまで進化するかますます楽しみなのだ！また一緒に勉強しようのだ！"
+        cue: "c6_outro"

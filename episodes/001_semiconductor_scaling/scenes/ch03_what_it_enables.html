@@ -1,0 +1,348 @@
+<style>
+  .c3-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .c3-stage-body {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .c3-phase {
+    position: absolute;
+    inset: 0;
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .c3-soc-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 0.9fr 90px 1.25fr;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .c3-legacy-card {
+    height: 100%;
+    border-radius: 22px;
+    background: rgba(30, 41, 59, 0.9);
+    border: 2px solid #475569;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .c3-soc-card {
+    height: 100%;
+    border-radius: 22px;
+    background: #082f49;
+    border: 3px solid #38bdf8;
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 0 32px rgba(56, 189, 248, 0.2);
+  }
+
+  .c3-soc-blocks {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .c3-block {
+    border-radius: 16px;
+    background: #0f172a;
+    border: 2px solid #38bdf8;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .c3-block-title {
+    font-size: 23px;
+    font-weight: 700;
+    color: #38bdf8;
+  }
+
+  .c3-block-sub {
+    font-size: 18px;
+    font-weight: 700;
+    color: #e2e8f0;
+  }
+
+  .c3-world-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .c3-world-card {
+    border-radius: 22px;
+    background: rgba(30, 41, 59, 0.94);
+    border: 2px solid #334155;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4);
+  }
+
+  .c3-world-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .c3-world-num {
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: #0284c7;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .c3-world-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #f8fafc;
+  }
+
+  .c3-gpu-matrix {
+    flex: 1;
+    border-radius: 16px;
+    background: #0f172a;
+    border: 2px solid #0284c7;
+    padding: 14px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+  }
+
+  .c3-gpu-core {
+    border-radius: 6px;
+    background: #0ea5e9;
+    min-height: 28px;
+  }
+
+  .c3-vision-box {
+    flex: 1;
+    border-radius: 16px;
+    background: #0f172a;
+    border: 2px solid #22c55e;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  .c3-detect-tag {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 2px dashed #4ade80;
+    background: rgba(20, 83, 45, 0.55);
+    color: #bbf7d0;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .c3-med-box {
+    flex: 1;
+    border-radius: 16px;
+    background: #0f172a;
+    border: 2px solid #a855f7;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 12px;
+  }
+
+  .c3-med-item {
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: #1e293b;
+    border: 1px solid #64748b;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f8fafc;
+  }
+
+  .c3-world-foot {
+    font-size: 19px;
+    font-weight: 700;
+    color: #cbd5e1;
+    line-height: 1.45;
+  }
+</style>
+
+<div class="c3-wrap">
+  <div class="dg-title-bar">
+    <h1 class="dg-heading">微細化が可能にした世界：スマホ・AI・社会インフラ</h1>
+    <span class="dg-sub">デジタル社会のエンジン</span>
+  </div>
+
+  <div class="c3-stage-body">
+    <!-- Phase A: Room-size Computer -> Smartphone SoC -->
+    <div id="c3-phase-a" class="c3-phase">
+      <div class="c3-soc-grid">
+        <div id="c3-legacy" class="c3-legacy-card">
+          <div style="font-size: 56px;">🗄️</div>
+          <div style="font-size: 26px; font-weight: 700; color: #f8fafc;">かつての大型計算機</div>
+          <div style="font-size: 20px; color: #cbd5e1; font-weight: 700; line-height: 1.5;">
+            部屋ひとつを丸ごと占有<br>部品も消費電力も巨大
+          </div>
+        </div>
+
+        <div id="c3-arrow" style="text-align: center; font-size: 36px; font-weight: 900; color: #38bdf8;">
+          ➔
+        </div>
+
+        <div id="c3-soc" class="c3-soc-card">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 26px; font-weight: 700; color: #f8fafc;">📱 スマホ用 SoC（1チップ統合）</span>
+            <span class="dg-badge">数ミリ角に集約！</span>
+          </div>
+
+          <div class="c3-soc-blocks">
+            <div id="c3-blk-cpu" class="c3-block">
+              <div class="c3-block-title">CPU</div>
+              <div class="c3-block-sub">OSやアプリの汎用計算</div>
+            </div>
+            <div id="c3-blk-gpu" class="c3-block">
+              <div class="c3-block-title">GPU</div>
+              <div class="c3-block-sub">高精細な映像・ゲーム処理</div>
+            </div>
+            <div id="c3-blk-npu" class="c3-block">
+              <div class="c3-block-title">NPU</div>
+              <div class="c3-block-sub">AI推論・カメラ補正専用</div>
+            </div>
+            <div id="c3-blk-isp" class="c3-block">
+              <div class="c3-block-title">ISP / 通信</div>
+              <div class="c3-block-sub">超接近で高速＆省エネ！</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="c3-soc-banner" class="dg-callout" style="margin: 0 250px; text-align: center; border-color: #38bdf8;">
+        ① 手のひらのスーパーコンピュータ：全機能が超接近し、爆速処理＆長時間バッテリーを実現！
+      </div>
+    </div>
+
+    <!-- Phase B: Generative AI / Auto Driving / Medical & DC -->
+    <div id="c3-phase-b" class="c3-phase">
+      <div class="c3-world-grid">
+        <!-- Card 1: Generative AI -->
+        <div id="c3-card-ai" class="c3-world-card" style="border-color: #0284c7;">
+          <div class="c3-world-head">
+            <span class="c3-world-num">② 生成AI</span>
+            <span class="c3-world-title">GPUの並列計算</span>
+          </div>
+          <div class="c3-gpu-matrix">
+            <div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div>
+            <div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div>
+            <div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div>
+            <div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div><div class="c3-gpu-core"></div>
+          </div>
+          <div class="c3-world-foot">
+            何千〜何万個のコアを1チップに詰め込み、LLMの膨大な計算を一斉処理！
+          </div>
+        </div>
+
+        <!-- Card 2: Autonomous Driving -->
+        <div id="c3-card-drive" class="c3-world-card" style="border-color: #16a34a;">
+          <div class="c3-world-head">
+            <span class="c3-world-num" style="background: #15803d;">③ 自動運転</span>
+            <span class="c3-world-title">リアルタイム認識</span>
+          </div>
+          <div class="c3-vision-box">
+            <div class="c3-detect-tag"><span>🚶 歩行者を検出</span><span>99.8%</span></div>
+            <div class="c3-detect-tag"><span>🚦 信号：青を確認</span><span>0.01秒</span></div>
+            <div class="c3-detect-tag"><span>🚗 前方車両との車間</span><span>安全</span></div>
+          </div>
+          <div class="c3-world-foot">
+            コンマ数秒の判断が命綱。車載エッジAIチップの高性能化が実現！
+          </div>
+        </div>
+
+        <!-- Card 3: Medical & Infrastructure -->
+        <div id="c3-card-med" class="c3-world-card" style="border-color: #9333ea;">
+          <div class="c3-world-head">
+            <span class="c3-world-num" style="background: #7e22ce;">④ 医療・社会</span>
+            <span class="c3-world-title">解析と省エネ基盤</span>
+          </div>
+          <div class="c3-med-box">
+            <div class="c3-med-item">🧬 ゲノム解析・新薬シミュレーション</div>
+            <div class="c3-med-item">☁️ データセンターの消費電力を抑制</div>
+            <div class="c3-med-item">⌚ ウェアラブル健康モニタリング</div>
+          </div>
+          <div class="c3-world-foot">
+            あらゆる社会のデジタルインフラを、高効率な微細チップが支えている。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders["ch03_what_it_enables"] = function (tl, cues) {
+  gsap.set('#c3-phase-a', { opacity: 1 });
+  gsap.set('#c3-phase-b', { opacity: 0 });
+  gsap.set(['#c3-legacy', '#c3-arrow', '#c3-soc', '#c3-soc-banner'], { opacity: 0, y: 18 });
+  gsap.set(['#c3-blk-cpu', '#c3-blk-gpu', '#c3-blk-npu', '#c3-blk-isp'], { opacity: 0, scale: 0.9 });
+  gsap.set(['#c3-card-ai', '#c3-card-drive', '#c3-card-med'], { opacity: 0, y: 24 });
+
+  const t1 = cues.c3_soc_intro ?? 0.45;
+  tl.to('#c3-legacy', { opacity: 1, y: 0, duration: 0.45 }, t1 + 0.2);
+
+  const t2 = cues.c3_old_pc ?? 7.5;
+  tl.to('#c3-arrow', { opacity: 1, y: 0, duration: 0.35 }, t2);
+  tl.to('#c3-soc', { opacity: 1, y: 0, duration: 0.45 }, t2 + 0.3);
+
+  const tMerge = cues.c3_soc_merge ?? 14.5;
+  tl.to('#c3-blk-cpu', { opacity: 1, scale: 1, duration: 0.35, ease: 'back.out(1.4)' }, tMerge + 0.3);
+  tl.to('#c3-blk-gpu', { opacity: 1, scale: 1, duration: 0.35, ease: 'back.out(1.4)' }, tMerge + 1.0);
+  tl.to('#c3-blk-npu', { opacity: 1, scale: 1, duration: 0.35, ease: 'back.out(1.4)' }, tMerge + 1.8);
+  tl.to('#c3-blk-isp', { opacity: 1, scale: 1, duration: 0.35, ease: 'back.out(1.4)' }, tMerge + 2.5);
+
+  const tBen = cues.c3_soc_benefit ?? 30.0;
+  tl.to('#c3-soc-banner', { opacity: 1, y: 0, duration: 0.4 }, tBen);
+
+  // Phase B
+  const tP2 = cues.c3_phase2_world ?? 38.0;
+  tl.to('#c3-phase-a', { opacity: 0, duration: 0.35 }, tP2);
+  tl.to('#c3-phase-b', { opacity: 1, duration: 0.35 }, tP2 + 0.25);
+  tl.to('#c3-card-ai', { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, tP2 + 0.4);
+
+  const tDrive = cues.c3_auto_drive ?? 64.0;
+  tl.to('#c3-card-drive', { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, tDrive);
+
+  const tMed = cues.c3_med_dc ?? 79.0;
+  tl.to('#c3-card-med', { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, tMed);
+};
+</script>

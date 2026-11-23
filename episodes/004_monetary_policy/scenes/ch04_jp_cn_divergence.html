@@ -1,0 +1,183 @@
+<style>
+.c4-scene {
+  --accent-primary: #1d4ed8;
+  position: relative;
+  height: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #0f172a;
+}
+.c4-phase { position: absolute; inset: 0; }
+#c4-phase-b { opacity: 0; }
+.c4-title { box-sizing: border-box; min-height: 100px; padding-right: 360px; }
+.c4-grid { padding-top: 86px; }
+.c4-card { min-width: 0; }
+.c4-card .dg-card-head { margin-bottom: 14px; }
+.c4-card .dg-svg-stage { height: 242px; box-sizing: border-box; margin-bottom: 14px; }
+.c4-card svg { width: 100%; height: 100%; }
+.c4-card .dg-callout { font-size: 18px; padding: 10px 14px; }
+.c4-card .dg-callout + .dg-callout { margin-top: 8px; }
+.c4-svg-label { fill: #0f172a; font-size: 19px; font-weight: 800; text-anchor: middle; }
+.c4-svg-note { fill: #475569; font-size: 17px; font-weight: 700; text-anchor: middle; }
+.c4-svg-key { fill: #1d4ed8; font-size: 22px; font-weight: 900; text-anchor: middle; }
+.c4-foot { margin-top: 13px; }
+</style>
+<div class="c4-scene">
+  <div id="c4-phase-a" class="c4-phase">
+    <div class="dg-title-bar c4-title">
+      <h2 class="dg-heading">日本・日銀（BOJ）｜異次元緩和から「金利ある世界」へ</h2>
+      <span id="c4-boj-rate" class="dg-pill-accent">1.25%前後（約30年ぶり）</span>
+    </div>
+    <div class="dg-grid-2 c4-grid">
+      <div id="c4-boj-steps" class="dg-card dg-card-glow c4-card">
+        <div class="dg-card-head">
+          <h3 class="dg-card-title">正常化の階段（2024 → 2026年秋）</h3>
+          <span class="dg-pill-muted">政策金利</span>
+        </div>
+        <div class="dg-svg-stage">
+          <svg viewBox="0 0 660 215" role="img" aria-label="マイナス金利からの段階的な正常化">
+            <defs>
+              <linearGradient id="c4-step-area" x2="0" y2="1">
+                <stop stop-color="#1d4ed8" stop-opacity=".19"/>
+                <stop offset="1" stop-color="#1d4ed8" stop-opacity=".03"/>
+              </linearGradient>
+            </defs>
+            <g id="c4-stairs">
+              <path d="M35 148 H175 V118 H328 V88 H482 V56 H628 V168 H35 Z" fill="url(#c4-step-area)"/>
+              <path d="M35 148 H175 V118 H328 V88 H482 V56 H628" fill="none" stroke="#1d4ed8" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+            </g>
+            <g id="c4-history">
+              <circle cx="94" cy="148" r="6" fill="#475569"/>
+              <text class="c4-svg-note" x="94" y="132">マイナス金利・YCC</text>
+              <text class="c4-svg-note" x="94" y="200">2024年まで</text>
+            </g>
+            <g id="c4-normalize">
+              <circle cx="250" cy="118" r="6" fill="#1d4ed8"/>
+              <circle cx="402" cy="88" r="6" fill="#1d4ed8"/>
+              <circle cx="555" cy="56" r="17" fill="#1d4ed8" opacity=".14"/>
+              <text class="c4-svg-label" x="250" y="100">マイナス金利解除</text>
+              <text class="c4-svg-label" x="402" y="70">0.5〜0.75%</text>
+              <text class="c4-svg-key" x="555" y="35">1.0% → 1.25%前後</text>
+              <text class="c4-svg-note" x="250" y="200">2024年</text>
+              <text class="c4-svg-note" x="402" y="200">2025年</text>
+              <text class="c4-svg-note" x="555" y="200">2026年秋</text>
+            </g>
+            <circle id="c4-step-dot" cx="94" cy="148" r="8" fill="#1d4ed8" stroke="#fff" stroke-width="3"/>
+          </svg>
+        </div>
+        <div id="c4-qt" class="dg-chip-row"><span class="dg-chip dg-chip-accent">国債買入も段階的に減額</span><span class="dg-chip">国債市場の機能回復</span></div>
+      </div>
+      <div id="c4-boj-intents" class="dg-card c4-card">
+        <div class="dg-card-head"><h3 class="dg-card-title">日銀の2つの意図と好循環</h3><span class="dg-pill-ok">賃金と物価</span></div>
+        <div class="dg-svg-stage">
+          <svg viewBox="0 0 660 215" role="img" aria-label="賃金と物価の好循環">
+            <circle cx="330" cy="100" r="70" fill="#dbeafe" stroke="#bfdbfe" stroke-width="2"/>
+            <g id="c4-loop-spin"><use href="#dg-ico-loop" x="286" y="56" width="88" height="88" color="#1d4ed8"/></g>
+            <rect x="30" y="66" width="205" height="68" rx="15" fill="#fff" stroke="#94a3b8"/>
+            <rect x="425" y="66" width="205" height="68" rx="15" fill="#fff" stroke="#94a3b8"/>
+            <text class="c4-svg-label" x="132" y="107">賃上げの定着</text>
+            <text class="c4-svg-label" x="527" y="98">2%超の物価上昇</text>
+            <text class="c4-svg-note" x="527" y="121">安定的に持続</text>
+            <text class="c4-svg-note" x="330" y="199">賃金と物価が互いに支え合う</text>
+          </svg>
+        </div>
+        <div id="c4-boj-caution" class="dg-callout dg-callout-ok">① デフレ逆戻りを防ぐ慎重な歩み</div>
+        <div id="c4-boj-yen" class="dg-callout dg-callout-warn">② 過度な円安・輸入インフレを牽制</div>
+      </div>
+    </div>
+  </div>
+  <div id="c4-phase-b" class="c4-phase">
+    <div class="dg-title-bar c4-title">
+      <h2 class="dg-heading">中国・人民銀行（PBOC）｜デフレ回避の緩和と元防衛</h2>
+      <span class="dg-pill-ok">適度に緩和的</span>
+    </div>
+    <div class="dg-grid-2 c4-grid">
+      <div class="dg-card dg-card-glow c4-card">
+        <div class="dg-card-head"><h3 class="dg-card-title">景気下支え ⇄ 元防衛の二面作戦</h3></div>
+        <div class="dg-svg-stage">
+          <svg viewBox="0 0 660 215" role="img" aria-label="緩和による景気の下支えと人民元の防衛">
+            <rect x="12" y="16" width="282" height="178" rx="16" fill="#ecfdf5" stroke="#86efac"/>
+            <text class="c4-svg-label" x="153" y="54">緩和・景気下支え</text>
+            <g id="c4-lpr">
+              <text class="c4-svg-label" x="153" y="106">1年LPR　3.00%</text>
+              <text class="c4-svg-label" x="153" y="143">5年超LPR　3.50%</text>
+            </g>
+            <g id="c4-pboc-guard">
+              <path d="M308 94 H351 M343 87 L351 94 L343 101 M351 116 H308 M316 109 L308 116 L316 123" fill="none" stroke="#475569" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="366" y="16" width="282" height="178" rx="16" fill="#fff7ed" stroke="#fdba74"/>
+              <use href="#dg-ico-shield" x="491" y="32" width="32" height="32" color="#9a3412"/>
+              <text class="c4-svg-label" x="507" y="92">緩和の制約</text>
+              <text class="c4-svg-note" x="507" y="128">急激な人民元安・資本流出の抑止</text>
+              <text id="c4-property" class="c4-svg-note" x="507" y="158">不動産バブル再燃の防止</text>
+            </g>
+          </svg>
+        </div>
+        <div id="c4-pboc-target" class="dg-chip-row"><span class="dg-chip">預金準備率（RRR）調整</span><span class="dg-chip dg-chip-accent">重点分野への再貸出</span></div>
+        <div id="c4-deflation" class="dg-callout dg-callout-ok c4-foot">物価下落と需要の弱まりを抑える</div>
+      </div>
+      <div id="c4-reform" class="dg-card c4-card">
+        <div class="dg-card-head"><h3 class="dg-card-title">金利枠組みの近代化</h3><span class="dg-pill-muted">2026年11月</span></div>
+        <div class="dg-svg-stage">
+          <svg viewBox="0 0 660 215" role="img" aria-label="7日物から翌日物リバースレポへ">
+            <rect x="12" y="36" width="270" height="139" rx="16" fill="#fff" stroke="#94a3b8"/>
+            <rect x="377" y="36" width="270" height="139" rx="16" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+            <path d="M299 107 H360 M349 97 L360 107 L349 117" fill="none" stroke="#1d4ed8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <text class="c4-svg-note" x="147" y="83">旧主軸</text>
+            <text class="c4-svg-label" x="147" y="125">7日物リバースレポ</text>
+            <text class="c4-svg-note" x="512" y="75">新主軸</text>
+            <text class="c4-svg-label" x="512" y="110">翌日物リバースレポ</text>
+            <text class="c4-svg-key" x="512" y="144">1.25%</text>
+          </svg>
+        </div>
+        <div class="dg-callout">短期市場金利に政策を伝えやすくし、政策シグナルを明確にする</div>
+        <div id="c4-next" class="dg-chip-row c4-foot"><span class="dg-chip dg-chip-accent">為替の安定と金融政策の自由度</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders['ch04_jp_cn_divergence'] = function (tl, cues) {
+  function at(id, fallback) {
+    var cue = cues && cues[id];
+    var time = typeof cue === "number" ? cue : cue && (cue.start ?? cue.time);
+    return Number.isFinite(time) ? time : fallback;
+  }
+  function reveal(id, time) {
+    gsap.set(id, { opacity: 0, y: 10 });
+    tl.to(id, { opacity: 1, y: 0, duration: 0.38, ease: "power2.out" }, time);
+  }
+
+  reveal("#c4-boj-steps", at("c4_tsumugi_ask", 0.45));
+  gsap.set("#c4-stairs", { opacity: 0.38 });
+  tl.to("#c4-stairs", { opacity: 1, duration: 0.45 }, at("c4_asia_split", 9.4507));
+  reveal("#c4-history", at("c4_boj_history", 17.53));
+  var tNorm = at("c4_boj_norm", 25.0653);
+  reveal("#c4-boj-rate, #c4-normalize", tNorm);
+  gsap.set("#c4-step-dot", { opacity: 0 });
+  tl.set("#c4-step-dot", { opacity: 1 }, tNorm);
+  var steps = [[175, 148], [175, 118], [328, 118], [328, 88], [482, 88], [482, 56], [555, 56]];
+  steps.forEach(function (point, index) {
+    tl.to("#c4-step-dot", { attr: { cx: point[0], cy: point[1] }, duration: 0.28, ease: "none" }, tNorm + index * 0.28);
+  });
+
+  var tLoop = at("c4_boj_loop", 35.758);
+  reveal("#c4-boj-intents", tLoop);
+  gsap.set("#c4-loop-spin", { svgOrigin: "330 100", rotation: 0 });
+  tl.to("#c4-loop-spin", { rotation: 360, duration: 3, ease: "power1.inOut" }, tLoop + 0.4);
+  reveal("#c4-boj-caution", at("c4_boj_intent", 43.1333));
+  reveal("#c4-boj-yen", at("c4_boj_intent", 43.1333) + 0.7);
+  tl.to("#c4-loop-spin", { rotation: 720, duration: 2.4, ease: "power1.inOut" }, at("c4_zunda_boj", 51.8566));
+  reveal("#c4-qt", at("c4_boj_qt", 59.9613));
+
+  var tSwitch = at("c4_phase2_pboc", 66.5053) + 0.15;
+  tl.set("#c4-phase-b", { opacity: 1 }, tSwitch);
+  tl.to("#c4-phase-a", { opacity: 0, duration: 0.2 }, tSwitch);
+  reveal("#c4-deflation", at("c4_pboc_deflation", 73.1553));
+  reveal("#c4-lpr", at("c4_pboc_tools", 80.9786));
+  reveal("#c4-pboc-target", at("c4_pboc_targeted", 91.1699));
+  reveal("#c4-reform", at("c4_pboc_reform", 99.6652));
+  reveal("#c4-pboc-guard", at("c4_tsumugi_yuan", 110.5465));
+  reveal("#c4-property", at("c4_pboc_balance", 117.0298));
+  reveal("#c4-next", at("c4_to_ch5", 126.1051));
+};
+</script>

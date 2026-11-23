@@ -1,0 +1,3615 @@
+{
+  "generatedAt": "2026-11-20T22:06:19.082Z",
+  "meta": {
+    "title": "基軸通貨の変遷：ポンドからドル、そして「多極化時代」は本当に来るのか？",
+    "series": "国際金融・地政学入門",
+    "episode": "解説動画",
+    "theme": "finance-navy",
+    "accent_color": "#eab308",
+    "bgm": null,
+    "fps": 30,
+    "width": 1920,
+    "height": 1080
+  },
+  "totalDuration": 681.4336,
+  "chapters": [
+    {
+      "id": "ch01_intro",
+      "title": "1. 導入：なぜ世界は「ドル」で動いているのか？",
+      "layout": "title",
+      "start": 0,
+      "end": 72.2327,
+      "duration": 72.2327,
+      "cues": {
+        "c1_title": 0.45,
+        "c1_zunda_ask": 7.392,
+        "c1_roles": 15.486,
+        "c1_shares": 24.8847,
+        "c1_fx_scale": 38.8167,
+        "c1_zunda_wow": 48.9587,
+        "c1_stance": 55.826,
+        "c1_go": 66.32
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch01_intro_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "こんにちは、四国めたんです。今日は『基軸通貨の変遷』と多極化の行方を解説します。",
+          "voiceText": "こんにちは、四国めたんです。今日は『きじくつうかの変遷』とたきょくかの行方を解説します。",
+          "audioFile": "audio/lines/ch01_intro_001.wav",
+          "hash": "5ce8ff95724b3227",
+          "start": 0.45,
+          "end": 7.042,
+          "globalStart": 0.45,
+          "globalEnd": 7.042,
+          "duration": 6.592,
+          "mouthSpans": [
+            {
+              "start": 0.63,
+              "end": 1.23
+            },
+            {
+              "start": 1.53,
+              "end": 2.37
+            },
+            {
+              "start": 2.79,
+              "end": 3.15
+            },
+            {
+              "start": 3.45,
+              "end": 4.65
+            },
+            {
+              "start": 5.01,
+              "end": 5.31
+            },
+            {
+              "start": 5.43,
+              "end": 6.87
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_title"
+        },
+        {
+          "index": 2,
+          "id": "ch01_intro_002",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "ずんだもんなのだ！世界には180以上の通貨があるのに、なんで貿易も貯金もドルばかりなのだ？",
+          "voiceText": "ずんだもんなのだ！世界には180以上の通貨があるのに、なんで貿易も貯金もドルばかりなのだ？",
+          "audioFile": "audio/lines/ch01_intro_002.wav",
+          "hash": "2fb0fece2d2d4256",
+          "start": 7.392,
+          "end": 15.136,
+          "globalStart": 7.392,
+          "globalEnd": 15.136,
+          "duration": 7.744,
+          "mouthSpans": [
+            {
+              "start": 7.572,
+              "end": 8.532
+            },
+            {
+              "start": 8.952,
+              "end": 9.492
+            },
+            {
+              "start": 9.792,
+              "end": 9.912
+            },
+            {
+              "start": 10.032,
+              "end": 10.812
+            },
+            {
+              "start": 10.932,
+              "end": 11.232
+            },
+            {
+              "start": 11.352,
+              "end": 11.832
+            },
+            {
+              "start": 12.252,
+              "end": 12.672
+            },
+            {
+              "start": 12.792,
+              "end": 13.392
+            },
+            {
+              "start": 13.512,
+              "end": 14.952
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_zunda_ask"
+        },
+        {
+          "index": 3,
+          "id": "ch01_intro_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "それが基軸通貨の力です。国際決済・価格の基準・外貨準備の3役を1つに集約すると取引コストが激減します。",
+          "voiceText": "それがきじくつうかの力です。国際決済・価格の基準・がいかじゅんびの3役を1つに集約すると取引コストが激減します。",
+          "audioFile": "audio/lines/ch01_intro_003.wav",
+          "hash": "704038017b4c88f2",
+          "start": 15.486,
+          "end": 24.5847,
+          "globalStart": 15.486,
+          "globalEnd": 24.5847,
+          "duration": 9.0987,
+          "mouthSpans": [
+            {
+              "start": 15.606,
+              "end": 17.226
+            },
+            {
+              "start": 17.646,
+              "end": 18.486
+            },
+            {
+              "start": 18.846,
+              "end": 19.686
+            },
+            {
+              "start": 20.166,
+              "end": 22.986
+            },
+            {
+              "start": 23.106,
+              "end": 24.366
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c1_roles"
+        },
+        {
+          "index": 4,
+          "id": "ch01_intro_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "2026年時点のIMF統計では、世界の外貨準備の56.7%が米ドルで首位、ユーロが20.6%、円5.0%、元2.1%です。",
+          "voiceText": "2026年時点のアイエムエフ統計では、世界のがいかじゅんびの56.7パーセントが米ドルで首位、ユーロが20.6パーセント、円5.0パーセント、元2.1パーセントです。",
+          "audioFile": "audio/lines/ch01_intro_004.wav",
+          "hash": "94912a13a319121b",
+          "start": 24.8847,
+          "end": 38.5167,
+          "globalStart": 24.8847,
+          "globalEnd": 38.5167,
+          "duration": 13.632,
+          "mouthSpans": [
+            {
+              "start": 25.0047,
+              "end": 27.1047
+            },
+            {
+              "start": 27.2247,
+              "end": 27.8847
+            },
+            {
+              "start": 28.2447,
+              "end": 29.8647
+            },
+            {
+              "start": 30.0447,
+              "end": 32.0847
+            },
+            {
+              "start": 32.6847,
+              "end": 33.3447
+            },
+            {
+              "start": 33.4647,
+              "end": 33.7047
+            },
+            {
+              "start": 33.8247,
+              "end": 34.4847
+            },
+            {
+              "start": 34.9047,
+              "end": 36.4047
+            },
+            {
+              "start": 36.7647,
+              "end": 38.3247
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c1_shares"
+        },
+        {
+          "index": 5,
+          "id": "ch01_intro_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "さらにBIS調査では、世界の外国為替取引の実に88.4%（両建て200%基準）に米ドルが絡んでいます。",
+          "voiceText": "さらにビーアイエス調査では、世界の外国為替取引の実に88.4パーセント、両建て200パーセント基準で米ドルが絡んでいます。",
+          "audioFile": "audio/lines/ch01_intro_005.wav",
+          "hash": "73c6416645f89956",
+          "start": 38.8167,
+          "end": 48.6087,
+          "globalStart": 38.8167,
+          "globalEnd": 48.6087,
+          "duration": 9.792,
+          "mouthSpans": [
+            {
+              "start": 38.9367,
+              "end": 40.5567
+            },
+            {
+              "start": 40.8567,
+              "end": 42.2967
+            },
+            {
+              "start": 42.4167,
+              "end": 44.6967
+            },
+            {
+              "start": 45.1167,
+              "end": 45.8367
+            },
+            {
+              "start": 45.9567,
+              "end": 48.4167
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_fx_scale"
+        },
+        {
+          "index": 6,
+          "id": "ch01_intro_006",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "9割近い為替取引にドルが関わっているなんて、まさに世界経済の血液なのだ！",
+          "voiceText": "9割近い為替取引にドルが関わっているなんて、まさに世界経済の血液なのだ！",
+          "audioFile": "audio/lines/ch01_intro_006.wav",
+          "hash": "19c268af1c58aed4",
+          "start": 48.9587,
+          "end": 55.476,
+          "globalStart": 48.9587,
+          "globalEnd": 55.476,
+          "duration": 6.5173,
+          "mouthSpans": [
+            {
+              "start": 49.1987,
+              "end": 49.6187
+            },
+            {
+              "start": 49.7987,
+              "end": 50.6387
+            },
+            {
+              "start": 50.8187,
+              "end": 51.3587
+            },
+            {
+              "start": 51.5387,
+              "end": 51.7787
+            },
+            {
+              "start": 51.8987,
+              "end": 52.6187
+            },
+            {
+              "start": 52.9787,
+              "end": 53.3387
+            },
+            {
+              "start": 53.5787,
+              "end": 54.3587
+            },
+            {
+              "start": 54.5987,
+              "end": 55.3187
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_zunda_wow"
+        },
+        {
+          "index": 7,
+          "id": "ch01_intro_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "ただ歴史を見ると基軸通貨は永遠ではありません。①歴史の法則、②ドルの特権とジレンマ、③脱ドルとデジタル時代の3本柱で整理します。",
+          "voiceText": "ただ歴史を見るときじくつうかは永遠ではありません。①歴史の法則、②ドルの特権とジレンマ、③だつどるとデジタル時代の3本柱で整理します。",
+          "audioFile": "audio/lines/ch01_intro_007.wav",
+          "hash": "cd7139a537f102fc",
+          "start": 55.826,
+          "end": 65.97,
+          "globalStart": 55.826,
+          "globalEnd": 65.97,
+          "duration": 10.144,
+          "mouthSpans": [
+            {
+              "start": 55.946,
+              "end": 57.206
+            },
+            {
+              "start": 57.386,
+              "end": 59.006
+            },
+            {
+              "start": 59.486,
+              "end": 60.626
+            },
+            {
+              "start": 60.986,
+              "end": 61.526
+            },
+            {
+              "start": 61.646,
+              "end": 62.426
+            },
+            {
+              "start": 62.786,
+              "end": 65.786
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_stance"
+        },
+        {
+          "index": 8,
+          "id": "ch01_intro_008",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "歴史とお金の仕組みがつながって面白そうなのだ！さっそく見ていくのだ！",
+          "voiceText": "歴史とお金の仕組みがつながって面白そうなのだ！さっそく見ていくのだ！",
+          "audioFile": "audio/lines/ch01_intro_008.wav",
+          "hash": "fe5d2a4021b170db",
+          "start": 66.32,
+          "end": 71.4827,
+          "globalStart": 66.32,
+          "globalEnd": 71.4827,
+          "duration": 5.1627,
+          "mouthSpans": [
+            {
+              "start": 66.44,
+              "end": 67.46
+            },
+            {
+              "start": 67.58,
+              "end": 67.88
+            },
+            {
+              "start": 68,
+              "end": 68.3
+            },
+            {
+              "start": 68.42,
+              "end": 69.62
+            },
+            {
+              "start": 70.28,
+              "end": 71.36
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c1_go"
+        }
+      ]
+    },
+    {
+      "id": "ch02_guilder_to_pound",
+      "title": "2. 歴史の法則：ギルダーからポンド、そしてドルへの交代",
+      "layout": "default",
+      "start": 72.2327,
+      "end": 191.7261,
+      "duration": 119.4934,
+      "cues": {
+        "c2_history_open": 0.45,
+        "c2_dutch": 8.046,
+        "c2_pound": 16.8367,
+        "c2_dollar_rise": 26.1074,
+        "c2_lag_fact": 36.7294,
+        "c2_zunda_lag": 49.5061,
+        "c2_lag_reason": 57.4081,
+        "c2_phase2_cond": 65.8901,
+        "c2_cond_econ_mkt": 73.5394,
+        "c2_cond_law_sec": 82.4047,
+        "c2_network_loop": 91.462,
+        "c2_zunda_cond": 100.5587,
+        "c2_bridge": 110.3167
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch02_guilder_to_pound_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "まず400年の歴史を俯瞰しましょう。世界の基軸通貨は、およそ100年周期で主役が交代してきました。",
+          "voiceText": "まず400年の歴史を俯瞰しましょう。世界のきじくつうかは、およそ100年周期で主役が交代してきました。",
+          "audioFile": "audio/lines/ch02_guilder_to_pound_001.wav",
+          "hash": "e4ce83946d27cad6",
+          "start": 0.45,
+          "end": 7.746,
+          "globalStart": 72.6827,
+          "globalEnd": 79.9787,
+          "duration": 7.296,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 2.07
+            },
+            {
+              "start": 2.19,
+              "end": 2.85
+            },
+            {
+              "start": 3.21,
+              "end": 4.53
+            },
+            {
+              "start": 4.83,
+              "end": 7.65
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_history_open"
+        },
+        {
+          "index": 2,
+          "id": "ch02_guilder_to_pound_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "17世紀はオランダ・ギルダーです。東インド会社とアムステルダム銀行が世界の海運貿易と国際金融を握りました。",
+          "voiceText": "17世紀はオランダ・ギルダーです。ひがしいんどがいしゃとアムステルダム銀行が世界の海運貿易と国際金融を握りました。",
+          "audioFile": "audio/lines/ch02_guilder_to_pound_002.wav",
+          "hash": "6f29cea94e3d9add",
+          "start": 8.046,
+          "end": 16.5367,
+          "globalStart": 80.2787,
+          "globalEnd": 88.7694,
+          "duration": 8.4907,
+          "mouthSpans": [
+            {
+              "start": 8.166,
+              "end": 9.606
+            },
+            {
+              "start": 9.966,
+              "end": 10.566
+            },
+            {
+              "start": 10.926,
+              "end": 14.526
+            },
+            {
+              "start": 14.646,
+              "end": 16.446
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_dutch"
+        },
+        {
+          "index": 3,
+          "id": "ch02_guilder_to_pound_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "19世紀になると、産業革命と海軍力で大英帝国が台頭し、国際金本位制のもと英ポンドが王座につきます。",
+          "voiceText": "19世紀になると、産業革命と海軍力でだいえいていこくが台頭し、国際きんほんいせいのもと英ポンドが王座につきます。",
+          "audioFile": "audio/lines/ch02_guilder_to_pound_003.wav",
+          "hash": "a7f51837ffd232cf",
+          "start": 16.8367,
+          "end": 25.8074,
+          "globalStart": 89.0694,
+          "globalEnd": 98.0401,
+          "duration": 8.9707,
+          "mouthSpans": [
+            {
+              "start": 16.9567,
+              "end": 18.2767
+            },
+            {
+              "start": 18.8167,
+              "end": 21.9967
+            },
+            {
+              "start": 22.3567,
+              "end": 25.5967
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_pound"
+        },
+        {
+          "index": 4,
+          "id": "ch02_guilder_to_pound_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そして20世紀、2度の世界大戦で欧州が疲弊する中、1944年のブレトンウッズ協定で米ドルが正式に主役を引き継ぎました。",
+          "voiceText": "そして20世紀、2度の世界大戦で欧州が疲弊する中、1944年のブレトンウッズ協定で米ドルが正式に主役を引き継ぎました。",
+          "audioFile": "audio/lines/ch02_guilder_to_pound_004.wav",
+          "hash": "fe2ab56870624be8",
+          "start": 26.1074,
+          "end": 36.3794,
+          "globalStart": 98.3401,
+          "globalEnd": 108.6121,
+          "duration": 10.272,
+          "mouthSpans": [
+            {
+              "start": 26.2274,
+              "end": 27.3074
+            },
+            {
+              "start": 27.7274,
+              "end": 29.4674
+            },
+            {
+              "start": 29.7074,
+              "end": 30.4274
+            },
+            {
+              "start": 30.8474,
+              "end": 35.4674
+            },
+            {
+              "start": 35.5874,
+              "end": 36.3074
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_dollar_rise"
+        },
+        {
+          "index": 5,
+          "id": "ch02_guilder_to_pound_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "ここで重要な法則があります。実は米国のGDPは1870年代に英国を抜いていたのに、通貨の完全交代は1944年と約70年も遅れたんです。",
+          "voiceText": "ここで重要な法則があります。実は米国のジーディーピーは1870年代に英国を抜いていたのに、通貨の完全交代は1944年と約70年も遅れたんです。",
+          "audioFile": "audio/lines/ch02_guilder_to_pound_005.wav",
+          "hash": "89d62fae8c59e046",
+          "start": 36.7294,
+          "end": 49.1561,
+          "globalStart": 108.9621,
+          "globalEnd": 121.3888,
+          "duration": 12.4267,
+          "mouthSpans": [
+            {
+              "start": 36.8494,
+              "end": 38.6494
+            },
+            {
+              "start": 39.0694,
+              "end": 41.1694
+            },
+            {
+              "start": 41.2894,
+              "end": 43.8094
+            },
+            {
+              "start": 44.2294,
+              "end": 48.9694
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_lag_fact"
+        },
+        {
+          "index": 6,
+          "id": "ch02_guilder_to_pound_006",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "経済力が世界一になっても、すぐには通貨の王座が入れ替わらないのだ！？70年もズレるのだね！",
+          "voiceText": "経済力が世界一になっても、すぐには通貨の王座が入れ替わらないのだ！？70年もズレるのだね！",
+          "audioFile": "audio/lines/ch02_guilder_to_pound_006.wav",
+          "hash": "31dda5e5ee8a43c1",
+          "start": 49.5061,
+          "end": 57.0581,
+          "globalStart": 121.7388,
+          "globalEnd": 129.2908,
+          "duration": 7.552,
+          "mouthSpans": [
+            {
+              "start": 49.6861,
+              "end": 50.5261
+            },
+            {
+              "start": 50.7661,
+              "end": 51.0061
+            },
+            {
+              "start": 51.1261,
+              "end": 51.4261
+            },
+            {
+              "start": 51.5461,
+              "end": 51.7861
+            },
+            {
+              "start": 52.2061,
+              "end": 52.6261
+            },
+            {
+              "start": 52.8061,
+              "end": 53.5261
+            },
+            {
+              "start": 53.7661,
+              "end": 54.8461
+            },
+            {
+              "start": 55.3861,
+              "end": 56.1061
+            },
+            {
+              "start": 56.2261,
+              "end": 56.8861
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_zunda_lag"
+        },
+        {
+          "index": 7,
+          "id": "ch02_guilder_to_pound_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そうなんです。通貨には強烈な慣性が働き、大きな戦争や財政危機が引き金になってようやく交代してきました。",
+          "voiceText": "そうなんです。通貨には強烈なかんせいが働き、大きな戦争や財政危機が引き金になってようやく交代してきました。",
+          "audioFile": "audio/lines/ch02_guilder_to_pound_007.wav",
+          "hash": "6b240af66c8e75e4",
+          "start": 57.4081,
+          "end": 65.4401,
+          "globalStart": 129.6408,
+          "globalEnd": 137.6728,
+          "duration": 8.032,
+          "mouthSpans": [
+            {
+              "start": 57.5881,
+              "end": 58.1281
+            },
+            {
+              "start": 58.6081,
+              "end": 60.8281
+            },
+            {
+              "start": 61.1281,
+              "end": 62.5681
+            },
+            {
+              "start": 62.6881,
+              "end": 62.9281
+            },
+            {
+              "start": 63.0481,
+              "end": 64.1281
+            },
+            {
+              "start": 64.2481,
+              "end": 65.3281
+            }
+          ],
+          "pauseAfter": 0.45,
+          "cue": "c2_lag_reason"
+        },
+        {
+          "index": 8,
+          "id": "ch02_guilder_to_pound_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "では、なぜそれほど交代しにくいのでしょうか。基軸通貨を支える4つの条件とネットワーク効果で整理します。",
+          "voiceText": "では、なぜそれほど交代しにくいのでしょうか。きじくつうかを支える4つの条件とネットワーク効果で整理します。",
+          "audioFile": "audio/lines/ch02_guilder_to_pound_008.wav",
+          "hash": "714b2d008392e9d8",
+          "start": 65.8901,
+          "end": 73.2394,
+          "globalStart": 138.1228,
+          "globalEnd": 145.4721,
+          "duration": 7.3493,
+          "mouthSpans": [
+            {
+              "start": 66.0101,
+              "end": 66.3101
+            },
+            {
+              "start": 66.6101,
+              "end": 68.7701
+            },
+            {
+              "start": 69.1301,
+              "end": 71.4701
+            },
+            {
+              "start": 71.5901,
+              "end": 71.8901
+            },
+            {
+              "start": 72.0701,
+              "end": 73.0301
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_phase2_cond"
+        },
+        {
+          "index": 9,
+          "id": "ch02_guilder_to_pound_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "1つ目は巨大な経済規模と貿易網、2つ目は巨額の資金をいつでも出し入れできる深く開かれた金融・国債市場です。",
+          "voiceText": "1つ目は巨大な経済規模と貿易網、2つ目は巨額の資金をいつでも出し入れできる深く開かれた金融・国債市場です。",
+          "audioFile": "audio/lines/ch02_guilder_to_pound_009.wav",
+          "hash": "5f1e623674815a49",
+          "start": 73.5394,
+          "end": 82.1047,
+          "globalStart": 145.7721,
+          "globalEnd": 154.3374,
+          "duration": 8.5653,
+          "mouthSpans": [
+            {
+              "start": 73.7794,
+              "end": 76.1794
+            },
+            {
+              "start": 76.7194,
+              "end": 79.2994
+            },
+            {
+              "start": 79.4194,
+              "end": 79.5394
+            },
+            {
+              "start": 79.6594,
+              "end": 80.1394
+            },
+            {
+              "start": 80.2594,
+              "end": 80.6194
+            },
+            {
+              "start": 80.9794,
+              "end": 81.9394
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_cond_econ_mkt"
+        },
+        {
+          "index": 10,
+          "id": "ch02_guilder_to_pound_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "3つ目は資産を勝手に没収されにくい法の支配と制度的信頼、4つ目は同盟網や軍事力を含む安全保障の裏付けです。",
+          "voiceText": "3つ目は資産を勝手に没収されにくい法の支配と制度的信頼、4つ目は同盟網や軍事力を含む安全保障のうらづけです。",
+          "audioFile": "audio/lines/ch02_guilder_to_pound_010.wav",
+          "hash": "f396dad5bb0703f5",
+          "start": 82.4047,
+          "end": 91.162,
+          "globalStart": 154.6374,
+          "globalEnd": 163.3947,
+          "duration": 8.7573,
+          "mouthSpans": [
+            {
+              "start": 82.5247,
+              "end": 82.6447
+            },
+            {
+              "start": 82.7647,
+              "end": 86.6647
+            },
+            {
+              "start": 87.0847,
+              "end": 89.1847
+            },
+            {
+              "start": 89.3047,
+              "end": 90.9847
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_cond_law_sec"
+        },
+        {
+          "index": 11,
+          "id": "ch02_guilder_to_pound_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "さらに「相手も使うから自分も使う」というネットワーク効果が働き、利用者が多いほど便利になる自己強化ループが回ります。",
+          "voiceText": "さらに「相手も使うから自分も使う」というネットワーク効果が働き、利用者が多いほど便利になる自己強化ループが回ります。",
+          "audioFile": "audio/lines/ch02_guilder_to_pound_011.wav",
+          "hash": "286ee5f2b6ebbeca",
+          "start": 91.462,
+          "end": 100.2087,
+          "globalStart": 163.6947,
+          "globalEnd": 172.4414,
+          "duration": 8.7467,
+          "mouthSpans": [
+            {
+              "start": 91.582,
+              "end": 91.942
+            },
+            {
+              "start": 92.242,
+              "end": 94.042
+            },
+            {
+              "start": 94.342,
+              "end": 94.762
+            },
+            {
+              "start": 94.882,
+              "end": 95.182
+            },
+            {
+              "start": 95.362,
+              "end": 96.082
+            },
+            {
+              "start": 96.742,
+              "end": 99.982
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_network_loop"
+        },
+        {
+          "index": 12,
+          "id": "ch02_guilder_to_pound_012",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "経済力だけじゃなくて、市場の深さ・信頼・安全保障・みんなの習慣が合わさって鉄壁の土台を作っているのだ！",
+          "voiceText": "経済力だけじゃなくて、市場の深さ・信頼・安全保障・みんなの習慣が合わさって鉄壁の土台を作っているのだ！",
+          "audioFile": "audio/lines/ch02_guilder_to_pound_012.wav",
+          "hash": "7f7e5bb90dd618d7",
+          "start": 100.5587,
+          "end": 109.9667,
+          "globalStart": 172.7914,
+          "globalEnd": 182.1994,
+          "duration": 9.408,
+          "mouthSpans": [
+            {
+              "start": 100.7987,
+              "end": 101.9987
+            },
+            {
+              "start": 102.6587,
+              "end": 103.0787
+            },
+            {
+              "start": 103.1987,
+              "end": 103.4987
+            },
+            {
+              "start": 103.9787,
+              "end": 104.3387
+            },
+            {
+              "start": 104.8187,
+              "end": 105.6587
+            },
+            {
+              "start": 106.0787,
+              "end": 107.7587
+            },
+            {
+              "start": 107.9987,
+              "end": 108.7787
+            },
+            {
+              "start": 109.1987,
+              "end": 109.7987
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_zunda_cond"
+        },
+        {
+          "index": 13,
+          "id": "ch02_guilder_to_pound_013",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "ただ、その米ドル体制も戦後に大きな危機を経験しました。次は1971年の大転換を見ていきましょう。",
+          "voiceText": "ただ、その米ドル体制も戦後に大きな危機を経験しました。次は1971年の大転換を見ていきましょう。",
+          "audioFile": "audio/lines/ch02_guilder_to_pound_013.wav",
+          "hash": "c554b88cefcae932",
+          "start": 110.3167,
+          "end": 118.7434,
+          "globalStart": 182.5494,
+          "globalEnd": 190.9761,
+          "duration": 8.4267,
+          "mouthSpans": [
+            {
+              "start": 110.4367,
+              "end": 110.7367
+            },
+            {
+              "start": 111.0367,
+              "end": 114.6967
+            },
+            {
+              "start": 115.0567,
+              "end": 118.6567
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c2_bridge"
+        }
+      ]
+    },
+    {
+      "id": "ch03_bretton_to_fiat",
+      "title": "3. 金本位制の崩壊と「ドルの特権＆ジレンマ」",
+      "layout": "wide",
+      "start": 191.7261,
+      "end": 315.2702,
+      "duration": 123.5441,
+      "cues": {
+        "c3_bw_system": 0.45,
+        "c3_triffin_intro": 9.9767,
+        "c3_triffin_mech": 19.6527,
+        "c3_triffin_break": 28.582,
+        "c3_nixon_shock": 37.2127,
+        "c3_fiat_era": 47.4754,
+        "c3_zunda_survive": 55.5374,
+        "c3_phase2_recycle": 63.4007,
+        "c3_petrodollar": 71.2207,
+        "c3_treasury_loop": 82.8167,
+        "c3_privilege": 91.9594,
+        "c3_cost_side": 99.7154,
+        "c3_zunda_balance": 109.3561,
+        "c3_to_ch4": 116.5541
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch03_bretton_to_fiat_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "1944年のブレトンウッズ体制では、1オンス35ドルでドルと金を固定交換し、各国通貨をドルに連動させました。",
+          "voiceText": "1944年のブレトンウッズ体制では、いちおんすさんじゅうごどるでドルと金を固定交換し、各国通貨をドルに連動させました。",
+          "audioFile": "audio/lines/ch03_bretton_to_fiat_001.wav",
+          "hash": "10f6d41025cc94b5",
+          "start": 0.45,
+          "end": 9.6767,
+          "globalStart": 192.1761,
+          "globalEnd": 201.4028,
+          "duration": 9.2267,
+          "mouthSpans": [
+            {
+              "start": 0.63,
+              "end": 3.63
+            },
+            {
+              "start": 3.93,
+              "end": 6.93
+            },
+            {
+              "start": 7.41,
+              "end": 7.71
+            },
+            {
+              "start": 7.83,
+              "end": 9.57
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_bw_system"
+        },
+        {
+          "index": 2,
+          "id": "ch03_bretton_to_fiat_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "しかし1960年、経済学者ロバート・トリフィンが致命的な矛盾を予言します。有名な『トリフィンのジレンマ』です。",
+          "voiceText": "しかし1960年、経済学者ロバート・トリフィンが致命的な矛盾を予言します。有名な『トリフィンのジレンマ』です。",
+          "audioFile": "audio/lines/ch03_bretton_to_fiat_002.wav",
+          "hash": "13bfb61f0a85cd76",
+          "start": 9.9767,
+          "end": 19.3527,
+          "globalStart": 201.7028,
+          "globalEnd": 211.0788,
+          "duration": 9.376,
+          "mouthSpans": [
+            {
+              "start": 10.0967,
+              "end": 11.7767
+            },
+            {
+              "start": 12.3167,
+              "end": 13.5767
+            },
+            {
+              "start": 13.9367,
+              "end": 16.2167
+            },
+            {
+              "start": 16.7567,
+              "end": 17.2967
+            },
+            {
+              "start": 17.6567,
+              "end": 18.6767
+            },
+            {
+              "start": 19.0367,
+              "end": 19.1567
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_triffin_intro"
+        },
+        {
+          "index": 3,
+          "id": "ch03_bretton_to_fiat_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "世界経済の成長に合わせてドルを供給し続けるには、米国が国際収支赤字を出して外へドルを流し続ける必要があります。",
+          "voiceText": "世界経済の成長に合わせてドルを供給し続けるには、米国がこくさいしゅうし赤字を出して外へドルを流し続ける必要があります。",
+          "audioFile": "audio/lines/ch03_bretton_to_fiat_003.wav",
+          "hash": "35d857715f480403",
+          "start": 19.6527,
+          "end": 28.282,
+          "globalStart": 211.3788,
+          "globalEnd": 220.0081,
+          "duration": 8.6293,
+          "mouthSpans": [
+            {
+              "start": 19.7727,
+              "end": 23.3127
+            },
+            {
+              "start": 23.6727,
+              "end": 27.1527
+            },
+            {
+              "start": 27.2727,
+              "end": 28.0527
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_triffin_mech"
+        },
+        {
+          "index": 4,
+          "id": "ch03_bretton_to_fiat_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "worry",
+          "se": null,
+          "caption": "すると海外のドル残高が米国の金保有量を上回り、『本当に金と交換できるのか』という信認が崩れてしまうんです。",
+          "voiceText": "すると海外のドル残高が米国の金保有量を上回り、『本当に金と交換できるのか』というしんにんが崩れてしまうんです。",
+          "audioFile": "audio/lines/ch03_bretton_to_fiat_004.wav",
+          "hash": "4b35a07ac11e9bc4",
+          "start": 28.582,
+          "end": 36.9127,
+          "globalStart": 220.3081,
+          "globalEnd": 228.6388,
+          "duration": 8.3307,
+          "mouthSpans": [
+            {
+              "start": 28.702,
+              "end": 32.302
+            },
+            {
+              "start": 32.722,
+              "end": 34.582
+            },
+            {
+              "start": 34.942,
+              "end": 36.742
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_triffin_break"
+        },
+        {
+          "index": 5,
+          "id": "ch03_bretton_to_fiat_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "ベトナム戦争の戦費拡大や欧州からの金交換要求も重なり、1971年にニクソン大統領が金兌換の停止を宣言しました。",
+          "voiceText": "ベトナム戦争のせんぴ拡大や欧州からの金交換要求も重なり、1971年にニクソン大統領がきんだかんの停止を宣言しました。",
+          "audioFile": "audio/lines/ch03_bretton_to_fiat_005.wav",
+          "hash": "27db3437a273cb8a",
+          "start": 37.2127,
+          "end": 47.1754,
+          "globalStart": 228.9388,
+          "globalEnd": 238.9015,
+          "duration": 9.9627,
+          "mouthSpans": [
+            {
+              "start": 37.3327,
+              "end": 39.9727
+            },
+            {
+              "start": 40.0927,
+              "end": 41.2327
+            },
+            {
+              "start": 41.3527,
+              "end": 41.7127
+            },
+            {
+              "start": 42.1927,
+              "end": 47.0527
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_nixon_shock"
+        },
+        {
+          "index": 6,
+          "id": "ch03_bretton_to_fiat_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "このニクソン・ショックを境に、世界は金の裏付けがない信用貨幣と変動相場制の時代へ突入したのです。",
+          "voiceText": "このニクソン・ショックを境に、世界は金のうらづけがないしんようかへいとへんどうそうばせいの時代へ突入したのです。",
+          "audioFile": "audio/lines/ch03_bretton_to_fiat_006.wav",
+          "hash": "a3eb8aa29b158759",
+          "start": 47.4754,
+          "end": 55.1874,
+          "globalStart": 239.2015,
+          "globalEnd": 246.9135,
+          "duration": 7.712,
+          "mouthSpans": [
+            {
+              "start": 47.6554,
+              "end": 48.2554
+            },
+            {
+              "start": 48.6754,
+              "end": 49.5754
+            },
+            {
+              "start": 49.9954,
+              "end": 55.0354
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_fiat_era"
+        },
+        {
+          "index": 7,
+          "id": "ch03_bretton_to_fiat_007",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "金と交換できなくなったらドルの信用がガタ落ちしそうなのに、なんでそのまま基軸通貨でいられたのだ！？",
+          "voiceText": "金と交換できなくなったらドルの信用がガタ落ちしそうなのに、なんでそのままきじくつうかでいられたのだ！？",
+          "audioFile": "audio/lines/ch03_bretton_to_fiat_007.wav",
+          "hash": "f179660ddf8394e6",
+          "start": 55.5374,
+          "end": 62.9507,
+          "globalStart": 247.2635,
+          "globalEnd": 254.6768,
+          "duration": 7.4133,
+          "mouthSpans": [
+            {
+              "start": 55.7774,
+              "end": 57.1574
+            },
+            {
+              "start": 57.2774,
+              "end": 58.4774
+            },
+            {
+              "start": 58.6574,
+              "end": 59.0174
+            },
+            {
+              "start": 59.1374,
+              "end": 59.6774
+            },
+            {
+              "start": 60.0974,
+              "end": 60.5174
+            },
+            {
+              "start": 60.6374,
+              "end": 60.9974
+            },
+            {
+              "start": 61.1174,
+              "end": 61.2974
+            },
+            {
+              "start": 61.4774,
+              "end": 61.8974
+            },
+            {
+              "start": 62.0174,
+              "end": 62.7374
+            }
+          ],
+          "pauseAfter": 0.45,
+          "cue": "c3_zunda_survive"
+        },
+        {
+          "index": 8,
+          "id": "ch03_bretton_to_fiat_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "答えは『金の代わりになる巨大な受け皿』が機能したからです。カギはペトロダラーと米国債の還流ループです。",
+          "voiceText": "答えは『金の代わりになる巨大な受け皿』が機能したからです。カギはペトロダラーとべいこくさいのかんりゅうループです。",
+          "audioFile": "audio/lines/ch03_bretton_to_fiat_008.wav",
+          "hash": "fa285454fe5d5bb4",
+          "start": 63.4007,
+          "end": 70.9207,
+          "globalStart": 255.1268,
+          "globalEnd": 262.6468,
+          "duration": 7.52,
+          "mouthSpans": [
+            {
+              "start": 63.5207,
+              "end": 64.0007
+            },
+            {
+              "start": 64.3607,
+              "end": 66.2207
+            },
+            {
+              "start": 66.5207,
+              "end": 67.5407
+            },
+            {
+              "start": 67.9607,
+              "end": 70.7207
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_phase2_recycle"
+        },
+        {
+          "index": 9,
+          "id": "ch03_bretton_to_fiat_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "1970年代以降、原油などの資源決済がドル建てで定着し、産油国や日本・欧州・中国などの貿易黒字国に巨額のドルが貯まりました。",
+          "voiceText": "1970年代以降、原油などの資源決済がドル建てで定着し、さんゆこくや日本・欧州・中国などのぼうえきくろじこくに巨額のドルが貯まりました。",
+          "audioFile": "audio/lines/ch03_bretton_to_fiat_009.wav",
+          "hash": "b979b21cc6cb3918",
+          "start": 71.2207,
+          "end": 82.5167,
+          "globalStart": 262.9468,
+          "globalEnd": 274.2428,
+          "duration": 11.296,
+          "mouthSpans": [
+            {
+              "start": 71.4007,
+              "end": 73.2607
+            },
+            {
+              "start": 73.6807,
+              "end": 76.3207
+            },
+            {
+              "start": 76.8007,
+              "end": 77.5807
+            },
+            {
+              "start": 77.7007,
+              "end": 77.8807
+            },
+            {
+              "start": 78.1807,
+              "end": 78.6007
+            },
+            {
+              "start": 79.0807,
+              "end": 80.1607
+            },
+            {
+              "start": 80.2807,
+              "end": 82.4407
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_petrodollar"
+        },
+        {
+          "index": 10,
+          "id": "ch03_bretton_to_fiat_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "その稼いだドルが世界最大・最高流動性の米国債や米金融市場へ還流する循環ができ、金の代わりになったんです。",
+          "voiceText": "その稼いだドルが世界最大・最高りゅうどうせいのべいこくさいや米金融市場へかんりゅうする循環ができ、金の代わりになったんです。",
+          "audioFile": "audio/lines/ch03_bretton_to_fiat_010.wav",
+          "hash": "fe325570bf3e69d2",
+          "start": 82.8167,
+          "end": 91.6594,
+          "globalStart": 274.5428,
+          "globalEnd": 283.3855,
+          "duration": 8.8427,
+          "mouthSpans": [
+            {
+              "start": 82.9367,
+              "end": 84.7367
+            },
+            {
+              "start": 85.1567,
+              "end": 89.7767
+            },
+            {
+              "start": 90.1967,
+              "end": 91.5167
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_treasury_loop"
+        },
+        {
+          "index": 11,
+          "id": "ch03_bretton_to_fiat_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "この結果、米国は自国通貨で海外から安く資金を借り続けられる『法外な特権』を手にしました。",
+          "voiceText": "この結果、米国は自国通貨で海外から安く資金を借り続けられる『ほうがいなとっけん』を手にしました。",
+          "audioFile": "audio/lines/ch03_bretton_to_fiat_011.wav",
+          "hash": "318aa82904e88fce",
+          "start": 91.9594,
+          "end": 99.4154,
+          "globalStart": 283.6855,
+          "globalEnd": 291.1415,
+          "duration": 7.456,
+          "mouthSpans": [
+            {
+              "start": 92.0794,
+              "end": 92.4394
+            },
+            {
+              "start": 92.5594,
+              "end": 92.6794
+            },
+            {
+              "start": 93.2194,
+              "end": 93.9994
+            },
+            {
+              "start": 94.1794,
+              "end": 96.8794
+            },
+            {
+              "start": 97.2394,
+              "end": 98.1994
+            },
+            {
+              "start": 98.4994,
+              "end": 99.3394
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c3_privilege"
+        },
+        {
+          "index": 12,
+          "id": "ch03_bretton_to_fiat_012",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "worry",
+          "se": null,
+          "caption": "一方で裏側の代償もあります。強いドル需要で貿易赤字が膨らみやすく、製造業の空洞化や双子の赤字が蓄積するんです。",
+          "voiceText": "一方で裏側の代償もあります。強いドル需要でぼうえきあかじが膨らみやすく、製造業のくうどうかやふたごのあかじが蓄積するんです。",
+          "audioFile": "audio/lines/ch03_bretton_to_fiat_012.wav",
+          "hash": "3bd2b43254e3e2d3",
+          "start": 99.7154,
+          "end": 109.0061,
+          "globalStart": 291.4415,
+          "globalEnd": 300.7322,
+          "duration": 9.2907,
+          "mouthSpans": [
+            {
+              "start": 99.8354,
+              "end": 99.9554
+            },
+            {
+              "start": 100.1354,
+              "end": 101.8754
+            },
+            {
+              "start": 102.3554,
+              "end": 104.2154
+            },
+            {
+              "start": 104.3954,
+              "end": 105.0554
+            },
+            {
+              "start": 105.5354,
+              "end": 106.9754
+            },
+            {
+              "start": 107.0954,
+              "end": 108.8354
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_cost_side"
+        },
+        {
+          "index": 13,
+          "id": "ch03_bretton_to_fiat_013",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "安くお金を借りられる特権と、赤字や産業空洞化の悩みが表裏一体になっているのだ！",
+          "voiceText": "安くお金を借りられる特権と、赤字や産業くうどうかの悩みが表裏一体になっているのだ！",
+          "audioFile": "audio/lines/ch03_bretton_to_fiat_013.wav",
+          "hash": "cb7bc43254881109",
+          "start": 109.3561,
+          "end": 116.2041,
+          "globalStart": 301.0822,
+          "globalEnd": 307.9302,
+          "duration": 6.848,
+          "mouthSpans": [
+            {
+              "start": 109.8361,
+              "end": 111.0961
+            },
+            {
+              "start": 111.2761,
+              "end": 111.6361
+            },
+            {
+              "start": 112.1761,
+              "end": 113.7361
+            },
+            {
+              "start": 113.8561,
+              "end": 114.7561
+            },
+            {
+              "start": 114.8761,
+              "end": 115.3561
+            },
+            {
+              "start": 115.4761,
+              "end": 116.0161
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_zunda_balance"
+        },
+        {
+          "index": 14,
+          "id": "ch03_bretton_to_fiat_014",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "まさに光と影ですね。ではその間に、他の大国の通貨はドルを抜けなかったのでしょうか？",
+          "voiceText": "まさに光と影ですね。ではその間に、他の大国の通貨はドルを抜けなかったのでしょうか？",
+          "audioFile": "audio/lines/ch03_bretton_to_fiat_014.wav",
+          "hash": "59d37a30e78b9977",
+          "start": 116.5541,
+          "end": 122.7941,
+          "globalStart": 308.2802,
+          "globalEnd": 314.5202,
+          "duration": 6.24,
+          "mouthSpans": [
+            {
+              "start": 116.6741,
+              "end": 117.0341
+            },
+            {
+              "start": 117.1541,
+              "end": 118.0541
+            },
+            {
+              "start": 118.4741,
+              "end": 119.3741
+            },
+            {
+              "start": 119.7941,
+              "end": 122.6141
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c3_to_ch4"
+        }
+      ]
+    },
+    {
+      "id": "ch04_challengers_reality",
+      "title": "4. 挑戦者たちの現在地：ユーロ・円・人民元と「金」の復権",
+      "layout": "default",
+      "start": 315.2702,
+      "end": 452.1342,
+      "duration": 136.864,
+      "cues": {
+        "c4_tsumugi_ask": 0.45,
+        "c4_challengers_intro": 10.1193,
+        "c4_yen_wall": 18.9526,
+        "c4_euro_wall": 30.2393,
+        "c4_rmb_wall": 42.326,
+        "c4_zunda_walls": 54.2387,
+        "c4_walls_wrap": 63.282,
+        "c4_phase2_shift": 72.084,
+        "c4_nontrad_div": 84.2667,
+        "c4_gold_surge": 93.9534,
+        "c4_gold_no2": 104.1627,
+        "c4_tsumugi_gold": 114.0914,
+        "c4_zunda_gold": 122.8787,
+        "c4_to_ch5": 130.066
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch04_challengers_reality_001",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "sharp",
+          "se": null,
+          "caption": "ちょっと待って。歴史だと100年くらいで交代してるんだよね？なら日本円やユーロ、中国の人民元は、どうしてドルを抜けなかったの？",
+          "voiceText": "ちょっと待って。歴史だと100年くらいで交代してるんだよね？なら日本円やユーロ、中国の人民元は、どうしてドルを抜けなかったの？",
+          "audioFile": "audio/lines/ch04_challengers_reality_001.wav",
+          "hash": "ede1adf31151dc6c",
+          "start": 0.45,
+          "end": 9.7193,
+          "globalStart": 315.7202,
+          "globalEnd": 324.9895,
+          "duration": 9.2693,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 0.99
+            },
+            {
+              "start": 1.11,
+              "end": 1.23
+            },
+            {
+              "start": 1.65,
+              "end": 2.19
+            },
+            {
+              "start": 2.31,
+              "end": 4.11
+            },
+            {
+              "start": 4.65,
+              "end": 5.79
+            },
+            {
+              "start": 6.33,
+              "end": 7.59
+            },
+            {
+              "start": 8.01,
+              "end": 9.57
+            }
+          ],
+          "pauseAfter": 0.4,
+          "cue": "c4_tsumugi_ask"
+        },
+        {
+          "index": 2,
+          "id": "ch04_challengers_reality_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "まさにそこが核心です。3つの挑戦者はそれぞれ、第2章で見た『基軸通貨の4条件』のどこかで壁にぶつかりました。",
+          "voiceText": "まさにそこが核心です。3つの挑戦者はそれぞれ、第2章で見た『きじくつうかの4条件』のどこかで壁にぶつかりました。",
+          "audioFile": "audio/lines/ch04_challengers_reality_002.wav",
+          "hash": "2b276d96d2c1a3c4",
+          "start": 10.1193,
+          "end": 18.6526,
+          "globalStart": 325.3895,
+          "globalEnd": 333.9228,
+          "duration": 8.5333,
+          "mouthSpans": [
+            {
+              "start": 10.2393,
+              "end": 11.5593
+            },
+            {
+              "start": 11.9193,
+              "end": 13.5393
+            },
+            {
+              "start": 13.8993,
+              "end": 14.7993
+            },
+            {
+              "start": 15.1593,
+              "end": 16.5393
+            },
+            {
+              "start": 16.8393,
+              "end": 18.5793
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c4_challengers_intro"
+        },
+        {
+          "index": 3,
+          "id": "ch04_challengers_reality_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "まず日本円は1985年のプラザ合意後に存在感を高めましたが、バブル崩壊と長期停滞で伸び悩み、現在は外貨準備5.0%です。",
+          "voiceText": "まず日本円は1985年のプラザ合意後に存在感を高めましたが、バブル崩壊と長期停滞で伸び悩み、現在はがいかじゅんび5.0パーセントです。",
+          "audioFile": "audio/lines/ch04_challengers_reality_003.wav",
+          "hash": "475e93135b7d88a1",
+          "start": 18.9526,
+          "end": 29.9393,
+          "globalStart": 334.2228,
+          "globalEnd": 345.2095,
+          "duration": 10.9867,
+          "mouthSpans": [
+            {
+              "start": 19.0726,
+              "end": 20.5726
+            },
+            {
+              "start": 20.6926,
+              "end": 24.1126
+            },
+            {
+              "start": 24.4126,
+              "end": 25.4926
+            },
+            {
+              "start": 25.6726,
+              "end": 26.7526
+            },
+            {
+              "start": 27.1126,
+              "end": 29.7526
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c4_yen_wall"
+        },
+        {
+          "index": 4,
+          "id": "ch04_challengers_reality_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "1999年誕生のユーロは外貨準備20.6%、SWIFT決済21.9%ですが、20カ国で財政が分かれ単一安全資産を欠きます。",
+          "voiceText": "1999年誕生のユーロはがいかじゅんび20.6パーセント、スイフト決済21.9パーセントですが、20カ国で財政が分かれたんいつあんぜんしさんを欠きます。",
+          "audioFile": "audio/lines/ch04_challengers_reality_004.wav",
+          "hash": "8e8a42566988f7a9",
+          "start": 30.2393,
+          "end": 42.026,
+          "globalStart": 345.5095,
+          "globalEnd": 357.2962,
+          "duration": 11.7867,
+          "mouthSpans": [
+            {
+              "start": 30.4193,
+              "end": 34.2593
+            },
+            {
+              "start": 34.3793,
+              "end": 34.9793
+            },
+            {
+              "start": 35.4593,
+              "end": 35.6993
+            },
+            {
+              "start": 35.8193,
+              "end": 36.7793
+            },
+            {
+              "start": 36.8993,
+              "end": 38.2193
+            },
+            {
+              "start": 38.4593,
+              "end": 41.8193
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c4_euro_wall"
+        },
+        {
+          "index": 5,
+          "id": "ch04_challengers_reality_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "人民元はFX取引8.5%まで伸びましたが、資本移動規制の壁が大きく、外貨準備は2.1%、SWIFT決済は3.1%です。",
+          "voiceText": "人民元はエフエックス取引8.5パーセントまで伸びましたが、しほんいどうきせいの壁が大きく、がいかじゅんびは2.1パーセント、スイフト決済は3.1パーセントです。",
+          "audioFile": "audio/lines/ch04_challengers_reality_005.wav",
+          "hash": "8ebe52de982dbec9",
+          "start": 42.326,
+          "end": 53.8887,
+          "globalStart": 357.5962,
+          "globalEnd": 369.1589,
+          "duration": 11.5627,
+          "mouthSpans": [
+            {
+              "start": 42.446,
+              "end": 44.066
+            },
+            {
+              "start": 44.186,
+              "end": 46.286
+            },
+            {
+              "start": 46.586,
+              "end": 48.206
+            },
+            {
+              "start": 48.326,
+              "end": 48.446
+            },
+            {
+              "start": 48.746,
+              "end": 50.846
+            },
+            {
+              "start": 51.326,
+              "end": 51.566
+            },
+            {
+              "start": 51.686,
+              "end": 53.726
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_rmb_wall"
+        },
+        {
+          "index": 6,
+          "id": "ch04_challengers_reality_006",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "経済が大きいだけじゃダメで、ユーロは財政の分断、人民元は資本規制っていう構造的な弱点があるのだ！",
+          "voiceText": "経済が大きいだけじゃダメで、ユーロは財政の分断、人民元は資本規制っていう構造的な弱点があるのだ！",
+          "audioFile": "audio/lines/ch04_challengers_reality_006.wav",
+          "hash": "ea41bbc92d226343",
+          "start": 54.2387,
+          "end": 62.932,
+          "globalStart": 369.5089,
+          "globalEnd": 378.2022,
+          "duration": 8.6933,
+          "mouthSpans": [
+            {
+              "start": 54.4187,
+              "end": 56.2787
+            },
+            {
+              "start": 56.7587,
+              "end": 57.1787
+            },
+            {
+              "start": 57.2987,
+              "end": 58.3187
+            },
+            {
+              "start": 58.7987,
+              "end": 59.5187
+            },
+            {
+              "start": 59.7587,
+              "end": 60.3587
+            },
+            {
+              "start": 60.4787,
+              "end": 60.7187
+            },
+            {
+              "start": 60.8387,
+              "end": 61.7387
+            },
+            {
+              "start": 61.9187,
+              "end": 62.7587
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_zunda_walls"
+        },
+        {
+          "index": 7,
+          "id": "ch04_challengers_reality_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "その通りです。ただ『次の単一の王者』が不在でも、データを見ると静かな地殻変動は確実に進んでいます。",
+          "voiceText": "その通りです。ただ『次の単一の王者』が不在でも、データを見ると静かな地殻変動は確実に進んでいます。",
+          "audioFile": "audio/lines/ch04_challengers_reality_007.wav",
+          "hash": "5065024e4291ab7e",
+          "start": 63.282,
+          "end": 71.634,
+          "globalStart": 378.5522,
+          "globalEnd": 386.9042,
+          "duration": 8.352,
+          "mouthSpans": [
+            {
+              "start": 63.462,
+              "end": 64.122
+            },
+            {
+              "start": 64.602,
+              "end": 64.902
+            },
+            {
+              "start": 65.262,
+              "end": 66.522
+            },
+            {
+              "start": 66.882,
+              "end": 67.602
+            },
+            {
+              "start": 67.962,
+              "end": 71.442
+            }
+          ],
+          "pauseAfter": 0.45,
+          "cue": "c4_walls_wrap"
+        },
+        {
+          "index": 8,
+          "id": "ch04_challengers_reality_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "IMFのCOFER統計では、外貨準備のドル比率は2000年頃の約71%から、2026年には56.7%まで約14ポイント低下しました。",
+          "voiceText": "アイエムエフのコーファー統計では、がいかじゅんびのドル比率は2000年頃の約71パーセントから、2026年には56.7パーセントまで約14ポイント低下しました。",
+          "audioFile": "audio/lines/ch04_challengers_reality_008.wav",
+          "hash": "4bdc0d356327c7d0",
+          "start": 72.084,
+          "end": 83.9667,
+          "globalStart": 387.3542,
+          "globalEnd": 399.2369,
+          "duration": 11.8827,
+          "mouthSpans": [
+            {
+              "start": 72.204,
+              "end": 74.184
+            },
+            {
+              "start": 74.484,
+              "end": 78.504
+            },
+            {
+              "start": 78.804,
+              "end": 80.604
+            },
+            {
+              "start": 80.724,
+              "end": 83.844
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c4_phase2_shift"
+        },
+        {
+          "index": 9,
+          "id": "ch04_challengers_reality_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "注目すべきは、減ったドルが人民元へ集中したのではなく、豪ドル・カナダドル・スイスフラン等の非伝統的通貨へ分散した点です。",
+          "voiceText": "注目すべきは、減ったドルが人民元へ集中したのではなく、豪ドル・カナダドル・スイスフラン等のひでんとうてきつうかへ分散した点です。",
+          "audioFile": "audio/lines/ch04_challengers_reality_009.wav",
+          "hash": "cd7c9e6706621e22",
+          "start": 84.2667,
+          "end": 93.6534,
+          "globalStart": 399.5369,
+          "globalEnd": 408.9236,
+          "duration": 9.3867,
+          "mouthSpans": [
+            {
+              "start": 84.3867,
+              "end": 85.3467
+            },
+            {
+              "start": 85.7067,
+              "end": 88.2867
+            },
+            {
+              "start": 88.5867,
+              "end": 89.0067
+            },
+            {
+              "start": 89.3667,
+              "end": 89.9067
+            },
+            {
+              "start": 90.3267,
+              "end": 93.5067
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c4_nontrad_div"
+        },
+        {
+          "index": 10,
+          "id": "ch04_challengers_reality_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "そしてもう一つの主役が『金（ゴールド）』です。2022年以降、各国中央銀行が年約1,000トン規模で金を買い増しています。",
+          "voiceText": "そしてもう一つの主役が『金（ゴールド）』です。2022年以降、各国中央銀行が年やくせんとん規模で金を買い増しています。",
+          "audioFile": "audio/lines/ch04_challengers_reality_010.wav",
+          "hash": "89d9a28a0e5e3baf",
+          "start": 93.9534,
+          "end": 103.8627,
+          "globalStart": 409.2236,
+          "globalEnd": 419.1329,
+          "duration": 9.9093,
+          "mouthSpans": [
+            {
+              "start": 94.0734,
+              "end": 94.6134
+            },
+            {
+              "start": 94.7334,
+              "end": 95.5734
+            },
+            {
+              "start": 95.9934,
+              "end": 96.1134
+            },
+            {
+              "start": 96.5934,
+              "end": 97.0134
+            },
+            {
+              "start": 97.4934,
+              "end": 97.6734
+            },
+            {
+              "start": 98.0934,
+              "end": 99.4134
+            },
+            {
+              "start": 99.8334,
+              "end": 99.9534
+            },
+            {
+              "start": 100.3134,
+              "end": 103.6734
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c4_gold_surge"
+        },
+        {
+          "index": 11,
+          "id": "ch04_challengers_reality_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "金価格の高騰も重なり、WGC等の集計では世界の公的準備資産全体で金がユーロを抜き、ドルに次ぐ第2位に浮上しました。",
+          "voiceText": "金価格の高騰も重なり、ダブリュージーシー等の集計では世界のこうてきじゅんびしさん全体で金がユーロを抜き、ドルに次ぐ第2位に浮上しました。",
+          "audioFile": "audio/lines/ch04_challengers_reality_011.wav",
+          "hash": "2b7be40bac6f8ad7",
+          "start": 104.1627,
+          "end": 113.7414,
+          "globalStart": 419.4329,
+          "globalEnd": 429.0116,
+          "duration": 9.5787,
+          "mouthSpans": [
+            {
+              "start": 104.3427,
+              "end": 105.9027
+            },
+            {
+              "start": 106.3227,
+              "end": 111.1827
+            },
+            {
+              "start": 111.7227,
+              "end": 113.6427
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_gold_no2"
+        },
+        {
+          "index": 12,
+          "id": "ch04_challengers_reality_012",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "1971年に金本位制が終わったはずなのに、半世紀たって中央銀行がまた金を買い集めているってすごく象徴的だね。",
+          "voiceText": "1971年にきんほんいせいが終わったはずなのに、半世紀たって中央銀行がまた金を買い集めているってすごく象徴的だね。",
+          "audioFile": "audio/lines/ch04_challengers_reality_012.wav",
+          "hash": "d32334af160bdb18",
+          "start": 114.0914,
+          "end": 122.5287,
+          "globalStart": 429.3616,
+          "globalEnd": 437.7989,
+          "duration": 8.4373,
+          "mouthSpans": [
+            {
+              "start": 114.2714,
+              "end": 115.7714
+            },
+            {
+              "start": 115.8914,
+              "end": 117.6314
+            },
+            {
+              "start": 118.0514,
+              "end": 118.4114
+            },
+            {
+              "start": 118.5314,
+              "end": 118.7714
+            },
+            {
+              "start": 118.8914,
+              "end": 121.4114
+            },
+            {
+              "start": 121.5314,
+              "end": 122.3714
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_tsumugi_gold"
+        },
+        {
+          "index": 13,
+          "id": "ch04_challengers_reality_013",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "ドルの代わりを1つの通貨に絞れないから、幅広い分散とゴールドへの避難が進んでいるのだ！",
+          "voiceText": "ドルの代わりを1つの通貨に絞れないから、幅広い分散とゴールドへの避難が進んでいるのだ！",
+          "audioFile": "audio/lines/ch04_challengers_reality_013.wav",
+          "hash": "38716b975e4a504d",
+          "start": 122.8787,
+          "end": 129.716,
+          "globalStart": 438.1489,
+          "globalEnd": 444.9862,
+          "duration": 6.8373,
+          "mouthSpans": [
+            {
+              "start": 122.9987,
+              "end": 123.3587
+            },
+            {
+              "start": 123.4787,
+              "end": 123.8987
+            },
+            {
+              "start": 124.0187,
+              "end": 124.1387
+            },
+            {
+              "start": 124.2587,
+              "end": 124.3787
+            },
+            {
+              "start": 124.4987,
+              "end": 125.7587
+            },
+            {
+              "start": 126.1187,
+              "end": 127.9787
+            },
+            {
+              "start": 128.0987,
+              "end": 128.4587
+            },
+            {
+              "start": 128.7587,
+              "end": 129.5987
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_zunda_gold"
+        },
+        {
+          "index": 14,
+          "id": "ch04_challengers_reality_014",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "その背景にある地政学と国際決済インフラの変化を、次の章でさらに掘り下げましょう。",
+          "voiceText": "その背景にあるちせいがくと国際決済インフラの変化を、次の章でさらに掘り下げましょう。",
+          "audioFile": "audio/lines/ch04_challengers_reality_014.wav",
+          "hash": "cfc36e24f386fce0",
+          "start": 130.066,
+          "end": 136.114,
+          "globalStart": 445.3362,
+          "globalEnd": 451.3842,
+          "duration": 6.048,
+          "mouthSpans": [
+            {
+              "start": 130.186,
+              "end": 131.686
+            },
+            {
+              "start": 131.806,
+              "end": 133.726
+            },
+            {
+              "start": 134.146,
+              "end": 136.006
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c4_to_ch5"
+        }
+      ]
+    },
+    {
+      "id": "ch05_tsumugi_multipolar",
+      "title": "5. つむぎの疑問：「脱ドル」とデジタル決済網は覇権を覆すか？",
+      "layout": "wide",
+      "start": 452.1342,
+      "end": 605.6975,
+      "duration": 153.5633,
+      "cues": {
+        "c5_tsumugi_sanction": 0.45,
+        "c5_weaponize": 9.2127,
+        "c5_rails_open": 17.822,
+        "c5_cips": 26.4527,
+        "c5_mbridge": 35.5527,
+        "c5_brics_pay": 45.7194,
+        "c5_zunda_rails": 55.0507,
+        "c5_tsumugi_digital": 63.23,
+        "c5_phase2_moat": 71.7973,
+        "c5_vehicle_inertia": 84.7693,
+        "c5_stablecoin_twist": 93.848,
+        "c5_genius_act": 104.5373,
+        "c5_treasury_newloop": 116.1866,
+        "c5_conclusion": 126.1933,
+        "c5_zunda_twist": 138.1273,
+        "c5_wrap": 145.8693
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch05_tsumugi_multipolar_001",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "sharp",
+          "se": null,
+          "caption": "ロシアへのSWIFT排除や外貨準備凍結で、新興国はドル依存を警戒してるよね。CIPSやmBridgeで覇権は崩れないの？",
+          "voiceText": "ロシアへのスイフト排除やがいかじゅんびとうけつで、新興国はドル依存を警戒してるよね。シップスやエムブリッジではけんは崩れないの？",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_001.wav",
+          "hash": "a9f6701ceb8319f5",
+          "start": 0.45,
+          "end": 8.8127,
+          "globalStart": 452.5842,
+          "globalEnd": 460.9469,
+          "duration": 8.3627,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 1.23
+            },
+            {
+              "start": 1.35,
+              "end": 3.15
+            },
+            {
+              "start": 3.57,
+              "end": 5.85
+            },
+            {
+              "start": 6.51,
+              "end": 7.17
+            },
+            {
+              "start": 7.29,
+              "end": 7.47
+            },
+            {
+              "start": 7.65,
+              "end": 8.67
+            }
+          ],
+          "pauseAfter": 0.4,
+          "cue": "c5_tsumugi_sanction"
+        },
+        {
+          "index": 2,
+          "id": "ch05_tsumugi_multipolar_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "そこが最大の焦点です。SWIFTと米国CHIPSの決済網は、危機時の金融制裁にも使われ得ることが可視化されました。",
+          "voiceText": "そこが最大の焦点です。スイフトと米国チップスのけっさいもうは、危機時のきんゆうせいさいにも使われ得ることが可視化されました。",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_002.wav",
+          "hash": "d78bb73868593fea",
+          "start": 9.2127,
+          "end": 17.522,
+          "globalStart": 461.3469,
+          "globalEnd": 469.6562,
+          "duration": 8.3093,
+          "mouthSpans": [
+            {
+              "start": 9.3327,
+              "end": 10.8927
+            },
+            {
+              "start": 11.3127,
+              "end": 11.5527
+            },
+            {
+              "start": 11.6727,
+              "end": 12.2127
+            },
+            {
+              "start": 12.3327,
+              "end": 13.6527
+            },
+            {
+              "start": 14.0127,
+              "end": 17.4327
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_weaponize"
+        },
+        {
+          "index": 3,
+          "id": "ch05_tsumugi_multipolar_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "この警戒感から、従来のSWIFT一極に対し、国際決済網を複線化する3つの代替ルートが急拡大しています。",
+          "voiceText": "この警戒感から、従来のスイフトいっきょくに対し、国際けっさいもうをふくせんかする3つの代替ルートが急拡大しています。",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_003.wav",
+          "hash": "11d437433597a4b1",
+          "start": 17.822,
+          "end": 26.1527,
+          "globalStart": 469.9562,
+          "globalEnd": 478.2869,
+          "duration": 8.3307,
+          "mouthSpans": [
+            {
+              "start": 17.942,
+              "end": 19.082
+            },
+            {
+              "start": 19.502,
+              "end": 20.222
+            },
+            {
+              "start": 20.342,
+              "end": 20.522
+            },
+            {
+              "start": 20.642,
+              "end": 21.302
+            },
+            {
+              "start": 21.662,
+              "end": 22.862
+            },
+            {
+              "start": 22.982,
+              "end": 25.922
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_rails_open"
+        },
+        {
+          "index": 4,
+          "id": "ch05_tsumugi_multipolar_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "1つ目は中国の人民元国際決済システムCIPS。資源国やアジアとの二国間決済で取扱高を着実に伸ばしています。",
+          "voiceText": "1つ目は中国の人民元国際決済システムシップス。資源国やアジアとのにこくかんけっさいで取扱高を着実に伸ばしています。",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_004.wav",
+          "hash": "4b484923762e9719",
+          "start": 26.4527,
+          "end": 35.2527,
+          "globalStart": 478.5869,
+          "globalEnd": 487.3869,
+          "duration": 8.8,
+          "mouthSpans": [
+            {
+              "start": 26.6927,
+              "end": 29.8127
+            },
+            {
+              "start": 29.9327,
+              "end": 30.1127
+            },
+            {
+              "start": 30.4727,
+              "end": 31.9727
+            },
+            {
+              "start": 32.0927,
+              "end": 35.0327
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_cips"
+        },
+        {
+          "index": 5,
+          "id": "ch05_tsumugi_multipolar_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "2つ目は多国間CBDC基盤のmBridge。コルレス銀行不要の直接決済を実証し、西側もプロジェクト・アゴラで対抗中です。",
+          "voiceText": "2つ目は多国間シービーディーシー基盤のエムブリッジ。コルレス銀行不要の直接決済を実証し、西側もプロジェクト・アゴラで対抗中です。",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_005.wav",
+          "hash": "709730d65171bda5",
+          "start": 35.5527,
+          "end": 45.4194,
+          "globalStart": 487.6869,
+          "globalEnd": 497.5536,
+          "duration": 9.8667,
+          "mouthSpans": [
+            {
+              "start": 35.7327,
+              "end": 36.4527
+            },
+            {
+              "start": 36.5727,
+              "end": 38.7927
+            },
+            {
+              "start": 39.2127,
+              "end": 42.1527
+            },
+            {
+              "start": 42.5127,
+              "end": 43.4727
+            },
+            {
+              "start": 43.5927,
+              "end": 43.7127
+            },
+            {
+              "start": 44.0127,
+              "end": 45.2727
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_mbridge"
+        },
+        {
+          "index": 6,
+          "id": "ch05_tsumugi_multipolar_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "3つ目はBRICS Pay。単一通貨は非現実的ですが、インドUPIやブラジルPixなど各国の即時決済網をつなぐ路線です。",
+          "voiceText": "3つ目はブリックスペイ。単一通貨は非現実的ですが、インドユーピーアイやブラジルピックスなど各国の即時けっさいもうをつなぐ路線です。",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_006.wav",
+          "hash": "2a4425d467e09776",
+          "start": 45.7194,
+          "end": 54.7007,
+          "globalStart": 497.8536,
+          "globalEnd": 506.8349,
+          "duration": 8.9813,
+          "mouthSpans": [
+            {
+              "start": 45.8394,
+              "end": 45.9594
+            },
+            {
+              "start": 46.0794,
+              "end": 46.6194
+            },
+            {
+              "start": 46.7394,
+              "end": 47.0994
+            },
+            {
+              "start": 47.5794,
+              "end": 49.6194
+            },
+            {
+              "start": 49.9194,
+              "end": 51.5394
+            },
+            {
+              "start": 51.6594,
+              "end": 54.5394
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_brics_pay"
+        },
+        {
+          "index": 7,
+          "id": "ch05_tsumugi_multipolar_007",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "1つの巨大な対抗通貨を作るんじゃなくて、いろんな国が別ルートの送金パイプをどんどん増やしているのだね！",
+          "voiceText": "1つの巨大な対抗通貨を作るんじゃなくて、いろんな国が別ルートの送金パイプをどんどん増やしているのだね！",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_007.wav",
+          "hash": "6b2f7871f644db23",
+          "start": 55.0507,
+          "end": 62.88,
+          "globalStart": 507.1849,
+          "globalEnd": 515.0142,
+          "duration": 7.8293,
+          "mouthSpans": [
+            {
+              "start": 55.2907,
+              "end": 55.4107
+            },
+            {
+              "start": 55.5307,
+              "end": 55.6507
+            },
+            {
+              "start": 55.7707,
+              "end": 57.1507
+            },
+            {
+              "start": 57.3307,
+              "end": 57.8707
+            },
+            {
+              "start": 58.0507,
+              "end": 58.1707
+            },
+            {
+              "start": 58.6507,
+              "end": 60.5107
+            },
+            {
+              "start": 60.6307,
+              "end": 62.7307
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_zunda_rails"
+        },
+        {
+          "index": 8,
+          "id": "ch05_tsumugi_multipolar_008",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "worry",
+          "se": null,
+          "caption": "決済の抜け道が広がっても代わりの主役はいないのか。でもデジタル通貨の時代になれば、勢力図が変わる可能性はないの？",
+          "voiceText": "決済の抜け道が広がっても代わりの主役はいないのか。でもデジタル通貨の時代になれば、勢力図が変わる可能性はないの？",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_008.wav",
+          "hash": "07200ce2ce7cebeb",
+          "start": 63.23,
+          "end": 71.3473,
+          "globalStart": 515.3642,
+          "globalEnd": 523.4815,
+          "duration": 8.1173,
+          "mouthSpans": [
+            {
+              "start": 63.35,
+              "end": 66.47
+            },
+            {
+              "start": 66.89,
+              "end": 67.19
+            },
+            {
+              "start": 67.31,
+              "end": 68.69
+            },
+            {
+              "start": 69.17,
+              "end": 71.15
+            }
+          ],
+          "pauseAfter": 0.45,
+          "cue": "c5_tsumugi_digital"
+        },
+        {
+          "index": 9,
+          "id": "ch05_tsumugi_multipolar_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "実はここが一番面白い逆転現象なんです。まず現実として、世界FX取引の88.4%、貿易金融の約8割はなおドル建てという厚い防壁があります。",
+          "voiceText": "実はここが一番面白い逆転現象なんです。まず現実として、世界エフエックス取引の88.4パーセント、貿易金融の約8割はなおドル建てという厚い防壁があります。",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_009.wav",
+          "hash": "9f92b92094285778",
+          "start": 71.7973,
+          "end": 84.4693,
+          "globalStart": 523.9315,
+          "globalEnd": 536.6035,
+          "duration": 12.672,
+          "mouthSpans": [
+            {
+              "start": 71.9173,
+              "end": 73.7173
+            },
+            {
+              "start": 73.8373,
+              "end": 74.8573
+            },
+            {
+              "start": 75.2173,
+              "end": 76.2973
+            },
+            {
+              "start": 76.5973,
+              "end": 77.7973
+            },
+            {
+              "start": 77.9173,
+              "end": 79.8373
+            },
+            {
+              "start": 80.2573,
+              "end": 80.5573
+            },
+            {
+              "start": 80.7373,
+              "end": 81.3373
+            },
+            {
+              "start": 81.4573,
+              "end": 84.2773
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_phase2_moat"
+        },
+        {
+          "index": 10,
+          "id": "ch05_tsumugi_multipolar_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "二国間の貿易は現地通貨にできても、複数の国をまたぐ金融取引では、媒介通貨としてのドルが一番安くて速いんです。",
+          "voiceText": "二国間の貿易は現地通貨にできても、複数の国をまたぐ金融取引では、ばいかいつうかとしてのドルが一番安くて速いんです。",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_010.wav",
+          "hash": "f4e3ec292a070110",
+          "start": 84.7693,
+          "end": 93.548,
+          "globalStart": 536.9035,
+          "globalEnd": 545.6822,
+          "duration": 8.7787,
+          "mouthSpans": [
+            {
+              "start": 84.8893,
+              "end": 85.1293
+            },
+            {
+              "start": 85.2493,
+              "end": 87.0493
+            },
+            {
+              "start": 87.1693,
+              "end": 87.4093
+            },
+            {
+              "start": 87.8893,
+              "end": 89.6293
+            },
+            {
+              "start": 89.7493,
+              "end": 90.1093
+            },
+            {
+              "start": 90.4093,
+              "end": 92.5693
+            },
+            {
+              "start": 92.6893,
+              "end": 93.3493
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_vehicle_inertia"
+        },
+        {
+          "index": 11,
+          "id": "ch05_tsumugi_multipolar_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "さらにデジタル時代、中国や欧州が公的CBDCを進める一方、米国は民間の『ドル連動ステーブルコイン』で逆襲に出ています。",
+          "voiceText": "さらにデジタル時代、中国や欧州が公的シービーディーシーを進める一方、米国は民間の『ドル連動ステーブルコイン』で逆襲に出ています。",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_011.wav",
+          "hash": "610740a0870d44cd",
+          "start": 93.848,
+          "end": 104.2373,
+          "globalStart": 545.9822,
+          "globalEnd": 556.3715,
+          "duration": 10.3893,
+          "mouthSpans": [
+            {
+              "start": 93.968,
+              "end": 95.048
+            },
+            {
+              "start": 95.528,
+              "end": 98.648
+            },
+            {
+              "start": 98.768,
+              "end": 99.008
+            },
+            {
+              "start": 99.488,
+              "end": 100.628
+            },
+            {
+              "start": 100.988,
+              "end": 102.428
+            },
+            {
+              "start": 102.848,
+              "end": 104.048
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_stablecoin_twist"
+        },
+        {
+          "index": 12,
+          "id": "ch05_tsumugi_multipolar_012",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "米国は2025年のGENIUS法で、約3,000億ドル規模のUSDT・USDC発行体に米国短期国債の100%裏付けを義務付けました。",
+          "voiceText": "米国は2025年のジーニアス法で、約3000億ドル規模のユーエスディーティーやユーエスディーシー発行体に、米国短期国債の100パーセント裏付けを義務付けました。",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_012.wav",
+          "hash": "a062982be7de33d7",
+          "start": 104.5373,
+          "end": 115.8866,
+          "globalStart": 556.6715,
+          "globalEnd": 568.0208,
+          "duration": 11.3493,
+          "mouthSpans": [
+            {
+              "start": 104.6573,
+              "end": 107.2973
+            },
+            {
+              "start": 107.7173,
+              "end": 111.1973
+            },
+            {
+              "start": 111.3173,
+              "end": 111.8573
+            },
+            {
+              "start": 112.3373,
+              "end": 112.6373
+            },
+            {
+              "start": 112.7573,
+              "end": 112.9973
+            },
+            {
+              "start": 113.1173,
+              "end": 113.7173
+            },
+            {
+              "start": 113.8973,
+              "end": 115.8173
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_genius_act"
+        },
+        {
+          "index": 13,
+          "id": "ch05_tsumugi_multipolar_013",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "つまり新興国でデジタル・ドルが使われるほど、裏側で米国債への構造的な需要が自動で生まれる新しい還流ループが作られつつあるんです。",
+          "voiceText": "つまり新興国でデジタル・ドルが使われるほど、裏側でべいこくさいへの構造的な需要が自動で生まれる新しいかんりゅうループが作られつつあるんです。",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_013.wav",
+          "hash": "c6c8f97fffe2f477",
+          "start": 116.1866,
+          "end": 125.8933,
+          "globalStart": 568.3208,
+          "globalEnd": 578.0275,
+          "duration": 9.7067,
+          "mouthSpans": [
+            {
+              "start": 116.3066,
+              "end": 117.8666
+            },
+            {
+              "start": 118.1666,
+              "end": 119.3666
+            },
+            {
+              "start": 119.7266,
+              "end": 125.7266
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c5_treasury_newloop"
+        },
+        {
+          "index": 14,
+          "id": "ch05_tsumugi_multipolar_014",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "結論として、ドルが急に崩壊するのではなく、ドルを中核にしつつ地域決済網・金・デジタル資産が並走する『多極併存』の時代へ進んでいます。",
+          "voiceText": "結論として、ドルが急に崩壊するのではなく、ドルをちゅうかくにしつつ地域けっさいもう・金・デジタル資産が並走する『たきょくへいぞん』の時代へ進んでいます。",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_014.wav",
+          "hash": "41debeb5a420e0a1",
+          "start": 126.1933,
+          "end": 137.7773,
+          "globalStart": 578.3275,
+          "globalEnd": 589.9115,
+          "duration": 11.584,
+          "mouthSpans": [
+            {
+              "start": 126.3133,
+              "end": 127.1533
+            },
+            {
+              "start": 127.4533,
+              "end": 129.3733
+            },
+            {
+              "start": 129.6733,
+              "end": 131.0533
+            },
+            {
+              "start": 131.2333,
+              "end": 131.8333
+            },
+            {
+              "start": 132.2533,
+              "end": 132.4333
+            },
+            {
+              "start": 133.0333,
+              "end": 134.6533
+            },
+            {
+              "start": 135.0733,
+              "end": 135.8533
+            },
+            {
+              "start": 136.2733,
+              "end": 137.5933
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_conclusion"
+        },
+        {
+          "index": 15,
+          "id": "ch05_tsumugi_multipolar_015",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "脱ドルのパイプが増える一方で、デジタルの世界では逆にステーブルコイン経由のドル化まで起きているのだ！",
+          "voiceText": "だつどるのパイプが増える一方で、デジタルの世界では逆にステーブルコイン経由のドル化まで起きているのだ！",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_015.wav",
+          "hash": "25c7a914e8ad9c45",
+          "start": 138.1273,
+          "end": 145.5193,
+          "globalStart": 590.2615,
+          "globalEnd": 597.6535,
+          "duration": 7.392,
+          "mouthSpans": [
+            {
+              "start": 138.2473,
+              "end": 138.3673
+            },
+            {
+              "start": 138.5473,
+              "end": 138.8473
+            },
+            {
+              "start": 138.9673,
+              "end": 139.3873
+            },
+            {
+              "start": 139.5073,
+              "end": 139.8073
+            },
+            {
+              "start": 140.0473,
+              "end": 140.3473
+            },
+            {
+              "start": 140.7673,
+              "end": 141.3073
+            },
+            {
+              "start": 141.4273,
+              "end": 141.9073
+            },
+            {
+              "start": 142.2073,
+              "end": 142.3873
+            },
+            {
+              "start": 142.5073,
+              "end": 143.2873
+            },
+            {
+              "start": 143.4073,
+              "end": 144.5473
+            },
+            {
+              "start": 144.7873,
+              "end": 145.3873
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_zunda_twist"
+        },
+        {
+          "index": 16,
+          "id": "ch05_tsumugi_multipolar_016",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "白か黒かではなく、一極の慣性と多極化の圧力がせめぎ合う新しい均衡点へ向かっているんですね。",
+          "voiceText": "白か黒かではなく、いっきょくのかんせいとたきょくかの圧力がせめぎ合う新しい均衡点へ向かっているんですね。",
+          "audioFile": "audio/lines/ch05_tsumugi_multipolar_016.wav",
+          "hash": "aa5539ffe460d852",
+          "start": 145.8693,
+          "end": 152.8133,
+          "globalStart": 598.0035,
+          "globalEnd": 604.9475,
+          "duration": 6.944,
+          "mouthSpans": [
+            {
+              "start": 145.9893,
+              "end": 146.9493
+            },
+            {
+              "start": 147.5493,
+              "end": 148.8693
+            },
+            {
+              "start": 148.9893,
+              "end": 152.7093
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c5_wrap"
+        }
+      ]
+    },
+    {
+      "id": "ch06_summary",
+      "title": "6. まとめ：通貨の勢力図から世界経済の未来を読む",
+      "layout": "default",
+      "start": 605.6975,
+      "end": 681.4336,
+      "duration": 75.7361,
+      "cues": {
+        "c6_intro": 0.45,
+        "c6_zunda_recap": 6.4247,
+        "c6_point1": 14.6894,
+        "c6_point2": 23.2454,
+        "c6_point3": 32.4947,
+        "c6_news_lens": 44.4394,
+        "c6_tsumugi_next": 53.6427,
+        "c6_zunda_end": 64.6594,
+        "c6_outro": 70.6981
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch06_summary_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "それでは最後に、今日の『基軸通貨の変遷』を3つの視点で総括しましょう。",
+          "voiceText": "それでは最後に、今日の『きじくつうかの変遷』を3つの視点で総括しましょう。",
+          "audioFile": "audio/lines/ch06_summary_001.wav",
+          "hash": "b212b2117d3d31ee",
+          "start": 0.45,
+          "end": 6.1247,
+          "globalStart": 606.1475,
+          "globalEnd": 611.8222,
+          "duration": 5.6747,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 1.53
+            },
+            {
+              "start": 1.89,
+              "end": 2.25
+            },
+            {
+              "start": 2.61,
+              "end": 3.81
+            },
+            {
+              "start": 4.17,
+              "end": 6.03
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c6_intro"
+        },
+        {
+          "index": 2,
+          "id": "ch06_summary_002",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "歴史と仕組みと最新データを並べたら、『ドルは明日終わる！』みたいな極端なニュースに振り回されずに済むのだ！",
+          "voiceText": "歴史と仕組みと最新データを並べたら、『ドルは明日終わる！』みたいな極端なニュースに振り回されずに済むのだ！",
+          "audioFile": "audio/lines/ch06_summary_002.wav",
+          "hash": "d0930d4e3be9c3a1",
+          "start": 6.4247,
+          "end": 14.3394,
+          "globalStart": 612.1222,
+          "globalEnd": 620.0369,
+          "duration": 7.9147,
+          "mouthSpans": [
+            {
+              "start": 6.7247,
+              "end": 7.0847
+            },
+            {
+              "start": 7.2047,
+              "end": 7.5047
+            },
+            {
+              "start": 7.6247,
+              "end": 9.1247
+            },
+            {
+              "start": 9.4247,
+              "end": 10.5647
+            },
+            {
+              "start": 10.9247,
+              "end": 11.4047
+            },
+            {
+              "start": 11.7047,
+              "end": 12.5447
+            },
+            {
+              "start": 12.7247,
+              "end": 13.5647
+            },
+            {
+              "start": 13.6847,
+              "end": 14.1647
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_zunda_recap"
+        },
+        {
+          "index": 3,
+          "id": "ch06_summary_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "1つ目は『歴史の法則と慣性』。ギルダーからポンド、ドルへの交代は4つの条件が揃い数十年かけて進みました。",
+          "voiceText": "1つ目は『歴史の法則とかんせい』。ギルダーからポンド、ドルへの交代は4つの条件が揃い数十年かけて進みました。",
+          "audioFile": "audio/lines/ch06_summary_003.wav",
+          "hash": "661b6b4141b9f505",
+          "start": 14.6894,
+          "end": 22.9454,
+          "globalStart": 620.3869,
+          "globalEnd": 628.6429,
+          "duration": 8.256,
+          "mouthSpans": [
+            {
+              "start": 14.9294,
+              "end": 15.4094
+            },
+            {
+              "start": 15.7094,
+              "end": 16.4894
+            },
+            {
+              "start": 16.6094,
+              "end": 17.1494
+            },
+            {
+              "start": 17.5094,
+              "end": 18.5294
+            },
+            {
+              "start": 18.8894,
+              "end": 22.8494
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c6_point1"
+        },
+        {
+          "index": 4,
+          "id": "ch06_summary_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "2つ目は『ドルの特権とジレンマ』。トリフィンのジレンマとニクソン・ショック後も、米国債市場とネットワーク効果が土台を維持しています。",
+          "voiceText": "2つ目は『ドルの特権とジレンマ』。トリフィンのジレンマとニクソン・ショック後も、べいこくさい市場とネットワーク効果が土台を維持しています。",
+          "audioFile": "audio/lines/ch06_summary_004.wav",
+          "hash": "049284ed15d9cd91",
+          "start": 23.2454,
+          "end": 32.1947,
+          "globalStart": 628.9429,
+          "globalEnd": 637.8922,
+          "duration": 8.9493,
+          "mouthSpans": [
+            {
+              "start": 23.4254,
+              "end": 23.9654
+            },
+            {
+              "start": 24.2654,
+              "end": 24.6854
+            },
+            {
+              "start": 24.8054,
+              "end": 25.5854
+            },
+            {
+              "start": 25.8854,
+              "end": 27.3854
+            },
+            {
+              "start": 27.8054,
+              "end": 27.9254
+            },
+            {
+              "start": 28.0454,
+              "end": 28.4054
+            },
+            {
+              "start": 28.7054,
+              "end": 29.9054
+            },
+            {
+              "start": 30.0254,
+              "end": 30.3254
+            },
+            {
+              "start": 30.5054,
+              "end": 32.0054
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c6_point2"
+        },
+        {
+          "index": 5,
+          "id": "ch06_summary_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "3つ目は『多極併存の現在地』。ドル比率56.7%への分散、金の復権、決済網複線化とデジタル・ドルの逆襲が同時進行中です。",
+          "voiceText": "3つ目は『たきょくへいぞんの現在地』。ドル比率56.7パーセントへの分散、金の復権、けっさいもうふくせんかとデジタル・ドルの逆襲が同時進行中です。",
+          "audioFile": "audio/lines/ch06_summary_005.wav",
+          "hash": "8ecb9f54167eeade",
+          "start": 32.4947,
+          "end": 44.0894,
+          "globalStart": 638.1922,
+          "globalEnd": 649.7869,
+          "duration": 11.5947,
+          "mouthSpans": [
+            {
+              "start": 32.6147,
+              "end": 32.7347
+            },
+            {
+              "start": 32.8547,
+              "end": 33.2747
+            },
+            {
+              "start": 33.5747,
+              "end": 35.0747
+            },
+            {
+              "start": 35.4347,
+              "end": 36.3947
+            },
+            {
+              "start": 36.5147,
+              "end": 38.1347
+            },
+            {
+              "start": 38.5547,
+              "end": 38.9747
+            },
+            {
+              "start": 39.0947,
+              "end": 39.2747
+            },
+            {
+              "start": 39.6947,
+              "end": 40.3547
+            },
+            {
+              "start": 40.4747,
+              "end": 41.4347
+            },
+            {
+              "start": 41.7947,
+              "end": 43.8947
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_point3"
+        },
+        {
+          "index": 6,
+          "id": "ch06_summary_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "為替や金価格、米国債利回りのニュースを見るとき、この3つの軸を思い出すと世界経済の構図がぐっと立体的に見えてきます。",
+          "voiceText": "為替や金価格、べいこくさい利回りのニュースを見るとき、この3つの軸を思い出すと世界経済の構図がぐっと立体的に見えてきます。",
+          "audioFile": "audio/lines/ch06_summary_006.wav",
+          "hash": "eb11be3af07b2e58",
+          "start": 44.4394,
+          "end": 53.2927,
+          "globalStart": 650.1369,
+          "globalEnd": 658.9902,
+          "duration": 8.8533,
+          "mouthSpans": [
+            {
+              "start": 44.5594,
+              "end": 45.6994
+            },
+            {
+              "start": 46.0594,
+              "end": 48.2794
+            },
+            {
+              "start": 48.5794,
+              "end": 51.8794
+            },
+            {
+              "start": 51.9994,
+              "end": 53.0794
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_news_lens"
+        },
+        {
+          "index": 7,
+          "id": "ch06_summary_007",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "smile",
+          "se": null,
+          "caption": "次は『米国債と世界の金利』や『金が買われ続ける理由』、それに『CBDCとステーブルコインの覇権争い』も掘り下げたいね！",
+          "voiceText": "次は『べいこくさいと世界の金利』や『金が買われ続ける理由』、それに『シービーディーシーとステーブルコインのはけん争い』も掘り下げたいね！",
+          "audioFile": "audio/lines/ch06_summary_007.wav",
+          "hash": "b994cf49ecd59c50",
+          "start": 53.6427,
+          "end": 64.3094,
+          "globalStart": 659.3402,
+          "globalEnd": 670.0069,
+          "duration": 10.6667,
+          "mouthSpans": [
+            {
+              "start": 53.7627,
+              "end": 54.1827
+            },
+            {
+              "start": 54.6027,
+              "end": 54.8427
+            },
+            {
+              "start": 54.9627,
+              "end": 56.1027
+            },
+            {
+              "start": 56.7027,
+              "end": 56.9427
+            },
+            {
+              "start": 57.4827,
+              "end": 58.8627
+            },
+            {
+              "start": 59.4627,
+              "end": 59.8227
+            },
+            {
+              "start": 60.2427,
+              "end": 61.2027
+            },
+            {
+              "start": 61.3227,
+              "end": 62.7627
+            },
+            {
+              "start": 63.2427,
+              "end": 64.2027
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_tsumugi_next"
+        },
+        {
+          "index": 8,
+          "id": "ch06_summary_008",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "どれも今のニュースに直結していて面白そうなのだ！また一緒に勉強するのだ！",
+          "voiceText": "どれも今のニュースに直結していて面白そうなのだ！また一緒に勉強するのだ！",
+          "audioFile": "audio/lines/ch06_summary_008.wav",
+          "hash": "5ad26c0fa2c5b0de",
+          "start": 64.6594,
+          "end": 70.3981,
+          "globalStart": 670.3569,
+          "globalEnd": 676.0956,
+          "duration": 5.7387,
+          "mouthSpans": [
+            {
+              "start": 64.7794,
+              "end": 66.0394
+            },
+            {
+              "start": 66.3394,
+              "end": 68.1394
+            },
+            {
+              "start": 68.6194,
+              "end": 70.2394
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c6_zunda_end"
+        },
+        {
+          "index": 9,
+          "id": "ch06_summary_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "ご視聴ありがとうございました。次回の解説動画もお楽しみに！",
+          "voiceText": "ご視聴ありがとうございました。次回の解説動画もお楽しみに！",
+          "audioFile": "audio/lines/ch06_summary_009.wav",
+          "hash": "120dcd3f1bafc25a",
+          "start": 70.6981,
+          "end": 74.9861,
+          "globalStart": 676.3956,
+          "globalEnd": 680.6836,
+          "duration": 4.288,
+          "mouthSpans": [
+            {
+              "start": 70.8181,
+              "end": 72.5581
+            },
+            {
+              "start": 72.8581,
+              "end": 74.8981
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c6_outro"
+        }
+      ]
+    }
+  ]
+}

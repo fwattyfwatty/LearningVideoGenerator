@@ -1,0 +1,44 @@
+<style>
+.c1-wrap{font-family:"Noto Sans JP",sans-serif;color:#0f172a;height:100%;display:flex;flex-direction:column;padding:12px 20px 42px;box-sizing:border-box;gap:14px}.c1-head{text-align:center}.c1-head h1{font-size:42px;margin:8px 0;color:#0f172a}.c1-head p{font-size:22px;margin:0;color:#475569}.c1-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;flex:1;min-height:0}.c1-card{padding:22px 26px;background:#fff;border:1px solid #cbd5e1;border-radius:20px;box-shadow:0 12px 32px #0f172a14}.c1-card h2{font-size:25px;margin:0 0 12px}.c1-row{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid #e2e8f0;padding:11px 0;font-size:19px}.c1-row strong{color:#1d4ed8}.c1-pill{font-size:15px;color:#334155;background:#eff6ff;border-radius:20px;padding:6px 10px}.c1-stage{height:190px;background:#f8fafc;border-radius:16px}.c1-stage svg{width:100%;height:100%}.c1-legend{display:flex;justify-content:space-between;font-size:17px;font-weight:700;color:#475569}.c1-equation{text-align:center;background:#eff6ff;border-radius:12px;padding:12px;font-size:20px;font-weight:800;color:#1d4ed8}.c1-goals{margin:0 212px;display:flex;gap:12px}.c1-goal{flex:1;text-align:center;background:#fff;border:1px solid #cbd5e1;border-radius:14px;padding:12px 8px;font-size:17px;font-weight:700;color:#0f172a}
+</style>
+<div class="c1-wrap">
+  <div class="c1-head">
+    <span class="dg-hero-badge"><span class="dg-hero-dot"></span>世界経済のマクロ金融入門</span>
+    <h1>主要国家の金融政策と<span style="color:#1d4ed8">その意図</span></h1>
+    <p>なぜ世界の金利はバラバラなのか？</p>
+  </div>
+  <div class="c1-grid">
+    <section class="dg-card c1-card">
+      <h2>主要４極の政策スタンス</h2>
+      <div class="c1-row c1-us"><span>米国 FRB　<strong>3.75〜4.00%</strong></span><span class="dg-pill-danger c1-pill">引き締め寄り・慎重</span></div>
+      <div class="c1-row c1-eu"><span>欧州 ECB　<strong>預金金利 2.50%</strong></span><span class="dg-pill-warn c1-pill">物価警戒・様子見</span></div>
+      <div class="c1-row c1-jp"><span>日本 日銀　<strong>1.25%前後</strong></span><span class="dg-pill-accent c1-pill">段階利上げ・正常化</span></div>
+      <div class="c1-row c1-cn"><span>中国 人民銀行　<strong>1年LPR 3.00%</strong></span><span class="dg-pill-ok c1-pill">適度に緩和的</span></div>
+      <div style="font-size:15px;color:#475569;margin-top:8px">2026年11月時点 ／ 中国の翌日物 1.25%</div>
+    </section>
+    <section class="dg-card-glow c1-card">
+      <h2>経済のアクセルとブレーキ</h2>
+      <div class="dg-svg-stage c1-stage">
+        <svg viewBox="0 0 500 190" role="img" aria-label="金融政策のゲージ">
+          <path d="M65 155 A185 185 0 0 1 155 25" fill="none" stroke="#16a34a" stroke-width="22" stroke-linecap="round"/>
+          <path d="M165 20 A185 185 0 0 1 335 20" fill="none" stroke="#1d4ed8" stroke-width="22"/>
+          <path d="M345 25 A185 185 0 0 1 435 155" fill="none" stroke="#d97706" stroke-width="22" stroke-linecap="round"/>
+          <line class="c1-needle" x1="250" y1="155" x2="250" y2="43" stroke="#0f172a" stroke-width="8" stroke-linecap="round"/><circle cx="250" cy="155" r="13" fill="#1d4ed8"/>
+        </svg>
+      </div>
+      <div class="c1-legend"><span>緩和・利下げ<br>景気刺激</span><span>正常化<br>中立金利</span><span>引き締め・利上げ<br>インフレ抑制</span></div>
+      <div class="c1-equation">政策 ＝ 中央銀行の使命 × 国内の悩み</div>
+    </section>
+  </div>
+  <div class="c1-goals"><div class="c1-goal">① 仕組みと武器</div><div class="c1-goal">② ４大国の意図</div><div class="c1-goal">③ 為替の制約と限界</div></div>
+</div>
+<script>
+window.__diagramBuilders['ch01_intro'] = function(tl,cues){
+  gsap.set('.c1-us,.c1-eu,.c1-jp,.c1-cn,.c1-goal',{opacity:0,y:12});
+  tl.to('.c1-us,.c1-eu',{opacity:1,y:0,duration:.5,stagger:.15},cues.c1_four_poles);
+  tl.to('.c1-jp,.c1-cn',{opacity:1,y:0,duration:.5,stagger:.15},cues.c1_jp_cn_split);
+  tl.to('.c1-needle',{rotation:-35,svgOrigin:'250 155',duration:1},cues.c1_zunda_why);
+  tl.to('.c1-needle',{rotation:18,svgOrigin:'250 155',duration:1},cues.c1_thesis);
+  tl.to('.c1-goal',{opacity:1,y:0,duration:.5,stagger:.15},cues.c1_goals);
+};
+</script>

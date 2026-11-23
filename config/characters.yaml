@@ -1,0 +1,93 @@
+# VOICEVOX 3キャラクター定義 & 立ち絵設定
+# speaker ID は `npm run voice:check` でローカルの VOICEVOX Engine と突き合わせて検証できます。
+# 声調 (`style`) は原則 `normal` 固定とし、感情のメリハリは立ち絵の `emotion` で表現します。
+
+metan:
+  name: "四国めたん"
+  role: "教え役（当該ジャンルのプロフェッショナル）"
+  tone: "標準的な丁寧解説口調（お嬢様口調は使わない）"
+  position: "left"
+  color: "#db2777"
+  bg: "#fdf2f8"
+  badge: "解説・プロ"
+  speaker_name: "四国めたん"
+  styles:
+    normal: 2
+    amama: 0
+    sexy: 4
+    tsundere: 6
+    whisper: 36
+    hisohiso: 37
+  default_style: "normal"
+  speedScale: 1.05
+  pitchScale: 0.0
+  intonationScale: 1.05
+  portraits_dir: "assets/characters/exported/metan"
+  default_emotion: "normal"
+  emotions:
+    - normal
+    - explain
+    - smile
+    - surprise
+    - serious
+    - worry
+  credit: "VOICEVOX:四国めたん"
+  portrait_credit: "立ち絵: のんたお式四国めたん"
+
+zundamon:
+  name: "ずんだもん"
+  role: "聞き手（大学1年生レベルの素人）"
+  position: "right"
+  color: "#16a34a"
+  bg: "#f0fdf4"
+  badge: "聞き手・大1"
+  speaker_name: "ずんだもん"
+  styles:
+    normal: 3
+    amama: 1
+    sexy: 5
+    tsundere: 7
+    whisper: 22
+    hisohiso: 38
+    herohero: 75
+    namidame: 76
+  default_style: "normal"
+  speedScale: 1.08
+  pitchScale: 0.0
+  intonationScale: 1.1
+  portraits_dir: "assets/characters/exported/zundamon"
+  default_emotion: "normal"
+  emotions:
+    - normal
+    - question
+    - smile
+    - surprise
+    - worry
+    - serious
+  credit: "VOICEVOX:ずんだもん"
+  portrait_credit: "立ち絵: のんたお式ずんだもん"
+
+tsumugi:
+  name: "春日部つむぎ"
+  role: "ゲスト（議論の途中で前提を揺さぶる鋭い疑問を投げる役／場面転換装置には使わない）"
+  position: "cutin"
+  color: "#d97706"
+  bg: "#fffbeb"
+  badge: ""
+  speaker_name: "春日部つむぎ"
+  styles:
+    normal: 8
+  default_style: "normal"
+  speedScale: 1.08
+  pitchScale: 0.0
+  intonationScale: 1.05
+  portraits_dir: "assets/characters/exported/tsumugi"
+  default_emotion: "sharp"
+  emotions:
+    - normal
+    - sharp
+    - smile
+    - surprise
+    - worry
+  credit: "VOICEVOX:春日部つむぎ"
+  portrait_credit: "立ち絵: のんたお式春日部つむぎ"

@@ -1,0 +1,347 @@
+<style>
+  .ch2-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Leave right side open for Tsumugi cut-in card (top-right ~340px) */
+  .ch2-header-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-right: 340px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-subtle);
+  }
+
+  .ch2-heading {
+    margin: 0;
+    font-size: 31px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .ch2-q-pill {
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: #fffbeb;
+    color: #b45309;
+    border: 2px solid #f59e0b;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .ch2-main {
+    flex: 1;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 12px;
+  }
+
+  .ch2-trust-stage {
+    position: relative;
+    border-radius: 20px;
+    background: var(--bg-card);
+    border: 2px solid var(--border-subtle);
+    padding: 20px 28px;
+    display: grid;
+    grid-template-columns: 280px 1fr 370px;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .trust-node {
+    border-radius: 18px;
+    background: var(--bg-card-muted);
+    border: 2px solid var(--border-subtle);
+    padding: 18px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .trust-node-icon {
+    font-size: 42px;
+    line-height: 1;
+  }
+
+  .trust-node-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    white-space: nowrap;
+  }
+
+  .trust-node-sub {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-secondary);
+  }
+
+  .center-verify-col {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 0;
+  }
+
+  .ca-box {
+    width: auto;
+    min-width: 460px;
+    padding: 12px 24px;
+    border-radius: 16px;
+    background: #eff6ff;
+    border: 2px solid #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.14);
+  }
+
+  .ca-text-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e40af;
+  }
+
+  .ca-text-sub {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1d4ed8;
+  }
+
+  .cert-stamp {
+    padding: 10px 22px;
+    border-radius: 14px;
+    background: #fef3c7;
+    border: 3px solid #d97706;
+    color: #92400e;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 0 10px 24px rgba(217, 119, 6, 0.22);
+  }
+
+  .browser-ok-pill {
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: #dcfce7;
+    color: #166534;
+    border: 2px solid #22c55e;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .servers-stack {
+    position: relative;
+    height: 244px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .server-fake {
+    border-color: #ef4444;
+    background: #fef2f2;
+  }
+
+  .server-fake .trust-node-title {
+    color: #b91c1c;
+  }
+
+  .server-real {
+    border-color: #16a34a;
+    background: #f0fdf4;
+  }
+
+  .server-real .trust-node-title {
+    color: #166534;
+  }
+
+  .fake-warning-tag {
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: #dc2626;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  /* Bottom 2-pillar summary cards */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .pillar-card {
+    border-radius: 18px;
+    background: var(--bg-card);
+    border: 3px solid var(--accent-primary);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+  }
+
+  .pillar-card-cert {
+    border-color: #d97706;
+  }
+
+  .pillar-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    font-size: 34px;
+    flex-shrink: 0;
+  }
+
+  .pillar-icon-enc { background: #dcfce7; }
+  .pillar-icon-cert { background: #fef3c7; }
+
+  .pillar-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  .pillar-desc {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-secondary);
+  }
+</style>
+
+<div class="ch2-wrap">
+  <div class="ch2-header-row">
+    <span class="ch2-q-pill">つむぎの疑問</span>
+    <h1 id="ch2-heading" class="ch2-heading">暗号化だけで「偽サイト」は防げるのか？</h1>
+  </div>
+
+  <div class="ch2-main">
+    <div class="ch2-trust-stage">
+      <!-- Left: Browser -->
+      <div id="ch2-browser" class="trust-node">
+        <div class="trust-node-icon">💻</div>
+        <div class="trust-node-title">ブラウザ</div>
+        <div class="trust-node-sub">接続先が本物か確認したい</div>
+        <div id="ch2-browser-ok" class="browser-ok-pill">✅ 証明書を検証してOK！</div>
+      </div>
+
+      <!-- Center: Verification Flow & CA -->
+      <div class="center-verify-col">
+        <div id="ch2-ca-box" class="ca-box">
+          <span style="font-size: 36px;">🏛️</span>
+          <div>
+            <div class="ca-text-title">認証局（CA：信頼できる第三者機関）</div>
+            <div class="ca-text-sub">サイト運営者の身元を厳格に審査</div>
+          </div>
+        </div>
+
+        <div id="ch2-cert-stamp" class="cert-stamp">
+          📜 サーバー証明書（本物のお墨付き！）
+        </div>
+
+        <svg id="ch2-verify-svg" width="520" height="56" viewBox="0 0 520 56" style="overflow: visible;">
+          <line x1="20" y1="28" x2="500" y2="28" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round" />
+          <line id="ch2-verify-line" x1="20" y1="28" x2="500" y2="28" stroke="#16a34a" stroke-width="6" stroke-linecap="round" stroke-dasharray="480" stroke-dashoffset="480" />
+        </svg>
+      </div>
+
+      <!-- Right: Fake vs Real Server -->
+      <div class="servers-stack">
+        <div id="ch2-fake-server" class="trust-node server-fake">
+          <div class="trust-node-title">😈 偽サーバー（なりすまし）</div>
+          <div class="trust-node-sub">暗号化はできるが証明書がない</div>
+          <span class="fake-warning-tag">⚠️ 暗号化だけでは防げない！</span>
+        </div>
+
+        <div id="ch2-real-server" class="trust-node server-real">
+          <div class="trust-node-title">🏢 本物のサーバー</div>
+          <div class="trust-node-sub">正規のサーバー証明書を提示</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary 2 Pillars -->
+    <div class="summary-grid">
+      <div id="pillar-1" class="pillar-card">
+        <div class="pillar-icon pillar-icon-enc">🔒</div>
+        <div>
+          <div class="pillar-title">① 通信の暗号化（TLS）</div>
+          <div class="pillar-desc">途中の盗み見・改ざんからデータを守る</div>
+        </div>
+      </div>
+
+      <div id="pillar-2" class="pillar-card pillar-card-cert">
+        <div class="pillar-icon pillar-icon-cert">📜</div>
+        <div>
+          <div class="pillar-title">② サーバー証明書（認証局）</div>
+          <div class="pillar-desc">通信相手が「本物のサイト」であることを保証</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders["ch02_tsumugi_cert"] = function (tl, cues) {
+  gsap.set('#ch2-heading', { opacity: 0, x: -16 });
+  gsap.set('#ch2-browser', { opacity: 0, y: 18 });
+  gsap.set('#ch2-fake-server', { opacity: 0, x: 24 });
+  gsap.set('#ch2-ca-box', { opacity: 0, y: -20, scale: 0.9 });
+  gsap.set('#ch2-real-server', { opacity: 0, y: 20 });
+  gsap.set('#ch2-cert-stamp', { opacity: 0, scale: 1.5, rotation: -12 });
+  gsap.set('#ch2-verify-svg', { opacity: 0 });
+  gsap.set('#ch2-browser-ok', { opacity: 0, scale: 0.7 });
+  gsap.set('#pillar-1', { opacity: 0, y: 24 });
+  gsap.set('#pillar-2', { opacity: 0, y: 24 });
+
+  // Cue 1: tsumugi_question
+  const tQ = cues.tsumugi_question ?? 0.45;
+  tl.to('#ch2-heading', { opacity: 1, x: 0, duration: 0.4, ease: 'power2.out' }, tQ);
+  tl.to('#ch2-browser', { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, tQ + 0.15);
+  tl.to('#ch2-fake-server', { opacity: 1, x: 0, duration: 0.45, ease: 'power2.out' }, tQ + 0.35);
+
+  // Cue 2: show_fake_server
+  const tFake = cues.show_fake_server ?? 6.5;
+  tl.to('#ch2-fake-server', { scale: 1.04, duration: 0.25, ease: 'power2.out' }, tFake);
+  tl.to('#ch2-fake-server', { scale: 1.0, duration: 0.25, ease: 'power2.inOut' }, tFake + 0.3);
+
+  // Cue 3: show_ca_cert
+  const tCa = cues.show_ca_cert ?? 12.0;
+  tl.to('#ch2-fake-server', { opacity: 0.42, scale: 0.94, duration: 0.4, ease: 'power2.out' }, tCa);
+  tl.to('#ch2-real-server', { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, tCa + 0.1);
+  tl.to('#ch2-ca-box', { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: 'back.out(1.4)' }, tCa + 0.3);
+  tl.to('#ch2-cert-stamp', { opacity: 1, scale: 1, rotation: -2, duration: 0.4, ease: 'back.out(1.8)' }, tCa + 0.8);
+  tl.to('#ch2-verify-svg', { opacity: 1, duration: 0.25, ease: 'power1.out' }, tCa + 0.85);
+  tl.to('#ch2-verify-line', { strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut' }, tCa + 1.0);
+  tl.to('#ch2-browser-ok', { opacity: 1, scale: 1, duration: 0.35, ease: 'back.out(1.7)' }, tCa + 1.5);
+
+  // Cue 4: show_summary_cards
+  const tSum = cues.show_summary_cards ?? 19.0;
+  tl.to('#pillar-1', { opacity: 1, y: 0, duration: 0.45, ease: 'power3.out' }, tSum);
+  tl.to('#pillar-2', { opacity: 1, y: 0, duration: 0.45, ease: 'power3.out' }, tSum + 0.35);
+
+  // Cue 5: show_outro
+  const tOutro = cues.show_outro ?? 24.5;
+  tl.to(['#pillar-1', '#pillar-2'], { scale: 1.02, duration: 0.35, ease: 'power2.out', stagger: 0.12 }, tOutro);
+  tl.to(['#pillar-1', '#pillar-2'], { scale: 1.0, duration: 0.35, ease: 'power2.inOut' }, tOutro + 0.6);
+};
+</script>

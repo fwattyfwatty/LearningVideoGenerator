@@ -1,0 +1,21 @@
+<style>
+.c1-wrap{height:100%;box-sizing:border-box;padding:10px 24px 35px;font-family:"Noto Sans JP",sans-serif;color:#1c1917;display:flex;flex-direction:column;gap:14px}
+.c1-hero{text-align:center}.c1-hero h1{font-size:42px;line-height:1.3;margin:8px 0;font-weight:900}.c1-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1;min-height:0}.c1-card{display:flex;flex-direction:column;justify-content:space-between;gap:12px;padding:20px 26px;background:#fffdf9;border:1px solid #ded4c7;border-radius:20px;min-height:0}.c1-card h2{font-size:25px;margin:0}.c1-icon{width:30px;height:30px;color:#b45309}.c1-chart{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}.c1-note{font-size:20px;font-weight:800;color:#0f766e;background:#eef6f1;border-radius:12px;padding:10px 16px}.c1-goals{display:flex;gap:12px;justify-content:center}.c1-goal{background:#fffdf9;border:1px solid #dbcaba;border-radius:14px;padding:12px;font-size:18px;font-weight:800;white-space:nowrap}.c1-goal svg{width:23px;height:23px;vertical-align:middle;color:#b45309}
+</style>
+<div class="c1-wrap">
+  <div class="c1-hero"><div class="dg-hero-badge"><span class="dg-hero-dot"></span>会社員のマネー教養入門</div><h1>会社員のための<span class="dg-text-accent">資産運用入門</span><br>新NISAと「<span class="dg-text-accent">暴落</span>」を乗り越える知恵</h1></div>
+  <div class="c1-grid dg-grid-2">
+    <div class="c1-card dg-card-glow" id="c1-card-nisa"><div class="dg-card-title-group"><svg class="c1-icon"><use href="#dg-ico-trending-up"></use></svg><h2>広がる新NISA（金融庁データ）</h2></div><div class="c1-chart" id="c1-bar-box"></div><div class="c1-note" id="c1-85t-callout">累計買付額 約85兆円（2026年6月末・旧NISA含む）</div></div>
+    <div class="c1-card dg-card" id="c1-card-stance"><div class="dg-card-title-group"><svg class="c1-icon"><use href="#dg-ico-scale"></use></svg><h2>会社員のお金の置き場所</h2></div><div class="c1-chart" id="c1-gauge-box"></div><div class="c1-note">インフレに備え、仕事に集中できるバランス</div></div>
+  </div>
+  <div class="c1-goals dg-title-bottom-safe"><div class="c1-goal"><svg><use href="#dg-ico-landmark"></use></svg> ① 新NISAとインデックス</div><div class="c1-goal"><svg><use href="#dg-ico-clock"></use></svg> ② 乱高下と暴落の歴史</div><div class="c1-goal"><svg><use href="#dg-ico-shield"></use></svg> ③ 負けにくい設計ルール</div></div>
+</div>
+<script>
+window.__diagramBuilders['ch01_intro'] = function(tl,cues){
+  const m=window.dgMotion,w=window.dgWidgets;
+  m.reveal(tl,'.c1-hero',cues.c1_title); m.reveal(tl,'.c1-card',cues.c1_title+0.2);
+  w.barChart('#c1-bar-box',tl,{max:3500,unit:'万口座',countUp:true,at:cues.c1_nisa_boom+0.15,items:[{label:'2024年末',value:2559,tone:'secondary'},{label:'2025年末',value:2826,tone:'ok'},{label:'2026年6月末',value:3048,tone:'primary'}]});
+  w.gauge('#c1-gauge-box',tl,{zones:[{label:'預金のみ',sub:'物価で目減り',color:'var(--accent-warn)'},{label:'長期積立',sub:'防衛資金＋分散',color:'var(--accent-ok)'},{label:'短期売買',sub:'本業圧迫・高リスク',color:'var(--accent-danger)'}],initialAngle:-52,moves:[{angle:0,at:cues.c1_volatility_empathy+0.2,duration:1.1}],centerLabel:'生活防衛資金 × 長期分散'});
+  m.focus(tl,'#c1-card-stance',['#c1-card-nisa'],cues.c1_inflation); m.focus(tl,'#c1-card-nisa',['#c1-card-stance'],cues.c1_nisa_boom); m.reveal(tl,'#c1-85t-callout',cues.c1_nisa_numbers); m.pulse(tl,'#c1-85t-callout',cues.c1_nisa_numbers); m.focus(tl,'#c1-card-stance',['#c1-card-nisa'],cues.c1_volatility_empathy); m.unfocus(tl,['#c1-card-nisa','#c1-card-stance'],cues.c1_goals_1); m.reveal(tl,'.c1-goal',cues.c1_goals_1);
+};
+</script>

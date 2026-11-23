@@ -1,0 +1,165 @@
+<style>
+  .c3-scene { --c3-teal: #5eead4; --c3-amber: #ffd38a; --c3-muted: #afc2d4; --c3-line: #32495c; position: relative; height: 700px; color: #eef7ff; font-family: "Noto Sans JP", sans-serif; }
+  .c3-phase { position: absolute; inset: 0; box-sizing: border-box; padding: 0 0 48px; }
+  .c3-title { position: relative; height: 78px; margin: 0; padding: 11px 24px; border-left: 5px solid #14b8a6; border-radius: 12px; background: #112637; font-size: 36px; line-height: 54px; }
+  .c3-pill { position: absolute; top: 18px; right: 22px; padding: 6px 14px; border: 1px solid #2f7d78; border-radius: 24px; color: var(--c3-teal); font-size: 19px; line-height: 28px; }
+  .c3-card { position: absolute; box-sizing: border-box; width: calc(50% - 10px); padding: 20px 24px; border: 1px solid var(--c3-line); border-radius: 16px; background: #0b1b2b; }
+  .c3-left { left: 0; }
+  .c3-right { right: 0; }
+  .c3-architecture { top: 96px; height: 492px; }
+  .c3-trajectory { top: 96px; height: 292px; }
+  .c3-card h3 { margin: 0; font-size: 27px; line-height: 40px; }
+  .c3-card p { margin: 0; }
+  .c3-sub { margin-top: 2px !important; color: var(--c3-muted); font-size: 21px; line-height: 32px; }
+  .c3-svg { width: 100%; overflow: hidden; vertical-align: top; }
+  .c3-svg text { fill: #e6f4ff; font-size: 23px; font-weight: 600; }
+  .c3-svg .c3-svg-small { fill: var(--c3-muted); font-size: 19px; }
+  .c3-tag { padding: 5px 11px; border: 1px solid currentColor; border-radius: 8px; font-size: 19px; white-space: nowrap; }
+  .c3-amber { color: var(--c3-amber); }
+  .c3-teal { color: var(--c3-teal); }
+  .c3-tags { margin-top: 18px !important; line-height: 38px; }
+  .c3-tags .c3-tag { margin-right: 8px; }
+  .c3-note { margin-top: 11px !important; color: var(--c3-muted); font-size: 21px; }
+  .c3-takeaway { position: absolute; inset: 603px 0 auto; padding: 10px 24px; border-left: 4px solid #14b8a6; border-radius: 9px; background: #112637; font-size: 23px; line-height: 29px; }
+  .c3-step { position: absolute; top: 26px; right: 24px; }
+  .c3-formula { padding: 3px 10px; border-radius: 6px; background: #103138; color: #b8fff2; font-size: 21px; line-height: 28px; text-align: center; white-space: nowrap; }
+  .c3-compression { top: 402px; width: 100%; height: 250px; padding: 13px 24px; }
+  .c3-compression h3 { line-height: 36px; }
+  .c3-chart-note { position: absolute; top: 20px; right: 26px; color: var(--c3-muted); font-size: 17px; }
+  .c3-row { position: relative; height: 34px; margin-top: 3px; font-size: 20px; line-height: 34px; }
+  .c3-track { position: absolute; top: 11px; right: 183px; left: 255px; height: 12px; border-radius: 8px; background: #23384b; }
+  .c3-fill { position: absolute; inset: 0; border-radius: 8px; background: currentColor; }
+  .c3-value { position: absolute; right: 0; width: 160px; text-align: right; }
+  .c3-emerald { color: #7fffd4; }
+  .c3-emerald .c3-fill { box-shadow: 0 0 12px #34d399; }
+  .c3-final { margin-top: 4px !important; color: #b8fff2; font-size: 19px; line-height: 29px; }
+</style>
+
+<div class="c3-scene">
+  <div class="c3-phase" id="c3-phase-a">
+    <h2 class="c3-title">骨格の世代交代：U-Net から DiT / MMDiT へ <span class="c3-pill">Phase 1: Architecture</span></h2>
+    <div class="c3-card c3-left c3-architecture">
+      <h3>旧主流：U-Net（畳み込みベース）</h3>
+      <p class="c3-sub">解像度を下げて処理し、細部を受け渡しながら戻す</p>
+      <svg class="c3-svg" viewBox="0 0 840 270" height="270" role="img" aria-label="U字型の経路と二つのスキップ接続">
+        <defs>
+          <marker id="c3-unet-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#ffd38a"/></marker>
+        </defs>
+        <g stroke="#ffd38a" stroke-width="3" fill="none" marker-end="url(#c3-unet-arrow)">
+          <path d="M168 96L218 129"/><path d="M315 177L373 202"/><path d="M468 202L526 177"/><path d="M630 129L673 96"/>
+          <path d="M175 70H660" stroke-dasharray="8 7"/><path d="M354 146H497" stroke-dasharray="8 7"/>
+        </g>
+        <g fill="#2d2b31" stroke="#b68b50" stroke-width="2">
+          <rect x="25" y="44" width="140" height="52" rx="9"/><rect x="220" y="124" width="125" height="50" rx="9"/>
+          <rect x="335" y="205" width="170" height="50" rx="9"/><rect x="503" y="124" width="125" height="50" rx="9"/><rect x="676" y="44" width="140" height="52" rx="9"/>
+        </g>
+        <g text-anchor="middle"><text x="95" y="78">入力</text><text x="282" y="157">縮小</text><text x="420" y="238">ボトルネック</text><text x="565" y="157">拡大</text><text x="746" y="78">出力</text><text class="c3-svg-small" x="420" y="57">スキップ接続</text></g>
+      </svg>
+      <p class="c3-tags c3-amber"><span class="c3-tag">大規模化でスケーリング頭打ち</span><span class="c3-tag">動画・テキスト統合が複雑</span></p>
+    </div>
+    <div class="c3-card c3-right c3-architecture" id="c3-dit">
+      <h3>新標準：DiT / MMDiT（Diffusion Transformer）</h3>
+      <p class="c3-sub" id="c3-dit-detail">画像の潜在表現をパッチに分け、トークンとして処理</p>
+      <svg class="c3-svg" viewBox="0 0 840 267" height="267" role="img" aria-label="潜在パッチからTransformerへ進む構成と概念的な品質のスケーリング図">
+        <defs>
+          <marker id="c3-dit-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#5eead4"/></marker>
+        </defs>
+        <g id="c3-dit-arch">
+          <g fill="#13434b" stroke="#5eead4" stroke-width="2"><rect x="38" y="44" width="27" height="27" rx="3"/><rect x="73" y="44" width="27" height="27" rx="3"/><rect x="38" y="79" width="27" height="27" rx="3"/><rect x="73" y="79" width="27" height="27" rx="3"/>
+            <rect x="206" y="42" width="227" height="69" rx="10"/><rect x="206" y="160" width="227" height="76" rx="10"/>
+          </g>
+          <g fill="none" stroke="#5eead4" stroke-width="3" marker-end="url(#c3-dit-arrow)"><path d="M118 76H192"/><path d="M320 157V118"/></g>
+          <g text-anchor="middle"><text class="c3-svg-small" x="69" y="134">潜在パッチ</text><text x="320" y="84">Transformer × N</text><text x="320" y="192">adaLN-Zero</text><text class="c3-svg-small" x="320" y="220">時刻 t ・ 条件 c</text></g>
+        </g>
+        <g id="c3-dit-scale">
+          <path d="M520 47V199H806" fill="none" stroke="#7791a6" stroke-width="2"/>
+          <path d="M540 181C596 170 639 151 683 123S765 67 795 50" fill="none" stroke="#5eead4" stroke-width="4" marker-end="url(#c3-dit-arrow)"/>
+          <text class="c3-svg-small" x="521" y="33">品質向上（概念図）</text><text class="c3-svg-small" x="629" y="231">計算量（GFLOPs）</text>
+        </g>
+      </svg>
+      <div id="c3-mmdit"><p class="c3-tags c3-teal"><span class="c3-tag">SD3</span><span class="c3-tag">FLUX</span><span class="c3-tag">動画拡散モデル</span></p><p class="c3-note">MMDiTでは画像とテキストの情報をアテンションで結びつける</p></div>
+    </div>
+    <div class="c3-takeaway" id="c3-arch-wrap">DiTは画像のパッチをトークンとして扱い、Transformerで処理する</div>
+  </div>
+  <div class="c3-phase" id="c3-phase-b">
+    <h2 class="c3-title">生成経路の直線化：DDPM から Flow Matching へ <span class="c3-pill">Phase 2: Sampling</span></h2>
+    <div class="c3-card c3-left c3-trajectory">
+      <h3>従来 DDPM（確率的な拡散経路）</h3>
+      <span class="c3-step c3-tag c3-amber">50〜1000 steps</span>
+      <p class="c3-sub">逆向きにノイズを除く経路の一例</p>
+      <svg class="c3-svg" viewBox="0 0 840 143" height="143" role="img" aria-label="ノイズからデータへ向かう曲がった点線の経路">
+        <defs><marker id="c3-ddpm-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#ffd38a"/></marker></defs>
+        <path id="c3-ddpm-path" d="M111 68C153 10 200 20 226 62S297 129 338 90S403 18 453 50S543 125 596 78S658 23 721 58" fill="none" stroke="#ffd38a" stroke-width="5" stroke-dasharray="10 7" marker-end="url(#c3-ddpm-arrow)"/>
+        <path d="M42 55h2m18-15h2m20 7h2m-31 24h2m21 9h2m16-18h2m-53 22h2" stroke="#afc2d4" stroke-width="7" stroke-linecap="round"/>
+        <rect x="735" y="39" width="48" height="48" rx="11" fill="#503e2d" stroke="#ffd38a" stroke-width="2"/>
+        <g text-anchor="middle"><text x="71" y="122">ノイズ x₀</text><text x="758" y="122">データ x₁</text></g>
+      </svg>
+    </div>
+    <div class="c3-card c3-right c3-trajectory">
+      <h3>Flow Matching / Rectified Flow</h3>
+      <span class="c3-step c3-tag c3-teal">10〜20 steps</span>
+      <p class="c3-sub">ノイズとデータを直線補間する経路</p>
+      <svg class="c3-svg" viewBox="0 0 840 143" height="143" role="img" aria-label="ノイズからデータへ向かう直線と速度ベクトル">
+        <defs><marker id="c3-flow-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#5eead4"/></marker></defs>
+        <g fill="none" stroke="#5eead4" marker-end="url(#c3-flow-arrow)">
+          <path d="M113 62H721" stroke-width="5"/>
+          <g id="c3-vectors" opacity="0.8" stroke-width="3"><path d="M200 33H302"/><path d="M370 33H472"/><path d="M540 33H642"/><path d="M200 91H302"/><path d="M370 91H472"/><path d="M540 91H642"/></g>
+        </g>
+        <path d="M42 55h2m18-15h2m20 7h2m-31 24h2m21 9h2m16-18h2m-53 22h2" stroke="#afc2d4" stroke-width="7" stroke-linecap="round"/>
+        <rect x="735" y="39" width="48" height="48" rx="11" fill="#13434b" stroke="#5eead4" stroke-width="2"/>
+        <g text-anchor="middle"><text x="71" y="122">ノイズ x₀</text><text x="758" y="122">データ x₁</text></g>
+      </svg>
+      <p class="c3-formula" id="c3-flow-equation">xₜ = (1 − t)x₀ + tx₁　　速度 vθ の学習目標：x₁ − x₀</p>
+    </div>
+    <div class="c3-card c3-compression" id="c3-compression">
+      <h3>ステップ数の劇的圧縮（蒸留・Consistency Model）</h3>
+      <span class="c3-chart-note">ステップ数の目安 · バーの長さは模式表示</span>
+      <div class="c3-row c3-amber">DDPM<span class="c3-track"><span class="c3-fill" data-fraction="1"></span></span><strong class="c3-value">1000 steps</strong></div>
+      <div class="c3-row c3-amber">DDIM<span class="c3-track"><span class="c3-fill" data-fraction="0.52"></span></span><strong class="c3-value">50 steps</strong></div>
+      <div class="c3-row c3-teal">Flow Matching<span class="c3-track"><span class="c3-fill" data-fraction="0.28"></span></span><strong class="c3-value">20 steps</strong></div>
+      <div class="c3-row c3-emerald">Consistency / 蒸留<span class="c3-track"><span class="c3-fill" data-fraction="0.10"></span></span><strong class="c3-value">1〜4 steps</strong></div>
+      <p class="c3-final" id="c3-flow-wrap">経路を直線に近づけ、蒸留などで少ない反復から画像を生成する</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.__diagramBuilders = window.__diagramBuilders || {};
+  window.__diagramBuilders['ch03_dit_flow'] = function (tl, cues) {
+    const byId = (id) => document.getElementById('c3-' + id);
+    const phaseA = byId('phase-a');
+    const phaseB = byId('phase-b');
+    const unet = phaseA.querySelector('.c3-left');
+    const flowPath = byId('ddpm-path');
+    const bars = phaseB.querySelectorAll('.c3-fill');
+    const reveal = (target, time, duration = 0.4) => {
+      tl.to(target, { opacity: 1, duration, ease: 'power2.out' }, time);
+    };
+
+    gsap.set([phaseB, unet, byId('dit'), byId('dit-detail'), byId('dit-arch'),
+      byId('dit-scale'), byId('mmdit'), byId('arch-wrap'), byId('flow-equation'),
+      byId('vectors'), byId('compression'), byId('flow-wrap')], { opacity: 0 });
+    gsap.set(flowPath, { opacity: 0.34, strokeDashoffset: 32 });
+    gsap.set(bars, { scaleX: 0, transformOrigin: 'left center' });
+
+    reveal(unet, cues.c3_unet_limit);
+    reveal(byId('dit'), cues.c3_dit_birth);
+    reveal([byId('dit-detail'), byId('dit-arch')], cues.c3_dit_arch);
+    reveal(byId('dit-scale'), cues.c3_dit_scale);
+    reveal(byId('mmdit'), cues.c3_mmdit);
+    reveal(byId('arch-wrap'), cues.c3_zunda_dit);
+
+    const transitionStart = cues.c3_phase2_flow;
+    tl.to(phaseB, { opacity: 1, duration: 0.35, ease: 'power2.out' }, transitionStart);
+    tl.to(phaseA, { opacity: 0, duration: 0.35, ease: 'power2.in' }, transitionStart);
+    tl.to(flowPath, { opacity: 1, strokeDashoffset: 0, duration: 0.7, ease: 'power2.out' }, cues.c3_curved_path);
+    reveal(byId('flow-equation'), cues.c3_flow_eq);
+    reveal(byId('vectors'), cues.c3_velocity_field, 0.55);
+    tl.to(byId('flow-equation'), { backgroundColor: '#1a454d', duration: 0.35 }, cues.c3_zunda_straight);
+    reveal(byId('compression'), cues.c3_distill);
+    bars.forEach((bar, index) => {
+      tl.to(bar, { scaleX: Number(bar.dataset.fraction), duration: 0.55, ease: 'power2.out' }, cues.c3_distill + index * 0.17);
+    });
+    reveal(byId('flow-wrap'), cues.c3_wrap);
+  };
+</script>

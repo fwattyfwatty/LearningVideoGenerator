@@ -1,0 +1,690 @@
+<style>
+  .c3-scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #f8fafc;
+  }
+
+  .c3-phase {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 48px;
+    box-sizing: border-box;
+  }
+
+  /* Header Bar */
+  .c3-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 20px;
+    background: #0f172a;
+    border: 2px solid #334155;
+    border-radius: 16px;
+    flex-shrink: 0;
+  }
+
+  .c3-header-title {
+    margin: 0;
+    font-size: 27px;
+    font-weight: 800;
+    color: #f8fafc;
+    letter-spacing: 0.02em;
+  }
+
+  .c3-header-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 16px;
+    border-radius: 999px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #ddd6fe;
+    background: rgba(139, 92, 246, 0.2);
+    border: 2px solid #8b5cf6;
+    white-space: nowrap;
+  }
+
+  /* Phase A Grid */
+  .c3-a-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .c3-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 20px;
+    padding: 20px 24px;
+    box-sizing: border-box;
+    min-height: 0;
+  }
+
+  .c3-card-cot {
+    border-color: rgba(244, 63, 94, 0.5);
+    background: linear-gradient(180deg, #1e293b 0%, #171f30 100%);
+  }
+
+  .c3-card-latent {
+    border-color: rgba(139, 92, 246, 0.7);
+    background: linear-gradient(180deg, #1e293b 0%, #161b33 100%);
+    box-shadow: 0 0 28px rgba(139, 92, 246, 0.14);
+  }
+
+  .c3-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+    flex-shrink: 0;
+  }
+
+  .c3-card-title {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 800;
+    color: #f8fafc;
+  }
+
+  .c3-tag-red {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fecdd3;
+    background: rgba(244, 63, 94, 0.2);
+    border: 1.5px solid #f43f5e;
+    white-space: nowrap;
+  }
+
+  .c3-tag-violet {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #a5f3fc;
+    background: rgba(34, 211, 238, 0.16);
+    border: 1.5px solid #22d3ee;
+    white-space: nowrap;
+  }
+
+  /* CoT Left Card Internals */
+  .c3-cot-flow-box {
+    flex: 1;
+    min-height: 0;
+    background: #0f172a;
+    border: 1.5px solid #334155;
+    border-radius: 16px;
+    padding: 18px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  .c3-cot-sub {
+    font-size: 17px;
+    font-weight: 700;
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .c3-cot-id-chip {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fda4af;
+    background: rgba(244, 63, 94, 0.16);
+    border: 1px solid rgba(244, 63, 94, 0.45);
+    border-radius: 8px;
+    padding: 3px 10px;
+  }
+
+  .c3-token-chain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    padding: 14px 10px;
+    background: rgba(30, 41, 59, 0.65);
+    border-radius: 14px;
+    border: 1px dashed rgba(148, 163, 184, 0.35);
+  }
+
+  .c3-token-bubble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 12px;
+    min-width: 82px;
+    border-radius: 12px;
+    background: #1e293b;
+    border: 2px solid #64748b;
+    text-align: center;
+  }
+
+  .c3-token-bubble-ans {
+    background: rgba(244, 63, 94, 0.18);
+    border-color: #f43f5e;
+  }
+
+  .c3-token-word {
+    font-size: 21px;
+    font-weight: 800;
+    color: #f8fafc;
+  }
+
+  .c3-token-id {
+    font-size: 13px;
+    font-weight: 600;
+    color: #94a3b8;
+  }
+
+  .c3-chain-arrow {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fb7185;
+  }
+
+  .c3-kv-cost-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .c3-kv-metric {
+    background: rgba(15, 23, 42, 0.9);
+    border: 1.5px solid rgba(244, 63, 94, 0.4);
+    border-radius: 12px;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .c3-kv-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fda4af;
+  }
+
+  .c3-kv-val {
+    font-size: 18px;
+    font-weight: 800;
+    color: #f8fafc;
+  }
+
+  .c3-bottleneck-callout {
+    background: rgba(244, 63, 94, 0.16);
+    border: 2px solid #f43f5e;
+    border-radius: 14px;
+    padding: 13px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .c3-bottleneck-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffe4e6;
+  }
+
+  .c3-bottleneck-sub {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fda4af;
+    white-space: nowrap;
+  }
+
+  /* Latent Right Card Internals */
+  .c3-latent-stage {
+    flex: 1;
+    min-height: 0;
+    background: #0f172a;
+    border: 1.5px solid rgba(139, 92, 246, 0.45);
+    border-radius: 16px;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .c3-latent-svg {
+    width: 100%;
+    height: 100%;
+    max-height: 360px;
+    display: block;
+  }
+
+  .c3-latent-pill {
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.28) 0%, rgba(34, 211, 238, 0.24) 100%);
+    border: 2px solid #8b5cf6;
+    border-radius: 14px;
+    padding: 13px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .c3-latent-pill-text {
+    font-size: 20px;
+    font-weight: 800;
+    color: #f8fafc;
+  }
+
+  .c3-latent-pill-sub {
+    font-size: 15px;
+    font-weight: 700;
+    color: #a5f3fc;
+    white-space: nowrap;
+  }
+
+  /* Phase B Internals */
+  .c3-formula-bar {
+    background: linear-gradient(90deg, #1e1b4b 0%, #0f172a 55%, #164e63 100%);
+    border: 2px solid #8b5cf6;
+    border-radius: 16px;
+    padding: 13px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .c3-formula-text {
+    font-size: 22px;
+    font-weight: 800;
+    color: #f8fafc;
+    letter-spacing: 0.01em;
+  }
+
+  .c3-formula-em {
+    color: #22d3ee;
+  }
+
+  .c3-formula-accent {
+    color: #c4b5fd;
+  }
+
+  .c3-chart-card {
+    flex: 1;
+    min-height: 0;
+    background: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 20px;
+    padding: 16px 28px 18px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-sizing: border-box;
+  }
+
+  .c3-chart-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-shrink: 0;
+  }
+
+  .c3-chart-caption {
+    font-size: 19px;
+    font-weight: 700;
+    color: #cbd5e1;
+  }
+
+  .c3-halting-note {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .c3-legend-easy {
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: rgba(34, 211, 238, 0.16);
+    border: 1.5px solid #22d3ee;
+    color: #a5f3fc;
+  }
+
+  .c3-legend-hard {
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: rgba(139, 92, 246, 0.25);
+    border: 1.5px solid #a78bfa;
+    color: #ede9fe;
+  }
+
+  .c3-bars-grid {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 20px;
+    padding: 12px 14px 4px 14px;
+    background: #0f172a;
+    border: 1.5px solid #334155;
+    border-radius: 16px;
+    position: relative;
+  }
+
+  .c3-bar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-height: 0;
+  }
+
+  .c3-bar-val {
+    font-size: 20px;
+    font-weight: 800;
+    padding: 3px 12px;
+    border-radius: 999px;
+    background: #1e293b;
+    border: 1.5px solid #475569;
+    color: #e2e8f0;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .c3-bar-val-peak {
+    background: rgba(139, 92, 246, 0.3);
+    border-color: #a78bfa;
+    color: #ffffff;
+  }
+
+  .c3-bar-val-easy {
+    background: rgba(34, 211, 238, 0.18);
+    border-color: #22d3ee;
+    color: #a5f3fc;
+  }
+
+  .c3-bar-track {
+    flex: 1;
+    min-height: 0;
+    width: 78px;
+    background: rgba(30, 41, 59, 0.55);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-end;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+
+  .c3-bar-fill {
+    width: 100%;
+    border-radius: 9px;
+    background: linear-gradient(180deg, #22d3ee 0%, #0284c7 100%);
+  }
+
+  .c3-bar-fill-mid {
+    background: linear-gradient(180deg, #818cf8 0%, #4f46e5 100%);
+  }
+
+  .c3-bar-fill-deep {
+    background: linear-gradient(180deg, #c084fc 0%, #7c3aed 100%);
+    box-shadow: 0 0 22px rgba(139, 92, 246, 0.45);
+  }
+
+  .c3-h-2 { height: 15%; }
+  .c3-h-6 { height: 39%; }
+  .c3-h-16 { height: 100%; }
+  .c3-h-1 { height: 9%; }
+  .c3-h-4 { height: 27%; }
+  .c3-h-12 { height: 76%; }
+
+  .c3-tok-label {
+    font-size: 20px;
+    font-weight: 800;
+    color: #f8fafc;
+    background: #1e293b;
+    border: 1.5px solid #475569;
+    border-radius: 10px;
+    padding: 6px 12px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .c3-tok-label-hard {
+    border-color: #8b5cf6;
+    background: rgba(139, 92, 246, 0.22);
+    color: #f5f3ff;
+  }
+
+  .c3-tok-role {
+    font-size: 14px;
+    font-weight: 700;
+    color: #94a3b8;
+    flex-shrink: 0;
+  }
+
+  .c3-tok-role-hard {
+    color: #c4b5fd;
+  }
+
+  .c3-tok-role-easy {
+    color: #67e8f9;
+  }
+
+  .c3-mor-callout {
+    margin: 0 240px;
+    padding: 14px 24px;
+    border-radius: 16px;
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.26) 0%, rgba(15, 23, 42, 0.96) 50%, rgba(34, 211, 238, 0.22) 100%);
+    border: 2px solid #8b5cf6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .c3-mor-text {
+    font-size: 21px;
+    font-weight: 800;
+    color: #f8fafc;
+  }
+</style>
+
+<div class="c3-scene">
+  <div id="c3-phase-a" class="c3-phase">
+    <div id="c3-a-header" class="c3-header"><h2 class="c3-header-title">言葉で書き出す推論（CoT） vs 連続ベクトル空間ループ（Latent Reasoning）</h2><span class="c3-header-badge">Latent Space vs Discrete Tokens</span></div>
+    <div class="c3-a-grid">
+      <div id="c3-cot-card" class="c3-card c3-card-cot">
+        <div class="c3-card-head"><h3 class="c3-card-title">Chain-of-Thought（言葉の思考）</h3><span class="c3-tag-red">ノート書き出し型</span></div>
+        <div class="c3-cot-flow-box">
+          <div class="c3-cot-sub"><span>1ステップごとに単語IDへ離散化・直列生成</span><span id="c3-id-chip" class="c3-cot-id-chip">単語IDへ圧縮</span></div>
+          <div id="c3-cot-chain" class="c3-token-chain">
+            <div id="c3-tok-1" class="c3-token-bubble"><span class="c3-token-word">[まず]</span><span class="c3-token-id">ID: 4821</span></div>
+            <span id="c3-arr-1" class="c3-chain-arrow">→</span>
+            <div id="c3-tok-2" class="c3-token-bubble"><span class="c3-token-word">[x=3]</span><span class="c3-token-id">ID: 9104</span></div>
+            <span id="c3-arr-2" class="c3-chain-arrow">→</span>
+            <div id="c3-tok-3" class="c3-token-bubble"><span class="c3-token-word">[次に]</span><span class="c3-token-id">ID: 5512</span></div>
+            <span id="c3-arr-3" class="c3-chain-arrow">→</span>
+            <div id="c3-tok-4" class="c3-token-bubble"><span class="c3-token-word">[…]</span><span class="c3-token-id">数百トークン</span></div>
+            <span id="c3-arr-4" class="c3-chain-arrow">→</span>
+            <div id="c3-tok-5" class="c3-token-bubble c3-token-bubble-ans"><span class="c3-token-word">[答え]</span><span class="c3-token-id">出力完了</span></div>
+          </div>
+          <div id="c3-kv-cost-row" class="c3-kv-cost-row">
+            <div class="c3-kv-metric"><span class="c3-kv-label">生成遅延（レイテンシ）</span><span class="c3-kv-val">トークン数 N に比例増</span></div>
+            <div class="c3-kv-metric"><span class="c3-kv-label">メモリ消費（KVキャッシュ）</span><span class="c3-kv-val">履歴長 N に応じて肥大化</span></div>
+          </div>
+        </div>
+        <div id="c3-cot-bottleneck" class="c3-bottleneck-callout"><span class="c3-bottleneck-title">離散トークン圧縮 / 遅延・KVキャッシュ増大</span><span class="c3-bottleneck-sub">狭い言語ボトルネック</span></div>
+      </div>
+      <div id="c3-latent-card" class="c3-card c3-card-latent">
+        <div class="c3-card-head"><h3 class="c3-card-title">Latent Reasoning（潜在空間ループ）</h3><span class="c3-tag-violet">頭の中の超高速暗算</span></div>
+        <div class="c3-latent-stage">
+          <svg id="c3-latent-svg" class="c3-latent-svg" viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="c3-latent-glow" cx="42%" cy="50%" r="48%"><stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.34" /><stop offset="65%" stop-color="#22d3ee" stop-opacity="0.10" /><stop offset="100%" stop-color="#0f172a" stop-opacity="0" /></radialGradient>
+              <linearGradient id="c3-orbit-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#a78bfa" /><stop offset="50%" stop-color="#22d3ee" /><stop offset="100%" stop-color="#8b5cf6" /></linearGradient>
+            </defs>
+            <ellipse cx="275" cy="175" rx="225" ry="145" fill="url(#c3-latent-glow)" />
+            <ellipse id="c3-space-ring" cx="275" cy="175" rx="210" ry="132" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="8 6" />
+            <text x="82" y="42" fill="#c4b5fd" font-size="18" font-weight="700" font-family="Noto Sans JP, sans-serif">連続潜在空間 R^d（数千次元）</text>
+            <path id="c3-traj-1" pathLength="100" d="M 118 175 C 165 72, 345 72, 468 175" fill="none" stroke="#22d3ee" stroke-width="3.5" stroke-dasharray="100" />
+            <path id="c3-traj-2" pathLength="100" d="M 118 175 C 185 152, 335 198, 468 175" fill="none" stroke="#a78bfa" stroke-width="4" stroke-dasharray="100" />
+            <path id="c3-traj-3" pathLength="100" d="M 118 175 C 165 278, 345 278, 468 175" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-dasharray="100" />
+            <circle id="c3-orbit-ring" cx="275" cy="175" r="88" fill="none" stroke="url(#c3-orbit-grad)" stroke-width="3.5" stroke-dasharray="14 8" />
+            <g id="c3-orbit-arm"><circle cx="275" cy="87" r="10" fill="#22d3ee" stroke="#f8fafc" stroke-width="2.5" /><circle cx="275" cy="263" r="8" fill="#c4b5fd" stroke="#f8fafc" stroke-width="2" /></g>
+            <rect id="c3-vec-box" x="195" y="142" width="160" height="66" rx="14" fill="#1e1b4b" stroke="#a78bfa" stroke-width="2.5" />
+            <text x="275" y="170" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="800" font-family="Noto Sans JP, sans-serif">h^(r) ∈ R^d</text>
+            <text x="275" y="196" text-anchor="middle" fill="#a5f3fc" font-size="14" font-weight="700" font-family="Noto Sans JP, sans-serif">文字化せず次ループへ</text>
+            <g id="c3-hyp-labels"><rect x="208" y="54" width="134" height="28" rx="14" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5" /><text x="275" y="73" text-anchor="middle" fill="#a5f3fc" font-size="14" font-weight="700" font-family="Noto Sans JP, sans-serif">仮説パス A</text><rect x="208" y="268" width="134" height="28" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" /><text x="275" y="287" text-anchor="middle" fill="#bae6fd" font-size="14" font-weight="700" font-family="Noto Sans JP, sans-serif">仮説パス B</text></g>
+            <rect x="44" y="150" width="90" height="50" rx="12" fill="#1e293b" stroke="#64748b" stroke-width="2" />
+            <text x="89" y="181" text-anchor="middle" fill="#e2e8f0" font-size="18" font-weight="800" font-family="Noto Sans JP, sans-serif">[問題]</text>
+            <path id="c3-ans-arrow" pathLength="100" d="M 472 175 L 542 175" fill="none" stroke="#22d3ee" stroke-width="4" stroke-dasharray="100" />
+            <g id="c3-latent-ans"><rect x="546" y="141" width="126" height="68" rx="14" fill="#3b0764" stroke="#22d3ee" stroke-width="3" /><text x="609" y="172" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="800" font-family="Noto Sans JP, sans-serif">[答え]</text><text x="609" y="196" text-anchor="middle" fill="#a5f3fc" font-size="13" font-weight="700" font-family="Noto Sans JP, sans-serif">最小トークン出力</text></g>
+          </svg>
+        </div>
+        <div id="c3-latent-pill" class="c3-latent-pill"><span class="c3-latent-pill-text">数千次元ベクトルで並列思考・省トークン</span><span class="c3-latent-pill-sub">高帯域な連続表現</span></div>
+      </div>
+    </div>
+  </div>
+  <div id="c3-phase-b" class="c3-phase">
+    <div id="c3-b-header" class="c3-header"><h2 class="c3-header-title">Adaptive Depth：トークンごとに必要な深さだけループする</h2><span id="c3-b-badge" class="c3-header-badge">動的ループ配分（ACT / MoR）</span></div>
+    <div id="c3-formula-bar" class="c3-formula-bar"><span class="c3-formula-text">停止確率（Halting）：各周で <span class="c3-formula-em">p_r ∈ (0,1)</span> を予測 → 累積 <span class="c3-formula-accent">Σ p_r &gt;= 1 - ε</span> で早期脱出（ACT / MoR）</span></div>
+    <div id="c3-chart-card" class="c3-chart-card">
+      <div class="c3-chart-top-row"><span class="c3-chart-caption">入力文の各トークンに割り当てられたループ回数（例：2次方程式を解く）</span><div id="c3-halting-note" class="c3-halting-note"><span class="c3-legend-easy">Σ p_r 早期到達 → 省エネ脱出</span><span class="c3-legend-hard">難所トークン → 深く熟考</span></div></div>
+      <div class="c3-bars-grid">
+        <div id="c3-col-1" class="c3-bar-col"><span id="c3-val-1" class="c3-bar-val c3-bar-val-easy">2周</span><div class="c3-bar-track"><div id="c3-bar-1" class="c3-bar-fill c3-h-2"></div></div><span class="c3-tok-label">次の</span><span id="c3-role-1" class="c3-tok-role c3-tok-role-easy">簡単（即脱出）</span></div>
+        <div id="c3-col-2" class="c3-bar-col"><span id="c3-val-2" class="c3-bar-val">6周</span><div class="c3-bar-track"><div id="c3-bar-2" class="c3-bar-fill c3-bar-fill-mid c3-h-6"></div></div><span class="c3-tok-label">方程式</span><span id="c3-role-2" class="c3-tok-role">文脈理解</span></div>
+        <div id="c3-col-3" class="c3-bar-col"><span id="c3-val-3" class="c3-bar-val c3-bar-val-peak">16周!</span><div class="c3-bar-track"><div id="c3-bar-3" class="c3-bar-fill c3-bar-fill-deep c3-h-16"></div></div><span class="c3-tok-label c3-tok-label-hard">x^2-5x+6=0</span><span id="c3-role-3" class="c3-tok-role c3-tok-role-hard">最難関（フル回転）</span></div>
+        <div id="c3-col-4" class="c3-bar-col"><span id="c3-val-4" class="c3-bar-val c3-bar-val-easy">1周</span><div class="c3-bar-track"><div id="c3-bar-4" class="c3-bar-fill c3-h-1"></div></div><span class="c3-tok-label">の</span><span id="c3-role-4" class="c3-tok-role c3-tok-role-easy">機能語（1周）</span></div>
+        <div id="c3-col-5" class="c3-bar-col"><span id="c3-val-5" class="c3-bar-val">4周</span><div class="c3-bar-track"><div id="c3-bar-5" class="c3-bar-fill c3-bar-fill-mid c3-h-4"></div></div><span class="c3-tok-label">解は</span><span id="c3-role-5" class="c3-tok-role">橋渡し</span></div>
+        <div id="c3-col-6" class="c3-bar-col"><span id="c3-val-6" class="c3-bar-val c3-bar-val-peak">12周</span><div class="c3-bar-track"><div id="c3-bar-6" class="c3-bar-fill c3-bar-fill-deep c3-h-12"></div></div><span class="c3-tok-label c3-tok-label-hard">x=2,3</span><span id="c3-role-6" class="c3-tok-role c3-tok-role-hard">数式の結論</span></div>
+      </div>
+    </div>
+    <div id="c3-mor-callout" class="c3-mor-callout"><span class="c3-mor-text">Mixture-of-Recursions (MoR)：ルーターがトークンごとにループ回数を動的配分</span></div>
+  </div>
+</div>
+
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders["ch03_latent_reasoning"] = function (tl, cues) {
+  // Initial states (no CSS transform on animated elements)
+  gsap.set("#c3-phase-a", { opacity: 1 });
+  gsap.set("#c3-a-header", { opacity: 0, y: 12 });
+  gsap.set("#c3-cot-card", { opacity: 0, y: 18 });
+  gsap.set("#c3-latent-card", { opacity: 0, y: 18 });
+
+  gsap.set(["#c3-id-chip", "#c3-tok-1", "#c3-arr-1", "#c3-tok-2", "#c3-arr-2", "#c3-tok-3", "#c3-arr-3", "#c3-tok-4", "#c3-arr-4", "#c3-tok-5"], { opacity: 0, y: 8 });
+  gsap.set("#c3-kv-cost-row", { opacity: 0, y: 10 });
+  gsap.set("#c3-cot-bottleneck", { opacity: 0, y: 12 });
+
+  gsap.set(["#c3-vec-box", "#c3-orbit-ring", "#c3-orbit-arm"], { opacity: 0 });
+  gsap.set(["#c3-traj-1", "#c3-traj-2", "#c3-traj-3", "#c3-ans-arrow"], { opacity: 0, strokeDashoffset: 100 });
+  gsap.set(["#c3-hyp-labels", "#c3-latent-ans"], { opacity: 0 });
+  gsap.set("#c3-latent-pill", { opacity: 0, y: 12 });
+
+  gsap.set("#c3-phase-b", { opacity: 0 });
+  gsap.set("#c3-formula-bar", { opacity: 0, y: 12 });
+  gsap.set("#c3-chart-card", { opacity: 0, y: 14 });
+  gsap.set("#c3-halting-note", { opacity: 0 });
+  gsap.set(["#c3-col-1", "#c3-col-2", "#c3-col-3", "#c3-col-4", "#c3-col-5", "#c3-col-6"], { opacity: 0, y: 12 });
+  gsap.set(["#c3-bar-1", "#c3-bar-2", "#c3-bar-3", "#c3-bar-4", "#c3-bar-5", "#c3-bar-6"], { scaleY: 0, transformOrigin: "bottom center" });
+  gsap.set(["#c3-val-1", "#c3-val-2", "#c3-val-3", "#c3-val-4", "#c3-val-5", "#c3-val-6"], { opacity: 0, y: 6 });
+  gsap.set(["#c3-role-1", "#c3-role-2", "#c3-role-3", "#c3-role-4", "#c3-role-5", "#c3-role-6"], { opacity: 0 });
+  gsap.set("#c3-mor-callout", { opacity: 0, y: 12 });
+
+  // Phase A Cues
+  const tIntro = cues.c3_cot_intro ?? 0.45;
+  tl.to("#c3-a-header", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tIntro);
+  tl.to("#c3-cot-card", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, tIntro + 0.15);
+  tl.to("#c3-latent-card", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, tIntro + 0.3);
+
+  const tCotBottleneck = cues.c3_cot_bottleneck ?? 8.7;
+  tl.to("#c3-id-chip", { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, tCotBottleneck);
+  tl.to(
+    ["#c3-tok-1", "#c3-arr-1", "#c3-tok-2", "#c3-arr-2", "#c3-tok-3", "#c3-arr-3", "#c3-tok-4", "#c3-arr-4", "#c3-tok-5"],
+    { opacity: 1, y: 0, duration: 0.35, stagger: 0.22, ease: "power2.out" },
+    tCotBottleneck + 0.2
+  );
+
+  const tZundaCot = cues.c3_zunda_cot ?? 18.65;
+  tl.to("#c3-cot-bottleneck", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tZundaCot);
+
+  const tKvCost = cues.c3_kv_cost ?? 26.51;
+  tl.to("#c3-kv-cost-row", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tKvCost);
+  tl.to("#c3-cot-bottleneck", { borderColor: "#fda4af", duration: 0.35, yoyo: true, repeat: 1 }, tKvCost + 0.5);
+
+  const tLatentVec = cues.c3_latent_vec ?? 36.01;
+  tl.to(["#c3-vec-box", "#c3-orbit-ring", "#c3-orbit-arm"], { opacity: 1, duration: 0.5, ease: "power2.out" }, tLatentVec);
+  tl.to("#c3-orbit-arm", { rotation: 720, svgOrigin: "275 175", duration: 18, ease: "none" }, tLatentVec);
+
+  const tBandwidth = cues.c3_bandwidth ?? 45.69;
+  tl.to(["#c3-traj-1", "#c3-traj-2", "#c3-traj-3"], { opacity: 1, strokeDashoffset: 0, duration: 1.0, stagger: 0.18, ease: "power2.out" }, tBandwidth);
+  tl.to("#c3-hyp-labels", { opacity: 1, duration: 0.45, ease: "power2.out" }, tBandwidth + 0.5);
+  tl.to("#c3-ans-arrow", { opacity: 1, strokeDashoffset: 0, duration: 0.4, ease: "power2.out" }, tBandwidth + 0.9);
+  tl.to("#c3-latent-ans", { opacity: 1, duration: 0.45, ease: "power2.out" }, tBandwidth + 1.15);
+  tl.to("#c3-latent-pill", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tBandwidth + 1.35);
+
+  const tZundaMental = cues.c3_zunda_mental ?? 54.99;
+  tl.to("#c3-cot-card", { borderColor: "#fb7185", duration: 0.4, yoyo: true, repeat: 1 }, tZundaMental);
+  tl.to("#c3-latent-card", { borderColor: "#22d3ee", duration: 0.5, yoyo: true, repeat: 1 }, tZundaMental + 1.8);
+
+  // Phase A -> Phase B Transition (zero blank interval)
+  const tP2 = cues.c3_phase2_adaptive ?? 63.32;
+  tl.to("#c3-phase-a", { opacity: 0, duration: 0.35, ease: "power2.inOut" }, tP2);
+  tl.to("#c3-phase-b", { opacity: 1, duration: 0.35, ease: "power2.out" }, tP2);
+  tl.to("#c3-formula-bar", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tP2 + 0.35);
+  tl.to("#c3-chart-card", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tP2 + 0.35);
+  tl.to(["#c3-col-1", "#c3-col-2", "#c3-col-3", "#c3-col-4", "#c3-col-5", "#c3-col-6"], { opacity: 1, y: 0, duration: 0.35, stagger: 0.06, ease: "power2.out" }, tP2 + 0.35);
+  tl.to(["#c3-bar-1", "#c3-bar-2", "#c3-bar-3", "#c3-bar-4", "#c3-bar-5", "#c3-bar-6"], { scaleY: 1, duration: 0.6, stagger: 0.06, ease: "power2.out" }, tP2 + 0.45);
+  tl.to(["#c3-val-1", "#c3-val-2", "#c3-val-3", "#c3-val-4", "#c3-val-5", "#c3-val-6"], { opacity: 1, y: 0, duration: 0.35, stagger: 0.06, ease: "power2.out" }, tP2 + 0.75);
+
+  const tTokDiff = cues.c3_token_diff ?? 68.96;
+  tl.to(["#c3-role-1", "#c3-role-4"], { opacity: 1, duration: 0.4, ease: "power2.out" }, tTokDiff + 0.3);
+  tl.to(["#c3-role-2", "#c3-role-5"], { opacity: 1, duration: 0.4, ease: "power2.out" }, tTokDiff + 1.0);
+  tl.to(["#c3-role-3", "#c3-role-6"], { opacity: 1, duration: 0.45, ease: "power2.out" }, tTokDiff + 1.8);
+
+  const tHalting = cues.c3_halting_eq ?? 77.47;
+  tl.to("#c3-formula-bar", { borderColor: "#22d3ee", duration: 0.45, yoyo: true, repeat: 1 }, tHalting);
+  tl.to("#c3-halting-note", { opacity: 1, duration: 0.45, ease: "power2.out" }, tHalting + 0.4);
+
+  const tZundaMor = cues.c3_zunda_mor ?? 87.02;
+  tl.to(["#c3-val-1", "#c3-val-4"], { scale: 1.12, duration: 0.35, yoyo: true, repeat: 1, ease: "power2.out" }, tZundaMor + 0.2);
+  tl.to(["#c3-val-3", "#c3-val-6"], { scale: 1.15, duration: 0.45, yoyo: true, repeat: 1, ease: "power2.out" }, tZundaMor + 2.0);
+
+  const tMorSummary = cues.c3_mor_summary ?? 95.96;
+  tl.to("#c3-mor-callout", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, tMorSummary);
+
+  const tWrap = cues.c3_wrap ?? 106.14;
+  tl.to("#c3-b-badge", { borderColor: "#f59e0b", color: "#fde68a", duration: 0.45 }, tWrap);
+  tl.to("#c3-chart-card", { borderColor: "#64748b", duration: 0.5 }, tWrap + 0.4);
+};
+</script>

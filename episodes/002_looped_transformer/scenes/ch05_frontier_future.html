@@ -1,0 +1,687 @@
+<style>
+  .c5-scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #f8fafc;
+  }
+
+  .c5-phase {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 36px;
+    box-sizing: border-box;
+  }
+
+  .c5-title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 22px;
+    padding-right: 340px;
+    background: #0f172a;
+    border: 2px solid #334155;
+    border-radius: 16px;
+    flex-shrink: 0;
+  }
+
+  .c5-b-title-bar {
+    width: 73%;
+    padding-right: 22px;
+    box-sizing: border-box;
+  }
+
+  .c5-title {
+    margin: 0;
+    font-size: 27px;
+    font-weight: 800;
+    color: #f8fafc;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  .c5-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 16px;
+    border-radius: 999px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #ddd6fe;
+    background: rgba(139, 92, 246, 0.2);
+    border: 2px solid #8b5cf6;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Phase A Timeline */
+  .c5-timeline {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: stretch;
+    gap: 12px;
+    background: #0f172a;
+    border: 2px solid #334155;
+    border-radius: 20px;
+    padding: 16px 20px;
+    flex-shrink: 0;
+  }
+
+  .c5-step {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: #1e293b;
+    border: 2px solid #475569;
+    border-radius: 16px;
+    padding: 14px 16px;
+  }
+
+  .c5-step-highlight {
+    border-color: #8b5cf6;
+    background: linear-gradient(180deg, #1e1b4b 0%, #1e293b 100%);
+  }
+
+  .c5-year {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 3px 12px;
+    border-radius: 999px;
+    background: rgba(139, 92, 246, 0.25);
+    border: 1.5px solid #8b5cf6;
+    color: #ddd6fe;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .c5-step-cyan .c5-year {
+    background: rgba(34, 211, 238, 0.16);
+    border-color: #22d3ee;
+    color: #a5f3fc;
+  }
+
+  .c5-step-name {
+    font-size: 21px;
+    font-weight: 800;
+    color: #f8fafc;
+    line-height: 1.25;
+  }
+
+  .c5-step-desc {
+    font-size: 16px;
+    font-weight: 700;
+    color: #cbd5e1;
+    line-height: 1.35;
+  }
+
+  .c5-tarrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 900;
+    color: #a78bfa;
+  }
+
+  /* Phase A Architecture Cards */
+  .c5-arch-grid {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .c5-arch-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    background: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 20px;
+    padding: 20px 22px;
+    box-sizing: border-box;
+    min-height: 0;
+  }
+
+  .c5-arch-huginn {
+    border-color: #8b5cf6;
+    background: linear-gradient(180deg, #1e293b 0%, #171a33 100%);
+  }
+
+  .c5-arch-ouro {
+    border-color: #38bdf8;
+    background: linear-gradient(180deg, #1e293b 0%, #132236 100%);
+  }
+
+  .c5-arch-mor {
+    border-color: #22c55e;
+    background: linear-gradient(180deg, #1e293b 0%, #132822 100%);
+  }
+
+  .c5-arch-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  }
+
+  .c5-arch-name {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 900;
+    color: #f8fafc;
+  }
+
+  .c5-tag-purple {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ede9fe;
+    background: rgba(139, 92, 246, 0.26);
+    border: 1.5px solid #8b5cf6;
+    white-space: nowrap;
+  }
+
+  .c5-tag-blue {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #bae6fd;
+    background: rgba(56, 189, 248, 0.2);
+    border: 1.5px solid #38bdf8;
+    white-space: nowrap;
+  }
+
+  .c5-tag-green {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #bbf7d0;
+    background: rgba(34, 197, 94, 0.2);
+    border: 1.5px solid #22c55e;
+    white-space: nowrap;
+  }
+
+  .c5-arch-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 14px;
+    border-radius: 14px;
+    background: #0f172a;
+    border: 1.5px solid #334155;
+  }
+
+  .c5-chip {
+    padding: 6px 12px;
+    border-radius: 10px;
+    background: #1e293b;
+    border: 1.5px solid #64748b;
+    font-size: 17px;
+    font-weight: 800;
+    color: #f8fafc;
+    white-space: nowrap;
+  }
+
+  .c5-chip-core {
+    border-color: #a78bfa;
+    background: rgba(139, 92, 246, 0.2);
+    color: #ede9fe;
+  }
+
+  .c5-chip-blue {
+    border-color: #38bdf8;
+    background: rgba(56, 189, 248, 0.16);
+    color: #bae6fd;
+  }
+
+  .c5-chip-green {
+    border-color: #22c55e;
+    background: rgba(34, 197, 94, 0.16);
+    color: #bbf7d0;
+  }
+
+  .c5-chip-arrow {
+    font-size: 18px;
+    font-weight: 900;
+    color: #94a3b8;
+  }
+
+  .c5-arch-note {
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.72);
+    border-left: 4px solid #8b5cf6;
+    font-size: 18px;
+    font-weight: 700;
+    color: #e2e8f0;
+    line-height: 1.45;
+  }
+
+  .c5-arch-ouro .c5-arch-note {
+    border-left-color: #38bdf8;
+  }
+
+  .c5-arch-mor .c5-arch-note {
+    border-left-color: #22c55e;
+  }
+
+  /* Phase B */
+  .c5-b-banner {
+    width: 73%;
+    padding: 16px 24px;
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.28) 0%, rgba(15, 23, 42, 0.96) 75%, rgba(34, 211, 238, 0.2) 100%);
+    border: 2px solid #8b5cf6;
+    border-left: 8px solid #a78bfa;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+
+  .c5-b-banner-text {
+    font-size: 25px;
+    font-weight: 900;
+    color: #f8fafc;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+  }
+
+  .c5-b-grid {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1.06fr 1fr;
+    gap: 22px;
+  }
+
+  .c5-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 20px;
+    padding: 18px 22px;
+    box-sizing: border-box;
+    min-height: 0;
+  }
+
+  .c5-panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    flex-shrink: 0;
+  }
+
+  .c5-panel-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    color: #f8fafc;
+  }
+
+  .c5-axes-list {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .c5-axis-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 13px 18px;
+    border-radius: 14px;
+    background: #0f172a;
+    border: 2px solid #475569;
+  }
+
+  .c5-axis-1 {
+    border-color: #38bdf8;
+  }
+
+  .c5-axis-2 {
+    border-color: #f59e0b;
+  }
+
+  .c5-axis-3 {
+    border-color: #8b5cf6;
+    background: linear-gradient(90deg, #1e1b4b 0%, #0f172a 100%);
+  }
+
+  .c5-axis-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .c5-axis-name {
+    font-size: 21px;
+    font-weight: 800;
+    color: #f8fafc;
+  }
+
+  .c5-axis-sub {
+    font-size: 16px;
+    font-weight: 700;
+    color: #cbd5e1;
+  }
+
+  .c5-axis-pill {
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 800;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .c5-axis-1 .c5-axis-pill {
+    color: #bae6fd;
+    background: rgba(56, 189, 248, 0.18);
+    border: 1.5px solid #38bdf8;
+  }
+
+  .c5-axis-2 .c5-axis-pill {
+    color: #fde68a;
+    background: rgba(245, 158, 11, 0.18);
+    border: 1.5px solid #f59e0b;
+  }
+
+  .c5-axis-3 .c5-axis-pill {
+    color: #ddd6fe;
+    background: rgba(139, 92, 246, 0.25);
+    border: 1.5px solid #8b5cf6;
+  }
+
+  .c5-synergy-bar {
+    padding: 11px 18px;
+    border-radius: 14px;
+    background: rgba(139, 92, 246, 0.18);
+    border: 2px solid #8b5cf6;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 800;
+    color: #f8fafc;
+    flex-shrink: 0;
+  }
+
+  .c5-svg-wrap {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0f172a;
+    border: 1.5px solid #334155;
+    border-radius: 16px;
+    padding: 8px;
+  }
+
+  .c5-edge-svg {
+    width: 100%;
+    height: 100%;
+    max-height: 360px;
+  }
+
+  .c5-edge-pill {
+    padding: 11px 18px;
+    border-radius: 14px;
+    background: rgba(34, 211, 238, 0.14);
+    border: 2px solid #22d3ee;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 800;
+    color: #cffafe;
+    flex-shrink: 0;
+  }
+</style>
+
+<div class="c5-scene">
+  <div id="c5-phase-a" class="c5-phase">
+    <div id="c5-a-header" class="c5-title-bar">
+      <h2 class="c5-title">5. 最前線と未来：理論実験から実規模 Looped LLM へ</h2>
+      <span class="c5-badge">2018 → 2025+</span>
+    </div>
+    <div id="c5-timeline" class="c5-timeline">
+      <div id="c5-step-1" class="c5-step">
+        <span class="c5-year">2018</span>
+        <span class="c5-step-name">Universal Transformer</span>
+        <span class="c5-step-desc">重み共有 ＋ 適応計算時間（ACT）</span>
+      </div>
+      <div id="c5-tarr-1" class="c5-tarrow">→</div>
+      <div id="c5-step-2" class="c5-step c5-step-cyan">
+        <span class="c5-year">2023</span>
+        <span class="c5-step-name">SUBLEQ 計算機証明</span>
+        <span class="c5-step-desc">Looped で汎用計算が可能と証明</span>
+      </div>
+      <div id="c5-tarr-2" class="c5-tarrow">→</div>
+      <div id="c5-step-3" class="c5-step c5-step-cyan">
+        <span class="c5-year">2024</span>
+        <span class="c5-step-name">Length Generalization</span>
+        <span class="c5-step-desc">反復による長さ汎化理論が確立</span>
+      </div>
+      <div id="c5-tarr-3" class="c5-tarrow">→</div>
+      <div id="c5-step-4" class="c5-step c5-step-highlight">
+        <span class="c5-year">2025〜</span>
+        <span class="c5-step-name">実規模 Looped LLM</span>
+        <span class="c5-step-desc">実用サイズの大規模言語モデル登場</span>
+      </div>
+    </div>
+    <div class="c5-arch-grid">
+      <div id="c5-arch-huginn" class="c5-arch-card c5-arch-huginn">
+        <div class="c5-arch-head">
+          <h3 class="c5-arch-name">Huginn</h3>
+          <span class="c5-tag-purple">推論時ループ伸縮</span>
+        </div>
+        <div class="c5-arch-flow">
+          <span class="c5-chip">Prelude</span>
+          <span class="c5-chip-arrow">→</span>
+          <span class="c5-chip c5-chip-core">4層Core × R</span>
+          <span class="c5-chip-arrow">→</span>
+          <span class="c5-chip">Coda</span>
+          <span class="c5-chip c5-chip-core">+ Input Injection</span>
+        </div>
+        <div class="c5-arch-note">Prelude・4層Core・Coda に Input Injection を組み合わせ、推論時の反復深さ R を自在に調整。</div>
+      </div>
+      <div id="c5-arch-ouro" class="c5-arch-card c5-arch-ouro">
+        <div class="c5-arch-head">
+          <h3 class="c5-arch-name">Ouro</h3>
+          <span class="c5-tag-blue">自律停止学習</span>
+        </div>
+        <div class="c5-arch-flow">
+          <span class="c5-chip c5-chip-blue">全層スタック × R</span>
+          <span class="c5-chip-arrow">→</span>
+          <span class="c5-chip c5-chip-blue">自律的深さ配分</span>
+        </div>
+        <div class="c5-arch-note">スタック全体をループさせつつ、課題の難度に応じて必要な計算深さを自律的に学習・配分。</div>
+      </div>
+      <div id="c5-arch-mor" class="c5-arch-card c5-arch-mor">
+        <div class="c5-arch-head">
+          <h3 class="c5-arch-name">MoR</h3>
+          <span class="c5-tag-green">Mixture-of-Recursions</span>
+        </div>
+        <div class="c5-arch-flow">
+          <span class="c5-chip">Router</span>
+          <span class="c5-chip-arrow">→</span>
+          <span class="c5-chip c5-chip-green">トークン別動的ルーティング</span>
+        </div>
+        <div class="c5-arch-note">重要なトークンだけ深くループさせ、単純な機能語は浅い周回で早期脱出し計算を最適化。</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="c5-phase-b" class="c5-phase">
+    <div id="c5-b-header" class="c5-title-bar c5-b-title-bar">
+      <h2 class="c5-title">CoT との共存：ハイブリッド推論とエッジAIへの展開</h2>
+      <span class="c5-badge">3-Axis Scaling</span>
+    </div>
+    <div id="c5-b-banner" class="c5-b-banner">
+      <span class="c5-b-banner-text">結論：CoTの代替ではなく「3軸スケーリング」のハイブリッド時代へ！</span>
+    </div>
+    <div id="c5-b-grid" class="c5-b-grid">
+      <div id="c5-b-left" class="c5-panel">
+        <div class="c5-panel-head">
+          <h3 class="c5-panel-title">これからの3軸スケーリング</h3>
+          <span class="c5-tag-purple">直交する3つの計算軸</span>
+        </div>
+        <div class="c5-axes-list">
+          <div id="c5-axis-1" class="c5-axis-card c5-axis-1">
+            <div class="c5-axis-left">
+              <span class="c5-axis-name">軸① パラメータ規模 N</span>
+              <span class="c5-axis-sub">知識量・記憶容量のベースライン</span>
+            </div>
+            <span class="c5-axis-pill">知識の広さ</span>
+          </div>
+          <div id="c5-axis-2" class="c5-axis-card c5-axis-2">
+            <div class="c5-axis-left">
+              <span class="c5-axis-name">軸② CoT長 T_CoT</span>
+              <span class="c5-axis-sub">ノートに書き出す段階的な論理検証</span>
+            </div>
+            <span class="c5-axis-pill">明示的な言語整理・検算</span>
+          </div>
+          <div id="c5-axis-3" class="c5-axis-card c5-axis-3">
+            <div class="c5-axis-left">
+              <span class="c5-axis-name">軸③ ループ深さ R</span>
+              <span class="c5-axis-sub">頭の中での高速な反復・並列暗算</span>
+            </div>
+            <span class="c5-axis-pill">潜在空間の高帯域推論</span>
+          </div>
+        </div>
+        <div id="c5-axis-synergy" class="c5-synergy-bar">知識の広さ N × 言語思考 T_CoT × 潜在反復 R ＝ ハイブリッド最強構成</div>
+      </div>
+      <div id="c5-b-right" class="c5-panel">
+        <div class="c5-panel-head">
+          <h3 class="c5-panel-title">エッジAI・省メモリ端末への波及</h3>
+          <span class="c5-tag-blue">Small VRAM × Deep R</span>
+        </div>
+        <div class="c5-svg-wrap">
+          <svg id="c5-edge-svg" class="c5-edge-svg" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
+            <g id="c5-svg-vram">
+              <rect x="20" y="96" width="160" height="128" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2.5" />
+              <text x="100" y="138" text-anchor="middle" fill="#bae6fd" font-size="18" font-weight="800" font-family="Noto Sans JP, sans-serif">小VRAM</text>
+              <text x="100" y="168" text-anchor="middle" fill="#f8fafc" font-size="21" font-weight="900" font-family="Noto Sans JP, sans-serif">物理重み</text>
+              <text x="100" y="200" text-anchor="middle" fill="#94a3b8" font-size="15" font-weight="700" font-family="Noto Sans JP, sans-serif">省メモリ格納</text>
+            </g>
+            <g id="c5-svg-loop">
+              <circle cx="300" cy="160" r="76" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="3" />
+              <circle id="c5-svg-ring" cx="300" cy="160" r="62" fill="none" stroke="#22d3ee" stroke-width="4" stroke-dasharray="18 10" />
+              <text x="300" y="154" text-anchor="middle" fill="#f8fafc" font-size="24" font-weight="900" font-family="Noto Sans JP, sans-serif">× R周回</text>
+              <text x="300" y="184" text-anchor="middle" fill="#c4b5fd" font-size="15" font-weight="700" font-family="Noto Sans JP, sans-serif">反復して熟考</text>
+            </g>
+            <path id="c5-svg-arrow" pathLength="100" d="M 184 160 L 220 160 M 380 160 L 426 160 L 456 96 M 426 160 L 456 224" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round" stroke-dasharray="100" />
+            <g id="c5-svg-devices">
+              <rect x="460" y="42" width="160" height="100" rx="16" fill="#1e293b" stroke="#22c55e" stroke-width="2.5" />
+              <text x="540" y="84" text-anchor="middle" fill="#bbf7d0" font-size="20" font-weight="900" font-family="Noto Sans JP, sans-serif">スマートフォン</text>
+              <text x="540" y="114" text-anchor="middle" fill="#cbd5e1" font-size="15" font-weight="700" font-family="Noto Sans JP, sans-serif">手元で高度推論</text>
+              <rect x="460" y="178" width="160" height="100" rx="16" fill="#1e293b" stroke="#a78bfa" stroke-width="2.5" />
+              <text x="540" y="220" text-anchor="middle" fill="#ddd6fe" font-size="20" font-weight="900" font-family="Noto Sans JP, sans-serif">ローカルPC</text>
+              <text x="540" y="250" text-anchor="middle" fill="#cbd5e1" font-size="15" font-weight="700" font-family="Noto Sans JP, sans-serif">オフラインで深く思考</text>
+            </g>
+          </svg>
+        </div>
+        <div id="c5-edge-pill" class="c5-edge-pill">小VRAM物理重み × R周回 → 手元端末でじっくり考えるAIへ！</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders["ch05_frontier_future"] = function (tl, cues) {
+  gsap.set("#c5-phase-a", { opacity: 1 });
+  gsap.set("#c5-phase-b", { opacity: 0 });
+
+  gsap.set(["#c5-a-header", "#c5-timeline"], { opacity: 0, y: 12 });
+  gsap.set(["#c5-step-1", "#c5-tarr-1", "#c5-step-2", "#c5-tarr-2", "#c5-step-3", "#c5-tarr-3", "#c5-step-4"], { opacity: 0, y: 12 });
+  gsap.set(["#c5-arch-huginn", "#c5-arch-ouro", "#c5-arch-mor"], { opacity: 0, y: 16 });
+
+  gsap.set(["#c5-b-banner", "#c5-b-left", "#c5-b-right"], { opacity: 0, y: 14 });
+  gsap.set(["#c5-axis-1", "#c5-axis-2", "#c5-axis-3", "#c5-axis-synergy", "#c5-edge-pill"], { opacity: 0, y: 12 });
+  gsap.set(["#c5-svg-vram", "#c5-svg-loop", "#c5-svg-devices"], { opacity: 0, y: 10 });
+  gsap.set("#c5-svg-arrow", { opacity: 0, strokeDashoffset: 100 });
+
+  // Phase A
+  const tIntro = cues.c5_timeline_intro ?? 0.45;
+  tl.to(["#c5-a-header", "#c5-timeline"], { opacity: 1, y: 0, duration: 0.45, stagger: 0.12, ease: "power2.out" }, tIntro);
+
+  const tUt2018 = cues.c5_ut_2018 ?? 7.77;
+  tl.to(["#c5-step-1", "#c5-tarr-1"], { opacity: 1, y: 0, duration: 0.45, stagger: 0.15, ease: "power2.out" }, tUt2018);
+
+  const tTheory2024 = cues.c5_theory_2024 ?? 16.99;
+  tl.to(["#c5-step-2", "#c5-tarr-2"], { opacity: 1, y: 0, duration: 0.4, stagger: 0.12, ease: "power2.out" }, tTheory2024);
+  tl.to(["#c5-step-3", "#c5-tarr-3"], { opacity: 1, y: 0, duration: 0.4, stagger: 0.12, ease: "power2.out" }, tTheory2024 + 2.6);
+  tl.to("#c5-step-4", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tTheory2024 + 6.0);
+
+  const tHuginn = cues.c5_huginn ?? 28.7;
+  tl.to("#c5-arch-huginn", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, tHuginn);
+  tl.to("#c5-arch-huginn", { borderColor: "#c4b5fd", duration: 0.35, yoyo: true, repeat: 1 }, tHuginn + 2.2);
+
+  const tOuroMor = cues.c5_ouro_mor ?? 38.77;
+  tl.to("#c5-arch-ouro", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tOuroMor);
+  tl.to("#c5-arch-mor", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tOuroMor + 3.2);
+
+  const tZundaReal = cues.c5_zunda_real ?? 47.48;
+  tl.to(["#c5-step-4", "#c5-arch-huginn", "#c5-arch-ouro", "#c5-arch-mor"], { borderColor: "#22d3ee", duration: 0.4, stagger: 0.15, yoyo: true, repeat: 1 }, tZundaReal);
+
+  // Phase A -> Phase B (zero blank gap while Tsumugi speaks)
+  const tP2 = cues.c5_phase2_tsumugi ?? 53.79;
+  tl.to("#c5-phase-a", { opacity: 0, duration: 0.35, ease: "power2.inOut" }, tP2);
+  tl.to("#c5-phase-b", { opacity: 1, duration: 0.35, ease: "power2.out" }, tP2);
+  tl.to(["#c5-b-banner", "#c5-b-left", "#c5-b-right"], { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, tP2 + 0.35);
+  tl.to(["#c5-axis-1", "#c5-svg-vram", "#c5-svg-loop"], { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, tP2 + 0.35);
+  tl.to(["#c5-axis-2", "#c5-axis-3", "#c5-svg-devices"], { opacity: 0.45, y: 0, duration: 0.35, ease: "power2.out" }, tP2 + 0.35);
+
+  const t3AxisIntro = cues.c5_3axis_intro ?? 59.47;
+  tl.to("#c5-b-banner", { borderColor: "#22d3ee", duration: 0.4, yoyo: true, repeat: 1 }, t3AxisIntro);
+  tl.to("#c5-b-left", { borderColor: "#8b5cf6", duration: 0.45, ease: "power2.out" }, t3AxisIntro + 0.3);
+
+  const tAxis12 = cues.c5_axis_12 ?? 68.52;
+  tl.to("#c5-axis-1", { borderColor: "#22d3ee", duration: 0.35, yoyo: true, repeat: 1, ease: "power2.out" }, tAxis12);
+  tl.to("#c5-axis-2", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tAxis12 + 3.4);
+
+  const tAxis3 = cues.c5_axis_3 ?? 77.71;
+  tl.to("#c5-axis-3", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, tAxis3);
+  tl.to("#c5-axis-3", { borderColor: "#22d3ee", duration: 0.4, yoyo: true, repeat: 1 }, tAxis3 + 1.2);
+
+  const tZunda3Axis = cues.c5_zunda_3axis ?? 85.97;
+  tl.to("#c5-axis-synergy", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tZunda3Axis);
+  tl.to(["#c5-axis-1", "#c5-axis-2", "#c5-axis-3"], { scale: 1.02, duration: 0.3, stagger: 0.55, yoyo: true, repeat: 1, ease: "power2.out" }, tZunda3Axis + 0.4);
+
+  const tEdgeAi = cues.c5_edge_ai ?? 93.4;
+  tl.to("#c5-b-right", { borderColor: "#22d3ee", duration: 0.4, ease: "power2.out" }, tEdgeAi);
+  tl.to("#c5-svg-vram", { scale: 1.03, transformOrigin: "center center", duration: 0.3, yoyo: true, repeat: 1, ease: "power2.out" }, tEdgeAi + 0.2);
+  tl.to("#c5-svg-loop", { scale: 1.03, transformOrigin: "center center", duration: 0.3, yoyo: true, repeat: 1, ease: "power2.out" }, tEdgeAi + 1.2);
+  tl.to("#c5-svg-ring", { rotation: 360, svgOrigin: "300 160", duration: 12, ease: "none" }, tEdgeAi + 1.2);
+  tl.to("#c5-svg-arrow", { opacity: 1, strokeDashoffset: 0, duration: 0.6, ease: "power2.out" }, tEdgeAi + 2.4);
+  tl.to("#c5-svg-devices", { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, tEdgeAi + 3.0);
+  tl.to("#c5-edge-pill", { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, tEdgeAi + 3.8);
+
+  const tTsumugiWow = cues.c5_tsumugi_wow ?? 102.73;
+  tl.to(["#c5-edge-pill", "#c5-b-banner"], { borderColor: "#22c55e", duration: 0.5, yoyo: true, repeat: 1 }, tTsumugiWow + 0.4);
+};
+</script>

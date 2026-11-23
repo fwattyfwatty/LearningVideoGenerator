@@ -1,0 +1,3391 @@
+{
+  "generatedAt": "2026-11-20T12:22:17.302Z",
+  "meta": {
+    "title": "主要国家の金融政策とその意図：FRB・日銀・ECB・中国人民銀行はなぜ違う手を打つのか",
+    "series": "世界経済・マクロ金融入門",
+    "episode": "解説動画",
+    "theme": "clean-light",
+    "accent_color": "#1d4ed8",
+    "bgm": null,
+    "fps": 30,
+    "width": 1920,
+    "height": 1080
+  },
+  "totalDuration": 614.8465,
+  "chapters": [
+    {
+      "id": "ch01_intro",
+      "title": "1. 導入：なぜ主要国の金利はバラバラなのか？",
+      "layout": "title",
+      "start": 0,
+      "end": 69.5195,
+      "duration": 69.5195,
+      "cues": {
+        "c1_title": 0.45,
+        "c1_zunda_ask": 7.392,
+        "c1_four_poles": 15.8487,
+        "c1_jp_cn_split": 28.4187,
+        "c1_zunda_why": 38.4754,
+        "c1_thesis": 45.5561,
+        "c1_goals": 54.1581,
+        "c1_go": 63.2868
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch01_intro_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "こんにちは、四国めたんです。今日は『主要国家の金融政策とその意図』を解説します。",
+          "voiceText": "こんにちは、四国めたんです。今日は『主要国家の金融政策とその意図』を解説します。",
+          "audioFile": "audio/lines/ch01_intro_001.wav",
+          "hash": "ddad2173a282403d",
+          "start": 0.45,
+          "end": 7.042,
+          "globalStart": 0.45,
+          "globalEnd": 7.042,
+          "duration": 6.592,
+          "mouthSpans": [
+            {
+              "start": 0.63,
+              "end": 1.23
+            },
+            {
+              "start": 1.53,
+              "end": 2.37
+            },
+            {
+              "start": 2.79,
+              "end": 3.15
+            },
+            {
+              "start": 3.45,
+              "end": 5.01
+            },
+            {
+              "start": 5.13,
+              "end": 5.73
+            },
+            {
+              "start": 6.03,
+              "end": 6.87
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_title"
+        },
+        {
+          "index": 2,
+          "id": "ch01_intro_002",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "ずんだもんなのだ！ニュースでFRBや日銀の金利って聞くけど、なんで国ごとに真逆の動きをするのだ？",
+          "voiceText": "ずんだもんなのだ！ニュースでエフアールビーや日銀の金利って聞くけど、なんで国ごとに真逆の動きをするのだ？",
+          "audioFile": "audio/lines/ch01_intro_002.wav",
+          "hash": "13944fdc884a6010",
+          "start": 7.392,
+          "end": 15.4987,
+          "globalStart": 7.392,
+          "globalEnd": 15.4987,
+          "duration": 8.1067,
+          "mouthSpans": [
+            {
+              "start": 7.572,
+              "end": 8.532
+            },
+            {
+              "start": 8.892,
+              "end": 9.492
+            },
+            {
+              "start": 9.672,
+              "end": 10.452
+            },
+            {
+              "start": 10.752,
+              "end": 11.652
+            },
+            {
+              "start": 11.892,
+              "end": 12.132
+            },
+            {
+              "start": 12.552,
+              "end": 12.912
+            },
+            {
+              "start": 13.152,
+              "end": 15.312
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_zunda_ask"
+        },
+        {
+          "index": 3,
+          "id": "ch01_intro_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "良い着眼点です。2026年11月現在、米FRBは3.75〜4.00%、欧州ECBは預金金利2.50%と高めの水準です。",
+          "voiceText": "良い着眼点です。2026年11月現在、アメリカのエフアールビーは3.75から4パーセント、欧州のイーシービーは預金金利2.5パーセントと高めの水準です。",
+          "audioFile": "audio/lines/ch01_intro_003.wav",
+          "hash": "f4aa5d01ea20ac74",
+          "start": 15.8487,
+          "end": 28.1687,
+          "globalStart": 15.8487,
+          "globalEnd": 28.1687,
+          "duration": 12.32,
+          "mouthSpans": [
+            {
+              "start": 15.9687,
+              "end": 17.0487
+            },
+            {
+              "start": 17.4087,
+              "end": 19.6287
+            },
+            {
+              "start": 19.9887,
+              "end": 23.4087
+            },
+            {
+              "start": 23.7687,
+              "end": 27.9687
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c1_four_poles"
+        },
+        {
+          "index": 4,
+          "id": "ch01_intro_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "一方、日銀は約30年ぶりの1.25%前後へ利上げを進め、中国人民銀行は低金利の緩和基調を保っています。",
+          "voiceText": "一方、日銀は約30年ぶりの1.25パーセント前後へ利上げを進め、中国人民銀行は低金利の緩和基調を保っています。",
+          "audioFile": "audio/lines/ch01_intro_004.wav",
+          "hash": "b9247a3ca7755bfa",
+          "start": 28.4187,
+          "end": 38.1254,
+          "globalStart": 28.4187,
+          "globalEnd": 38.1254,
+          "duration": 9.7067,
+          "mouthSpans": [
+            {
+              "start": 28.8387,
+              "end": 29.0787
+            },
+            {
+              "start": 29.4387,
+              "end": 33.9387
+            },
+            {
+              "start": 34.3587,
+              "end": 37.4787
+            },
+            {
+              "start": 37.5987,
+              "end": 37.8987
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_jp_cn_split"
+        },
+        {
+          "index": 5,
+          "id": "ch01_intro_005",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "同じ世界経済なのに、ブレーキを踏む国とアクセルを踏む国がバラバラに走っているのだ！？",
+          "voiceText": "同じ世界経済なのに、ブレーキを踏む国とアクセルを踏む国がバラバラに走っているのだ！？",
+          "audioFile": "audio/lines/ch01_intro_005.wav",
+          "hash": "5763ced31ae34847",
+          "start": 38.4754,
+          "end": 45.2061,
+          "globalStart": 38.4754,
+          "globalEnd": 45.2061,
+          "duration": 6.7307,
+          "mouthSpans": [
+            {
+              "start": 38.6554,
+              "end": 40.2154
+            },
+            {
+              "start": 40.7554,
+              "end": 41.3554
+            },
+            {
+              "start": 41.4754,
+              "end": 41.8354
+            },
+            {
+              "start": 41.9554,
+              "end": 42.1354
+            },
+            {
+              "start": 42.3154,
+              "end": 42.6154
+            },
+            {
+              "start": 42.7354,
+              "end": 43.8754
+            },
+            {
+              "start": 44.0554,
+              "end": 44.1754
+            },
+            {
+              "start": 44.2954,
+              "end": 45.0154
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_zunda_why"
+        },
+        {
+          "index": 6,
+          "id": "ch01_intro_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そうなんです。金融政策は気まぐれではなく、各国の『使命』と『国内の悩み』の掛け算で決まります。",
+          "voiceText": "そうなんです。金融政策は気まぐれではなく、各国の『使命』と『国内の悩み』の掛け算で決まります。",
+          "audioFile": "audio/lines/ch01_intro_006.wav",
+          "hash": "fb5230315b74708a",
+          "start": 45.5561,
+          "end": 53.9081,
+          "globalStart": 45.5561,
+          "globalEnd": 53.9081,
+          "duration": 8.352,
+          "mouthSpans": [
+            {
+              "start": 45.7361,
+              "end": 46.2761
+            },
+            {
+              "start": 46.7561,
+              "end": 48.6761
+            },
+            {
+              "start": 49.0361,
+              "end": 49.6361
+            },
+            {
+              "start": 50.0561,
+              "end": 50.3561
+            },
+            {
+              "start": 50.8361,
+              "end": 50.9561
+            },
+            {
+              "start": 51.3761,
+              "end": 52.2761
+            },
+            {
+              "start": 52.5761,
+              "end": 53.7161
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c1_thesis"
+        },
+        {
+          "index": 7,
+          "id": "ch01_intro_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "normal",
+          "se": null,
+          "caption": "今日は①金融政策の仕組みと武器、②米欧日中の4大国の意図、③為替の制約と限界の3本柱で整理します。",
+          "voiceText": "今日は①金融政策の仕組みと武器、②米欧日中の4大国の意図、③為替の制約と限界の3本柱で整理します。",
+          "audioFile": "audio/lines/ch01_intro_007.wav",
+          "hash": "cc19dd039b3cea71",
+          "start": 54.1581,
+          "end": 62.9368,
+          "globalStart": 54.1581,
+          "globalEnd": 62.9368,
+          "duration": 8.7787,
+          "mouthSpans": [
+            {
+              "start": 54.3381,
+              "end": 56.5581
+            },
+            {
+              "start": 56.9781,
+              "end": 59.0781
+            },
+            {
+              "start": 59.4981,
+              "end": 60.5181
+            },
+            {
+              "start": 60.6381,
+              "end": 62.7381
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c1_goals"
+        },
+        {
+          "index": 8,
+          "id": "ch01_intro_008",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "金利の数字のうらにある国家の本音が読めそうなのだ！さっそく見ていくのだ！",
+          "voiceText": "金利の数字のうらにある国家の本音が読めそうなのだ！さっそく見ていくのだ！",
+          "audioFile": "audio/lines/ch01_intro_008.wav",
+          "hash": "87ad2e6b67cacc5e",
+          "start": 63.2868,
+          "end": 68.7695,
+          "globalStart": 63.2868,
+          "globalEnd": 68.7695,
+          "duration": 5.4827,
+          "mouthSpans": [
+            {
+              "start": 63.4668,
+              "end": 63.9468
+            },
+            {
+              "start": 64.0668,
+              "end": 65.2068
+            },
+            {
+              "start": 65.3268,
+              "end": 66.9468
+            },
+            {
+              "start": 67.6068,
+              "end": 68.6268
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c1_go"
+        }
+      ]
+    },
+    {
+      "id": "ch02_central_bank_tools",
+      "title": "2. 金融政策の仕組み：金利・量的緩和・波及ルート",
+      "layout": "default",
+      "start": 69.5195,
+      "end": 170.8422,
+      "duration": 101.3227,
+      "cues": {
+        "c2_policy_rate": 0.45,
+        "c2_hike_channel": 9.4893,
+        "c2_fx_inflation": 16.63,
+        "c2_cut_channel": 23.3867,
+        "c2_zunda_how_decide": 29.9554,
+        "c2_taylor_rule": 36.9827,
+        "c2_zunda_taylor": 44.9947,
+        "c2_phase2_zero_bound": 52.392,
+        "c2_qe_qt": 61.5487,
+        "c2_qt_shrink": 70.9187,
+        "c2_forward_guidance": 78.4754,
+        "c2_zunda_unconv": 86.5587,
+        "c2_to_ch3": 94.0447
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch02_central_bank_tools_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "まず基本の仕組みです。中央銀行が直接動かすのは、銀行同士が超短期で貸し借りする『政策金利』です。",
+          "voiceText": "まず基本の仕組みです。中央銀行が直接動かすのは、銀行同士が超短期で貸し借りする『政策金利』です。",
+          "audioFile": "audio/lines/ch02_central_bank_tools_001.wav",
+          "hash": "7f0e5de5d39a0fa9",
+          "start": 0.45,
+          "end": 9.2393,
+          "globalStart": 69.9695,
+          "globalEnd": 78.7588,
+          "duration": 8.7893,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 1.77
+            },
+            {
+              "start": 2.25,
+              "end": 3.33
+            },
+            {
+              "start": 3.45,
+              "end": 4.47
+            },
+            {
+              "start": 4.77,
+              "end": 6.99
+            },
+            {
+              "start": 7.53,
+              "end": 7.89
+            },
+            {
+              "start": 8.07,
+              "end": 8.37
+            },
+            {
+              "start": 8.85,
+              "end": 9.03
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c2_policy_rate"
+        },
+        {
+          "index": 2,
+          "id": "ch02_central_bank_tools_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "政策金利を引き上げると、住宅ローンや企業の借入コストが上がり、消費や投資が落ち着きます。",
+          "voiceText": "政策金利を引き上げると、住宅ローンや企業の借入コストが上がり、消費や投資が落ち着きます。",
+          "audioFile": "audio/lines/ch02_central_bank_tools_002.wav",
+          "hash": "e404bc6a5633a48b",
+          "start": 9.4893,
+          "end": 16.38,
+          "globalStart": 79.0088,
+          "globalEnd": 85.8995,
+          "duration": 6.8907,
+          "mouthSpans": [
+            {
+              "start": 9.6693,
+              "end": 10.0293
+            },
+            {
+              "start": 10.1493,
+              "end": 10.5693
+            },
+            {
+              "start": 10.7493,
+              "end": 11.2893
+            },
+            {
+              "start": 11.8293,
+              "end": 14.2893
+            },
+            {
+              "start": 14.6493,
+              "end": 16.2093
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c2_hike_channel"
+        },
+        {
+          "index": 3,
+          "id": "ch02_central_bank_tools_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "さらに金利上昇は自国通貨高も招くため、輸入物価も抑えられてインフレのブレーキになります。",
+          "voiceText": "さらに金利上昇は自国通貨高も招くため、輸入物価も抑えられてインフレのブレーキになります。",
+          "audioFile": "audio/lines/ch02_central_bank_tools_003.wav",
+          "hash": "9f1ff9eb6f332fca",
+          "start": 16.63,
+          "end": 23.1367,
+          "globalStart": 86.1495,
+          "globalEnd": 92.6562,
+          "duration": 6.5067,
+          "mouthSpans": [
+            {
+              "start": 16.75,
+              "end": 18.25
+            },
+            {
+              "start": 18.43,
+              "end": 19.27
+            },
+            {
+              "start": 19.39,
+              "end": 19.69
+            },
+            {
+              "start": 20.05,
+              "end": 20.53
+            },
+            {
+              "start": 20.65,
+              "end": 22.93
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c2_fx_inflation"
+        },
+        {
+          "index": 4,
+          "id": "ch02_central_bank_tools_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "逆に景気が冷え込んだときは利下げをしてお金を借りやすくし、経済のアクセルを踏むわけです。",
+          "voiceText": "逆に景気が冷え込んだときは利下げをしてお金を借りやすくし、経済のアクセルを踏むわけです。",
+          "audioFile": "audio/lines/ch02_central_bank_tools_004.wav",
+          "hash": "ba4878a97a0dbb99",
+          "start": 23.3867,
+          "end": 29.6054,
+          "globalStart": 92.9062,
+          "globalEnd": 99.1249,
+          "duration": 6.2187,
+          "mouthSpans": [
+            {
+              "start": 23.5067,
+              "end": 27.1667
+            },
+            {
+              "start": 27.6467,
+              "end": 29.4467
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_cut_channel"
+        },
+        {
+          "index": 5,
+          "id": "ch02_central_bank_tools_005",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "でも、ちょうどいい金利の高さってどうやって決めるのだ？勘で決めているわけじゃないのだよね？",
+          "voiceText": "でも、ちょうどいい金利の高さってどうやって決めるのだ？勘で決めているわけじゃないのだよね？",
+          "audioFile": "audio/lines/ch02_central_bank_tools_005.wav",
+          "hash": "d21a5e80342edc98",
+          "start": 29.9554,
+          "end": 36.6327,
+          "globalStart": 99.4749,
+          "globalEnd": 106.1522,
+          "duration": 6.6773,
+          "mouthSpans": [
+            {
+              "start": 30.0754,
+              "end": 30.3754
+            },
+            {
+              "start": 30.7954,
+              "end": 31.2754
+            },
+            {
+              "start": 31.4554,
+              "end": 32.2354
+            },
+            {
+              "start": 32.3554,
+              "end": 32.9554
+            },
+            {
+              "start": 33.0754,
+              "end": 33.7354
+            },
+            {
+              "start": 34.1554,
+              "end": 35.7754
+            },
+            {
+              "start": 35.9554,
+              "end": 36.4954
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_zunda_how_decide"
+        },
+        {
+          "index": 6,
+          "id": "ch02_central_bank_tools_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "判断の目安として有名なのがテイラー・ルールです。目標物価との差と景気の過熱度から適正金利を測ります。",
+          "voiceText": "判断の目安として有名なのがテイラー・ルールです。目標物価との差と景気の過熱度から適正金利を測ります。",
+          "audioFile": "audio/lines/ch02_central_bank_tools_006.wav",
+          "hash": "df5ef893da2643f0",
+          "start": 36.9827,
+          "end": 44.6947,
+          "globalStart": 106.5022,
+          "globalEnd": 114.2142,
+          "duration": 7.712,
+          "mouthSpans": [
+            {
+              "start": 37.1027,
+              "end": 39.4427
+            },
+            {
+              "start": 39.9827,
+              "end": 40.4027
+            },
+            {
+              "start": 40.7627,
+              "end": 44.4827
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c2_taylor_rule"
+        },
+        {
+          "index": 7,
+          "id": "ch02_central_bank_tools_007",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "物価が上がりすぎたり景気が熱すぎたら利上げ、冷えてたら利下げ、という数式の羅針盤なのだ！",
+          "voiceText": "物価が上がりすぎたり景気が熱すぎたら利上げ、冷えてたら利下げ、という数式の羅針盤なのだ！",
+          "audioFile": "audio/lines/ch02_central_bank_tools_007.wav",
+          "hash": "e4dcb906d6e9d7fc",
+          "start": 44.9947,
+          "end": 51.992,
+          "globalStart": 114.5142,
+          "globalEnd": 121.5115,
+          "duration": 6.9973,
+          "mouthSpans": [
+            {
+              "start": 45.4147,
+              "end": 46.4947
+            },
+            {
+              "start": 46.6147,
+              "end": 46.7347
+            },
+            {
+              "start": 46.8547,
+              "end": 47.0947
+            },
+            {
+              "start": 47.3347,
+              "end": 48.1747
+            },
+            {
+              "start": 48.6547,
+              "end": 49.1947
+            },
+            {
+              "start": 49.3147,
+              "end": 49.6147
+            },
+            {
+              "start": 49.9747,
+              "end": 50.2147
+            },
+            {
+              "start": 50.3347,
+              "end": 51.8347
+            }
+          ],
+          "pauseAfter": 0.4,
+          "cue": "c2_zunda_taylor"
+        },
+        {
+          "index": 8,
+          "id": "ch02_central_bank_tools_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "ところが深刻な不況では、政策金利をほぼ0%まで下げ切っても景気が温まらない『ゼロ金利の壁』に当たります。",
+          "voiceText": "ところが深刻な不況では、政策金利をほぼゼロパーセントまで下げ切っても景気が温まらない『ゼロ金利の壁』に当たります。",
+          "audioFile": "audio/lines/ch02_central_bank_tools_008.wav",
+          "hash": "2a63adec610a5fc6",
+          "start": 52.392,
+          "end": 61.2987,
+          "globalStart": 121.9115,
+          "globalEnd": 130.8182,
+          "duration": 8.9067,
+          "mouthSpans": [
+            {
+              "start": 52.512,
+              "end": 53.532
+            },
+            {
+              "start": 53.712,
+              "end": 54.192
+            },
+            {
+              "start": 54.552,
+              "end": 54.912
+            },
+            {
+              "start": 55.032,
+              "end": 58.632
+            },
+            {
+              "start": 59.172,
+              "end": 60.132
+            },
+            {
+              "start": 60.492,
+              "end": 61.092
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c2_phase2_zero_bound"
+        },
+        {
+          "index": 9,
+          "id": "ch02_central_bank_tools_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そこで登場するのが非伝統的手段です。代表格のQE、量的緩和では、国債などを大量に買い市場へ資金を流します。",
+          "voiceText": "そこで登場するのが非伝統的手段です。代表格のキューイー、量的緩和では、国債などを大量に買い市場へ資金を流します。",
+          "audioFile": "audio/lines/ch02_central_bank_tools_009.wav",
+          "hash": "9366bc5594db7b0b",
+          "start": 61.5487,
+          "end": 70.6687,
+          "globalStart": 131.0682,
+          "globalEnd": 140.1882,
+          "duration": 9.12,
+          "mouthSpans": [
+            {
+              "start": 61.6687,
+              "end": 64.1287
+            },
+            {
+              "start": 64.5487,
+              "end": 65.3287
+            },
+            {
+              "start": 65.4487,
+              "end": 65.8087
+            },
+            {
+              "start": 66.2887,
+              "end": 67.3087
+            },
+            {
+              "start": 67.6087,
+              "end": 70.4887
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c2_qe_qt"
+        },
+        {
+          "index": 10,
+          "id": "ch02_central_bank_tools_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "反対にインフレ局面では保有国債を減らしてお金を回収するQT、量的引き締めで過熱を冷まします。",
+          "voiceText": "反対にインフレ局面では保有国債を減らしてお金を回収するキューティー、量的引き締めで過熱を冷まします。",
+          "audioFile": "audio/lines/ch02_central_bank_tools_010.wav",
+          "hash": "70978f6bd77f240e",
+          "start": 70.9187,
+          "end": 78.2254,
+          "globalStart": 140.4382,
+          "globalEnd": 147.7449,
+          "duration": 7.3067,
+          "mouthSpans": [
+            {
+              "start": 71.0387,
+              "end": 75.6587
+            },
+            {
+              "start": 76.0787,
+              "end": 76.4387
+            },
+            {
+              "start": 76.6787,
+              "end": 78.0587
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c2_qt_shrink"
+        },
+        {
+          "index": 11,
+          "id": "ch02_central_bank_tools_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "もう一つの武器がフォワードガイダンス。今後の金利方針を予告し、市場の予想を通じて長期金利を動かします。",
+          "voiceText": "もう一つの武器がフォワードガイダンス。今後の金利方針を予告し、市場の予想を通じて長期金利を動かします。",
+          "audioFile": "audio/lines/ch02_central_bank_tools_011.wav",
+          "hash": "71ac354c9ac14634",
+          "start": 78.4754,
+          "end": 86.2087,
+          "globalStart": 147.9949,
+          "globalEnd": 155.7282,
+          "duration": 7.7333,
+          "mouthSpans": [
+            {
+              "start": 78.5954,
+              "end": 80.6354
+            },
+            {
+              "start": 81.0554,
+              "end": 82.9154
+            },
+            {
+              "start": 83.2754,
+              "end": 84.8954
+            },
+            {
+              "start": 85.0154,
+              "end": 86.0354
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_forward_guidance"
+        },
+        {
+          "index": 12,
+          "id": "ch02_central_bank_tools_012",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "金利の高さだけじゃなくて、お金の量や『これからこうするぞ』という約束まで武器にするのだ！",
+          "voiceText": "金利の高さだけじゃなくて、お金の量や『これからこうするぞ』という約束まで武器にするのだ！",
+          "audioFile": "audio/lines/ch02_central_bank_tools_012.wav",
+          "hash": "a43bd1fd3cc38918",
+          "start": 86.5587,
+          "end": 93.6947,
+          "globalStart": 156.0782,
+          "globalEnd": 163.2142,
+          "duration": 7.136,
+          "mouthSpans": [
+            {
+              "start": 86.7987,
+              "end": 88.0587
+            },
+            {
+              "start": 88.2387,
+              "end": 88.3587
+            },
+            {
+              "start": 88.8387,
+              "end": 89.5587
+            },
+            {
+              "start": 89.9787,
+              "end": 90.6387
+            },
+            {
+              "start": 90.7587,
+              "end": 91.1187
+            },
+            {
+              "start": 91.5387,
+              "end": 91.9587
+            },
+            {
+              "start": 92.1387,
+              "end": 92.6187
+            },
+            {
+              "start": 92.7987,
+              "end": 93.5187
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c2_zunda_unconv"
+        },
+        {
+          "index": 13,
+          "id": "ch02_central_bank_tools_013",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "まさにそうです。では同じ武器を持ちながら、主要4カ国がどう違う意図で使うのか見ていきましょう。",
+          "voiceText": "まさにそうです。では同じ武器を持ちながら、主要4カ国がどう違う意図で使うのか見ていきましょう。",
+          "audioFile": "audio/lines/ch02_central_bank_tools_013.wav",
+          "hash": "055e70f3e6f75265",
+          "start": 94.0447,
+          "end": 100.5727,
+          "globalStart": 163.5642,
+          "globalEnd": 170.0922,
+          "duration": 6.528,
+          "mouthSpans": [
+            {
+              "start": 94.1647,
+              "end": 94.8847
+            },
+            {
+              "start": 95.3647,
+              "end": 96.8647
+            },
+            {
+              "start": 97.2247,
+              "end": 99.9247
+            },
+            {
+              "start": 100.0447,
+              "end": 100.4647
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c2_to_ch3"
+        }
+      ]
+    },
+    {
+      "id": "ch03_us_eu_mandates",
+      "title": "3. 米国FRB ＆ 欧州ECB：使命と構造の違い",
+      "layout": "wide",
+      "start": 170.8422,
+      "end": 297.5748,
+      "duration": 126.7326,
+      "cues": {
+        "c3_frb_intro": 0.45,
+        "c3_dual_mandate": 8.4013,
+        "c3_frb_path": 15.6166,
+        "c3_frb_2026": 25.1573,
+        "c3_frb_intent": 34.058,
+        "c3_zunda_dollar": 41.672,
+        "c3_zunda_frb": 50.0967,
+        "c3_phase2_ecb": 58.0167,
+        "c3_single_mandate": 66.96,
+        "c3_ecb_2026": 74.4953,
+        "c3_ecb_dilemma": 85.2946,
+        "c3_ecb_spread": 93.6299,
+        "c3_ecb_tpi": 101.8799,
+        "c3_zunda_ecb": 111.1046,
+        "c3_to_ch4": 120.4573
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch03_us_eu_mandates_001",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "まずは世界経済の中心、アメリカのFRBです。FRBには法律で課された2つの使命があります。",
+          "voiceText": "まずは世界経済の中心、アメリカのエフアールビーです。エフアールビーには法律で課された2つの使命があります。",
+          "audioFile": "audio/lines/ch03_us_eu_mandates_001.wav",
+          "hash": "9be3c03c8fa3a746",
+          "start": 0.45,
+          "end": 8.1513,
+          "globalStart": 171.2922,
+          "globalEnd": 178.9935,
+          "duration": 7.7013,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 1.77
+            },
+            {
+              "start": 1.89,
+              "end": 2.25
+            },
+            {
+              "start": 2.67,
+              "end": 4.23
+            },
+            {
+              "start": 4.65,
+              "end": 7.95
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_frb_intro"
+        },
+        {
+          "index": 2,
+          "id": "ch03_us_eu_mandates_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "それが『物価の安定』と『雇用の最大化』を同時に追う、デュアル・マンデートです。",
+          "voiceText": "それが『物価の安定』と『雇用の最大化』を同時に追う、デュアル・マンデートです。",
+          "audioFile": "audio/lines/ch03_us_eu_mandates_002.wav",
+          "hash": "534925eab4cb0365",
+          "start": 8.4013,
+          "end": 15.3666,
+          "globalStart": 179.2435,
+          "globalEnd": 186.2088,
+          "duration": 6.9653,
+          "mouthSpans": [
+            {
+              "start": 8.5813,
+              "end": 8.9413
+            },
+            {
+              "start": 9.2413,
+              "end": 10.0813
+            },
+            {
+              "start": 10.5613,
+              "end": 10.6813
+            },
+            {
+              "start": 11.1613,
+              "end": 12.1213
+            },
+            {
+              "start": 12.4213,
+              "end": 13.2013
+            },
+            {
+              "start": 13.6813,
+              "end": 14.0413
+            },
+            {
+              "start": 14.4613,
+              "end": 15.1813
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_dual_mandate"
+        },
+        {
+          "index": 3,
+          "id": "ch03_us_eu_mandates_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "FRBは2022〜23年の急利上げでインフレを抑え、2024〜25年には利下げへ舵を切りました。",
+          "voiceText": "エフアールビーは2022年から2023年の急利上げでインフレを抑え、2024年から2025年には利下げへ舵を切りました。",
+          "audioFile": "audio/lines/ch03_us_eu_mandates_003.wav",
+          "hash": "d34b0379675e6817",
+          "start": 15.6166,
+          "end": 24.9073,
+          "globalStart": 186.4588,
+          "globalEnd": 195.7495,
+          "duration": 9.2907,
+          "mouthSpans": [
+            {
+              "start": 15.7366,
+              "end": 20.5966
+            },
+            {
+              "start": 20.9566,
+              "end": 24.7966
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_frb_path"
+        },
+        {
+          "index": 4,
+          "id": "ch03_us_eu_mandates_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "しかし粘着的なインフレとエネルギー高の再燃を受け、2026年秋には3.75〜4.00%へ再調整しました。",
+          "voiceText": "しかしねんちゃくてきなインフレとエネルギー高の再燃を受け、2026年秋には3.75から4パーセントへ再調整しました。",
+          "audioFile": "audio/lines/ch03_us_eu_mandates_004.wav",
+          "hash": "3bc8871b2fd5e346",
+          "start": 25.1573,
+          "end": 33.808,
+          "globalStart": 195.9995,
+          "globalEnd": 204.6502,
+          "duration": 8.6507,
+          "mouthSpans": [
+            {
+              "start": 25.2773,
+              "end": 28.5773
+            },
+            {
+              "start": 28.9973,
+              "end": 33.6773
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_frb_2026"
+        },
+        {
+          "index": 5,
+          "id": "ch03_us_eu_mandates_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "意図は明確です。雇用を壊す急減速を避けつつ、インフレ期待が根付く前に火種を消す綱渡りなんです。",
+          "voiceText": "意図は明確です。雇用を壊す急減速を避けつつ、インフレ期待が根付く前に火種を消す綱渡りなんです。",
+          "audioFile": "audio/lines/ch03_us_eu_mandates_005.wav",
+          "hash": "4a2e765a27346914",
+          "start": 34.058,
+          "end": 41.322,
+          "globalStart": 204.9002,
+          "globalEnd": 212.1642,
+          "duration": 7.264,
+          "mouthSpans": [
+            {
+              "start": 34.178,
+              "end": 35.138
+            },
+            {
+              "start": 35.558,
+              "end": 37.358
+            },
+            {
+              "start": 37.538,
+              "end": 37.658
+            },
+            {
+              "start": 38.018,
+              "end": 38.378
+            },
+            {
+              "start": 38.498,
+              "end": 41.138
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_frb_intent"
+        },
+        {
+          "index": 6,
+          "id": "ch03_us_eu_mandates_006",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "question",
+          "se": null,
+          "caption": "しかもドルは世界の基軸通貨だから、FRBのFOMCが一言いうだけで世界中の市場が揺れるのだ！",
+          "voiceText": "しかもドルは世界の基軸通貨だから、エフアールビーのエフオーエムシーが一言いうだけで世界中の市場が揺れるのだ！",
+          "audioFile": "audio/lines/ch03_us_eu_mandates_006.wav",
+          "hash": "eb8f72bc5c0c0304",
+          "start": 41.672,
+          "end": 49.7467,
+          "globalStart": 212.5142,
+          "globalEnd": 220.5889,
+          "duration": 8.0747,
+          "mouthSpans": [
+            {
+              "start": 41.912,
+              "end": 43.052
+            },
+            {
+              "start": 43.532,
+              "end": 44.192
+            },
+            {
+              "start": 44.612,
+              "end": 45.632
+            },
+            {
+              "start": 45.752,
+              "end": 46.652
+            },
+            {
+              "start": 46.772,
+              "end": 47.672
+            },
+            {
+              "start": 47.912,
+              "end": 48.932
+            },
+            {
+              "start": 49.052,
+              "end": 49.592
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_zunda_dollar"
+        },
+        {
+          "index": 7,
+          "id": "ch03_us_eu_mandates_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "その通りです。自国の雇用と物価を見つつも、結果的に世界全体の金融環境を左右する立場にあります。",
+          "voiceText": "その通りです。自国の雇用と物価を見つつも、結果的に世界全体の金融環境を左右する立場にあります。",
+          "audioFile": "audio/lines/ch03_us_eu_mandates_007.wav",
+          "hash": "c86e6d2d3b10a6c5",
+          "start": 50.0967,
+          "end": 57.6167,
+          "globalStart": 220.9389,
+          "globalEnd": 228.4589,
+          "duration": 7.52,
+          "mouthSpans": [
+            {
+              "start": 50.2767,
+              "end": 50.9367
+            },
+            {
+              "start": 51.3567,
+              "end": 53.1567
+            },
+            {
+              "start": 53.5167,
+              "end": 57.4167
+            }
+          ],
+          "pauseAfter": 0.4,
+          "cue": "c3_zunda_frb"
+        },
+        {
+          "index": 8,
+          "id": "ch03_us_eu_mandates_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "次にユーロ圏のECBです。FRBと大きく違うのは、法的使命が『物価の安定』最優先である点です。",
+          "voiceText": "次にユーロ圏のイーシービーです。エフアールビーと大きく違うのは、法的使命が『物価の安定』最優先である点です。",
+          "audioFile": "audio/lines/ch03_us_eu_mandates_008.wav",
+          "hash": "e19b4aaa3c17e7a2",
+          "start": 58.0167,
+          "end": 66.71,
+          "globalStart": 228.8589,
+          "globalEnd": 237.5522,
+          "duration": 8.6933,
+          "mouthSpans": [
+            {
+              "start": 58.1367,
+              "end": 59.9967
+            },
+            {
+              "start": 60.4167,
+              "end": 61.5567
+            },
+            {
+              "start": 61.6767,
+              "end": 62.3367
+            },
+            {
+              "start": 62.6367,
+              "end": 63.5367
+            },
+            {
+              "start": 63.8967,
+              "end": 64.7367
+            },
+            {
+              "start": 65.1567,
+              "end": 66.5367
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_phase2_ecb"
+        },
+        {
+          "index": 9,
+          "id": "ch03_us_eu_mandates_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "過去のハイパーインフレの記憶が強く、中期的な物価2%を守るシングル・マンデートを掲げています。",
+          "voiceText": "過去のハイパーインフレの記憶が強く、中期的な物価2パーセントを守るシングル・マンデートを掲げています。",
+          "audioFile": "audio/lines/ch03_us_eu_mandates_009.wav",
+          "hash": "391313b953eba840",
+          "start": 66.96,
+          "end": 74.2453,
+          "globalStart": 237.8022,
+          "globalEnd": 245.0875,
+          "duration": 7.2853,
+          "mouthSpans": [
+            {
+              "start": 67.08,
+              "end": 68.4
+            },
+            {
+              "start": 68.52,
+              "end": 69.3
+            },
+            {
+              "start": 69.72,
+              "end": 72.24
+            },
+            {
+              "start": 72.66,
+              "end": 74.04
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_single_mandate"
+        },
+        {
+          "index": 10,
+          "id": "ch03_us_eu_mandates_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "ECBも2024〜25年に2%前後まで利下げしましたが、2026年のエネルギー高で預金金利を2.50%へ戻しました。",
+          "voiceText": "イーシービーも2024年から2025年に2パーセント前後まで利下げしましたが、2026年のエネルギー高で預金金利を2.5パーセントへ戻しました。",
+          "audioFile": "audio/lines/ch03_us_eu_mandates_010.wav",
+          "hash": "664e6765c5e26c23",
+          "start": 74.4953,
+          "end": 85.0446,
+          "globalStart": 245.3375,
+          "globalEnd": 255.8868,
+          "duration": 10.5493,
+          "mouthSpans": [
+            {
+              "start": 74.6153,
+              "end": 79.8953
+            },
+            {
+              "start": 80.1353,
+              "end": 84.9353
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_ecb_2026"
+        },
+        {
+          "index": 11,
+          "id": "ch03_us_eu_mandates_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "そしてECB固有の悩みが『1つの金利で、経済体力が違う20カ国を同時に舵取りする』構造です。",
+          "voiceText": "そしてイーシービー固有の悩みが『1つの金利で、経済体力が違う20カ国を同時に舵取りする』構造です。",
+          "audioFile": "audio/lines/ch03_us_eu_mandates_011.wav",
+          "hash": "966640b239db5010",
+          "start": 85.2946,
+          "end": 93.3799,
+          "globalStart": 256.1368,
+          "globalEnd": 264.2221,
+          "duration": 8.0853,
+          "mouthSpans": [
+            {
+              "start": 85.4146,
+              "end": 87.3346
+            },
+            {
+              "start": 87.7546,
+              "end": 88.5346
+            },
+            {
+              "start": 89.0146,
+              "end": 92.2546
+            },
+            {
+              "start": 92.6146,
+              "end": 93.2146
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_ecb_dilemma"
+        },
+        {
+          "index": 12,
+          "id": "ch03_us_eu_mandates_012",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "画一的な利上げは、財政が厳しい国の国債利回りだけを急上昇させ、ユーロ圏の分断を招きかねません。",
+          "voiceText": "画一的な利上げは、財政が厳しい国の国債りまわりだけを急上昇させ、ユーロ圏の分断を招きかねません。",
+          "audioFile": "audio/lines/ch03_us_eu_mandates_012.wav",
+          "hash": "37f5cd11e69da94b",
+          "start": 93.6299,
+          "end": 101.6299,
+          "globalStart": 264.4721,
+          "globalEnd": 272.4721,
+          "duration": 8,
+          "mouthSpans": [
+            {
+              "start": 93.7499,
+              "end": 95.0099
+            },
+            {
+              "start": 95.3099,
+              "end": 98.9699
+            },
+            {
+              "start": 99.5099,
+              "end": 100.8899
+            },
+            {
+              "start": 101.0099,
+              "end": 101.5499
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c3_ecb_spread"
+        },
+        {
+          "index": 13,
+          "id": "ch03_us_eu_mandates_013",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そのためECBはTPIなどの安全網を備え、物価抑制と『ユーロという通貨の結束』の両立を図っています。",
+          "voiceText": "そのためイーシービーはティーピーアイなどの安全網を備え、物価抑制と『ユーロという通貨の結束』の両立を図っています。",
+          "audioFile": "audio/lines/ch03_us_eu_mandates_013.wav",
+          "hash": "1d942dbde1fd9abb",
+          "start": 101.8799,
+          "end": 110.7546,
+          "globalStart": 272.7221,
+          "globalEnd": 281.5968,
+          "duration": 8.8747,
+          "mouthSpans": [
+            {
+              "start": 101.9999,
+              "end": 105.3599
+            },
+            {
+              "start": 105.8999,
+              "end": 106.8599
+            },
+            {
+              "start": 107.3399,
+              "end": 108.8999
+            },
+            {
+              "start": 109.1999,
+              "end": 110.0999
+            },
+            {
+              "start": 110.2199,
+              "end": 110.5199
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_ecb_tpi"
+        },
+        {
+          "index": 14,
+          "id": "ch03_us_eu_mandates_014",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "FRBは物価と雇用の二兎追い、ECBは物価最優先に加えて多国籍の結束まで守る必要があるのだね！",
+          "voiceText": "エフアールビーは物価と雇用の二兎追い、イーシービーは物価最優先に加えて多国籍の結束まで守る必要があるのだね！",
+          "audioFile": "audio/lines/ch03_us_eu_mandates_014.wav",
+          "hash": "a1257c31c0d1f1f4",
+          "start": 111.1046,
+          "end": 120.1073,
+          "globalStart": 281.9468,
+          "globalEnd": 290.9495,
+          "duration": 9.0027,
+          "mouthSpans": [
+            {
+              "start": 111.2846,
+              "end": 112.2446
+            },
+            {
+              "start": 112.4846,
+              "end": 113.2646
+            },
+            {
+              "start": 113.3846,
+              "end": 113.6846
+            },
+            {
+              "start": 114.2846,
+              "end": 115.0646
+            },
+            {
+              "start": 115.3646,
+              "end": 116.2646
+            },
+            {
+              "start": 116.3846,
+              "end": 116.7446
+            },
+            {
+              "start": 117.1646,
+              "end": 117.5246
+            },
+            {
+              "start": 117.8246,
+              "end": 118.6646
+            },
+            {
+              "start": 118.9046,
+              "end": 119.9246
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c3_zunda_ecb"
+        },
+        {
+          "index": 15,
+          "id": "ch03_us_eu_mandates_015",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "その違いを押さえると、欧米の記者会見のニュアンスの違いまでくっきり見えてきますよ。",
+          "voiceText": "その違いを押さえると、欧米の記者会見のニュアンスの違いまでくっきり見えてきますよ。",
+          "audioFile": "audio/lines/ch03_us_eu_mandates_015.wav",
+          "hash": "ffea5cb0fd041e77",
+          "start": 120.4573,
+          "end": 125.9826,
+          "globalStart": 291.2995,
+          "globalEnd": 296.8248,
+          "duration": 5.5253,
+          "mouthSpans": [
+            {
+              "start": 120.5773,
+              "end": 121.8373
+            },
+            {
+              "start": 122.1973,
+              "end": 124.7173
+            },
+            {
+              "start": 124.8373,
+              "end": 125.8573
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c3_to_ch4"
+        }
+      ]
+    },
+    {
+      "id": "ch04_jp_cn_divergence",
+      "title": "4. 日本・日銀 vs 中国・人民銀行：正反対の意図",
+      "layout": "default",
+      "start": 297.5748,
+      "end": 432.6326,
+      "duration": 135.0578,
+      "cues": {
+        "c4_tsumugi_ask": 0.45,
+        "c4_asia_split": 9.4507,
+        "c4_boj_history": 17.53,
+        "c4_boj_norm": 25.0653,
+        "c4_boj_loop": 35.758,
+        "c4_boj_intent": 43.1333,
+        "c4_zunda_boj": 51.8566,
+        "c4_boj_qt": 59.9613,
+        "c4_phase2_pboc": 66.5053,
+        "c4_pboc_deflation": 73.1553,
+        "c4_pboc_tools": 80.9786,
+        "c4_pboc_targeted": 91.1699,
+        "c4_pboc_reform": 99.6652,
+        "c4_tsumugi_yuan": 110.5465,
+        "c4_pboc_balance": 117.0298,
+        "c4_to_ch5": 126.1051
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch04_jp_cn_divergence_001",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "sharp",
+          "se": null,
+          "caption": "米欧がインフレと戦う横で、アジアの2大国は全然違う動きをしてるよね。日本は利上げ、中国は緩和なのはなぜ？",
+          "voiceText": "米欧がインフレと戦う横で、アジアの2大国は全然違う動きをしてるよね。日本は利上げ、中国は緩和なのはなぜ？",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_001.wav",
+          "hash": "facf2c026b6655c9",
+          "start": 0.45,
+          "end": 9.1007,
+          "globalStart": 298.0248,
+          "globalEnd": 306.6755,
+          "duration": 8.6507,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 2.31
+            },
+            {
+              "start": 2.73,
+              "end": 5.49
+            },
+            {
+              "start": 5.97,
+              "end": 6.09
+            },
+            {
+              "start": 6.21,
+              "end": 6.93
+            },
+            {
+              "start": 7.41,
+              "end": 8.91
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_tsumugi_ask"
+        },
+        {
+          "index": 2,
+          "id": "ch04_jp_cn_divergence_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "まさに現在の世界経済で最も対照的な構図です。まず日本の日銀、BOJの意図から整理しましょう。",
+          "voiceText": "まさに現在の世界経済で最も対照的な構図です。まず日本の日銀、ビーオージェーの意図から整理しましょう。",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_002.wav",
+          "hash": "38645012771a1ff1",
+          "start": 9.4507,
+          "end": 17.28,
+          "globalStart": 307.0255,
+          "globalEnd": 314.8548,
+          "duration": 7.8293,
+          "mouthSpans": [
+            {
+              "start": 9.5707,
+              "end": 13.0507
+            },
+            {
+              "start": 13.4107,
+              "end": 14.6707
+            },
+            {
+              "start": 15.1507,
+              "end": 17.1907
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c4_asia_split"
+        },
+        {
+          "index": 3,
+          "id": "ch04_jp_cn_divergence_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "日本は長年デフレに苦しみ、マイナス金利や長短金利操作YCCという異次元緩和を続けてきました。",
+          "voiceText": "日本は長年デフレに苦しみ、マイナス金利や長短金利操作ワイシーシーという異次元緩和を続けてきました。",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_003.wav",
+          "hash": "6141948365498ba3",
+          "start": 17.53,
+          "end": 24.8153,
+          "globalStart": 315.1048,
+          "globalEnd": 322.3901,
+          "duration": 7.2853,
+          "mouthSpans": [
+            {
+              "start": 17.65,
+              "end": 17.77
+            },
+            {
+              "start": 17.89,
+              "end": 19.51
+            },
+            {
+              "start": 19.87,
+              "end": 24.73
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c4_boj_history"
+        },
+        {
+          "index": 4,
+          "id": "ch04_jp_cn_divergence_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "2024年にマイナス金利を解除後、賃上げと2%超の物価定着を受け、2026年秋には1.25%前後へ利上げしました。",
+          "voiceText": "2024年にマイナス金利を解除後、賃上げと2パーセント超の物価定着を受け、2026年秋には1.25パーセント前後へ利上げしました。",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_004.wav",
+          "hash": "24f306277e1a6814",
+          "start": 25.0653,
+          "end": 35.508,
+          "globalStart": 322.6401,
+          "globalEnd": 333.0828,
+          "duration": 10.4427,
+          "mouthSpans": [
+            {
+              "start": 25.1853,
+              "end": 27.7053
+            },
+            {
+              "start": 28.0653,
+              "end": 30.7653
+            },
+            {
+              "start": 31.1853,
+              "end": 32.8653
+            },
+            {
+              "start": 32.9853,
+              "end": 35.3853
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c4_boj_norm"
+        },
+        {
+          "index": 5,
+          "id": "ch04_jp_cn_divergence_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "約30年ぶりの水準ですが、狙いは景気を冷やすことではなく『金利ある世界への正常化』です。",
+          "voiceText": "約30年ぶりの水準ですが、狙いは景気を冷やすことではなく『金利ある世界への正常化』です。",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_005.wav",
+          "hash": "aa21adb772cce836",
+          "start": 35.758,
+          "end": 42.8833,
+          "globalStart": 333.3328,
+          "globalEnd": 340.4581,
+          "duration": 7.1253,
+          "mouthSpans": [
+            {
+              "start": 35.878,
+              "end": 37.858
+            },
+            {
+              "start": 38.158,
+              "end": 40.078
+            },
+            {
+              "start": 40.498,
+              "end": 42.178
+            },
+            {
+              "start": 42.538,
+              "end": 42.658
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c4_boj_loop"
+        },
+        {
+          "index": 6,
+          "id": "ch04_jp_cn_divergence_006",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "デフレ逆戻りを防ぐ慎重さと、実質金利の低すぎによる過度な円安・輸入物価高の抑制を両立する意図です。",
+          "voiceText": "デフレ逆戻りを防ぐ慎重さと、実質金利の低すぎによる過度なえんやす・輸入物価高の抑制を両立する意図です。",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_006.wav",
+          "hash": "2332044956ee5e58",
+          "start": 43.1333,
+          "end": 51.5066,
+          "globalStart": 340.7081,
+          "globalEnd": 349.0814,
+          "duration": 8.3733,
+          "mouthSpans": [
+            {
+              "start": 43.2533,
+              "end": 45.4133
+            },
+            {
+              "start": 45.8333,
+              "end": 48.2333
+            },
+            {
+              "start": 48.7133,
+              "end": 51.3533
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_boj_intent"
+        },
+        {
+          "index": 7,
+          "id": "ch04_jp_cn_divergence_007",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "賃金と物価の好循環を守りながら、非常時の超低金利から普通のスピードへ戻している最中なのだ！",
+          "voiceText": "賃金と物価の好循環を守りながら、非常時の超低金利から普通のスピードへ戻している最中なのだ！",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_007.wav",
+          "hash": "8ef988ab31127d42",
+          "start": 51.8566,
+          "end": 59.6113,
+          "globalStart": 349.4314,
+          "globalEnd": 357.1861,
+          "duration": 7.7547,
+          "mouthSpans": [
+            {
+              "start": 52.0966,
+              "end": 52.6366
+            },
+            {
+              "start": 52.8766,
+              "end": 53.9566
+            },
+            {
+              "start": 54.0766,
+              "end": 54.6766
+            },
+            {
+              "start": 55.1566,
+              "end": 55.5766
+            },
+            {
+              "start": 55.6966,
+              "end": 56.0566
+            },
+            {
+              "start": 56.1766,
+              "end": 56.7166
+            },
+            {
+              "start": 57.0166,
+              "end": 57.2566
+            },
+            {
+              "start": 57.4366,
+              "end": 59.4766
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_zunda_boj"
+        },
+        {
+          "index": 8,
+          "id": "ch04_jp_cn_divergence_008",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "同時に国債の買い入れ減額も進め、市場機能が働く状態へゆっくり移行させています。",
+          "voiceText": "同時に国債の買い入れ減額も進め、市場機能が働く状態へゆっくり移行させています。",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_008.wav",
+          "hash": "49eb2a77909c0970",
+          "start": 59.9613,
+          "end": 66.1053,
+          "globalStart": 357.5361,
+          "globalEnd": 363.6801,
+          "duration": 6.144,
+          "mouthSpans": [
+            {
+              "start": 60.0813,
+              "end": 62.4213
+            },
+            {
+              "start": 62.7813,
+              "end": 65.9013
+            }
+          ],
+          "pauseAfter": 0.4,
+          "cue": "c4_boj_qt"
+        },
+        {
+          "index": 9,
+          "id": "ch04_jp_cn_divergence_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "これと真逆の課題に直面しているのが、中国の中国人民銀行、PBOCです。",
+          "voiceText": "これと真逆の課題に直面しているのが、中国の中国人民銀行、ピービーオーシーです。",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_009.wav",
+          "hash": "adb8050ea9877d8d",
+          "start": 66.5053,
+          "end": 72.9053,
+          "globalStart": 364.0801,
+          "globalEnd": 370.4801,
+          "duration": 6.4,
+          "mouthSpans": [
+            {
+              "start": 66.6253,
+              "end": 69.0253
+            },
+            {
+              "start": 69.3253,
+              "end": 71.2453
+            },
+            {
+              "start": 71.7253,
+              "end": 72.7453
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c4_phase2_pboc"
+        },
+        {
+          "index": 10,
+          "id": "ch04_jp_cn_divergence_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "中国は不動産市場の長期調整と内需の弱さから、インフレではなく『デフレ圧力』と戦っています。",
+          "voiceText": "中国は不動産市場の長期調整と内需の弱さから、インフレではなく『デフレ圧力』と戦っています。",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_010.wav",
+          "hash": "3bba4a31bb017d5d",
+          "start": 73.1553,
+          "end": 80.7286,
+          "globalStart": 370.7301,
+          "globalEnd": 378.3034,
+          "duration": 7.5733,
+          "mouthSpans": [
+            {
+              "start": 73.2753,
+              "end": 75.0753
+            },
+            {
+              "start": 75.2553,
+              "end": 76.8153
+            },
+            {
+              "start": 77.2353,
+              "end": 78.1353
+            },
+            {
+              "start": 78.4953,
+              "end": 79.3353
+            },
+            {
+              "start": 79.6353,
+              "end": 80.5353
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c4_pboc_deflation"
+        },
+        {
+          "index": 11,
+          "id": "ch04_jp_cn_divergence_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "そのため1年LPRを3.00%、住宅ローン基準の5年超LPRを3.50%の低水準に据え置き緩和姿勢を維持中です。",
+          "voiceText": "そのため1年エルピーアールを3パーセント、住宅ローン基準のごねんちょうエルピーアールを3.5パーセントの低水準に据え置き緩和姿勢を維持中です。",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_011.wav",
+          "hash": "af2a89f2ae76b60b",
+          "start": 80.9786,
+          "end": 90.9199,
+          "globalStart": 378.5534,
+          "globalEnd": 388.4947,
+          "duration": 9.9413,
+          "mouthSpans": [
+            {
+              "start": 81.0986,
+              "end": 83.7386
+            },
+            {
+              "start": 84.2186,
+              "end": 89.1986
+            },
+            {
+              "start": 89.3186,
+              "end": 90.7586
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c4_pboc_tools"
+        },
+        {
+          "index": 12,
+          "id": "ch04_jp_cn_divergence_012",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "さらに預金準備率RRRの調整や、先端産業・消費向け再貸出でピンポイントに資金を届けています。",
+          "voiceText": "さらに預金準備率アールアールアールの調整や、先端産業・消費向け再貸出でピンポイントに資金を届けています。",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_012.wav",
+          "hash": "a9a40ccff2739f3e",
+          "start": 91.1699,
+          "end": 99.4152,
+          "globalStart": 388.7447,
+          "globalEnd": 396.99,
+          "duration": 8.2453,
+          "mouthSpans": [
+            {
+              "start": 91.2899,
+              "end": 94.2899
+            },
+            {
+              "start": 94.7099,
+              "end": 95.6099
+            },
+            {
+              "start": 95.9099,
+              "end": 99.1499
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c4_pboc_targeted"
+        },
+        {
+          "index": 13,
+          "id": "ch04_jp_cn_divergence_013",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "加えて2026年11月には主要政策金利の軸を翌日物リバースレポ1.25%へ移し、金利の効きを高める改革も実施しました。",
+          "voiceText": "加えて2026年11月には主要政策金利の軸をよくじつものリバースレポ1.25パーセントへ移し、金利の効きを高める改革も実施しました。",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_013.wav",
+          "hash": "ad6b6d92be37246e",
+          "start": 99.6652,
+          "end": 110.2465,
+          "globalStart": 397.24,
+          "globalEnd": 407.8213,
+          "duration": 10.5813,
+          "mouthSpans": [
+            {
+              "start": 99.8452,
+              "end": 103.0252
+            },
+            {
+              "start": 103.2052,
+              "end": 105.3652
+            },
+            {
+              "start": 105.4852,
+              "end": 107.1652
+            },
+            {
+              "start": 107.6452,
+              "end": 108.0052
+            },
+            {
+              "start": 108.1852,
+              "end": 110.1652
+            }
+          ],
+          "pauseAfter": 0.3,
+          "cue": "c4_pboc_reform"
+        },
+        {
+          "index": 14,
+          "id": "ch04_jp_cn_divergence_014",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "worry",
+          "se": null,
+          "caption": "でも思い切って大幅利下げすればいいのに、小刻みなのは人民元安や資本流出が怖いから？",
+          "voiceText": "でも思い切って大幅利下げすればいいのに、小刻みなのはじんみんげんやすや資本流出が怖いから？",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_014.wav",
+          "hash": "ca64844c36686c87",
+          "start": 110.5465,
+          "end": 116.6798,
+          "globalStart": 408.1213,
+          "globalEnd": 414.2546,
+          "duration": 6.1333,
+          "mouthSpans": [
+            {
+              "start": 110.6665,
+              "end": 112.8865
+            },
+            {
+              "start": 113.3065,
+              "end": 115.0465
+            },
+            {
+              "start": 115.2265,
+              "end": 115.5865
+            },
+            {
+              "start": 115.7065,
+              "end": 116.4265
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_tsumugi_yuan"
+        },
+        {
+          "index": 15,
+          "id": "ch04_jp_cn_divergence_015",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "お見事です。不動産バブル再燃と急激な元安・資本流出を避けつつ底割れを防ぐ、精密な二面作戦なんです。",
+          "voiceText": "お見事です。不動産バブル再燃と急激なげんやす・資本流出を避けつつ底割れを防ぐ、精密な二面作戦なんです。",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_015.wav",
+          "hash": "58b634aa281b6064",
+          "start": 117.0298,
+          "end": 125.7551,
+          "globalStart": 414.6046,
+          "globalEnd": 423.3299,
+          "duration": 8.7253,
+          "mouthSpans": [
+            {
+              "start": 117.1498,
+              "end": 117.7498
+            },
+            {
+              "start": 118.2298,
+              "end": 120.6898
+            },
+            {
+              "start": 121.1098,
+              "end": 122.3098
+            },
+            {
+              "start": 122.4298,
+              "end": 123.0298
+            },
+            {
+              "start": 123.1498,
+              "end": 123.4498
+            },
+            {
+              "start": 123.8698,
+              "end": 125.5498
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c4_pboc_balance"
+        },
+        {
+          "index": 16,
+          "id": "ch04_jp_cn_divergence_016",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "日本はデフレ脱却の正常化、中国はデフレ回避と元防衛の両立で、立っている場所が真逆なのだ！",
+          "voiceText": "日本はデフレ脱却の正常化、中国はデフレ回避とげんぼうえいの両立で、立っている場所が真逆なのだ！",
+          "audioFile": "audio/lines/ch04_jp_cn_divergence_016.wav",
+          "hash": "da8cc724554653f3",
+          "start": 126.1051,
+          "end": 134.3078,
+          "globalStart": 423.6799,
+          "globalEnd": 431.8826,
+          "duration": 8.2027,
+          "mouthSpans": [
+            {
+              "start": 126.2251,
+              "end": 126.3451
+            },
+            {
+              "start": 126.5251,
+              "end": 126.8851
+            },
+            {
+              "start": 127.0651,
+              "end": 127.3651
+            },
+            {
+              "start": 127.4851,
+              "end": 127.8451
+            },
+            {
+              "start": 127.9651,
+              "end": 128.5651
+            },
+            {
+              "start": 128.9851,
+              "end": 129.2851
+            },
+            {
+              "start": 129.4051,
+              "end": 129.5851
+            },
+            {
+              "start": 129.7651,
+              "end": 130.2451
+            },
+            {
+              "start": 130.3651,
+              "end": 131.6251
+            },
+            {
+              "start": 131.8051,
+              "end": 131.9251
+            },
+            {
+              "start": 132.3451,
+              "end": 132.4651
+            },
+            {
+              "start": 132.5851,
+              "end": 134.1451
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c4_to_ch5"
+        }
+      ]
+    },
+    {
+      "id": "ch05_tsumugi_trilemma",
+      "title": "5. つむぎの疑問：為替・トリレンマと中央銀行の限界",
+      "layout": "wide",
+      "start": 432.6326,
+      "end": 553.9225,
+      "duration": 121.2899,
+      "cues": {
+        "c5_tsumugi_fx": 0.45,
+        "c5_trilemma_intro": 8.48,
+        "c5_three_goals": 15.514,
+        "c5_developed_choice": 24.1587,
+        "c5_china_choice": 32.814,
+        "c5_zunda_trilemma": 41.004,
+        "c5_spillover": 49.3113,
+        "c5_phase2_limits": 57.05,
+        "c5_limit_intro": 65.1973,
+        "c5_limit_supply": 72.6153,
+        "c5_limit_fiscal": 80.4386,
+        "c5_independence": 89.4779,
+        "c5_limit_lag": 96.3732,
+        "c5_zunda_limits": 105.0859,
+        "c5_to_ch6": 113.2866
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch05_tsumugi_trilemma_001",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "sharp",
+          "se": null,
+          "caption": "各国の意図は分かったけど、アメリカが高金利だと他国から資金が流れて通貨安になるよね？自由に決められるの？",
+          "voiceText": "各国の意図は分かったけど、アメリカが高金利だと他国から資金が流れて通貨安になるよね？自由に決められるの？",
+          "audioFile": "audio/lines/ch05_tsumugi_trilemma_001.wav",
+          "hash": "ebe58708b7bb8c48",
+          "start": 0.45,
+          "end": 8.13,
+          "globalStart": 433.0826,
+          "globalEnd": 440.7626,
+          "duration": 7.68,
+          "mouthSpans": [
+            {
+              "start": 0.57,
+              "end": 0.69
+            },
+            {
+              "start": 0.81,
+              "end": 2.13
+            },
+            {
+              "start": 2.49,
+              "end": 3.99
+            },
+            {
+              "start": 4.11,
+              "end": 4.29
+            },
+            {
+              "start": 4.47,
+              "end": 6.27
+            },
+            {
+              "start": 6.87,
+              "end": 7.95
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_tsumugi_fx"
+        },
+        {
+          "index": 2,
+          "id": "ch05_tsumugi_trilemma_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "その核心をズバリ示すのが、国際経済学の重要法則『国際金融のトリレンマ』です。",
+          "voiceText": "その核心をズバリ示すのが、国際経済学の重要法則『国際金融のトリレンマ』です。",
+          "audioFile": "audio/lines/ch05_tsumugi_trilemma_002.wav",
+          "hash": "933885ff168ac01f",
+          "start": 8.48,
+          "end": 15.264,
+          "globalStart": 441.1126,
+          "globalEnd": 447.8966,
+          "duration": 6.784,
+          "mouthSpans": [
+            {
+              "start": 8.6,
+              "end": 10.34
+            },
+            {
+              "start": 10.64,
+              "end": 12.74
+            },
+            {
+              "start": 13.04,
+              "end": 14.6
+            },
+            {
+              "start": 14.9,
+              "end": 15.08
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_trilemma_intro"
+        },
+        {
+          "index": 3,
+          "id": "ch05_tsumugi_trilemma_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "①独立した金融政策、②自由な資本移動、③為替相場の安定。この3つは同時に2つまでしか選べません。",
+          "voiceText": "①独立した金融政策、②自由な資本移動、③為替相場の安定。この3つは同時に2つまでしか選べません。",
+          "audioFile": "audio/lines/ch05_tsumugi_trilemma_003.wav",
+          "hash": "f9cf29f13d3c8114",
+          "start": 15.514,
+          "end": 23.9087,
+          "globalStart": 448.1466,
+          "globalEnd": 456.5413,
+          "duration": 8.3947,
+          "mouthSpans": [
+            {
+              "start": 15.634,
+              "end": 17.434
+            },
+            {
+              "start": 17.794,
+              "end": 18.994
+            },
+            {
+              "start": 19.474,
+              "end": 20.914
+            },
+            {
+              "start": 21.274,
+              "end": 21.574
+            },
+            {
+              "start": 21.694,
+              "end": 23.794
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_three_goals"
+        },
+        {
+          "index": 4,
+          "id": "ch05_tsumugi_trilemma_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "米・日・欧は①と②を選び為替を変動相場に委ねるため、金利差が広がると資本移動で通貨安が起きます。",
+          "voiceText": "米・日・欧は①と②を選び為替を変動相場に委ねるため、金利差が広がると資本移動で通貨安が起きます。",
+          "audioFile": "audio/lines/ch05_tsumugi_trilemma_004.wav",
+          "hash": "fb9fc9d8ae1a3600",
+          "start": 24.1587,
+          "end": 32.564,
+          "globalStart": 456.7913,
+          "globalEnd": 465.1966,
+          "duration": 8.4053,
+          "mouthSpans": [
+            {
+              "start": 24.2787,
+              "end": 24.5187
+            },
+            {
+              "start": 25.1787,
+              "end": 25.4787
+            },
+            {
+              "start": 25.8387,
+              "end": 29.0787
+            },
+            {
+              "start": 29.4387,
+              "end": 32.0187
+            },
+            {
+              "start": 32.1387,
+              "end": 32.3787
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_developed_choice"
+        },
+        {
+          "index": 5,
+          "id": "ch05_tsumugi_trilemma_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "逆に中国は①と③の為替安定を重視するため、②の資本移動規制を手放さず管理変動相場を保つわけです。",
+          "voiceText": "逆に中国は①と③の為替安定を重視するため、②の資本移動規制を手放さず管理変動相場を保つわけです。",
+          "audioFile": "audio/lines/ch05_tsumugi_trilemma_005.wav",
+          "hash": "605f82b41ca4cac8",
+          "start": 32.814,
+          "end": 40.654,
+          "globalStart": 465.4466,
+          "globalEnd": 473.2866,
+          "duration": 7.84,
+          "mouthSpans": [
+            {
+              "start": 32.934,
+              "end": 36.234
+            },
+            {
+              "start": 36.594,
+              "end": 40.494
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_china_choice"
+        },
+        {
+          "index": 6,
+          "id": "ch05_tsumugi_trilemma_006",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "surprise",
+          "se": null,
+          "caption": "ぜんぶ取りは禁止の3すくみルールなのだ！だから日米金利差で円安が起きるのは構造上の宿命なのだね！",
+          "voiceText": "ぜんぶ取りは禁止の3すくみルールなのだ！だから日米金利差でえんやすが起きるのは構造上の宿命なのだね！",
+          "audioFile": "audio/lines/ch05_tsumugi_trilemma_006.wav",
+          "hash": "73116ef012987ba9",
+          "start": 41.004,
+          "end": 48.9613,
+          "globalStart": 473.6366,
+          "globalEnd": 481.5939,
+          "duration": 7.9573,
+          "mouthSpans": [
+            {
+              "start": 41.184,
+              "end": 41.904
+            },
+            {
+              "start": 42.084,
+              "end": 42.684
+            },
+            {
+              "start": 42.864,
+              "end": 43.824
+            },
+            {
+              "start": 44.124,
+              "end": 44.544
+            },
+            {
+              "start": 44.844,
+              "end": 45.984
+            },
+            {
+              "start": 46.164,
+              "end": 46.344
+            },
+            {
+              "start": 46.464,
+              "end": 46.824
+            },
+            {
+              "start": 47.004,
+              "end": 47.784
+            },
+            {
+              "start": 47.904,
+              "end": 48.804
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_zunda_trilemma"
+        },
+        {
+          "index": 7,
+          "id": "ch05_tsumugi_trilemma_007",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "はい。結果として各国は自国だけでなく、他国の金利や為替の跳ね返りまで睨んで判断せざるを得ません。",
+          "voiceText": "はい。結果として各国は自国だけでなく、他国の金利や為替の跳ね返りまで睨んで判断せざるを得ません。",
+          "audioFile": "audio/lines/ch05_tsumugi_trilemma_007.wav",
+          "hash": "f320562c743dc2b4",
+          "start": 49.3113,
+          "end": 56.65,
+          "globalStart": 481.9439,
+          "globalEnd": 489.2826,
+          "duration": 7.3387,
+          "mouthSpans": [
+            {
+              "start": 49.4313,
+              "end": 49.6713
+            },
+            {
+              "start": 50.2713,
+              "end": 52.3113
+            },
+            {
+              "start": 52.6713,
+              "end": 56.5713
+            }
+          ],
+          "pauseAfter": 0.4,
+          "cue": "c5_spillover"
+        },
+        {
+          "index": 8,
+          "id": "ch05_tsumugi_trilemma_008",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "worry",
+          "se": null,
+          "caption": "しかもエネルギー高みたいな海外要因のインフレや、国の借金が大きい状況で、金利だけで全部制御できるの？",
+          "voiceText": "しかもエネルギー高みたいな海外要因のインフレや、国の借金が大きい状況で、金利だけで全部制御できるの？",
+          "audioFile": "audio/lines/ch05_tsumugi_trilemma_008.wav",
+          "hash": "c0bf624bf6ca613d",
+          "start": 57.05,
+          "end": 64.8473,
+          "globalStart": 489.6826,
+          "globalEnd": 497.4799,
+          "duration": 7.7973,
+          "mouthSpans": [
+            {
+              "start": 57.17,
+              "end": 60.05
+            },
+            {
+              "start": 60.53,
+              "end": 61.01
+            },
+            {
+              "start": 61.13,
+              "end": 61.55
+            },
+            {
+              "start": 61.67,
+              "end": 62.39
+            },
+            {
+              "start": 62.93,
+              "end": 64.67
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_phase2_limits"
+        },
+        {
+          "index": 9,
+          "id": "ch05_tsumugi_trilemma_009",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "そこが現代の中央銀行が直面する3つの限界です。1つ目は『供給ショック』のジレンマです。",
+          "voiceText": "そこが現代の中央銀行が直面する3つの限界です。1つ目は『供給ショック』のジレンマです。",
+          "audioFile": "audio/lines/ch05_tsumugi_trilemma_009.wav",
+          "hash": "719150794975ab1e",
+          "start": 65.1973,
+          "end": 72.3653,
+          "globalStart": 497.8299,
+          "globalEnd": 504.9979,
+          "duration": 7.168,
+          "mouthSpans": [
+            {
+              "start": 65.3173,
+              "end": 68.9773
+            },
+            {
+              "start": 69.4573,
+              "end": 69.9373
+            },
+            {
+              "start": 70.2973,
+              "end": 70.8973
+            },
+            {
+              "start": 71.0173,
+              "end": 71.1373
+            },
+            {
+              "start": 71.4373,
+              "end": 72.2173
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_limit_intro"
+        },
+        {
+          "index": 10,
+          "id": "ch05_tsumugi_trilemma_010",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "紛争や資源高・関税によるコスト増インフレに利上げで挑むと、景気悪化と物価高が並ぶ恐れがあります。",
+          "voiceText": "紛争や資源高・関税によるコスト増インフレに利上げで挑むと、景気悪化と物価高が並ぶ恐れがあります。",
+          "audioFile": "audio/lines/ch05_tsumugi_trilemma_010.wav",
+          "hash": "258851d16e2ff09f",
+          "start": 72.6153,
+          "end": 80.1886,
+          "globalStart": 505.2479,
+          "globalEnd": 512.8212,
+          "duration": 7.5733,
+          "mouthSpans": [
+            {
+              "start": 72.7953,
+              "end": 73.8753
+            },
+            {
+              "start": 74.2953,
+              "end": 77.0553
+            },
+            {
+              "start": 77.4753,
+              "end": 78.3153
+            },
+            {
+              "start": 78.4353,
+              "end": 79.9953
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_limit_supply"
+        },
+        {
+          "index": 11,
+          "id": "ch05_tsumugi_trilemma_011",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "serious",
+          "se": null,
+          "caption": "2つ目は『財政ドミナンス』の懸念。国の借金が巨額だと利上げで利払い費が急増し、政治圧力が高まります。",
+          "voiceText": "2つ目は『財政ドミナンス』の懸念。国の借金が巨額だと利上げでりばらいひが急増し、政治圧力が高まります。",
+          "audioFile": "audio/lines/ch05_tsumugi_trilemma_011.wav",
+          "hash": "cc9c9ef240007311",
+          "start": 80.4386,
+          "end": 89.2279,
+          "globalStart": 513.0712,
+          "globalEnd": 521.8605,
+          "duration": 8.7893,
+          "mouthSpans": [
+            {
+              "start": 80.6186,
+              "end": 81.1586
+            },
+            {
+              "start": 81.5186,
+              "end": 82.5386
+            },
+            {
+              "start": 82.8986,
+              "end": 83.3786
+            },
+            {
+              "start": 83.7986,
+              "end": 87.0386
+            },
+            {
+              "start": 87.5186,
+              "end": 89.0186
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_limit_fiscal"
+        },
+        {
+          "index": 12,
+          "id": "ch05_tsumugi_trilemma_012",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "政府の財政を助けるために中央銀行が利上げをためらうと、通貨への信認が揺らいでしまいます。",
+          "voiceText": "政府の財政を助けるために中央銀行が利上げをためらうと、通貨への信認が揺らいでしまいます。",
+          "audioFile": "audio/lines/ch05_tsumugi_trilemma_012.wav",
+          "hash": "40c04b26aa9ade94",
+          "start": 89.4779,
+          "end": 96.1232,
+          "globalStart": 522.1105,
+          "globalEnd": 528.7558,
+          "duration": 6.6453,
+          "mouthSpans": [
+            {
+              "start": 89.6579,
+              "end": 93.4979
+            },
+            {
+              "start": 93.9179,
+              "end": 95.9579
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c5_independence"
+        },
+        {
+          "index": 13,
+          "id": "ch05_tsumugi_trilemma_013",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "3つ目は『効果のタイムラグ』。金利変更が実体経済に効くまで半年〜1年半かかり、常に先読み運転です。",
+          "voiceText": "3つ目は『効果のタイムラグ』。金利変更が実体経済に効くまで半年から1年半かかり、常に先読み運転です。",
+          "audioFile": "audio/lines/ch05_tsumugi_trilemma_013.wav",
+          "hash": "6860a3a59c6a498d",
+          "start": 96.3732,
+          "end": 104.7359,
+          "globalStart": 529.0058,
+          "globalEnd": 537.3685,
+          "duration": 8.3627,
+          "mouthSpans": [
+            {
+              "start": 96.4932,
+              "end": 96.6132
+            },
+            {
+              "start": 96.7332,
+              "end": 97.1532
+            },
+            {
+              "start": 97.4532,
+              "end": 98.4132
+            },
+            {
+              "start": 98.7732,
+              "end": 100.5732
+            },
+            {
+              "start": 100.7532,
+              "end": 102.6732
+            },
+            {
+              "start": 103.1532,
+              "end": 103.5732
+            },
+            {
+              "start": 103.6932,
+              "end": 104.5932
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_limit_lag"
+        },
+        {
+          "index": 14,
+          "id": "ch05_tsumugi_trilemma_014",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "worry",
+          "se": null,
+          "caption": "中央銀行は万能の魔法使いじゃなくて、為替や財政やタイムラグの制約の中で戦っているのだね…！",
+          "voiceText": "中央銀行は万能の魔法使いじゃなくて、為替や財政やタイムラグの制約の中で戦っているのだね…！",
+          "audioFile": "audio/lines/ch05_tsumugi_trilemma_014.wav",
+          "hash": "6440c2c48963c3f6",
+          "start": 105.0859,
+          "end": 112.9366,
+          "globalStart": 537.7185,
+          "globalEnd": 545.5692,
+          "duration": 7.8507,
+          "mouthSpans": [
+            {
+              "start": 105.2659,
+              "end": 105.9259
+            },
+            {
+              "start": 106.0459,
+              "end": 107.3059
+            },
+            {
+              "start": 107.4859,
+              "end": 107.9059
+            },
+            {
+              "start": 108.0859,
+              "end": 108.2059
+            },
+            {
+              "start": 108.6259,
+              "end": 110.4859
+            },
+            {
+              "start": 110.6059,
+              "end": 111.5059
+            },
+            {
+              "start": 111.8059,
+              "end": 111.9259
+            },
+            {
+              "start": 112.0459,
+              "end": 112.7659
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c5_zunda_limits"
+        },
+        {
+          "index": 15,
+          "id": "ch05_tsumugi_trilemma_015",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "その通りです。だからこそ金融政策と財政政策、そして市場との対話のバランスが問われ続けています。",
+          "voiceText": "その通りです。だからこそ金融政策と財政政策、そして市場との対話のバランスが問われ続けています。",
+          "audioFile": "audio/lines/ch05_tsumugi_trilemma_015.wav",
+          "hash": "d0edc0d26bc4fbd7",
+          "start": 113.2866,
+          "end": 120.5399,
+          "globalStart": 545.9192,
+          "globalEnd": 553.1725,
+          "duration": 7.2533,
+          "mouthSpans": [
+            {
+              "start": 113.4666,
+              "end": 114.1866
+            },
+            {
+              "start": 114.5466,
+              "end": 115.9866
+            },
+            {
+              "start": 116.1066,
+              "end": 117.1266
+            },
+            {
+              "start": 117.4866,
+              "end": 120.3066
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c5_to_ch6"
+        }
+      ]
+    },
+    {
+      "id": "ch06_summary",
+      "title": "6. まとめ：金利ニュースから国家の意図を読む",
+      "layout": "default",
+      "start": 553.9225,
+      "end": 614.8465,
+      "duration": 60.924,
+      "cues": {
+        "c6_zunda_recap": 0.45,
+        "c6_point1": 9.9733,
+        "c6_point2": 18.778,
+        "c6_point3": 28.8413,
+        "c6_takeaway": 37.1913,
+        "c6_tsumugi_next": 45.936,
+        "c6_end": 55.374
+      },
+      "lines": [
+        {
+          "index": 1,
+          "id": "ch06_summary_001",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "金利の数字だけだと難しかったけど、『使命・国内の悩み・制約』で並べると各国の本音が丸見えなのだ！",
+          "voiceText": "金利の数字だけだと難しかったけど、『使命・国内の悩み・制約』で並べると各国の本音が丸見えなのだ！",
+          "audioFile": "audio/lines/ch06_summary_001.wav",
+          "hash": "1258079c4fa72d63",
+          "start": 0.45,
+          "end": 9.6233,
+          "globalStart": 554.3725,
+          "globalEnd": 563.5458,
+          "duration": 9.1733,
+          "mouthSpans": [
+            {
+              "start": 0.69,
+              "end": 2.01
+            },
+            {
+              "start": 2.25,
+              "end": 3.03
+            },
+            {
+              "start": 3.51,
+              "end": 3.87
+            },
+            {
+              "start": 4.47,
+              "end": 5.31
+            },
+            {
+              "start": 5.85,
+              "end": 6.27
+            },
+            {
+              "start": 6.75,
+              "end": 7.47
+            },
+            {
+              "start": 7.71,
+              "end": 9.45
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_zunda_recap"
+        },
+        {
+          "index": 2,
+          "id": "ch06_summary_002",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "今日のまとめです。1つ目、中央銀行は政策金利の波及ルートに加え、QE・QTや期待誘導を武器にします。",
+          "voiceText": "今日のまとめです。1つ目、中央銀行は政策金利の波及ルートに加え、キューイー・キューティーや期待誘導を武器にします。",
+          "audioFile": "audio/lines/ch06_summary_002.wav",
+          "hash": "eed47076067da7d8",
+          "start": 9.9733,
+          "end": 18.528,
+          "globalStart": 563.8958,
+          "globalEnd": 572.4505,
+          "duration": 8.5547,
+          "mouthSpans": [
+            {
+              "start": 10.1533,
+              "end": 10.9333
+            },
+            {
+              "start": 11.4133,
+              "end": 11.8333
+            },
+            {
+              "start": 12.2533,
+              "end": 13.5733
+            },
+            {
+              "start": 13.7533,
+              "end": 15.3133
+            },
+            {
+              "start": 15.9133,
+              "end": 16.2733
+            },
+            {
+              "start": 16.3933,
+              "end": 16.8733
+            },
+            {
+              "start": 16.9933,
+              "end": 18.3133
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c6_point1"
+        },
+        {
+          "index": 3,
+          "id": "ch06_summary_003",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "2つ目、FRBは二兎の綱渡り、ECBは物価と結束、日銀は正常化、中国は緩和と元防衛と意図が異なります。",
+          "voiceText": "2つ目、エフアールビーは二兎の綱渡り、イーシービーは物価と結束、日銀は正常化、中国は緩和とげんぼうえいと意図が異なります。",
+          "audioFile": "audio/lines/ch06_summary_003.wav",
+          "hash": "58dc1d95c8b772ee",
+          "start": 18.778,
+          "end": 28.5913,
+          "globalStart": 572.7005,
+          "globalEnd": 582.5138,
+          "duration": 9.8133,
+          "mouthSpans": [
+            {
+              "start": 18.958,
+              "end": 19.378
+            },
+            {
+              "start": 19.738,
+              "end": 21.598
+            },
+            {
+              "start": 22.018,
+              "end": 23.698
+            },
+            {
+              "start": 23.998,
+              "end": 25.258
+            },
+            {
+              "start": 25.678,
+              "end": 28.378
+            }
+          ],
+          "pauseAfter": 0.25,
+          "cue": "c6_point2"
+        },
+        {
+          "index": 4,
+          "id": "ch06_summary_004",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "explain",
+          "se": null,
+          "caption": "3つ目、国際金融のトリレンマや供給ショック、財政との距離感という構造的制約が常に立ちはだかります。",
+          "voiceText": "3つ目、国際金融のトリレンマや供給ショック、財政との距離感という構造的制約が常に立ちはだかります。",
+          "audioFile": "audio/lines/ch06_summary_004.wav",
+          "hash": "c47c23c28c3564c4",
+          "start": 28.8413,
+          "end": 36.8413,
+          "globalStart": 582.7638,
+          "globalEnd": 590.7638,
+          "duration": 8,
+          "mouthSpans": [
+            {
+              "start": 28.9613,
+              "end": 29.0813
+            },
+            {
+              "start": 29.2013,
+              "end": 29.4413
+            },
+            {
+              "start": 29.8013,
+              "end": 32.0213
+            },
+            {
+              "start": 32.1413,
+              "end": 32.2613
+            },
+            {
+              "start": 32.7413,
+              "end": 36.6413
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_point3"
+        },
+        {
+          "index": 5,
+          "id": "ch06_summary_005",
+          "speaker": "metan",
+          "speakerName": "四国めたん",
+          "style": "normal",
+          "speakerId": 2,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "次に金利のニュースを見たら『どの使命と悩みを優先した一手か』を考えると、世界経済が一気に面白くなりますよ。",
+          "voiceText": "次に金利のニュースを見たら『どの使命と悩みを優先した一手か』を考えると、世界経済が一気に面白くなりますよ。",
+          "audioFile": "audio/lines/ch06_summary_005.wav",
+          "hash": "9d2e997c94e70f6b",
+          "start": 37.1913,
+          "end": 45.586,
+          "globalStart": 591.1138,
+          "globalEnd": 599.5085,
+          "duration": 8.3947,
+          "mouthSpans": [
+            {
+              "start": 37.3113,
+              "end": 38.9313
+            },
+            {
+              "start": 39.2313,
+              "end": 41.4513
+            },
+            {
+              "start": 41.7513,
+              "end": 42.5313
+            },
+            {
+              "start": 43.0113,
+              "end": 45.4713
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_takeaway"
+        },
+        {
+          "index": 6,
+          "id": "ch06_summary_006",
+          "speaker": "tsumugi",
+          "speakerName": "春日部つむぎ",
+          "style": "normal",
+          "speakerId": 8,
+          "mode": "cutin",
+          "emotion": "smile",
+          "se": null,
+          "caption": "次は『為替介入の仕組み』や『国債とイールドカーブ』、『中央銀行デジタル通貨CBDC』も掘り下げたいね！",
+          "voiceText": "次は『為替介入の仕組み』や『国債とイールドカーブ』、『中央銀行デジタル通貨シービーディーシー』も掘り下げたいね！",
+          "audioFile": "audio/lines/ch06_summary_006.wav",
+          "hash": "b956990231612815",
+          "start": 45.936,
+          "end": 55.024,
+          "globalStart": 599.8585,
+          "globalEnd": 608.9465,
+          "duration": 9.088,
+          "mouthSpans": [
+            {
+              "start": 46.056,
+              "end": 46.476
+            },
+            {
+              "start": 46.896,
+              "end": 48.036
+            },
+            {
+              "start": 48.636,
+              "end": 48.876
+            },
+            {
+              "start": 49.356,
+              "end": 50.676
+            },
+            {
+              "start": 51.216,
+              "end": 53.316
+            },
+            {
+              "start": 53.976,
+              "end": 54.876
+            }
+          ],
+          "pauseAfter": 0.35,
+          "cue": "c6_tsumugi_next"
+        },
+        {
+          "index": 7,
+          "id": "ch06_summary_007",
+          "speaker": "zundamon",
+          "speakerName": "ずんだもん",
+          "style": "normal",
+          "speakerId": 3,
+          "mode": "normal",
+          "emotion": "smile",
+          "se": null,
+          "caption": "ぜひ聞きたいのだ！それでは、ご視聴ありがとうございましたなのだ！",
+          "voiceText": "ぜひ聞きたいのだ！それでは、ご視聴ありがとうございましたなのだ！",
+          "audioFile": "audio/lines/ch06_summary_007.wav",
+          "hash": "26ffb76f16438a1d",
+          "start": 55.374,
+          "end": 60.174,
+          "globalStart": 609.2965,
+          "globalEnd": 614.0965,
+          "duration": 4.8,
+          "mouthSpans": [
+            {
+              "start": 55.554,
+              "end": 55.674
+            },
+            {
+              "start": 56.034,
+              "end": 56.514
+            },
+            {
+              "start": 56.934,
+              "end": 57.354
+            },
+            {
+              "start": 57.834,
+              "end": 60.054
+            }
+          ],
+          "pauseAfter": 0,
+          "cue": "c6_end"
+        }
+      ]
+    }
+  ]
+}

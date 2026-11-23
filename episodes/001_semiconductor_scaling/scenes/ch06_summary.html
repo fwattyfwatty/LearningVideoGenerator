@@ -1,0 +1,153 @@
+<style>
+  .c6-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .c6-title-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-right: 360px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-subtle);
+  }
+
+  /* Leave upper-right free for Tsumugi cut-in */
+  .c6-summary-grid {
+    flex: 1;
+    padding-top: 88px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-content: center;
+    align-items: stretch;
+  }
+
+  .c6-card {
+    min-height: 270px;
+    border-radius: 20px;
+    background: #1e293b;
+    border: 2px solid #38bdf8;
+    padding: 26px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  }
+
+  .c6-card-num {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 4px 14px;
+    border-radius: 999px;
+    background: #0284c7;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .c6-card-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #f8fafc;
+  }
+
+  .c6-card-desc {
+    font-size: 20px;
+    font-weight: 700;
+    color: #cbd5e1;
+    line-height: 1.5;
+  }
+
+  .c6-next-bar {
+    border-radius: 18px;
+    background: #0f172a;
+    border: 2px solid #475569;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+
+  .c6-next-chips {
+    display: flex;
+    gap: 12px;
+  }
+
+  .c6-chip {
+    padding: 8px 18px;
+    border-radius: 12px;
+    background: #1e293b;
+    border: 2px solid #38bdf8;
+    color: #7dd3fc;
+    font-size: 19px;
+    font-weight: 700;
+  }
+</style>
+
+<div class="c6-wrap">
+  <div class="c6-title-bar">
+    <h1 class="dg-heading">まとめ：半導体の進化は「平面から立体・システム全体」へ</h1>
+  </div>
+
+  <div class="c6-summary-grid">
+    <div id="c6-card-1" class="c6-card">
+      <span class="c6-card-num">POINT 1</span>
+      <div class="c6-card-title">微細化の黄金メリット</div>
+      <div class="c6-card-desc">
+        スイッチを小さくすることで「高密度・高速・省エネ」を同時に実現し、スマホや生成AIを生み出した。
+      </div>
+    </div>
+
+    <div id="c6-card-2" class="c6-card" style="border-color: #f59e0b;">
+      <span class="c6-card-num" style="background: #b45309;">POINT 2</span>
+      <div class="c6-card-title">物理とコストの壁</div>
+      <div class="c6-card-desc">
+        原子レベルの量子トンネル効果による漏れ電流・発熱と、EUV露光・数兆円工場という巨額コストに直面。
+      </div>
+    </div>
+
+    <div id="c6-card-3" class="c6-card" style="border-color: #22c55e;">
+      <span class="c6-card-num" style="background: #15803d;">POINT 3</span>
+      <div class="c6-card-title">限界を超える次世代技術</div>
+      <div class="c6-card-desc">
+        GAA・CFETの立体化、裏面電源（BSPDN）、チップレット3D積層、光電融合へと進化が続く。
+      </div>
+    </div>
+  </div>
+
+  <div id="c6-next-bar" class="c6-next-bar">
+    <div style="font-size: 21px; font-weight: 700; color: #f8fafc;">📚 シリーズ次回テーマ候補</div>
+    <div class="c6-next-chips">
+      <span class="c6-chip">🔬 EUV露光装置の仕組み</span>
+      <span class="c6-chip">🧠 AI半導体 GPUの秘密</span>
+      <span class="c6-chip">🌍 半導体サプライチェーン</span>
+    </div>
+  </div>
+</div>
+
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders["ch06_summary"] = function (tl, cues) {
+  gsap.set(['#c6-card-1', '#c6-card-2', '#c6-card-3', '#c6-next-bar'], { opacity: 0, y: 20 });
+
+  const t1 = cues.c6_map_1 ?? 0.45;
+  tl.to('#c6-card-1', { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, t1);
+
+  const t2 = cues.c6_map_2 ?? 8.5;
+  tl.to('#c6-card-2', { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, t2);
+
+  const t3 = cues.c6_map_3 ?? 16.5;
+  tl.to('#c6-card-3', { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' }, t3);
+
+  const tNext = cues.c6_tsumugi_next ?? 30.0;
+  tl.to('#c6-next-bar', { opacity: 1, y: 0, duration: 0.45, ease: 'back.out(1.4)' }, tNext);
+};
+</script>

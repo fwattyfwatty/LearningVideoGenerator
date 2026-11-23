@@ -1,0 +1,194 @@
+<style>
+  .c4-scene {
+    position: relative;
+    height: 100%;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #f1f5f9;
+    --c4-accent: #5eead4;
+    --c4-muted: #cbd5e1;
+  }
+  .c4-phase { position: absolute; inset: 0; }
+  .c4-title { box-sizing: border-box; height: 84px; padding-right: 360px; }
+  .c4-title-inner {
+    justify-content: space-between;
+    height: 72px;
+    padding: 0 22px;
+    border: 1px solid #2a625e;
+    border-left: 5px solid #14b8a6;
+    border-radius: 14px;
+    background: #102b32;
+  }
+  .c4-title h2 { margin: 0; font-size: 40px; line-height: 1.2; }
+  .c4-pill {
+    border: 1px solid #367b73;
+    border-radius: 999px;
+    padding: 5px 12px;
+    color: #99f6e4;
+    background: #123b40;
+    font-size: 21px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .c4-grid { padding-top: 86px; }
+  .c4-card {
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 442px;
+    padding: 24px;
+    border: 1px solid #334c59;
+    border-radius: 18px;
+    background: #111f2e;
+  }
+  .c4-card h3 { margin: 0; font-size: 32px; line-height: 1.35; }
+  .c4-card p { margin: 12px 0 0; color: var(--c4-muted); font-size: 25px; line-height: 1.48; }
+  .c4-card .c4-wall { margin: 0 0 8px; color: var(--c4-accent); font-size: 21px; font-weight: 700; }
+  .c4-graphic { width: 100%; height: 215px; margin-top: 14px; vertical-align: top; }
+  .c4-icon { width: 100%; height: 152px; margin-top: 14px; vertical-align: top; }
+  .c4-callout {
+    margin-top: 14px;
+    padding: 10px 14px;
+    border-left: 3px solid #14b8a6;
+    border-radius: 6px;
+    color: #ccfbf1;
+    background: #18343c;
+    font-size: 23px;
+    line-height: 1.4;
+  }
+  .c4-tags { flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .c4-finish { margin-top: 16px; text-align: center; }
+</style>
+<div class="c4-scene">
+  <div class="c4-phase" id="c4-phase-a">
+    <div class="c4-title">
+      <div class="dg-row c4-title-inner">
+        <h2>拡散モデルに残る3つの壁（前半）</h2>
+        <span class="c4-pill">壁①②</span>
+      </div>
+    </div>
+    <div class="dg-grid-2 c4-grid">
+      <article class="c4-card" id="c4-cost">
+        <p class="c4-wall">壁①</p>
+        <h3>推論コストと蒸留のトレードオフ</h3>
+        <div id="c4-cost-graph">
+          <svg class="c4-graphic" viewBox="0 0 740 215" role="img" aria-label="推論ステップ数と品質・多様性の概念図">
+            <path d="M53 32V168H711" fill="none" stroke="#8299aa" stroke-width="2"/>
+            <path d="M85 151C129 148 164 95 218 74S344 41 689 38" fill="none" stroke="#5eead4" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="85" cy="151" r="7" fill="#fbbf24"/>
+            <circle cx="689" cy="38" r="7" fill="#5eead4"/>
+            <text x="58" y="24" fill="#cbd5e1" font-size="23">品質・多様性</text>
+            <text x="705" y="202" text-anchor="end" fill="#cbd5e1" font-size="23">推論ステップ数</text>
+            <text x="466" y="82" fill="#ccfbf1" font-size="22">長尺動画・対話で負荷大</text>
+            <g id="c4-tradeoff">
+              <path d="M92 151H115" stroke="#fbbf24" stroke-width="2"/>
+              <text x="125" y="153" fill="#fde68a" font-size="22">1〜2ステップで多様性・細部が低下</text>
+            </g>
+          </svg>
+          <p>ノイズ除去を繰り返すほど、推論に時間と計算がかかる。</p>
+        </div>
+      </article>
+      <article class="c4-card" id="c4-physics">
+        <p class="c4-wall">壁②</p>
+        <h3>物理法則と長期一貫性の壁</h3>
+        <div id="c4-physics-frames">
+          <svg class="c4-graphic" viewBox="0 0 744 215" role="img" aria-label="動画の時間が進むと誤差が蓄積する例">
+            <g fill="#192e40" stroke="#416071" stroke-width="2">
+              <rect x="4" y="3" width="222" height="101" rx="10"/>
+              <rect x="261" y="3" width="222" height="101" rx="10"/>
+              <rect x="518" y="3" width="222" height="101" rx="10"/>
+            </g>
+            <path d="M31 82H199M288 82H456M545 82H713" stroke="#7896a5" stroke-width="2"/>
+            <path d="M233 53H254L246 46M490 53H511L503 46" fill="none" stroke="#a6bfcb" stroke-width="3"/>
+            <circle cx="115" cy="62" r="20" fill="#5eead4"/>
+            <ellipse cx="378" cy="56" rx="23" ry="19" fill="#fbbf24"/>
+            <circle cx="649" cy="32" r="17" fill="none" stroke="#fda4af" stroke-width="3" stroke-dasharray="5 5"/>
+            <g fill="#e2e8f0" font-size="20" text-anchor="middle">
+              <text x="115" y="133">1秒｜自然な物体</text>
+              <text x="372" y="133">5秒｜微小なズレ</text>
+              <text x="629" y="133">15秒｜浮遊・消失</text>
+            </g>
+            <path d="M19 207C290 207 454 199 712 153" fill="none" stroke="#fb7185" stroke-width="4" stroke-linecap="round"/>
+            <text x="705" y="207" text-anchor="end" fill="#fda4af" font-size="22">誤差の蓄積</text>
+          </svg>
+          <div class="c4-callout" id="c4-physics-note">見た目の統計模倣 ≠ 物理因果の理解</div>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="c4-phase" id="c4-phase-b">
+    <div class="c4-title">
+      <div class="dg-row c4-title-inner">
+        <h2>拡散モデルに残る3つの壁（後半）：細部と社会実装</h2>
+        <span class="c4-pill">壁③</span>
+      </div>
+    </div>
+    <div class="dg-grid-3 c4-grid">
+      <article class="c4-card">
+        <h3>VAE圧縮の細部限界</h3>
+        <svg class="c4-icon" viewBox="0 0 440 152" role="img" aria-label="圧縮と復元で細い文字の線が崩れる例">
+          <rect x="10" y="12" width="137" height="102" rx="10" fill="#17323f" stroke="#4b7882" stroke-width="2"/>
+          <rect x="293" y="12" width="137" height="102" rx="10" fill="#17323f" stroke="#4b7882" stroke-width="2"/>
+          <path d="M52 42H106M52 57H106M52 72H106M53 87L105 37" stroke="#99f6e4" stroke-width="4"/>
+          <path d="M335 42H352M361 42H389M335 57H373M349 72H389M336 87L362 61M375 47L388 35" stroke="#fbbf24" stroke-width="5"/>
+          <path d="M166 54H274L262 44M274 54L262 64" fill="none" stroke="#82b8bd" stroke-width="3"/>
+          <text x="220" y="93" text-anchor="middle" fill="#cbd5e1" font-size="21">圧縮・復元</text>
+        </svg>
+        <p>細かい文字や指先の形が、圧縮と復元の過程で崩れやすい。</p>
+        <div class="dg-row c4-tags" id="c4-pixel"><span class="c4-pill">画素空間直接生成の再注目</span></div>
+      </article>
+      <article class="c4-card" id="c4-edit">
+        <h3>局所編集・因果制御</h3>
+        <svg class="c4-icon" viewBox="0 0 440 152" role="img" aria-label="選択した物体を変えると、周囲の影にも影響が出る例">
+          <rect x="68" y="12" width="304" height="123" rx="10" fill="#17323f" stroke="#4b7882" stroke-width="2"/>
+          <rect x="100" y="27" width="111" height="85" rx="7" fill="none" stroke="#5eead4" stroke-width="3" stroke-dasharray="6 6"/>
+          <circle cx="156" cy="72" r="28" fill="#5eead4"/>
+          <path d="M221 75H269L260 67M269 75L260 83" fill="none" stroke="#a6bfcb" stroke-width="3"/>
+          <ellipse cx="304" cy="99" rx="35" ry="13" fill="#fbbf24" opacity="0.6"/>
+        </svg>
+        <p>指定した一部だけを変え、周囲や物体同士の関係を保つのは難しい。</p>
+      </article>
+      <article class="c4-card" id="c4-safety">
+        <h3>安全性・著作権・来歴証明</h3>
+        <svg class="c4-icon" viewBox="0 0 440 152" role="img" aria-label="安全性を示す盾と、画像に付与される透かし">
+          <path d="M126 17l49 17v34c0 28-17 47-49 62-32-15-49-34-49-62V34z" fill="#17504f" stroke="#5eead4" stroke-width="3"/>
+          <path d="M107 69l13 13 26-29" fill="none" stroke="#99f6e4" stroke-width="5" stroke-linecap="round"/>
+          <rect x="221" y="26" width="140" height="99" rx="10" fill="#17323f" stroke="#6894a2" stroke-width="3"/>
+          <path d="M240 103l30-34 20 16 25-35 25 53z" fill="#275c65"/>
+          <path d="M287 91c10-10 27-10 37 0-10 10-27 10-37 0z" fill="none" stroke="#99f6e4" stroke-width="3"/>
+          <circle cx="305" cy="91" r="3.5" fill="#99f6e4"/>
+        </svg>
+        <div class="dg-row c4-tags"><span class="c4-pill">ディープフェイク対策</span></div>
+        <div class="dg-row c4-tags" id="c4-provenance">
+          <span class="c4-pill">電子透かし</span>
+          <span class="c4-pill">C2PA 来歴証明</span>
+        </div>
+      </article>
+    </div>
+    <div class="c4-callout c4-finish" id="c4-finish">次章では、拡散モデルのこれからを見ていきます。</div>
+  </div>
+</div>
+<script>
+  window.__diagramBuilders = window.__diagramBuilders || {};
+  window.__diagramBuilders['ch04_tsumugi_walls'] = function (tl, cues) {
+    gsap.set('#c4-phase-b, #c4-cost, #c4-physics, #c4-cost-graph, #c4-tradeoff, #c4-physics-frames, #c4-physics-note, #c4-edit, #c4-pixel, #c4-safety, #c4-provenance, #c4-finish', { opacity: 0 });
+
+    function reveal(target, time) {
+      tl.to(target, { opacity: 1, duration: 0.35, ease: 'power1.out' }, time);
+    }
+
+    reveal('#c4-cost, #c4-physics', cues.c4_three_walls);
+    reveal('#c4-cost-graph', cues.c4_wall1_cost);
+    reveal('#c4-tradeoff', cues.c4_wall1_tradeoff);
+    reveal('#c4-physics-frames', cues.c4_wall2_physics);
+    reveal('#c4-physics-note', cues.c4_zunda_physics);
+
+    var phaseChange = cues.c4_phase2_vae_safety;
+    tl.to('#c4-phase-a', { opacity: 0, duration: 0.35, ease: 'none' }, phaseChange);
+    tl.to('#c4-phase-b', { opacity: 1, duration: 0.35, ease: 'none' }, phaseChange);
+
+    reveal('#c4-pixel', cues.c4_pixel_return);
+    reveal('#c4-edit', cues.c4_pixel_return + 2);
+    reveal('#c4-safety', cues.c4_tsumugi_safety);
+    reveal('#c4-provenance', cues.c4_safety_c2pa);
+    reveal('#c4-finish', cues.c4_to_ch5);
+  };
+</script>

@@ -1,0 +1,48 @@
+<style>
+.c6-wrap{padding-bottom:36px;display:flex;flex-direction:column;height:100%;box-sizing:border-box;font-family:"Noto Sans JP",sans-serif;color:#0f172a}.c6-title-bar{padding-right:360px}.c6-title-bar h1{font-size:38px;margin:8px 0}.c6-title-bar p{font-size:19px;color:#475569;margin:0}.c6-summary-grid{padding-top:88px;flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-content:center;align-items:stretch}.c6-card{min-height:265px;padding:24px;background:#fff;border:1px solid #cbd5e1;border-radius:20px;box-shadow:0 12px 32px #0f172a14;box-sizing:border-box}.c6-card h2{font-size:25px;margin:12px 0 16px}.c6-icon{width:42px;height:42px;color:#1d4ed8}.c6-number{font-size:16px;font-weight:900;color:#1d4ed8;letter-spacing:.08em}.c6-item{padding:9px 0;border-top:1px solid #e2e8f0;font-size:18px;font-weight:700;color:#334155}.c6-item b{color:#1d4ed8}.c6-take{margin-top:12px;background:#eff6ff;border-radius:12px;padding:12px;color:#1d4ed8;font-size:18px;font-weight:800}.c6-next{margin-top:14px;background:#f1f5f9;border:1px solid #cbd5e1;border-radius:16px;padding:14px 20px}.c6-next strong{font-size:20px;color:#0f172a}.c6-chips{display:flex;gap:12px;margin-top:10px}.c6-chip{flex:1;background:#fff;border:1px solid #cbd5e1;border-radius:10px;padding:9px;font-size:16px;color:#334155;font-weight:700;text-align:center}
+</style>
+<div class="c6-wrap">
+  <div class="c6-title-bar">
+    <span class="dg-hero-badge"><span class="dg-hero-dot"></span>今回のまとめ</span>
+    <h1>金融政策を読み解く３つの視点</h1>
+    <p>手段・各国の意図・政策の限界をつなげて考える</p>
+  </div>
+  <div class="c6-summary-grid">
+    <section class="dg-card c6-card c6-one">
+      <span class="c6-number">POINT 01</span>
+      <svg class="c6-icon" viewBox="0 0 24 24"><use href="#dg-ico-sliders"/></svg>
+      <h2>仕組みと武器</h2>
+      <div class="c6-item"><b>政策金利</b>から景気・物価へ波及</div>
+      <div class="c6-item">テイラー・ルールは判断の目安</div>
+      <div class="c6-item">QE・QT とフォワードガイダンス</div>
+    </section>
+    <section class="dg-card-glow c6-card c6-two">
+      <span class="c6-number">POINT 02</span>
+      <h2>主要４大国の意図</h2>
+      <div class="c6-item"><b>FRB</b>　物価と雇用の両立</div>
+      <div class="c6-item"><b>ECB</b>　物価最優先と地域の結束</div>
+      <div class="c6-item"><b>日銀</b>　正常化と賃金の好循環</div>
+      <div class="c6-item"><b>PBOC</b>　緩和と人民元防衛</div>
+    </section>
+    <section class="dg-card c6-card c6-three">
+      <span class="c6-number">POINT 03</span>
+      <svg class="c6-icon" viewBox="0 0 24 24"><use href="#dg-ico-shield"/></svg>
+      <h2>構造的な制約と限界</h2>
+      <div class="c6-item">国際金融のトリレンマ</div>
+      <div class="c6-item">供給ショックと財政の圧力</div>
+      <div class="c6-item">政策効果が届くまでの時間差</div>
+    </section>
+  </div>
+  <div class="c6-take">金利の数字だけでなく、各国の使命と制約を見る</div>
+  <div class="c6-next"><strong>次回テーマ候補</strong><div class="c6-chips"><div class="c6-chip">為替相場と為替介入の仕組み</div><div class="c6-chip">国債・イールドカーブと財政政策</div><div class="c6-chip">中央銀行デジタル通貨（CBDC）</div></div></div>
+</div>
+<script>
+window.__diagramBuilders['ch06_summary'] = function(tl,cues){
+  gsap.set('.c6-one,.c6-two,.c6-three,.c6-take,.c6-next',{opacity:0,y:12});
+  tl.to('.c6-one',{opacity:1,y:0,duration:.5},cues.c6_point1);
+  tl.to('.c6-two',{opacity:1,y:0,duration:.5},cues.c6_point2);
+  tl.to('.c6-three',{opacity:1,y:0,duration:.5},cues.c6_point3);
+  tl.to('.c6-take',{opacity:1,y:0,duration:.5},cues.c6_takeaway);
+  tl.to('.c6-next',{opacity:1,y:0,duration:.5},cues.c6_tsumugi_next);
+};
+</script>

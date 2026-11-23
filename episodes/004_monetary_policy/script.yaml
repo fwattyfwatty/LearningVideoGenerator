@@ -1,0 +1,508 @@
+meta:
+  title: "主要国家の金融政策とその意図：FRB・日銀・ECB・中国人民銀行はなぜ違う手を打つのか"
+  series: "世界経済・マクロ金融入門"
+  episode: "解説動画"
+  theme: "clean-light"
+  accent_color: "#1d4ed8"
+  fps: 30
+  width: 1920
+  height: 1080
+
+chapters:
+  - id: "ch01_intro"
+    title: "1. 導入：なぜ主要国の金利はバラバラなのか？"
+    layout: "title"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "こんにちは、四国めたんです。今日は『主要国家の金融政策とその意図』を解説します。"
+        cue: "c1_title"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "ずんだもんなのだ！ニュースでFRBや日銀の金利って聞くけど、なんで国ごとに真逆の動きをするのだ？"
+        cue: "c1_zunda_ask"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "良い着眼点です。2026年11月現在、米FRBは3.75〜4.00%、欧州ECBは預金金利2.50%と高めの水準です。"
+        voice_text: "良い着眼点です。2026年11月現在、アメリカのエフアールビーは3.75から4パーセント、欧州のイーシービーは預金金利2.5パーセントと高めの水準です。"
+        cue: "c1_four_poles"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "一方、日銀は約30年ぶりの1.25%前後へ利上げを進め、中国人民銀行は低金利の緩和基調を保っています。"
+        voice_text: "一方、日銀は約30年ぶりの1.25パーセント前後へ利上げを進め、中国人民銀行は低金利の緩和基調を保っています。"
+        cue: "c1_jp_cn_split"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "同じ世界経済なのに、ブレーキを踏む国とアクセルを踏む国がバラバラに走っているのだ！？"
+        cue: "c1_zunda_why"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そうなんです。金融政策は気まぐれではなく、各国の『使命』と『国内の悩み』の掛け算で決まります。"
+        cue: "c1_thesis"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: normal
+        caption: "今日は①金融政策の仕組みと武器、②米欧日中の4大国の意図、③為替の制約と限界の3本柱で整理します。"
+        cue: "c1_goals"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "金利の数字のうらにある国家の本音が読めそうなのだ！さっそく見ていくのだ！"
+        cue: "c1_go"
+        pause_after: 0.5
+
+  - id: "ch02_central_bank_tools"
+    title: "2. 金融政策の仕組み：金利・量的緩和・波及ルート"
+    layout: "default"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "まず基本の仕組みです。中央銀行が直接動かすのは、銀行同士が超短期で貸し借りする『政策金利』です。"
+        cue: "c2_policy_rate"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "政策金利を引き上げると、住宅ローンや企業の借入コストが上がり、消費や投資が落ち着きます。"
+        cue: "c2_hike_channel"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "さらに金利上昇は自国通貨高も招くため、輸入物価も抑えられてインフレのブレーキになります。"
+        cue: "c2_fx_inflation"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "逆に景気が冷え込んだときは利下げをしてお金を借りやすくし、経済のアクセルを踏むわけです。"
+        cue: "c2_cut_channel"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "でも、ちょうどいい金利の高さってどうやって決めるのだ？勘で決めているわけじゃないのだよね？"
+        cue: "c2_zunda_how_decide"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "判断の目安として有名なのがテイラー・ルールです。目標物価との差と景気の過熱度から適正金利を測ります。"
+        cue: "c2_taylor_rule"
+        pause_after: 0.3
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "物価が上がりすぎたり景気が熱すぎたら利上げ、冷えてたら利下げ、という数式の羅針盤なのだ！"
+        cue: "c2_zunda_taylor"
+        pause_after: 0.4
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "ところが深刻な不況では、政策金利をほぼ0%まで下げ切っても景気が温まらない『ゼロ金利の壁』に当たります。"
+        voice_text: "ところが深刻な不況では、政策金利をほぼゼロパーセントまで下げ切っても景気が温まらない『ゼロ金利の壁』に当たります。"
+        cue: "c2_phase2_zero_bound"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そこで登場するのが非伝統的手段です。代表格のQE、量的緩和では、国債などを大量に買い市場へ資金を流します。"
+        cue: "c2_qe_qt"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "反対にインフレ局面では保有国債を減らしてお金を回収するQT、量的引き締めで過熱を冷まします。"
+        cue: "c2_qt_shrink"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "もう一つの武器がフォワードガイダンス。今後の金利方針を予告し、市場の予想を通じて長期金利を動かします。"
+        cue: "c2_forward_guidance"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "金利の高さだけじゃなくて、お金の量や『これからこうするぞ』という約束まで武器にするのだ！"
+        cue: "c2_zunda_unconv"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "まさにそうです。では同じ武器を持ちながら、主要4カ国がどう違う意図で使うのか見ていきましょう。"
+        cue: "c2_to_ch3"
+        pause_after: 0.5
+
+  - id: "ch03_us_eu_mandates"
+    title: "3. 米国FRB ＆ 欧州ECB：使命と構造の違い"
+    layout: "wide"
+    lines:
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "まずは世界経済の中心、アメリカのFRBです。FRBには法律で課された2つの使命があります。"
+        cue: "c3_frb_intro"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "それが『物価の安定』と『雇用の最大化』を同時に追う、デュアル・マンデートです。"
+        cue: "c3_dual_mandate"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "FRBは2022〜23年の急利上げでインフレを抑え、2024〜25年には利下げへ舵を切りました。"
+        voice_text: "エフアールビーは2022年から2023年の急利上げでインフレを抑え、2024年から2025年には利下げへ舵を切りました。"
+        cue: "c3_frb_path"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "しかし粘着的なインフレとエネルギー高の再燃を受け、2026年秋には3.75〜4.00%へ再調整しました。"
+        voice_text: "しかしねんちゃくてきなインフレとエネルギー高の再燃を受け、2026年秋には3.75から4パーセントへ再調整しました。"
+        cue: "c3_frb_2026"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "意図は明確です。雇用を壊す急減速を避けつつ、インフレ期待が根付く前に火種を消す綱渡りなんです。"
+        cue: "c3_frb_intent"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: question
+        caption: "しかもドルは世界の基軸通貨だから、FRBのFOMCが一言いうだけで世界中の市場が揺れるのだ！"
+        cue: "c3_zunda_dollar"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "その通りです。自国の雇用と物価を見つつも、結果的に世界全体の金融環境を左右する立場にあります。"
+        cue: "c3_zunda_frb"
+        pause_after: 0.4
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "次にユーロ圏のECBです。FRBと大きく違うのは、法的使命が『物価の安定』最優先である点です。"
+        cue: "c3_phase2_ecb"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "過去のハイパーインフレの記憶が強く、中期的な物価2%を守るシングル・マンデートを掲げています。"
+        voice_text: "過去のハイパーインフレの記憶が強く、中期的な物価2パーセントを守るシングル・マンデートを掲げています。"
+        cue: "c3_single_mandate"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "ECBも2024〜25年に2%前後まで利下げしましたが、2026年のエネルギー高で預金金利を2.50%へ戻しました。"
+        voice_text: "イーシービーも2024年から2025年に2パーセント前後まで利下げしましたが、2026年のエネルギー高で預金金利を2.5パーセントへ戻しました。"
+        cue: "c3_ecb_2026"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "そしてECB固有の悩みが『1つの金利で、経済体力が違う20カ国を同時に舵取りする』構造です。"
+        cue: "c3_ecb_dilemma"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "画一的な利上げは、財政が厳しい国の国債利回りだけを急上昇させ、ユーロ圏の分断を招きかねません。"
+        voice_text: "画一的な利上げは、財政が厳しい国の国債りまわりだけを急上昇させ、ユーロ圏の分断を招きかねません。"
+        cue: "c3_ecb_spread"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そのためECBはTPIなどの安全網を備え、物価抑制と『ユーロという通貨の結束』の両立を図っています。"
+        cue: "c3_ecb_tpi"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "FRBは物価と雇用の二兎追い、ECBは物価最優先に加えて多国籍の結束まで守る必要があるのだね！"
+        cue: "c3_zunda_ecb"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "その違いを押さえると、欧米の記者会見のニュアンスの違いまでくっきり見えてきますよ。"
+        cue: "c3_to_ch4"
+        pause_after: 0.5
+
+  - id: "ch04_jp_cn_divergence"
+    title: "4. 日本・日銀 vs 中国・人民銀行：正反対の意図"
+    layout: "default"
+    lines:
+      - speaker: tsumugi
+        style: normal
+        emotion: sharp
+        mode: cutin
+        caption: "米欧がインフレと戦う横で、アジアの2大国は全然違う動きをしてるよね。日本は利上げ、中国は緩和なのはなぜ？"
+        cue: "c4_tsumugi_ask"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "まさに現在の世界経済で最も対照的な構図です。まず日本の日銀、BOJの意図から整理しましょう。"
+        cue: "c4_asia_split"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "日本は長年デフレに苦しみ、マイナス金利や長短金利操作YCCという異次元緩和を続けてきました。"
+        cue: "c4_boj_history"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "2024年にマイナス金利を解除後、賃上げと2%超の物価定着を受け、2026年秋には1.25%前後へ利上げしました。"
+        voice_text: "2024年にマイナス金利を解除後、賃上げと2パーセント超の物価定着を受け、2026年秋には1.25パーセント前後へ利上げしました。"
+        cue: "c4_boj_norm"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "約30年ぶりの水準ですが、狙いは景気を冷やすことではなく『金利ある世界への正常化』です。"
+        cue: "c4_boj_loop"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "デフレ逆戻りを防ぐ慎重さと、実質金利の低すぎによる過度な円安・輸入物価高の抑制を両立する意図です。"
+        voice_text: "デフレ逆戻りを防ぐ慎重さと、実質金利の低すぎによる過度なえんやす・輸入物価高の抑制を両立する意図です。"
+        cue: "c4_boj_intent"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "賃金と物価の好循環を守りながら、非常時の超低金利から普通のスピードへ戻している最中なのだ！"
+        cue: "c4_zunda_boj"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "同時に国債の買い入れ減額も進め、市場機能が働く状態へゆっくり移行させています。"
+        cue: "c4_boj_qt"
+        pause_after: 0.4
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "これと真逆の課題に直面しているのが、中国の中国人民銀行、PBOCです。"
+        cue: "c4_phase2_pboc"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "中国は不動産市場の長期調整と内需の弱さから、インフレではなく『デフレ圧力』と戦っています。"
+        cue: "c4_pboc_deflation"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "そのため1年LPRを3.00%、住宅ローン基準の5年超LPRを3.50%の低水準に据え置き緩和姿勢を維持中です。"
+        voice_text: "そのため1年エルピーアールを3パーセント、住宅ローン基準のごねんちょうエルピーアールを3.5パーセントの低水準に据え置き緩和姿勢を維持中です。"
+        cue: "c4_pboc_tools"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "さらに預金準備率RRRの調整や、先端産業・消費向け再貸出でピンポイントに資金を届けています。"
+        cue: "c4_pboc_targeted"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "加えて2026年11月には主要政策金利の軸を翌日物リバースレポ1.25%へ移し、金利の効きを高める改革も実施しました。"
+        voice_text: "加えて2026年11月には主要政策金利の軸をよくじつものリバースレポ1.25パーセントへ移し、金利の効きを高める改革も実施しました。"
+        cue: "c4_pboc_reform"
+        pause_after: 0.3
+      - speaker: tsumugi
+        style: normal
+        emotion: worry
+        mode: cutin
+        caption: "でも思い切って大幅利下げすればいいのに、小刻みなのは人民元安や資本流出が怖いから？"
+        voice_text: "でも思い切って大幅利下げすればいいのに、小刻みなのはじんみんげんやすや資本流出が怖いから？"
+        cue: "c4_tsumugi_yuan"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "お見事です。不動産バブル再燃と急激な元安・資本流出を避けつつ底割れを防ぐ、精密な二面作戦なんです。"
+        voice_text: "お見事です。不動産バブル再燃と急激なげんやす・資本流出を避けつつ底割れを防ぐ、精密な二面作戦なんです。"
+        cue: "c4_pboc_balance"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "日本はデフレ脱却の正常化、中国はデフレ回避と元防衛の両立で、立っている場所が真逆なのだ！"
+        voice_text: "日本はデフレ脱却の正常化、中国はデフレ回避とげんぼうえいの両立で、立っている場所が真逆なのだ！"
+        cue: "c4_to_ch5"
+        pause_after: 0.5
+
+  - id: "ch05_tsumugi_trilemma"
+    title: "5. つむぎの疑問：為替・トリレンマと中央銀行の限界"
+    layout: "wide"
+    lines:
+      - speaker: tsumugi
+        style: normal
+        emotion: sharp
+        mode: cutin
+        caption: "各国の意図は分かったけど、アメリカが高金利だと他国から資金が流れて通貨安になるよね？自由に決められるの？"
+        cue: "c5_tsumugi_fx"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "その核心をズバリ示すのが、国際経済学の重要法則『国際金融のトリレンマ』です。"
+        cue: "c5_trilemma_intro"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "①独立した金融政策、②自由な資本移動、③為替相場の安定。この3つは同時に2つまでしか選べません。"
+        cue: "c5_three_goals"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "米・日・欧は①と②を選び為替を変動相場に委ねるため、金利差が広がると資本移動で通貨安が起きます。"
+        cue: "c5_developed_choice"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "逆に中国は①と③の為替安定を重視するため、②の資本移動規制を手放さず管理変動相場を保つわけです。"
+        cue: "c5_china_choice"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: surprise
+        caption: "ぜんぶ取りは禁止の3すくみルールなのだ！だから日米金利差で円安が起きるのは構造上の宿命なのだね！"
+        voice_text: "ぜんぶ取りは禁止の3すくみルールなのだ！だから日米金利差でえんやすが起きるのは構造上の宿命なのだね！"
+        cue: "c5_zunda_trilemma"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "はい。結果として各国は自国だけでなく、他国の金利や為替の跳ね返りまで睨んで判断せざるを得ません。"
+        cue: "c5_spillover"
+        pause_after: 0.4
+      - speaker: tsumugi
+        style: normal
+        emotion: worry
+        mode: cutin
+        caption: "しかもエネルギー高みたいな海外要因のインフレや、国の借金が大きい状況で、金利だけで全部制御できるの？"
+        cue: "c5_phase2_limits"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "そこが現代の中央銀行が直面する3つの限界です。1つ目は『供給ショック』のジレンマです。"
+        cue: "c5_limit_intro"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "紛争や資源高・関税によるコスト増インフレに利上げで挑むと、景気悪化と物価高が並ぶ恐れがあります。"
+        cue: "c5_limit_supply"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: serious
+        caption: "2つ目は『財政ドミナンス』の懸念。国の借金が巨額だと利上げで利払い費が急増し、政治圧力が高まります。"
+        voice_text: "2つ目は『財政ドミナンス』の懸念。国の借金が巨額だと利上げでりばらいひが急増し、政治圧力が高まります。"
+        cue: "c5_limit_fiscal"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "政府の財政を助けるために中央銀行が利上げをためらうと、通貨への信認が揺らいでしまいます。"
+        cue: "c5_independence"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "3つ目は『効果のタイムラグ』。金利変更が実体経済に効くまで半年〜1年半かかり、常に先読み運転です。"
+        voice_text: "3つ目は『効果のタイムラグ』。金利変更が実体経済に効くまで半年から1年半かかり、常に先読み運転です。"
+        cue: "c5_limit_lag"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: worry
+        caption: "中央銀行は万能の魔法使いじゃなくて、為替や財政やタイムラグの制約の中で戦っているのだね…！"
+        cue: "c5_zunda_limits"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "その通りです。だからこそ金融政策と財政政策、そして市場との対話のバランスが問われ続けています。"
+        cue: "c5_to_ch6"
+        pause_after: 0.5
+
+  - id: "ch06_summary"
+    title: "6. まとめ：金利ニュースから国家の意図を読む"
+    layout: "default"
+    lines:
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "金利の数字だけだと難しかったけど、『使命・国内の悩み・制約』で並べると各国の本音が丸見えなのだ！"
+        cue: "c6_zunda_recap"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "今日のまとめです。1つ目、中央銀行は政策金利の波及ルートに加え、QE・QTや期待誘導を武器にします。"
+        cue: "c6_point1"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "2つ目、FRBは二兎の綱渡り、ECBは物価と結束、日銀は正常化、中国は緩和と元防衛と意図が異なります。"
+        voice_text: "2つ目、エフアールビーは二兎の綱渡り、イーシービーは物価と結束、日銀は正常化、中国は緩和とげんぼうえいと意図が異なります。"
+        cue: "c6_point2"
+        pause_after: 0.25
+      - speaker: metan
+        style: normal
+        emotion: explain
+        caption: "3つ目、国際金融のトリレンマや供給ショック、財政との距離感という構造的制約が常に立ちはだかります。"
+        cue: "c6_point3"
+        pause_after: 0.35
+      - speaker: metan
+        style: normal
+        emotion: smile
+        caption: "次に金利のニュースを見たら『どの使命と悩みを優先した一手か』を考えると、世界経済が一気に面白くなりますよ。"
+        cue: "c6_takeaway"
+        pause_after: 0.35
+      - speaker: tsumugi
+        style: normal
+        emotion: smile
+        mode: cutin
+        caption: "次は『為替介入の仕組み』や『国債とイールドカーブ』、『中央銀行デジタル通貨CBDC』も掘り下げたいね！"
+        cue: "c6_tsumugi_next"
+        pause_after: 0.35
+      - speaker: zundamon
+        style: normal
+        emotion: smile
+        caption: "ぜひ聞きたいのだ！それでは、ご視聴ありがとうございましたなのだ！"
+        cue: "c6_end"
+        pause_after: 0.5

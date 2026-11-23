@@ -1,0 +1,20 @@
+<style>
+.c6-wrap{position:relative;height:100%;padding:8px 20px 32px;box-sizing:border-box;display:flex;flex-direction:column;font-family:"Noto Sans JP",sans-serif;color:#1c1917}.c6-head h1{font-size:40px;margin:0;font-weight:900}.c6-sub{width:70%;font-size:21px;color:#57534e;margin:8px 0}.c6-grid{padding-top:86px;flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-content:center;align-items:stretch;min-height:0}.c6-card{background:#fffdf9;border:1px solid #ded4c7;border-radius:20px;padding:22px;min-width:0}.c6-card h2{font-size:24px;line-height:1.4;margin:0}.c6-icon{width:34px;height:34px;color:#b45309;flex:none}.c6-number{font-size:18px;font-weight:900;color:#0f766e;letter-spacing:.08em;margin-bottom:14px}.c6-card p{font-size:22px;font-weight:700;line-height:1.7;margin:22px 0 0;word-break:keep-all;text-wrap:pretty}.c6-key{color:#b45309;font-size:29px;font-weight:900;margin-top:18px}.c6-disclaimer{font-size:16px;color:#57534e;margin:10px 0}.c6-next{background:#f3e9da;border-radius:14px;padding:12px 18px;font-weight:800}.c6-chips{display:flex;gap:10px;margin-top:8px}.c6-chip{background:#fffdf9;border:1px solid #dfcfba;border-radius:9px;padding:8px 12px;font-size:17px;white-space:nowrap}
+</style>
+<div class="c6-wrap">
+  <div class="c6-head dg-cutin-head"><h1>今日のまとめ：資産運用の3つの軸</h1><p class="c6-sub">制度を活かし、時間を味方に、続けられる家計をつくる</p></div>
+  <div class="c6-grid dg-cutin-body">
+    <div class="c6-card dg-card" id="c6-p1"><div class="c6-number">POINT 01</div><div class="dg-card-title-group"><svg class="c6-icon"><use href="#dg-ico-coins"></use></svg><h2>非課税 × 低コスト分散</h2></div><div class="c6-key">新NISAを活用</div><p>約20.315%の税金が非課税。オルカンやS&amp;P500等を低コストで積み立てる。</p></div>
+    <div class="c6-card dg-card-glow" id="c6-p2"><div class="c6-number">POINT 02</div><div class="dg-card-title-group"><svg class="c6-icon"><use href="#dg-ico-clock"></use></svg><h2>暴落は想定内のイベント</h2></div><div class="c6-key">15年以上の長期目線</div><p>乱高下も過去50%の下落も歴史の常。時間を味方に持ち続ける。</p></div>
+    <div class="c6-card dg-card" id="c6-p3"><div class="c6-number">POINT 03</div><div class="dg-card-title-group"><svg class="c6-icon"><use href="#dg-ico-shield"></use></svg><h2>退場しない家計設計</h2></div><div class="c6-key">眠れる額で自動化</div><p>生活防衛資金を確保し、無理なく積立。本業と生活に集中する。</p></div>
+  </div>
+  <p class="c6-disclaimer">※本動画は制度と歴史データの解説であり、特定商品の勧誘や将来成果の保証ではありません。</p>
+  <div class="c6-next" id="c6-next-bar">次回テーマ候補<div class="c6-chips"><div class="c6-chip">iDeCoと年末調整・節税の仕組み</div><div class="c6-chip">現金・債券・金の資産配分</div><div class="c6-chip">持ち家 vs 賃貸のリアル試算</div></div></div>
+</div>
+<script>
+window.__diagramBuilders['ch06_summary'] = function(tl,cues){
+ const m=window.dgMotion;
+ m.reveal(tl,'.c6-head',cues.c6_intro); m.reveal(tl,'.c6-card',cues.c6_intro+0.1);
+ m.focus(tl,'#c6-p1',['#c6-p2','#c6-p3'],cues.c6_point1); m.focus(tl,'#c6-p2',['#c6-p1','#c6-p3'],cues.c6_point2); m.focus(tl,'#c6-p3',['#c6-p1','#c6-p2'],cues.c6_point3); m.unfocus(tl,['#c6-p1','#c6-p2','#c6-p3'],cues.c6_disclaimer); m.reveal(tl,'.c6-disclaimer',cues.c6_disclaimer); m.reveal(tl,'#c6-next-bar',cues.c6_tsumugi_next); m.reveal(tl,'.c6-chip',cues.c6_tsumugi_next+0.2); m.pulse(tl,'#c6-next-bar',cues.c6_tsumugi_next+0.5);
+};
+</script>

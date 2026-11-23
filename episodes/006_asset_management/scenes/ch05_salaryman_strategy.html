@@ -1,0 +1,186 @@
+<style>
+  .c5-scene { position: relative; height: 100%; font-family: "Noto Sans JP", sans-serif; color: var(--text-primary); }
+  .c5-phase { position: absolute; inset: 0; height: min(100%, 676px); padding-bottom: 48px; gap: 0; }
+  #c5-phase-b { opacity: 0; }
+  .c5-phase .dg-title-bar { min-height: 62px; box-sizing: border-box; }
+  .c5-phase .dg-heading { font-size: 32px; font-weight: 800; }
+  .c5-body { flex: 1; min-height: 0; height: auto; gap: 16px; padding-top: 108px; }
+  .c5-flow { position: relative; flex: 1; min-height: 207px; }
+  #c5-flow-box { position: absolute; inset: 0; }
+  .c5-flow-preview { position: absolute; inset: 0; gap: 20px; justify-content: center; }
+  .c5-flow-preview .dg-node { min-width: 220px; padding: 12px 20px; font-size: 23px; }
+  .c5-flow-preview .c5-icon { width: 25px; height: 25px; vertical-align: middle; margin-right: 8px; }
+  .c5-arrow { color: var(--accent-primary); font-size: 24px; font-weight: 900; }
+  .c5-strip { position: relative; flex: 0 0 184px; }
+  .c5-strip > * { position: absolute; inset: 0; }
+  .c5-card { min-width: 0; min-height: 0; height: 100%; gap: 12px; box-sizing: border-box; }
+  .c5-card p { margin: 0; }
+  .c5-icon { width: 29px; height: 29px; flex: none; color: var(--accent-primary); }
+  .c5-body-text { font-size: 22px; font-weight: 800; line-height: 1.42; text-wrap: pretty; }
+  .c5-note { font-size: 17px; color: var(--text-secondary); font-weight: 700; }
+  .c5-banner { min-height: 148px; margin-bottom: 18px; align-items: flex-start; gap: 5px; box-sizing: border-box; }
+  .c5-pitfalls { flex: 1; min-height: 0; }
+  .c5-pit-card { border-top: 4px solid var(--c5-tone); }
+  .c5-pit-card .c5-icon { color: var(--c5-tone); }
+  .c5-pit-visual { flex: 1; min-height: 123px; gap: 12px; box-sizing: border-box; padding: 10px 14px; }
+  .c5-pit-visual svg { width: 100%; height: 100%; max-height: 125px; }
+  .c5-pit-visual text { font-size: 16px; font-weight: 800; fill: var(--text-secondary); }
+  .c5-pit-band { width: 100%; height: auto; gap: 8px; }
+  .c5-pit-band .dg-chip { white-space: normal; }
+  .c5-chip-risk { border-color: var(--accent-warn); background: color-mix(in srgb, var(--accent-warn) 13%, var(--bg-card)); }
+  .c5-chip-safe { border-color: var(--accent-secondary); background: color-mix(in srgb, var(--accent-secondary) 11%, var(--bg-card)); }
+  .c5-pit-callout { font-size: 19px; padding: 10px 14px; line-height: 1.4; }
+</style>
+<div class="c5-scene">
+  <section id="c5-phase-a" class="c5-phase dg-col dg-wide-safe">
+    <header class="dg-title-bar dg-cutin-head">
+      <h2 class="dg-heading">忙しい会社員が続けるための「3ステップ設計」</h2>
+      <span class="dg-pill-ok">Phase 1　実践ステップ</span>
+    </header>
+    <div class="c5-body dg-col dg-cutin-body">
+      <div class="c5-flow">
+        <div id="c5-flow-box" class="dg-svg-stage"></div>
+        <div id="c5-flow-preview" class="c5-flow-preview dg-row">
+          <div class="dg-node"><svg class="c5-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-shield"/></svg>現金を確保</div>
+          <span class="c5-arrow" aria-hidden="true">→</span>
+          <div class="dg-node"><svg class="c5-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-sliders"/></svg>積立を自動化</div>
+          <span class="c5-arrow" aria-hidden="true">→</span>
+          <div class="dg-node"><svg class="c5-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-scale"/></svg>配分を決める</div>
+        </div>
+      </div>
+      <div class="c5-strip">
+        <article id="c5-strip-preview" class="c5-card dg-card dg-col">
+          <header class="dg-card-head">
+            <div class="dg-card-title-group">
+              <svg class="c5-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-compass"/></svg>
+              <h3 class="dg-card-title">家計を守りながら積み立てる</h3>
+            </div>
+          </header>
+          <div class="dg-grid-2">
+            <div class="dg-math-box"><strong class="c5-body-text">生活を支えるお金</strong><span class="c5-note">急な出費に備えて現金で持つ</span></div>
+            <div class="dg-math-box"><strong class="c5-body-text">長く使わないお金</strong><span class="c5-note">続けられる額を毎月積み立てる</span></div>
+          </div>
+        </article>
+        <div id="c5-account-pair" class="dg-grid-2">
+          <article id="c5-nisa-use" class="c5-card c5-account dg-card-glow dg-col">
+            <header class="dg-card-head">
+              <div class="dg-card-title-group">
+                <svg class="c5-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-layers"/></svg>
+                <h3 class="dg-card-title">新NISA</h3>
+              </div>
+              <span class="dg-pill-ok">用途を選ばない</span>
+            </header>
+            <p class="c5-body-text">いつでも売却して引き出せる</p>
+            <p class="c5-note">住宅・教育・老後など、使い道を決めずに運用できる</p>
+          </article>
+          <article id="c5-ideco-use" class="c5-card c5-account dg-card dg-col">
+            <header class="dg-card-head">
+              <div class="dg-card-title-group">
+                <svg class="c5-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-landmark"/></svg>
+                <h3 class="dg-card-title">iDeCo</h3>
+              </div>
+              <span class="dg-pill-warn">老後に備える</span>
+            </header>
+            <p class="c5-body-text">掛金は全額所得控除</p>
+            <p class="c5-note">原則として60歳まで引き出せない</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="c5-phase-b" class="c5-phase dg-col dg-wide-safe">
+    <header class="c5-banner dg-card-glow dg-cutin-banner dg-center">
+      <h2 class="dg-heading">会社員がつまずきやすい「3つの落とし穴」を避ける</h2>
+      <p class="c5-note">売るタイミング・費用・お金を使う時期</p>
+    </header>
+    <div class="c5-pitfalls dg-grid-3">
+      <article id="c5-pit-1" class="c5-card c5-pit-card dg-card dg-col" style="--c5-tone: var(--accent-danger)">
+        <header class="dg-card-head">
+          <div class="dg-card-title-group">
+            <svg class="c5-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-alert"/></svg>
+            <h3 class="dg-card-title">① 狼狽売り・積立停止</h3>
+          </div>
+        </header>
+        <p class="c5-body-text">大きな反発日を数日逃すだけで、長期リターンは大きく低下します</p>
+        <div class="c5-pit-visual dg-svg-stage">
+          <svg viewBox="0 0 460 112" role="img" aria-label="暴落の直後に大きく反発する模式図">
+            <path d="M12 90H448" stroke="var(--border-strong)" stroke-dasharray="5 6"/>
+            <path d="M16 35 L62 38 L108 34 L154 54 L198 84 L235 72" fill="none" stroke="var(--accent-danger)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+            <path d="M235 72 L271 30 L307 50 L349 29 L395 39 L444 24" fill="none" stroke="var(--accent-secondary)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle id="c5-rebound" cx="271" cy="30" r="8" fill="var(--accent-secondary)" stroke="var(--bg-card)" stroke-width="3"/>
+            <text x="125" y="108">暴落</text>
+            <text x="275" y="78">反発日</text>
+          </svg>
+        </div>
+        <div class="c5-pit-callout dg-callout dg-callout-danger">続けられる配分を先に決める</div>
+      </article>
+      <article id="c5-pit-2" class="c5-card c5-pit-card dg-card dg-col" style="--c5-tone: var(--accent-warn)">
+        <header class="dg-card-head">
+          <div class="dg-card-title-group">
+            <svg class="c5-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-coins"/></svg>
+            <h3 class="dg-card-title">② 高コスト・流行に飛びつく</h3>
+          </div>
+        </header>
+        <p class="c5-body-text">高い手数料は長期ほど重荷になり、過度なレバレッジも危険です</p>
+        <div class="c5-pit-visual dg-svg-stage">
+          <div class="c5-pit-band dg-col">
+            <span class="c5-note">テーマ型ファンドの費用例</span>
+            <span class="c5-chip-risk dg-chip">年率 1.5〜2% の手数料</span>
+            <span class="c5-note">保有している間、費用がかかり続ける</span>
+          </div>
+        </div>
+        <div class="c5-pit-callout dg-callout dg-callout-warn">購入前に費用と商品の仕組みを確認</div>
+      </article>
+      <article id="c5-pit-3" class="c5-card c5-pit-card dg-card dg-col" style="--c5-tone: var(--accent-secondary)">
+        <header class="dg-card-head">
+          <div class="dg-card-title-group">
+            <svg class="c5-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-clock"/></svg>
+            <h3 class="dg-card-title">③ 近々使うお金を投資</h3>
+          </div>
+        </header>
+        <p class="c5-body-text">数年後の教育費や住宅頭金は、使う年に暴落が重なる危険があります</p>
+        <div class="c5-pit-visual dg-svg-stage">
+          <div class="c5-pit-band dg-col">
+            <span class="c5-note">支払日が決まっているお金</span>
+            <span class="c5-chip-safe dg-chip">今から数年後の支払いまで現金で確保</span>
+            <span class="c5-note">相場の回復を待てる期間が短い</span>
+          </div>
+        </div>
+        <div class="c5-pit-callout dg-callout dg-callout-ok">使う時期が近いお金は現金で守る</div>
+      </article>
+    </div>
+  </section>
+</div>
+<script>
+  window.__diagramBuilders['ch05_salaryman_strategy'] = function (tl, cues) {
+    const motion = window.dgMotion;
+    const widgets = window.dgWidgets;
+    const opening = cues.c5_tsumugi_how + 0.8;
+    const phaseSwitch = cues.c5_phase2_pitfalls;
+    const pitCards = '.c5-pit-card';
+
+    motion.reveal(tl, '#c5-phase-a', opening, { y: 0, duration: 0.34 });
+    motion.switchPhase(tl, '#c5-phase-a', '#c5-phase-b', phaseSwitch, { duration: 0.1 });
+    tl.to('#c5-flow-preview', { opacity: 0, duration: 0.26, ease: 'power1.out' }, cues.c5_step1_cash);
+    widgets.flowNodes('#c5-flow-box', tl, {
+      width: 1120, height: 175, flowStart: cues.c5_step1_cash + 0.4, flowEnd: cues.c5_zunda_steps + 2,
+      focusEach: true, unfocusAt: cues.c5_zunda_steps,
+      nodes: [
+        { title: '① 生活防衛資金', sub: '生活費6〜12カ月を現金確保', icon: 'dg-ico-shield', tone: 'ok', at: cues.c5_step1_cash },
+        { title: '② 積立の自動化', sub: '給料日直後に自動積立', icon: 'dg-ico-sliders', tone: 'secondary', at: cues.c5_step2_auto },
+        { title: '③ 眠れる配分', sub: '半減しても耐えられる額', icon: 'dg-ico-scale', tone: 'primary', at: cues.c5_step3_risk },
+        { title: '④ 長期ほったらかし', sub: '本業と暮らしに集中', icon: 'dg-ico-clock', tone: 'warn', at: cues.c5_zunda_steps - 1.5 }
+      ]
+    });
+
+    motion.switchPhase(tl, '#c5-strip-preview', '#c5-account-pair', cues.c5_ideco_pair);
+    motion.focus(tl, '#c5-ideco-use', '.c5-account', cues.c5_ideco_tradeoff, { dimOpacity: 0.58 });
+    motion.unfocus(tl, '.c5-account', cues.c5_zunda_steps);
+
+    motion.focus(tl, '#c5-pit-1', pitCards, cues.c5_pitfall1_sell, { dimOpacity: 0.55 });
+    motion.pulse(tl, '#c5-rebound', cues.c5_pitfall1_bestdays, cues.c5_pitfall2_cost);
+    motion.focus(tl, '#c5-pit-2', pitCards, cues.c5_pitfall2_cost, { dimOpacity: 0.55 });
+    motion.focus(tl, '#c5-pit-3', pitCards, cues.c5_pitfall3_deadline, { dimOpacity: 0.55 });
+    motion.unfocus(tl, pitCards, cues.c5_zunda_avoid);
+  };
+</script>

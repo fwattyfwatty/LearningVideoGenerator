@@ -1,0 +1,124 @@
+{
+  "theme": "finance-navy",
+  "accent_color": "#eab308",
+  "theme_palette_note": "finance-navy (濃紺×金): 背景 #0a1428、カード #162542、カード補助 #0e1a30、本文 #f8fafc、補足 #cbd5e1、主役ゴールド #eab308（ゴールド背景上の文字色は var(--on-accent, #0a1428) 必須）、補助スカイブルー #38bdf8、成功 #4ade80、警告 #f59e0b、危険/制約 #f87171。暗色背景に暗いグレー文字を使わないこと。",
+  "chapters": [
+    {
+      "id": "ch01_intro",
+      "layout": "title",
+      "has_tsumugi_cutin": false,
+      "difficulty": "light",
+      "recommended_worker": "codex/gpt-6.1-terra (medium)",
+      "visual_plan": "Theme finance-navy (#eab308 gold accent, #38bdf8 secondary). Top hero badge (.dg-hero-badge + .dg-hero-dot) '国際金融・地政学入門' + .dg-hero-title '基軸通貨の変遷：ポンドからドル、そして多極化時代へ' (highlight '基軸通貨' and '多極化時代' with .dg-text-accent). Sub-row of 3 compact role pills revealed at c1_roles ('国際決済', '価格の基準', '外貨準備'). Middle 2-column grid (.dg-grid-2, flex:1, min-height:0): Left card (.dg-card-glow, #c1-card-shares) with header icon #dg-ico-coins '世界の外貨準備シェア（IMF COFER 2026年Q2）' rendering dgWidgets.barChart('#c1-bar-box', tl, { max: 70, unit: '%', countUp: true, decimals: 1, at: cues.c1_shares + 0.15, items: [{label:'米ドル (USD)', value:56.7, tone:'primary'}, {label:'ユーロ (EUR)', value:20.6, tone:'secondary'}, {label:'日本円 (JPY)', value:5.0, tone:'ok'}, {label:'人民元 (CNY)', value:2.1, tone:'warn'}] }) PLUS bottom highlight callout (#c1-fx-callout, revealed at c1_fx_scale) 'BIS 2025年FX取引シェア：米ドル 88.4%（両建て200%基準）'. Right card (.dg-card, #c1-card-stance) with header icon #dg-ico-globe '国際通貨体制の現在地' rendering dgWidgets.gauge('#c1-gauge-box', tl, { zones: [{label:'一極支配', sub:'ドル圧倒', color:'var(--accent-primary)'}, {label:'緩やかな分散', sub:'2026現在地', color:'var(--accent-secondary)'}, {label:'完全多極化', sub:'決済分断', color:'var(--accent-warn)'}], initialAngle: -52, moves: [{angle: -12, at: cues.c1_stance + 0.1, duration: 1.2}], centerLabel: 'ドル中核 × 緩やかな多極化' }) plus bottom callout '強いネットワーク効果と地政学リスクのせめぎ合い'. Bottom row of 3 goal chips (.dg-title-bottom-safe, strictly above y=805 clearing Metan/Zundamon tops at y=814): '① 400年の覇権交代法則' (#dg-ico-clock), '② ドルの特権とジレンマ' (#dg-ico-landmark), '③ 脱ドルとデジタル時代の行方' (#dg-ico-globe).",
+      "motion_beats": [
+        "c1_title: Hero badge & title reveal cleanly",
+        "c1_roles: Staggered reveal of 3 reserve-currency role pills",
+        "c1_shares: dgMotion.focus on #c1-card-shares (dim #c1-card-stance) while barChart grows with countUp to 56.7%",
+        "c1_fx_scale: Reveal #c1-fx-callout and dgMotion.pulse on the 88.4% badge until c1_zunda_wow + 2",
+        "c1_stance: dgMotion.focus on #c1-card-stance (dim #c1-card-shares) while gauge needle sweeps from -52deg to -12deg",
+        "c1_stance + 1.4 / c1_go: dgMotion.unfocus both cards + staggered reveal of 3 bottom goal chips"
+      ],
+      "phase_transitions": []
+    },
+    {
+      "id": "ch02_guilder_to_pound",
+      "layout": "default",
+      "has_tsumugi_cutin": false,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "Theme finance-navy (#eab308). Phase A (#c2-phase-a, c2_history_open..c2_lag_reason): Title bar (.dg-title-bar) '400年の通貨覇権リレーと「交代タイムラグ」の法則' + .dg-pill-accent 'Phase 1: 歴史の法則'. Top wide stage (.dg-card-glow, #c2-tl-card) rendering dgWidgets.timeline('#c2-tl-box', tl, { width: 960, height: 225, at: cues.c2_dutch, focusEach: true, unfocusAt: cues.c2_lag_fact, items: [{tag:'17世紀', title:'オランダ・ギルダー', desc:'東インド会社・アムステルダム銀行', tone:'secondary', at: cues.c2_dutch}, {tag:'19世紀', title:'英ポンド', desc:'産業革命・大英帝国・金本位制', tone:'warn', at: cues.c2_pound}, {tag:'1944年〜', title:'米ドル', desc:'2度の大戦・ブレトンウッズ協定', tone:'primary', at: cues.c2_dollar_rise}, {tag:'2020年代〜', title:'多極化の胎動', desc:'分散・金復権・決済網複線化', tone:'ok', at: cues.c2_dollar_rise + 3.0}] }). Bottom card (.dg-card, #c2-lag-card, revealed at c2_lag_fact) with header icon #dg-ico-clock '経済力トップから通貨交代まで「約70年」の慣性' containing crisp horizontal timeline SVG (.dg-svg-stage, viewBox='0 0 920 155'): two highlighted milestone nodes [1870年代: 米国GDPが英国を逆転] -> animated dashed/drawn span arrow labeled '約70年のタイムラグ（強烈な慣性）' (dgMotion.drawPath + dgMotion.flowDash) -> [1944年: ポンドからドルへ完全交代（2度の大戦が引き金）], plus bottom callout at c2_lag_reason. Phase B (#c2-phase-b, starts at c2_phase2_cond): Use dgMotion.switchPhase(tl, '#c2-phase-a', '#c2-phase-b', cues.c2_phase2_cond) and reveal Phase B title bar + center core + first cards immediately at tP2+0.1 (ZERO blank gap). Title bar 'なぜ交代しにくいのか？基軸通貨の4条件 × ネットワーク効果' + .dg-pill-ok 'Phase 2: 構造'. Balanced 3-column or 2x2+center hub layout filling 80% of stage: 4 structured condition cards surrounding/paired with a glowing central Network Effect hub (.dg-card-glow, #c2-net-hub, featuring rotating #dg-ico-loop via GSAP svgOrigin + '使うほど便利になる自己強化ループ'): Card 1 (#c2-cond-1, #dg-ico-globe) '① 経済規模と貿易網', Card 2 (#c2-cond-2, #dg-ico-landmark) '② 深く開かれた金融・国債市場', Card 3 (#c2-cond-3, #dg-ico-scale) '③ 法の支配と制度的信頼', Card 4 (#c2-cond-4, #dg-ico-shield) '④ 安全保障と同盟網'.",
+      "motion_beats": [
+        "c2_dutch / c2_pound / c2_dollar_rise: timeline reveals and focusEach highlights each era node sequentially",
+        "c2_lag_fact: Reveal #c2-lag-card + dgMotion.drawPath on 70-year inertia span + dgMotion.pulse on '約70年' badge",
+        "c2_zunda_lag / c2_lag_reason: dgMotion.flowDash across the inertia timeline arrow",
+        "c2_phase2_cond: dgMotion.switchPhase (zero blank gap) + reveal Phase B hub & 4 condition grid",
+        "c2_cond_econ_mkt: dgMotion.focus on Cards 1 & 2 (dim Cards 3, 4, hub)",
+        "c2_cond_law_sec: dgMotion.focus on Cards 3 & 4 (dim Cards 1, 2, hub)",
+        "c2_network_loop: dgMotion.focus on #c2-net-hub + smooth GSAP rotation of #dg-ico-loop via svgOrigin + pulse",
+        "c2_zunda_cond: dgMotion.unfocus all Phase B cards so the full 4-pillar + network picture shines together"
+      ],
+      "phase_transitions": [
+        { "fade_out": "#c2-phase-a", "fade_in": "#c2-phase-b", "at_cue": "c2_phase2_cond" }
+      ]
+    },
+    {
+      "id": "ch03_bretton_to_fiat",
+      "layout": "wide",
+      "has_tsumugi_cutin": false,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "CRITICAL WIDE SAFETY: Apply .dg-wide-safe (padding-bottom: 48px) on BOTH #c3-phase-a and #c3-phase-b so ALL cards stay strictly above y=805 (clearing Metan/Zundamon tops at y=814). Theme finance-navy (#eab308). Phase A (#c3-phase-a, c3_bw_system..c3_zunda_survive): Title bar (.dg-title-bar) 'ブレトンウッズ体制の限界：トリフィンのジレンマと1971年ニクソン・ショック' + .dg-pill-warn 'Phase 1: 金本位制の崩壊'. 2-column grid (.dg-grid-2, flex:1, min-height:0): Left card (.dg-card, #c3-card-bw) with #dg-ico-coins '1944年 ブレトンウッズ体制の構造' showing clean SVG hierarchy [各国通貨（固定相場）] <-> [米ドル（中心軸）] <-> [金（ゴールド）1オンス＝35ドル] with flowDash arrows, plus shock strike overlay/badge '1971年8月 金兌換停止（ニクソン・ショック）→ 信用貨幣＆変動相場制へ' revealed at c3_nixon_shock / c3_fiat_era. Right card (.dg-card-glow, #c3-card-triffin) with #dg-ico-scale 'トリフィンのジレンマ（1960年）' showing crisp SVG balance scale (fulcrum + tilting beam via GSAP svgOrigin, NO CSS transform): Left pan '世界へのドル供給（米国の国際収支赤字拡大）' (#38bdf8) vs Right pan '米国の金保有量（有限の限界）' (#eab308), tipping steeply under imbalance at c3_triffin_break with danger badge '海外ドル残高 ＞ 米国金保有量 ＝ 信認危機' pulsing at c3_triffin_break..c3_nixon_shock. Phase B (#c3-phase-b, starts at c3_phase2_recycle): Use dgMotion.switchPhase(tl, '#c3-phase-a', '#c3-phase-b', cues.c3_phase2_recycle) and reveal Phase B title bar + flowNodes stage immediately at tP2+0.1 (ZERO blank gap). Title bar '金なしでドルが残った理由：ペトロダラー＆米国債還流と「法外な特権」' + .dg-pill-accent 'Phase 2: 米国債循環'. Top wide SVG stage (.dg-svg-stage, #c3-flow-box) rendering dgWidgets.flowNodes('#c3-flow-box', tl, { width: 1120, height: 185, flowStart: cues.c3_petrodollar + 0.3, flowEnd: cues.c3_to_ch4 + 2, focusEach: true, unfocusAt: cues.c3_privilege, nodes: [{title:'原油・世界貿易', sub:'ドル建て決済定着', icon:'dg-ico-globe', tone:'primary', at: cues.c3_petrodollar}, {title:'貿易黒字国', sub:'産油国・日欧中に蓄積', icon:'dg-ico-coins', tone:'secondary', at: cues.c3_petrodollar + 2.0}, {title:'米国債へ還流', sub:'世界最大の安全資産', icon:'dg-ico-landmark', tone:'ok', at: cues.c3_treasury_loop}, {title:'米国の低金利調達', sub:'消費・財政を支える', icon:'dg-ico-trending-up', tone:'warn', at: cues.c3_privilege}] }). Bottom 2-column contrast cards: Left (.dg-card-glow, #c3-card-priv, #dg-ico-sparkles) '光：法外な特権（Exorbitant Privilege）' (自国通貨で海外から低コスト資金調達／為替リスクを他国へ転嫁) vs Right (.dg-card, #c3-card-cost, #dg-ico-alert) '影：基軸通貨の代償' (強いドル需要による貿易赤字拡大／国内製造業の空洞化・双子の赤字).",
+      "motion_beats": [
+        "c3_bw_system: dgMotion.focus on #c3-card-bw + flowDash on currency-dollar-gold link",
+        "c3_triffin_intro / c3_triffin_mech: dgMotion.focus on #c3-card-triffin while balance scale tilts progressively",
+        "c3_triffin_break: Highlight overload imbalance + dgMotion.pulse on '信認危機' badge",
+        "c3_nixon_shock / c3_fiat_era: dgMotion.focus back on #c3-card-bw, reveal 1971 break badge & fiat transition, then unfocus at c3_zunda_survive",
+        "c3_phase2_recycle: dgMotion.switchPhase (zero blank gap) reveals Phase B header & flow container immediately",
+        "c3_petrodollar / c3_treasury_loop: flowNodes sequential focus + continuous dgMotion.flowDash across 4-node recycling loop",
+        "c3_privilege: dgMotion.focus on #c3-card-priv (dim #c3-card-cost)",
+        "c3_cost_side: dgMotion.focus on #c3-card-cost (dim #c3-card-priv), then unfocus both at c3_zunda_balance"
+      ],
+      "phase_transitions": [
+        { "fade_out": "#c3-phase-a", "fade_in": "#c3-phase-b", "at_cue": "c3_phase2_recycle" }
+      ]
+    },
+    {
+      "id": "ch04_challengers_reality",
+      "layout": "default",
+      "has_tsumugi_cutin": true,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "CRITICAL TSUMUGI SAFETY: Tsumugi cut-in (x:1572..1888, y:90..254) appears in BOTH Phase A (c4_tsumugi_ask) and Phase B (c4_tsumugi_gold). Apply .dg-cutin-head (padding-right: 360px) on BOTH Phase A & Phase B title bars AND apply .dg-cutin-body (padding-top: 108px) on BOTH Phase A & Phase B body grids so NO card ever touches y<=254! Keep card vertical padding compact (16px 18px) and flex:1 min-height:0 so cards also clear the bottom safely. Theme finance-navy (#eab308). Phase A (#c4-phase-a, c4_tsumugi_ask..c4_walls_wrap): Title bar (.dg-title-bar .dg-cutin-head) '3つの挑戦者が越えられない「構造の壁」' + .dg-pill-secondary 'Phase 1: 挑戦者の限界'. 3-column grid (.dg-grid-3 .dg-cutin-body, flex:1, min-height:0): Card 1 (#c4-card-yen, .dg-card, #dg-ico-coins) '日本円（JPY）' — KPI strip '外貨準備 5.0% / FX 16.8%', Strength chip '1985年プラザ合意後に存在感拡大', Wall callout (.dg-callout-warn) '壁：バブル崩壊・長期停滞と金融市場開放の遅れ'; Card 2 (#c4-card-eur, .dg-card-glow, #dg-ico-landmark) 'ユーロ（EUR）' — KPI strip '外貨準備 20.6% / SWIFT 21.9%', Strength chip '最大の対抗馬・欧州巨大経済圏', Wall callout (.dg-callout-warn) '壁：財政・国債が20カ国バラバラ（米国債級の単一安全資産なし）'; Card 3 (#c4-card-rmb, .dg-card, #dg-ico-shield) '人民元（CNY）' — KPI strip '外貨準備 2.1% / SWIFT 3.1% / FX 8.5%', Strength chip '貿易大国・二国間決済は拡大', Wall callout (.dg-callout-danger) '壁：資本移動規制（自由な換金性の制約）と制度透明性'. Phase B (#c4-phase-b, starts at c4_phase2_shift): Use dgMotion.switchPhase(tl, '#c4-phase-a', '#c4-phase-b', cues.c4_phase2_shift) and reveal Phase B title bar + Left chart immediately at tP2+0.1 (ZERO blank gap). Title bar (.dg-title-bar .dg-cutin-head) '静かな地殻変動：ドル比率の緩やかな低下と「金」の復権' + .dg-pill-accent 'Phase 2: 2026年データ'. 2-column grid (.dg-grid-2 .dg-cutin-body, flex:1, min-height:0): Left card (.dg-card-glow, #c4-card-curve) with #dg-ico-trending-down '外貨準備における米ドル比率の推移（IMF COFER）' rendering dgWidgets.lineChart('#c4-line-box', tl, { width: 640, height: 270, mode: 'line', yMin: 40, yMax: 80, yTicks: [40, 55, 70, 80], yUnit: '%', at: cues.c4_phase2_shift + 0.2, duration: 1.4, highlightAt: cues.c4_phase2_shift + 1.4, pulseEnd: cues.c4_nontrad_div + 1.5, points: [{label:'2000', value:71.0, badge:'約71%'}, {label:'2008', value:64.0}, {label:'2015', value:65.5}, {label:'2022', value:58.5}, {label:'2026Q2', value:56.7, badge:'56.7%', highlight:true}] }) plus subnote '26年間で約14ポイント低下（ただしなお過半数を維持）'. Right card (.dg-card, #c4-card-dest) with #dg-ico-trending-up '減った約14%の行き先：分散 ＆ ゴールド躍進' split cleanly into 2 stacked visual blocks: (1) #c4-dest-div (revealed at c4_nontrad_div): '① 非伝統的通貨への分散' chips (豪ドル / カナダドル / スイスフラン / 韓国ウォン — 人民元一極ではない), (2) #c4-dest-gold (.dg-callout-ok / gold-tinted accent box revealed at c4_gold_surge): '② 金（ゴールド）の復権（COFER外資産）' with animated countUp stat '年約 1,000 トン' (2022年以降の中央銀行購入) + highlighted badge '公的準備資産全体でユーロを抜き世界2位へ（WGC）' pulsing at c4_gold_no2..c4_tsumugi_gold + 2.",
+      "motion_beats": [
+        "c4_challengers_intro: Reveal 3 challenger cards cleanly",
+        "c4_yen_wall: dgMotion.focus on #c4-card-yen (dim Euro & RMB)",
+        "c4_euro_wall: dgMotion.focus on #c4-card-eur (dim Yen & RMB)",
+        "c4_rmb_wall: dgMotion.focus on #c4-card-rmb (dim Yen & Euro)",
+        "c4_zunda_walls: dgMotion.unfocus all 3 challenger cards",
+        "c4_phase2_shift: dgMotion.switchPhase (zero blank gap) + lineChart draws 71%->56.7% with pulsing 56.7% highlight while #c4-card-curve is focused",
+        "c4_nontrad_div: dgMotion.focus on #c4-card-dest + reveal #c4-dest-div non-traditional currency chips",
+        "c4_gold_surge / c4_gold_no2: Reveal #c4-dest-gold + countUp 0->1000トン + dgMotion.pulse on 'ユーロ超え世界2位' badge",
+        "c4_zunda_gold: dgMotion.unfocus Phase B cards"
+      ],
+      "phase_transitions": [
+        { "fade_out": "#c4-phase-a", "fade_in": "#c4-phase-b", "at_cue": "c4_phase2_shift" }
+      ]
+    },
+    {
+      "id": "ch05_tsumugi_multipolar",
+      "layout": "wide",
+      "has_tsumugi_cutin": true,
+      "difficulty": "heavy",
+      "recommended_worker": "codex/gpt-6.2-sol (medium)",
+      "visual_plan": "CRITICAL WIDE + TSUMUGI SAFETY: Tsumugi cut-in (x:1572..1888, y:90..254) appears in Phase A (c5_tsumugi_sanction AND c5_tsumugi_digital). Apply .dg-wide-safe (padding-bottom: 48px) on BOTH #c5-phase-a and #c5-phase-b so ALL cards stay strictly above y=805! Apply .dg-cutin-head (padding-right: 360px) on Phase A title bar + .dg-cutin-body (padding-top: 108px) on Phase A content wrapper. On Phase B, use a left-aligned top banner (.dg-card-glow .dg-cutin-banner, width: 73%) with margin-bottom: 20px so Phase B cards start well below y=240 and clear everything cleanly. Theme finance-navy (#eab308). Phase A (#c5-phase-a, c5_tsumugi_sanction..c5_tsumugi_digital): Title bar (.dg-title-bar .dg-cutin-head) '金融制裁の衝撃と「国際決済網の複線化」' + .dg-pill-danger 'Phase 1: 脱ドル圧力'. Top wide flow stage (.dg-svg-stage, #c5-flow-box) inside .dg-cutin-body rendering dgWidgets.flowNodes('#c5-flow-box', tl, { width: 1120, height: 175, flowStart: cues.c5_rails_open + 0.3, flowEnd: cues.c5_tsumugi_digital + 2, focusEach: true, unfocusAt: cues.c5_zunda_rails, nodes: [{title:'SWIFT + CHIPS', sub:'従来のドル一極決済網', icon:'dg-ico-landmark', tone:'primary', at: cues.c5_weaponize}, {title:'中国 CIPS', sub:'人民元・二国間貿易決済', icon:'dg-ico-arrow-lr', tone:'warn', at: cues.c5_cips}, {title:'mBridge (CBDC)', sub:'コルレス不要の直接決済', icon:'dg-ico-zap', tone:'secondary', at: cues.c5_mbridge}, {title:'BRICS Pay', sub:'UPI・Pix等即時決済網連携', icon:'dg-ico-globe', tone:'ok', at: cues.c5_brics_pay}] }). Bottom 3 compact summary cards (.dg-grid-3) synced to c5_cips, c5_mbridge, c5_brics_pay explaining each rail concisely (highlighting '西側はプロジェクト・アゴラで対抗' and '単一BRICS通貨ではなく即時決済網の相互接続'). Phase B (#c5-phase-b, starts at c5_phase2_moat): Use dgMotion.switchPhase(tl, '#c5-phase-a', '#c5-phase-b', cues.c5_phase2_moat) and reveal Phase B banner + Left card immediately at tP2+0.1 (ZERO blank gap). Top left-aligned banner (.dg-card-glow .dg-cutin-banner) 'なぜ急交代しないのか？ドルの厚い防壁 × デジタル・ドルの逆襲'. Below (.dg-grid-2, flex:1, min-height:0): Left card (.dg-card, #c5-card-moat) with #dg-ico-shield '防壁①：媒介通貨の圧倒的慣性' showing clean 2-bar metric summary ('世界FX取引 88.4%（BIS 2025）' + '貿易金融 約80%がドル建て' via .dg-bar-track/.dg-bar-fill animated with dgMotion.barGrow) + callout '二国間決済が増えても、多国間金融取引ではドルが最安・最速'. Right card (.dg-card-glow, #c5-card-stable) with #dg-ico-zap '防壁②：米国 GENIUS法 × ステーブルコインの逆襲' showing crisp 3-step SVG digital-dollar Treasury loop (.dg-svg-stage, viewBox='0 0 560 155', dgMotion.flowDash arrows): [USDT / USDC（約3,000億ドル）] -> [GENIUS法（2025年成立）100%裏付け義務] -> [米国短期国債へ自動還流] + bottom conclusion pill (.dg-callout-ok, revealed at c5_conclusion) '現実解：急崩壊ではなく「ドル中核 × 多極併存」時代へ'.",
+      "motion_beats": [
+        "c5_weaponize / c5_cips / c5_mbridge / c5_brics_pay: flowNodes highlights each rail sequentially with continuous dgMotion.flowDash arrows while bottom 3 cards reveal and sync",
+        "c5_zunda_rails: dgMotion.unfocus all Phase A elements",
+        "c5_phase2_moat: dgMotion.switchPhase (zero blank gap) reveals Phase B banner + #c5-card-moat immediately; dgMotion.barGrow animates 88.4% and 80% bars while #c5-card-moat is focused",
+        "c5_stablecoin_twist / c5_genius_act: dgMotion.focus on #c5-card-stable (dim #c5-card-moat) + countUp to 3000億ドル",
+        "c5_treasury_newloop: dgMotion.flowDash continuously animates the Stablecoin -> GENIUS Act -> US T-Bill loop",
+        "c5_conclusion / c5_zunda_twist: dgMotion.unfocus both cards + reveal & pulse 'ドル中核 × 多極併存' conclusion box"
+      ],
+      "phase_transitions": [
+        { "fade_out": "#c5-phase-a", "fade_in": "#c5-phase-b", "at_cue": "c5_phase2_moat" }
+      ]
+    },
+    {
+      "id": "ch06_summary",
+      "layout": "default",
+      "has_tsumugi_cutin": true,
+      "difficulty": "light",
+      "recommended_worker": "codex/gpt-6.1-terra (medium)",
+      "visual_plan": "CRITICAL SAFE LAYOUT: .c6-wrap { padding-bottom: 36px; display: flex; flex-direction: column; height: 100%; }, title bar uses .dg-cutin-head (padding-right: 360px), 3-card summary grid uses .dg-cutin-body (padding-top: 108px; flex: 1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-content: center; align-items: stretch;) with uniform cards strictly below y=254 and above bottom next-bar (strictly above y=805). Theme finance-navy (#eab308). POINT 1 (#c6-p1, .dg-card, c6_point1): header icon #dg-ico-clock '歴史の法則と慣性' (ギルダー → ポンド → ドル／4条件が揃い数十年かけて交代). POINT 2 (#c6-p2, .dg-card-glow, c6_point2): header icon #dg-ico-landmark 'ドルの特権とジレンマ' (トリフィンのジレンマと1971年ニクソン・ショック後も、米国債市場とネットワーク効果が土台を維持). POINT 3 (#c6-p3, .dg-card, c6_point3): header icon #dg-ico-globe '多極併存の現在地' (外貨準備56.7%へ分散・金の復権・決済網の複線化 vs ステーブルコインによるデジタル・ドルの逆襲). Bottom #c6-next-bar ('📚 次回テーマ候補', revealed at c6_tsumugi_next) with 3 crisp chips: '🏦 米国債と「世界の金利」の仕組み', '🪙 金（ゴールド）はなぜ買われ続けるのか', '📱 CBDCとステーブルコインの覇権争い'.",
+      "motion_beats": [
+        "c6_intro: Reveal title bar",
+        "c6_point1: Reveal & dgMotion.focus on #c6-p1",
+        "c6_point2: Reveal & dgMotion.focus on #c6-p2 (dim #c6-p1)",
+        "c6_point3: Reveal & dgMotion.focus on #c6-p3 (dim #c6-p1, #c6-p2)",
+        "c6_news_lens: dgMotion.unfocus all 3 summary cards so the complete trio stands cleanly",
+        "c6_tsumugi_next: Reveal #c6-next-bar with staggered chips and subtle pulse on the bar"
+      ],
+      "phase_transitions": []
+    }
+  ]
+}

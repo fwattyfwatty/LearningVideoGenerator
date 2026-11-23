@@ -1,0 +1,245 @@
+<style>
+.c5-scene {
+  position: relative;
+  height: 640px;
+  max-height: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+  color: var(--text-primary);
+}
+.c5-phase { position: absolute; inset: 0; gap: 0; }
+#c5-phase-b { opacity: 0; }
+.c5-title { min-height: 72px; }
+.c5-title .dg-heading { font-weight: 800; }
+.c5-guide {
+  position: absolute;
+  top: 102px;
+  left: 0;
+  width: 70%;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 21px;
+  font-weight: 700;
+}
+.c5-content { flex: 1; min-height: 0; gap: 14px; }
+.c5-widget { min-height: 175px; }
+.c5-widget > svg { width: 100%; height: 100%; }
+.c5-card {
+  padding: 16px 18px;
+  min-width: 0;
+  min-height: 0;
+  gap: 12px;
+  box-sizing: border-box;
+}
+.c5-rail { border-top: 3px solid var(--accent-secondary); }
+#c5-rail-cips { border-top-color: var(--accent-warn); }
+#c5-rail-brics { border-top-color: var(--accent-ok); }
+.c5-label { gap: 10px; }
+.c5-icon { width: 28px; height: 28px; flex: 0 0 28px; color: var(--accent-primary); }
+.c5-detail { margin: 0; color: var(--text-secondary); font-size: 18px; font-weight: 700; }
+.c5-banner {
+  flex: 0 0 168px;
+  margin-bottom: 20px;
+  padding: 22px 28px;
+}
+.c5-banner .dg-heading { margin: 9px 0 4px; font-size: 36px; font-weight: 900; }
+.c5-proof { flex: 1; min-height: 0; }
+.c5-measures { flex: 1; height: auto; justify-content: center; gap: 16px; }
+.c5-metric .dg-row { justify-content: space-between; gap: 8px; margin-bottom: 5px; }
+.c5-metric .dg-kpi { font-size: 30px; }
+.c5-metric-name { font-size: 20px; font-weight: 800; }
+.c5-track-a { width: 88.4%; }
+.c5-track-b { width: 80%; }
+.c5-takeaway { margin: 0; padding: 10px 14px; font-size: 18px; line-height: 1.45; }
+.c5-loop { min-height: 155px; padding: 6px 10px; }
+.c5-loop > svg { width: 100%; height: 100%; }
+.c5-loop-box { fill: var(--bg-card); stroke: var(--border-strong); stroke-width: 1.5; }
+.c5-loop-gold { fill: url(#c5-loop-gradient); stroke: var(--accent-primary); }
+.c5-loop-head { fill: var(--text-primary); font-size: 17px; font-weight: 800; }
+.c5-loop-note { fill: var(--text-secondary); font-size: 14px; font-weight: 700; }
+.c5-loop-kpi { fill: var(--accent-primary); font-size: 16px; font-weight: 900; }
+.c5-loop-link { fill: none; stroke: var(--accent-primary); stroke-width: 2.4; stroke-dasharray: 6 4; }
+.c5-outlook { margin-top: 14px; text-align: center; font-size: 23px; }
+</style>
+<div class="c5-scene">
+  <div id="c5-phase-a" class="c5-phase dg-col dg-wide-safe">
+    <header class="c5-title dg-title-bar dg-cutin-head">
+      <h2 class="dg-heading">金融制裁の衝撃と「国際決済網の複線化」</h2>
+      <span class="dg-pill-danger">Phase 1　脱ドル圧力</span>
+    </header>
+    <p class="c5-guide">ドル決済が制裁に使われると、各国はどんな経路を探すのか？</p>
+    <div class="c5-content dg-col dg-cutin-body">
+      <div id="c5-flow-box" class="c5-widget dg-svg-stage" role="img"
+        aria-label="従来のドル決済網と、別経路となる中国CIPS・mBridge・BRICS Payの比較"></div>
+      <div class="dg-grid-3">
+        <section id="c5-rail-cips" class="c5-card c5-rail dg-card dg-col">
+          <header class="dg-card-head">
+            <div class="c5-label dg-row">
+              <svg class="c5-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-arrow-lr"/></svg>
+              <h3 class="dg-card-title">中国 CIPS</h3>
+            </div>
+            <span class="dg-pill-warn">人民元</span>
+          </header>
+          <p class="c5-detail">中国との貿易を人民元で決済する経路。</p>
+          <p class="c5-takeaway dg-callout dg-callout-warn">二国間取引での利用が広がる</p>
+        </section>
+        <section id="c5-rail-mbridge" class="c5-card c5-rail dg-card-glow dg-col">
+          <header class="dg-card-head">
+            <div class="c5-label dg-row">
+              <svg class="c5-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-zap"/></svg>
+              <h3 class="dg-card-title">mBridge</h3>
+            </div>
+            <span class="dg-pill-accent">CBDC</span>
+          </header>
+          <p class="c5-detail">中央銀行デジタル通貨で仲介銀行を経由せずに決済。</p>
+          <p class="c5-takeaway dg-callout">西側はプロジェクト・アゴラで対抗</p>
+        </section>
+        <section id="c5-rail-brics" class="c5-card c5-rail dg-card dg-col">
+          <header class="dg-card-head">
+            <div class="c5-label dg-row">
+              <svg class="c5-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-globe"/></svg>
+              <h3 class="dg-card-title">BRICS Pay</h3>
+            </div>
+            <span class="dg-pill-ok">相互接続</span>
+          </header>
+          <p class="c5-detail">インドのUPIやブラジルのPixなどをつなぐ構想。</p>
+          <p class="c5-takeaway dg-callout dg-callout-ok">各国の通貨を使う即時決済網の連携</p>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div id="c5-phase-b" class="c5-phase dg-col dg-wide-safe">
+    <header class="c5-banner dg-card-glow dg-cutin-banner">
+      <span class="dg-pill-accent">Phase 2　ドルのネットワーク効果</span>
+      <h2 class="dg-heading">なぜ急交代しないのか？</h2>
+      <p class="c5-detail">ドルの厚い防壁 × デジタル・ドルの逆襲</p>
+    </header>
+    <div class="c5-proof dg-grid-2">
+      <section id="c5-card-moat" class="c5-card c5-defense dg-card dg-col">
+        <header class="dg-card-head">
+          <div class="c5-label dg-row">
+            <svg class="c5-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-shield"/></svg>
+            <h3 class="dg-card-title">防壁①　媒介通貨としての慣性</h3>
+          </div>
+        </header>
+        <div class="c5-measures dg-col">
+          <div class="c5-metric">
+            <div class="dg-row">
+              <span class="c5-metric-name">世界FX取引 <span class="dg-pill-muted">BIS 2025</span></span>
+              <strong class="dg-kpi">88.4%</strong>
+            </div>
+            <div class="dg-bar-track" aria-hidden="true"><div id="c5-fx-bar" class="c5-track-a dg-bar-fill"></div></div>
+          </div>
+          <div class="c5-metric">
+            <div class="dg-row">
+              <span class="c5-metric-name">ドル建ての貿易金融</span>
+              <strong class="dg-kpi">約80%</strong>
+            </div>
+            <div class="dg-bar-track" aria-hidden="true"><div id="c5-trade-bar" class="c5-track-b dg-bar-fill dg-bar-fill-secondary"></div></div>
+          </div>
+        </div>
+        <p class="c5-takeaway dg-callout">多国間の金融取引では、ドル経由が速く取引コストも低い</p>
+      </section>
+
+      <section id="c5-card-stable" class="c5-card c5-defense dg-card-glow dg-col">
+        <header class="dg-card-head">
+          <div class="c5-label dg-row">
+            <svg class="c5-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-zap"/></svg>
+            <h3 class="dg-card-title">防壁②　米国GENIUS法 × ステーブルコイン</h3>
+          </div>
+        </header>
+        <div class="c5-loop dg-svg-stage">
+          <svg viewBox="0 0 560 155" role="img" aria-label="ドル建てステーブルコインの裏付け資産を通じて米国短期国債へ資金が還流する">
+            <defs>
+              <linearGradient id="c5-loop-gradient" x2="100%" y2="100%">
+                <stop stop-color="#4c401c"/>
+                <stop offset="100%" stop-color="#162542"/>
+              </linearGradient>
+              <marker id="c5-loop-tip" viewBox="0 0 9 8" refX="8" refY="4" markerWidth="9" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto">
+                <path d="M0 0 L9 4 L0 8 Z" fill="var(--accent-primary)"/>
+              </marker>
+            </defs>
+            <g id="c5-loop-token" text-anchor="middle">
+              <rect class="c5-loop-box" x="4" y="22" width="158" height="108" rx="13"/>
+              <use href="#dg-ico-coins" x="73" y="32" width="20" height="20" color="var(--accent-primary)"/>
+              <text class="c5-loop-head" x="83" y="76">USDT / USDC</text>
+              <text class="c5-loop-kpi" x="83" y="102">約<tspan id="c5-stable-count">3,000</tspan>億ドル</text>
+            </g>
+            <g id="c5-loop-law" text-anchor="middle">
+              <rect class="c5-loop-box" x="201" y="22" width="158" height="108" rx="13"/>
+              <use href="#dg-ico-scale" x="270" y="32" width="20" height="20" color="var(--accent-primary)"/>
+              <text class="c5-loop-head" x="280" y="72">GENIUS法</text>
+              <text class="c5-loop-note" x="280" y="94">2025年成立</text>
+              <text class="c5-loop-note" x="280" y="114">100%裏付け義務</text>
+            </g>
+            <g id="c5-loop-bills" text-anchor="middle">
+              <rect class="c5-loop-box c5-loop-gold" x="398" y="22" width="158" height="108" rx="13"/>
+              <use href="#dg-ico-landmark" x="467" y="32" width="20" height="20" color="var(--accent-primary)"/>
+              <text class="c5-loop-head" x="477" y="76">米国短期国債</text>
+              <text class="c5-loop-note" x="477" y="102">裏付け需要が還流</text>
+            </g>
+            <path class="c5-loop-link" d="M167 76 H195" marker-end="url(#c5-loop-tip)"/>
+            <path class="c5-loop-link" d="M364 76 H392" marker-end="url(#c5-loop-tip)"/>
+          </svg>
+        </div>
+        <p id="c5-loop-note" class="c5-takeaway dg-callout">ドル建てコインの拡大が米国短期国債の需要につながる</p>
+      </section>
+    </div>
+    <p id="c5-outlook" class="c5-takeaway c5-outlook dg-callout dg-callout-ok">
+      現実解　<span class="dg-text-accent">ドル中核 × 多極併存</span>の時代へ
+    </p>
+  </div>
+</div>
+<script>
+window.__diagramBuilders = window.__diagramBuilders || {};
+window.__diagramBuilders['ch05_tsumugi_multipolar'] = function (tl, cues) {
+  const motion = window.dgMotion;
+  const tSwitch = cues.c5_phase2_moat;
+  const defenses = '.c5-defense';
+  const rails = [
+    { card: '#c5-rail-cips', at: cues.c5_cips },
+    { card: '#c5-rail-mbridge', at: cues.c5_mbridge },
+    { card: '#c5-rail-brics', at: cues.c5_brics_pay }
+  ];
+
+  window.dgWidgets.flowNodes('#c5-flow-box', tl, {
+    width: 1120,
+    height: 175,
+    flowStart: cues.c5_rails_open + 0.3,
+    flowEnd: cues.c5_tsumugi_digital + 2,
+    focusEach: true,
+    unfocusAt: cues.c5_zunda_rails,
+    nodes: [
+      { title: 'SWIFT + CHIPS', sub: '従来のドル中心の決済網', icon: 'dg-ico-landmark', tone: 'primary', at: cues.c5_weaponize },
+      { title: '中国 CIPS', sub: '人民元・二国間貿易決済', icon: 'dg-ico-arrow-lr', tone: 'warn', at: cues.c5_cips },
+      { title: 'mBridge (CBDC)', sub: 'コルレス不要の直接決済', icon: 'dg-ico-zap', tone: 'secondary', at: cues.c5_mbridge },
+      { title: 'BRICS Pay', sub: 'UPI・Pix等の即時決済網連携', icon: 'dg-ico-globe', tone: 'ok', at: cues.c5_brics_pay }
+    ]
+  });
+  motion.reveal(tl, '#c5-flow-box', cues.c5_weaponize, { y: 8 });
+  for (const rail of rails) {
+    motion.reveal(tl, rail.card, rail.at, { y: 8 });
+    motion.pulse(tl, rail.card + ' .c5-icon', rail.at + 0.45, rail.at + 4);
+  }
+  motion.unfocus(tl, '.c5-rail', cues.c5_zunda_rails);
+
+  motion.switchPhase(tl, '#c5-phase-a', '#c5-phase-b', tSwitch, { duration: 0.1 });
+  tl.set('#c5-phase-a', { opacity: 0 }, tSwitch + 0.1);
+  tl.set('#c5-phase-b', { opacity: 1 }, tSwitch + 0.1);
+  motion.focus(tl, '#c5-card-moat', defenses, tSwitch + 0.1);
+  motion.barGrow(tl, '#c5-fx-bar', tSwitch + 0.1);
+  motion.barGrow(tl, '#c5-trade-bar', tSwitch + 0.35);
+  motion.pulse(tl, '.c5-metric .dg-kpi', cues.c5_vehicle_inertia, cues.c5_vehicle_inertia + 4);
+
+  motion.focus(tl, '#c5-card-stable', defenses, cues.c5_stablecoin_twist);
+  motion.reveal(tl, '.c5-loop', cues.c5_stablecoin_twist, { y: 8 });
+  motion.countUp(tl, '#c5-stable-count', 0, 3000, cues.c5_stablecoin_twist, { duration: 1.3 });
+  tl.set('#c5-stable-count', { textContent: '3,000' }, cues.c5_stablecoin_twist + 1.31);
+  motion.reveal(tl, '#c5-loop-law', cues.c5_genius_act, { y: 0 });
+  motion.reveal(tl, '#c5-loop-bills, .c5-loop-link, #c5-loop-note', cues.c5_treasury_newloop, { y: 0, stagger: 0 });
+  motion.flowDash(tl, '.c5-loop-link', cues.c5_treasury_newloop, cues.c5_wrap);
+  motion.unfocus(tl, defenses, cues.c5_conclusion);
+  motion.reveal(tl, '#c5-outlook', cues.c5_conclusion, { y: 8 });
+  motion.pulse(tl, '#c5-outlook', cues.c5_zunda_twist, cues.c5_wrap, { scale: 1.015 });
+};
+</script>

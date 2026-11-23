@@ -1,0 +1,23 @@
+{
+  "name": "learn-video",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "VOICEVOX x HyperFrames educational video workspace",
+  "scripts": {
+    "portraits:export": "uv run --with psd-tools --with pillow python tools/export-portraits.py",
+    "voice:check": "node tools/check-voicevox.mjs",
+    "episode:audio": "node tools/build-audio.mjs",
+    "episode:build": "node tools/build-episode.mjs",
+    "episode:lint": "node tools/run-hyperframes.mjs lint",
+    "episode:snapshot": "node tools/run-hyperframes.mjs snapshot",
+    "episode:verify": "node tools/verify-episode.mjs",
+    "episode:preview": "node tools/run-hyperframes.mjs preview",
+    "episode:render": "node tools/run-hyperframes.mjs render"
+  },
+  "dependencies": {
+    "gsap": "^3.15.1",
+    "hyperframes": "^0.9.71",
+    "js-yaml": "^5.5.0"
+  }
+}

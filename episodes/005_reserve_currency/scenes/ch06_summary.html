@@ -1,0 +1,29 @@
+<style>
+.c6-wrap{position:relative;height:100%;padding-bottom:36px;box-sizing:border-box;display:flex;flex-direction:column;font-family:"Noto Sans JP",sans-serif}.c6-head{font-size:34px;font-weight:900;color:#f8fafc}.c6-sub{position:absolute;top:76px;left:0;width:70%;margin:0;font-size:21px;font-weight:700;color:var(--text-secondary)}.c6-grid{padding-top:108px;flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-content:center;align-items:stretch;min-height:0}.c6-card{padding:22px;min-height:0}.c6-card h2{font-size:25px;color:#f8fafc;margin:0 0 18px}.c6-icon{width:34px;height:34px;color:#eab308;vertical-align:middle;margin-right:8px}.c6-number{font-size:18px;color:#7dd3fc;font-weight:800;letter-spacing:2px}.c6-card p{font-size:21px;line-height:1.65;color:#dceaf5}.c6-em{color:#facc15;font-weight:900}.c6-detail{border-top:1px solid #49677d;padding-top:14px;margin-top:16px}.c6-next{border:1px solid #a58b37;background:#142e46;border-radius:14px;padding:12px 18px;color:#f8fafc}.c6-next strong{font-size:20px;color:#facc15}.c6-chips{display:flex;gap:10px;margin-top:8px}.c6-chip{background:#203f58;border-radius:8px;padding:8px 10px;font-size:17px;font-weight:700;flex:1;text-align:center}
+</style>
+<div class="c6-wrap">
+  <div class="dg-title-bar dg-cutin-head c6-head" id="c6-head">基軸通貨の変遷を振り返る</div>
+  <p class="c6-sub" id="c6-sub">歴史・仕組み・2026年データから整理する3つの視点</p>
+  <div class="c6-grid dg-cutin-body">
+    <div class="dg-card c6-card" id="c6-p1"><div class="c6-number">POINT 01</div><h2><svg class="c6-icon"><use href="#dg-ico-clock"></use></svg>歴史の法則と慣性</h2><p><span class="c6-em">ギルダー → ポンド → ドル</span></p><p class="c6-detail">4条件が揃い、数十年かけて基軸通貨が交代する。</p></div>
+    <div class="dg-card-glow c6-card" id="c6-p2"><div class="c6-number">POINT 02</div><h2><svg class="c6-icon"><use href="#dg-ico-landmark"></use></svg>ドルの特権とジレンマ</h2><p>トリフィンのジレンマと<span class="c6-em">1971年の転換</span>。</p><p class="c6-detail">米国債市場とネットワーク効果が、その後もドルの土台を維持。</p></div>
+    <div class="dg-card c6-card" id="c6-p3"><div class="c6-number">POINT 03</div><h2><svg class="c6-icon"><use href="#dg-ico-globe"></use></svg>多極併存の現在地</h2><p>ドル比率 <span class="c6-em">56.7%</span>への分散と金の復権・複線化。</p><p class="c6-detail">一方でステーブルコインはデジタル・ドルを広げる。</p></div>
+  </div>
+  <div class="c6-next" id="c6-next-bar"><strong>次回テーマ候補</strong><div class="c6-chips"><span class="c6-chip">米国債と「世界の金利」の仕組み</span><span class="c6-chip">金はなぜ買われ続けるのか</span><span class="c6-chip">CBDCとステーブルコインの覇権争い</span></div></div>
+</div>
+<script>
+window.__diagramBuilders['ch06_summary'] = function(tl,cues){
+  const m=window.dgMotion;
+  gsap.set(['#c6-head','#c6-sub','.c6-card','#c6-next-bar','.c6-chip'],{opacity:0});
+  m.reveal(tl,'#c6-head',cues.c6_intro);
+  m.reveal(tl,'#c6-sub',cues.c6_intro+0.25,{y:6});
+  m.reveal(tl,'.c6-card',cues.c6_zunda_recap,{y:10,stagger:0.12});
+  m.focus(tl,'#c6-p1','.c6-card',cues.c6_point1);
+  m.focus(tl,'#c6-p2','.c6-card',cues.c6_point2);
+  m.focus(tl,'#c6-p3','.c6-card',cues.c6_point3);
+  m.unfocus(tl,'.c6-card',cues.c6_news_lens);
+  m.reveal(tl,'#c6-next-bar',cues.c6_tsumugi_next);
+  m.reveal(tl,'.c6-chip',cues.c6_tsumugi_next+0.3,{stagger:0.14});
+  m.pulse(tl,'#c6-next-bar',cues.c6_tsumugi_next+0.5,cues.c6_zunda_end);
+};
+</script>

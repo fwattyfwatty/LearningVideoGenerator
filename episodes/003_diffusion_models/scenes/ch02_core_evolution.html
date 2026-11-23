@@ -1,0 +1,291 @@
+<style>
+  .c2-scene {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: 586px;
+    margin: 0 auto;
+    color: #f1f8ff;
+    font-family: "Noto Sans JP", sans-serif;
+    --c2-teal: #5eead4;
+    --c2-muted: #bdd0df;
+  }
+  .c2-scene * { box-sizing: border-box; }
+  .c2-phase { position: absolute; inset: 0; }
+  .c2-header {
+    position: relative;
+    height: 70px;
+    padding: 11px 160px 11px 24px;
+    border: 1px solid #2a5261;
+    border-left: 5px solid #14b8a6;
+    border-radius: 12px;
+    background: #102330;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 46px;
+  }
+  .c2-phase-label {
+    position: absolute;
+    right: 19px;
+    top: 16px;
+    padding: 2px 15px;
+    border: 1px solid #357b79;
+    border-radius: 999px;
+    color: var(--c2-teal);
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .c2-flow {
+    position: absolute;
+    top: 83px;
+    width: 100%;
+    height: 285px;
+    border: 1px solid #294553;
+    border-radius: 15px;
+    background: #0c1925;
+  }
+  .c2-flow svg { width: 100%; height: 100%; }
+  .c2-card {
+    position: absolute;
+    width: calc(50% - 9px);
+    min-width: 0;
+    padding: 14px 20px;
+    border: 1px solid #2a5261;
+    border-radius: 15px;
+    background: #102330;
+  }
+  .c2-formula-card { top: 381px; height: 177px; }
+  .c2-tech-card { top: 88px; height: 422px; padding: 19px 22px; }
+  .c2-left { left: 0; }
+  .c2-right { right: 0; }
+  .c2-card h3 { margin: 0 0 9px; color: var(--c2-teal); font-size: 23px; line-height: 1.35; }
+  .c2-card h3 small { color: var(--c2-muted); font-size: 17px; font-weight: 600; }
+  .c2-card p { margin: 9px 0 0; color: var(--c2-muted); font-size: 19px; line-height: 1.45; }
+  .c2-math {
+    padding: 8px 13px;
+    border: 1px solid #325464;
+    border-radius: 9px;
+    background: #0b1824;
+    color: #fff1c9;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+  .c2-math sub, .c2-math sup { font-size: .68em; }
+  .c2-reverse-math { width: 47%; font-size: 24px; }
+  .c2-reverse-note { width: 47%; }
+  .c2-score { position: absolute; right: 14px; bottom: 9px; width: 47%; height: 137px; }
+  .c2-tech-svg { width: 100%; height: 232px; vertical-align: top; }
+  .c2-chip {
+    padding: 8px 12px;
+    border: 1px solid #357b79;
+    border-radius: 9px;
+    background: #102f36;
+    color: #b9fff2;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+  .c2-control { margin-top: 10px; }
+  .c2-bridge { position: absolute; top: 525px; left: 0; right: 0; text-align: center; }
+  .c2-svg-teal { fill: #5eead4; }
+  .c2-svg-muted { fill: #bdd0df; }
+  .c2-svg-amber { fill: #fcd477; }
+  .c2-strong { font-weight: 700; }
+</style>
+<div class="c2-scene" id="c2-scene">
+  <div class="c2-phase" id="c2-phase-a">
+    <div class="c2-header">
+      DDPMの基本原理：壊して直す確率過程
+      <span class="c2-phase-label">Phase 1</span>
+    </div>
+    <div class="c2-flow">
+      <svg viewBox="0 0 1120 280" role="img" aria-label="ノイズを加える順方向と、ノイズを推定して取り除く逆方向">
+        <defs>
+          <marker id="c2-arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+            <path d="M0 0L10 5L0 10Z" fill="#fcd477"/>
+          </marker>
+          <marker id="c2-arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+            <path d="M0 0L10 5L0 10Z" fill="#5eead4"/>
+          </marker>
+          <marker id="c2-arrow-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0 0L10 5L0 10Z" fill="#a7b8c7"/>
+          </marker>
+          <filter id="c2-static" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+            <feTurbulence type="fractalNoise" baseFrequency=".55" numOctaves="3" seed="19" stitchTiles="stitch"/>
+            <feColorMatrix type="saturate" values="0"/>
+            <feComponentTransfer>
+              <feFuncR type="linear" slope="2.7" intercept="-.85"/>
+              <feFuncG type="linear" slope="2.7" intercept="-.85"/>
+              <feFuncB type="linear" slope="2.7" intercept="-.85"/>
+              <feFuncA type="linear" slope="0" intercept="1"/>
+            </feComponentTransfer>
+          </filter>
+          <g id="c2-emblem">
+            <path d="M59 15L100 39V82L59 105L18 82V39Z" fill="#0c666b" stroke="#8affeb" stroke-width="3"/>
+            <path d="M59 31L84 79H34Z" fill="#7cf9e4"/>
+            <circle cx="59" cy="64" r="9" fill="#103443"/>
+          </g>
+        </defs>
+        <text x="560" y="29" text-anchor="middle" font-size="21" class="c2-svg-amber c2-strong">Forward（ガウスノイズ付加）</text>
+        <path d="M155 44H965" fill="none" stroke="#fcd477" stroke-width="3" marker-end="url(#c2-arrow-amber)"/>
+        <g class="c2-frame" transform="translate(108 62)">
+          <rect width="118" height="118" rx="7" fill="#153643" stroke="#5e8795"/>
+          <use href="#c2-emblem"/>
+          <text x="59" y="143" text-anchor="middle" font-size="20" class="c2-svg-muted">x₀　元画像</text>
+        </g>
+        <g class="c2-frame" transform="translate(370 62)">
+          <rect width="118" height="118" rx="7" fill="#153643" stroke="#5e8795"/>
+          <use href="#c2-emblem"/>
+          <rect x="1" y="1" width="116" height="116" filter="url(#c2-static)" opacity=".40"/>
+          <text x="59" y="143" text-anchor="middle" font-size="20" class="c2-svg-muted">xₜ</text>
+        </g>
+        <g class="c2-frame" transform="translate(632 62)">
+          <rect width="118" height="118" rx="7" fill="#153643" stroke="#5e8795"/>
+          <use href="#c2-emblem" opacity=".76"/>
+          <rect x="1" y="1" width="116" height="116" filter="url(#c2-static)" opacity=".77"/>
+          <text x="59" y="143" text-anchor="middle" font-size="20" class="c2-svg-muted">xₜ₊ₖ</text>
+        </g>
+        <g class="c2-frame" transform="translate(894 62)">
+          <rect width="118" height="118" rx="7" fill="#153643" stroke="#5e8795"/>
+          <rect x="1" y="1" width="116" height="116" filter="url(#c2-static)"/>
+          <text x="59" y="143" text-anchor="middle" font-size="20" class="c2-svg-muted">x<tspan baseline-shift="sub" font-size="14">T</tspan>　ノイズ</text>
+        </g>
+        <g id="c2-reverse-flow">
+          <path d="M965 226H155" fill="none" stroke="#14b8a6" stroke-width="13" opacity=".23"/>
+          <path d="M965 226H155" fill="none" stroke="#5eead4" stroke-width="3" marker-end="url(#c2-arrow-teal)"/>
+          <g id="c2-orb">
+            <circle cx="953" cy="226" r="14" fill="#5eead4" opacity=".26"/>
+            <circle cx="953" cy="226" r="6" fill="#e7fff9"/>
+          </g>
+          <text x="560" y="260" text-anchor="middle" font-size="21" class="c2-svg-teal c2-strong">Reverse（モデル εθ でノイズを予測して引く）</text>
+        </g>
+      </svg>
+    </div>
+    <div class="c2-card c2-formula-card c2-left" id="c2-forward-card">
+      <h3>Forward 閉形式</h3>
+      <div class="c2-math">x<sub>t</sub> = √(ᾱ<sub>t</sub>) x<sub>0</sub> + √(1 − ᾱ<sub>t</sub>) ε</div>
+      <p>元画像とノイズを混ぜ、時刻 t の画像を直接つくる</p>
+    </div>
+    <div class="c2-card c2-formula-card c2-right" id="c2-reverse-card">
+      <h3>Reverse ＆ スコア直感</h3>
+      <div class="c2-math c2-reverse-math">ε<sub>θ</sub>(x<sub>t</sub>, t) ≈ ε</div>
+      <p class="c2-reverse-note">推定ノイズを手がかりに更新</p>
+      <svg id="c2-score" class="c2-score" viewBox="0 0 310 137" role="img" aria-label="スコアは確率密度が高くなる向き">
+        <ellipse cx="202" cy="61" rx="98" ry="50" fill="#123b44" stroke="#347681"/>
+        <ellipse cx="202" cy="61" rx="73" ry="36" fill="#174c52" stroke="#448e91"/>
+        <ellipse cx="202" cy="61" rx="44" ry="23" fill="#1d6261" stroke="#6bcec1"/>
+        <circle cx="202" cy="61" r="5" fill="#d0fff6"/>
+        <path d="M75 94L183 66" stroke="#5eead4" stroke-width="3" marker-end="url(#c2-arrow-teal)"/>
+        <text x="12" y="125" font-size="16" class="c2-svg-muted">ノイズ</text>
+        <text x="201" y="23" text-anchor="middle" font-size="16" fill="#e7fff9">密度の山</text>
+        <text x="154" y="127" font-size="19" class="c2-svg-teal">∇ₓ log p(x)</text>
+      </svg>
+    </div>
+  </div>
+  <div class="c2-phase" id="c2-phase-b">
+    <div class="c2-header">
+      拡散モデルの進化：潜在空間と条件づけ
+      <span class="c2-phase-label">Phase 2</span>
+    </div>
+    <div class="c2-card c2-tech-card c2-left" id="c2-ldm-card">
+      <h3>① Latent Diffusion Model <small>（LDM / 2022）</small></h3>
+      <p>画像を圧縮し、潜在空間で拡散・逆拡散を行う</p>
+      <svg id="c2-pipeline" class="c2-tech-svg" viewBox="0 0 620 222" role="img" aria-label="入力画像をVAEで潜在表現に圧縮し、拡散処理の後にVAEで画像に戻す">
+        <g fill="none" stroke="#5eead4" stroke-width="2.5" marker-end="url(#c2-arrow-teal)">
+          <path d="M125 83H153"/><path d="M234 83H261"/><path d="M389 83H417"/><path d="M497 83H523"/>
+        </g>
+        <rect x="4" y="45" width="121" height="76" rx="10" fill="#132b3b" stroke="#456174"/>
+        <rect x="155" y="45" width="79" height="76" rx="10" fill="#132b3b" stroke="#456174"/>
+        <g id="c2-latent" text-anchor="middle" font-size="16" class="c2-strong">
+          <rect x="259" y="40" width="134" height="86" rx="14" fill="none" stroke="#14b8a6" stroke-width="7" opacity=".28"/>
+          <rect x="263" y="45" width="126" height="76" rx="10" fill="#13484a" stroke="#5eead4" stroke-width="2"/>
+          <path d="M307 158a20 20 0 1 1 7 20" fill="none" stroke="#5eead4" stroke-width="2.5" marker-end="url(#c2-arrow-teal)"/>
+          <text x="326" y="199" fill="#b9fff2">拡散ループ</text>
+          <text x="326" y="77" fill="#b9fff2">潜在空間 z</text>
+          <text x="326" y="102" fill="#b9fff2">64×64×4</text>
+        </g>
+        <rect x="419" y="45" width="78" height="76" rx="10" fill="#132b3b" stroke="#456174"/>
+        <rect x="525" y="45" width="91" height="76" rx="10" fill="#132b3b" stroke="#456174"/>
+        <g text-anchor="middle" font-size="16" fill="#f1f8ff" class="c2-strong">
+          <text x="64" y="77">ピクセル空間</text><text x="64" y="102">512×512×3</text>
+          <text x="194" y="76">VAE</text><text x="194" y="101">エンコーダ</text>
+          <text x="458" y="76">VAE</text><text x="458" y="101">デコーダ</text>
+          <text x="570" y="89">出力画像</text>
+        </g>
+      </svg>
+      <div class="c2-chip" id="c2-ldm-benefit">拡散処理の計算量を削減・一般的なGPUでも動作</div>
+    </div>
+    <div class="c2-card c2-tech-card c2-right" id="c2-cfg-card">
+      <h3>② Classifier-Free Guidance <small>（CFG）</small></h3>
+      <svg class="c2-tech-svg" viewBox="0 0 620 222" role="img" aria-label="条件付きと無条件のノイズ予測の差を重みwで拡大するベクトル図">
+        <circle cx="83" cy="162" r="5" fill="#f1f8ff"/>
+        <path d="M83 162L261 144" stroke="#a7b8c7" stroke-width="3" marker-end="url(#c2-arrow-gray)"/>
+        <path d="M83 162L357 109" stroke="#5eead4" stroke-width="3" marker-end="url(#c2-arrow-teal)"/>
+        <text x="217" y="184" font-size="19" class="c2-svg-muted">ε∅　無条件</text>
+        <text x="232" y="96" font-size="19" class="c2-svg-teal">ε<tspan baseline-shift="sub" font-size="14">c</tspan>　条件付き</text>
+        <g id="c2-guided-vector">
+          <path d="M261 144L549 39" stroke="#fcd477" stroke-width="2" stroke-dasharray="7 6" marker-end="url(#c2-arrow-amber)"/>
+          <path d="M83 162L549 39" stroke="#fcd477" stroke-width="12" opacity=".19"/>
+          <path d="M83 162L549 39" stroke="#fcd477" stroke-width="3" marker-end="url(#c2-arrow-amber)"/>
+          <text x="381" y="24" font-size="19" class="c2-svg-amber c2-strong">誘導後の予測 ε̃</text>
+          <text x="380" y="145" font-size="18" class="c2-svg-amber">重み w で差を拡大</text>
+        </g>
+      </svg>
+      <div class="c2-math" id="c2-cfg-equation">ε̃ = ε<sub>∅</sub> + w(ε<sub>c</sub> − ε<sub>∅</sub>)</div>
+      <div class="c2-chip c2-control" id="c2-controlnet">ControlNet 等で構図・ポーズ制御へ</div>
+    </div>
+    <div class="c2-chip c2-bridge" id="c2-bridge">圧縮と条件づけで、画像生成を実用的に</div>
+  </div>
+</div>
+<script>
+  window.__diagramBuilders = window.__diagramBuilders || {};
+  window.__diagramBuilders['ch02_core_evolution'] = function (tl, cues) {
+    const scene = document.querySelector('#c2-scene');
+    const find = (name) => scene.querySelector('#c2-' + name);
+    const phaseA = find('phase-a');
+    const phaseB = find('phase-b');
+    const frames = scene.querySelectorAll('.c2-frame');
+    const orb = find('orb');
+    const pipeline = find('pipeline');
+    const latent = find('latent');
+    const reverseCard = find('reverse-card');
+    const hidden = [phaseB, find('forward-card'), find('reverse-flow'), reverseCard,
+      find('score'), pipeline, find('ldm-benefit'), find('cfg-card'),
+      find('guided-vector'), find('cfg-equation'), find('controlnet'), find('bridge')];
+
+    gsap.set(hidden, { opacity: 0 });
+    gsap.set(frames, { opacity: 0.25 });
+    gsap.set(orb, { opacity: 0, x: 0 });
+
+    function reveal(elements, at, duration = 0.42) {
+      tl.to(elements, { opacity: 1, duration, ease: 'power1.out' }, at);
+    }
+
+    const forward = cues.c2_forward_intro;
+    tl.to(frames, { opacity: 1, duration: 0.45, stagger: 0.46 }, forward);
+    reveal(find('forward-card'), cues.c2_forward_eq);
+    reveal([find('reverse-flow'), reverseCard], cues.c2_reverse_eq);
+    reveal(find('score'), cues.c2_score_intuition);
+
+    const reverse = cues.c2_zunda_sub;
+    reveal(orb, reverse, 0.28);
+    tl.to(orb, { x: -786, duration: 2.85, ease: 'power1.inOut' }, reverse + 0.2);
+    tl.to(orb, { opacity: 0, duration: 0.45 }, reverse + 3.15);
+    tl.to(reverseCard, { borderColor: '#5eead4', duration: 0.32 }, cues.c2_zunda_yes);
+    tl.to(reverseCard, { borderColor: '#2a5261', duration: 0.56 }, cues.c2_zunda_yes + 0.9);
+
+    const phaseTwo = cues.c2_phase2_ldm;
+    reveal(phaseB, phaseTwo, 0.35);
+    tl.to(phaseA, { opacity: 0, duration: 0.25, ease: 'power1.in' }, phaseTwo + 0.1);
+    reveal(pipeline, cues.c2_vae_pipe);
+    reveal(find('ldm-benefit'), cues.c2_zunda_ldm);
+    tl.to(latent, { opacity: 0.54, duration: 0.25, repeat: 1, yoyo: true }, cues.c2_zunda_ldm);
+
+    reveal(find('cfg-card'), cues.c2_cfg_intro);
+    reveal([find('guided-vector'), find('cfg-equation')], cues.c2_cfg_eq);
+    reveal(find('controlnet'), cues.c2_controlnet);
+    reveal(find('bridge'), cues.c2_bridge);
+  };
+</script>

@@ -1,0 +1,40 @@
+# Dependencies & caches
+node_modules/
+.hyperframes/
+npm-debug.log*
+*.log
+
+# Environment & OS / IDE files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python / temp / scratch artifacts
+__pycache__/
+.venv/
+.pytest_cache/
+tmp*/
+.tmp/
+scratch/
+
+# External character / audio assets (respect creator redistribution terms)
+assets/characters/*
+!assets/characters/.gitkeep
+!assets/characters/README.md
+assets/bgm/*
+!assets/bgm/.gitkeep
+assets/se/*
+!assets/se/.gitkeep
+
+# Generated episode artifacts & rendered videos
+episodes/**/audio/
+episodes/**/dist/
+episodes/**/renders/
+episodes/**/output/*.mp4
+episodes/**/output/*.webm
+episodes/**/output/*.mov
+episodes/**/output/*.gif

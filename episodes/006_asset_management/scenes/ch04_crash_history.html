@@ -1,0 +1,184 @@
+<style>
+  .c4-scene { position: relative; height: 100%; font-family: "Noto Sans JP", sans-serif; color: var(--text-primary); }
+  .c4-phase { position: absolute; inset: 0; height: min(100%, 704px); gap: 0; }
+  #c4-phase-b { opacity: 0; }
+  .c4-phase .dg-title-bar { min-height: 62px; box-sizing: border-box; }
+  .c4-phase .dg-heading { font-size: 32px; font-weight: 800; }
+  .c4-body { flex: 1; min-height: 0; box-sizing: border-box; padding-top: 108px; }
+  .c4-card { min-width: 0; min-height: 0; height: 100%; gap: 14px; box-sizing: border-box; }
+  .c4-icon { width: 29px; height: 29px; flex: none; color: var(--accent-primary); }
+  .c4-card p { margin: 0; }
+  .c4-note { color: var(--text-secondary); font-size: 17px; font-weight: 700; }
+  .c4-widget { min-height: 250px; }
+  .c4-depth { position: relative; flex: 1; min-height: 250px; }
+  #c4-depth-box { position: absolute; inset: 0; flex-direction: column; }
+  .c4-depth-preview { position: absolute; inset: 0; gap: 12px; }
+  .c4-depth-preview strong { font-size: 24px; }
+  .c4-recovery { flex: 1; min-height: 0; gap: 10px; justify-content: center; }
+  .c4-row { min-height: 69px; padding: 8px 14px; box-sizing: border-box; justify-content: space-between; border-radius: 12px; border: 1px solid var(--border-subtle); border-left: 4px solid var(--c4-tone); background: var(--bg-card); }
+  .c4-row-name { font-size: 19px; font-weight: 800; }
+  .c4-row-value { font-size: 24px; font-weight: 900; white-space: nowrap; }
+  .c4-row-detail { margin-left: 8px; font-size: 16px; color: var(--text-secondary); font-weight: 700; }
+  .c4-callout { padding: 12px 16px; font-size: 21px; }
+  .c4-dca { flex: 1; min-height: 0; padding: 16px; gap: 14px; justify-content: center; border-radius: 16px; background: var(--bg-card-muted); border: 1px solid var(--border-subtle); }
+  .c4-dca-title { font-size: 24px; font-weight: 800; }
+  .c4-dca-row { gap: 12px; }
+  .c4-buy { padding: 12px 14px; border: 1px solid var(--border-subtle); border-radius: 12px; background: var(--bg-card); }
+  .c4-buy strong { font-size: 21px; }
+  .c4-buy-ok { border-color: var(--accent-ok); background: color-mix(in srgb, var(--accent-ok) 8%, var(--bg-card)); }
+  .c4-units { height: 20px; align-items: stretch; gap: 5px; margin-top: 9px; color: var(--accent-primary); }
+  .c4-units span { width: 27px; border-radius: 4px; background: currentColor; }
+  .c4-buy-ok .c4-units { color: var(--accent-ok); }
+</style>
+<div class="c4-scene">
+  <section id="c4-phase-a" class="c4-phase dg-col">
+    <header class="dg-title-bar dg-cutin-head">
+      <h2 class="dg-heading">過去3大暴落の深さと回復年数（米国 S&amp;P500）</h2>
+      <span class="dg-pill-danger">Phase 1　歴史の現実</span>
+    </header>
+    <div class="c4-body dg-grid-2 dg-cutin-body">
+      <article id="c4-card-depth" class="c4-card dg-card-glow dg-col">
+        <header class="dg-card-head">
+          <div class="dg-card-title-group">
+            <svg class="c4-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-trending-down"/></svg>
+            <h3 class="dg-card-title">最大下落率の比較</h3>
+          </div>
+          <span class="dg-pill-muted">下落の深さ</span>
+        </header>
+        <div class="c4-depth">
+          <div id="c4-depth-box" class="dg-svg-stage"></div>
+          <div id="c4-depth-preview" class="c4-depth-preview dg-center">
+            <strong>高値からどこまで下がったか</strong>
+            <div class="dg-chip-row">
+              <span class="dg-chip">2000年</span>
+              <span class="dg-chip">2008年</span>
+              <span class="dg-chip">2020年</span>
+            </div>
+          </div>
+        </div>
+        <p class="c4-note">各暴落前の高値から、その後の安値までの下落率</p>
+      </article>
+      <article id="c4-card-rec" class="c4-card dg-card dg-col">
+        <header class="dg-card-head">
+          <div class="dg-card-title-group">
+            <svg class="c4-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-clock"/></svg>
+            <h3 class="dg-card-title">元の水準に戻るまでの期間</h3>
+          </div>
+          <span class="dg-pill-muted">回復までの時間</span>
+        </header>
+        <div class="c4-recovery dg-col">
+          <div class="c4-row dg-row" style="--c4-tone: var(--accent-warn)">
+            <span class="c4-row-name">ITバブル崩壊</span>
+            <div id="c4-rec-it"><strong class="c4-row-value">約5〜7年</strong><span class="c4-row-detail">「失われた10年」</span></div>
+          </div>
+          <div class="c4-row dg-row" style="--c4-tone: var(--accent-danger)">
+            <span class="c4-row-name">リーマンショック</span>
+            <strong id="c4-rec-lehman" class="c4-row-value">約5年半</strong>
+          </div>
+          <div class="c4-row dg-row" style="--c4-tone: var(--accent-secondary)">
+            <span class="c4-row-name">コロナショック</span>
+            <div id="c4-rec-covid"><strong class="c4-row-value">約5カ月</strong><span class="c4-row-detail">大規模対策</span></div>
+          </div>
+        </div>
+        <div id="c4-hard-note" class="c4-callout dg-callout dg-callout-danger">株式100%は「一時半減・5年超の停滞」も想定内にする</div>
+      </article>
+    </div>
+  </section>
+  <section id="c4-phase-b" class="c4-phase dg-col">
+    <header class="dg-title-bar dg-cutin-head">
+      <h2 class="dg-heading">時間を味方にする「15年の法則」とドルコスト平均法</h2>
+      <span class="dg-pill-ok">Phase 2　長期データの知恵</span>
+    </header>
+    <div class="c4-body dg-grid-2 dg-cutin-body">
+      <article id="c4-card-15yr" class="c4-card c4-long-card dg-card-glow dg-col">
+        <header class="dg-card-head">
+          <div class="dg-card-title-group">
+            <svg class="c4-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-trending-up"/></svg>
+            <h3 class="dg-card-title">保有期間と元本割れリスク</h3>
+          </div>
+          <span class="dg-pill-muted">低下イメージ</span>
+        </header>
+        <div id="c4-line-box" class="c4-widget dg-svg-stage"></div>
+        <p id="c4-caveat" class="c4-note">※過去データの傾向を示す模式図。将来の成果を保証するものではありません。</p>
+      </article>
+      <article id="c4-card-dca" class="c4-card c4-long-card dg-card dg-col">
+        <header class="dg-card-head">
+          <div class="dg-card-title-group">
+            <svg class="c4-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#dg-ico-loop"/></svg>
+            <h3 class="dg-card-title">ドルコスト平均法の仕組み</h3>
+          </div>
+        </header>
+        <div class="c4-dca dg-col">
+          <p class="c4-dca-title">毎月定額で自動購入</p>
+          <div id="c4-buy-pair" class="c4-dca-row dg-grid-2">
+            <div class="c4-buy">
+              <p class="c4-note">価格が高いとき</p>
+              <strong>少ない口数を買う</strong>
+              <div class="c4-units dg-row" aria-hidden="true"><span></span><span></span></div>
+            </div>
+            <div id="c4-cheap" class="c4-buy c4-buy-ok">
+              <p class="c4-note">暴落で価格が安いとき</p>
+              <strong>多くの口数を買う</strong>
+              <div class="c4-units dg-row" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <p class="c4-note">購入額は同じ。価格によって買える口数が変わる。</p>
+        </div>
+        <div id="c4-insight" class="c4-callout dg-callout dg-callout-ok">本質は「5年戻らなくても生活できる家計」</div>
+      </article>
+    </div>
+  </section>
+</div>
+<script>
+  window.__diagramBuilders['ch04_crash_history'] = function (tl, cues) {
+    const motion = window.dgMotion;
+    const widgets = window.dgWidgets;
+    const opening = cues.c4_tsumugi_ask + 0.8;
+    const phaseSwitch = cues.c4_phase2_longterm;
+    const longCards = '.c4-long-card';
+
+    motion.reveal(tl, '#c4-phase-a', opening, { y: 0, duration: 0.34 });
+    motion.switchPhase(tl, '#c4-phase-a', '#c4-phase-b', phaseSwitch, { duration: 0.1 });
+    tl.to('#c4-depth-preview', { opacity: 0, duration: 0.26, ease: 'power1.out' }, cues.c4_it_bubble);
+
+    widgets.barChart('#c4-depth-box', tl, {
+      max: 65, unit: '%下落', countUp: true, at: cues.c4_it_bubble,
+      items: [
+        { label: 'ITバブル崩壊 (2000)', value: 50, tone: 'warn', at: cues.c4_it_bubble },
+        { label: 'リーマンショック (2008)', value: 55, tone: 'danger', at: cues.c4_lehman },
+        { label: 'コロナショック (2020)', value: 34, tone: 'secondary', at: cues.c4_covid }
+      ]
+    });
+
+    [
+      ['#c4-rec-it', cues.c4_it_bubble],
+      ['#c4-rec-lehman', cues.c4_lehman],
+      ['#c4-rec-covid', cues.c4_covid]
+    ].forEach(function ([target, at]) {
+      motion.reveal(tl, target, at, { y: 10 });
+    });
+    motion.reveal(tl, '#c4-hard-note', cues.c4_hard_truth, { y: 8 });
+    motion.pulse(tl, '#c4-hard-note', cues.c4_hard_truth + 0.45, cues.c4_zunda_half);
+
+    widgets.lineChart('#c4-line-box', tl, {
+      width: 620, height: 245, mode: 'line', yMin: 0, yMax: 40, yTicks: [0, 15, 30, 40], yUnit: '%',
+      at: cues.c4_short_vs_long, duration: 1.4, highlightAt: cues.c4_15yr_rule, pulseEnd: cues.c4_dca_power,
+      points: [
+        { label: '1年', value: 27, badge: '高リスク' },
+        { label: '5年', value: 14 },
+        { label: '10年', value: 6 },
+        { label: '15年', value: 1, badge: 'ほぼ0%圏', highlight: true },
+        { label: '20年', value: 0 }
+      ]
+    });
+
+    motion.focus(tl, '#c4-card-15yr', longCards, cues.c4_short_vs_long, { dimOpacity: 0.58 });
+    motion.focus(tl, '#c4-card-dca', longCards, cues.c4_dca_power, { dimOpacity: 0.58 });
+    motion.reveal(tl, '#c4-buy-pair', cues.c4_dca_power, { y: 10 });
+    motion.pulse(tl, '#c4-cheap', cues.c4_dca_power + 0.45, cues.c4_caveat);
+    motion.focus(tl, '#c4-card-15yr', longCards, cues.c4_caveat, { dimOpacity: 0.58 });
+    motion.unfocus(tl, longCards, cues.c4_tsumugi_insight);
+    motion.reveal(tl, '#c4-insight', cues.c4_tsumugi_insight, { y: 8 });
+    motion.pulse(tl, '#c4-insight', cues.c4_tsumugi_insight + 0.45, cues.c4_zunda_calm);
+  };
+</script>
